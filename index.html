@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JP → EN Pokémon Card Matcher</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; min-height: 100vh; padding: 2rem; }
+    h1 { text-align: center; margin-bottom: 0.5rem; font-size: 1.5rem; color: #ffd700; }
+    .subtitle { text-align: center; color: #888; margin-bottom: 2rem; font-size: 0.85rem; }
+    .input-section { max-width: 600px; margin: 0 auto 2rem; display: flex; gap: 0.5rem; align-items: end; flex-wrap: wrap; }
+    .field { display: flex; flex-direction: column; gap: 0.3rem; }
+    .field label { font-size: 0.75rem; color: #aaa; text-transform: uppercase; letter-spacing: 0.05em; }
+    .field select, .field input { padding: 0.6rem 0.8rem; border: 1px solid #333; border-radius: 6px; background: #16213e; color: #e0e0e0; font-size: 0.95rem; }
+    .field select { min-width: 220px; }
+    .field input { width: 120px; }
+    button { padding: 0.6rem 1.5rem; border: none; border-radius: 6px; background: #ffd700; color: #1a1a2e; font-weight: 600; cursor: pointer; font-size: 0.95rem; align-self: end; }
+    button:hover { background: #ffed4a; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    .status { text-align: center; color: #888; padding: 1rem; font-style: italic; }
+    .error { color: #ff6b6b; }
+    .cards-container { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
+    .card-panel { background: #16213e; border-radius: 12px; padding: 1.5rem; max-width: 350px; flex: 1; min-width: 280px; }
+    .card-panel h2 { font-size: 1rem; margin-bottom: 0.3rem; }
+    .card-panel .lang-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-bottom: 0.8rem; }
+    .lang-badge.ja { background: #e74c3c; color: white; }
+    .lang-badge.en { background: #3498db; color: white; }
+    .card-panel img { width: 100%; border-radius: 8px; margin-bottom: 1rem; }
+    .card-meta { font-size: 0.8rem; color: #aaa; line-height: 1.6; }
+    .card-meta span { color: #e0e0e0; }
+    .match-info { text-align: center; background: #16213e; border-radius: 8px; padding: 1rem; max-width: 740px; margin: 1rem auto 0; font-size: 0.85rem; color: #aaa; }
+    .match-info .score { color: #2ecc71; font-weight: 600; font-size: 1.1rem; }
+    .match-info .no-match { color: #e67e22; }
+    .candidates { max-width: 740px; margin: 1rem auto 0; }
+    .candidates summary { cursor: pointer; color: #888; font-size: 0.8rem; }
+    .candidates ul { list-style: none; padding: 0.5rem 0; }
+    .candidates li { padding: 0.3rem 0; font-size: 0.8rem; color: #aaa; cursor: pointer; }
+    .candidates li:hover { color: #ffd700; }
+    .arrow { font-size: 2rem; color: #ffd700; align-self: center; }
+    .loading { display: inline-block; width: 16px; height: 16px; border: 2px solid #ffd700; border-top-color: transparent; border-radius: 50%; animation: spin 0.6s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <h1>🇯🇵 → 🇺🇸 Pokémon Card Matcher</h1>
+  <p class="subtitle">Enter a Japanese card's set ID and number to find its English equivalent via TCGdex</p>
+
+  <div class="input-section">
+    <div class="field">
+      <label>Japanese Set ID</label>
+      <input id="setInput" type="text" placeholder="e.g. sv8, PMCG1" list="setList" autocomplete="off">
+      <datalist id="setList"></datalist>
+    </div>
+    <div class="field">
+      <label>Card #</label>
+      <input id="cardNum" type="text" placeholder="021">
+    </div>
+    <button id="searchBtn" onclick="doSearch()">Match</button>
+  </div>
+
+  <div id="status" class="status"></div>
+  <div id="results"></div>
+
+  <script>
+    const API = 'https://api.tcgdex.net/v2';
+
+    // Load Japanese sets into dropdown
+    async function loadSets() {
+      try {
+        const res = await fetch(`${API}/ja/sets`);
+        const sets = await res.json();
+        const dl = document.getElementById('setList');
+        sets.sort((a, b) => (b.releaseDate || '').localeCompare(a.releaseDate || ''));
+        for (const s of sets) {
+          const opt = document.createElement('option');
+          opt.value = s.id;
+          opt.label = `${s.name} — ${s.cardCount.total} cards`;
+          dl.appendChild(opt);
+        }
+      } catch {}
+    }
+
+    // Pad card number to 3 digits with leading zeros
+    function padNum(n) {
+      const s = String(n).replace(/^0+/, '');
+      return s.padStart(3, '0');
+    }
+
+    function setStatus(msg, isError) {
+      const el = document.getElementById('status');
+      el.className = isError ? 'status error' : 'status';
+      el.innerHTML = msg;
+    }
+
+    function renderCard(card, lang) {
+      const imgUrl = card.image ? card.image + '/high.webp' : null;
+      const attacks = (card.attacks || []).map(a => `${a.name} ${a.damage || ''}`).join(', ');
+      return `
+        <div class="card-panel">
+          <span class="lang-badge ${lang}">${lang === 'ja' ? '日本語 Japanese' : '🇺🇸 English'}</span>
+          <h2>${card.name}</h2>
+          ${imgUrl ? `<img src="${imgUrl}" alt="${card.name}" onerror="this.style.display='none'">` : '<p style="color:#666;padding:2rem 0;text-align:center">No image available</p>'}
+          <div class="card-meta">
+            Set: <span>${card.set?.name || '?'}</span> (${card.id})<br>
+            ${card.hp ? `HP: <span>${card.hp}</span><br>` : ''}
+            ${card.stage ? `Stage: <span>${card.stage}</span><br>` : ''}
+            ${card.illustrator ? `Illustrator: <span>${card.illustrator}</span><br>` : ''}
+            ${card.types ? `Type: <span>${card.types.join(', ')}</span><br>` : ''}
+            ${attacks ? `Attacks: <span>${attacks}</span><br>` : ''}
+            ${card.category === 'Trainer' && card.effect ? `Effect: <span>${card.effect}</span><br>` : ''}
+            ${card.description ? `<br><em style="color:#777">${card.description}</em>` : ''}
+          </div>
+        </div>`;
+    }
+
+    // Score how well an English card matches the Japanese card
+    function matchScore(jpCard, enCard) {
+      let score = 0;
+      let reasons = [];
+
+      // Illustrator match is very strong signal (same print)
+      if (jpCard.illustrator && enCard.illustrator &&
+          jpCard.illustrator.toLowerCase() === enCard.illustrator.toLowerCase()) {
+        score += 30;
+        reasons.push('illustrator');
+      }
+
+      // HP match
+      if (jpCard.hp && enCard.hp && jpCard.hp === enCard.hp) {
+        score += 20;
+        reasons.push('HP');
+      }
+
+      // Attack count match
+      const jpAtks = jpCard.attacks || [];
+      const enAtks = enCard.attacks || [];
+      if (jpAtks.length === enAtks.length && jpAtks.length > 0) {
+        score += 15;
+        reasons.push('attack count');
+        // Attack damage match
+        const jpDmg = jpAtks.map(a => a.damage).sort().join(',');
+        const enDmg = enAtks.map(a => a.damage).sort().join(',');
+        if (jpDmg === enDmg) {
+          score += 15;
+          reasons.push('attack damage');
+        }
+        // Attack cost match
+        const jpCost = jpAtks.map(a => (a.cost || []).length).sort().join(',');
+        const enCost = enAtks.map(a => (a.cost || []).length).sort().join(',');
+        if (jpCost === enCost) {
+          score += 10;
+          reasons.push('attack costs');
+        }
+      }
+
+      // Retreat cost match
+      if (jpCard.retreat !== undefined && enCard.retreat !== undefined && jpCard.retreat === enCard.retreat) {
+        score += 5;
+        reasons.push('retreat');
+      }
+
+      // Stage match
+      if (jpCard.stage && enCard.stage && jpCard.stage === enCard.stage) {
+        score += 5;
+        reasons.push('stage');
+      }
+
+      return { score, reasons };
+    }
+
+    // Pokédex number → English name lookup via TCGdex
+    async function getEnglishName(dexId) {
+      try {
+        const res = await fetch(`${API}/en/dex-ids/${dexId}`);
+        if (!res.ok) return null;
+        const data = await res.json();
+        const cards = data.cards || data;
+        if (cards && cards.length > 0) {
+          // Find the simplest name (no prefix like "Blaine's")
+          const simple = cards.find(c => !c.name.includes("'s ") && !c.name.includes(' '));
+          return (simple || cards[0]).name.split(' ')[0];
+        }
+        return null;
+      } catch { return null; }
+    }
+
+    async function doSearch() {
+      const setId = document.getElementById('setInput').value.trim();
+      const rawNum = document.getElementById('cardNum').value.trim();
+      if (!setId || !rawNum) { setStatus('Please enter a set ID and card number.', true); return; }
+
+      const cardNum = padNum(rawNum);
+      const cardId = `${setId}-${cardNum}`;
+
+      setStatus('<span class="loading"></span> Fetching Japanese card...', false);
+      document.getElementById('results').innerHTML = '';
+
+      // 1. Fetch the Japanese card
+      let jpCard;
+      try {
+        const res = await fetch(`${API}/ja/cards/${cardId}`);
+        if (!res.ok) {
+          // Try without padding
+          const res2 = await fetch(`${API}/ja/cards/${setId}-${rawNum}`);
+          if (!res2.ok) throw new Error(`Card not found: ${cardId}`);
+          jpCard = await res2.json();
+        } else {
+          jpCard = await res.json();
+        }
+      } catch (e) {
+        setStatus(`❌ ${e.message}`, true);
+        return;
+      }
+
+      setStatus('<span class="loading"></span> Searching for English equivalent...', false);
+
+      // 2. Find English candidates
+      let enName = null;
+      // Try dexId lookup first
+      if (jpCard.dexId && jpCard.dexId.length > 0) {
+        enName = await getEnglishName(jpCard.dexId[0]);
+      }
+
+      // For Trainer/Energy cards, try using the illustrator or just show JP card
+      let candidates = [];
+      if (enName) {
+        try {
+          const params = new URLSearchParams({ name: enName });
+          if (jpCard.hp) params.set('hp', jpCard.hp);
+          const res = await fetch(`${API}/en/cards?${params}`);
+          if (res.ok) candidates = await res.json();
+        } catch {}
+
+        // If hp filter was too strict, try name only
+        if (candidates.length === 0) {
+          try {
+            const res = await fetch(`${API}/en/cards?name=${encodeURIComponent(enName)}`);
+            if (res.ok) candidates = await res.json();
+          } catch {}
+        }
+      }
+
+      // 3. Fetch full details for candidates and score them
+      if (candidates.length === 0) {
+        setStatus('', false);
+        document.getElementById('results').innerHTML = `
+          <div class="cards-container">${renderCard(jpCard, 'ja')}</div>
+          <div class="match-info"><span class="no-match">No English equivalent found.</span>
+          ${jpCard.category !== 'Pokemon' ? '<br>Trainer/Energy card matching by name is limited — these often have different names across languages.' : ''}
+          ${!jpCard.dexId ? '<br>This card has no Pokédex ID, so name lookup was not possible.' : ''}</div>`;
+        return;
+      }
+
+      setStatus(`<span class="loading"></span> Scoring ${candidates.length} candidates...`, false);
+
+      // Fetch full card data for top candidates (limit to 20 to avoid hammering the API)
+      const toFetch = candidates.slice(0, 20);
+      const fullCards = await Promise.all(
+        toFetch.map(async c => {
+          try {
+            const res = await fetch(`${API}/en/cards/${c.id}`);
+            if (res.ok) return await res.json();
+          } catch {}
+          return null;
+        })
+      );
+
+      const scored = fullCards
+        .filter(Boolean)
+        .map(c => ({ card: c, ...matchScore(jpCard, c) }))
+        .sort((a, b) => b.score - a.score);
+
+      const best = scored[0];
+      if (!best) {
+        setStatus('', false);
+        document.getElementById('results').innerHTML = `
+          <div class="cards-container">${renderCard(jpCard, 'ja')}</div>
+          <div class="match-info"><span class="no-match">Could not fetch English card details for comparison.</span></div>`;
+        return;
+      }
+
+      setStatus('', false);
+      document.getElementById('results').innerHTML = `
+        <div class="cards-container">
+          ${renderCard(jpCard, 'ja')}
+          <div class="arrow">→</div>
+          ${renderCard(best.card, 'en')}
+        </div>
+        <div class="match-info">
+          Match confidence: <span class="score">${best.score}/100</span><br>
+          Matched on: ${best.reasons.join(', ') || 'none'}
+        </div>
+        ${scored.length > 1 ? `
+        <details class="candidates">
+          <summary>Other candidates (${scored.length - 1})</summary>
+          <ul>${scored.slice(1).map(s =>
+            `<li onclick="showAlternate('${s.card.id}')">${s.card.name} — ${s.card.set?.name || s.card.id} (score: ${s.score})</li>`
+          ).join('')}</ul>
+        </details>` : ''}`;
+    }
+
+    // Allow clicking alternate candidates
+    async function showAlternate(cardId) {
+      try {
+        const res = await fetch(`${API}/en/cards/${cardId}`);
+        if (!res.ok) return;
+        const card = await res.json();
+        // Replace the English panel
+        const panels = document.querySelectorAll('.card-panel');
+        if (panels.length >= 2) {
+          panels[1].outerHTML = renderCard(card, 'en');
+        }
+      } catch {}
+    }
+
+    // Init
+    loadSets();
+
+    // Allow Enter key to trigger search
+    document.getElementById('cardNum').addEventListener('keydown', e => {
+      if (e.key === 'Enter') doSearch();
+    });
+    document.getElementById('setInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') doSearch();
+    });
+  </script>
+</body>
+</html>
