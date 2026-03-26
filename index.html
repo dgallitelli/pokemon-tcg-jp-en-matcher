@@ -40,11 +40,56 @@
     .arrow { font-size: 2rem; color: #ffd700; align-self: center; }
     .loading { display: inline-block; width: 16px; height: 16px; border: 2px solid #ffd700; border-top-color: transparent; border-radius: 50%; animation: spin 0.6s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* How-to section */
+    .howto { max-width: 740px; margin: 0 auto 2.5rem; background: #16213e; border-radius: 12px; padding: 1.5rem 2rem; }
+    .howto h2 { font-size: 1rem; color: #ffd700; margin-bottom: 1rem; }
+    .howto-content { display: flex; gap: 2rem; align-items: start; flex-wrap: wrap; }
+    .howto-card { position: relative; flex-shrink: 0; width: 220px; }
+    .howto-card img { width: 100%; border-radius: 8px; }
+    .howto-card .annotation { position: absolute; border: 2px solid #ffd700; border-radius: 4px; pointer-events: none; }
+    .howto-card .annotation::after { position: absolute; font-size: 0.65rem; font-weight: 700; color: #1a1a2e; background: #ffd700; padding: 0.1rem 0.35rem; border-radius: 3px; white-space: nowrap; }
+    .howto-card .ann-number { bottom: 4.0%; left: 18.3%; width: 10.8%; height: 4.6%; }
+    .howto-card .ann-number::after { content: '② Card #'; top: -1.4rem; left: 0; }
+    .howto-card .ann-setcode { bottom: 4.0%; left: 9.2%; width: 8.7%; height: 4.6%; }
+    .howto-card .ann-setcode::after { content: '① Set ID'; bottom: -1.4rem; left: 0; }
+    .howto-steps { flex: 1; min-width: 240px; }
+    .howto-steps ol { padding-left: 1.2rem; line-height: 1.9; font-size: 0.85rem; color: #ccc; }
+    .howto-steps ol li { margin-bottom: 0.3rem; }
+    .howto-steps code { background: #0f3460; padding: 0.15rem 0.4rem; border-radius: 4px; color: #ffd700; font-size: 0.85rem; }
+    .howto-steps .example { margin-top: 1rem; padding: 0.8rem 1rem; background: #0f3460; border-radius: 8px; font-size: 0.8rem; color: #aaa; }
+    .howto-steps .example strong { color: #ffd700; font-weight: 600; }
+    .try-btn { display: inline-block; margin-top: 0.8rem; padding: 0.4rem 1rem; background: #ffd700; color: #1a1a2e; border: none; border-radius: 5px; font-size: 0.8rem; font-weight: 600; cursor: pointer; text-decoration: none; }
+    .try-btn:hover { background: #ffed4a; }
   </style>
 </head>
 <body>
   <h1>🇯🇵 → 🇺🇸 Pokémon Card Matcher</h1>
   <p class="subtitle">Enter a Japanese card's set ID and number to find its English equivalent via TCGdex</p>
+
+  <div class="howto">
+    <h2>📖 How to find the Set ID and Card Number</h2>
+    <div class="howto-content">
+      <div class="howto-card">
+        <img src="https://assets.tcgdex.net/ja/SV/SV5a/051/high.webp" alt="Example Japanese card — カビゴン (Snorlax) from SV5a">
+        <div class="annotation ann-number"></div>
+        <div class="annotation ann-setcode"></div>
+      </div>
+      <div class="howto-steps">
+        <ol>
+          <li>Look at the <strong style="color:#ffd700">bottom-left</strong> of your Japanese card</li>
+          <li>Find the <strong style="color:#ffd700">set code</strong> first — a short alphanumeric code like <code>SV5a</code></li>
+          <li>Right next to it is the <strong style="color:#ffd700">card number</strong> — it looks like <code>051/066</code>. The first number (before the slash) is your card #</li>
+          <li>Enter both values above and hit Match</li>
+        </ol>
+        <div class="example">
+          <strong>Example:</strong> This カビゴン (Snorlax) card shows <code>051/066</code> and set <code>SV5a</code><br>
+          → Set ID: <code>SV5a</code> &nbsp; Card #: <code>051</code>
+        </div>
+        <button class="try-btn" onclick="document.getElementById('setInput').value='SV5a';document.getElementById('cardNum').value='051';doSearch();">Try this example</button>
+      </div>
+    </div>
+  </div>
 
   <div class="input-section">
     <div class="field">
