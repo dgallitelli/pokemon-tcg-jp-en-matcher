@@ -44,6 +44,12 @@
     /* How-to section */
     .howto { max-width: 740px; margin: 0 auto 2.5rem; background: #16213e; border-radius: 12px; padding: 1.5rem 2rem; }
     .howto h2 { font-size: 1rem; color: #ffd700; margin-bottom: 1rem; }
+    .howto summary { cursor: pointer; list-style: none; }
+    .howto summary::-webkit-details-marker { display: none; }
+    .howto summary h2::before { content: '▸ '; font-size: 1.2rem; }
+    .howto details[open] summary h2::before { content: '▾ '; }
+    .howto summary h2::after { content: none; }
+    .howto details[open] .howto-content { margin-top: 1rem; }
     .howto-content { display: flex; gap: 2rem; align-items: start; flex-wrap: wrap; }
     .howto-card { position: relative; flex-shrink: 0; width: 220px; }
     .howto-card img { width: 100%; border-radius: 8px; }
@@ -68,7 +74,8 @@
   <p class="subtitle">Enter a Japanese card's set ID and number to find its English equivalent via TCGdex</p>
 
   <div class="howto">
-    <h2>📖 How to find the Set ID and Card Number</h2>
+    <details open>
+    <summary><h2 style="display:inline">📖 How to find the Set ID and Card Number</h2></summary>
     <div class="howto-content">
       <div class="howto-card">
         <img src="https://assets.tcgdex.net/ja/SV/SV5a/051/high.webp" alt="Example Japanese card — カビゴン (Snorlax) from SV5a">
@@ -88,7 +95,7 @@
         </div>
         <button class="try-btn" onclick="document.getElementById('setInput').value='SV5a';document.getElementById('cardNum').value='051';doSearch();">Try this example</button>
       </div>
-    </div>
+    </details>
   </div>
 
   <div class="input-section">
