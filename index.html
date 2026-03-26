@@ -118,6 +118,15 @@
   <script>
     const API = 'https://api.tcgdex.net/v2';
 
+    const MISSING_SETS = {
+      m1:  { name: "Mega Brave Deck", note: "XY — Mega Kangaskhan/Gyarados decks" },
+      m1S: { name: "Mega Starter Pack", note: "XY — Mega Blaziken/Lucario starter" },
+      m2:  { name: "Mega Battle Deck 60", note: "XY — Mega Aggron/Ampharos" },
+      m3:  { name: "Mega Battle Deck 60 2", note: "XY — Mega Venusaur/Mega Charizard" },
+      m4:  { name: "Mega Blastoise/Kangaskhan", note: "XY" },
+      m5:  { name: "Mega Tokyo Deck", note: "XY" },
+    };
+
     // Load Japanese sets into dropdown
     async function loadSets() {
       try {
@@ -242,6 +251,12 @@
       const setId = document.getElementById('setInput').value.trim();
       const rawNum = document.getElementById('cardNum').value.trim();
       if (!setId || !rawNum) { setStatus('Please enter a set ID and card number.', true); return; }
+
+      if (MISSING_SETS[setId]) {
+        const info = MISSING_SETS[setId];
+        setStatus(`⚠️ Set <strong>${setId}</strong> (${info.name}) is not yet indexed in TCGdex and cannot be matched automatically. You can help by contributing the data at <a href="https://github.com/tcgdex/cards-database" target="_blank">tcgdex/cards-database</a>.`, true);
+        return;
+      }
 
       const cardNum = padNum(rawNum);
       const cardId = `${setId}-${cardNum}`;
