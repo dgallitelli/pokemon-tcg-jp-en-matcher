@@ -118,14 +118,98 @@
   <script>
     const API = 'https://api.tcgdex.net/v2';
 
+    // ── Sideload config ───────────────────────────────────────────────────────
+    // To add more sets: append an entry with name, note, cardCount, rawBaseUrl.
+    // rawBaseUrl should point to a GitHub raw directory of TCGdex-format .ts
+    // files named 001.ts … NNN.ts (one per card).
+    const SIDELOAD_SETS = {
+      m1S: {
+        name: "Mega Starter Pack",
+        note: "XY — Mega Blaziken/Lucario starter",
+        cardCount: 92,
+        rawBaseUrl: "https://raw.githubusercontent.com/dgallitelli/cards-database/feat/add-ja-m1s-cards/data-asia/M/M1S",
+      },
+      // Example for future sets:
+      // m3: { name: "Mega Battle Deck 60 2", note: "XY", cardCount: 60, rawBaseUrl: "..." },
+    };
+
+    // Sets known-missing from TCGdex with no sideload data yet
     const MISSING_SETS = {
       m1:  { name: "Mega Brave Deck", note: "XY — Mega Kangaskhan/Gyarados decks" },
-      m1S: { name: "Mega Starter Pack", note: "XY — Mega Blaziken/Lucario starter" },
       m2:  { name: "Mega Battle Deck 60", note: "XY — Mega Aggron/Ampharos" },
       m3:  { name: "Mega Battle Deck 60 2", note: "XY — Mega Venusaur/Mega Charizard" },
       m4:  { name: "Mega Blastoise/Kangaskhan", note: "XY" },
       m5:  { name: "Mega Tokyo Deck", note: "XY" },
     };
+
+    // In-memory card cache:  { setId: { '001': cardObj, … } }
+    const sideloadedCards = {};
+    // Loading promises:      { setId: Promise<void> }
+    const sideloadPromises = {};
+
+    // Parse a TCGdex-format TypeScript card file into an app-compatible object.
+    // Uses Function() to evaluate the stripped JS — no external dependencies.
+    function parseTsCard(tsText, cardId, setId) {
+      const mockSet = { id: setId, name: SIDELOAD_SETS[setId]?.name || setId };
+      // Strip TypeScript-only constructs so the remainder is valid JavaScript
+      const code = tsText
+        .replace(/^import\s.+$/gm, '')                         // remove imports
+        .replace(/const\s+card\s*:\s*\w+\s*=/, 'const card =') // remove type annotation
+        .replace(/export\s+default\s+card/, '')                 // remove export
+        .trim();
+      try {
+        // Pass mockSet as the "Set" parameter referenced inside the card object
+        const raw = new Function('Set', code + '\n; return card;')(mockSet);
+        return {
+          id: cardId,
+          name: typeof raw.name === 'object' ? (raw.name.ja || raw.name.en || '?') : (raw.name || '?'),
+          category: raw.category,
+          hp: raw.hp,
+          types: raw.types,
+          stage: raw.stage,
+          illustrator: raw.illustrator,
+          retreat: raw.retreat,
+          dexId: raw.dexId,
+          set: mockSet,
+          image: null, // not yet on TCGdex
+          attacks: (raw.attacks || []).map(a => ({
+            name: typeof a.name === 'object' ? (a.name.ja || '') : (a.name || ''),
+            damage: a.damage !== undefined ? String(a.damage) : '',
+            cost: a.cost || [],
+          })),
+          trainerType: raw.trainerType,
+          effect: typeof raw.effect === 'object' ? (raw.effect.ja || '') : (raw.effect || ''),
+          description: typeof raw.description === 'object' ? (raw.description.ja || '') : (raw.description || ''),
+        };
+      } catch (e) {
+        console.warn('[sideload] Failed to parse', cardId, e);
+        return null;
+      }
+    }
+
+    // Kick off background fetching of all sideloaded sets at page load.
+    // Each set's promise resolves when all its cards have been fetched/parsed.
+    function startLoadSideloadSets() {
+      for (const [setId, config] of Object.entries(SIDELOAD_SETS)) {
+        if (!config.rawBaseUrl) continue;
+        const cards = {};
+        sideloadedCards[setId] = cards;
+        const nums = Array.from({ length: config.cardCount }, (_, i) =>
+          String(i + 1).padStart(3, '0'));
+        sideloadPromises[setId] = Promise.all(
+          nums.map(async num => {
+            try {
+              const res = await fetch(`${config.rawBaseUrl}/${num}.ts`);
+              if (!res.ok) return;
+              const card = parseTsCard(await res.text(), `${setId}-${num}`, setId);
+              if (card) cards[num] = card;
+            } catch {}
+          })
+        ).then(() => {
+          console.log(`[sideload] ${setId}: loaded ${Object.keys(cards).length}/${config.cardCount} cards`);
+        }).catch(() => {});
+      }
+    }
 
     // Load Japanese sets into dropdown
     async function loadSets() {
@@ -138,6 +222,13 @@
           const opt = document.createElement('option');
           opt.value = s.id;
           opt.label = `${s.name} — ${s.cardCount.total} cards`;
+          dl.appendChild(opt);
+        }
+        // Add sideloaded sets so they appear in the autocomplete dropdown
+        for (const [setId, config] of Object.entries(SIDELOAD_SETS)) {
+          const opt = document.createElement('option');
+          opt.value = setId;
+          opt.label = `${config.name} — ${config.cardCount} cards`;
           dl.appendChild(opt);
         }
       } catch {}
@@ -252,33 +343,49 @@
       const rawNum = document.getElementById('cardNum').value.trim();
       if (!setId || !rawNum) { setStatus('Please enter a set ID and card number.', true); return; }
 
-      if (MISSING_SETS[setId]) {
-        const info = MISSING_SETS[setId];
-        setStatus(`⚠️ Set <strong>${setId}</strong> (${info.name}) is not yet indexed in TCGdex and cannot be matched automatically. You can help by contributing the data at <a href="https://github.com/tcgdex/cards-database" target="_blank" style="color:#ffd700">tcgdex/cards-database</a>.`, true);
-        return;
-      }
-
       const cardNum = padNum(rawNum);
       const cardId = `${setId}-${cardNum}`;
 
       setStatus('<span class="loading"></span> Fetching Japanese card...', false);
       document.getElementById('results').innerHTML = '';
 
-      // 1. Fetch the Japanese card
+      // 1. Get the Japanese card — sideload cache, MISSING_SETS guard, or TCGdex
       let jpCard;
-      try {
-        const res = await fetch(`${API}/ja/cards/${cardId}`);
-        if (!res.ok) {
-          // Try without padding
-          const res2 = await fetch(`${API}/ja/cards/${setId}-${rawNum}`);
-          if (!res2.ok) throw new Error(`Card not found: ${cardId}`);
-          jpCard = await res2.json();
-        } else {
-          jpCard = await res.json();
+      if (SIDELOAD_SETS[setId]) {
+        // Wait for the background sideload to finish if still in progress
+        if (sideloadPromises[setId]) {
+          setStatus('<span class="loading"></span> Loading sideloaded card data for ' + setId + '…', false);
+          await sideloadPromises[setId];
         }
-      } catch (e) {
-        setStatus(`❌ ${e.message}`, true);
+        jpCard = sideloadedCards[setId]?.[cardNum];
+        if (!jpCard) {
+          const info = SIDELOAD_SETS[setId];
+          const loaded = Object.keys(sideloadedCards[setId] || {}).length;
+          const hint = loaded === 0
+            ? ' Sideload may have failed — check your network connection.'
+            : ` (${loaded} cards loaded; card ${cardNum} may not exist in this set.)`;
+          setStatus(`⚠️ Card <strong>${cardNum}</strong> not found in sideloaded data for <strong>${setId}</strong> (${info.name}).${hint}`, true);
+          return;
+        }
+      } else if (MISSING_SETS[setId]) {
+        const info = MISSING_SETS[setId];
+        setStatus(`⚠️ Set <strong>${setId}</strong> (${info.name}) is not yet indexed in TCGdex and cannot be matched automatically. You can help by contributing the data at <a href="https://github.com/tcgdex/cards-database" target="_blank" style="color:#ffd700">tcgdex/cards-database</a>.`, true);
         return;
+      } else {
+        try {
+          const res = await fetch(`${API}/ja/cards/${cardId}`);
+          if (!res.ok) {
+            // Try without padding
+            const res2 = await fetch(`${API}/ja/cards/${setId}-${rawNum}`);
+            if (!res2.ok) throw new Error(`Card not found: ${cardId}`);
+            jpCard = await res2.json();
+          } else {
+            jpCard = await res.json();
+          }
+        } catch (e) {
+          setStatus(`❌ ${e.message}`, true);
+          return;
+        }
       }
 
       setStatus('<span class="loading"></span> Searching for English equivalent...', false);
@@ -384,6 +491,7 @@
 
     // Init
     loadSets();
+    startLoadSideloadSets();
 
     // Allow Enter key to trigger search
     document.getElementById('cardNum').addEventListener('keydown', e => {
