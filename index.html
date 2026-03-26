@@ -118,19 +118,104 @@
   <script>
     const API = 'https://api.tcgdex.net/v2';
 
-    // ── Sideload config ───────────────────────────────────────────────────────
-    // To add more sets: append an entry with name, note, cardCount, rawBaseUrl.
-    // rawBaseUrl should point to a GitHub raw directory of TCGdex-format .ts
-    // files named 001.ts … NNN.ts (one per card).
     const SIDELOAD_SETS = {
-      m1S: {
-        name: "Mega Starter Pack",
-        note: "XY — Mega Blaziken/Lucario starter",
-        cardCount: 92,
-        rawBaseUrl: "https://raw.githubusercontent.com/dgallitelli/cards-database/feat/add-ja-m1s-cards/data-asia/M/M1S",
-      },
-      // Example for future sets:
-      // m3: { name: "Mega Battle Deck 60 2", note: "XY", cardCount: 60, rawBaseUrl: "..." },
+      "M1S": {
+        name: "Mega Symphonia",
+        cards: {
+  "001": {"name":"モンジャラ","hp":80,"types":["Grass"],"stage":"Basic","illustrator":"Yuriko Akase","retreat":2,"dexId":[114],"attacks":[{"name":"どくのこな"},{"damage":30,"cost":["Grass","Colorless","Colorless"],"name":"ひっかける"}],"category":"Pokemon","rarity":"Common","id":"M1S-001","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "002": {"name":"モジャンボ","hp":150,"types":["Grass"],"stage":"Stage1","illustrator":"REND","retreat":4,"dexId":[465],"attacks":[{"damage":30,"name":"すいとる"},{"name":"ムキムキウィップ"}],"category":"Pokemon","rarity":"Uncommon","id":"M1S-002","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "003": {"name":"チコリータ","hp":70,"types":["Grass"],"stage":"Basic","illustrator":"kamonabe","retreat":1,"dexId":[152],"attacks":[{"damage":20,"cost":["Grass"],"name":"はっぱカッター"}],"category":"Pokemon","rarity":"Common","id":"M1S-003","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "004": {"name":"ベイリーフ","hp":110,"types":["Grass"],"stage":"Stage1","illustrator":"nisimono","retreat":2,"dexId":[153],"attacks":[{"damage":50,"name":"つきとばす"}],"category":"Pokemon","rarity":"Common","id":"M1S-004","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "005": {"name":"メガニウム","hp":160,"types":["Grass"],"stage":"Stage2","illustrator":"Yoriyuki Ikegami","retreat":2,"dexId":[154],"attacks":[{"damage":140,"cost":["Grass","Grass","Colorless","Colorless"],"name":"ソーラービーム"}],"category":"Pokemon","rarity":"Rare","id":"M1S-005","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "006": {"name":"ツボツボ","hp":80,"types":["Grass"],"stage":"Basic","illustrator":"Shinya Komatsu","retreat":1,"dexId":[213],"attacks":[{"damage":30,"cost":["Grass","Colorless"],"name":"ころがる"}],"category":"Pokemon","rarity":"Uncommon","id":"M1S-006","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "007": {"name":"ツチニン","hp":50,"types":["Grass"],"stage":"Basic","illustrator":"Kuroimori","retreat":1,"dexId":[290],"attacks":[{"damage":20,"cost":["Colorless"],"name":"ひっかく"}],"category":"Pokemon","rarity":"Common","id":"M1S-007","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "008": {"name":"テッカニン","hp":80,"types":["Grass"],"stage":"Stage1","illustrator":"Apios","retreat":0,"dexId":[291],"attacks":[{"damage":90,"name":"とんぼがえり"}],"category":"Pokemon","rarity":"Uncommon","id":"M1S-008","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "009": {"name":"ダダリン","hp":120,"types":["Grass"],"stage":"Basic","illustrator":"Haru Akasaka","retreat":2,"dexId":[781],"attacks":[{"name":"グラウンドパワー"}],"category":"Pokemon","rarity":"Common","id":"M1S-009","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "010": {"name":"シシコ","hp":70,"types":["Fire"],"stage":"Basic","illustrator":"Kurata So","retreat":2,"dexId":[667],"attacks":[{"damage":30,"cost":["Fire","Colorless"],"name":"ほのお"}],"category":"Pokemon","rarity":"Common","id":"M1S-010","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "011": {"name":"カエンジシ","hp":130,"types":["Fire"],"stage":"Stage1","illustrator":"KEIICHIRO ITO","retreat":2,"dexId":[668],"attacks":[{"damage":70,"name":"やきこがす"}],"category":"Pokemon","rarity":"Uncommon","id":"M1S-011","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "012": {"name":"ヤクデ","hp":80,"types":["Fire"],"stage":"Basic","illustrator":"GIDORA","retreat":2,"dexId":[850],"attacks":[{"damage":10,"cost":["Fire"],"name":"ぶつかる"},{"damage":50,"cost":["Fire","Fire","Colorless"],"name":"かえん"}],"category":"Pokemon","rarity":"Common","id":"M1S-012","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "013": {"name":"マルヤクデ","hp":140,"types":["Fire"],"stage":"Stage1","illustrator":"Shiburingaru","retreat":3,"dexId":[851],"attacks":[{"damage":50,"name":"まきつきクラッシュ"},{"damage":140,"cost":["Fire","Fire","Colorless","Colorless"],"name":"ヒートクローラー"}],"category":"Pokemon","rarity":"Uncommon","id":"M1S-013","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "014": {"name":"イーユイ","hp":110,"types":["Fire"],"stage":"Basic","illustrator":"Gemi","retreat":1,"dexId":[1004],"attacks":[{"damage":40,"name":"やけつくだいち"}],"category":"Pokemon","rarity":"Uncommon","id":"M1S-014","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "015": {"name":"マンタイン","hp":110,"types":["Water"],"stage":"Basic","illustrator":"Shimaris Yukichi","retreat":1,"dexId":[226],"attacks":[{"name":"なかまをよぶ"},{"damage":50,"cost":["Water","Colorless"],"name":"たきのぼり"}],"category":"Pokemon","rarity":"Common","id":"M1S-015","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "016": {"name":"カイオーガ","hp":150,"types":["Water"],"stage":"Basic","illustrator":"Nisota Niso","retreat":3,"dexId":[382],"attacks":[{"name":"ぎゃくりゅう"},{"damage":130,"name":"うずまくなみ"}],"category":"Pokemon","rarity":"Rare","id":"M1S-016","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "017": {"name":"ユキカブリ","hp":90,"types":["Water"],"stage":"Basic","illustrator":"Pani Kobayashi","retreat":3,"dexId":[459],"attacks":[{"damage":10,"cost":["Water"],"name":"たたく"},{"damage":30,"cost":["Water","Water"],"name":"スノーアイス"}],"category":"Pokemon","rarity":"Common","id":"M1S-017","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "018": {"name":"メガユキノオーex","hp":350,"types":["Water"],"stage":"MEGA","illustrator":"5ban Graphics","retreat":4,"attacks":[{"name":"アバランチハンマー"},{"damage":200,"name":"フロストバリア"}],"category":"Pokemon","rarity":"Double rare","id":"M1S-018","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "019": {"name":"ウデッポウ","hp":80,"types":["Water"],"stage":"Basic","illustrator":"Tomokazu Komiya","retreat":2,"dexId":[692],"attacks":[{"damage":50,"cost":["Water","Water"],"name":"スプラッシュ"}],"category":"Pokemon","rarity":"Common","id":"M1S-019","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "020": {"name":"ブロスター","hp":130,"types":["Water"],"stage":"Stage1","illustrator":"Anesaki Dynamic","retreat":2,"dexId":[693],"attacks":[{"damage":210,"name":"アクアランチャー"}],"category":"Pokemon","rarity":"Rare","id":"M1S-020","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "021": {"name":"メッソン","hp":70,"types":["Water"],"stage":"Basic","illustrator":"Taira Akitsu","retreat":1,"dexId":[816],"attacks":[{"damage":30,"name":"ふいをつく"}],"category":"Pokemon","rarity":"Common","id":"M1S-021","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "022": {"name":"ジメレオン","hp":100,"types":["Water"],"stage":"Stage1","illustrator":"Souichirou Gunjima","retreat":1,"dexId":[817],"attacks":[{"name":"にどづき"}],"category":"Pokemon","rarity":"Common","id":"M1S-022","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "023": {"name":"インテレオン","hp":150,"types":["Water"],"stage":"Stage2","illustrator":"akagi","retreat":1,"dexId":[818],"attacks":[{"name":"しとめる"},{"damage":110,"name":"ウォーターショット"}],"category":"Pokemon","rarity":"Uncommon","id":"M1S-023","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "024": {"name":"ユキハミ","hp":50,"types":["Water"],"stage":"Basic","illustrator":"Kagemaru Himeno","retreat":1,"dexId":[872],"attacks":[{"name":"かくれる"}],"category":"Pokemon","rarity":"Common","id":"M1S-024","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "025": {"name":"モスノウ","hp":110,"types":["Water"],"stage":"Stage1","illustrator":"miki kudo","retreat":2,"dexId":[873],"attacks":[{"name":"こごえるはばたき"}],"category":"Pokemon","rarity":"Uncommon","id":"M1S-025","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "026": {"name":"コオリッポ","hp":110,"types":["Water"],"stage":"Basic","illustrator":"Akira Komayama","retreat":1,"dexId":[875],"attacks":[{"damage":20,"name":"いてつくずつき"},{"damage":90,"cost":["Water","Colorless","Colorless"],"name":"たいあたり"}],"category":"Pokemon","rarity":"Common","id":"M1S-026","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "027": {"name":"コイル","hp":70,"types":["Lightning"],"stage":"Basic","illustrator":"Krgc","retreat":1,"dexId":[81],"attacks":[{"damage":10,"cost":["Lightning"],"name":"ビーム"}],"category":"Pokemon","rarity":"Common","id":"M1S-027","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "028": {"name":"レアコイル","hp":90,"types":["Lightning"],"stage":"Stage1","illustrator":"Saboteri","retreat":2,"dexId":[82],"attacks":[{"damage":30,"name":"でんきショック"}],"category":"Pokemon","rarity":"Common","id":"M1S-028","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "029": {"name":"ジバコイル","hp":160,"types":["Lightning"],"stage":"Stage2","illustrator":"nagimiso","retreat":3,"dexId":[462],"attacks":[{"name":"アッパースパーク"},{"damage":160,"name":"フラッシュボルト"}],"category":"Pokemon","rarity":"Uncommon","id":"M1S-029","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "030": {"name":"ライコウ","hp":120,"types":["Lightning"],"stage":"Basic","illustrator":"Takumi Wada","retreat":0,"dexId":[243],"attacks":[{"name":"エレキフォール"}],"category":"Pokemon","rarity":"Rare","id":"M1S-030","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "031": {"name":"ラクライ","hp":70,"types":["Lightning"],"stage":"Basic","illustrator":"Naoki Saito","retreat":1,"dexId":[309],"attacks":[{"damage":30,"name":"でんげき"}],"category":"Pokemon","rarity":"Common","id":"M1S-031","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "032": {"name":"メガライボルトex","hp":330,"types":["Lightning"],"stage":"Stage1","illustrator":"5ban Graphics","retreat":0,"dexId":[310],"attacks":[{"damage":120,"name":"フラッシュレイ"},{"name":"ライオットブラスター"}],"category":"Pokemon","rarity":"Double rare","id":"M1S-032","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "033": {"name":"パチリス","hp":70,"types":["Lightning"],"stage":"Basic","illustrator":"tono","retreat":1,"dexId":[417],"attacks":[{"damage":10,"name":"しびれるまえば"}],"category":"Pokemon","rarity":"Common","id":"M1S-033","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "034": {"name":"エリキテル","hp":70,"types":["Lightning"],"stage":"Basic","illustrator":"Yuka Morii","retreat":1,"dexId":[694],"attacks":[{"name":"ダブルひっかき"}],"category":"Pokemon","rarity":"Common","id":"M1S-034","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "035": {"name":"エレザード","hp":120,"types":["Lightning"],"stage":"Stage1","illustrator":"Nakamura Ippan","retreat":1,"dexId":[695],"attacks":[{"damage":20,"name":"せんこうだん"},{"damage":70,"cost":["Lightning","Colorless"],"name":"ヘッドボルト"}],"category":"Pokemon","rarity":"Common","id":"M1S-035","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "036": {"name":"ケーシィ","hp":50,"types":["Psychic"],"stage":"Basic","illustrator":"Orca","retreat":1,"dexId":[63],"attacks":[{"damage":10,"name":"テレポートアタック"}],"category":"Pokemon","rarity":"Common","id":"M1S-036","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "037": {"name":"ユンゲラー","hp":80,"types":["Psychic"],"stage":"Stage1","illustrator":"Saboteri","retreat":1,"dexId":[64],"attacks":[{"damage":30,"cost":["Psychic"],"name":"ちょうねんりき"}],"category":"Pokemon","rarity":"Uncommon","id":"M1S-037","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "038": {"name":"フーディン","hp":140,"types":["Psychic"],"stage":"Stage2","illustrator":"Bun Toujo","retreat":1,"dexId":[65],"attacks":[{"name":"ハンドパワー"}],"category":"Pokemon","rarity":"Rare","id":"M1S-038","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "039": {"name":"ルージュラ","hp":110,"types":["Psychic"],"stage":"Basic","illustrator":"Minahamu","retreat":1,"dexId":[124],"attacks":[{"name":"サイコキネシス"}],"category":"Pokemon","rarity":"Common","id":"M1S-039","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "040": {"name":"ラルトス","hp":70,"types":["Psychic"],"stage":"Basic","illustrator":"Terada Tera","retreat":1,"dexId":[280],"attacks":[{"name":"もってくる"},{"damage":10,"cost":["Psychic"],"name":"ずつき"}],"category":"Pokemon","rarity":"Common","id":"M1S-040","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "041": {"name":"キルリア","hp":100,"types":["Psychic"],"stage":"Stage1","illustrator":"satoma","retreat":1,"dexId":[281],"attacks":[{"name":"コールサイン"},{"damage":30,"cost":["Psychic"],"name":"サイコショット"}],"category":"Pokemon","rarity":"Common","id":"M1S-041","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "042": {"name":"メガサーナイトex","hp":360,"types":["Psychic"],"stage":"Stage2","illustrator":"takuyoa","retreat":2,"dexId":[282],"attacks":[{"name":"あふれるねがい"},{"name":"メガシンフォニア"}],"category":"Pokemon","rarity":"Double rare","id":"M1S-042","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "043": {"name":"ヌケニン","hp":60,"types":["Psychic"],"stage":"Basic","illustrator":"IKEDA Saki","retreat":0,"dexId":[292],"attacks":[{"name":"ダメージビート"}],"category":"Pokemon","rarity":"Uncommon","id":"M1S-043","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "044": {"name":"バネブー","hp":70,"types":["Psychic"],"stage":"Basic","illustrator":"toi8","retreat":1,"dexId":[325],"attacks":[{"name":"トリプルスピン"}],"category":"Pokemon","rarity":"Common","id":"M1S-044","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "045": {"name":"ブーピッグ","hp":120,"types":["Psychic"],"stage":"Stage1","illustrator":"cochi8i","retreat":2,"dexId":[326],"attacks":[{"damage":60,"cost":["Psychic","Colorless","Colorless"],"name":"ねんどうだん"}],"category":"Pokemon","rarity":"Uncommon","id":"M1S-045","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "046": {"name":"ゼルネアス","hp":120,"types":["Psychic"],"stage":"Basic","illustrator":"Kazumasa Yasukuni","retreat":1,"dexId":[716],"attacks":[{"name":"ジオゲート"},{"damage":120,"name":"ブライトホーン"}],"category":"Pokemon","rarity":"Rare","id":"M1S-046","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "047": {"name":"ボチ","hp":80,"types":["Psychic"],"stage":"Basic","illustrator":"Narumi Sato","retreat":3,"dexId":[971],"attacks":[{"damage":10,"cost":["Psychic"],"name":"ふむ"},{"damage":40,"name":"とっしん"}],"category":"Pokemon","rarity":"Common","id":"M1S-047","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "048": {"name":"ハカドッグ","hp":140,"types":["Psychic"],"stage":"Stage1","illustrator":"matazo","retreat":3,"dexId":[972],"attacks":[{"damage":30,"name":"ホラーバイト"},{"damage":130,"cost":["Psychic","Psychic","Colorless"],"name":"ぶちかます"}],"category":"Pokemon","rarity":"Uncommon","id":"M1S-048","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "049": {"name":"メガラティアスex","hp":280,"types":["Dragon"],"stage":"Basic","illustrator":"5ban Graphics","retreat":1,"dexId":[380],"attacks":[{"damage":40,"name":"ひるがえす"},{"damage":300,"name":"ミラージュインパルス"}],"category":"Pokemon","rarity":"Double rare","id":"M1S-049","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "050": {"name":"ラティオス","hp":130,"types":["Dragon"],"stage":"Basic","illustrator":"Uninori","retreat":1,"dexId":[381],"attacks":[{"damage":130,"cost":["Water","Psychic","Colorless"],"name":"ドラゴンクロー"}],"category":"Pokemon","rarity":"Uncommon","id":"M1S-050","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "051": {"name":"メガガルーラex","hp":300,"types":["Colorless"],"stage":"Basic","illustrator":"5ban Graphics","retreat":3,"dexId":[115],"attacks":[{"name":"マシンガンコンボ"}],"category":"Pokemon","rarity":"Double rare","id":"M1S-051","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "052": {"name":"デリバード","hp":90,"types":["Colorless"],"stage":"Basic","illustrator":"Naoyo Kimura","retreat":1,"dexId":[225],"attacks":[{"name":"ファストギフト"},{"damage":30,"cost":["Colorless","Colorless"],"name":"ひっぱたく"}],"category":"Pokemon","rarity":"Common","id":"M1S-052","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "053": {"name":"ミミロル","hp":70,"types":["Colorless"],"stage":"Basic","illustrator":"ryoma uratsuka","retreat":1,"dexId":[427],"attacks":[{"name":"あまえる"},{"damage":10,"cost":["Colorless"],"name":"スキップ"}],"category":"Pokemon","rarity":"Common","id":"M1S-053","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "054": {"name":"ミミロップ","hp":110,"types":["Colorless"],"stage":"Stage1","illustrator":"Oswaldo KATO","retreat":1,"dexId":[428],"attacks":[{"damage":50,"name":"とびだしキック"},{"damage":60,"cost":["Colorless","Colorless"],"name":"かいてんげり"}],"category":"Pokemon","rarity":"Common","id":"M1S-054","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "055": {"name":"ヌイコグマ","hp":70,"types":["Colorless"],"stage":"Basic","illustrator":"Shibuzoh.","retreat":2,"dexId":[759],"attacks":[{"damage":10,"cost":["Colorless"],"name":"なぐる"},{"damage":20,"cost":["Colorless","Colorless"],"name":"はねまわる"}],"category":"Pokemon","rarity":"Common","id":"M1S-055","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "056": {"name":"キテルグマ","hp":130,"types":["Colorless"],"stage":"Stage1","illustrator":"HYOGONOSUKE","retreat":3,"dexId":[760],"attacks":[{"damage":50,"cost":["Colorless","Colorless"],"name":"げんこつ"},{"name":"ひっさつラリアット"}],"category":"Pokemon","rarity":"Common","id":"M1S-056","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "057": {"name":"あやしい時計","illustrator":"Toyste Beach","category":"Trainer","rarity":"Uncommon","id":"M1S-057","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "058": {"name":"メガシグナル","illustrator":"Inose yukie","category":"Trainer","rarity":"Uncommon","id":"M1S-058","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "059": {"name":"アセロラのいたずら","illustrator":"Yuu Nishida","category":"Trainer","rarity":"Uncommon","id":"M1S-059","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "060": {"name":"ミツルの思いやり","illustrator":"Iori Suzuki","category":"Trainer","rarity":"Uncommon","id":"M1S-060","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "061": {"name":"活力の森","illustrator":"AYUMI ODASHIMA","category":"Trainer","rarity":"Uncommon","id":"M1S-061","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "062": {"name":"なみのりビーチ","illustrator":"AYUMI ODASHIMA","category":"Trainer","rarity":"Uncommon","id":"M1S-062","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "063": {"name":"ミステリーガーデン","illustrator":"AYUMI ODASHIMA","category":"Trainer","rarity":"Uncommon","id":"M1S-063","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "064": {"name":"ツボツボ","hp":80,"types":["Grass"],"stage":"Basic","illustrator":"OKUBO","retreat":1,"dexId":[213],"attacks":[{"damage":50,"cost":["Grass","Colorless","Colorless"],"name":"ころがる"}],"category":"Pokemon","rarity":"Illustration rare","id":"M1S-064","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "065": {"name":"テッカニン","hp":80,"types":["Grass"],"stage":"Stage1","illustrator":"Teeziro","retreat":0,"dexId":[291],"attacks":[{"damage":90,"name":"とんぼがえり"}],"category":"Pokemon","rarity":"Illustration rare","id":"M1S-065","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "066": {"name":"シシコ","hp":70,"types":["Fire"],"stage":"Basic","illustrator":"Teeziro","retreat":2,"dexId":[667],"attacks":[{"damage":30,"cost":["Fire","Colorless"],"name":"ほのお"}],"category":"Pokemon","rarity":"Illustration rare","id":"M1S-066","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "067": {"name":"ユキカブリ","hp":90,"types":["Water"],"stage":"Basic","illustrator":"Nurikabe","retreat":3,"dexId":[459],"attacks":[{"damage":10,"cost":["Water"],"name":"たたく"},{"damage":30,"cost":["Water","Water"],"name":"スノーアイス"}],"category":"Pokemon","rarity":"Illustration rare","id":"M1S-067","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "068": {"name":"ブロスター","hp":130,"types":["Water"],"stage":"Stage1","illustrator":"Mori Yuu","retreat":2,"dexId":[693],"attacks":[{"damage":210,"name":"アクアランチャー"}],"category":"Pokemon","rarity":"Illustration rare","id":"M1S-068","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "069": {"name":"インテレオン","hp":150,"types":["Water"],"stage":"Stage2","illustrator":"Ligton","retreat":1,"dexId":[818],"attacks":[{"name":"しとめる"},{"damage":110,"name":"ウォーターショット"}],"category":"Pokemon","rarity":"Illustration rare","id":"M1S-069","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "070": {"name":"エリキテル","hp":70,"types":["Lightning"],"stage":"Basic","illustrator":"Akira Komayama","retreat":1,"dexId":[694],"attacks":[{"name":"ダブルひっかき"}],"category":"Pokemon","rarity":"Illustration rare","id":"M1S-070","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "071": {"name":"フーディン","hp":140,"types":["Psychic"],"stage":"Stage2","illustrator":"Aya Kusube","retreat":1,"dexId":[65],"attacks":[{"name":"ハンドパワー"}],"category":"Pokemon","rarity":"Illustration rare","id":"M1S-071","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "072": {"name":"ヌケニン","hp":60,"types":["Psychic"],"stage":"Basic","illustrator":"Tetsu Kayama","retreat":0,"dexId":[292],"attacks":[{"name":"ダメージビート"}],"category":"Pokemon","rarity":"Illustration rare","id":"M1S-072","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "073": {"name":"ハカドッグ","hp":140,"types":["Psychic"],"stage":"Stage1","illustrator":"Arai Kiriko","retreat":3,"dexId":[972],"attacks":[{"damage":30,"name":"ホラーバイト"},{"damage":130,"cost":["Psychic","Psychic","Colorless"],"name":"ぶちかます"}],"category":"Pokemon","rarity":"Illustration rare","id":"M1S-073","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "074": {"name":"デリバード","hp":90,"types":["Colorless"],"stage":"Basic","illustrator":"Takeshi Nakamura","retreat":1,"dexId":[225],"attacks":[{"name":"ファストギフト"},{"damage":30,"cost":["Colorless","Colorless"],"name":"ひっぱたく"}],"category":"Pokemon","rarity":"Illustration rare","id":"M1S-074","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "075": {"name":"ヌイコグマ","hp":70,"types":["Colorless"],"stage":"Basic","illustrator":"OKACHEKE","retreat":2,"dexId":[759],"attacks":[{"damage":10,"cost":["Colorless"],"name":"なぐる"},{"damage":20,"cost":["Colorless","Colorless"],"name":"はねまわる"}],"category":"Pokemon","rarity":"Illustration rare","id":"M1S-075","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "076": {"name":"メガユキノオーex","hp":350,"types":["Water"],"stage":"MEGA","illustrator":"5ban Graphics","retreat":4,"attacks":[{"name":"アバランチハンマー"},{"damage":200,"name":"フロストバリア"}],"category":"Pokemon","rarity":"Secret Rare","id":"M1S-076","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "077": {"name":"メガライボルトex","hp":330,"types":["Lightning"],"stage":"Stage1","illustrator":"5ban Graphics","retreat":0,"dexId":[310],"attacks":[{"damage":120,"name":"フラッシュレイ"},{"name":"ライオットブラスター"}],"category":"Pokemon","rarity":"Secret Rare","id":"M1S-077","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "078": {"name":"メガサーナイトex","hp":360,"types":["Psychic"],"stage":"Stage2","illustrator":"takuyoa","retreat":2,"dexId":[282],"attacks":[{"name":"あふれるねがい"},{"name":"メガシンフォニア"}],"category":"Pokemon","rarity":"Secret Rare","id":"M1S-078","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "079": {"name":"メガラティアスex","hp":280,"types":["Dragon"],"stage":"Basic","illustrator":"5ban Graphics","retreat":1,"dexId":[380],"attacks":[{"damage":40,"name":"ひるがえす"},{"damage":300,"name":"ミラージュインパルス"}],"category":"Pokemon","rarity":"Secret Rare","id":"M1S-079","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "080": {"name":"メガガルーラex","hp":300,"types":["Colorless"],"stage":"Basic","illustrator":"5ban Graphics","retreat":3,"dexId":[115],"attacks":[{"name":"マシンガンコンボ"}],"category":"Pokemon","rarity":"Secret Rare","id":"M1S-080","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "081": {"name":"なかよしポフィン","illustrator":"AYUMI ODASHIMA","category":"Trainer","rarity":"Secret Rare","id":"M1S-081","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "082": {"name":"ふしぎなアメ","illustrator":"Studio Bora Inc.","category":"Trainer","rarity":"Secret Rare","id":"M1S-082","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "083": {"name":"メガシグナル","illustrator":"Inose yukie","category":"Trainer","rarity":"Secret Rare","id":"M1S-083","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "084": {"name":"アセロラのいたずら","illustrator":"Yuu Nishida","category":"Trainer","rarity":"Secret Rare","id":"M1S-084","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "085": {"name":"ミツルの思いやり","illustrator":"Iori Suzuki","category":"Trainer","rarity":"Secret Rare","id":"M1S-085","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "086": {"name":"ミステリーガーデン","illustrator":"AYUMI ODASHIMA","category":"Trainer","rarity":"Secret Rare","id":"M1S-086","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "087": {"name":"メガサーナイトex","hp":360,"types":["Psychic"],"stage":"Stage2","illustrator":"Raita Kazama","retreat":2,"dexId":[282],"attacks":[{"name":"あふれるねがい"},{"name":"メガシンフォニア"}],"category":"Pokemon","rarity":"Special illustration rare","id":"M1S-087","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "088": {"name":"メガラティアスex","hp":280,"types":["Dragon"],"stage":"Basic","illustrator":"AKIRA EGAWA","retreat":1,"dexId":[380],"attacks":[{"damage":40,"name":"ひるがえす"},{"damage":300,"name":"ミラージュインパルス"}],"category":"Pokemon","rarity":"Special illustration rare","id":"M1S-088","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "089": {"name":"メガガルーラex","hp":300,"types":["Colorless"],"stage":"Basic","illustrator":"GOTO minori","retreat":3,"dexId":[115],"attacks":[{"name":"マシンガンコンボ"}],"category":"Pokemon","rarity":"Special illustration rare","id":"M1S-089","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "090": {"name":"アセロラのいたずら","illustrator":"sui","category":"Trainer","rarity":"Special illustration rare","id":"M1S-090","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "091": {"name":"ミツルの思いやり","illustrator":"Jiro Sasumo","category":"Trainer","rarity":"Special illustration rare","id":"M1S-091","set":{"id":"M1S","name":"Mega Symphonia"},"image":null},
+  "092": {"name":"メガサーナイトex","hp":360,"types":["Psychic"],"stage":"Stage2","illustrator":"5ban Graphics","retreat":2,"dexId":[282],"attacks":[{"name":"あふれるねがい"},{"name":"メガシンフォニア"}],"category":"Pokemon","rarity":"Mega Hyper Rare","id":"M1S-092","set":{"id":"M1S","name":"Mega Symphonia"},"image":null}
+        }
+      }
     };
 
     // Sets known-missing from TCGdex with no sideload data yet
@@ -142,81 +227,12 @@
       m5:  { name: "Mega Tokyo Deck", note: "XY" },
     };
 
-    // In-memory card cache:  { setId: { '001': cardObj, … } }
-    const sideloadedCards = {};
-    // Loading promises:      { setId: Promise<void> }
-    const sideloadPromises = {};
-
-    // Parse a TCGdex-format TypeScript card file into an app-compatible object.
-    // Uses Function() to evaluate the stripped JS — no external dependencies.
-    function parseTsCard(tsText, cardId, setId) {
-      const mockSet = { id: setId, name: SIDELOAD_SETS[setId]?.name || setId };
-      // Strip TypeScript-only constructs so the remainder is valid JavaScript
-      const code = tsText
-        .replace(/^import\s.+$/gm, '')                         // remove imports
-        .replace(/const\s+card\s*:\s*\w+\s*=/, 'const card =') // remove type annotation
-        .replace(/export\s+default\s+card/, '')                 // remove export
-        .trim();
-      try {
-        // Pass mockSet as the "Set" parameter referenced inside the card object
-        const raw = new Function('Set', code + '\n; return card;')(mockSet);
-        return {
-          id: cardId,
-          name: typeof raw.name === 'object' ? (raw.name.ja || raw.name.en || '?') : (raw.name || '?'),
-          category: raw.category,
-          hp: raw.hp,
-          types: raw.types,
-          stage: raw.stage,
-          illustrator: raw.illustrator,
-          retreat: raw.retreat,
-          dexId: raw.dexId,
-          set: mockSet,
-          image: null, // not yet on TCGdex
-          attacks: (raw.attacks || []).map(a => ({
-            name: typeof a.name === 'object' ? (a.name.ja || '') : (a.name || ''),
-            damage: a.damage !== undefined ? String(a.damage) : '',
-            cost: a.cost || [],
-          })),
-          trainerType: raw.trainerType,
-          effect: typeof raw.effect === 'object' ? (raw.effect.ja || '') : (raw.effect || ''),
-          description: typeof raw.description === 'object' ? (raw.description.ja || '') : (raw.description || ''),
-        };
-      } catch (e) {
-        console.warn('[sideload] Failed to parse', cardId, e);
-        return null;
-      }
-    }
-
-    // Kick off background fetching of all sideloaded sets at page load.
-    // Each set's promise resolves when all its cards have been fetched/parsed.
-    function startLoadSideloadSets() {
-      for (const [setId, config] of Object.entries(SIDELOAD_SETS)) {
-        if (!config.rawBaseUrl) continue;
-        const cards = {};
-        sideloadedCards[setId] = cards;
-        const nums = Array.from({ length: config.cardCount }, (_, i) =>
-          String(i + 1).padStart(3, '0'));
-        sideloadPromises[setId] = Promise.all(
-          nums.map(async num => {
-            try {
-              const res = await fetch(`${config.rawBaseUrl}/${num}.ts`);
-              if (!res.ok) return;
-              const card = parseTsCard(await res.text(), `${setId}-${num}`, setId);
-              if (card) cards[num] = card;
-            } catch {}
-          })
-        ).then(() => {
-          console.log(`[sideload] ${setId}: loaded ${Object.keys(cards).length}/${config.cardCount} cards`);
-        }).catch(() => {});
-      }
-    }
-
     // Load Japanese sets into dropdown
     async function loadSets() {
+      const dl = document.getElementById('setList');
       try {
         const res = await fetch(`${API}/ja/sets`);
         const sets = await res.json();
-        const dl = document.getElementById('setList');
         sets.sort((a, b) => (b.releaseDate || '').localeCompare(a.releaseDate || ''));
         for (const s of sets) {
           const opt = document.createElement('option');
@@ -224,14 +240,14 @@
           opt.label = `${s.name} — ${s.cardCount.total} cards`;
           dl.appendChild(opt);
         }
-        // Add sideloaded sets so they appear in the autocomplete dropdown
-        for (const [setId, config] of Object.entries(SIDELOAD_SETS)) {
-          const opt = document.createElement('option');
-          opt.value = setId;
-          opt.label = `${config.name} — ${config.cardCount} cards`;
-          dl.appendChild(opt);
-        }
       } catch {}
+      // Add sideloaded sets to dropdown
+      for (const [id, data] of Object.entries(SIDELOAD_SETS)) {
+        const opt = document.createElement('option');
+        opt.value = id;
+        opt.label = `${data.name} — ${Object.keys(data.cards).length} cards (offline)`;
+        dl.appendChild(opt);
+      }
     }
 
     // Pad card number to 3 digits with leading zeros
@@ -343,35 +359,31 @@
       const rawNum = document.getElementById('cardNum').value.trim();
       if (!setId || !rawNum) { setStatus('Please enter a set ID and card number.', true); return; }
 
+      const setUpper = setId.toUpperCase();
       const cardNum = padNum(rawNum);
-      const cardId = `${setId}-${cardNum}`;
+
+      // Check missing sets (case-insensitive)
+      const missKey = Object.keys(MISSING_SETS).find(k => k.toLowerCase() === setId.toLowerCase());
+      if (missKey) {
+        const info = MISSING_SETS[missKey];
+        setStatus(`⚠️ Set <strong>${setId}</strong> (${info.name}) is not yet indexed in TCGdex and cannot be matched automatically. You can help by contributing the data at <a href="https://github.com/tcgdex/cards-database" target="_blank" style="color:#ffd700">tcgdex/cards-database</a>.`, true);
+        return;
+      }
 
       setStatus('<span class="loading"></span> Fetching Japanese card...', false);
       document.getElementById('results').innerHTML = '';
 
-      // 1. Get the Japanese card — sideload cache, MISSING_SETS guard, or TCGdex
+      // 1. Get the Japanese card — from sideload or TCGdex API
       let jpCard;
-      if (SIDELOAD_SETS[setId]) {
-        // Wait for the background sideload to finish if still in progress
-        if (sideloadPromises[setId]) {
-          setStatus('<span class="loading"></span> Loading sideloaded card data for ' + setId + '…', false);
-          await sideloadPromises[setId];
-        }
-        jpCard = sideloadedCards[setId]?.[cardNum];
+      if (SIDELOAD_SETS[setUpper]) {
+        const sideload = SIDELOAD_SETS[setUpper];
+        jpCard = sideload.cards[cardNum] || sideload.cards[rawNum];
         if (!jpCard) {
-          const info = SIDELOAD_SETS[setId];
-          const loaded = Object.keys(sideloadedCards[setId] || {}).length;
-          const hint = loaded === 0
-            ? ' Sideload may have failed — check your network connection.'
-            : ` (${loaded} cards loaded; card ${cardNum} may not exist in this set.)`;
-          setStatus(`⚠️ Card <strong>${cardNum}</strong> not found in sideloaded data for <strong>${setId}</strong> (${info.name}).${hint}`, true);
+          setStatus(`❌ Card ${cardNum} not found in ${setUpper} (${sideload.name})`, true);
           return;
         }
-      } else if (MISSING_SETS[setId]) {
-        const info = MISSING_SETS[setId];
-        setStatus(`⚠️ Set <strong>${setId}</strong> (${info.name}) is not yet indexed in TCGdex and cannot be matched automatically. You can help by contributing the data at <a href="https://github.com/tcgdex/cards-database" target="_blank" style="color:#ffd700">tcgdex/cards-database</a>.`, true);
-        return;
       } else {
+        const cardId = `${setId}-${cardNum}`;
         try {
           const res = await fetch(`${API}/ja/cards/${cardId}`);
           if (!res.ok) {
@@ -491,7 +503,6 @@
 
     // Init
     loadSets();
-    startLoadSideloadSets();
 
     // Allow Enter key to trigger search
     document.getElementById('cardNum').addEventListener('keydown', e => {
