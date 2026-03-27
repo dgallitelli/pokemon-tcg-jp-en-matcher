@@ -482,7 +482,29 @@
 
         setStatus('<span class="loading"></span> Searching for English equivalent...', false);
 
-        // 2. Find English candidates
+        // 2a. If this JP card comes from a sideloaded set with a translation file, show it directly
+        {
+          const jpSetId = jpCard.set?.id || setUpper;
+          const enTransSetId = JP_TO_EN_SIDELOAD[jpSetId];
+          const enTransSet = enTransSetId ? SIDELOAD_EN_SETS[enTransSetId] : null;
+          if (enTransSet) {
+            const jpNum = jpCard.id?.split('-')[1] || cardNum;
+            const transCard = enTransSet.cards[jpNum] || enTransSet.cards[rawNum];
+            if (transCard) {
+              setStatus('', false);
+              document.getElementById('results').innerHTML = `
+                <div class="cards-container">
+                  ${renderCard(jpCard, 'ja')}
+                  <div class="arrow">→</div>
+                  ${renderCard(transCard, 'en', '🔄 Translation')}
+                </div>
+                <div class="match-info">This card has no official English print yet. Showing fan translation from <span style="color:#ffd700">${safeHtml(enTransSet.name || enTransSetId)}</span>.</div>`;
+              return;
+            }
+          }
+        }
+
+        // 2b. Find English candidates via API
         let enName = null;
         // Try dexId lookup first
         if (jpCard.dexId && jpCard.dexId.length > 0) {
@@ -522,26 +544,6 @@
 
         // 3. Fetch full details for candidates and score them
         if (candidates.length === 0 && sideloadEnCards.length === 0) {
-          // Check if we have a translated sideload for this JP set
-          const jpSetId = jpCard.set?.id?.replace(/-\d+$/, '') || setUpper;
-          const enTransSetId = JP_TO_EN_SIDELOAD[jpSetId];
-          const enTransSet = enTransSetId ? SIDELOAD_EN_SETS[enTransSetId] : null;
-          if (enTransSet) {
-            // Find the translated card by matching card number
-            const jpNum = jpCard.id?.split('-')[1] || cardNum;
-            const transCard = enTransSet.cards[jpNum] || enTransSet.cards[rawNum];
-            if (transCard) {
-              setStatus('', false);
-              document.getElementById('results').innerHTML = `
-                <div class="cards-container">
-                  ${renderCard(jpCard, 'ja')}
-                  <div class="arrow">→</div>
-                  ${renderCard(transCard, 'en', '🔄 Translation')}
-                </div>
-                <div class="match-info">This card has no official English print yet. Showing fan translation from <span style="color:#ffd700">${safeHtml(enTransSet.name || enTransSetId)}</span>.</div>`;
-              return;
-            }
-          }
           setStatus('', false);
           document.getElementById('results').innerHTML = `
             <div class="cards-container">${renderCard(jpCard, 'ja')}</div>
