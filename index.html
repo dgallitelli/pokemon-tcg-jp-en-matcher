@@ -142,7 +142,7 @@
             const res = await fetch(cfg.file);
             if (res.ok) {
               const data = await res.json();
-              SIDELOAD_SETS[cfg.id] = { name: cfg.name, cards: data.cards };
+              SIDELOAD_SETS[cfg.id] = { name: cfg.name, cards: data.cards || data };
             }
           } catch {}
         }),
