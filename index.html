@@ -75,7 +75,7 @@
   <p class="subtitle">Enter a Japanese card's set ID and number to find its English equivalent via TCGdex</p>
 
   <div class="howto">
-    <details open>
+    <details>
     <summary><h2 style="display:inline">📖 How to find the Set ID and Card Number</h2></summary>
     <div class="howto-content">
       <div class="howto-card">
@@ -96,6 +96,8 @@
         </div>
         <button class="try-btn" onclick="document.getElementById('setInput').value='SV5a';document.getElementById('cardNum').value='051';doSearch();">Try this example</button>
       </div>
+      </div>
+    </div>
     </details>
   </div>
 
@@ -117,6 +119,7 @@
 
   <script>
     const API = 'https://api.tcgdex.net/v2';
+    const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
 
     // Fetch all sideload data at startup
     const SIDELOAD_CONFIG = {
@@ -139,39 +142,71 @@
       await Promise.all([
         ...SIDELOAD_CONFIG.jp.map(async cfg => {
           try {
+            const cacheKey = `sideload_cache_${cfg.id}`;
+            const cached = localStorage.getItem(cacheKey);
+            if (cached) {
+              const { data, timestamp } = JSON.parse(cached);
+              if (Date.now() - timestamp < CACHE_TTL) {
+                SIDELOAD_SETS[cfg.id] = { name: cfg.name, cards: data.cards || data };
+                return;
+              }
+            }
             const res = await fetch(cfg.file);
             if (res.ok) {
               const data = await res.json();
               SIDELOAD_SETS[cfg.id] = { name: cfg.name, cards: data.cards || data };
+              try { localStorage.setItem(cacheKey, JSON.stringify({ data, timestamp: Date.now() })); } catch {}
             }
           } catch {}
         }),
         ...SIDELOAD_CONFIG.en.map(async cfg => {
           try {
+            const cacheKey = `sideload_cache_${cfg.id}`;
+            const cached = localStorage.getItem(cacheKey);
+            if (cached) {
+              const { data, timestamp } = JSON.parse(cached);
+              if (Date.now() - timestamp < CACHE_TTL) {
+                SIDELOAD_EN_SETS[cfg.id] = { name: cfg.name, cards: data.cards };
+                return;
+              }
+            }
             const res = await fetch(cfg.file);
             if (res.ok) {
               const data = await res.json();
               SIDELOAD_EN_SETS[cfg.id] = { name: cfg.name, cards: data.cards };
+              try { localStorage.setItem(cacheKey, JSON.stringify({ data, timestamp: Date.now() })); } catch {}
             }
           } catch {}
         })
       ]);
     }
 
-    // Sets known-missing from TCGdex with no sideload data yet
+    // Sets known-missing from TCGdex with no sideload data yet.
+    // These are XY-era Mega Evolution decks, distinct from the new MEGA SV-era sideloaded sets (M1S, M1L, M2, M3, M4).
     const MISSING_SETS = {
-      m1:  { name: "Mega Brave Deck", note: "XY — Mega Kangaskhan/Gyarados decks" },
-      m2:  { name: "Mega Battle Deck 60", note: "XY — Mega Aggron/Ampharos" },
-      m4:  { name: "Mega Blastoise/Kangaskhan", note: "XY" },
-      m5:  { name: "Mega Tokyo Deck", note: "XY" },
+      'xy-m1': { name: "Mega Brave Deck",          note: "XY — Mega Kangaskhan/Gyarados decks" },
+      'xy-m2': { name: "Mega Battle Deck 60",       note: "XY — Mega Aggron/Ampharos" },
+      'xy-m4': { name: "Mega Blastoise/Kangaskhan", note: "XY" },
+      'xy-m5': { name: "Mega Tokyo Deck",           note: "XY" },
     };
 
-    // Load Japanese sets into dropdown
+    // Load Japanese sets into dropdown.
+    // loadSideloadData() must complete before this runs so sideloaded sets are ready to append.
     async function loadSets() {
       const dl = document.getElementById('setList');
       try {
-        const res = await fetch(`${API}/ja/sets`);
-        const sets = await res.json();
+        const cacheKey = 'tcgdex_sets_cache';
+        let sets;
+        const cached = localStorage.getItem(cacheKey);
+        if (cached) {
+          const { data, timestamp } = JSON.parse(cached);
+          if (Date.now() - timestamp < CACHE_TTL) sets = data;
+        }
+        if (!sets) {
+          const res = await fetch(`${API}/ja/sets`);
+          sets = await res.json();
+          try { localStorage.setItem(cacheKey, JSON.stringify({ data: sets, timestamp: Date.now() })); } catch {}
+        }
         sets.sort((a, b) => (b.releaseDate || '').localeCompare(a.releaseDate || ''));
         for (const s of sets) {
           const opt = document.createElement('option');
@@ -195,10 +230,25 @@
       return s.padStart(3, '0');
     }
 
+    function safeHtml(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
     function setStatus(msg, isError) {
       const el = document.getElementById('status');
       el.className = isError ? 'status error' : 'status';
       el.innerHTML = msg;
+    }
+
+    function scoreLabel(score) {
+      if (score >= 70) return `High (${score}/100)`;
+      if (score >= 40) return `Medium (${score}/100)`;
+      return `Low (${score}/100)`;
     }
 
     function sideloadImageUrl(card) {
@@ -216,21 +266,28 @@
 
     function renderCard(card, lang) {
       const imgUrl = card.image ? card.image + '/high.webp' : sideloadImageUrl(card);
-      const attacks = (card.attacks || []).map(a => `${a.name} ${a.damage || ''}`).join(', ');
+      const attacks = (card.attacks || []).map(a => `${safeHtml(a.name)} ${safeHtml(a.damage ?? '')}`).join(', ');
+      const cardName = safeHtml(card.name);
+      const setName = safeHtml(card.set?.name || '?');
+      const cardId = safeHtml(card.id);
+      const illustrator = card.illustrator ? safeHtml(card.illustrator) : null;
+      const types = card.types ? safeHtml(card.types.join(', ')) : null;
+      const hp = card.hp ? safeHtml(String(card.hp)) : null;
+      const stage = card.stage ? safeHtml(card.stage) : null;
       return `
         <div class="card-panel">
           <span class="lang-badge ${lang}">${lang === 'ja' ? '日本語 Japanese' : '🇺🇸 English'}</span>
-          <h2>${card.name}</h2>
-          ${imgUrl ? `<img src="${imgUrl}" alt="${card.name}" onerror="this.style.display='none'">` : '<p style="color:#666;padding:2rem 0;text-align:center">No image available</p>'}
+          <h2>${cardName}</h2>
+          ${imgUrl ? `<img src="${imgUrl}" alt="${cardName}" onerror="this.style.display='none'">` : '<p style="color:#666;padding:2rem 0;text-align:center">No image available</p>'}
           <div class="card-meta">
-            Set: <span>${card.set?.name || '?'}</span> (${card.id})<br>
-            ${card.hp ? `HP: <span>${card.hp}</span><br>` : ''}
-            ${card.stage ? `Stage: <span>${card.stage}</span><br>` : ''}
-            ${card.illustrator ? `Illustrator: <span>${card.illustrator}</span><br>` : ''}
-            ${card.types ? `Type: <span>${card.types.join(', ')}</span><br>` : ''}
+            Set: <span>${setName}</span> (${cardId})<br>
+            ${hp ? `HP: <span>${hp}</span><br>` : ''}
+            ${stage ? `Stage: <span>${stage}</span><br>` : ''}
+            ${illustrator ? `Illustrator: <span>${illustrator}</span><br>` : ''}
+            ${types ? `Type: <span>${types}</span><br>` : ''}
             ${attacks ? `Attacks: <span>${attacks}</span><br>` : ''}
-            ${card.category === 'Trainer' && card.effect ? `Effect: <span>${card.effect}</span><br>` : ''}
-            ${card.description ? `<br><em style="color:#777">${card.description}</em>` : ''}
+            ${card.category === 'Trainer' && card.effect ? `Effect: <span>${safeHtml(card.effect)}</span><br>` : ''}
+            ${card.description ? `<br><em style="color:#777">${safeHtml(card.description)}</em>` : ''}
           </div>
         </div>`;
     }
@@ -300,173 +357,203 @@
         if (cards && cards.length > 0) {
           // Find the simplest name (no prefix like "Blaine's")
           const simple = cards.find(c => !c.name.includes("'s ") && !c.name.includes(' '));
-          return (simple || cards[0]).name.split(' ')[0];
+          return (simple || cards[0]).name;
         }
         return null;
       } catch { return null; }
     }
 
     async function doSearch() {
+      const searchBtn = document.getElementById('searchBtn');
       const setId = document.getElementById('setInput').value.trim();
       const rawNum = document.getElementById('cardNum').value.trim();
       if (!setId || !rawNum) { setStatus('Please enter a set ID and card number.', true); return; }
 
-      const setUpper = setId.toUpperCase();
-      const cardNum = padNum(rawNum);
+      searchBtn.disabled = true;
+      try {
+        const setUpper = setId.toUpperCase();
+        const cardNum = padNum(rawNum);
 
-      // Check missing sets (case-insensitive)
-      const missKey = Object.keys(MISSING_SETS).find(k => k.toLowerCase() === setId.toLowerCase());
-      if (missKey) {
-        const info = MISSING_SETS[missKey];
-        setStatus(`⚠️ Set <strong>${setId}</strong> (${info.name}) is not yet indexed in TCGdex and cannot be matched automatically. You can help by contributing the data at <a href="https://github.com/tcgdex/cards-database" target="_blank" style="color:#ffd700">tcgdex/cards-database</a>.`, true);
-        return;
-      }
-
-      setStatus('<span class="loading"></span> Fetching Japanese card...', false);
-      document.getElementById('results').innerHTML = '';
-
-      // 1. Get the Japanese card — from sideload or TCGdex API
-      let jpCard;
-      if (SIDELOAD_SETS[setUpper]) {
-        const sideload = SIDELOAD_SETS[setUpper];
-        jpCard = sideload.cards[cardNum] || sideload.cards[rawNum];
-        if (!jpCard) {
-          setStatus(`❌ Card ${cardNum} not found in ${setUpper} (${sideload.name})`, true);
+        // Check missing sets (case-insensitive)
+        const missKey = Object.keys(MISSING_SETS).find(k => k.toLowerCase() === setId.toLowerCase());
+        if (missKey) {
+          const info = MISSING_SETS[missKey];
+          setStatus(`⚠️ Set <strong>${safeHtml(setId)}</strong> (${safeHtml(info.name)}) is not yet indexed in TCGdex and cannot be matched automatically. You can help by contributing the data at <a href="https://github.com/tcgdex/cards-database" target="_blank" style="color:#ffd700">tcgdex/cards-database</a>.`, true);
           return;
         }
-      } else {
-        const cardId = `${setId}-${cardNum}`;
-        try {
-          const res = await fetch(`${API}/ja/cards/${cardId}`);
-          if (!res.ok) {
-            // Try without padding
-            const res2 = await fetch(`${API}/ja/cards/${setId}-${rawNum}`);
-            if (!res2.ok) throw new Error(`Card not found: ${cardId}`);
-            jpCard = await res2.json();
-          } else {
-            jpCard = await res.json();
+
+        setStatus('<span class="loading"></span> Fetching Japanese card...', false);
+        document.getElementById('results').innerHTML = '';
+
+        // 1. Get the Japanese card — from sideload or TCGdex API
+        let jpCard;
+        if (SIDELOAD_SETS[setUpper]) {
+          const sideload = SIDELOAD_SETS[setUpper];
+          jpCard = sideload.cards[cardNum] || sideload.cards[rawNum];
+          if (!jpCard) {
+            setStatus(`❌ Card ${safeHtml(cardNum)} not found in ${safeHtml(setUpper)} (${safeHtml(sideload.name)})`, true);
+            return;
           }
-        } catch (e) {
-          setStatus(`❌ ${e.message}`, true);
-          return;
-        }
-      }
-
-      setStatus('<span class="loading"></span> Searching for English equivalent...', false);
-
-      // 2. Find English candidates
-      let enName = null;
-      // Try dexId lookup first
-      if (jpCard.dexId && jpCard.dexId.length > 0) {
-        enName = await getEnglishName(jpCard.dexId[0]);
-      }
-
-      // For Trainer/Energy cards, try using the illustrator or just show JP card
-      let candidates = [];
-      if (enName) {
-        try {
-          const params = new URLSearchParams({ name: enName });
-          if (jpCard.hp) params.set('hp', jpCard.hp);
-          const res = await fetch(`${API}/en/cards?${params}`);
-          if (res.ok) candidates = await res.json();
-        } catch {}
-
-        // If hp filter was too strict, try name only
-        if (candidates.length === 0) {
+        } else {
+          const cardId = `${setId}-${cardNum}`;
           try {
-            const res = await fetch(`${API}/en/cards?name=${encodeURIComponent(enName)}`);
+            const res = await fetch(`${API}/ja/cards/${cardId}`);
+            if (!res.ok) {
+              // Try without padding
+              const res2 = await fetch(`${API}/ja/cards/${setId}-${rawNum}`);
+              if (!res2.ok) throw new Error(`Card not found: ${safeHtml(cardId)}`);
+              jpCard = await res2.json();
+            } else {
+              jpCard = await res.json();
+            }
+          } catch (e) {
+            setStatus(`❌ ${safeHtml(e.message)}`, true);
+            return;
+          }
+        }
+
+        setStatus('<span class="loading"></span> Searching for English equivalent...', false);
+
+        // 2. Find English candidates
+        let enName = null;
+        // Try dexId lookup first
+        if (jpCard.dexId && jpCard.dexId.length > 0) {
+          enName = await getEnglishName(jpCard.dexId[0]);
+        }
+
+        // For Trainer/Energy cards, try using the illustrator or just show JP card
+        let candidates = [];
+        if (enName) {
+          try {
+            const params = new URLSearchParams({ name: enName });
+            if (jpCard.hp) params.set('hp', jpCard.hp);
+            const res = await fetch(`${API}/en/cards?${params}`);
             if (res.ok) candidates = await res.json();
           } catch {}
-        }
-      }
 
-      // Also collect matching EN cards from SIDELOAD_EN_SETS by dexId
-      const sideloadEnCards = [];
-      if (jpCard.dexId && jpCard.dexId.length > 0) {
-        for (const [sEnSetId, sEnSetData] of Object.entries(SIDELOAD_EN_SETS)) {
-          for (const enCard of Object.values(sEnSetData.cards)) {
-            if (enCard.dexId && enCard.dexId.some(id => jpCard.dexId.includes(id))) {
-              sideloadEnCards.push(enCard);
+          // If hp filter was too strict, try name only
+          if (candidates.length === 0) {
+            try {
+              const res = await fetch(`${API}/en/cards?name=${encodeURIComponent(enName)}`);
+              if (res.ok) candidates = await res.json();
+            } catch {}
+          }
+        }
+
+        // Also collect matching EN cards from SIDELOAD_EN_SETS by dexId
+        const sideloadEnCards = [];
+        if (jpCard.dexId && jpCard.dexId.length > 0) {
+          for (const [sEnSetId, sEnSetData] of Object.entries(SIDELOAD_EN_SETS)) {
+            for (const enCard of Object.values(sEnSetData.cards)) {
+              if (enCard.dexId && enCard.dexId.some(id => jpCard.dexId.includes(id))) {
+                sideloadEnCards.push(enCard);
+              }
             }
           }
         }
-      }
 
-      // 3. Fetch full details for candidates and score them
-      if (candidates.length === 0 && sideloadEnCards.length === 0) {
+        // 3. Fetch full details for candidates and score them
+        if (candidates.length === 0 && sideloadEnCards.length === 0) {
+          setStatus('', false);
+          document.getElementById('results').innerHTML = `
+            <div class="cards-container">${renderCard(jpCard, 'ja')}</div>
+            <div class="match-info"><span class="no-match">No English equivalent found.</span>
+            ${jpCard.category !== 'Pokemon' ? '<br>Trainer/Energy card matching by name is limited — these often have different names across languages.' : ''}
+            ${!jpCard.dexId ? '<br>This card has no Pokédex ID, so name lookup was not possible.' : ''}</div>`;
+          return;
+        }
+
+        setStatus(`<span class="loading"></span> Scoring ${candidates.length} candidates...`, false);
+
+        // Fetch full card data for top candidates (limit to 10 to avoid hammering the API)
+        const toFetch = candidates.slice(0, 10);
+        const fetchedCards = await Promise.all(
+          toFetch.map(async c => {
+            try {
+              const res = await fetch(`${API}/en/cards/${c.id}`);
+              if (res.ok) return await res.json();
+            } catch {}
+            return null;
+          })
+        );
+        const fullCards = [...fetchedCards, ...sideloadEnCards];
+
+        const scored = fullCards
+          .filter(Boolean)
+          .map(c => ({ card: c, ...matchScore(jpCard, c) }))
+          .sort((a, b) => b.score - a.score);
+
+        const best = scored[0];
+        if (!best) {
+          setStatus('', false);
+          document.getElementById('results').innerHTML = `
+            <div class="cards-container">${renderCard(jpCard, 'ja')}</div>
+            <div class="match-info"><span class="no-match">Could not fetch English card details for comparison.</span></div>`;
+          return;
+        }
+
         setStatus('', false);
         document.getElementById('results').innerHTML = `
-          <div class="cards-container">${renderCard(jpCard, 'ja')}</div>
-          <div class="match-info"><span class="no-match">No English equivalent found.</span>
-          ${jpCard.category !== 'Pokemon' ? '<br>Trainer/Energy card matching by name is limited — these often have different names across languages.' : ''}
-          ${!jpCard.dexId ? '<br>This card has no Pokédex ID, so name lookup was not possible.' : ''}</div>`;
-        return;
+          <div class="cards-container">
+            ${renderCard(jpCard, 'ja')}
+            <div class="arrow">→</div>
+            ${renderCard(best.card, 'en')}
+          </div>
+          <div class="match-info">
+            Match confidence: <span class="score">${scoreLabel(best.score)}</span><br>
+            Matched on: ${best.reasons.join(', ') || 'none'}
+          </div>
+          ${scored.length > 1 ? `
+          <details class="candidates">
+            <summary>Other candidates (${scored.length - 1})</summary>
+            <ul>${scored.slice(1).map(s =>
+              `<li class="candidate-item" data-card-id="${safeHtml(s.card.id)}" data-score="${s.score}" tabindex="0">${safeHtml(s.card.name)} — ${safeHtml(s.card.set?.name || s.card.id)} (score: ${s.score})</li>`
+            ).join('')}</ul>
+          </details>` : ''}`;
+
+        // Attach event listeners to candidate items (avoids inline onclick with user-controlled IDs)
+        document.querySelectorAll('.candidate-item').forEach(li => {
+          const cardId = li.dataset.cardId;
+          const score = parseInt(li.dataset.score, 10);
+          li.addEventListener('click', () => showAlternate(cardId, score));
+          li.addEventListener('keydown', e => { if (e.key === 'Enter') showAlternate(cardId, score); });
+        });
+      } finally {
+        searchBtn.disabled = false;
       }
-
-      setStatus(`<span class="loading"></span> Scoring ${candidates.length} candidates...`, false);
-
-      // Fetch full card data for top candidates (limit to 20 to avoid hammering the API)
-      const toFetch = candidates.slice(0, 20);
-      const fetchedCards = await Promise.all(
-        toFetch.map(async c => {
-          try {
-            const res = await fetch(`${API}/en/cards/${c.id}`);
-            if (res.ok) return await res.json();
-          } catch {}
-          return null;
-        })
-      );
-      const fullCards = [...fetchedCards, ...sideloadEnCards];
-
-      const scored = fullCards
-        .filter(Boolean)
-        .map(c => ({ card: c, ...matchScore(jpCard, c) }))
-        .sort((a, b) => b.score - a.score);
-
-      const best = scored[0];
-      if (!best) {
-        setStatus('', false);
-        document.getElementById('results').innerHTML = `
-          <div class="cards-container">${renderCard(jpCard, 'ja')}</div>
-          <div class="match-info"><span class="no-match">Could not fetch English card details for comparison.</span></div>`;
-        return;
-      }
-
-      setStatus('', false);
-      document.getElementById('results').innerHTML = `
-        <div class="cards-container">
-          ${renderCard(jpCard, 'ja')}
-          <div class="arrow">→</div>
-          ${renderCard(best.card, 'en')}
-        </div>
-        <div class="match-info">
-          Match confidence: <span class="score">${best.score}/100</span><br>
-          Matched on: ${best.reasons.join(', ') || 'none'}
-        </div>
-        ${scored.length > 1 ? `
-        <details class="candidates">
-          <summary>Other candidates (${scored.length - 1})</summary>
-          <ul>${scored.slice(1).map(s =>
-            `<li onclick="showAlternate('${s.card.id}')">${s.card.name} — ${s.card.set?.name || s.card.id} (score: ${s.score})</li>`
-          ).join('')}</ul>
-        </details>` : ''}`;
     }
 
     // Allow clicking alternate candidates
-    async function showAlternate(cardId) {
-      try {
-        const res = await fetch(`${API}/en/cards/${cardId}`);
-        if (!res.ok) return;
-        const card = await res.json();
-        // Replace the English panel
-        const panels = document.querySelectorAll('.card-panel');
-        if (panels.length >= 2) {
-          panels[1].outerHTML = renderCard(card, 'en');
+    async function showAlternate(cardId, score) {
+      let card = null;
+      // Check sideloaded EN sets first — these cards won't be in the TCGdex API
+      for (const sEnSetData of Object.values(SIDELOAD_EN_SETS)) {
+        const found = Object.values(sEnSetData.cards).find(c => c.id === cardId);
+        if (found) { card = found; break; }
+      }
+      if (!card) {
+        try {
+          const res = await fetch(`${API}/en/cards/${cardId}`);
+          if (!res.ok) return;
+          card = await res.json();
+        } catch { return; }
+      }
+      // Replace the English panel
+      const panels = document.querySelectorAll('.card-panel');
+      if (panels.length >= 2) {
+        panels[1].outerHTML = renderCard(card, 'en');
+      }
+      // Update match confidence display for the selected alternate
+      if (score !== undefined) {
+        const matchInfo = document.querySelector('.match-info');
+        if (matchInfo) {
+          const scoreEl = matchInfo.querySelector('.score');
+          if (scoreEl) scoreEl.textContent = scoreLabel(score);
         }
-      } catch {}
+      }
     }
 
-    // Init
+    // Init: loadSideloadData() must complete before loadSets() so sideloaded sets appear in the dropdown
     (async () => {
       await loadSideloadData();
       loadSets();
