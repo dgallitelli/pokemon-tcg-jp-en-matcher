@@ -1470,10 +1470,11 @@
       "attacks": [
         {
           "name": "Hydro Turn",
+          "damage": "30x",
           "cost": [
             "Water"
           ],
-          "effect": "This attack does 30 damage for each Energy attached to this Pokémon. Switch this Pokémon with one of your Benched Pokémon"
+          "effect": "This attack does 30 damage for each Water Energy attached to this Pokémon. Switch this Pokémon with 1 of your Benched Pokémon."
         },
         {
           "name": "Surf",
@@ -3089,7 +3090,7 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "This attack does 30 damage to all of your Benched Pokémon."
+          "effect": "This attack also does 30 damage to each of your Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
         },
         {
           "name": "Whap Down",
@@ -3166,11 +3167,11 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "Discard random cards from your opponent's hand until they have 5 cards in hand."
+          "effect": "Discard random cards from your opponent's hand until they have 5 cards in their hand."
         },
         {
           "name": "Headbutt",
-          "damage": 301,
+          "damage": 30,
           "cost": [
             "Colorless"
           ]
