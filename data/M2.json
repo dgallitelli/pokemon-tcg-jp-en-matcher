@@ -1,0 +1,3518 @@
+{
+  "001": {
+    "name": "ナゾノクサ",
+    "hp": 50,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Basic",
+    "illustrator": "MINAMINAMI Take",
+    "retreat": 1,
+    "dexId": [
+      43
+    ],
+    "attacks": [
+      {
+        "damage": 20,
+        "cost": [
+          "Grass"
+        ],
+        "name": "タネばくだん"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-001",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "002": {
+    "name": "クサイハナ",
+    "hp": 70,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Yoriyuki Ikegami",
+    "retreat": 1,
+    "dexId": [
+      44
+    ],
+    "attacks": [
+      {
+        "damage": 20,
+        "cost": [
+          "Grass"
+        ],
+        "name": "よだれながし"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-002",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "003": {
+    "name": "ラフレシア",
+    "hp": 150,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Stage2",
+    "illustrator": "Shibuzoh.",
+    "retreat": 2,
+    "dexId": [
+      45
+    ],
+    "attacks": [
+      {
+        "damage": 30,
+        "cost": [
+          "Grass"
+        ],
+        "name": "かふんばくだん"
+      },
+      {
+        "damage": 60,
+        "cost": [
+          "Grass"
+        ],
+        "name": "いきいきはな"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-003",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "004": {
+    "name": "メガヘラクロスex",
+    "hp": 280,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Basic",
+    "illustrator": "5ban Graphics",
+    "retreat": 2,
+    "dexId": [
+      214
+    ],
+    "attacks": [
+      {
+        "damage": 100,
+        "cost": [
+          "Grass",
+          "Grass"
+        ],
+        "name": "パンツァーホーン"
+      },
+      {
+        "damage": 170,
+        "cost": [
+          "Grass",
+          "Grass",
+          "Grass"
+        ],
+        "name": "ミリングジャブ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Double rare",
+    "id": "M2-004",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "005": {
+    "name": "ハスボー",
+    "hp": 70,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Basic",
+    "illustrator": "Wintr Wandr",
+    "retreat": 1,
+    "dexId": [
+      270
+    ],
+    "attacks": [
+      {
+        "damage": 30,
+        "cost": [
+          "Grass",
+          "Colorless"
+        ],
+        "name": "ずつき"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-005",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "006": {
+    "name": "ハスブレロ",
+    "hp": 90,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Shigenori Negishi",
+    "retreat": 1,
+    "dexId": [
+      271
+    ],
+    "attacks": [
+      {
+        "damage": 30,
+        "cost": [
+          "Grass",
+          "Colorless"
+        ],
+        "name": "メガドレイン"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-006",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "007": {
+    "name": "ルンパッパ",
+    "hp": 160,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Stage2",
+    "illustrator": "Anesaki Dynamic",
+    "retreat": 2,
+    "dexId": [
+      272
+    ],
+    "attacks": [
+      {
+        "damage": 120,
+        "cost": [
+          "Grass",
+          "Colorless"
+        ],
+        "name": "とびかかる"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-007",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "008": {
+    "name": "ゲノセクト",
+    "hp": 120,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Basic",
+    "illustrator": "Mitsuhiro Arita",
+    "retreat": 2,
+    "dexId": [
+      649
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Grass"
+        ],
+        "name": "むしのほう"
+      },
+      {
+        "damage": 110,
+        "cost": [
+          "Grass",
+          "Grass",
+          "Colorless"
+        ],
+        "name": "スピードアタック"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Rare Holo",
+    "id": "M2-008",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "009": {
+    "name": "マメバッタ",
+    "hp": 50,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Basic",
+    "illustrator": "Yuka Morii",
+    "retreat": 1,
+    "dexId": [
+      919
+    ],
+    "attacks": [
+      {
+        "damage": 10,
+        "cost": [
+          "Grass"
+        ],
+        "name": "バタバタもがく"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-009",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "010": {
+    "name": "エクスレッグ",
+    "hp": 120,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Taiga Kasai",
+    "retreat": 1,
+    "dexId": [
+      920
+    ],
+    "attacks": [
+      {
+        "damage": 30,
+        "cost": [
+          "Grass"
+        ],
+        "name": "あしばらい"
+      },
+      {
+        "damage": 150,
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ジャンプショット"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-010",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "011": {
+    "name": "ヒトカゲ",
+    "hp": 80,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Basic",
+    "illustrator": "HYOGONOSUKE",
+    "retreat": 2,
+    "dexId": [
+      4
+    ],
+    "attacks": [
+      {
+        "damage": 20,
+        "cost": [
+          "Fire"
+        ],
+        "name": "おきび"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-011",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "012": {
+    "name": "リザード",
+    "hp": 110,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Uninori",
+    "retreat": 2,
+    "dexId": [
+      5
+    ],
+    "attacks": [
+      {
+        "damage": 40,
+        "cost": [
+          "Fire"
+        ],
+        "name": "ひっかく"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-012",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "013": {
+    "name": "メガリザードンXex",
+    "hp": 360,
+    "types": [
+      "Fire"
+    ],
+    "stage": "Basic",
+    "illustrator": "takuyoa",
+    "retreat": 2,
+    "dexId": [
+      6
+    ],
+    "attacks": [
+      {
+        "damage": 90,
+        "cost": [
+          "Fire",
+          "Fire"
+        ],
+        "name": "インフェルノX"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Double rare",
+    "id": "M2-013",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "014": {
+    "name": "ファイヤー",
+    "hp": 120,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Basic",
+    "illustrator": "Kazumasa Yasukuni",
+    "retreat": 1,
+    "dexId": [
+      146
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Fire"
+        ],
+        "name": "ファイティングウィング"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-014",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "015": {
+    "name": "ダルマッカ",
+    "hp": 80,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Basic",
+    "illustrator": "NC Empire",
+    "retreat": 2,
+    "dexId": [
+      554
+    ],
+    "attacks": [
+      {
+        "damage": 10,
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ほのおのたま"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-015",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "016": {
+    "name": "ヒヒダルマ",
+    "hp": 150,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Uta",
+    "retreat": 3,
+    "dexId": [
+      555
+    ],
+    "attacks": [
+      {
+        "damage": 40,
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ほのおのたま"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-016",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "017": {
+    "name": "レシラム",
+    "hp": 130,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Basic",
+    "illustrator": "AKIRA EGAWA",
+    "retreat": 2,
+    "dexId": [
+      643
+    ],
+    "attacks": [
+      {
+        "damage": 30,
+        "cost": [
+          "Fire"
+        ],
+        "name": "かえん"
+      },
+      {
+        "damage": 240,
+        "cost": [
+          "Fire",
+          "Fire",
+          "Fire",
+          "Fire"
+        ],
+        "name": "バーニングフレア"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Rare Holo",
+    "id": "M2-017",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "018": {
+    "name": "オドリドリex",
+    "hp": 190,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Basic",
+    "illustrator": "akagi",
+    "retreat": 1,
+    "dexId": [
+      741
+    ],
+    "attacks": [
+      {
+        "damage": 110,
+        "cost": [
+          "Fire",
+          "Fire",
+          "Colorless"
+        ],
+        "name": "ほのおのつばさ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Double rare",
+    "id": "M2-018",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "019": {
+    "name": "カルボウ",
+    "hp": 70,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Basic",
+    "illustrator": "Tomokazu Komiya",
+    "retreat": 2,
+    "dexId": [
+      935
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Fire"
+        ],
+        "name": "ちからをためる"
+      },
+      {
+        "damage": 10,
+        "cost": [
+          "Fire"
+        ],
+        "name": "チョップ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-019",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "020": {
+    "name": "ソウブレイズ",
+    "hp": 140,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Gemi",
+    "retreat": 2,
+    "dexId": [
+      937
+    ],
+    "attacks": [
+      {
+        "damage": 220,
+        "cost": [
+          "Fire"
+        ],
+        "name": "ごくねつぎり"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-020",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "021": {
+    "name": "パウワウ",
+    "hp": 80,
+    "types": [
+      "Water"
+    ],
+    "stage": "Basic",
+    "illustrator": "svlt",
+    "retreat": 2,
+    "dexId": [
+      86
+    ],
+    "attacks": [
+      {
+        "damage": 20,
+        "cost": [
+          "Water",
+          "Colorless"
+        ],
+        "name": "バブルドレイン"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-021",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "022": {
+    "name": "ジュゴン",
+    "hp": 130,
+    "types": [
+      "Water"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Taira Akitsu",
+    "retreat": 2,
+    "dexId": [
+      87
+    ],
+    "attacks": [
+      {
+        "damage": 70,
+        "cost": [
+          "Water",
+          "Colorless"
+        ],
+        "name": "スラム"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-022",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "023": {
+    "name": "ウリムー",
+    "hp": 70,
+    "types": [
+      "Water"
+    ],
+    "stage": "Basic",
+    "illustrator": "imoniii",
+    "retreat": 2,
+    "dexId": [
+      220
+    ],
+    "attacks": [
+      {
+        "damage": 10,
+        "cost": [
+          "Colorless"
+        ],
+        "name": "とびげり"
+      },
+      {
+        "damage": 20,
+        "cost": [
+          "Water",
+          "Colorless"
+        ],
+        "name": "こごえるゆき"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-023",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "024": {
+    "name": "イノムー",
+    "hp": 100,
+    "types": [
+      "Water"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Shinya Komatsu",
+    "retreat": 3,
+    "dexId": [
+      221
+    ],
+    "attacks": [
+      {
+        "damage": 30,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ライジングランジ"
+      },
+      {
+        "damage": 70,
+        "cost": [
+          "Water",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "フロストスマッシュ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-024",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "025": {
+    "name": "マンムー",
+    "hp": 180,
+    "types": [
+      "Water"
+    ],
+    "stage": "Stage2",
+    "illustrator": "Takumi Wada",
+    "retreat": 4,
+    "dexId": [
+      473
+    ],
+    "attacks": [
+      {
+        "damage": 120,
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ぶちこわす"
+      },
+      {
+        "damage": 200,
+        "cost": [
+          "Water",
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ふぶきのつばさ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-025",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "026": {
+    "name": "スイクン",
+    "hp": 130,
+    "types": [
+      "Water"
+    ],
+    "stage": "Basic",
+    "illustrator": "Takeshia Nakamura",
+    "retreat": 2,
+    "dexId": [
+      245
+    ],
+    "attacks": [
+      {
+        "damage": 30,
+        "cost": [
+          "Water",
+          "Water"
+        ],
+        "name": "クリスタルフォール"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Rare Holo",
+    "id": "M2-026",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "027": {
+    "name": "ポッチャマ",
+    "hp": 70,
+    "types": [
+      "Water"
+    ],
+    "stage": "Basic",
+    "illustrator": "Hideki Ishikawa",
+    "retreat": 1,
+    "dexId": [
+      393
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Colorless"
+        ],
+        "name": "なかまをよぶ"
+      },
+      {
+        "damage": 20,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "たいあたり"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-027",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "028": {
+    "name": "ポッタイシ",
+    "hp": 100,
+    "types": [
+      "Water"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Atsuya Uki",
+    "retreat": 2,
+    "dexId": [
+      394
+    ],
+    "attacks": [
+      {
+        "damage": 20,
+        "cost": [
+          "Colorless"
+        ],
+        "name": "つつく"
+      },
+      {
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ダイビング"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-028",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "029": {
+    "name": "ロトムex",
+    "hp": 190,
+    "types": [
+      "Lightning"
+    ],
+    "stage": "Basic",
+    "illustrator": "5ban Graphics",
+    "retreat": 1,
+    "dexId": [
+      479
+    ],
+    "attacks": [
+      {
+        "damage": 130,
+        "cost": [
+          "Lightning",
+          "Colorless"
+        ],
+        "name": "かみなり"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Double rare",
+    "id": "M2-029",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "030": {
+    "name": "ワンパチ",
+    "hp": 70,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Basic",
+    "illustrator": "Ayako Ozaki",
+    "retreat": 1,
+    "dexId": [
+      835
+    ],
+    "attacks": [
+      {
+        "damage": 20,
+        "cost": [
+          "Lightning",
+          "Colorless"
+        ],
+        "name": "じゃれつく"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-030",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "031": {
+    "name": "パルスワン",
+    "hp": 130,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Orca",
+    "retreat": 1,
+    "dexId": [
+      836
+    ],
+    "attacks": [
+      {
+        "damage": 70,
+        "cost": [
+          "Lightning",
+          "Colorless"
+        ],
+        "name": "エレクトロラン"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-031",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "032": {
+    "name": "パモ",
+    "hp": 60,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Basic",
+    "illustrator": "Shimeris Yukichi",
+    "retreat": 1,
+    "dexId": [
+      921
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Lightning"
+        ],
+        "name": "なきごえ"
+      },
+      {
+        "damage": 10,
+        "cost": [
+          "Lightning"
+        ],
+        "name": "ちいさなでんき"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-032",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "033": {
+    "name": "パモット",
+    "hp": 90,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Taiga Kayama",
+    "retreat": 1,
+    "dexId": [
+      922
+    ],
+    "attacks": [
+      {
+        "damage": 60,
+        "cost": [
+          "Lightning",
+          "Lightning"
+        ],
+        "name": "でんきパンチ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-033",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "034": {
+    "name": "パーモット",
+    "hp": 140,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Stage2",
+    "illustrator": "satoma",
+    "retreat": 1,
+    "dexId": [
+      923
+    ],
+    "attacks": [
+      {
+        "damage": 130,
+        "cost": [
+          "Lightning",
+          "Lightning"
+        ],
+        "name": "ボルテージフィスト"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Rare Holo",
+    "id": "M2-034",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "035": {
+    "name": "ムウマ",
+    "hp": 70,
+    "types": [
+      "Psychic"
+    ],
+    "stage": "Basic",
+    "illustrator": "Mousho",
+    "retreat": 1,
+    "dexId": [
+      200
+    ],
+    "attacks": [
+      {
+        "damage": 20,
+        "cost": [
+          "Psychic"
+        ],
+        "name": "ちいさなうらみ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-035",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "036": {
+    "name": "ムウマージex",
+    "hp": 260,
+    "types": [
+      "Psychic"
+    ],
+    "stage": "Basic",
+    "illustrator": "5ban Graphics",
+    "retreat": 1,
+    "dexId": [
+      429
+    ],
+    "attacks": [
+      {
+        "damage": 150,
+        "cost": [
+          "Psychic",
+          "Psychic"
+        ],
+        "name": "むむむのたたり"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Double rare",
+    "id": "M2-036",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "037": {
+    "name": "モンメン",
+    "hp": 60,
+    "types": [
+      "Psychic"
+    ],
+    "stage": "Basic",
+    "illustrator": "Kariya",
+    "retreat": 1,
+    "dexId": [
+      546
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Colorless"
+        ],
+        "name": "あつめる"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-037",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "038": {
+    "name": "エルフーン",
+    "hp": 90,
+    "types": [
+      "Psychic"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Yuka Tanaka",
+    "retreat": 1,
+    "dexId": [
+      547
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Colorless"
+        ],
+        "name": "いやしのわた"
+      },
+      {
+        "damage": 50,
+        "cost": [
+          "Psychic"
+        ],
+        "name": "とんぼがえり"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-038",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "039": {
+    "name": "ザシアン",
+    "hp": 130,
+    "types": [
+      "Psychic"
+    ],
+    "stage": "Basic",
+    "illustrator": "kawayoo",
+    "retreat": 2,
+    "dexId": [
+      888
+    ],
+    "attacks": [
+      {
+        "damage": 50,
+        "cost": [
+          "Psychic",
+          "Colorless"
+        ],
+        "name": "リミットブレイク"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Rare Holo",
+    "id": "M2-039",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "040": {
+    "name": "アノクサ",
+    "hp": 50,
+    "types": [
+      "Psychic"
+    ],
+    "stage": "Basic",
+    "illustrator": "Takeshi Nakamura",
+    "retreat": 1,
+    "dexId": [
+      946
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Psychic"
+        ],
+        "name": "こそこそおく"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-040",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "041": {
+    "name": "アノホラグサ",
+    "hp": 100,
+    "types": [
+      "Psychic"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Tetsu Kayama",
+    "retreat": 2,
+    "dexId": [
+      947
+    ],
+    "attacks": [
+      {
+        "damage": 80,
+        "cost": [
+          "Psychic",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "サイコスフィア"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-041",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "042": {
+    "name": "ケンタロス",
+    "hp": 130,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Basic",
+    "illustrator": "Souichirou Gunjima",
+    "retreat": 2,
+    "dexId": [
+      128
+    ],
+    "attacks": [
+      {
+        "damage": 40,
+        "cost": [
+          "Fighting"
+        ],
+        "name": "もうれつとつげき"
+      },
+      {
+        "damage": 70,
+        "cost": [
+          "Fighting",
+          "Fighting"
+        ],
+        "name": "すてみタックル"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-042",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "043": {
+    "name": "グライガー",
+    "hp": 70,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Basic",
+    "illustrator": "Kazumasa Yasukuni",
+    "retreat": 1,
+    "dexId": [
+      207
+    ],
+    "attacks": [
+      {
+        "damage": 10,
+        "cost": [
+          "Fighting"
+        ],
+        "name": "どくづき"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-043",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "044": {
+    "name": "グライオン",
+    "hp": 120,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Dsuke",
+    "retreat": 1,
+    "dexId": [
+      472
+    ],
+    "attacks": [
+      {
+        "damage": 50,
+        "cost": [
+          "Fighting"
+        ],
+        "name": "どくのサークル"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-044",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "045": {
+    "name": "ナックラー",
+    "hp": 70,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Basic",
+    "illustrator": "Uta",
+    "retreat": 1,
+    "dexId": [
+      328
+    ],
+    "attacks": [
+      {
+        "damage": 10,
+        "cost": [
+          "Fighting"
+        ],
+        "name": "ダブルずつき"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-045",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "046": {
+    "name": "ビブラーバ",
+    "hp": 90,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Miki Tanaka",
+    "retreat": 1,
+    "dexId": [
+      329
+    ],
+    "attacks": [
+      {
+        "damage": 60,
+        "cost": [
+          "Fighting",
+          "Fighting"
+        ],
+        "name": "ちょうおんぱ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-046",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "047": {
+    "name": "フライゴン",
+    "hp": 150,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Stage2",
+    "illustrator": "Jerky",
+    "retreat": 1,
+    "dexId": [
+      330
+    ],
+    "attacks": [
+      {
+        "damage": 130,
+        "name": "かまいたち"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Rare Holo",
+    "id": "M2-047",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "048": {
+    "name": "ニューラ",
+    "hp": 70,
+    "types": [
+      "Darkness"
+    ],
+    "stage": "Basic",
+    "illustrator": "Souichirou Gunjima",
+    "retreat": 1,
+    "dexId": [
+      215
+    ],
+    "attacks": [
+      {
+        "damage": 10,
+        "cost": [
+          "Darkness"
+        ],
+        "name": "あなほりつめ"
+      },
+      {
+        "damage": 30,
+        "cost": [
+          "Darkness",
+          "Darkness"
+        ],
+        "name": "ひっかく"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-048",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "049": {
+    "name": "マニューラ",
+    "hp": 90,
+    "types": [
+      "Darkness"
+    ],
+    "stage": "Stage1",
+    "illustrator": "matazo",
+    "retreat": 1,
+    "dexId": [
+      461
+    ],
+    "attacks": [
+      {
+        "damage": 20,
+        "cost": [
+          "Darkness",
+          "Darkness"
+        ],
+        "name": "しかえしのつめ"
+      },
+      {
+        "damage": 60,
+        "cost": [
+          "Darkness",
+          "Darkness"
+        ],
+        "name": "きりさく"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-049",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "050": {
+    "name": "キバニア",
+    "hp": 70,
+    "types": [
+      "Darkness"
+    ],
+    "stage": "Basic",
+    "illustrator": "Shin Nagasawa",
+    "retreat": 1,
+    "dexId": [
+      318
+    ],
+    "attacks": [
+      {
+        "damage": 30,
+        "cost": [
+          "Darkness"
+        ],
+        "name": "むかちゅうとつげき"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-050",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "051": {
+    "name": "メガサメハダーex",
+    "hp": 330,
+    "types": [
+      "Darkness"
+    ],
+    "stage": "Basic",
+    "illustrator": "5ban Graphics",
+    "retreat": 0,
+    "dexId": [
+      319
+    ],
+    "attacks": [
+      {
+        "damage": 70,
+        "cost": [
+          "Darkness"
+        ],
+        "name": "よくばりのきば"
+      },
+      {
+        "damage": 120,
+        "cost": [
+          "Darkness",
+          "Darkness"
+        ],
+        "name": "ハングリージョーズ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Double rare",
+    "id": "M2-051",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "052": {
+    "name": "ハブネーク",
+    "hp": 120,
+    "types": [
+      "Darkness"
+    ],
+    "stage": "Basic",
+    "illustrator": "hncl",
+    "retreat": 1,
+    "dexId": [
+      336
+    ],
+    "attacks": [
+      {
+        "damage": 120,
+        "cost": [
+          "Darkness",
+          "Darkness",
+          "Darkness"
+        ],
+        "name": "まっくろのきば"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-052",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "053": {
+    "name": "メグロコ",
+    "hp": 70,
+    "types": [
+      "Darkness"
+    ],
+    "stage": "Basic",
+    "illustrator": "Taiga Kasai",
+    "retreat": 2,
+    "dexId": [
+      551
+    ],
+    "attacks": [
+      {
+        "damage": 10,
+        "cost": [
+          "Darkness"
+        ],
+        "name": "ぶつかる"
+      },
+      {
+        "damage": 20,
+        "cost": [
+          "Darkness",
+          "Colorless"
+        ],
+        "name": "リアキック"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-053",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "054": {
+    "name": "ワルビル",
+    "hp": 100,
+    "types": [
+      "Darkness"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Uninori",
+    "retreat": 2,
+    "dexId": [
+      552
+    ],
+    "attacks": [
+      {
+        "damage": 30,
+        "cost": [
+          "Darkness"
+        ],
+        "name": "かみつく"
+      },
+      {
+        "damage": 60,
+        "cost": [
+          "Darkness",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "にらみつける"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-054",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "055": {
+    "name": "ワルビアル",
+    "hp": 170,
+    "types": [
+      "Darkness"
+    ],
+    "stage": "Stage2",
+    "illustrator": "Ryuta Fuse",
+    "retreat": 3,
+    "dexId": [
+      553
+    ],
+    "attacks": [
+      {
+        "damage": 60,
+        "cost": [
+          "Darkness"
+        ],
+        "name": "しかえしのきば"
+      },
+      {
+        "damage": 160,
+        "cost": [
+          "Darkness",
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ハンマーイン"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-055",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "056": {
+    "name": "エレズン",
+    "hp": 70,
+    "types": [
+      "Darkness"
+    ],
+    "stage": "Basic",
+    "illustrator": "OKACHEKE",
+    "retreat": 1,
+    "dexId": [
+      848
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Darkness"
+        ],
+        "name": "かぞくをよぶ"
+      },
+      {
+        "damage": 20,
+        "cost": [
+          "Darkness",
+          "Colorless"
+        ],
+        "name": "ラスカルキック"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-056",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "057": {
+    "name": "ストリンダー",
+    "hp": 140,
+    "types": [
+      "Darkness"
+    ],
+    "stage": "Stage1",
+    "illustrator": "DOM",
+    "retreat": 2,
+    "dexId": [
+      849
+    ],
+    "attacks": [
+      {
+        "damage": 100,
+        "cost": [
+          "Darkness",
+          "Darkness",
+          "Colorless"
+        ],
+        "name": "ポカリ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Rare Holo",
+    "id": "M2-057",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "058": {
+    "name": "エンペルトex",
+    "hp": 320,
+    "types": [
+      "Metal"
+    ],
+    "stage": "Basic",
+    "illustrator": "5ban Graphics",
+    "retreat": 2,
+    "dexId": [
+      395
+    ],
+    "attacks": [
+      {
+        "damage": 210,
+        "cost": [
+          "Metal",
+          "Metal",
+          "Colorless"
+        ],
+        "name": "てつのはね"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Double rare",
+    "id": "M2-058",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "059": {
+    "name": "ドーミラー",
+    "hp": 80,
+    "types": [
+      "Metal"
+    ],
+    "stage": "Basic",
+    "illustrator": "OKUBO",
+    "retreat": 2,
+    "dexId": [
+      436
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Colorless"
+        ],
+        "name": "てっぺき"
+      },
+      {
+        "damage": 30,
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ころがる"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-059",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "060": {
+    "name": "ドータクン",
+    "hp": 140,
+    "types": [
+      "Metal"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Masako Tomii",
+    "retreat": 3,
+    "dexId": [
+      437
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Colorless"
+        ],
+        "name": "トリプルドロー"
+      },
+      {
+        "damage": 40,
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ツールドロップ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-060",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "061": {
+    "name": "トゲデマル",
+    "hp": 80,
+    "types": [
+      "Metal"
+    ],
+    "stage": "Basic",
+    "illustrator": "Bun Toujo",
+    "retreat": 1,
+    "dexId": [
+      777
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Colorless"
+        ],
+        "name": "なかまをさがす"
+      },
+      {
+        "damage": 30,
+        "cost": [
+          "Metal"
+        ],
+        "name": "かじりつく"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-061",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "062": {
+    "name": "ジュラルドン",
+    "hp": 130,
+    "types": [
+      "Metal"
+    ],
+    "stage": "Basic",
+    "illustrator": "Shinji Kanda",
+    "retreat": 2,
+    "dexId": [
+      884
+    ],
+    "attacks": [
+      {
+        "damage": 70,
+        "cost": [
+          "Metal",
+          "Metal",
+          "Metal"
+        ],
+        "name": "はかいこうせん"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-062",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "063": {
+    "name": "ブリジュラス",
+    "hp": 180,
+    "types": [
+      "Metal"
+    ],
+    "stage": "Stage1",
+    "illustrator": "toriyufu",
+    "retreat": 2,
+    "dexId": [
+      1018
+    ],
+    "attacks": [
+      {
+        "damage": 120,
+        "cost": [
+          "Metal",
+          "Metal",
+          "Metal"
+        ],
+        "name": "コーティングアタック"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-063",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "064": {
+    "name": "プリン",
+    "hp": 70,
+    "types": [
+      "Colorless"
+    ],
+    "stage": "Basic",
+    "illustrator": "Naoyo Kimura",
+    "retreat": 1,
+    "dexId": [
+      39
+    ],
+    "attacks": [
+      {
+        "damage": 20,
+        "cost": [
+          "Colorless"
+        ],
+        "name": "たまころがし"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-064",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "065": {
+    "name": "プクリン",
+    "hp": 120,
+    "types": [
+      "Colorless"
+    ],
+    "stage": "Stage1",
+    "illustrator": "En Morikura",
+    "retreat": 2,
+    "dexId": [
+      40
+    ],
+    "attacks": [
+      {
+        "damage": 40,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ラウンド"
+      },
+      {
+        "damage": 100,
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ちきゅうなげ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-065",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "066": {
+    "name": "エイパム",
+    "hp": 70,
+    "types": [
+      "Colorless"
+    ],
+    "stage": "Basic",
+    "illustrator": "Saboteri",
+    "retreat": 1,
+    "dexId": [
+      190
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "おどろかす"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-066",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "067": {
+    "name": "エテボース",
+    "hp": 110,
+    "types": [
+      "Colorless"
+    ],
+    "stage": "Stage1",
+    "illustrator": "hncl",
+    "retreat": 1,
+    "dexId": [
+      424
+    ],
+    "attacks": [
+      {
+        "damage": 50,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "はたく"
+      },
+      {
+        "damage": 50,
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ダブルテール"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Rare Holo",
+    "id": "M2-067",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "068": {
+    "name": "ドーブル",
+    "hp": 80,
+    "types": [
+      "Colorless"
+    ],
+    "stage": "Basic",
+    "illustrator": "REND",
+    "retreat": 1,
+    "dexId": [
+      235
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Colorless"
+        ],
+        "name": "エネルギースケッチ"
+      },
+      {
+        "damage": 40,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "フック"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-068",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "069": {
+    "name": "ジグザグマ",
+    "hp": 70,
+    "types": [
+      "Colorless"
+    ],
+    "stage": "Basic",
+    "illustrator": "Dsuke",
+    "retreat": 1,
+    "dexId": [
+      263
+    ],
+    "attacks": [
+      {
+        "damage": 30,
+        "cost": [
+          "Colorless"
+        ],
+        "name": "きしゅう"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-069",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "070": {
+    "name": "マッスグマ",
+    "hp": 100,
+    "types": [
+      "Colorless"
+    ],
+    "stage": "Stage1",
+    "illustrator": "nagimiso",
+    "retreat": 1,
+    "dexId": [
+      264
+    ],
+    "attacks": [
+      {
+        "damage": 70,
+        "cost": [
+          "Colorless"
+        ],
+        "name": "きりさく"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Uncommon",
+    "id": "M2-070",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "071": {
+    "name": "ミミロル",
+    "hp": 70,
+    "types": [
+      "Colorless"
+    ],
+    "stage": "Basic",
+    "illustrator": "tono",
+    "retreat": 1,
+    "dexId": [
+      427
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Colorless"
+        ],
+        "name": "もてあそぶ"
+      },
+      {
+        "damage": 20,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "キック"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Common",
+    "id": "M2-071",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "072": {
+    "name": "メガミミロップex",
+    "hp": 330,
+    "types": [
+      "Colorless"
+    ],
+    "stage": "Basic",
+    "illustrator": "5ban Graphics",
+    "retreat": 1,
+    "dexId": [
+      428
+    ],
+    "attacks": [
+      {
+        "damage": 60,
+        "cost": [
+          "Colorless"
+        ],
+        "name": "つむじかぜつき"
+      },
+      {
+        "damage": 160,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "スパイキーホッパー"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Double rare",
+    "id": "M2-072",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "073": {
+    "name": "ジャンボソフト",
+    "illustrator": "AYUMI ODASHIMA",
+    "category": "Trainer",
+    "rarity": "Uncommon",
+    "id": "M2-073",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "074": {
+    "name": "ヒートバーナー",
+    "illustrator": "Toyste Beach",
+    "category": "Trainer",
+    "rarity": "Uncommon",
+    "id": "M2-074",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "075": {
+    "name": "セイクリッドチャーム",
+    "illustrator": "Toyste Beach",
+    "category": "Trainer",
+    "rarity": "Uncommon",
+    "id": "M2-075",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "076": {
+    "name": "ギーマのかけひき",
+    "illustrator": "GIDORA",
+    "category": "Trainer",
+    "rarity": "Uncommon",
+    "id": "M2-076",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "077": {
+    "name": "ヒカリ",
+    "illustrator": "Yuu Nishida",
+    "category": "Trainer",
+    "rarity": "Uncommon",
+    "id": "M2-077",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "078": {
+    "name": "ファイアーブレーサー",
+    "illustrator": "Naoki Saito",
+    "category": "Trainer",
+    "rarity": "Uncommon",
+    "id": "M2-078",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "079": {
+    "name": "バトルコロシアム",
+    "illustrator": "MARINA Chikazawa",
+    "category": "Trainer",
+    "rarity": "Uncommon",
+    "id": "M2-079",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "080": {
+    "name": "めまいのたに",
+    "illustrator": "AYUMI ODASHIMA",
+    "category": "Trainer",
+    "rarity": "Uncommon",
+    "id": "M2-080",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "081": {
+    "name": "ルンパッパ",
+    "hp": 160,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Stage2",
+    "illustrator": "Jerky",
+    "retreat": 2,
+    "dexId": [
+      272
+    ],
+    "attacks": [
+      {
+        "damage": 120,
+        "cost": [
+          "Grass",
+          "Colorless"
+        ],
+        "name": "とびかかる"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Illustration rare",
+    "id": "M2-081",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "082": {
+    "name": "マメバッタ",
+    "hp": 50,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Basic",
+    "illustrator": "Nakamura Ippan",
+    "retreat": 1,
+    "dexId": [
+      919
+    ],
+    "attacks": [
+      {
+        "damage": 10,
+        "cost": [
+          "Grass"
+        ],
+        "name": "バタバタもがく"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Illustration rare",
+    "id": "M2-082",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "083": {
+    "name": "カルボウ",
+    "hp": 70,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Basic",
+    "illustrator": "Teeziro",
+    "retreat": 2,
+    "dexId": [
+      935
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Fire"
+        ],
+        "name": "ちからをためる"
+      },
+      {
+        "damage": 10,
+        "cost": [
+          "Fire"
+        ],
+        "name": "チョップ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Illustration rare",
+    "id": "M2-083",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "084": {
+    "name": "ジュゴン",
+    "hp": 130,
+    "types": [
+      "Water"
+    ],
+    "stage": "Stage1",
+    "illustrator": "satoma",
+    "retreat": 2,
+    "dexId": [
+      87
+    ],
+    "attacks": [
+      {
+        "damage": 70,
+        "cost": [
+          "Water",
+          "Colorless"
+        ],
+        "name": "スラム"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Illustration rare",
+    "id": "M2-084",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "085": {
+    "name": "ポッチャマ",
+    "hp": 70,
+    "types": [
+      "Water"
+    ],
+    "stage": "Basic",
+    "illustrator": "Jiro Sasumo",
+    "retreat": 1,
+    "dexId": [
+      393
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Colorless"
+        ],
+        "name": "なかまをよぶ"
+      },
+      {
+        "damage": 20,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "たいあたり"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Illustration rare",
+    "id": "M2-085",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "086": {
+    "name": "ワンパチ",
+    "hp": 70,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Basic",
+    "illustrator": "tono",
+    "retreat": 1,
+    "dexId": [
+      835
+    ],
+    "attacks": [
+      {
+        "damage": 20,
+        "cost": [
+          "Lightning",
+          "Colorless"
+        ],
+        "name": "じゃれつく"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Illustration rare",
+    "id": "M2-086",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "087": {
+    "name": "ザシアン",
+    "hp": 130,
+    "types": [
+      "Psychic"
+    ],
+    "stage": "Basic",
+    "illustrator": "Yoriyuki Ikegami",
+    "retreat": 2,
+    "dexId": [
+      888
+    ],
+    "attacks": [
+      {
+        "damage": 50,
+        "cost": [
+          "Psychic",
+          "Colorless"
+        ],
+        "name": "リミットブレイク"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Illustration rare",
+    "id": "M2-087",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "088": {
+    "name": "フライゴン",
+    "hp": 150,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Stage2",
+    "illustrator": "Ryota Murayama",
+    "retreat": 1,
+    "dexId": [
+      330
+    ],
+    "attacks": [
+      {
+        "damage": 130,
+        "name": "かまいたち"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Illustration rare",
+    "id": "M2-088",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "089": {
+    "name": "ストリンダー",
+    "hp": 140,
+    "types": [
+      "Darkness"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Terada Tera",
+    "retreat": 2,
+    "dexId": [
+      849
+    ],
+    "attacks": [
+      {
+        "damage": 100,
+        "cost": [
+          "Darkness",
+          "Darkness",
+          "Colorless"
+        ],
+        "name": "ポカリ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Illustration rare",
+    "id": "M2-089",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "090": {
+    "name": "トゲデマル",
+    "hp": 80,
+    "types": [
+      "Metal"
+    ],
+    "stage": "Basic",
+    "illustrator": "Orca",
+    "retreat": 1,
+    "dexId": [
+      777
+    ],
+    "attacks": [
+      {
+        "cost": [
+          "Colorless"
+        ],
+        "name": "なかまをさがす"
+      },
+      {
+        "damage": 30,
+        "cost": [
+          "Metal"
+        ],
+        "name": "かじりつく"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Illustration rare",
+    "id": "M2-090",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "091": {
+    "name": "プクリン",
+    "hp": 120,
+    "types": [
+      "Colorless"
+    ],
+    "stage": "Stage1",
+    "illustrator": "REND",
+    "retreat": 2,
+    "dexId": [
+      40
+    ],
+    "attacks": [
+      {
+        "damage": 40,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ラウンド"
+      },
+      {
+        "damage": 100,
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ちきゅうなげ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Illustration rare",
+    "id": "M2-091",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "092": {
+    "name": "エテボース",
+    "hp": 110,
+    "types": [
+      "Colorless"
+    ],
+    "stage": "Stage1",
+    "illustrator": "Shigenori Negishi",
+    "retreat": 1,
+    "dexId": [
+      424
+    ],
+    "attacks": [
+      {
+        "damage": 50,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "はたく"
+      },
+      {
+        "damage": 50,
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "ダブルテール"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Illustration rare",
+    "id": "M2-092",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "093": {
+    "name": "メガヘラクロスex",
+    "hp": 280,
+    "types": [
+      "Fighting"
+    ],
+    "stage": "Basic",
+    "illustrator": "5ban Graphics",
+    "retreat": 2,
+    "dexId": [
+      214
+    ],
+    "attacks": [
+      {
+        "damage": 100,
+        "cost": [
+          "Grass",
+          "Grass"
+        ],
+        "name": "パンツァーホーン"
+      },
+      {
+        "damage": 170,
+        "cost": [
+          "Grass",
+          "Grass",
+          "Grass"
+        ],
+        "name": "ミリングジャブ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Ultra Rare",
+    "id": "M2-093",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "094": {
+    "name": "メガリザードンXex",
+    "hp": 360,
+    "types": [
+      "Fire"
+    ],
+    "stage": "Basic",
+    "illustrator": "takuyoa",
+    "retreat": 2,
+    "dexId": [
+      6
+    ],
+    "attacks": [
+      {
+        "damage": 90,
+        "cost": [
+          "Fire",
+          "Fire"
+        ],
+        "name": "インフェルノX"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Ultra Rare",
+    "id": "M2-094",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "095": {
+    "name": "オドリドリex",
+    "hp": 190,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Basic",
+    "illustrator": "5ban Graphics",
+    "retreat": 1,
+    "dexId": [
+      741
+    ],
+    "attacks": [
+      {
+        "damage": 110,
+        "cost": [
+          "Fire",
+          "Fire",
+          "Colorless"
+        ],
+        "name": "ほのおのつばさ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Ultra Rare",
+    "id": "M2-095",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "096": {
+    "name": "ロトムex",
+    "hp": 190,
+    "types": [
+      "Lightning"
+    ],
+    "stage": "Basic",
+    "illustrator": "5ban Graphics",
+    "retreat": 1,
+    "dexId": [
+      479
+    ],
+    "attacks": [
+      {
+        "damage": 130,
+        "cost": [
+          "Lightning",
+          "Colorless"
+        ],
+        "name": "かみなり"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Ultra Rare",
+    "id": "M2-096",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "097": {
+    "name": "ムウマージex",
+    "hp": 260,
+    "types": [
+      "Psychic"
+    ],
+    "stage": "Basic",
+    "illustrator": "5ban Graphics",
+    "retreat": 1,
+    "dexId": [
+      429
+    ],
+    "attacks": [
+      {
+        "damage": 150,
+        "cost": [
+          "Psychic",
+          "Psychic"
+        ],
+        "name": "むむむのたたり"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Ultra Rare",
+    "id": "M2-097",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "098": {
+    "name": "メガサメハダーex",
+    "hp": 330,
+    "types": [
+      "Darkness"
+    ],
+    "stage": "Basic",
+    "illustrator": "5ban Graphics",
+    "retreat": 0,
+    "dexId": [
+      319
+    ],
+    "attacks": [
+      {
+        "damage": 70,
+        "cost": [
+          "Darkness"
+        ],
+        "name": "よくばりのきば"
+      },
+      {
+        "damage": 120,
+        "cost": [
+          "Darkness",
+          "Darkness"
+        ],
+        "name": "ハングリージョーズ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Ultra Rare",
+    "id": "M2-098",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "099": {
+    "name": "エンペルトex",
+    "hp": 320,
+    "types": [
+      "Metal"
+    ],
+    "stage": "Basic",
+    "illustrator": "5ban Graphics",
+    "retreat": 2,
+    "dexId": [
+      395
+    ],
+    "attacks": [
+      {
+        "damage": 210,
+        "cost": [
+          "Metal",
+          "Metal",
+          "Colorless"
+        ],
+        "name": "てつのはね"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Ultra Rare",
+    "id": "M2-099",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "100": {
+    "name": "メガミミロップex",
+    "hp": 330,
+    "types": [
+      "Colorless"
+    ],
+    "stage": "Basic",
+    "illustrator": "5ban Graphics",
+    "retreat": 1,
+    "dexId": [
+      428
+    ],
+    "attacks": [
+      {
+        "damage": 60,
+        "cost": [
+          "Colorless"
+        ],
+        "name": "つむじかぜつき"
+      },
+      {
+        "damage": 160,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "スパイキーホッパー"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Ultra Rare",
+    "id": "M2-100",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "101": {
+    "name": "ヒートバーナー",
+    "illustrator": "Toyste Beach",
+    "category": "Trainer",
+    "rarity": "Special illustration rare",
+    "id": "M2-101",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "102": {
+    "name": "Switch",
+    "illustrator": "Studio Bora Inc.",
+    "category": "Trainer",
+    "rarity": "Special illustration rare",
+    "id": "M2-102",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "103": {
+    "name": "セイクリッドチャーム",
+    "illustrator": "Toyste Beach",
+    "category": "Trainer",
+    "rarity": "Special illustration rare",
+    "id": "M2-103",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "104": {
+    "name": "Punk Helmet",
+    "illustrator": "Studio Bora Inc",
+    "category": "Trainer",
+    "rarity": "Special illustration rare",
+    "id": "M2-104",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "105": {
+    "name": "ギーマのかけひき",
+    "illustrator": "GIDORA",
+    "category": "Trainer",
+    "rarity": "Special illustration rare",
+    "id": "M2-105",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "106": {
+    "name": "ヒカリ",
+    "illustrator": "Yuu Nishida",
+    "category": "Trainer",
+    "rarity": "Special illustration rare",
+    "id": "M2-106",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "107": {
+    "name": "ファイアーブレーサー",
+    "illustrator": "Naoki Saito",
+    "category": "Trainer",
+    "rarity": "Special illustration rare",
+    "id": "M2-107",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "108": {
+    "name": "バトルコロシアム",
+    "illustrator": "MARINA Chikazawa",
+    "category": "Trainer",
+    "rarity": "Special illustration rare",
+    "id": "M2-108",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "109": {
+    "name": "Ignition Energy",
+    "category": "Trainer",
+    "rarity": "Special illustration rare",
+    "id": "M2-109",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "110": {
+    "name": "メガリザードンXex",
+    "hp": 360,
+    "types": [
+      "Fire"
+    ],
+    "stage": "Basic",
+    "illustrator": "danciao",
+    "retreat": 2,
+    "dexId": [
+      6
+    ],
+    "attacks": [
+      {
+        "damage": 90,
+        "cost": [
+          "Fire",
+          "Fire"
+        ],
+        "name": "インフェルノX"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Hyper rare",
+    "id": "M2-110",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "111": {
+    "name": "オドリドリex",
+    "hp": 190,
+    "types": [
+      "Grass"
+    ],
+    "stage": "Basic",
+    "illustrator": "Shinji Kanda",
+    "retreat": 1,
+    "dexId": [
+      741
+    ],
+    "attacks": [
+      {
+        "damage": 110,
+        "cost": [
+          "Fire",
+          "Fire",
+          "Colorless"
+        ],
+        "name": "ほのおのつばさ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Hyper rare",
+    "id": "M2-111",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "112": {
+    "name": "ロトムex",
+    "hp": 190,
+    "types": [
+      "Lightning"
+    ],
+    "stage": "Basic",
+    "illustrator": "Yoshimi Miyoshi",
+    "retreat": 1,
+    "dexId": [
+      479
+    ],
+    "attacks": [
+      {
+        "damage": 130,
+        "cost": [
+          "Lightning",
+          "Colorless"
+        ],
+        "name": "かみなり"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Hyper rare",
+    "id": "M2-112",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "113": {
+    "name": "メガサメハダーex",
+    "hp": 330,
+    "types": [
+      "Darkness"
+    ],
+    "stage": "Basic",
+    "illustrator": "nagimiso",
+    "retreat": 0,
+    "dexId": [
+      319
+    ],
+    "attacks": [
+      {
+        "damage": 70,
+        "cost": [
+          "Darkness"
+        ],
+        "name": "よくばりのきば"
+      },
+      {
+        "damage": 120,
+        "cost": [
+          "Darkness",
+          "Darkness"
+        ],
+        "name": "ハングリージョーズ"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Mega Hyper Rare",
+    "id": "M2-113",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "114": {
+    "name": "メガミミロップex",
+    "hp": 330,
+    "types": [
+      "Colorless"
+    ],
+    "stage": "Basic",
+    "illustrator": "Kinu Nishimura",
+    "retreat": 1,
+    "dexId": [
+      428
+    ],
+    "attacks": [
+      {
+        "damage": 60,
+        "cost": [
+          "Colorless"
+        ],
+        "name": "つむじかぜつき"
+      },
+      {
+        "damage": 160,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "name": "スパイキーホッパー"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Mega Hyper Rare",
+    "id": "M2-114",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "115": {
+    "name": "ヒカリ",
+    "illustrator": "Atsushi Furusawa",
+    "category": "Trainer",
+    "rarity": "Special illustration rare",
+    "id": "M2-115",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  },
+  "116": {
+    "name": "メガリザードンXex",
+    "hp": 360,
+    "types": [
+      "Fire"
+    ],
+    "stage": "Basic",
+    "illustrator": "takuyoa",
+    "retreat": 2,
+    "dexId": [
+      6
+    ],
+    "attacks": [
+      {
+        "damage": 90,
+        "cost": [
+          "Fire",
+          "Fire"
+        ],
+        "name": "インフェルノX"
+      }
+    ],
+    "category": "Pokemon",
+    "rarity": "Mega Hyper Rare",
+    "id": "M2-116",
+    "set": {
+      "id": "M2",
+      "name": "Inferno X"
+    },
+    "image": null
+  }
+}

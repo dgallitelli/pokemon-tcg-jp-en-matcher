@@ -122,6 +122,8 @@
     const SIDELOAD_CONFIG = {
       jp: [
         { id: "M1S", name: "Mega Symphonia",  file: "data/M1S.json" },
+        { id: "M1L", name: "Mega Brave",      file: "data/M1L.json" },
+        { id: "M2",  name: "Inferno X",       file: "data/M2.json"  },
         { id: "M3",  name: "Nihil Zero",      file: "data/M3.json"  },
         { id: "M4",  name: "Ninja Spinner",   file: "data/M4.json"  },
       ],
@@ -205,6 +207,8 @@
       const n = parseInt(m[2], 10);
       if (card.id.startsWith('ME3-')) return `https://www.serebii.net/card/perfectorder/${n}.jpg`;
       if (card.id.startsWith('M1S-')) return `https://www.serebii.net/card/megasymphonia/${n}.jpg`;
+      if (card.id.startsWith('M1L-')) return `https://www.serebii.net/card/megabrave/${n}.jpg`;
+      if (card.id.startsWith('M2-'))  return `https://www.serebii.net/card/infernox/${n}.jpg`;
       if (card.id.startsWith('M3-')) return `https://www.serebii.net/card/nihilzero/${n}.jpg`;
       if (card.id.startsWith('M4-')) return `https://www.serebii.net/card/ninjaspinner/${n}.jpg`;
       return null;
