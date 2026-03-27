@@ -8,6 +8,695 @@
     "en": "2026-03-27"
   },
   "cards": {
+    "100": {
+      "name": "Decidueye ex",
+      "category": "Pokemon",
+      "hp": 320,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "illustrator": "5ban Graphics",
+      "retreat": 2,
+      "dexId": [
+        724
+      ],
+      "rarity": "Ultra Rare",
+      "id": "ME3-100",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "attacks": [
+        {
+          "name": "Crushing Arrow",
+          "damage": 240,
+          "cost": [
+            "Grass",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Discard an Energy from your opponent's Active Pokemon."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Sniper Eye",
+          "effect": "If your opponent has exactly 4 cards in their hand, ignore all Colorless in this Pokemon's attack costs."
+        }
+      ]
+    },
+    "101": {
+      "name": "Salazzle ex",
+      "category": "Pokemon",
+      "hp": 260,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "illustrator": "5ban Graphics",
+      "retreat": 1,
+      "dexId": [
+        758
+      ],
+      "rarity": "Ultra Rare",
+      "id": "ME3-101",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "attacks": [
+        {
+          "name": "Nasty Plot",
+          "cost": [
+            "Fire"
+          ],
+          "effect": "Search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck."
+        },
+        {
+          "name": "Dire Nails",
+          "damage": 100,
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "effect": "Your opponent's Active Pokemon is now Poisoned and Burned. Switch this Pokemon with 1 of your Benched Pokemon."
+        }
+      ]
+    },
+    "102": {
+      "name": "Mega Starmie ex",
+      "category": "Pokemon",
+      "hp": 330,
+      "types": [
+        "Water"
+      ],
+      "stage": "Mega EX",
+      "illustrator": "5ban Graphics",
+      "retreat": 2,
+      "dexId": [
+        121
+      ],
+      "rarity": "Ultra Rare",
+      "id": "ME3-102",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "attacks": [
+        {
+          "name": "Jetting Blow",
+          "damage": 120,
+          "cost": [
+            "Water"
+          ],
+          "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+        },
+        {
+          "name": "Nebula Beam",
+          "damage": 210,
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokemon."
+        }
+      ]
+    },
+    "103": {
+      "name": "Mega Clefable ex",
+      "category": "Pokemon",
+      "hp": 320,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Mega EX",
+      "illustrator": "aky CG Works",
+      "retreat": 1,
+      "dexId": [
+        36
+      ],
+      "rarity": "Ultra Rare",
+      "id": "ME3-103",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "attacks": [
+        {
+          "name": "Shooting Moons",
+          "damage": "120+",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "effect": "You may discard up to 4 Energy cards from your hand. If you do, this attack does 40 more damage for each card discarded in this way."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Wings of Light",
+          "effect": "Prevent all effects of your opponent's Abilities done to this Pokemon."
+        }
+      ]
+    },
+    "104": {
+      "name": "Mega Zygarde ex",
+      "category": "Pokemon",
+      "hp": 310,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Mega EX",
+      "illustrator": "takuyoa",
+      "retreat": 2,
+      "dexId": [
+        718
+      ],
+      "rarity": "Ultra Rare",
+      "id": "ME3-104",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "attacks": [
+        {
+          "name": "Gaia Wave",
+          "damage": 200,
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting"
+          ],
+          "effect": "During your opponent's next turn, this Pokemon takes 30 less damage from attacks (after applying Weakness and Resistance)."
+        },
+        {
+          "name": "Nullifying Zero",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting",
+            "Fighting",
+            "Fighting"
+          ],
+          "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack does 150 damage to that Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+        }
+      ]
+    },
+    "105": {
+      "name": "Yveltal ex",
+      "category": "Pokemon",
+      "hp": 210,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "5ban Graphics",
+      "retreat": 1,
+      "dexId": [
+        717
+      ],
+      "rarity": "Ultra Rare",
+      "id": "ME3-105",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "attacks": [
+        {
+          "name": "Soul Destroyer",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "effect": "Knock Out each of your opponent's Pokemon that has 50 HP or less remaining."
+        },
+        {
+          "name": "Dark Strike",
+          "damage": 210,
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "effect": "During your next turn, this Pokemon can't use Dark Strike."
+        }
+      ]
+    },
+    "106": {
+      "name": "Mega Skarmory ex",
+      "category": "Pokemon",
+      "hp": 260,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Mega EX",
+      "illustrator": "5ban Graphics",
+      "retreat": 0,
+      "dexId": [
+        227
+      ],
+      "rarity": "Ultra Rare",
+      "id": "ME3-106",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "attacks": [
+        {
+          "name": "Sonic Ripper",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "effect": "Shuffle all Energy from this Pokemon into your deck. This attack does 220 damage to 1 of your opponent's Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+        }
+      ]
+    },
+    "107": {
+      "name": "Meowth ex",
+      "category": "Pokemon",
+      "hp": 170,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "5ban Graphics",
+      "retreat": 1,
+      "dexId": [
+        52
+      ],
+      "rarity": "Ultra Rare",
+      "id": "ME3-107",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "attacks": [
+        {
+          "name": "Tuck Tail",
+          "damage": 60,
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Put this Pokemon and all attached cards into your hand."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Last-Ditch Catch",
+          "effect": "Once during your turn, when you play this Pokemon from your hand onto your Bench, you may use this Ability. Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck."
+        }
+      ]
+    },
+    "108": {
+      "name": "Energy Recycler",
+      "category": "Trainer",
+      "stage": "Trainer",
+      "illustrator": "Toyste Beach",
+      "rarity": "Ultra Rare",
+      "id": "ME3-108",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "effect": "Shuffle up to 5 Basic Energy cards from your discard pile into your deck."
+    },
+    "109": {
+      "name": "Forest of Vitality",
+      "category": "Trainer",
+      "stage": "Stadium",
+      "illustrator": "AYUMI ODASHIMA",
+      "rarity": "Ultra Rare",
+      "id": "ME3-109",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "effect": "Each player's Grass Pokémon may evolve on the turn they come into play (except on the first turn of the game)."
+    },
+    "110": {
+      "name": "Jacinthe",
+      "category": "Trainer",
+      "stage": "Supporter",
+      "illustrator": "Susumu Maeya",
+      "rarity": "Ultra Rare",
+      "id": "ME3-110",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "effect": "Heal 150 damage from 1 of your Psychic Pokemon."
+    },
+    "111": {
+      "name": "Lumiose City",
+      "category": "Trainer",
+      "stage": "Stadium",
+      "illustrator": "MARINA Chikazawa",
+      "rarity": "Ultra Rare",
+      "id": "ME3-111",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "effect": "Once during each player's turn, that player may search their deck for a Basic Pokemon and put it onto their Bench. Then, that player shuffles their deck. If a player uses this effect, their turn ends."
+    },
+    "112": {
+      "name": "Naveen",
+      "category": "Trainer",
+      "stage": "Supporter",
+      "illustrator": "DOM",
+      "rarity": "Ultra Rare",
+      "id": "ME3-112",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "effect": "Discard any number of cards from your hand. Then, draw cards until you have 5 cards in your hand."
+    },
+    "113": {
+      "name": "Poké Pad",
+      "category": "Trainer",
+      "stage": "Trainer",
+      "illustrator": "Studio Bora Inc.",
+      "rarity": "Ultra Rare",
+      "id": "ME3-113",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "effect": "Search your deck for a Pokemon that doesn't have a Rule Box, reveal it, and put it into your hand. Then, shuffle your deck."
+    },
+    "114": {
+      "name": "Rosa's Encouragement",
+      "category": "Trainer",
+      "stage": "Supporter",
+      "illustrator": "Atsushi Furusawa",
+      "rarity": "Ultra Rare",
+      "id": "ME3-114",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "effect": "You can only use this card if you have more Prize cards remaining than your opponent. Attach up to 2 Basic Energy cards from your discard pile to 1 of your Stage 2 Pokemon."
+    },
+    "115": {
+      "name": "Sacred Ash",
+      "category": "Trainer",
+      "stage": "Trainer",
+      "illustrator": "Toyste Beach",
+      "rarity": "Ultra Rare",
+      "id": "ME3-115",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "effect": "Shuffle all Pokémon from your discard pile into your deck."
+    },
+    "116": {
+      "name": "Tarragon",
+      "category": "Trainer",
+      "stage": "Supporter",
+      "illustrator": "Akira Komayama",
+      "rarity": "Ultra Rare",
+      "id": "ME3-116",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "effect": "Put up to 4 in any combination of Fighting Pokemon and Basic Fighting Energy from your discard pile into your hand."
+    },
+    "117": {
+      "name": "Wondrous Patch",
+      "category": "Trainer",
+      "stage": "Trainer",
+      "illustrator": "Studio Bora Inc.",
+      "rarity": "Ultra Rare",
+      "id": "ME3-117",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "effect": "Attach a Basic Psychic Energy from your discard pile to 1 of your Benched Psychic Pokémon."
+    },
+    "118": {
+      "name": "Mega Starmie ex",
+      "category": "Pokemon",
+      "hp": 330,
+      "types": [
+        "Water"
+      ],
+      "stage": "Mega EX",
+      "illustrator": "takuyoa",
+      "retreat": 2,
+      "dexId": [
+        121
+      ],
+      "rarity": "Hyper Rare",
+      "id": "ME3-118",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "attacks": [
+        {
+          "name": "Jetting Blow",
+          "damage": 120,
+          "cost": [
+            "Water"
+          ],
+          "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+        },
+        {
+          "name": "Nebula Beam",
+          "damage": 210,
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokemon."
+        }
+      ]
+    },
+    "119": {
+      "name": "Mega Clefable ex",
+      "category": "Pokemon",
+      "hp": 320,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Mega EX",
+      "illustrator": "Cona Nitanda",
+      "retreat": 1,
+      "dexId": [
+        36
+      ],
+      "rarity": "Hyper Rare",
+      "id": "ME3-119",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "attacks": [
+        {
+          "name": "Shooting Moons",
+          "damage": "120+",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "effect": "You may discard up to 4 Energy cards from your hand. If you do, this attack does 40 more damage for each card discarded in this way."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Wings of Light",
+          "effect": "Prevent all effects of your opponent's Abilities done to this Pokemon."
+        }
+      ]
+    },
+    "120": {
+      "name": "Mega Zygarde ex",
+      "category": "Pokemon",
+      "hp": 310,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Mega EX",
+      "illustrator": "kantaro",
+      "retreat": 2,
+      "dexId": [
+        718
+      ],
+      "rarity": "Hyper Rare",
+      "id": "ME3-120",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "attacks": [
+        {
+          "name": "Gaia Wave",
+          "damage": 200,
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting"
+          ],
+          "effect": "During your opponent's next turn, this Pokemon takes 30 less damage from attacks (after applying Weakness and Resistance)."
+        },
+        {
+          "name": "Nullifying Zero",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting",
+            "Fighting",
+            "Fighting"
+          ],
+          "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack does 150 damage to that Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+        }
+      ]
+    },
+    "121": {
+      "name": "Meowth ex",
+      "category": "Pokemon",
+      "hp": 170,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "Natsumi Yoshida",
+      "retreat": 1,
+      "dexId": [
+        52
+      ],
+      "rarity": "Hyper Rare",
+      "id": "ME3-121",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "attacks": [
+        {
+          "name": "Tuck Tail",
+          "damage": 60,
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Put this Pokemon and all attached cards into your hand."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Last-Ditch Catch",
+          "effect": "Once during your turn, when you play this Pokemon from your hand onto your Bench, you may use this Ability. Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck."
+        }
+      ]
+    },
+    "122": {
+      "name": "Rosa's Encouragement",
+      "category": "Trainer",
+      "stage": "Supporter",
+      "illustrator": "Iori Suzuki",
+      "rarity": "Hyper Rare",
+      "id": "ME3-122",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "effect": "You can only use this card if you have more Prize cards remaining than your opponent. Attach up to 2 Basic Energy cards from your discard pile to 1 of your Stage 2 Pokemon."
+    },
+    "123": {
+      "name": "Jacinthe",
+      "category": "Trainer",
+      "stage": "Supporter",
+      "illustrator": "Souichirou Gunjima",
+      "rarity": "Hyper Rare",
+      "id": "ME3-123",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "effect": "Heal 150 damage from 1 of your Psychic Pokemon."
+    },
+    "124": {
+      "name": "Mega Zygarde ex",
+      "category": "Pokemon",
+      "hp": 310,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Mega EX",
+      "illustrator": "takuyoa",
+      "retreat": 2,
+      "dexId": [
+        718
+      ],
+      "rarity": "Hyper Rare",
+      "id": "ME3-124",
+      "set": {
+        "id": "ME3",
+        "name": "Perfect Order"
+      },
+      "image": null,
+      "attacks": [
+        {
+          "name": "Gaia Wave",
+          "damage": 200,
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting"
+          ],
+          "effect": "During your opponent's next turn, this Pokemon takes 30 less damage from attacks (after applying Weakness and Resistance)."
+        },
+        {
+          "name": "Nullifying Zero",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting",
+            "Fighting",
+            "Fighting"
+          ],
+          "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack does 150 damage to that Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+        }
+      ]
+    },
     "001": {
       "name": "Spinarak",
       "category": "Pokemon",
@@ -895,6 +1584,12 @@
           ],
           "effect": "Flip a coin for each Water Energy attached to this Pokemon. This attack does 90 damage for each heads."
         }
+      ],
+      "abilities": [
+        {
+          "name": "Tundra Wall",
+          "effect": "While this Pokemon is in play, all of your Pokemon that have a Water Energy attached take 50 less damage from attacks from your opponent's Pokemon. This Ability does not stack."
+        }
       ]
     },
     "026": {
@@ -1001,6 +1696,12 @@
             "Colorless"
           ],
           "effect": "Discard 2 Energy from this Pokemon."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Roar of the Tiger",
+          "effect": "If your opponent's Active Pokemon is a Pokemon ex, you can evolve this Pokemon on your first turn, or on the first turn this Pokemon is put into play."
         }
       ]
     },
@@ -1140,6 +1841,12 @@
             "Colorless"
           ],
           "effect": "Discard up to 2 Energy cards from your hand. This attack does 60 damage for each card discarded in this way."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Wings of Light",
+          "effect": "Prevent all effects of your opponent's Abilities done to this Pokemon."
         }
       ]
     },
@@ -1321,6 +2028,12 @@
             "Fighting",
             "Fighting"
           ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Fragrance Collection",
+          "effect": "Once during your turn, you may search your deck for up to 2 Basic Psychic Energy, reveal them, and put them into your hand. Then, shuffle your deck."
         }
       ]
     },
@@ -1596,6 +2309,12 @@
           ],
           "effect": "This attack does 20 damage times the number of damage counters on this Pokemon."
         }
+      ],
+      "abilities": [
+        {
+          "name": "Stone Arms",
+          "effect": "Once during your turn, you may attach a Basic Fighting Energy from your hand to 1 of your Fighting Pokemon."
+        }
       ]
     },
     "045": {
@@ -1664,6 +2383,12 @@
             "Fighting"
           ],
           "effect": "If your Benched Pokemon have any damage counters on them, this attack does 60 more damage."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Tyrannoguts",
+          "effect": "If this Pokemon has any Special Energy attached, it gets +150 HP."
         }
       ]
     },
@@ -1838,6 +2563,12 @@
             "Darkness"
           ],
           "effect": "Your opponent's Active Pokemon is now Poisoned."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Infinite Shadow",
+          "effect": "If this Pokemon would be Knocked Out by damage from an opponent's Pokemon's attack, instead of discarding it, return it to your hand. (Discard all other cards attached to this Pokemon that are not Pokemon.)"
         }
       ]
     },
@@ -2280,6 +3011,12 @@
             "Colorless"
           ],
           "effect": "This Pokemon is now Asleep."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Last-Ditch Catch",
+          "effect": "Once during your turn, when you play this Pokemon from your hand onto your Bench, you may use this Ability. Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck."
         }
       ]
     },
@@ -3148,683 +3885,6 @@
             "Colorless"
           ],
           "effect": "This attack does 40 damage for each damage counter on all of your Benched Rattata."
-        }
-      ]
-    },
-    "100": {
-      "name": "Decidueye ex",
-      "category": "Pokemon",
-      "hp": 320,
-      "types": [
-        "Grass"
-      ],
-      "stage": "Stage2",
-      "illustrator": "5ban Graphics",
-      "retreat": 2,
-      "dexId": [
-        724
-      ],
-      "rarity": "Ultra Rare",
-      "id": "ME3-100",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null,
-      "attacks": [
-        {
-          "name": "Crushing Arrow",
-          "damage": 240,
-          "cost": [
-            "Grass",
-            "Colorless",
-            "Colorless",
-            "Colorless"
-          ],
-          "effect": "Discard an Energy from your opponent's Active Pokemon."
-        }
-      ],
-      "abilities": [
-        {
-          "name": "Sniper Eye",
-          "effect": "If your opponent has exactly 4 cards in their hand, ignore all Colorless in this Pokemon's attack costs."
-        }
-      ]
-    },
-    "101": {
-      "name": "Salazzle ex",
-      "category": "Pokemon",
-      "hp": 260,
-      "types": [
-        "Fire"
-      ],
-      "stage": "Stage1",
-      "illustrator": "5ban Graphics",
-      "retreat": 1,
-      "dexId": [
-        758
-      ],
-      "rarity": "Ultra Rare",
-      "id": "ME3-101",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null,
-      "attacks": [
-        {
-          "name": "Nasty Plot",
-          "cost": [
-            "Fire"
-          ],
-          "effect": "Search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck."
-        },
-        {
-          "name": "Dire Nails",
-          "damage": 100,
-          "cost": [
-            "Fire",
-            "Fire"
-          ],
-          "effect": "Your opponent's Active Pokemon is now Poisoned and Burned. Switch this Pokemon with 1 of your Benched Pokemon."
-        }
-      ]
-    },
-    "102": {
-      "name": "Mega Starmie ex",
-      "category": "Pokemon",
-      "hp": 330,
-      "types": [
-        "Water"
-      ],
-      "stage": "Mega EX",
-      "illustrator": "5ban Graphics",
-      "retreat": 2,
-      "dexId": [
-        121
-      ],
-      "rarity": "Ultra Rare",
-      "id": "ME3-102",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null,
-      "attacks": [
-        {
-          "name": "Jetting Blow",
-          "damage": 120,
-          "cost": [
-            "Water"
-          ],
-          "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
-        },
-        {
-          "name": "Nebula Beam",
-          "damage": 210,
-          "cost": [
-            "Colorless",
-            "Colorless",
-            "Colorless"
-          ],
-          "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokemon."
-        }
-      ]
-    },
-    "103": {
-      "name": "Mega Clefable ex",
-      "category": "Pokemon",
-      "hp": 320,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Mega EX",
-      "illustrator": "aky CG Works",
-      "retreat": 1,
-      "dexId": [
-        36
-      ],
-      "rarity": "Ultra Rare",
-      "id": "ME3-103",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null,
-      "attacks": [
-        {
-          "name": "Shooting Moons",
-          "damage": "120+",
-          "cost": [
-            "Psychic",
-            "Psychic"
-          ],
-          "effect": "You may discard up to 4 Energy cards from your hand. If you do, this attack does 40 more damage for each card discarded in this way."
-        }
-      ],
-      "abilities": [
-        {
-          "name": "Wings of Light",
-          "effect": "Prevent all effects of your opponent's Abilities done to this Pokemon."
-        }
-      ]
-    },
-    "104": {
-      "name": "Mega Zygarde ex",
-      "category": "Pokemon",
-      "hp": 310,
-      "types": [
-        "Fighting"
-      ],
-      "stage": "Mega EX",
-      "illustrator": "takuyoa",
-      "retreat": 2,
-      "dexId": [
-        718
-      ],
-      "rarity": "Ultra Rare",
-      "id": "ME3-104",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null,
-      "attacks": [
-        {
-          "name": "Gaia Wave",
-          "damage": 200,
-          "cost": [
-            "Fighting",
-            "Fighting",
-            "Fighting"
-          ],
-          "effect": "During your opponent's next turn, this Pokemon takes 30 less damage from attacks (after applying Weakness and Resistance)."
-        },
-        {
-          "name": "Nullifying Zero",
-          "cost": [
-            "Fighting",
-            "Fighting",
-            "Fighting",
-            "Fighting",
-            "Fighting"
-          ],
-          "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack does 150 damage to that Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
-        }
-      ]
-    },
-    "105": {
-      "name": "Yveltal ex",
-      "category": "Pokemon",
-      "hp": 210,
-      "types": [
-        "Darkness"
-      ],
-      "stage": "Basic",
-      "illustrator": "5ban Graphics",
-      "retreat": 1,
-      "dexId": [
-        717
-      ],
-      "rarity": "Ultra Rare",
-      "id": "ME3-105",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null,
-      "attacks": [
-        {
-          "name": "Soul Destroyer",
-          "cost": [
-            "Darkness",
-            "Darkness",
-            "Colorless"
-          ],
-          "effect": "Knock Out each of your opponent's Pokemon that has 50 HP or less remaining."
-        },
-        {
-          "name": "Dark Strike",
-          "damage": 210,
-          "cost": [
-            "Darkness",
-            "Darkness",
-            "Colorless"
-          ],
-          "effect": "During your next turn, this Pokemon can't use Dark Strike."
-        }
-      ]
-    },
-    "106": {
-      "name": "Mega Skarmory ex",
-      "category": "Pokemon",
-      "hp": 260,
-      "types": [
-        "Metal"
-      ],
-      "stage": "Mega EX",
-      "illustrator": "5ban Graphics",
-      "retreat": 0,
-      "dexId": [
-        227
-      ],
-      "rarity": "Ultra Rare",
-      "id": "ME3-106",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null,
-      "attacks": [
-        {
-          "name": "Sonic Ripper",
-          "cost": [
-            "Metal",
-            "Metal",
-            "Colorless"
-          ],
-          "effect": "Shuffle all Energy from this Pokemon into your deck. This attack does 220 damage to 1 of your opponent's Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
-        }
-      ]
-    },
-    "107": {
-      "name": "Meowth ex",
-      "category": "Pokemon",
-      "hp": 170,
-      "types": [
-        "Colorless"
-      ],
-      "stage": "Basic",
-      "illustrator": "5ban Graphics",
-      "retreat": 1,
-      "dexId": [
-        52
-      ],
-      "rarity": "Ultra Rare",
-      "id": "ME3-107",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null,
-      "attacks": [
-        {
-          "name": "Tuck Tail",
-          "damage": 60,
-          "cost": [
-            "Colorless",
-            "Colorless",
-            "Colorless"
-          ],
-          "effect": "Put this Pokemon and all attached cards into your hand."
-        }
-      ],
-      "abilities": [
-        {
-          "name": "Last-Ditch Catch",
-          "effect": "Once during your turn, when you play this Pokemon from your hand onto your Bench, you may use this Ability. Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck."
-        }
-      ]
-    },
-    "108": {
-      "name": "Energy Recycler",
-      "category": "Trainer",
-      "stage": "Trainer",
-      "illustrator": "Toyste Beach",
-      "rarity": "Ultra Rare",
-      "id": "ME3-108",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null
-    },
-    "109": {
-      "name": "Forest of Vitality",
-      "category": "Trainer",
-      "stage": "Stadium",
-      "illustrator": "AYUMI ODASHIMA",
-      "rarity": "Ultra Rare",
-      "id": "ME3-109",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null
-    },
-    "110": {
-      "name": "Jacinthe",
-      "category": "Trainer",
-      "stage": "Supporter",
-      "illustrator": "Susumu Maeya",
-      "rarity": "Ultra Rare",
-      "id": "ME3-110",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null
-    },
-    "111": {
-      "name": "Lumiose City",
-      "category": "Trainer",
-      "stage": "Stadium",
-      "illustrator": "MARINA Chikazawa",
-      "rarity": "Ultra Rare",
-      "id": "ME3-111",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null
-    },
-    "112": {
-      "name": "Naveen",
-      "category": "Trainer",
-      "stage": "Supporter",
-      "illustrator": "DOM",
-      "rarity": "Ultra Rare",
-      "id": "ME3-112",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null
-    },
-    "113": {
-      "name": "Poké Pad",
-      "category": "Trainer",
-      "stage": "Trainer",
-      "illustrator": "Studio Bora Inc.",
-      "rarity": "Ultra Rare",
-      "id": "ME3-113",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null
-    },
-    "114": {
-      "name": "Rosa's Encouragement",
-      "category": "Trainer",
-      "stage": "Supporter",
-      "illustrator": "Atsushi Furusawa",
-      "rarity": "Ultra Rare",
-      "id": "ME3-114",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null
-    },
-    "115": {
-      "name": "Sacred Ash",
-      "category": "Trainer",
-      "stage": "Trainer",
-      "illustrator": "Toyste Beach",
-      "rarity": "Ultra Rare",
-      "id": "ME3-115",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null
-    },
-    "116": {
-      "name": "Tarragon",
-      "category": "Trainer",
-      "stage": "Supporter",
-      "illustrator": "Akira Komayama",
-      "rarity": "Ultra Rare",
-      "id": "ME3-116",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null
-    },
-    "117": {
-      "name": "Wondrous Patch",
-      "category": "Trainer",
-      "stage": "Trainer",
-      "illustrator": "Studio Bora Inc.",
-      "rarity": "Ultra Rare",
-      "id": "ME3-117",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null
-    },
-    "118": {
-      "name": "Mega Starmie ex",
-      "category": "Pokemon",
-      "hp": 330,
-      "types": [
-        "Water"
-      ],
-      "stage": "Mega EX",
-      "illustrator": "takuyoa",
-      "retreat": 2,
-      "dexId": [
-        121
-      ],
-      "rarity": "Hyper Rare",
-      "id": "ME3-118",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null,
-      "attacks": [
-        {
-          "name": "Jetting Blow",
-          "damage": 120,
-          "cost": [
-            "Water"
-          ],
-          "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
-        },
-        {
-          "name": "Nebula Beam",
-          "damage": 210,
-          "cost": [
-            "Colorless",
-            "Colorless",
-            "Colorless"
-          ],
-          "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokemon."
-        }
-      ]
-    },
-    "119": {
-      "name": "Mega Clefable ex",
-      "category": "Pokemon",
-      "hp": 320,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Mega EX",
-      "illustrator": "Cona Nitanda",
-      "retreat": 1,
-      "dexId": [
-        36
-      ],
-      "rarity": "Hyper Rare",
-      "id": "ME3-119",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null,
-      "attacks": [
-        {
-          "name": "Shooting Moons",
-          "damage": "120+",
-          "cost": [
-            "Psychic",
-            "Psychic"
-          ],
-          "effect": "You may discard up to 4 Energy cards from your hand. If you do, this attack does 40 more damage for each card discarded in this way."
-        }
-      ],
-      "abilities": [
-        {
-          "name": "Wings of Light",
-          "effect": "Prevent all effects of your opponent's Abilities done to this Pokemon."
-        }
-      ]
-    },
-    "120": {
-      "name": "Mega Zygarde ex",
-      "category": "Pokemon",
-      "hp": 310,
-      "types": [
-        "Fighting"
-      ],
-      "stage": "Mega EX",
-      "illustrator": "kantaro",
-      "retreat": 2,
-      "dexId": [
-        718
-      ],
-      "rarity": "Hyper Rare",
-      "id": "ME3-120",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null,
-      "attacks": [
-        {
-          "name": "Gaia Wave",
-          "damage": 200,
-          "cost": [
-            "Fighting",
-            "Fighting",
-            "Fighting"
-          ],
-          "effect": "During your opponent's next turn, this Pokemon takes 30 less damage from attacks (after applying Weakness and Resistance)."
-        },
-        {
-          "name": "Nullifying Zero",
-          "cost": [
-            "Fighting",
-            "Fighting",
-            "Fighting",
-            "Fighting",
-            "Fighting"
-          ],
-          "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack does 150 damage to that Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
-        }
-      ]
-    },
-    "121": {
-      "name": "Meowth ex",
-      "category": "Pokemon",
-      "hp": 170,
-      "types": [
-        "Colorless"
-      ],
-      "stage": "Basic",
-      "illustrator": "Natsumi Yoshida",
-      "retreat": 1,
-      "dexId": [
-        52
-      ],
-      "rarity": "Hyper Rare",
-      "id": "ME3-121",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null,
-      "attacks": [
-        {
-          "name": "Tuck Tail",
-          "damage": 60,
-          "cost": [
-            "Colorless",
-            "Colorless",
-            "Colorless"
-          ],
-          "effect": "Put this Pokemon and all attached cards into your hand."
-        }
-      ],
-      "abilities": [
-        {
-          "name": "Last-Ditch Catch",
-          "effect": "Once during your turn, when you play this Pokemon from your hand onto your Bench, you may use this Ability. Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck."
-        }
-      ]
-    },
-    "122": {
-      "name": "Rosa's Encouragement",
-      "category": "Trainer",
-      "stage": "Supporter",
-      "illustrator": "Iori Suzuki",
-      "rarity": "Hyper Rare",
-      "id": "ME3-122",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null
-    },
-    "123": {
-      "name": "Jacinthe",
-      "category": "Trainer",
-      "stage": "Supporter",
-      "illustrator": "Souichirou Gunjima",
-      "rarity": "Hyper Rare",
-      "id": "ME3-123",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null
-    },
-    "124": {
-      "name": "Mega Zygarde ex",
-      "category": "Pokemon",
-      "hp": 310,
-      "types": [
-        "Fighting"
-      ],
-      "stage": "Mega EX",
-      "illustrator": "takuyoa",
-      "retreat": 2,
-      "dexId": [
-        718
-      ],
-      "rarity": "Hyper Rare",
-      "id": "ME3-124",
-      "set": {
-        "id": "ME3",
-        "name": "Perfect Order"
-      },
-      "image": null,
-      "attacks": [
-        {
-          "name": "Gaia Wave",
-          "damage": 200,
-          "cost": [
-            "Fighting",
-            "Fighting",
-            "Fighting"
-          ],
-          "effect": "During your opponent's next turn, this Pokemon takes 30 less damage from attacks (after applying Weakness and Resistance)."
-        },
-        {
-          "name": "Nullifying Zero",
-          "cost": [
-            "Fighting",
-            "Fighting",
-            "Fighting",
-            "Fighting",
-            "Fighting"
-          ],
-          "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack does 150 damage to that Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
         }
       ]
     }
