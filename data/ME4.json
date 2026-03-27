@@ -1,0 +1,2978 @@
+{
+  "id": "ME4",
+  "name": {
+    "en": "Ninja Spinner"
+  },
+  "serie": "Mega Evolution",
+  "releaseDate": {
+    "en": "2026-05-22"
+  },
+  "jpSetId": "M4",
+  "cards": {
+    "001": {
+      "name": "Weedle",
+      "id": "ME4-001",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 50,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        13
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Surprise Attack",
+          "damage": 30,
+          "cost": [
+            "Grass"
+          ],
+          "effect": "Flip a coin. If tails, this attack does nothing."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
+    },
+    "002": {
+      "name": "Kakuna",
+      "id": "ME4-002",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 80,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
+      "dexId": [
+        14
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Hang Down",
+          "damage": 20,
+          "cost": [
+            "Grass"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Exoskeleton",
+          "effect": "This Pokemon takes 20 less damage from attacks (after applying Weakness and Resistance)."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
+    },
+    "003": {
+      "name": "Beedrill ex",
+      "id": "ME4-003",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 310,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "retreat": 1,
+      "dexId": [
+        15
+      ],
+      "rarity": "Double Rare",
+      "attacks": [
+        {
+          "name": "Bee Rumble",
+          "damage": "110x",
+          "cost": [
+            "Grass"
+          ],
+          "effect": "This attack does 110 damage for each Beedrill you have in play (including Beedrill ex)."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
+    },
+    "004": {
+      "name": "Carnivine",
+      "id": "ME4-004",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 110,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        455
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Chomp Down",
+          "damage": "80+",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "If your opponent's Active Pokemon has no Retreat Cost, this attack does 80 more damage."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
+    },
+    "005": {
+      "name": "Chespin",
+      "id": "ME4-005",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        650
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Beat",
+          "damage": 10,
+          "cost": [
+            "Grass"
+          ]
+        },
+        {
+          "name": "Spike Sting",
+          "damage": 30,
+          "cost": [
+            "Grass",
+            "Grass"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
+    },
+    "006": {
+      "name": "Quilladin",
+      "id": "ME4-006",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 100,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
+      "dexId": [
+        651
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Leaf Charge",
+          "damage": 20,
+          "cost": [
+            "Grass"
+          ],
+          "effect": "Search your deck for a Basic Grass Energy card and attach it to this Pokemon. Then, shuffle your deck."
+        },
+        {
+          "name": "Vine Whip",
+          "damage": 80,
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
+    },
+    "007": {
+      "name": "Chesnaught",
+      "id": "ME4-007",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 180,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "retreat": 4,
+      "dexId": [
+        652
+      ],
+      "rarity": "Rare",
+      "attacks": [
+        {
+          "name": "Impound",
+          "damage": 160,
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "effect": "During your opponent's next turn, the Defending Pokemon can't retreat."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Needle Armor",
+          "effect": "If this Pokemon is in the Active Spot and is damaged by an attack from your opponent's Pokemon (even if this Pokemon is Knocked Out), place 3 damage counters on the Attacking Pokemon for each Grass Energy attached to this Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
+    },
+    "008": {
+      "name": "Vulpix",
+      "id": "ME4-008",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        37
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Singe",
+          "cost": [
+            "Fire"
+          ],
+          "effect": "Your opponent's Active Pokemon is now Burned."
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
+    },
+    "009": {
+      "name": "Ninetales",
+      "id": "ME4-009",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 120,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "dexId": [
+        38
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Nine-tailed Reflect",
+          "cost": [
+            "Fire"
+          ],
+          "effect": "Move all damage counters from 1 of your opponent's Benched Pokemon to their Active Pokemon."
+        },
+        {
+          "name": "Will-o-Wisp",
+          "damage": 70,
+          "cost": [
+            "Fire",
+            "Fire"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
+    },
+    "010": {
+      "name": "Ho-Oh",
+      "id": "ME4-010",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        250
+      ],
+      "rarity": "Rare",
+      "attacks": [
+        {
+          "name": "Flames of Resurrection",
+          "cost": [
+            "Fire"
+          ],
+          "effect": "Put up to 3 Basic Pokemon from your discard pile onto your Bench."
+        },
+        {
+          "name": "Bright Wing",
+          "damage": 130,
+          "cost": [
+            "Fire",
+            "Fire",
+            "Fire"
+          ],
+          "effect": "Discard an Energy attached to this Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
+    },
+    "011": {
+      "name": "Fennekin",
+      "id": "ME4-011",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        653
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Search your deck for up to 2 Basic Pokemon and put them onto your Bench. Then, shuffle your deck."
+        },
+        {
+          "name": "Steady Firebreathing",
+          "damage": 10,
+          "cost": [
+            "Fire"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
+    },
+    "012": {
+      "name": "Braixen",
+      "id": "ME4-012",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 100,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "dexId": [
+        654
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Fire Blast",
+          "damage": 80,
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "effect": "Discard an Energy attached to this Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
+    },
+    "013": {
+      "name": "Delphox",
+      "id": "ME4-013",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 160,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage2",
+      "retreat": 2,
+      "dexId": [
+        655
+      ],
+      "rarity": "Rare",
+      "attacks": [
+        {
+          "name": "Energy Storm",
+          "damage": "30x",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "effect": "This attack does 30 damage for each Energy attached to all Pokemon in play (both yours and your opponent's)."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Flare Magic",
+          "effect": "Once during your turn, you may discard a Basic Fire Energy card from your hand in order to use this Ability. Draw cards until you have 7 cards in your hand."
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
+    },
+    "014": {
+      "name": "Litleo",
+      "id": "ME4-014",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        667
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Tackle",
+          "damage": 10,
+          "cost": [
+            "Colorless"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
+    },
+    "015": {
+      "name": "Mega Pyroar ex",
+      "id": "ME4-015",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 340,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "dexId": [
+        668
+      ],
+      "rarity": "Double Rare",
+      "attacks": [
+        {
+          "name": "Ferocious Bellow",
+          "damage": 80,
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "effect": "During your opponent's next turn, the Defending Pokemon's attacks do 50 less damage."
+        },
+        {
+          "name": "Big Bang Fire",
+          "damage": "290-",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "effect": "This attack does 10 less damage for each damage counter on this Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
+    },
+    "016": {
+      "name": "Remoraid",
+      "id": "ME4-016",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        223
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Slice Fin",
+          "damage": 20,
+          "cost": [
+            "Water"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
+    },
+    "017": {
+      "name": "Octillery",
+      "id": "ME4-017",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 110,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "dexId": [
+        224
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Corner Stop",
+          "damage": 30,
+          "cost": [
+            "Water"
+          ],
+          "effect": "During your opponent's next turn, when the Defending Pokemon tries to attack, your opponent flips 2 coins. If either is tails, that attack does nothing."
+        },
+        {
+          "name": "Tantrum",
+          "damage": 120,
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "effect": "This Pokemon is now Confused."
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
+    },
+    "018": {
+      "name": "Delibird",
+      "id": "ME4-018",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 90,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        225
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Happy Present",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Both players may attach up to 3 Energy from their hand to their Pokemon in any way they like. (Your opponent attaches first.)"
+        },
+        {
+          "name": "Flap",
+          "damage": 40,
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
+    },
+    "019": {
+      "name": "Keldeo",
+      "id": "ME4-019",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 110,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        647
+      ],
+      "rarity": "Rare",
+      "attacks": [
+        {
+          "name": "Penetrate",
+          "damage": 20,
+          "cost": [
+            "Water"
+          ],
+          "effect": "This attack also does 20 damage to 1 of your opponent's Benched Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+        },
+        {
+          "name": "Reflect Energy",
+          "damage": 70,
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "effect": "Move an Energy from this Pokemon to 1 of your Benched Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
+    },
+    "020": {
+      "name": "Froakie",
+      "id": "ME4-020",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        656
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Collect",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Draw a card."
+        },
+        {
+          "name": "Water Gun",
+          "damage": 10,
+          "cost": [
+            "Water"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
+    },
+    "021": {
+      "name": "Frogadier",
+      "id": "ME4-021",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 100,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "dexId": [
+        657
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Calling Jutsu",
+          "cost": [
+            "Water"
+          ],
+          "effect": "Search your deck for up to 3 Pokemon, reveal them, and put them into your hand. Then, shuffle your deck."
+        },
+        {
+          "name": "Aqua Edge",
+          "damage": 50,
+          "cost": [
+            "Water",
+            "Water"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
+    },
+    "022": {
+      "name": "Mega Greninja ex",
+      "id": "ME4-022",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 350,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage2",
+      "retreat": 1,
+      "dexId": [
+        658
+      ],
+      "rarity": "Double Rare",
+      "attacks": [
+        {
+          "name": "Ninja Spinner",
+          "damage": "120+",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "effect": "You may put a Water Energy attached to this Pokemon into your hand and have this attack do 80 more damage."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Mortal Shuriken",
+          "effect": "Once during your turn, if this Pokemon is in the Active Spot, you may discard a Basic Water Energy card from your hand in order to use this Ability. Place 6 damage counters on 1 of your opponent's Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
+    },
+    "023": {
+      "name": "Bergmite",
+      "id": "ME4-023",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 80,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        712
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Chilly",
+          "damage": 10,
+          "cost": [
+            "Water"
+          ]
+        },
+        {
+          "name": "Frost Breath",
+          "damage": 50,
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
+    },
+    "024": {
+      "name": "Avalugg",
+      "id": "ME4-024",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 160,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "retreat": 4,
+      "dexId": [
+        713
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Iceberg Destruction",
+          "damage": "60x",
+          "cost": [
+            "Water"
+          ],
+          "effect": "Discard the top 6 cards of your deck. This attack does 60 damage for each Basic Water Energy discarded in this way."
+        },
+        {
+          "name": "Frost Stomp",
+          "damage": 160,
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless",
+            "Colorless"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
+    },
+    "025": {
+      "name": "Wimpod",
+      "id": "ME4-025",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        767
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Gnaw",
+          "damage": 10,
+          "cost": [
+            "Water"
+          ]
+        },
+        {
+          "name": "Corkscrew Punch",
+          "damage": 20,
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
+    },
+    "026": {
+      "name": "Golisopod",
+      "id": "ME4-026",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 140,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "dexId": [
+        768
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Critical Cut",
+          "damage": 30,
+          "cost": [
+            "Water"
+          ],
+          "effect": "If this attack's damage Knocks Out your opponent's Active Pokemon, during your opponent's next turn, this Pokemon can't be affected by damage or effects of attacks."
+        },
+        {
+          "name": "Boundless Power",
+          "damage": 150,
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "During your next turn, this Pokemon can't attack."
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
+    },
+    "027": {
+      "name": "Mareep",
+      "id": "ME4-027",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        179
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Thunder Wave",
+          "damage": 30,
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "effect": "Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "028": {
+      "name": "Flaaffy",
+      "id": "ME4-028",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 90,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "dexId": [
+        180
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Disconnect",
+          "damage": 40,
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "effect": "During your opponent's next turn, your opponent can't play any Item cards from their hand."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "029": {
+      "name": "Ampharos",
+      "id": "ME4-029",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 160,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Stage2",
+      "retreat": 2,
+      "dexId": [
+        181
+      ],
+      "rarity": "Rare",
+      "attacks": [
+        {
+          "name": "Flash Bolt",
+          "damage": 140,
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "effect": "During your next turn, this Pokemon can't use Flash Bolt."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Synchronized Pulse",
+          "effect": "If you and your opponent have the same number of cards in your hands, this Pokemon's attacks do 80 more damage to your opponent's Active Pokemon (before applying Weakness and Resistance)."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "030": {
+      "name": "Emolga",
+      "id": "ME4-030",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        587
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Minor Errand Running",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Search your deck for up to 2 Basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck."
+        },
+        {
+          "name": "Sky Return",
+          "damage": 30,
+          "cost": [
+            "Lightning"
+          ],
+          "effect": "Return this Pokemon and all cards attached to your hand."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "031": {
+      "name": "Deoxys",
+      "id": "ME4-031",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 110,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        386
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Genome Charge",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Search your deck for up to 2 Basic Psychic Energy cards and attach them to this Pokemon. Then, shuffle your deck."
+        },
+        {
+          "name": "Psychic",
+          "damage": "80+",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    },
+    "032": {
+      "name": "Deoxys",
+      "id": "ME4-032",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 120,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        386
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Psy Spear",
+          "damage": 120,
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Psychic"
+          ],
+          "effect": "If this Pokemon has at least 2 extra Energy attached to it, this attack also does 120 damage to 1 of your opponent's Benched Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    },
+    "033": {
+      "name": "Deoxys",
+      "id": "ME4-033",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 3,
+      "dexId": [
+        386
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Psy Protect",
+          "damage": 80,
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "effect": "During your opponent's next turn, prevent all damage done to this Pokemon by your opponent's Pokemon that have an Ability."
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    },
+    "034": {
+      "name": "Deoxys",
+      "id": "ME4-034",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 100,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 0,
+      "dexId": [
+        386
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Psy Speed",
+          "damage": 30,
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "You may draw cards until you have 5 cards in your hand."
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    },
+    "035": {
+      "name": "Mega Floette ex",
+      "id": "ME4-035",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 250,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        670
+      ],
+      "rarity": "Double Rare",
+      "attacks": [
+        {
+          "name": "Gentle Light",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "Heal 30 damage from each Pokemon (both yours and your opponent's)."
+        },
+        {
+          "name": "Eternity Bloom",
+          "damage": 200,
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Psychic"
+          ],
+          "effect": "Search your deck for up to 4 Basic Psychic Energy cards and attach them to your Benched Pokemon in any way you like. Then, shuffle your deck."
+        }
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
+    },
+    "036": {
+      "name": "Espurr",
+      "id": "ME4-036",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 60,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        677
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Buddy Attack",
+          "damage": "10+",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "If you played Emma from your hand this turn, this attack does 60 more damage."
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    },
+    "037": {
+      "name": "Meowstic",
+      "id": "ME4-037",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 100,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "dexId": [
+        678
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Trick Step",
+          "damage": 80,
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "effect": "You may move an Energy attached to your opponent's Active Pokemon to 1 of their Benched Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    },
+    "038": {
+      "name": "Phantump",
+      "id": "ME4-038",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        708
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Mumble",
+          "damage": 10,
+          "cost": [
+            "Psychic"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Envious Evolution",
+          "effect": "Once during your turn, you may choose a card from your hand that evolves from this Pokemon and put it onto this Pokemon to evolve it. If you do, place 2 damage counters on this Pokemon. (You can't use this Ability during your first turn.)"
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    },
+    "039": {
+      "name": "Trevenant",
+      "id": "ME4-039",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
+      "dexId": [
+        709
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Cursed Roots",
+          "damage": 30,
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "During your opponent's next turn, Energy can't be attached from your opponent's hand to the Defending Pokemon."
+        },
+        {
+          "name": "Overpain",
+          "damage": "60+",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "effect": "This attack does 10 more damage for each damage counter on all your opponent's Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    },
+    "040": {
+      "name": "Pumpkaboo",
+      "id": "ME4-040",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 60,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        710
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Stampede",
+          "damage": 20,
+          "cost": [
+            "Psychic"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    },
+    "041": {
+      "name": "Gourgeist ex",
+      "id": "ME4-041",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 270,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "dexId": [
+        711
+      ],
+      "rarity": "Double Rare",
+      "attacks": [
+        {
+          "name": "Horror Rondo",
+          "damage": "30+",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "This attack does 50 more damage for each of your Benched Pokemon that have any damage counters on them."
+        },
+        {
+          "name": "Ghost Touch",
+          "damage": 140,
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "effect": "Discard a random card from your opponent's hand."
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    },
+    "042": {
+      "name": "Xerneas",
+      "id": "ME4-042",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        716
+      ],
+      "rarity": "Rare",
+      "attacks": [
+        {
+          "name": "Geostorm",
+          "damage": "30x",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Psychic"
+          ],
+          "effect": "This attack does 30 damage times the number of Psychic Energy attached to all of your Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
+    },
+    "043": {
+      "name": "Sudowoodo",
+      "id": "ME4-043",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 110,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        185
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Learning Journey",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Search your deck for up to 2 Book of Transformation, reveal them, and put them into your hand. Then, shuffle your deck."
+        },
+        {
+          "name": "Rock Hurl",
+          "damage": 30,
+          "cost": [
+            "Fighting"
+          ],
+          "effect": "This attack damage isn't affected by Resistance."
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
+    },
+    "044": {
+      "name": "Phanpy",
+      "id": "ME4-044",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        231
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Mud Slap",
+          "damage": 10,
+          "cost": [
+            "Fighting"
+          ]
+        },
+        {
+          "name": "Rollout",
+          "damage": 40,
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
+    },
+    "045": {
+      "name": "Donphan",
+      "id": "ME4-045",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 150,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
+      "dexId": [
+        232
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "No Reprieve",
+          "damage": 20,
+          "cost": [
+            "Fighting"
+          ],
+          "effect": "During your next turn, this Pokemon's attacks do 80 more damage to your opponent's Active Pokemon."
+        },
+        {
+          "name": "Smash Head",
+          "damage": 180,
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Discard 2 Energy attached to this Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
+    },
+    "046": {
+      "name": "Baltoy",
+      "id": "ME4-046",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        343
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Continuous Spin",
+          "damage": "30x",
+          "cost": [
+            "Fighting"
+          ],
+          "effect": "Flip a coin until you get tails. This attack does 30 damage times the number of heads."
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
+    },
+    "047": {
+      "name": "Claydol",
+      "id": "ME4-047",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 120,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "dexId": [
+        344
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Devolution Ray",
+          "damage": 50,
+          "cost": [
+            "Fighting"
+          ],
+          "effect": "If your opponent's Active Pokemon is an Evolved Pokemon, devolve it by putting the highest Stage Evolution card on it into your opponent's hand."
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
+    },
+    "048": {
+      "name": "Zubat",
+      "id": "ME4-048",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 40,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 0,
+      "dexId": [
+        41
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Supersonic",
+          "cost": [
+            "Darkness"
+          ],
+          "effect": "Your opponent's Active Pokemon is now Confused."
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    },
+    "049": {
+      "name": "Golbat",
+      "id": "ME4-049",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 80,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "dexId": [
+        42
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Covert Flight",
+          "damage": 30,
+          "cost": [
+            "Darkness"
+          ],
+          "effect": "During your opponent's next turn, this Pokemon does not take damage from attacks by Basic Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    },
+    "050": {
+      "name": "Crobat",
+      "id": "ME4-050",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage2",
+      "retreat": 1,
+      "dexId": [
+        169
+      ],
+      "rarity": "Rare",
+      "attacks": [
+        {
+          "name": "Poison Sound Wave",
+          "damage": 80,
+          "cost": [
+            "Darkness"
+          ],
+          "effect": "Your opponent's Active Pokemon is now Confused and Poisoned."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Nighttime Maneuvers",
+          "effect": "Once during your turn, if this Pokemon is in the Active Spot, you may use this Ability. Search your deck for a card. Shuffle your deck, then put that card on top of it."
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
+    },
+    "051": {
+      "name": "Qwilfish",
+      "id": "ME4-051",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 90,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        211
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Venoshock",
+          "damage": "30+",
+          "cost": [
+            "Darkness"
+          ],
+          "effect": "If your opponent's Active Pokemon is Poisoned, this attack does 50 more damage."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Poison Point",
+          "effect": "If this Pokemon is in the Active Spot and takes damage from an attack from your opponent's Pokemon, the Attacking Pokemon is now Poisoned."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "052": {
+      "name": "Stunky",
+      "id": "ME4-052",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        434
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Scratch",
+          "damage": 20,
+          "cost": [
+            "Darkness"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "053": {
+      "name": "Skuntank",
+      "id": "ME4-053",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 110,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "dexId": [
+        435
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Rear Kick",
+          "damage": 40,
+          "cost": [
+            "Darkness"
+          ]
+        },
+        {
+          "name": "Smash Turn",
+          "damage": 100,
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "effect": "Switch this Pokemon with 1 of your Benched Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "054": {
+      "name": "Trubbish",
+      "id": "ME4-054",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        568
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Acid Spray",
+          "damage": 10,
+          "cost": [
+            "Darkness"
+          ],
+          "effect": "Flip a coin. If heads, discard an Energy attached to your opponent's Active Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "055": {
+      "name": "Garbodor",
+      "id": "ME4-055",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 140,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
+      "dexId": [
+        569
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Sludge Bomb",
+          "damage": 100,
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Garbage Downer",
+          "effect": "If your opponent's Active Pokemon has any Pokemon Tools attached to it, its attacks do 20 less damage."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "056": {
+      "name": "Skrelp",
+      "id": "ME4-056",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        690
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Hook",
+          "damage": 10,
+          "cost": [
+            "Colorless"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "057": {
+      "name": "Beldum",
+      "id": "ME4-057",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        374
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Headbutt",
+          "damage": 10,
+          "cost": [
+            "Metal"
+          ]
+        },
+        {
+          "name": "Beam",
+          "damage": 20,
+          "cost": [
+            "Metal",
+            "Colorless"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
+    },
+    "058": {
+      "name": "Metang",
+      "id": "ME4-058",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 100,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "dexId": [
+        375
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Metal Claw",
+          "damage": 30,
+          "cost": [
+            "Metal"
+          ]
+        },
+        {
+          "name": "Guard Press",
+          "damage": 70,
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "effect": "During your opponent's next turn, this Pokemon takes 30 less damage from attacks."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
+    },
+    "059": {
+      "name": "Metagross",
+      "id": "ME4-059",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 180,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage2",
+      "retreat": 3,
+      "dexId": [
+        376
+      ],
+      "rarity": "Rare",
+      "attacks": [
+        {
+          "name": "Bounce Back",
+          "damage": 60,
+          "cost": [
+            "Metal"
+          ],
+          "effect": "Your opponent switches their Active Pokemon with 1 of their Benched Pokemon."
+        },
+        {
+          "name": "Metallic Hammer",
+          "damage": "150+",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "effect": "You may discard 3 Metal Energy from this Pokemon and have this attack do 150 more damage."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
+    },
+    "060": {
+      "name": "Ferroseed",
+      "id": "ME4-060",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        597
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Rolling Tackle",
+          "damage": 40,
+          "cost": [
+            "Metal",
+            "Metal"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
+    },
+    "061": {
+      "name": "Ferrothorn",
+      "id": "ME4-061",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
+      "dexId": [
+        598
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Special Whip",
+          "damage": "70+",
+          "cost": [
+            "Metal",
+            "Metal"
+          ],
+          "effect": "If this Pokemon has any Special Energy attached, this attack does 70 more damage."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Prank Drop",
+          "effect": "During your opponent's turn, if this card is discarded from your deck by an effect of your opponent's Attacks, Abilities, Items, or Supporter cards, your opponent discards the top 8 cards of their deck."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
+    },
+    "062": {
+      "name": "Cobalion ex",
+      "id": "ME4-062",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 210,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "retreat": 3,
+      "dexId": [
+        638
+      ],
+      "rarity": "Double Rare",
+      "attacks": [
+        {
+          "name": "Power Tackle",
+          "damage": 200,
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "effect": "During your next turn, this Pokemon can't attack."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Metal Road",
+          "effect": "Once during your turn, when this Pokemon moves from your Bench to the Active Spot, you may move any amount of Metal Energy from your Pokemon in play to this Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
+    },
+    "063": {
+      "name": "Mega Dragalge ex",
+      "id": "ME4-063",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 330,
+      "types": [
+        "Dragon"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "dexId": [
+        691
+      ],
+      "rarity": "Double Rare",
+      "attacks": [
+        {
+          "name": "Corrosive Liquid",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Discard all Pokemon Tools and Special Energy from all of your opponent's Pokemon."
+        },
+        {
+          "name": "Pernicious Poison",
+          "cost": [
+            "Water",
+            "Darkness"
+          ],
+          "effect": "Your opponent's Active Pokemon is now Poisoned. During Pokemon Checkup, place 16 damage counters on that Pokemon instead of 1."
+        }
+      ]
+    },
+    "064": {
+      "name": "Goomy",
+      "id": "ME4-064",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 60,
+      "types": [
+        "Dragon"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        704
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Absorb",
+          "damage": 30,
+          "cost": [
+            "Water",
+            "Psychic"
+          ],
+          "effect": "Heal 30 damage from this Pokemon."
+        }
+      ]
+    },
+    "065": {
+      "name": "Sliggoo",
+      "id": "ME4-065",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 90,
+      "types": [
+        "Dragon"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
+      "dexId": [
+        705
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Gentle Slap",
+          "damage": 70,
+          "cost": [
+            "Water",
+            "Psychic"
+          ]
+        }
+      ]
+    },
+    "066": {
+      "name": "Goodra",
+      "id": "ME4-066",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 160,
+      "types": [
+        "Dragon"
+      ],
+      "stage": "Stage2",
+      "retreat": 3,
+      "dexId": [
+        706
+      ],
+      "rarity": "Rare",
+      "attacks": [
+        {
+          "name": "Dragon Pulse",
+          "damage": 160,
+          "cost": [
+            "Water",
+            "Psychic"
+          ],
+          "effect": "Discard the top card of your deck."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Slimy Slip",
+          "effect": "When your opponent's Active Pokemon retreats, your opponent flips a coin. If tails, that Pokemon does not retreat and your opponent does not discard any Energy for retreating. This Ability's effect can't stack."
+        }
+      ]
+    },
+    "067": {
+      "name": "Tauros",
+      "id": "ME4-067",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "dexId": [
+        128
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Crowd Targeting",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Choose 1 of your opponent's Pokemon. Flip a coin for each of your Pokemon with 'Tauros' in its name. This attack does 50 damage times the number of heads to that Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "068": {
+      "name": "Patrat",
+      "id": "ME4-068",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        504
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Bite",
+          "damage": 10,
+          "cost": [
+            "Colorless"
+          ]
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Watchful Eyes",
+          "effect": "If this Pokemon is in play, you and your opponent can't move damage counters to another Pokemon."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "069": {
+      "name": "Watchog",
+      "id": "ME4-069",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 100,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "dexId": [
+        505
+      ],
+      "rarity": "Uncommon",
+      "attacks": [
+        {
+          "name": "Unannounced Check",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Flip 3 coins. If any are heads, look at your opponent's hand and choose as many cards as the number of heads. Your opponent shuffles those cards into their deck."
+        },
+        {
+          "name": "Low Kick",
+          "damage": 50,
+          "cost": [
+            "Colorless"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "070": {
+      "name": "Minccino",
+      "id": "ME4-070",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "dexId": [
+        572
+      ],
+      "rarity": "Common",
+      "attacks": [
+        {
+          "name": "Take Down",
+          "damage": 30,
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "This Pokemon also does 10 damage to itself."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "071": {
+      "name": "Cinccino ex",
+      "id": "ME4-071",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Pokemon",
+      "hp": 240,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "dexId": [
+        573
+      ],
+      "rarity": "Double Rare",
+      "attacks": [
+        {
+          "name": "Energized Slap",
+          "damage": "40x",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "This attack does 40 damage for each Energy attached to this Pokemon."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Smooth Coat",
+          "effect": "If any damage is done to this Pokemon by attacks, flip a coin. If heads, prevent that damage."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
+    },
+    "072": {
+      "name": "Special Red Card",
+      "id": "ME4-072",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "effect": "You can only play this card if your opponent has 3 or less Prize cards remaining. Your opponent shuffles their hand and puts it to the bottom of their deck. Then, your opponent draws 3 cards.",
+      "subcategory": "Item"
+    },
+    "073": {
+      "name": "Big Catch Net",
+      "id": "ME4-073",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "effect": "Shuffle up to 3 Water Pokemon and up to 3 Basic Water Energy cards from your discard pile into your deck.",
+      "subcategory": "Item"
+    },
+    "074": {
+      "name": "Book of Transformation",
+      "id": "ME4-074",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "effect": "You must play 2 Book of Transformation cards at once. (This effect works one time for 2 cards.) Choose a Basic Pokemon in your discard pile and switch it with 1 of your Basic Pokemon in play. Any attached cards, damage counters, Special Conditions, turns in play, and any other effects remain on the new Pokemon.",
+      "subcategory": "Item"
+    },
+    "075": {
+      "name": "AZ's Tranquility",
+      "id": "ME4-075",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "effect": "Switch your Active Pokemon with 1 of your Benched Pokemon. If you moved a Pokemon ex to your Bench in this way, heal 80 damage from that Pokemon.",
+      "subcategory": "Supporter"
+    },
+    "076": {
+      "name": "Philippe",
+      "id": "ME4-076",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "effect": "Attach up to 2 Basic Metal Energy from your discard pile to 1 of your Metal Pokemon.",
+      "subcategory": "Supporter"
+    },
+    "077": {
+      "name": "Roxie's Performance",
+      "id": "ME4-077",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "effect": "During your opponent's next turn, their Poisoned Pokemon can't retreat. (This includes newly Poisoned Pokemon.)",
+      "subcategory": "Supporter"
+    },
+    "078": {
+      "name": "Emma",
+      "id": "ME4-078",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "effect": "Your opponent reveals their hand. Draw cards equal to the number of Pokemon in their hand.",
+      "subcategory": "Supporter"
+    },
+    "079": {
+      "name": "Ange Floette",
+      "id": "ME4-079",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "effect": "This card can only be played by discarding a Prism Tower in play. You can play this card even if Prism Tower was played this turn. Each Mega Floette ex in play (both yours and your opponent's) gets +150 HP.",
+      "subcategory": "Stadium"
+    },
+    "080": {
+      "name": "Prism Tower",
+      "id": "ME4-080",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "effect": "Once during each player's turn, they may discard 2 cards from their hand in order to draw a card.",
+      "subcategory": "Stadium"
+    },
+    "081": {
+      "name": "Nitro Fire Energy",
+      "id": "ME4-081",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Energy",
+      "rarity": "Uncommon",
+      "effect": "As long as this card is attached to a Pokemon, it provides 1 Fire Energy. If an attack used by the Fire Pokemon this card is attached to would discard this card, put it into your hand after applying damage and effects of that attack."
+    },
+    "082": {
+      "name": "Bubble Water Energy",
+      "id": "ME4-082",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Energy",
+      "rarity": "Uncommon",
+      "effect": "As long as this card is attached to a Pokemon, it provides 1 Water Energy. The Water Pokemon this card is attached to recovers from all Special Conditions and can't be affected by any Special Conditions."
+    },
+    "083": {
+      "name": "Magnet Metal Energy",
+      "id": "ME4-083",
+      "set": {
+        "id": "ME4",
+        "name": "Ninja Spinner"
+      },
+      "image": null,
+      "category": "Energy",
+      "rarity": "Uncommon",
+      "effect": "As long as this card is attached to a Pokemon, it provides 1 Metal Energy. The Metal Pokemon this card is attached to has no Retreat Cost."
+    }
+  }
+}

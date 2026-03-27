@@ -29,6 +29,7 @@
     .card-panel .lang-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-bottom: 0.8rem; }
     .lang-badge.ja { background: #e74c3c; color: white; }
     .lang-badge.en { background: #3498db; color: white; }
+    .lang-badge.trans { background: #9b59b6; color: white; }
     .card-panel img { width: 100%; border-radius: 8px; margin-bottom: 1rem; }
     .card-meta { font-size: 0.8rem; color: #aaa; line-height: 1.6; }
     .card-meta span { color: #e0e0e0; }
@@ -160,11 +161,15 @@
       ],
       en: [
         { id: "ME3", name: "Perfect Order",   file: "data/ME3.json" },
+        { id: "ME4", name: "Ninja Spinner",   file: "data/ME4.json" },
       ]
     };
 
     // O(1) lookup for JP sideload config by set ID
     const SIDELOAD_JP_CONFIG = Object.fromEntries(SIDELOAD_CONFIG.jp.map(c => [c.id, c]));
+
+    // Map JP set IDs to their EN translation sideload set IDs
+    const JP_TO_EN_SIDELOAD = { "M4": "ME4" };
 
     let SIDELOAD_SETS = {};
     let SIDELOAD_EN_SETS = {};
@@ -299,12 +304,23 @@
       if (card.id.startsWith('M2-'))  return `https://www.serebii.net/card/infernox/${n}.jpg`;
       if (card.id.startsWith('M3-')) return `https://www.serebii.net/card/nihilzero/${n}.jpg`;
       if (card.id.startsWith('M4-')) return `https://www.serebii.net/card/ninjaspinner/${n}.jpg`;
+      if (card.id.startsWith('ME4-')) return `https://www.serebii.net/card/ninjaspinner/${n}.jpg`;
       return null;
     }
 
-    function renderCard(card, lang) {
+    function renderCard(card, lang, badge) {
       const imgUrl = card.image ? card.image + '/high.webp' : sideloadImageUrl(card);
-      const attacks = (card.attacks || []).map(a => `${safeHtml(a.name)} ${safeHtml(a.damage ?? '')}`).join(', ');
+      const attacks = (card.attacks || []).map(a => {
+        let line = `${safeHtml(a.name)}`;
+        if (a.damage != null) line += ` ${safeHtml(String(a.damage))}`;
+        if (a.effect) line += `<br><em style="color:#999;font-size:0.75rem">${safeHtml(a.effect)}</em>`;
+        return line;
+      }).join('<br>');
+      const abilities = (card.abilities || []).map(a => {
+        let line = `<span style="color:#e67e22">⚡ ${safeHtml(a.name)}</span>`;
+        if (a.effect) line += `<br><em style="color:#999;font-size:0.75rem">${safeHtml(a.effect)}</em>`;
+        return line;
+      }).join('<br>');
       const cardName = safeHtml(card.name);
       const setName = safeHtml(card.set?.name || '?');
       const cardId = safeHtml(card.id);
@@ -312,9 +328,11 @@
       const types = card.types ? safeHtml(card.types.join(', ')) : null;
       const hp = card.hp ? safeHtml(String(card.hp)) : null;
       const stage = card.stage ? safeHtml(card.stage) : null;
+      const badgeLabel = badge || (lang === 'ja' ? '日本語 Japanese' : '🇺🇸 English');
+      const badgeClass = badge ? 'trans' : lang;
       return `
         <div class="card-panel">
-          <span class="lang-badge ${lang}">${lang === 'ja' ? '日本語 Japanese' : '🇺🇸 English'}</span>
+          <span class="lang-badge ${badgeClass}">${badgeLabel}</span>
           <h2>${cardName}</h2>
           ${imgUrl ? `<img src="${imgUrl}" alt="${cardName}" loading="lazy" onerror="this.style.display='none'">` : '<p style="color:#666;padding:2rem 0;text-align:center">No image available</p>'}
           <div class="card-meta">
@@ -323,8 +341,10 @@
             ${stage ? `Stage: <span>${stage}</span><br>` : ''}
             ${illustrator ? `Illustrator: <span>${illustrator}</span><br>` : ''}
             ${types ? `Type: <span>${types}</span><br>` : ''}
-            ${attacks ? `Attacks: <span>${attacks}</span><br>` : ''}
-            ${card.category === 'Trainer' && card.effect ? `Effect: <span>${safeHtml(card.effect)}</span><br>` : ''}
+            ${abilities ? `<br>${abilities}<br>` : ''}
+            ${attacks ? `<br>Attacks:<br>${attacks}<br>` : ''}
+            ${card.category === 'Trainer' && card.effect ? `<br>Effect: <span>${safeHtml(card.effect)}</span><br>` : ''}
+            ${card.category === 'Energy' && card.effect ? `<br>Effect: <span>${safeHtml(card.effect)}</span><br>` : ''}
             ${card.description ? `<br><em style="color:#777">${safeHtml(card.description)}</em>` : ''}
           </div>
         </div>`;
@@ -502,6 +522,26 @@
 
         // 3. Fetch full details for candidates and score them
         if (candidates.length === 0 && sideloadEnCards.length === 0) {
+          // Check if we have a translated sideload for this JP set
+          const jpSetId = jpCard.set?.id?.replace(/-\d+$/, '') || setUpper;
+          const enTransSetId = JP_TO_EN_SIDELOAD[jpSetId];
+          const enTransSet = enTransSetId ? SIDELOAD_EN_SETS[enTransSetId] : null;
+          if (enTransSet) {
+            // Find the translated card by matching card number
+            const jpNum = jpCard.id?.split('-')[1] || cardNum;
+            const transCard = enTransSet.cards[jpNum] || enTransSet.cards[rawNum];
+            if (transCard) {
+              setStatus('', false);
+              document.getElementById('results').innerHTML = `
+                <div class="cards-container">
+                  ${renderCard(jpCard, 'ja')}
+                  <div class="arrow">→</div>
+                  ${renderCard(transCard, 'en', '🔄 Translation')}
+                </div>
+                <div class="match-info">This card has no official English print yet. Showing fan translation from <span style="color:#ffd700">${safeHtml(enTransSet.name || enTransSetId)}</span>.</div>`;
+              return;
+            }
+          }
           setStatus('', false);
           document.getElementById('results').innerHTML = `
             <div class="cards-container">${renderCard(jpCard, 'ja')}</div>

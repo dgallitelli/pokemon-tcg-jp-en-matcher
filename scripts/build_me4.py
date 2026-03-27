@@ -1,0 +1,370 @@
+#!/usr/bin/env python3
+"""
+Build ME4.json — English translation file for M4 (Ninja Spinner).
+
+Card translations sourced from PokeBeach (Jake C. translations).
+This script outputs a structured JSON file matching the ME3.json schema,
+with added abilities and attack effects.
+"""
+import json, pathlib
+
+OUT = pathlib.Path(__file__).resolve().parent.parent / "data" / "ME4.json"
+
+SET_META = {
+    "id": "ME4",
+    "name": {"en": "Ninja Spinner"},
+    "serie": "Mega Evolution",
+    "releaseDate": {"en": "2026-05-22"},
+    "jpSetId": "M4",
+}
+
+def card(num, name, **kw):
+    """Helper to build a card dict with defaults."""
+    c = {"name": name, "id": f"ME4-{num:03d}", "set": {"id": "ME4", "name": "Ninja Spinner"}, "image": None}
+    c.update(kw)
+    return (f"{num:03d}", c)
+
+def pokemon(num, name, hp, types, stage, retreat, dexId, rarity, attacks, abilities=None, weakness=None, resistance=None):
+    kw = {"category": "Pokemon", "hp": hp, "types": types, "stage": stage, "retreat": retreat, "dexId": dexId, "rarity": rarity, "attacks": attacks}
+    if abilities:
+        kw["abilities"] = abilities
+    if weakness:
+        kw["weakness"] = weakness
+    if resistance:
+        kw["resistance"] = resistance
+    return card(num, name, **kw)
+
+def trainer(num, name, rarity, effect, subcategory=None):
+    kw = {"category": "Trainer", "rarity": rarity, "effect": effect}
+    if subcategory:
+        kw["subcategory"] = subcategory
+    return card(num, name, **kw)
+
+def energy(num, name, rarity, effect):
+    return card(num, name, category="Energy", rarity=rarity, effect=effect)
+
+# --- All 83 main set cards ---
+cards = dict([
+    pokemon(1, "Weedle", 50, ["Grass"], "Basic", 1, [13], "Common",
+        attacks=[{"name": "Surprise Attack", "damage": 30, "cost": ["Grass"], "effect": "Flip a coin. If tails, this attack does nothing."}],
+        weakness={"type": "Fire", "value": "x2"}),
+
+    pokemon(2, "Kakuna", 80, ["Grass"], "Stage1", 3, [14], "Common",
+        attacks=[{"name": "Hang Down", "damage": 20, "cost": ["Grass"]}],
+        abilities=[{"name": "Exoskeleton", "effect": "This Pokemon takes 20 less damage from attacks (after applying Weakness and Resistance)."}],
+        weakness={"type": "Fire", "value": "x2"}),
+
+    pokemon(3, "Beedrill ex", 310, ["Grass"], "Stage2", 1, [15], "Double Rare",
+        attacks=[{"name": "Bee Rumble", "damage": "110x", "cost": ["Grass"], "effect": "This attack does 110 damage for each Beedrill you have in play (including Beedrill ex)."}],
+        weakness={"type": "Fire", "value": "x2"}),
+
+    pokemon(4, "Carnivine", 110, ["Grass"], "Basic", 2, [455], "Common",
+        attacks=[{"name": "Chomp Down", "damage": "80+", "cost": ["Colorless","Colorless","Colorless"], "effect": "If your opponent's Active Pokemon has no Retreat Cost, this attack does 80 more damage."}],
+        weakness={"type": "Fire", "value": "x2"}),
+    pokemon(5, "Chespin", 70, ["Grass"], "Basic", 2, [650], "Common",
+        attacks=[{"name": "Beat", "damage": 10, "cost": ["Grass"]}, {"name": "Spike Sting", "damage": 30, "cost": ["Grass","Grass"]}],
+        weakness={"type": "Fire", "value": "x2"}),
+
+    pokemon(6, "Quilladin", 100, ["Grass"], "Stage1", 3, [651], "Common",
+        attacks=[{"name": "Leaf Charge", "damage": 20, "cost": ["Grass"], "effect": "Search your deck for a Basic Grass Energy card and attach it to this Pokemon. Then, shuffle your deck."}, {"name": "Vine Whip", "damage": 80, "cost": ["Grass","Grass","Colorless"]}],
+        weakness={"type": "Fire", "value": "x2"}),
+
+    pokemon(7, "Chesnaught", 180, ["Grass"], "Stage2", 4, [652], "Rare",
+        attacks=[{"name": "Impound", "damage": 160, "cost": ["Grass","Grass","Colorless"], "effect": "During your opponent's next turn, the Defending Pokemon can't retreat."}],
+        abilities=[{"name": "Needle Armor", "effect": "If this Pokemon is in the Active Spot and is damaged by an attack from your opponent's Pokemon (even if this Pokemon is Knocked Out), place 3 damage counters on the Attacking Pokemon for each Grass Energy attached to this Pokemon."}],
+        weakness={"type": "Fire", "value": "x2"}),
+    pokemon(8, "Vulpix", 70, ["Fire"], "Basic", 1, [37], "Common",
+        attacks=[{"name": "Singe", "cost": ["Fire"], "effect": "Your opponent's Active Pokemon is now Burned."}],
+        weakness={"type": "Water", "value": "x2"}),
+
+    pokemon(9, "Ninetales", 120, ["Fire"], "Stage1", 1, [38], "Uncommon",
+        attacks=[{"name": "Nine-tailed Reflect", "cost": ["Fire"], "effect": "Move all damage counters from 1 of your opponent's Benched Pokemon to their Active Pokemon."}, {"name": "Will-o-Wisp", "damage": 70, "cost": ["Fire","Fire"]}],
+        weakness={"type": "Water", "value": "x2"}),
+
+    pokemon(10, "Ho-Oh", 130, ["Fire"], "Basic", 2, [250], "Rare",
+        attacks=[{"name": "Flames of Resurrection", "cost": ["Fire"], "effect": "Put up to 3 Basic Pokemon from your discard pile onto your Bench."}, {"name": "Bright Wing", "damage": 130, "cost": ["Fire","Fire","Fire"], "effect": "Discard an Energy attached to this Pokemon."}],
+        weakness={"type": "Water", "value": "x2"}),
+
+    pokemon(11, "Fennekin", 70, ["Fire"], "Basic", 1, [653], "Common",
+        attacks=[{"name": "Call for Family", "cost": ["Colorless"], "effect": "Search your deck for up to 2 Basic Pokemon and put them onto your Bench. Then, shuffle your deck."}, {"name": "Steady Firebreathing", "damage": 10, "cost": ["Fire"]}],
+        weakness={"type": "Water", "value": "x2"}),
+    pokemon(12, "Braixen", 100, ["Fire"], "Stage1", 1, [654], "Common",
+        attacks=[{"name": "Fire Blast", "damage": 80, "cost": ["Fire","Fire"], "effect": "Discard an Energy attached to this Pokemon."}],
+        weakness={"type": "Water", "value": "x2"}),
+
+    pokemon(13, "Delphox", 160, ["Fire"], "Stage2", 2, [655], "Rare",
+        attacks=[{"name": "Energy Storm", "damage": "30x", "cost": ["Fire","Fire"], "effect": "This attack does 30 damage for each Energy attached to all Pokemon in play (both yours and your opponent's)."}],
+        abilities=[{"name": "Flare Magic", "effect": "Once during your turn, you may discard a Basic Fire Energy card from your hand in order to use this Ability. Draw cards until you have 7 cards in your hand."}],
+        weakness={"type": "Water", "value": "x2"}),
+
+    pokemon(14, "Litleo", 70, ["Fire"], "Basic", 1, [667], "Common",
+        attacks=[{"name": "Tackle", "damage": 10, "cost": ["Colorless"]}],
+        weakness={"type": "Water", "value": "x2"}),
+    pokemon(15, "Mega Pyroar ex", 340, ["Fire"], "Stage1", 2, [668], "Double Rare",
+        attacks=[{"name": "Ferocious Bellow", "damage": 80, "cost": ["Fire","Colorless"], "effect": "During your opponent's next turn, the Defending Pokemon's attacks do 50 less damage."}, {"name": "Big Bang Fire", "damage": "290-", "cost": ["Fire","Fire","Colorless"], "effect": "This attack does 10 less damage for each damage counter on this Pokemon."}],
+        weakness={"type": "Water", "value": "x2"}),
+
+    pokemon(16, "Remoraid", 70, ["Water"], "Basic", 1, [223], "Common",
+        attacks=[{"name": "Slice Fin", "damage": 20, "cost": ["Water"]}],
+        weakness={"type": "Lightning", "value": "x2"}),
+
+    pokemon(17, "Octillery", 110, ["Water"], "Stage1", 2, [224], "Uncommon",
+        attacks=[{"name": "Corner Stop", "damage": 30, "cost": ["Water"], "effect": "During your opponent's next turn, when the Defending Pokemon tries to attack, your opponent flips 2 coins. If either is tails, that attack does nothing."}, {"name": "Tantrum", "damage": 120, "cost": ["Water","Colorless"], "effect": "This Pokemon is now Confused."}],
+        weakness={"type": "Lightning", "value": "x2"}),
+    pokemon(18, "Delibird", 90, ["Water"], "Basic", 1, [225], "Common",
+        attacks=[{"name": "Happy Present", "cost": ["Colorless"], "effect": "Both players may attach up to 3 Energy from their hand to their Pokemon in any way they like. (Your opponent attaches first.)"}, {"name": "Flap", "damage": 40, "cost": ["Colorless","Colorless"]}],
+        weakness={"type": "Metal", "value": "x2"}),
+
+    pokemon(19, "Keldeo", 110, ["Water"], "Basic", 1, [647], "Rare",
+        attacks=[{"name": "Penetrate", "damage": 20, "cost": ["Water"], "effect": "This attack also does 20 damage to 1 of your opponent's Benched Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"}, {"name": "Reflect Energy", "damage": 70, "cost": ["Water","Water"], "effect": "Move an Energy from this Pokemon to 1 of your Benched Pokemon."}],
+        weakness={"type": "Lightning", "value": "x2"}),
+
+    pokemon(20, "Froakie", 70, ["Water"], "Basic", 1, [656], "Common",
+        attacks=[{"name": "Collect", "cost": ["Colorless"], "effect": "Draw a card."}, {"name": "Water Gun", "damage": 10, "cost": ["Water"]}],
+        weakness={"type": "Lightning", "value": "x2"}),
+    pokemon(21, "Frogadier", 100, ["Water"], "Stage1", 1, [657], "Common",
+        attacks=[{"name": "Calling Jutsu", "cost": ["Water"], "effect": "Search your deck for up to 3 Pokemon, reveal them, and put them into your hand. Then, shuffle your deck."}, {"name": "Aqua Edge", "damage": 50, "cost": ["Water","Water"]}],
+        weakness={"type": "Lightning", "value": "x2"}),
+
+    pokemon(22, "Mega Greninja ex", 350, ["Water"], "Stage2", 1, [658], "Double Rare",
+        attacks=[{"name": "Ninja Spinner", "damage": "120+", "cost": ["Water","Water"], "effect": "You may put a Water Energy attached to this Pokemon into your hand and have this attack do 80 more damage."}],
+        abilities=[{"name": "Mortal Shuriken", "effect": "Once during your turn, if this Pokemon is in the Active Spot, you may discard a Basic Water Energy card from your hand in order to use this Ability. Place 6 damage counters on 1 of your opponent's Pokemon."}],
+        weakness={"type": "Lightning", "value": "x2"}),
+
+    pokemon(23, "Bergmite", 80, ["Water"], "Basic", 2, [712], "Common",
+        attacks=[{"name": "Chilly", "damage": 10, "cost": ["Water"]}, {"name": "Frost Breath", "damage": 50, "cost": ["Water","Colorless","Colorless"]}],
+        weakness={"type": "Metal", "value": "x2"}),
+    pokemon(24, "Avalugg", 160, ["Water"], "Stage1", 4, [713], "Uncommon",
+        attacks=[{"name": "Iceberg Destruction", "damage": "60x", "cost": ["Water"], "effect": "Discard the top 6 cards of your deck. This attack does 60 damage for each Basic Water Energy discarded in this way."}, {"name": "Frost Stomp", "damage": 160, "cost": ["Water","Water","Colorless","Colorless"]}],
+        weakness={"type": "Metal", "value": "x2"}),
+
+    pokemon(25, "Wimpod", 70, ["Water"], "Basic", 2, [767], "Common",
+        attacks=[{"name": "Gnaw", "damage": 10, "cost": ["Water"]}, {"name": "Corkscrew Punch", "damage": 20, "cost": ["Colorless","Colorless"]}],
+        weakness={"type": "Lightning", "value": "x2"}),
+
+    pokemon(26, "Golisopod", 140, ["Water"], "Stage1", 2, [768], "Uncommon",
+        attacks=[{"name": "Critical Cut", "damage": 30, "cost": ["Water"], "effect": "If this attack's damage Knocks Out your opponent's Active Pokemon, during your opponent's next turn, this Pokemon can't be affected by damage or effects of attacks."}, {"name": "Boundless Power", "damage": 150, "cost": ["Colorless","Colorless","Colorless"], "effect": "During your next turn, this Pokemon can't attack."}],
+        weakness={"type": "Lightning", "value": "x2"}),
+    pokemon(27, "Mareep", 70, ["Lightning"], "Basic", 1, [179], "Common",
+        attacks=[{"name": "Thunder Wave", "damage": 30, "cost": ["Lightning","Colorless"], "effect": "Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed."}],
+        weakness={"type": "Fighting", "value": "x2"}),
+
+    pokemon(28, "Flaaffy", 90, ["Lightning"], "Stage1", 2, [180], "Common",
+        attacks=[{"name": "Disconnect", "damage": 40, "cost": ["Lightning","Colorless"], "effect": "During your opponent's next turn, your opponent can't play any Item cards from their hand."}],
+        weakness={"type": "Fighting", "value": "x2"}),
+
+    pokemon(29, "Ampharos", 160, ["Lightning"], "Stage2", 2, [181], "Rare",
+        attacks=[{"name": "Flash Bolt", "damage": 140, "cost": ["Lightning","Colorless"], "effect": "During your next turn, this Pokemon can't use Flash Bolt."}],
+        abilities=[{"name": "Synchronized Pulse", "effect": "If you and your opponent have the same number of cards in your hands, this Pokemon's attacks do 80 more damage to your opponent's Active Pokemon (before applying Weakness and Resistance)."}],
+        weakness={"type": "Fighting", "value": "x2"}),
+    pokemon(30, "Emolga", 70, ["Lightning"], "Basic", 1, [587], "Common",
+        attacks=[{"name": "Minor Errand Running", "cost": ["Colorless"], "effect": "Search your deck for up to 2 Basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck."}, {"name": "Sky Return", "damage": 30, "cost": ["Lightning"], "effect": "Return this Pokemon and all cards attached to your hand."}],
+        weakness={"type": "Fighting", "value": "x2"}),
+
+    pokemon(31, "Deoxys", 110, ["Psychic"], "Basic", 1, [386], "Uncommon",
+        attacks=[{"name": "Genome Charge", "cost": ["Colorless"], "effect": "Search your deck for up to 2 Basic Psychic Energy cards and attach them to this Pokemon. Then, shuffle your deck."}, {"name": "Psychic", "damage": "80+", "cost": ["Psychic","Psychic","Colorless"], "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokemon."}],
+        weakness={"type": "Darkness", "value": "x2"}, resistance={"type": "Fighting", "value": "-30"}),
+
+    pokemon(32, "Deoxys", 120, ["Psychic"], "Basic", 2, [386], "Uncommon",
+        attacks=[{"name": "Psy Spear", "damage": 120, "cost": ["Psychic","Psychic","Psychic"], "effect": "If this Pokemon has at least 2 extra Energy attached to it, this attack also does 120 damage to 1 of your opponent's Benched Pokemon."}],
+        weakness={"type": "Darkness", "value": "x2"}, resistance={"type": "Fighting", "value": "-30"}),
+    pokemon(33, "Deoxys", 130, ["Psychic"], "Basic", 3, [386], "Uncommon",
+        attacks=[{"name": "Psy Protect", "damage": 80, "cost": ["Psychic","Psychic","Colorless"], "effect": "During your opponent's next turn, prevent all damage done to this Pokemon by your opponent's Pokemon that have an Ability."}],
+        weakness={"type": "Darkness", "value": "x2"}, resistance={"type": "Fighting", "value": "-30"}),
+
+    pokemon(34, "Deoxys", 100, ["Psychic"], "Basic", 0, [386], "Uncommon",
+        attacks=[{"name": "Psy Speed", "damage": 30, "cost": ["Psychic"], "effect": "You may draw cards until you have 5 cards in your hand."}],
+        weakness={"type": "Darkness", "value": "x2"}, resistance={"type": "Fighting", "value": "-30"}),
+
+    pokemon(35, "Mega Floette ex", 250, ["Psychic"], "Basic", 1, [670], "Double Rare",
+        attacks=[{"name": "Gentle Light", "cost": ["Psychic"], "effect": "Heal 30 damage from each Pokemon (both yours and your opponent's)."}, {"name": "Eternity Bloom", "damage": 200, "cost": ["Psychic","Psychic","Psychic"], "effect": "Search your deck for up to 4 Basic Psychic Energy cards and attach them to your Benched Pokemon in any way you like. Then, shuffle your deck."}],
+        weakness={"type": "Metal", "value": "x2"}),
+    pokemon(36, "Espurr", 60, ["Psychic"], "Basic", 1, [677], "Common",
+        attacks=[{"name": "Buddy Attack", "damage": "10+", "cost": ["Psychic"], "effect": "If you played Emma from your hand this turn, this attack does 60 more damage."}],
+        weakness={"type": "Darkness", "value": "x2"}, resistance={"type": "Fighting", "value": "-30"}),
+
+    pokemon(37, "Meowstic", 100, ["Psychic"], "Stage1", 1, [678], "Uncommon",
+        attacks=[{"name": "Trick Step", "damage": 80, "cost": ["Psychic","Colorless"], "effect": "You may move an Energy attached to your opponent's Active Pokemon to 1 of their Benched Pokemon."}],
+        weakness={"type": "Darkness", "value": "x2"}, resistance={"type": "Fighting", "value": "-30"}),
+
+    pokemon(38, "Phantump", 70, ["Psychic"], "Basic", 2, [708], "Common",
+        attacks=[{"name": "Mumble", "damage": 10, "cost": ["Psychic"]}],
+        abilities=[{"name": "Envious Evolution", "effect": "Once during your turn, you may choose a card from your hand that evolves from this Pokemon and put it onto this Pokemon to evolve it. If you do, place 2 damage counters on this Pokemon. (You can't use this Ability during your first turn.)"}],
+        weakness={"type": "Darkness", "value": "x2"}, resistance={"type": "Fighting", "value": "-30"}),
+    pokemon(39, "Trevenant", 130, ["Psychic"], "Stage1", 3, [709], "Uncommon",
+        attacks=[{"name": "Cursed Roots", "damage": 30, "cost": ["Psychic"], "effect": "During your opponent's next turn, Energy can't be attached from your opponent's hand to the Defending Pokemon."}, {"name": "Overpain", "damage": "60+", "cost": ["Psychic","Psychic"], "effect": "This attack does 10 more damage for each damage counter on all your opponent's Pokemon."}],
+        weakness={"type": "Darkness", "value": "x2"}, resistance={"type": "Fighting", "value": "-30"}),
+
+    pokemon(40, "Pumpkaboo", 60, ["Psychic"], "Basic", 2, [710], "Common",
+        attacks=[{"name": "Stampede", "damage": 20, "cost": ["Psychic"]}],
+        weakness={"type": "Darkness", "value": "x2"}, resistance={"type": "Fighting", "value": "-30"}),
+
+    pokemon(41, "Gourgeist ex", 270, ["Psychic"], "Stage1", 2, [711], "Double Rare",
+        attacks=[{"name": "Horror Rondo", "damage": "30+", "cost": ["Psychic"], "effect": "This attack does 50 more damage for each of your Benched Pokemon that have any damage counters on them."}, {"name": "Ghost Touch", "damage": 140, "cost": ["Psychic","Psychic"], "effect": "Discard a random card from your opponent's hand."}],
+        weakness={"type": "Darkness", "value": "x2"}, resistance={"type": "Fighting", "value": "-30"}),
+    pokemon(42, "Xerneas", 130, ["Psychic"], "Basic", 2, [716], "Rare",
+        attacks=[{"name": "Geostorm", "damage": "30x", "cost": ["Psychic","Psychic","Psychic"], "effect": "This attack does 30 damage times the number of Psychic Energy attached to all of your Pokemon."}],
+        weakness={"type": "Metal", "value": "x2"}),
+
+    pokemon(43, "Sudowoodo", 110, ["Fighting"], "Basic", 1, [185], "Common",
+        attacks=[{"name": "Learning Journey", "cost": ["Colorless"], "effect": "Search your deck for up to 2 Book of Transformation, reveal them, and put them into your hand. Then, shuffle your deck."}, {"name": "Rock Hurl", "damage": 30, "cost": ["Fighting"], "effect": "This attack damage isn't affected by Resistance."}],
+        weakness={"type": "Grass", "value": "x2"}),
+
+    pokemon(44, "Phanpy", 70, ["Fighting"], "Basic", 1, [231], "Common",
+        attacks=[{"name": "Mud Slap", "damage": 10, "cost": ["Fighting"]}, {"name": "Rollout", "damage": 40, "cost": ["Colorless","Colorless","Colorless"]}],
+        weakness={"type": "Grass", "value": "x2"}),
+    pokemon(45, "Donphan", 150, ["Fighting"], "Stage1", 3, [232], "Uncommon",
+        attacks=[{"name": "No Reprieve", "damage": 20, "cost": ["Fighting"], "effect": "During your next turn, this Pokemon's attacks do 80 more damage to your opponent's Active Pokemon."}, {"name": "Smash Head", "damage": 180, "cost": ["Fighting","Colorless","Colorless","Colorless"], "effect": "Discard 2 Energy attached to this Pokemon."}],
+        weakness={"type": "Grass", "value": "x2"}),
+
+    pokemon(46, "Baltoy", 70, ["Fighting"], "Basic", 2, [343], "Common",
+        attacks=[{"name": "Continuous Spin", "damage": "30x", "cost": ["Fighting"], "effect": "Flip a coin until you get tails. This attack does 30 damage times the number of heads."}],
+        weakness={"type": "Grass", "value": "x2"}),
+
+    pokemon(47, "Claydol", 120, ["Fighting"], "Stage1", 2, [344], "Uncommon",
+        attacks=[{"name": "Devolution Ray", "damage": 50, "cost": ["Fighting"], "effect": "If your opponent's Active Pokemon is an Evolved Pokemon, devolve it by putting the highest Stage Evolution card on it into your opponent's hand."}],
+        weakness={"type": "Grass", "value": "x2"}),
+    pokemon(48, "Zubat", 40, ["Darkness"], "Basic", 0, [41], "Common",
+        attacks=[{"name": "Supersonic", "cost": ["Darkness"], "effect": "Your opponent's Active Pokemon is now Confused."}],
+        weakness={"type": "Lightning", "value": "x2"}, resistance={"type": "Fighting", "value": "-30"}),
+
+    pokemon(49, "Golbat", 80, ["Darkness"], "Stage1", 1, [42], "Uncommon",
+        attacks=[{"name": "Covert Flight", "damage": 30, "cost": ["Darkness"], "effect": "During your opponent's next turn, this Pokemon does not take damage from attacks by Basic Pokemon."}],
+        weakness={"type": "Lightning", "value": "x2"}, resistance={"type": "Fighting", "value": "-30"}),
+
+    pokemon(50, "Crobat", 130, ["Darkness"], "Stage2", 1, [169], "Rare",
+        attacks=[{"name": "Poison Sound Wave", "damage": 80, "cost": ["Darkness"], "effect": "Your opponent's Active Pokemon is now Confused and Poisoned."}],
+        abilities=[{"name": "Nighttime Maneuvers", "effect": "Once during your turn, if this Pokemon is in the Active Spot, you may use this Ability. Search your deck for a card. Shuffle your deck, then put that card on top of it."}],
+        weakness={"type": "Lightning", "value": "x2"}, resistance={"type": "Fighting", "value": "-30"}),
+    pokemon(51, "Qwilfish", 90, ["Darkness"], "Basic", 1, [211], "Common",
+        attacks=[{"name": "Venoshock", "damage": "30+", "cost": ["Darkness"], "effect": "If your opponent's Active Pokemon is Poisoned, this attack does 50 more damage."}],
+        abilities=[{"name": "Poison Point", "effect": "If this Pokemon is in the Active Spot and takes damage from an attack from your opponent's Pokemon, the Attacking Pokemon is now Poisoned."}],
+        weakness={"type": "Fighting", "value": "x2"}),
+
+    pokemon(52, "Stunky", 70, ["Darkness"], "Basic", 2, [434], "Common",
+        attacks=[{"name": "Scratch", "damage": 20, "cost": ["Darkness"]}],
+        weakness={"type": "Fighting", "value": "x2"}),
+
+    pokemon(53, "Skuntank", 110, ["Darkness"], "Stage1", 2, [435], "Uncommon",
+        attacks=[{"name": "Rear Kick", "damage": 40, "cost": ["Darkness"]}, {"name": "Smash Turn", "damage": 100, "cost": ["Darkness","Darkness","Colorless"], "effect": "Switch this Pokemon with 1 of your Benched Pokemon."}],
+        weakness={"type": "Fighting", "value": "x2"}),
+    pokemon(54, "Trubbish", 70, ["Darkness"], "Basic", 2, [568], "Common",
+        attacks=[{"name": "Acid Spray", "damage": 10, "cost": ["Darkness"], "effect": "Flip a coin. If heads, discard an Energy attached to your opponent's Active Pokemon."}],
+        weakness={"type": "Fighting", "value": "x2"}),
+
+    pokemon(55, "Garbodor", 140, ["Darkness"], "Stage1", 3, [569], "Uncommon",
+        attacks=[{"name": "Sludge Bomb", "damage": 100, "cost": ["Darkness","Darkness","Colorless"]}],
+        abilities=[{"name": "Garbage Downer", "effect": "If your opponent's Active Pokemon has any Pokemon Tools attached to it, its attacks do 20 less damage."}],
+        weakness={"type": "Fighting", "value": "x2"}),
+
+    pokemon(56, "Skrelp", 70, ["Darkness"], "Basic", 1, [690], "Common",
+        attacks=[{"name": "Hook", "damage": 10, "cost": ["Colorless"]}],
+        weakness={"type": "Fighting", "value": "x2"}),
+    pokemon(57, "Beldum", 70, ["Metal"], "Basic", 1, [374], "Common",
+        attacks=[{"name": "Headbutt", "damage": 10, "cost": ["Metal"]}, {"name": "Beam", "damage": 20, "cost": ["Metal","Colorless"]}],
+        weakness={"type": "Fire", "value": "x2"}, resistance={"type": "Grass", "value": "-30"}),
+
+    pokemon(58, "Metang", 100, ["Metal"], "Stage1", 1, [375], "Common",
+        attacks=[{"name": "Metal Claw", "damage": 30, "cost": ["Metal"]}, {"name": "Guard Press", "damage": 70, "cost": ["Metal","Metal","Colorless"], "effect": "During your opponent's next turn, this Pokemon takes 30 less damage from attacks."}],
+        weakness={"type": "Fire", "value": "x2"}, resistance={"type": "Grass", "value": "-30"}),
+
+    pokemon(59, "Metagross", 180, ["Metal"], "Stage2", 3, [376], "Rare",
+        attacks=[{"name": "Bounce Back", "damage": 60, "cost": ["Metal"], "effect": "Your opponent switches their Active Pokemon with 1 of their Benched Pokemon."}, {"name": "Metallic Hammer", "damage": "150+", "cost": ["Metal","Metal","Metal","Colorless"], "effect": "You may discard 3 Metal Energy from this Pokemon and have this attack do 150 more damage."}],
+        weakness={"type": "Fire", "value": "x2"}, resistance={"type": "Grass", "value": "-30"}),
+    pokemon(60, "Ferroseed", 70, ["Metal"], "Basic", 2, [597], "Common",
+        attacks=[{"name": "Rolling Tackle", "damage": 40, "cost": ["Metal","Metal"]}],
+        weakness={"type": "Fire", "value": "x2"}, resistance={"type": "Grass", "value": "-30"}),
+
+    pokemon(61, "Ferrothorn", 130, ["Metal"], "Stage1", 3, [598], "Uncommon",
+        attacks=[{"name": "Special Whip", "damage": "70+", "cost": ["Metal","Metal"], "effect": "If this Pokemon has any Special Energy attached, this attack does 70 more damage."}],
+        abilities=[{"name": "Prank Drop", "effect": "During your opponent's turn, if this card is discarded from your deck by an effect of your opponent's Attacks, Abilities, Items, or Supporter cards, your opponent discards the top 8 cards of their deck."}],
+        weakness={"type": "Fire", "value": "x2"}, resistance={"type": "Grass", "value": "-30"}),
+
+    pokemon(62, "Cobalion ex", 210, ["Metal"], "Basic", 3, [638], "Double Rare",
+        attacks=[{"name": "Power Tackle", "damage": 200, "cost": ["Metal","Metal","Colorless"], "effect": "During your next turn, this Pokemon can't attack."}],
+        abilities=[{"name": "Metal Road", "effect": "Once during your turn, when this Pokemon moves from your Bench to the Active Spot, you may move any amount of Metal Energy from your Pokemon in play to this Pokemon."}],
+        weakness={"type": "Fire", "value": "x2"}, resistance={"type": "Grass", "value": "-30"}),
+    pokemon(63, "Mega Dragalge ex", 330, ["Dragon"], "Stage1", 2, [691], "Double Rare",
+        attacks=[{"name": "Corrosive Liquid", "cost": ["Colorless","Colorless"], "effect": "Discard all Pokemon Tools and Special Energy from all of your opponent's Pokemon."}, {"name": "Pernicious Poison", "cost": ["Water","Darkness"], "effect": "Your opponent's Active Pokemon is now Poisoned. During Pokemon Checkup, place 16 damage counters on that Pokemon instead of 1."}],
+        weakness=None),
+
+    pokemon(64, "Goomy", 60, ["Dragon"], "Basic", 2, [704], "Common",
+        attacks=[{"name": "Absorb", "damage": 30, "cost": ["Water","Psychic"], "effect": "Heal 30 damage from this Pokemon."}]),
+
+    pokemon(65, "Sliggoo", 90, ["Dragon"], "Stage1", 3, [705], "Common",
+        attacks=[{"name": "Gentle Slap", "damage": 70, "cost": ["Water","Psychic"]}]),
+
+    pokemon(66, "Goodra", 160, ["Dragon"], "Stage2", 3, [706], "Rare",
+        attacks=[{"name": "Dragon Pulse", "damage": 160, "cost": ["Water","Psychic"], "effect": "Discard the top card of your deck."}],
+        abilities=[{"name": "Slimy Slip", "effect": "When your opponent's Active Pokemon retreats, your opponent flips a coin. If tails, that Pokemon does not retreat and your opponent does not discard any Energy for retreating. This Ability's effect can't stack."}]),
+    pokemon(67, "Tauros", 130, ["Colorless"], "Basic", 2, [128], "Uncommon",
+        attacks=[{"name": "Crowd Targeting", "cost": ["Colorless","Colorless"], "effect": "Choose 1 of your opponent's Pokemon. Flip a coin for each of your Pokemon with 'Tauros' in its name. This attack does 50 damage times the number of heads to that Pokemon."}],
+        weakness={"type": "Fighting", "value": "x2"}),
+
+    pokemon(68, "Patrat", 70, ["Colorless"], "Basic", 1, [504], "Common",
+        attacks=[{"name": "Bite", "damage": 10, "cost": ["Colorless"]}],
+        abilities=[{"name": "Watchful Eyes", "effect": "If this Pokemon is in play, you and your opponent can't move damage counters to another Pokemon."}],
+        weakness={"type": "Fighting", "value": "x2"}),
+
+    pokemon(69, "Watchog", 100, ["Colorless"], "Stage1", 1, [505], "Uncommon",
+        attacks=[{"name": "Unannounced Check", "cost": ["Colorless"], "effect": "Flip 3 coins. If any are heads, look at your opponent's hand and choose as many cards as the number of heads. Your opponent shuffles those cards into their deck."}, {"name": "Low Kick", "damage": 50, "cost": ["Colorless"]}],
+        weakness={"type": "Fighting", "value": "x2"}),
+    pokemon(70, "Minccino", 70, ["Colorless"], "Basic", 1, [572], "Common",
+        attacks=[{"name": "Take Down", "damage": 30, "cost": ["Colorless"], "effect": "This Pokemon also does 10 damage to itself."}],
+        weakness={"type": "Fighting", "value": "x2"}),
+
+    pokemon(71, "Cinccino ex", 240, ["Colorless"], "Stage1", 1, [573], "Double Rare",
+        attacks=[{"name": "Energized Slap", "damage": "40x", "cost": ["Colorless"], "effect": "This attack does 40 damage for each Energy attached to this Pokemon."}],
+        abilities=[{"name": "Smooth Coat", "effect": "If any damage is done to this Pokemon by attacks, flip a coin. If heads, prevent that damage."}],
+        weakness={"type": "Fighting", "value": "x2"}),
+
+    # --- Trainer cards ---
+    trainer(72, "Special Red Card", "Uncommon",
+        effect="You can only play this card if your opponent has 3 or less Prize cards remaining. Your opponent shuffles their hand and puts it to the bottom of their deck. Then, your opponent draws 3 cards.",
+        subcategory="Item"),
+
+    trainer(73, "Big Catch Net", "Uncommon",
+        effect="Shuffle up to 3 Water Pokemon and up to 3 Basic Water Energy cards from your discard pile into your deck.",
+        subcategory="Item"),
+    trainer(74, "Book of Transformation", "Uncommon",
+        effect="You must play 2 Book of Transformation cards at once. (This effect works one time for 2 cards.) Choose a Basic Pokemon in your discard pile and switch it with 1 of your Basic Pokemon in play. Any attached cards, damage counters, Special Conditions, turns in play, and any other effects remain on the new Pokemon.",
+        subcategory="Item"),
+
+    trainer(75, "AZ's Tranquility", "Uncommon",
+        effect="Switch your Active Pokemon with 1 of your Benched Pokemon. If you moved a Pokemon ex to your Bench in this way, heal 80 damage from that Pokemon.",
+        subcategory="Supporter"),
+
+    trainer(76, "Philippe", "Uncommon",
+        effect="Attach up to 2 Basic Metal Energy from your discard pile to 1 of your Metal Pokemon.",
+        subcategory="Supporter"),
+
+    trainer(77, "Roxie's Performance", "Uncommon",
+        effect="During your opponent's next turn, their Poisoned Pokemon can't retreat. (This includes newly Poisoned Pokemon.)",
+        subcategory="Supporter"),
+
+    trainer(78, "Emma", "Uncommon",
+        effect="Your opponent reveals their hand. Draw cards equal to the number of Pokemon in their hand.",
+        subcategory="Supporter"),
+    trainer(79, "Ange Floette", "Uncommon",
+        effect="This card can only be played by discarding a Prism Tower in play. You can play this card even if Prism Tower was played this turn. Each Mega Floette ex in play (both yours and your opponent's) gets +150 HP.",
+        subcategory="Stadium"),
+
+    trainer(80, "Prism Tower", "Uncommon",
+        effect="Once during each player's turn, they may discard 2 cards from their hand in order to draw a card.",
+        subcategory="Stadium"),
+
+    # --- Special Energy cards ---
+    energy(81, "Nitro Fire Energy", "Uncommon",
+        effect="As long as this card is attached to a Pokemon, it provides 1 Fire Energy. If an attack used by the Fire Pokemon this card is attached to would discard this card, put it into your hand after applying damage and effects of that attack."),
+
+    energy(82, "Bubble Water Energy", "Uncommon",
+        effect="As long as this card is attached to a Pokemon, it provides 1 Water Energy. The Water Pokemon this card is attached to recovers from all Special Conditions and can't be affected by any Special Conditions."),
+
+    energy(83, "Magnet Metal Energy", "Uncommon",
+        effect="As long as this card is attached to a Pokemon, it provides 1 Metal Energy. The Metal Pokemon this card is attached to has no Retreat Cost."),
+])
+
+# --- Build and write ---
+data = {**SET_META, "cards": cards}
+OUT.write_text(json.dumps(data, indent=2, ensure_ascii=False))
+print(f"Wrote {len(cards)} cards to {OUT}")
