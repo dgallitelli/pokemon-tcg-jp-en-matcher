@@ -1,0 +1,2262 @@
+{
+  "id": "M3",
+  "name": {
+    "ja": "Nihil Zero"
+  },
+  "serie": "M",
+  "releaseDate": {
+    "ja": "2026-01-23"
+  },
+  "cards": {
+    "001": {
+      "name": "イトマル",
+      "hp": 60,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "illustrator": "Katsunori Sato",
+      "retreat": 1,
+      "dexId": [
+        167
+      ],
+      "attacks": [
+        {
+          "damage": 10,
+          "cost": [
+            "Grass"
+          ],
+          "name": "ねばるいと"
+        }
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-001",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "002": {
+      "name": "アリアドス",
+      "hp": 110,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "illustrator": "svlt",
+      "retreat": 1,
+      "dexId": [
+        168
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-002",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "003": {
+      "name": "シェイミ",
+      "hp": 70,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "illustrator": "saino misaki",
+      "retreat": 0,
+      "dexId": [
+        492
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-003",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "004": {
+      "name": "ツタージャ",
+      "hp": 70,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "illustrator": "Narumi Sato",
+      "retreat": 1,
+      "dexId": [
+        495
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-004",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "005": {
+      "name": "ジャノビー",
+      "hp": 100,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Kurata So",
+      "retreat": 1,
+      "dexId": [
+        496
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-005",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "006": {
+      "name": "ジャローダ",
+      "hp": 160,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "illustrator": "kodama",
+      "retreat": 2,
+      "dexId": [
+        497
+      ],
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "M3-006",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "007": {
+      "name": "コフキムシ",
+      "hp": 40,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "illustrator": "OKACHEKE",
+      "retreat": 1,
+      "dexId": [
+        664
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-007",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "008": {
+      "name": "コフーライ",
+      "hp": 80,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Ounishi",
+      "retreat": 3,
+      "dexId": [
+        665
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-008",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "009": {
+      "name": "ビビヨン",
+      "hp": 120,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "illustrator": "mingo",
+      "retreat": 1,
+      "dexId": [
+        666
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-009",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "010": {
+      "name": "モクロー",
+      "hp": 80,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "illustrator": "Atsuya Uki",
+      "retreat": 2,
+      "dexId": [
+        722
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-010",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "011": {
+      "name": "フクスロー",
+      "hp": 100,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "illustrator": "aspara",
+      "retreat": 2,
+      "dexId": [
+        723
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-011",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "012": {
+      "name": "ジュナイパーex",
+      "hp": 320,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "illustrator": "aky CG Works",
+      "retreat": 2,
+      "dexId": [
+        724
+      ],
+      "category": "Pokemon",
+      "rarity": "Double rare",
+      "id": "M3-012",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "013": {
+      "name": "ヒノヤコマ",
+      "hp": 90,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Sumiyoshi Kizuki",
+      "retreat": 1,
+      "dexId": [
+        662
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-013",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "014": {
+      "name": "ファイアロー",
+      "hp": 150,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage2",
+      "illustrator": "Shinji Kanda",
+      "retreat": 1,
+      "dexId": [
+        663
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-014",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "015": {
+      "name": "ヤトウモリ",
+      "hp": 70,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "illustrator": "Kazuhisa Uragami",
+      "retreat": 1,
+      "dexId": [
+        757
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-015",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "016": {
+      "name": "エンニュートex",
+      "hp": 260,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "illustrator": "5ban Graphics",
+      "retreat": 1,
+      "dexId": [
+        758
+      ],
+      "category": "Pokemon",
+      "rarity": "Double rare",
+      "id": "M3-016",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "017": {
+      "name": "バクガメス",
+      "hp": 120,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "illustrator": "Hasuno",
+      "retreat": 2,
+      "dexId": [
+        776
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-017",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "018": {
+      "name": "パウワウ",
+      "hp": 80,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "illustrator": "Kanami Ogata",
+      "retreat": 2,
+      "dexId": [
+        86
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-018",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "019": {
+      "name": "ジュゴン",
+      "hp": 130,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Yoshioka",
+      "retreat": 2,
+      "dexId": [
+        87
+      ],
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "M3-019",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "020": {
+      "name": "ヒトデマン",
+      "hp": 70,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "illustrator": "Takeshi Nakamura",
+      "retreat": 1,
+      "dexId": [
+        120
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-020",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "021": {
+      "name": "メガスターミーex",
+      "hp": 330,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "illustrator": "5ban Graphics",
+      "retreat": 2,
+      "dexId": [
+        121
+      ],
+      "category": "Pokemon",
+      "rarity": "Double rare",
+      "id": "M3-021",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "022": {
+      "name": "アマルス",
+      "hp": 100,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Hitoshi Ariga",
+      "retreat": 3,
+      "dexId": [
+        698
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-022",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "023": {
+      "name": "アマルルガ",
+      "hp": 170,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage2",
+      "illustrator": "HACCAN",
+      "retreat": 3,
+      "dexId": [
+        699
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-023",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "024": {
+      "name": "ボルケニオン",
+      "hp": 130,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "illustrator": "AKIRA EGAWA",
+      "retreat": 3,
+      "dexId": [
+        721
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-024",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "025": {
+      "name": "コリンク",
+      "hp": 70,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "illustrator": "Saboteri",
+      "retreat": 1,
+      "dexId": [
+        403
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-025",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "026": {
+      "name": "ルクシオ",
+      "hp": 90,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Atsuko Nishida",
+      "retreat": 1,
+      "dexId": [
+        404
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-026",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "027": {
+      "name": "レントラー",
+      "hp": 150,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Stage2",
+      "illustrator": "Taiga Kasai",
+      "retreat": 0,
+      "dexId": [
+        405
+      ],
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "M3-027",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "028": {
+      "name": "デデンネ",
+      "hp": 70,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "illustrator": "sowsow",
+      "retreat": 1,
+      "dexId": [
+        702
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-028",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "029": {
+      "name": "ピッピ",
+      "hp": 70,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "illustrator": "Natsumi Yoshida",
+      "retreat": 1,
+      "dexId": [
+        35
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-029",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "030": {
+      "name": "メガピクシーex",
+      "hp": 320,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "illustrator": "aky CG Works",
+      "retreat": 1,
+      "dexId": [
+        36
+      ],
+      "category": "Pokemon",
+      "rarity": "Double rare",
+      "id": "M3-030",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "031": {
+      "name": "クチート",
+      "hp": 110,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "illustrator": "OKACHEKE",
+      "retreat": 2,
+      "dexId": [
+        303
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-031",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "032": {
+      "name": "ニャスパー",
+      "hp": 60,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "illustrator": "Terada Tera",
+      "retreat": 1,
+      "dexId": [
+        677
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-032",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "033": {
+      "name": "ニャオニクス",
+      "hp": 100,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Kannnu",
+      "retreat": 1,
+      "dexId": [
+        678
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-033",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "034": {
+      "name": "シュシュプ",
+      "hp": 70,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "illustrator": "Pani Kobayashi",
+      "retreat": 1,
+      "dexId": [
+        682
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-034",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "035": {
+      "name": "フレフワン",
+      "hp": 120,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Mori Yuu",
+      "retreat": 1,
+      "dexId": [
+        683
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-035",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "036": {
+      "name": "ノズパス",
+      "hp": 90,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "Jerky",
+      "retreat": 3,
+      "dexId": [
+        299
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-036",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "037": {
+      "name": "ダイノーズ",
+      "hp": 140,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Nurikabe",
+      "retreat": 3,
+      "dexId": [
+        476
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-037",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "038": {
+      "name": "ヒポポタス",
+      "hp": 100,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "Kagemaru Himeno",
+      "retreat": 4,
+      "dexId": [
+        449
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-038",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "039": {
+      "name": "カバルドン",
+      "hp": 150,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Souichirou Gunjima",
+      "retreat": 4,
+      "dexId": [
+        450
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-039",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "040": {
+      "name": "ランドロス",
+      "hp": 120,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "aoki",
+      "retreat": 1,
+      "dexId": [
+        645
+      ],
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "M3-040",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "041": {
+      "name": "カメテテ",
+      "hp": 80,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "nagimiso",
+      "retreat": 2,
+      "dexId": [
+        688
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-041",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "042": {
+      "name": "ガメノデス",
+      "hp": 130,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Kazumasa Yasukuni",
+      "retreat": 2,
+      "dexId": [
+        689
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-042",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "043": {
+      "name": "チゴラス",
+      "hp": 100,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Tomoki Sone",
+      "retreat": 3,
+      "dexId": [
+        696
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-043",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "044": {
+      "name": "ガチゴラス",
+      "hp": 180,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage2",
+      "illustrator": "Dsuke",
+      "retreat": 3,
+      "dexId": [
+        697
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-044",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "045": {
+      "name": "ルチャブル",
+      "hp": 70,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "osare",
+      "retreat": 0,
+      "dexId": [
+        701
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-045",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "046": {
+      "name": "メガジガルデex",
+      "hp": 310,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "takuyoa",
+      "retreat": 2,
+      "dexId": [
+        718
+      ],
+      "category": "Pokemon",
+      "rarity": "Double rare",
+      "id": "M3-046",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "047": {
+      "name": "ゴース",
+      "hp": 70,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "MARINA Chikazawa",
+      "retreat": 1,
+      "dexId": [
+        92
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-047",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "048": {
+      "name": "ゴースト",
+      "hp": 100,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Kedamahadaitai Yawarakai",
+      "retreat": 1,
+      "dexId": [
+        93
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-048",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "049": {
+      "name": "ゲンガー",
+      "hp": 130,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage2",
+      "illustrator": "Masako Tomii",
+      "retreat": 1,
+      "dexId": [
+        94
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-049",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "050": {
+      "name": "スコルピ",
+      "hp": 80,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "Aya Kusube",
+      "retreat": 2,
+      "dexId": [
+        451
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-050",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "051": {
+      "name": "ドラピオン",
+      "hp": 140,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Nelnal",
+      "retreat": 3,
+      "dexId": [
+        452
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-051",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "052": {
+      "name": "イベルタルex",
+      "hp": 210,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "5ban Graphics",
+      "retreat": 1,
+      "dexId": [
+        717
+      ],
+      "category": "Pokemon",
+      "rarity": "Double rare",
+      "id": "M3-052",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "053": {
+      "name": "パオジアン",
+      "hp": 120,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "Satoshi Ito",
+      "retreat": 1,
+      "dexId": [
+        1002
+      ],
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "M3-053",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "054": {
+      "name": "メガエアームドex",
+      "hp": 260,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "illustrator": "5ban Graphics",
+      "retreat": 0,
+      "dexId": [
+        227
+      ],
+      "category": "Pokemon",
+      "rarity": "Double rare",
+      "id": "M3-054",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "055": {
+      "name": "ヒトツキ",
+      "hp": 70,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "illustrator": "Apios",
+      "retreat": 2,
+      "dexId": [
+        679
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-055",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "056": {
+      "name": "ニダンギル",
+      "hp": 100,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Kamome Shirahama",
+      "retreat": 2,
+      "dexId": [
+        680
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-056",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "057": {
+      "name": "ギルガルド",
+      "hp": 150,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage2",
+      "illustrator": "Mitsuhiro Arita",
+      "retreat": 3,
+      "dexId": [
+        681
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-057",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "058": {
+      "name": "クレッフィ",
+      "hp": 70,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "illustrator": "MINAMINAMI Take",
+      "retreat": 1,
+      "dexId": [
+        707
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-058",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "059": {
+      "name": "コラッタ",
+      "hp": 40,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "Shinya Komatsu",
+      "retreat": 1,
+      "dexId": [
+        19
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-059",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "060": {
+      "name": "ラッタ",
+      "hp": 90,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Minahamu",
+      "retreat": 1,
+      "dexId": [
+        20
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-060",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "061": {
+      "name": "ニャースex",
+      "hp": 170,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "5ban Graphics",
+      "retreat": 1,
+      "dexId": [
+        52
+      ],
+      "category": "Pokemon",
+      "rarity": "Double rare",
+      "id": "M3-061",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "062": {
+      "name": "カビゴン",
+      "hp": 160,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "Toshinao Aoki",
+      "retreat": 4,
+      "dexId": [
+        143
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-062",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "063": {
+      "name": "ホルビー",
+      "hp": 70,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "MINAMINAMI Take",
+      "retreat": 1,
+      "dexId": [
+        659
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-063",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "064": {
+      "name": "ホルード",
+      "hp": 150,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Mousho",
+      "retreat": 4,
+      "dexId": [
+        660
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M3-064",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "065": {
+      "name": "ヤヤコマ",
+      "hp": 60,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "sowsow",
+      "retreat": 1,
+      "dexId": [
+        661
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-065",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "066": {
+      "name": "トリミアン",
+      "hp": 90,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "Teeziro",
+      "retreat": 1,
+      "dexId": [
+        676
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M3-066",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "067": {
+      "name": "エネはたき",
+      "illustrator": "Toyste Beach",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M3-067",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "068": {
+      "name": "古びたアゴの化石",
+      "illustrator": "AYUMI ODASHIMA",
+      "category": "Trainer",
+      "rarity": "Common",
+      "id": "M3-068",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "069": {
+      "name": "古びたヒレの化石",
+      "illustrator": "AYUMI ODASHIMA",
+      "category": "Trainer",
+      "rarity": "Common",
+      "id": "M3-069",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "070": {
+      "name": "ポケパッド",
+      "illustrator": "Studio Bora Inc.",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M3-070",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "071": {
+      "name": "ミアレガレット",
+      "illustrator": "5ban Graphics",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M3-071",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "072": {
+      "name": "コアメモリ",
+      "illustrator": "Toyste Beach",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M3-072",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "073": {
+      "name": "タラゴン",
+      "illustrator": "Akira Komayama",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M3-073",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "074": {
+      "name": "ピュール",
+      "illustrator": "DOM",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M3-074",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "075": {
+      "name": "メイのはげまし",
+      "illustrator": "Atsushi Furusawa",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M3-075",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "076": {
+      "name": "ユカリ",
+      "illustrator": "Susumu Maeya",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M3-076",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "077": {
+      "name": "ミアレシティ",
+      "illustrator": "MARINA Chikazawa",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M3-077",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "078": {
+      "name": "グロウ草エネルギー",
+      "category": "Energy",
+      "rarity": "Rare",
+      "id": "M3-078",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "079": {
+      "name": "テレパス超エネルギー",
+      "category": "Energy",
+      "rarity": "Rare",
+      "id": "M3-079",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "080": {
+      "name": "ロック闘エネルギー",
+      "category": "Energy",
+      "rarity": "Rare",
+      "id": "M3-080",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "081": {
+      "name": "コフーライ",
+      "hp": 80,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "illustrator": "kamonabe",
+      "retreat": 3,
+      "dexId": [
+        665
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M3-081",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "082": {
+      "name": "モクロー",
+      "hp": 80,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "illustrator": "ryoma uratsuka",
+      "retreat": 2,
+      "dexId": [
+        722
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M3-082",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "083": {
+      "name": "ファイアロー",
+      "hp": 150,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage2",
+      "illustrator": "OKACHEKE",
+      "retreat": 1,
+      "dexId": [
+        663
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M3-083",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "084": {
+      "name": "アマルルガ",
+      "hp": 170,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage2",
+      "illustrator": "Masa",
+      "retreat": 3,
+      "dexId": [
+        699
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M3-084",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "085": {
+      "name": "デデンネ",
+      "hp": 70,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "illustrator": "HYOGONOSUKE",
+      "retreat": 1,
+      "dexId": [
+        702
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M3-085",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "086": {
+      "name": "ピッピ",
+      "hp": 70,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "illustrator": "Cona Nitanda",
+      "retreat": 1,
+      "dexId": [
+        35
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M3-086",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "087": {
+      "name": "ニャスパー",
+      "hp": 60,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "illustrator": "MINAMINAMI Take",
+      "retreat": 1,
+      "dexId": [
+        677
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M3-087",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "088": {
+      "name": "ダイノーズ",
+      "hp": 140,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Kinu Nishimura",
+      "retreat": 3,
+      "dexId": [
+        476
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M3-088",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "089": {
+      "name": "チゴラス",
+      "hp": 100,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Shimaris Yukichi",
+      "retreat": 3,
+      "dexId": [
+        696
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M3-089",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "090": {
+      "name": "ドラピオン",
+      "hp": 140,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "illustrator": "kawayoo",
+      "retreat": 3,
+      "dexId": [
+        452
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M3-090",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "091": {
+      "name": "ニダンギル",
+      "hp": 100,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Anesaki Dynamic",
+      "retreat": 2,
+      "dexId": [
+        680
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M3-091",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "092": {
+      "name": "ラッタ",
+      "hp": 90,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Mina Nakai",
+      "retreat": 1,
+      "dexId": [
+        20
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M3-092",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "093": {
+      "name": "ジュナイパーex",
+      "hp": 320,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "illustrator": "5ban Graphics",
+      "retreat": 2,
+      "dexId": [
+        724
+      ],
+      "category": "Pokemon",
+      "rarity": "Ultra Rare",
+      "id": "M3-093",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "094": {
+      "name": "エンニュートex",
+      "hp": 260,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "illustrator": "5ban Graphics",
+      "retreat": 1,
+      "dexId": [
+        758
+      ],
+      "category": "Pokemon",
+      "rarity": "Ultra Rare",
+      "id": "M3-094",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "095": {
+      "name": "メガスターミーex",
+      "hp": 330,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "illustrator": "5ban Graphics",
+      "retreat": 2,
+      "dexId": [
+        121
+      ],
+      "category": "Pokemon",
+      "rarity": "Ultra Rare",
+      "id": "M3-095",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "096": {
+      "name": "メガピクシーex",
+      "hp": 320,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "illustrator": "aky CG Works",
+      "retreat": 1,
+      "dexId": [
+        36
+      ],
+      "category": "Pokemon",
+      "rarity": "Ultra Rare",
+      "id": "M3-096",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "097": {
+      "name": "メガジガルデex",
+      "hp": 310,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "takuyoa",
+      "retreat": 2,
+      "dexId": [
+        718
+      ],
+      "category": "Pokemon",
+      "rarity": "Ultra Rare",
+      "id": "M3-097",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "098": {
+      "name": "イベルタルex",
+      "hp": 210,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "5ban Graphics",
+      "retreat": 1,
+      "dexId": [
+        717
+      ],
+      "category": "Pokemon",
+      "rarity": "Ultra Rare",
+      "id": "M3-098",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "099": {
+      "name": "メガエアームドex",
+      "hp": 260,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "illustrator": "5ban Graphics",
+      "retreat": 0,
+      "dexId": [
+        227
+      ],
+      "category": "Pokemon",
+      "rarity": "Ultra Rare",
+      "id": "M3-099",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "100": {
+      "name": "ニャースex",
+      "hp": 170,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "5ban Graphics",
+      "retreat": 1,
+      "dexId": [
+        52
+      ],
+      "category": "Pokemon",
+      "rarity": "Ultra Rare",
+      "id": "M3-100",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "101": {
+      "name": "エネルギーリサイクル",
+      "illustrator": "Toyste Beach",
+      "category": "Trainer",
+      "rarity": "Ultra Rare",
+      "id": "M3-101",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "102": {
+      "name": "せいなるはい",
+      "illustrator": "Toyste Beach",
+      "category": "Trainer",
+      "rarity": "Ultra Rare",
+      "id": "M3-102",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "103": {
+      "name": "ポケパッド",
+      "illustrator": "Studio Bora Inc.",
+      "category": "Trainer",
+      "rarity": "Ultra Rare",
+      "id": "M3-103",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "104": {
+      "name": "ワンダーパッチ",
+      "illustrator": "Studio Bora Inc.",
+      "category": "Trainer",
+      "rarity": "Ultra Rare",
+      "id": "M3-104",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "105": {
+      "name": "タラゴン",
+      "illustrator": "Akira Komayama",
+      "category": "Trainer",
+      "rarity": "Ultra Rare",
+      "id": "M3-105",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "106": {
+      "name": "ピュール",
+      "illustrator": "DOM",
+      "category": "Trainer",
+      "rarity": "Ultra Rare",
+      "id": "M3-106",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "107": {
+      "name": "メイのはげまし",
+      "illustrator": "Atsushi Furusawa",
+      "category": "Trainer",
+      "rarity": "Ultra Rare",
+      "id": "M3-107",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "108": {
+      "name": "ユカリ",
+      "illustrator": "Susumu Maeya",
+      "category": "Trainer",
+      "rarity": "Ultra Rare",
+      "id": "M3-108",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "109": {
+      "name": "活力の森",
+      "illustrator": "AYUMI ODASHIMA",
+      "category": "Trainer",
+      "rarity": "Ultra Rare",
+      "id": "M3-109",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "110": {
+      "name": "ミアレシティ",
+      "illustrator": "MARINA Chikazawa",
+      "category": "Trainer",
+      "rarity": "Ultra Rare",
+      "id": "M3-110",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "111": {
+      "name": "メガスターミーex",
+      "hp": 330,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "illustrator": "takuyoa",
+      "retreat": 2,
+      "dexId": [
+        121
+      ],
+      "category": "Pokemon",
+      "rarity": "Special illustration rare",
+      "id": "M3-111",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "112": {
+      "name": "メガピクシーex",
+      "hp": 320,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Cona Nitanda",
+      "retreat": 1,
+      "dexId": [
+        36
+      ],
+      "category": "Pokemon",
+      "rarity": "Special illustration rare",
+      "id": "M3-112",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "113": {
+      "name": "メガジガルデex",
+      "hp": 310,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "kantaro",
+      "retreat": 2,
+      "dexId": [
+        718
+      ],
+      "category": "Pokemon",
+      "rarity": "Special illustration rare",
+      "id": "M3-113",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "114": {
+      "name": "ニャースex",
+      "hp": 170,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "Natsumi Yoshida",
+      "retreat": 1,
+      "dexId": [
+        52
+      ],
+      "category": "Pokemon",
+      "rarity": "Special illustration rare",
+      "id": "M3-114",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "115": {
+      "name": "メイのはげまし",
+      "illustrator": "Iori Suzuki",
+      "category": "Trainer",
+      "rarity": "Special illustration rare",
+      "id": "M3-115",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "116": {
+      "name": "ユカリ",
+      "illustrator": "Souichirou Gunjima",
+      "category": "Trainer",
+      "rarity": "Special illustration rare",
+      "id": "M3-116",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    },
+    "117": {
+      "name": "メガジガルデex",
+      "hp": 310,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "takuyoa",
+      "retreat": 2,
+      "dexId": [
+        718
+      ],
+      "attacks": [
+        {
+          "damage": 200,
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting"
+          ],
+          "name": "ガイアウェーブ"
+        },
+        {
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting",
+            "Fighting",
+            "Fighting"
+          ],
+          "name": "ムニキスゼロ"
+        }
+      ],
+      "category": "Pokemon",
+      "rarity": "Mega Hyper Rare",
+      "id": "M3-117",
+      "set": {
+        "id": "M3",
+        "name": "Nihil Zero"
+      },
+      "image": null
+    }
+  }
+}
