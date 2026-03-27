@@ -489,7 +489,28 @@
           const enTransSet = enTransSetId ? SIDELOAD_EN_SETS[enTransSetId] : null;
           if (enTransSet) {
             const jpNum = jpCard.id?.split('-')[1] || cardNum;
-            const transCard = enTransSet.cards[jpNum] || enTransSet.cards[rawNum];
+            let transCard = null;
+            // Sort by card number so lower-numbered (base) cards are preferred over alt-arts/URs
+            const enCardsSorted = Object.values(enTransSet.cards)
+              .sort((a, b) => parseInt(a.id.split('-')[1], 10) - parseInt(b.id.split('-')[1], 10));
+            if (jpCard.category === 'Pokemon' && jpCard.dexId?.length > 0) {
+              // Match by dexId + illustrator — card numbers may differ between JP and EN sets
+              transCard = enCardsSorted.find(c =>
+                c.dexId?.some(id => jpCard.dexId.includes(id)) &&
+                c.illustrator && jpCard.illustrator &&
+                c.illustrator.toLowerCase() === jpCard.illustrator.toLowerCase()
+              ) || enCardsSorted.find(c =>
+                c.dexId?.some(id => jpCard.dexId.includes(id))
+              );
+            } else if (jpCard.illustrator) {
+              // Trainer/Energy: match by illustrator within the EN translation set
+              transCard = enCardsSorted.find(c =>
+                c.category !== 'Pokemon' &&
+                c.illustrator?.toLowerCase() === jpCard.illustrator.toLowerCase()
+              );
+            }
+            // Fallback: direct card number (for sets where JP/EN numbers align exactly)
+            if (!transCard) transCard = enTransSet.cards[jpNum] || enTransSet.cards[rawNum];
             if (transCard) {
               setStatus('', false);
               document.getElementById('results').innerHTML = `
