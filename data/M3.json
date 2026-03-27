@@ -26,7 +26,8 @@
           "cost": [
             "Grass"
           ],
-          "name": "ねばるいと"
+          "name": "ねばるいと",
+          "effect": "During your opponent's next turn, the Defending Pokemon can't retreat."
         }
       ],
       "category": "Pokemon",
@@ -204,7 +205,13 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Big Wings",
+          "effect": "Once during your turn, you may have your opponent shuffle their hand and put all of those cards on the bottom of their deck. Then, your opponent draws 4 cards."
+        }
+      ]
     },
     "010": {
       "name": "モクロー",
@@ -267,7 +274,13 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Sniper Eye",
+          "effect": "If your opponent has exactly 4 cards in their hand, ignore all Colorless in this Pokemon's attack costs."
+        }
+      ]
     },
     "013": {
       "name": "ヒノヤコマ",
@@ -309,7 +322,13 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Sky Hunt",
+          "effect": "Once during your turn, you may flip a coin. If heads, your opponent discards a random card from their hand."
+        }
+      ]
     },
     "015": {
       "name": "ヤトウモリ",
@@ -372,7 +391,13 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Thorny Shell",
+          "effect": "When this Pokemon takes damage from an attack from your opponent's Pokemon while it is in the Active Spot, discard an Energy from the attacking Pokemon."
+        }
+      ]
     },
     "018": {
       "name": "パウワウ",
@@ -414,7 +439,13 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Wash Out",
+          "effect": "As often as you like during your turn, you may move a Water Energy from your Benched Pokemon to your Active Pokemon."
+        }
+      ]
     },
     "020": {
       "name": "ヒトデマン",
@@ -519,7 +550,13 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Tundra Wall",
+          "effect": "While this Pokemon is in play, all of your Pokemon that have a Water Energy attached take 50 less damage from attacks from your opponent's Pokemon. This Ability does not stack."
+        }
+      ]
     },
     "025": {
       "name": "コリンク",
@@ -582,7 +619,13 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Roar of the Tiger",
+          "effect": "If your opponent's Active Pokemon is a Pokemon ex, you can evolve this Pokemon on your first turn, or on the first turn this Pokemon is put into play."
+        }
+      ]
     },
     "028": {
       "name": "デデンネ",
@@ -666,7 +709,13 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Wings of Light",
+          "effect": "Prevent all effects of your opponent's Abilities done to this Pokemon."
+        }
+      ]
     },
     "032": {
       "name": "ニャスパー",
@@ -771,7 +820,13 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Fragrance Collection",
+          "effect": "Once during your turn, you may search your deck for up to 2 Basic Psychic Energy, reveal them, and put them into your hand. Then, shuffle your deck."
+        }
+      ]
     },
     "037": {
       "name": "ダイノーズ",
@@ -918,7 +973,13 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Stone Arms",
+          "effect": "Once during your turn, you may attach a Basic Fighting Energy from your hand to 1 of your Fighting Pokemon."
+        }
+      ]
     },
     "044": {
       "name": "ガチゴラス",
@@ -960,7 +1021,13 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Tyrannoguts",
+          "effect": "If this Pokemon has any Special Energy attached, it gets +150 HP."
+        }
+      ]
     },
     "046": {
       "name": "メガジガルデex",
@@ -1065,7 +1132,13 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Infinite Shadow",
+          "effect": "If this Pokemon would be Knocked Out by damage from an opponent's Pokemon's attack, instead of discarding it, return it to your hand. (Discard all other cards attached to this Pokemon that are not Pokemon.)"
+        }
+      ]
     },
     "051": {
       "name": "ドラピオン",
@@ -1317,7 +1390,13 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Last-Ditch Catch",
+          "effect": "Once during your turn, when you play this Pokemon from your hand onto your Bench, you may use this Ability. Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck."
+        }
+      ]
     },
     "063": {
       "name": "ホルビー",
@@ -1425,7 +1504,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "You may play this card as a 60 HP Basic Colorless Pokemon. This Pokemon can't be affected by Special Conditions and can't retreat. At any time during your turn, you may discard this card from play. Ability: Imitating Jaw - If this Pokemon is your Active Pokemon, attacks from your opponent's Active Pokemon do 30 less damage.",
+      "subcategory": "Item"
     },
     "069": {
       "name": "古びたヒレの化石",
@@ -1437,7 +1518,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "You may play this card as a 60 HP Basic Colorless Pokemon. This Pokemon can't be affected by Special Conditions and can't retreat. At any time during your turn, you may discard this card from play. Ability: Protective Sail - This Pokemon can't be affected by the effects of Supporter cards played from your opponent's hand.",
+      "subcategory": "Item"
     },
     "070": {
       "name": "ポケパッド",
@@ -1449,7 +1532,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "The Mega Zygarde ex this card is attached to can use the attacks on this card. [F][F][F][F] Geobuster: 350 damage. Discard all Energy from this Pokemon.",
+      "subcategory": "Pokemon Tool"
     },
     "071": {
       "name": "ミアレガレット",
@@ -1461,7 +1546,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "Flip a coin. If heads, discard an Energy attached to your opponent's Active Pokemon.",
+      "subcategory": "Item"
     },
     "072": {
       "name": "コアメモリ",
@@ -1473,7 +1560,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "Search your deck for a Basic Energy card, reveal it, and put it into your hand. Then, shuffle your deck.",
+      "subcategory": "Item"
     },
     "073": {
       "name": "タラゴン",
@@ -1485,7 +1574,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "Your opponent reveals their hand. Choose an Energy card you find there and put it on the bottom of your opponent's deck.",
+      "subcategory": "Item"
     },
     "074": {
       "name": "ピュール",
@@ -1497,7 +1588,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "Look at the top card of your opponent's deck. You may discard that card.",
+      "subcategory": "Item"
     },
     "075": {
       "name": "メイのはげまし",
@@ -1509,7 +1602,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "Heal 150 damage from 1 of your Psychic Pokemon.",
+      "subcategory": "Supporter"
     },
     "076": {
       "name": "ユカリ",
@@ -1521,7 +1616,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "Each player shuffles their hand into their deck and draws 4 cards.",
+      "subcategory": "Supporter"
     },
     "077": {
       "name": "ミアレシティ",
@@ -1533,7 +1630,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "Once during each player's turn, that player may search their deck for a Basic Pokemon and put it onto their Bench. Then, that player shuffles their deck. If a player uses this effect, their turn ends.",
+      "subcategory": "Stadium"
     },
     "078": {
       "name": "グロウ草エネルギー",
@@ -1544,7 +1643,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "Heal 20 damage and 1 Special Condition from your Active Pokemon.",
+      "subcategory": "Item"
     },
     "079": {
       "name": "テレパス超エネルギー",
@@ -1555,7 +1656,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "Discard any number of cards from your hand. Then, draw cards until you have 5 cards in your hand.",
+      "subcategory": "Supporter"
     },
     "080": {
       "name": "ロック闘エネルギー",
@@ -1566,7 +1669,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "Flip a coin. If heads, search your deck for a Pokemon, reveal it, and put it into your hand. Then, shuffle your deck.",
+      "subcategory": "Item"
     },
     "081": {
       "name": "コフーライ",
@@ -1587,7 +1692,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "Search your deck for a Pokemon that doesn't have a Rule Box, reveal it, and put it into your hand. Then, shuffle your deck.",
+      "subcategory": "Item"
     },
     "082": {
       "name": "モクロー",
@@ -1608,7 +1715,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "Switch 1 of your opponent's Benched Pokemon with their Active Pokemon.",
+      "subcategory": "Item"
     },
     "083": {
       "name": "ファイアロー",
@@ -1629,7 +1738,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "Heal 30 damage from 1 of your Pokemon.",
+      "subcategory": "Item"
     },
     "084": {
       "name": "アマルルガ",
@@ -1650,7 +1761,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "You can only use this card if you have more Prize cards remaining than your opponent. Attach up to 2 Basic Energy cards from your discard pile to 1 of your Stage 2 Pokemon.",
+      "subcategory": "Supporter"
     },
     "085": {
       "name": "デデンネ",
@@ -1671,7 +1784,9 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "Put up to 4 in any combination of Fighting Pokemon and Basic Fighting Energy from your discard pile into your hand.",
+      "subcategory": "Supporter"
     },
     "086": {
       "name": "ピッピ",
@@ -1692,7 +1807,8 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "This card provides Grass Energy while attached to a Pokemon. The Grass Pokemon this card is attached to gets +20 HP."
     },
     "087": {
       "name": "ニャスパー",
@@ -1713,7 +1829,8 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "This card provides Fighting Energy while attached to a Pokemon. Prevent all effects of attacks used by your opponent's Pokemon done to the Fighting Pokemon this card is attached to. (Existing effects are not removed. Damage is not an effect.)"
     },
     "088": {
       "name": "ダイノーズ",
@@ -1734,7 +1851,8 @@
         "id": "M3",
         "name": "Nihil Zero"
       },
-      "image": null
+      "image": null,
+      "effect": "This card provides Psychic Energy while attached to a Pokemon. When you attach this card from your hand to 1 of your Psychic Pokemon, you may search your deck for 2 Basic Psychic Pokemon and put them onto your Bench. Then, shuffle your deck."
     },
     "089": {
       "name": "チゴラス",
