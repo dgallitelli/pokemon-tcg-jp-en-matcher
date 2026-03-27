@@ -38,13 +38,13 @@
             "Colorless",
             "Colorless"
           ],
-          "effect": "Discard an Energy from your opponent's Active Pokemon."
+          "effect": "Discard an Energy from your opponent's Active Pokémon."
         }
       ],
       "abilities": [
         {
-          "name": "Sniper Eye",
-          "effect": "If your opponent has exactly 4 cards in their hand, ignore all Colorless in this Pokemon's attack costs."
+          "name": "Sniper's Eye",
+          "effect": "If your opponent has exactly 4 cards in hand, ignore all Colorless Energy in the cost of attacks used by this Pokémon."
         }
       ]
     },
@@ -74,7 +74,7 @@
           "cost": [
             "Fire"
           ],
-          "effect": "Search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck."
+          "effect": "Search your deck for up to any 2 cards and put them into your hand. Then shuffle your deck."
         },
         {
           "name": "Dire Nails",
@@ -83,7 +83,7 @@
             "Fire",
             "Fire"
           ],
-          "effect": "Your opponent's Active Pokemon is now Poisoned and Burned. Switch this Pokemon with 1 of your Benched Pokemon."
+          "effect": "Your opponent's Active Pokémon is now Poisoned and Burned. Switch this Pokémon with one of your Benched Pokemon."
         }
       ]
     },
@@ -114,7 +114,7 @@
           "cost": [
             "Water"
           ],
-          "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+          "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokemon."
         },
         {
           "name": "Nebula Beam",
@@ -124,7 +124,7 @@
             "Colorless",
             "Colorless"
           ],
-          "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokemon."
+          "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokémon."
         }
       ]
     },
@@ -156,13 +156,13 @@
             "Psychic",
             "Psychic"
           ],
-          "effect": "You may discard up to 4 Energy cards from your hand. If you do, this attack does 40 more damage for each card discarded in this way."
+          "effect": "You may discard up to 4 Energy cards from your hand. This attack does 40 more damage for each card discarded this way."
         }
       ],
       "abilities": [
         {
-          "name": "Wings of Light",
-          "effect": "Prevent all effects of your opponent's Abilities done to this Pokemon."
+          "name": "Luminous Wing",
+          "effect": "Prevent all effects of your opponent's Abilities done to this Pokémon."
         }
       ]
     },
@@ -195,7 +195,7 @@
             "Fighting",
             "Fighting"
           ],
-          "effect": "During your opponent's next turn, this Pokemon takes 30 less damage from attacks (after applying Weakness and Resistance)."
+          "effect": "This Pokémon takes 30 less damage from attacks during your opponent's next turn."
         },
         {
           "name": "Nullifying Zero",
@@ -206,7 +206,7 @@
             "Fighting",
             "Fighting"
           ],
-          "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack does 150 damage to that Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+          "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack deals 150 damage to that Pokemon."
         }
       ]
     },
@@ -238,7 +238,7 @@
             "Darkness",
             "Colorless"
           ],
-          "effect": "Knock Out each of your opponent's Pokemon that has 50 HP or less remaining."
+          "effect": "All of your opponent's Pokémon that have 50 HP or less remaining are now Knocked Out."
         },
         {
           "name": "Dark Strike",
@@ -248,7 +248,7 @@
             "Darkness",
             "Colorless"
           ],
-          "effect": "During your next turn, this Pokemon can't use Dark Strike."
+          "effect": "During your next turn, this Pokémon can't use Dark Strike."
         }
       ]
     },
@@ -280,7 +280,7 @@
             "Metal",
             "Colorless"
           ],
-          "effect": "Shuffle all Energy from this Pokemon into your deck. This attack does 220 damage to 1 of your opponent's Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+          "effect": "Shuffle all Energy from this Pokémon into your deck. This attack does 220 damage to 1 of your opponent's Pokémon."
         }
       ]
     },
@@ -313,13 +313,13 @@
             "Colorless",
             "Colorless"
           ],
-          "effect": "Put this Pokemon and all attached cards into your hand."
+          "effect": "Put this Pokémon and all cards attached to it back into your hand."
         }
       ],
       "abilities": [
         {
           "name": "Last-Ditch Catch",
-          "effect": "Once during your turn, when you play this Pokemon from your hand onto your Bench, you may use this Ability. Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck."
+          "effect": "Once during your turn, when you play this Pokémon from your hand onto your Bench, you may search your deck for a Supporter card and put it into your hand. You can't use this Ability if you've already used another Ability with \"Trump Card\" it its name this turn."
         }
       ]
     },
@@ -335,7 +335,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Shuffle up to 5 Basic Energy cards from your discard pile into your deck."
+      "effect": "Shuffle up to 5 Basic Energy cards from your discard pile into your deck.",
+      "subcategory": "Item"
     },
     "109": {
       "name": "Forest of Vitality",
@@ -349,7 +350,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Each player's Grass Pokémon may evolve on the turn they come into play (except on the first turn of the game)."
+      "effect": "Each player's Grass Pokémon may evolve on the turn they come into play (except on the first turn of the game).",
+      "subcategory": "Stadium"
     },
     "110": {
       "name": "Jacinthe",
@@ -363,7 +365,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Heal 150 damage from 1 of your Psychic Pokemon."
+      "effect": "Heal 150 damage from 1 of your Psychic Pokémon.",
+      "subcategory": "Supporter"
     },
     "111": {
       "name": "Lumiose City",
@@ -377,7 +380,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Once during each player's turn, that player may search their deck for a Basic Pokemon and put it onto their Bench. Then, that player shuffles their deck. If a player uses this effect, their turn ends."
+      "effect": "Once during each player's turn, that player may search their deck for a Basic Pokémon and put it onto their Bench. Then, that player shuffles their deck. If a player uses this effect, their turn ends.",
+      "subcategory": "Stadium"
     },
     "112": {
       "name": "Naveen",
@@ -391,7 +395,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Discard any number of cards from your hand. Then, draw cards until you have 5 cards in your hand."
+      "effect": "Draw until you have 5 cards in hand. Before drawing, you may discard any number of cards from your hand.",
+      "subcategory": "Supporter"
     },
     "113": {
       "name": "Poké Pad",
@@ -405,7 +410,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Search your deck for a Pokemon that doesn't have a Rule Box, reveal it, and put it into your hand. Then, shuffle your deck."
+      "effect": "Search your deck for a Pokémon that doesn't have a Rule Box, reveal it, and put it into your hand. Then shuffle your deck.",
+      "subcategory": "Item"
     },
     "114": {
       "name": "Rosa's Encouragement",
@@ -419,7 +425,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "You can only use this card if you have more Prize cards remaining than your opponent. Attach up to 2 Basic Energy cards from your discard pile to 1 of your Stage 2 Pokemon."
+      "effect": "You can play this card only if you have more Prize cards remaining than your opponent. Attach up to 2 Basic Energy from your discard pile to 1 of your Stage 2 Pokémon.",
+      "subcategory": "Supporter"
     },
     "115": {
       "name": "Sacred Ash",
@@ -433,7 +440,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Shuffle all Pokémon from your discard pile into your deck."
+      "effect": "Shuffle all Pokémon from your discard pile into your deck.",
+      "subcategory": "Item"
     },
     "116": {
       "name": "Tarragon",
@@ -447,7 +455,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Put up to 4 in any combination of Fighting Pokemon and Basic Fighting Energy from your discard pile into your hand."
+      "effect": "Put up to 4 in any combination of Fighting Pokémon and Basic Fighting Energy cards from your discard pile into your hand.",
+      "subcategory": "Supporter"
     },
     "117": {
       "name": "Wondrous Patch",
@@ -461,7 +470,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Attach a Basic Psychic Energy from your discard pile to 1 of your Benched Psychic Pokémon."
+      "effect": "Attach a Basic Psychic Energy from your discard pile to 1 of your Benched Psychic Pokémon.",
+      "subcategory": "Item"
     },
     "118": {
       "name": "Mega Starmie ex",
@@ -490,7 +500,7 @@
           "cost": [
             "Water"
           ],
-          "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+          "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokemon."
         },
         {
           "name": "Nebula Beam",
@@ -500,7 +510,7 @@
             "Colorless",
             "Colorless"
           ],
-          "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokemon."
+          "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokémon."
         }
       ]
     },
@@ -532,13 +542,13 @@
             "Psychic",
             "Psychic"
           ],
-          "effect": "You may discard up to 4 Energy cards from your hand. If you do, this attack does 40 more damage for each card discarded in this way."
+          "effect": "You may discard up to 4 Energy cards from your hand. This attack does 40 more damage for each card discarded this way."
         }
       ],
       "abilities": [
         {
-          "name": "Wings of Light",
-          "effect": "Prevent all effects of your opponent's Abilities done to this Pokemon."
+          "name": "Luminous Wing",
+          "effect": "Prevent all effects of your opponent's Abilities done to this Pokémon."
         }
       ]
     },
@@ -571,7 +581,7 @@
             "Fighting",
             "Fighting"
           ],
-          "effect": "During your opponent's next turn, this Pokemon takes 30 less damage from attacks (after applying Weakness and Resistance)."
+          "effect": "This Pokémon takes 30 less damage from attacks during your opponent's next turn."
         },
         {
           "name": "Nullifying Zero",
@@ -582,7 +592,7 @@
             "Fighting",
             "Fighting"
           ],
-          "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack does 150 damage to that Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+          "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack deals 150 damage to that Pokemon."
         }
       ]
     },
@@ -615,13 +625,13 @@
             "Colorless",
             "Colorless"
           ],
-          "effect": "Put this Pokemon and all attached cards into your hand."
+          "effect": "Put this Pokémon and all cards attached to it back into your hand."
         }
       ],
       "abilities": [
         {
           "name": "Last-Ditch Catch",
-          "effect": "Once during your turn, when you play this Pokemon from your hand onto your Bench, you may use this Ability. Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck."
+          "effect": "Once during your turn, when you play this Pokémon from your hand onto your Bench, you may search your deck for a Supporter card and put it into your hand. You can't use this Ability if you've already used another Ability with \"Trump Card\" it its name this turn."
         }
       ]
     },
@@ -637,7 +647,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "You can only use this card if you have more Prize cards remaining than your opponent. Attach up to 2 Basic Energy cards from your discard pile to 1 of your Stage 2 Pokemon."
+      "effect": "You can play this card only if you have more Prize cards remaining than your opponent. Attach up to 2 Basic Energy from your discard pile to 1 of your Stage 2 Pokémon.",
+      "subcategory": "Supporter"
     },
     "123": {
       "name": "Jacinthe",
@@ -651,7 +662,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Heal 150 damage from 1 of your Psychic Pokemon."
+      "effect": "Heal 150 damage from 1 of your Psychic Pokémon.",
+      "subcategory": "Supporter"
     },
     "124": {
       "name": "Mega Zygarde ex",
@@ -682,7 +694,7 @@
             "Fighting",
             "Fighting"
           ],
-          "effect": "During your opponent's next turn, this Pokemon takes 30 less damage from attacks (after applying Weakness and Resistance)."
+          "effect": "This Pokémon takes 30 less damage from attacks during your opponent's next turn."
         },
         {
           "name": "Nullifying Zero",
@@ -693,7 +705,7 @@
             "Fighting",
             "Fighting"
           ],
-          "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack does 150 damage to that Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+          "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack deals 150 damage to that Pokemon."
         }
       ]
     },
@@ -724,7 +736,7 @@
           "cost": [
             "Grass"
           ],
-          "effect": "During your opponent's next turn, the Defending Pokemon can't retreat."
+          "effect": "The Defending Pokémon can't retreat during your opponent's next turn."
         }
       ]
     },
@@ -755,7 +767,7 @@
           "cost": [
             "Grass"
           ],
-          "effect": "Your opponent's Active Pokemon is now Poisoned. During your opponent's next turn, the Defending Pokemon can't retreat."
+          "effect": "Your opponent's Active Pokémon is now Poisoned. The Defending Pokémon can't retreat during your opponent's next turn"
         }
       ]
     },
@@ -785,7 +797,7 @@
           "cost": [
             "Grass"
           ],
-          "effect": "Search your deck for an Energy and attach it to 1 of your Benched Grass Pokemon. Then, shuffle your deck."
+          "effect": "Search your deck for an Energy card and attach it to 1 of your Benched Grass Pokémon. Then, shuffle your deck"
         },
         {
           "name": "Leaf Step",
@@ -823,7 +835,7 @@
           "cost": [
             "Grass"
           ],
-          "effect": "This Pokemon does 10 damage to itself."
+          "effect": "This Pokémon also does 10 damage to itself"
         }
       ]
     },
@@ -884,7 +896,7 @@
           "cost": [
             "Grass"
           ],
-          "effect": "This attack does 20 damage for each Pokemon you have in play."
+          "effect": "This attack does 20 damage for each of your Pokémon in play."
         },
         {
           "name": "Solar Coiling",
@@ -954,7 +966,7 @@
           "cost": [
             "Grass"
           ],
-          "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage and effects from attacks done to this Pokemon."
+          "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon"
         }
       ]
     },
@@ -985,13 +997,13 @@
           "cost": [
             "Grass"
           ],
-          "effect": "If there is a Stadium in play, this attack does 60 more damage."
+          "effect": "If a Stadium is in play, this attack does 60 more damage."
         }
       ],
       "abilities": [
         {
-          "name": "Big Wings",
-          "effect": "Once during your turn, you may have your opponent shuffle their hand and put all of those cards on the bottom of their deck. Then, your opponent draws 4 cards."
+          "name": "Grand Wing",
+          "effect": "Once during your turn, you may have your opponent shuffle their hand and put it at the bottom of their deck. Then, your opponent draws 4 cards."
         }
       ]
     },
@@ -1021,7 +1033,7 @@
           "cost": [
             "Grass"
           ],
-          "effect": "Search your deck for a Pokemon, reveal it, and put it into your hand. Then, shuffle your deck."
+          "effect": "Search your deck for 1 Pokemon card, reveal it, and put it into your hand. Then shuffle your deck."
         },
         {
           "name": "Tackle",
@@ -1069,7 +1081,7 @@
             "Colorless",
             "Colorless"
           ],
-          "effect": "Discard all Energy attached to this Pokemon. Choose 1 of your opponent's Pokemon. This attack does 90 damage to that Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+          "effect": "Discard all Energy from this Pokémon. This attack does 90 damage to 1 of your opponent's Pokemon."
         }
       ]
     },
@@ -1103,13 +1115,13 @@
             "Colorless",
             "Colorless"
           ],
-          "effect": "Discard an Energy from your opponent's Active Pokemon."
+          "effect": "Discard an Energy from your opponent's Active Pokémon."
         }
       ],
       "abilities": [
         {
-          "name": "Sniper Eye",
-          "effect": "If your opponent has exactly 4 cards in their hand, ignore all Colorless in this Pokemon's attack costs."
+          "name": "Sniper's Eye",
+          "effect": "If your opponent has exactly 4 cards in hand, ignore all Colorless Energy in the cost of attacks used by this Pokémon."
         }
       ]
     },
@@ -1177,7 +1189,7 @@
       "abilities": [
         {
           "name": "Sky Hunt",
-          "effect": "Once during your turn, you may flip a coin. If heads, your opponent discards a random card from their hand."
+          "effect": "Once during your turn, you may flip a coin. If heads, discard a random card from your opponent's hand."
         }
       ]
     },
@@ -1237,7 +1249,7 @@
           "cost": [
             "Fire"
           ],
-          "effect": "Search your deck for up to 2 cards and put them into your hand. Then, shuffle your deck."
+          "effect": "Search your deck for up to any 2 cards and put them into your hand. Then shuffle your deck."
         },
         {
           "name": "Dire Nails",
@@ -1246,7 +1258,7 @@
             "Fire",
             "Fire"
           ],
-          "effect": "Your opponent's Active Pokemon is now Poisoned and Burned. Switch this Pokemon with 1 of your Benched Pokemon."
+          "effect": "Your opponent's Active Pokémon is now Poisoned and Burned. Switch this Pokémon with one of your Benched Pokemon."
         }
       ]
     },
@@ -1279,13 +1291,13 @@
             "Fire",
             "Colorless"
           ],
-          "effect": "Flip a coin. If heads, this attack does 80 more damage."
+          "effect": "Flip a coin. If heads, this attack does 80 more damage"
         }
       ],
       "abilities": [
         {
-          "name": "Thorny Shell",
-          "effect": "When this Pokemon takes damage from an attack from your opponent's Pokemon while it is in the Active Spot, discard an Energy from the attacking Pokemon."
+          "name": "Shell Spikes",
+          "effect": "When this Pokémon takes damage from your opponent's Active Pokémon's attacks, discard an Energy from your opponent's Active Pokémon"
         }
       ]
     },
@@ -1360,7 +1372,7 @@
       "abilities": [
         {
           "name": "Wash Out",
-          "effect": "As often as you like during your turn, you may move a Water Energy from your Benched Pokemon to your Active Pokemon."
+          "effect": "As often as you like during your turn, you may move a Water Energy from 1 of your Benched Pokémon to your Active Pokémon."
         }
       ]
     },
@@ -1421,7 +1433,7 @@
           "cost": [
             "Water"
           ],
-          "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+          "effect": "This attack also does 50 damage to 1 of your opponent's Benched Pokemon."
         },
         {
           "name": "Nebula Beam",
@@ -1431,7 +1443,7 @@
             "Colorless",
             "Colorless"
           ],
-          "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokemon."
+          "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokémon."
         }
       ]
     },
@@ -1461,7 +1473,7 @@
           "cost": [
             "Water"
           ],
-          "effect": "Attach up to 2 Basic Water Energy from your discard pile to 1 of your Benched Pokemon."
+          "effect": "This attack does 30 damage for each Energy attached to this Pokémon. Switch this Pokémon with one of your Benched Pokémon"
         },
         {
           "name": "Surf",
@@ -1502,7 +1514,7 @@
             "Water",
             "Colorless"
           ],
-          "effect": "Your opponent's Active Pokemon is now Asleep."
+          "effect": "Your opponent's Active Pokémon is now Paralyzed"
         }
       ]
     },
@@ -1535,13 +1547,13 @@
             "Water",
             "Colorless"
           ],
-          "effect": "During your opponent's next turn, the Defending Pokemon can't attack."
+          "effect": "During your opponent's next turn, the defending Pokemon can't attack."
         }
       ],
       "abilities": [
         {
           "name": "Tundra Wall",
-          "effect": "While this Pokemon is in play, all of your Pokemon that have a Water Energy attached take 50 less damage from attacks from your opponent's Pokemon. This Ability does not stack."
+          "effect": "Your Pokemon with any Water Energy attached to them take 50 less damage from attacks from your opponent's Pokemon. The effect of this Ability does not stack."
         }
       ]
     },
@@ -1582,7 +1594,7 @@
             "Water",
             "Colorless"
           ],
-          "effect": "Flip a coin for each Water Energy attached to this Pokemon. This attack does 90 damage for each heads."
+          "effect": "Flip a coin for each Energy attached to this Pokémon. This attack does 80 damage for each heads"
         }
       ],
       "abilities": [
@@ -1619,7 +1631,7 @@
           "cost": [
             "Lightning"
           ],
-          "effect": "Flip 2 coins. This attack does 10 damage for each heads."
+          "effect": "Flip 2 coins. This attack does 10 damage for each heads"
         }
       ]
     },
@@ -1654,8 +1666,8 @@
       ],
       "abilities": [
         {
-          "name": "Roar of the Tiger",
-          "effect": "If your opponent's Active Pokemon is a Pokemon ex, you can evolve this Pokemon on your first turn, or on the first turn this Pokemon is put into play."
+          "name": "Fighting Roar",
+          "effect": "If your opponent's Active Pokémon is a Pokémon-ex, this Pokémon can evolve on your first turn, or the first turn it is in play"
         }
       ]
     },
@@ -1686,7 +1698,7 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "This attack does 70 damage for each Prize card you have taken."
+          "effect": "This attack does 70 damage for each Prize card you have taken"
         },
         {
           "name": "Strong Volt",
@@ -1695,7 +1707,7 @@
             "Colorless",
             "Colorless"
           ],
-          "effect": "Discard 2 Energy from this Pokemon."
+          "effect": "Discard 2 Energy from this Pokémon"
         }
       ],
       "abilities": [
@@ -1732,7 +1744,7 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "For each Energy attached to all of your opponent's Pokemon, you may attach a Basic Lightning Energy from your discard pile to your Lightning Pokemon in any way you like."
+          "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
         }
       ]
     },
@@ -1762,7 +1774,7 @@
           "cost": [
             "Psychic"
           ],
-          "effect": "Switch 1 of your opponent's Benched Pokemon with their Active Pokemon."
+          "effect": "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon."
         },
         {
           "name": "Flop",
@@ -1802,13 +1814,13 @@
             "Psychic",
             "Psychic"
           ],
-          "effect": "You may discard up to 4 Energy cards from your hand. If you do, this attack does 40 more damage for each card discarded in this way."
+          "effect": "You may discard up to 4 Energy cards from your hand. This attack does 40 more damage for each card discarded this way."
         }
       ],
       "abilities": [
         {
-          "name": "Wings of Light",
-          "effect": "Prevent all effects of your opponent's Abilities done to this Pokemon."
+          "name": "Luminous Wing",
+          "effect": "Prevent all effects of your opponent's Abilities done to this Pokémon."
         }
       ]
     },
@@ -1840,7 +1852,7 @@
             "Psychic",
             "Colorless"
           ],
-          "effect": "Discard up to 2 Energy cards from your hand. This attack does 60 damage for each card discarded in this way."
+          "effect": "Discard up to 2 Energy from your hand. This attack does 60 damage for each Energy discarded in this way"
         }
       ],
       "abilities": [
@@ -1876,7 +1888,7 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "Heal 20 damage from this Pokemon."
+          "effect": "Heal 20 damage from this Pokémon"
         },
         {
           "name": "Stampede",
@@ -1913,7 +1925,7 @@
           "cost": [
             "Psychic"
           ],
-          "effect": "Your opponent's Active Pokemon is now Confused."
+          "effect": "Your opponent's Active Pokémon is now Asleep."
         },
         {
           "name": "Psychic",
@@ -1921,7 +1933,7 @@
           "cost": [
             "Psychic"
           ],
-          "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokemon."
+          "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon"
         }
       ]
     },
@@ -1951,7 +1963,7 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "Heal 30 damage from 1 of your Pokemon."
+          "effect": "Heal 30 damage from 1 of your Pokémon"
         },
         {
           "name": "Ram",
@@ -1990,13 +2002,13 @@
             "Psychic",
             "Colorless"
           ],
-          "effect": "Heal 30 damage from this Pokemon."
+          "effect": "Heal 30 damage from this Pokémon"
         }
       ],
       "abilities": [
         {
-          "name": "Fragrance Collection",
-          "effect": "Once during your turn, you may search your deck for up to 2 Basic Psychic Energy, reveal them, and put them into your hand. Then, shuffle your deck."
+          "name": "Scent Collection",
+          "effect": "Once during your turn, you may search your deck for up to 2 Basic Psychic Energy, reveal them, and put them into your hand. Then shuffle your deck."
         }
       ]
     },
@@ -2075,7 +2087,7 @@
             "Fighting",
             "Colorless"
           ],
-          "effect": "Discard 3 Energy from this Pokemon."
+          "effect": "Discard 3 Energy from this Pokémon"
         }
       ]
     },
@@ -2105,7 +2117,7 @@
           "cost": [
             "Fighting"
           ],
-          "effect": "During your opponent's next turn, if the Defending Pokemon tries to use an attack, your opponent flips a coin. If tails, that attack doesn't happen."
+          "effect": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, their attack does nothing"
         },
         {
           "name": "Bite",
@@ -2147,7 +2159,7 @@
             "Fighting",
             "Colorless"
           ],
-          "effect": "If you played Tarragon from your hand during this turn, discard the top 3 cards from your opponent's deck."
+          "effect": "If you played Tarragon from your hand during this turn, discard the top 3 cards of your opponent's deck"
         },
         {
           "name": "Heavy Impact",
@@ -2199,7 +2211,7 @@
             "Fighting",
             "Colorless"
           ],
-          "effect": "Return an Energy card attached to this Pokemon to your hand."
+          "effect": "Put 1 Energy attached to this Pokémon back into your hand"
         }
       ]
     },
@@ -2229,7 +2241,7 @@
           "cost": [
             "Fighting"
           ],
-          "effect": "Draw 2 cards."
+          "effect": "Draw 2 cards"
         },
         {
           "name": "Scratch",
@@ -2275,7 +2287,7 @@
       "abilities": [
         {
           "name": "Stone Arms",
-          "effect": "Once during your turn, you may attach a Basic Fighting Energy from your hand to 1 of your Fighting Pokemon."
+          "effect": "Once during your turn, you may attach 1 Fighting Energy from your hand to 1 of your Fighting type Pokémon."
         }
       ]
     },
@@ -2307,7 +2319,7 @@
             "Fighting",
             "Colorless"
           ],
-          "effect": "This attack does 20 damage times the number of damage counters on this Pokemon."
+          "effect": "This attack does 20 damage for each damage counter on this Pokémon"
         }
       ],
       "abilities": [
@@ -2350,8 +2362,8 @@
       ],
       "abilities": [
         {
-          "name": "Tyrannoguts",
-          "effect": "If this Pokemon has any Special Energy attached, it gets +150 HP."
+          "name": "Tyranically Gutsy",
+          "effect": "If this Pokémon has any Special Energy attached to it, it has +150 HP."
         }
       ]
     },
@@ -2382,7 +2394,7 @@
           "cost": [
             "Fighting"
           ],
-          "effect": "If your Benched Pokemon have any damage counters on them, this attack does 60 more damage."
+          "effect": "If any of your Benched Pokémon have any damage counters on them, this attack does 60 more damage"
         }
       ],
       "abilities": [
@@ -2421,7 +2433,7 @@
             "Fighting",
             "Fighting"
           ],
-          "effect": "During your opponent's next turn, this Pokemon takes 30 less damage from attacks (after applying Weakness and Resistance)."
+          "effect": "This Pokémon takes 30 less damage from attacks during your opponent's next turn."
         },
         {
           "name": "Nullifying Zero",
@@ -2432,7 +2444,7 @@
             "Fighting",
             "Fighting"
           ],
-          "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack does 150 damage to that Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+          "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack deals 150 damage to that Pokemon."
         }
       ]
     },
@@ -2463,7 +2475,7 @@
           "cost": [
             "Darkness"
           ],
-          "effect": "Flip a coin. If tails, this attack does nothing."
+          "effect": "Flip a coin. If tails, this attack does nothing"
         }
       ]
     },
@@ -2493,7 +2505,7 @@
           "cost": [
             "Darkness"
           ],
-          "effect": "Put 3 damage counters on your opponent's Active Pokemon."
+          "effect": "Put 3 damage counters on your opponent's Active Pokémon"
         }
       ]
     },
@@ -2524,13 +2536,13 @@
           "cost": [
             "Darkness"
           ],
-          "effect": "This attack does 30 more damage for each of your opponent's Benched Pokemon."
+          "effect": "This attack does 30 damage for each of your opponent's Benched Pokémon."
         }
       ],
       "abilities": [
         {
           "name": "Infinite Shadow",
-          "effect": "If this Pokemon would be Knocked Out by damage from an opponent's Pokemon's attack, instead of discarding it, return it to your hand. (Discard all other cards attached to this Pokemon that are not Pokemon.)"
+          "effect": "When this Pokémon is knocked out by damage from your opponent's Pokémon's attacks, put this Pokémon in your hand instead of the Discard Pile. (Discard all other cards attached to this Pokémon)"
         }
       ]
     },
@@ -2562,7 +2574,7 @@
             "Darkness",
             "Darkness"
           ],
-          "effect": "Your opponent's Active Pokemon is now Poisoned."
+          "effect": "Your opponent's Active Pokémon is now Poisoned."
         }
       ],
       "abilities": [
@@ -2609,7 +2621,7 @@
             "Darkness",
             "Darkness"
           ],
-          "effect": "This Pokemon does 70 damage to itself. Your opponent's Active Pokemon is now Poisoned and Paralyzed."
+          "effect": "This Pokémon also does 70 damage to itself. Your oppponent's Active Pokémon is now Poisoned and Paralyzed"
         }
       ]
     },
@@ -2641,7 +2653,7 @@
             "Darkness",
             "Colorless"
           ],
-          "effect": "Knock Out each of your opponent's Pokemon that has 50 HP or less remaining."
+          "effect": "All of your opponent's Pokémon that have 50 HP or less remaining are now Knocked Out."
         },
         {
           "name": "Dark Strike",
@@ -2651,7 +2663,7 @@
             "Darkness",
             "Colorless"
           ],
-          "effect": "During your next turn, this Pokemon can't use Dark Strike."
+          "effect": "During your next turn, this Pokémon can't use Dark Strike."
         }
       ]
     },
@@ -2682,7 +2694,7 @@
           "cost": [
             "Darkness"
           ],
-          "effect": "You may switch this Pokemon with 1 of your Benched Pokemon."
+          "effect": "You may switch this Pokémon with 1 of your Benched Pokémon."
         },
         {
           "name": "Rising Blade",
@@ -2692,7 +2704,7 @@
             "Darkness",
             "Colorless"
           ],
-          "effect": "If your opponent's Active Pokemon is a Pokemon ex, this attack does 80 more damage."
+          "effect": "If your opponent's Active Pokémon is a Pokémon-ex, this attack does 80 more damage"
         }
       ]
     },
@@ -2724,7 +2736,7 @@
             "Metal",
             "Colorless"
           ],
-          "effect": "Shuffle all Energy from this Pokemon into your deck. This attack does 220 damage to 1 of your opponent's Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+          "effect": "Shuffle all Energy from this Pokémon into your deck. This attack does 220 damage to 1 of your opponent's Pokémon."
         }
       ]
     },
@@ -2786,7 +2798,7 @@
             "Colorless",
             "Colorless"
           ],
-          "effect": "You may reveal any number of Honedge, Doublade, and Aegislash from your hand. This attack does 60 damage for each card you revealed."
+          "effect": "You may reveal any number of Honedge, Doublade and Aegislash from your hand. This attack does 60 damage for each card you revealed this way."
         }
       ]
     },
@@ -2829,7 +2841,7 @@
             "Colorless",
             "Colorless"
           ],
-          "effect": "This Pokemon can't attack during your next turn."
+          "effect": "This Pokémon can't attack during your next turn."
         }
       ]
     },
@@ -2860,7 +2872,7 @@
           "cost": [
             "Metal"
           ],
-          "effect": "Choose an attack on your opponent's Active Pokemon. During your opponent's next turn, the Defending Pokemon can't use that attack."
+          "effect": "Choose 1 move on your opponent's Active Pokémon. During your opponent's next turn, the Defending Pokémon can't use that move."
         }
       ]
     },
@@ -2891,7 +2903,7 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "This Pokemon does 10 damage to itself."
+          "effect": "This Pokémon also does 10 damage to itself"
         }
       ]
     },
@@ -2922,7 +2934,7 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "Before doing damage, you may discard a Pokemon Tool attached to your opponent's Active Pokemon."
+          "effect": "Before dealing damage, discard any Pokémon Tool attached to your opponent's Active Pokémon."
         },
         {
           "name": "Retaliatory Incisors",
@@ -2963,13 +2975,13 @@
             "Colorless",
             "Colorless"
           ],
-          "effect": "Put this Pokemon and all attached cards into your hand."
+          "effect": "Put this Pokémon and all cards attached to it back into your hand."
         }
       ],
       "abilities": [
         {
           "name": "Last-Ditch Catch",
-          "effect": "Once during your turn, when you play this Pokemon from your hand onto your Bench, you may use this Ability. Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck."
+          "effect": "Once during your turn, when you play this Pokémon from your hand onto your Bench, you may search your deck for a Supporter card and put it into your hand. You can't use this Ability if you've already used another Ability with \"Trump Card\" it its name this turn."
         }
       ]
     },
@@ -2999,7 +3011,7 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "Flip a coin until you get tails. For each heads, you may search your deck for a Basic Energy and attach it to this Pokemon. Then, shuffle your deck."
+          "effect": "Flip a coin until you get a tails. For each heads, search your deck for an Energy card and attach it to this Pokémon. Then, shuffle your deck"
         },
         {
           "name": "Collapse",
@@ -3010,7 +3022,7 @@
             "Colorless",
             "Colorless"
           ],
-          "effect": "This Pokemon is now Asleep."
+          "effect": "This Pokémon is now Asleep"
         }
       ],
       "abilities": [
@@ -3077,7 +3089,7 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "This attack does 30 damage to each of your Benched Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+          "effect": "This attack does 30 damage to all of your Benched Pokémon."
         },
         {
           "name": "Whap Down",
@@ -3116,7 +3128,7 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "Search your deck for up to 2 Pokemon with Fighting Resistances, reveal them, and put them into your hand. Then, shuffle your deck."
+          "effect": "Search your deck for 2 Fire Pokémon, reveal them, and put them into your hand. Then, shuffle your dcek"
         },
         {
           "name": "Peck",
@@ -3154,7 +3166,7 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "Discard random cards from your opponent's hand until they have 5 cards in their hand."
+          "effect": "Discard random cards from your opponent's hand until they have 5 cards in hand."
         },
         {
           "name": "Headbutt",
@@ -3177,7 +3189,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "You may play this card as a 60 HP Basic Colorless Pokemon. This Pokemon can't be affected by Special Conditions and can't retreat. At any time during your turn, you may discard this card from play. Ability: Imitating Jaw - If this Pokemon is your Active Pokemon, attacks from your opponent's Active Pokemon do 30 less damage.",
+      "effect": "Play this card as if it were a 60-HP Basic Pokémon. At any time during your turn, you may discard this card from play. This card can't retreat.",
       "subcategory": "Item"
     },
     "069": {
@@ -3192,7 +3204,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "You may play this card as a 60 HP Basic Colorless Pokemon. This Pokemon can't be affected by Special Conditions and can't retreat. At any time during your turn, you may discard this card from play. Ability: Protective Sail - This Pokemon can't be affected by the effects of Supporter cards played from your opponent's hand.",
+      "effect": "Play this card as if it were a 60-HP Basic Pokémon. At any time during your turn, you may discard this card from play. This card can't retreat.",
       "subcategory": "Item"
     },
     "070": {
@@ -3207,7 +3219,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "The Mega Zygarde ex this card is attached to can use the attacks on this card. [F][F][F][F] Geobuster: 350 damage. Discard all Energy from this Pokemon.",
+      "effect": "The Mega Zygarde ex this card is attached to can use the attack on this card. [Geobuster: Discard all Energy from this Pokémon.]",
       "subcategory": "Pokemon Tool"
     },
     "071": {
@@ -3222,7 +3234,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Flip a coin. If heads, discard an Energy attached to your opponent's Active Pokemon.",
+      "effect": "Flip a coin. If heads, discard an Energy attached to 1 of your opponent's Pokémon.",
       "subcategory": "Item"
     },
     "072": {
@@ -3237,7 +3249,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Search your deck for a Basic Energy card, reveal it, and put it into your hand. Then, shuffle your deck.",
+      "effect": "Search your deck for a basic Energy card, reveal it, and put it into your hand. Then, shuffle your deck.",
       "subcategory": "Item"
     },
     "073": {
@@ -3252,7 +3264,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Your opponent reveals their hand. Choose an Energy card you find there and put it on the bottom of your opponent's deck.",
+      "effect": "Look at your opponent's hand and choose an Energy card you find there. Your opponent puts that card at the bottom of their deck.",
       "subcategory": "Item"
     },
     "074": {
@@ -3267,7 +3279,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Look at the top card of your opponent's deck. You may discard that card.",
+      "effect": "Discard the top 2 cards of your deck",
       "subcategory": "Item"
     },
     "075": {
@@ -3282,7 +3294,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Heal 150 damage from 1 of your Psychic Pokemon.",
+      "effect": "Heal 150 damage from 1 of your Psychic Pokémon.",
       "subcategory": "Supporter"
     },
     "076": {
@@ -3312,7 +3324,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Once during each player's turn, that player may search their deck for a Basic Pokemon and put it onto their Bench. Then, that player shuffles their deck. If a player uses this effect, their turn ends.",
+      "effect": "Once during each player's turn, that player may search their deck for a Basic Pokémon and put it onto their Bench. Then, that player shuffles their deck. If a player uses this effect, their turn ends.",
       "subcategory": "Stadium"
     },
     "078": {
@@ -3327,7 +3339,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Heal 20 damage and 1 Special Condition from your Active Pokemon.",
+      "effect": "Heal 20 damage and 1 Special Condition from your Active Pokémon.",
       "subcategory": "Item"
     },
     "079": {
@@ -3342,7 +3354,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Discard any number of cards from your hand. Then, draw cards until you have 5 cards in your hand.",
+      "effect": "Draw until you have 5 cards in hand. Before drawing, you may discard any number of cards from your hand.",
       "subcategory": "Supporter"
     },
     "080": {
@@ -3357,7 +3369,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Flip a coin. If heads, search your deck for a Pokemon, reveal it, and put it into your hand. Then, shuffle your deck.",
+      "effect": "Flip a coin. If heads, search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck",
       "subcategory": "Item"
     },
     "081": {
@@ -3372,7 +3384,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Search your deck for a Pokemon that doesn't have a Rule Box, reveal it, and put it into your hand. Then, shuffle your deck.",
+      "effect": "Search your deck for a Pokémon that doesn't have a Rule Box, reveal it, and put it into your hand. Then shuffle your deck.",
       "subcategory": "Item"
     },
     "082": {
@@ -3387,7 +3399,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Switch 1 of your opponent's Benched Pokemon with their Active Pokemon.",
+      "effect": "Flip a coin. If heads, switch 1 of your opponent's Benched Pokémon with their Active Pokémon",
       "subcategory": "Item"
     },
     "083": {
@@ -3402,7 +3414,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Heal 30 damage from 1 of your Pokemon.",
+      "effect": "Heal 30 damage from 1 of your Pokémon",
       "subcategory": "Item"
     },
     "084": {
@@ -3417,7 +3429,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "You can only use this card if you have more Prize cards remaining than your opponent. Attach up to 2 Basic Energy cards from your discard pile to 1 of your Stage 2 Pokemon.",
+      "effect": "You can play this card only if you have more Prize cards remaining than your opponent. Attach up to 2 Basic Energy from your discard pile to 1 of your Stage 2 Pokémon.",
       "subcategory": "Supporter"
     },
     "085": {
@@ -3432,7 +3444,7 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "Put up to 4 in any combination of Fighting Pokemon and Basic Fighting Energy from your discard pile into your hand.",
+      "effect": "Put up to 4 in any combination of Fighting Pokémon and Basic Fighting Energy cards from your discard pile into your hand.",
       "subcategory": "Supporter"
     },
     "086": {
@@ -3449,7 +3461,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "This card provides Grass Energy while attached to a Pokemon. The Grass Pokemon this card is attached to gets +20 HP."
+      "effect": "While attached to a Grass Pokemon, this card provides 1 Grass Energy. The Grass Pokémon this card is attached to has +20 HP",
+      "subcategory": "Item"
     },
     "087": {
       "name": "Rocky Fighting Energy",
@@ -3465,7 +3478,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "This card provides Fighting Energy while attached to a Pokemon. Prevent all effects of attacks used by your opponent's Pokemon done to the Fighting Pokemon this card is attached to. (Existing effects are not removed. Damage is not an effect.)"
+      "effect": "While attached to a Fighting Pokemon, this card provides 1 Fighting Energy. Prevent all effects of attacks used by your opponent's Pokémon done to the Fighting Pokémon this card is attached to. (Existing effects are not removed. Damage is not an effect.)",
+      "subcategory": "Item"
     },
     "088": {
       "name": "Telepathic Psychic Energy",
@@ -3481,7 +3495,8 @@
         "name": "Perfect Order"
       },
       "image": null,
-      "effect": "This card provides Psychic Energy while attached to a Pokemon. When you attach this card from your hand to 1 of your Psychic Pokemon, you may search your deck for 2 Basic Psychic Pokemon and put them onto your Bench. Then, shuffle your deck."
+      "effect": "While attached to a Psychic Pokémon, this card provides 1 Psychic Energy. When you attach this card from your hand to one of your Psychic Pokémon, you may search your deck for up to 2 Basic Psychic Pokémon and put them onto your Bench. Then shuffle your deck.",
+      "subcategory": "Supporter"
     },
     "089": {
       "name": "Spewpa",
@@ -3509,9 +3524,11 @@
           "cost": [
             "Grass"
           ],
-          "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage and effects from attacks done to this Pokemon."
+          "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon"
         }
-      ]
+      ],
+      "effect": "Search your deck for a Pokemon that doesn't have a Rule Box, reveal it, and put it into your hand. Then, shuffle your deck.",
+      "subcategory": "Item"
     },
     "090": {
       "name": "Rowlet",
@@ -3539,7 +3556,7 @@
           "cost": [
             "Grass"
           ],
-          "effect": "Search your deck for a Pokemon, reveal it, and put it into your hand. Then, shuffle your deck."
+          "effect": "Search your deck for 1 Pokemon card, reveal it, and put it into your hand. Then shuffle your deck."
         },
         {
           "name": "Tackle",
@@ -3550,7 +3567,9 @@
             "Colorless"
           ]
         }
-      ]
+      ],
+      "effect": "Switch 1 of your opponent's Benched Pokemon with their Active Pokemon.",
+      "subcategory": "Item"
     },
     "091": {
       "name": "Talonflame",
@@ -3585,9 +3604,11 @@
       "abilities": [
         {
           "name": "Sky Hunt",
-          "effect": "Once during your turn, you may flip a coin. If heads, your opponent discards a random card from their hand."
+          "effect": "Once during your turn, you may flip a coin. If heads, discard a random card from your opponent's hand."
         }
-      ]
+      ],
+      "effect": "Heal 30 damage from 1 of your Pokemon.",
+      "subcategory": "Item"
     },
     "092": {
       "name": "Aurorus",
@@ -3618,15 +3639,17 @@
             "Water",
             "Colorless"
           ],
-          "effect": "During your opponent's next turn, the Defending Pokemon can't attack."
+          "effect": "During your opponent's next turn, the defending Pokemon can't attack."
         }
       ],
       "abilities": [
         {
           "name": "Tundra Wall",
-          "effect": "While this Pokemon is in play, all of your Pokemon that have a Water Energy attached take 50 less damage from attacks from your opponent's Pokemon. This Ability does not stack."
+          "effect": "Your Pokemon with any Water Energy attached to them take 50 less damage from attacks from your opponent's Pokemon. The effect of this Ability does not stack."
         }
-      ]
+      ],
+      "effect": "You can only use this card if you have more Prize cards remaining than your opponent. Attach up to 2 Basic Energy cards from your discard pile to 1 of your Stage 2 Pokemon.",
+      "subcategory": "Supporter"
     },
     "093": {
       "name": "Dedenne",
@@ -3655,9 +3678,11 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "For each Energy attached to all of your opponent's Pokemon, you may attach a Basic Lightning Energy from your discard pile to your Lightning Pokemon in any way you like."
+          "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
         }
-      ]
+      ],
+      "effect": "Put up to 4 in any combination of Fighting Pokemon and Basic Fighting Energy from your discard pile into your hand.",
+      "subcategory": "Supporter"
     },
     "094": {
       "name": "Clefairy",
@@ -3685,7 +3710,7 @@
           "cost": [
             "Psychic"
           ],
-          "effect": "Switch 1 of your opponent's Benched Pokemon with their Active Pokemon."
+          "effect": "Switch 1 of your opponent's Benched Pokémon with their Active Pokémon."
         },
         {
           "name": "Flop",
@@ -3695,7 +3720,8 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "effect": "This card provides Grass Energy while attached to a Pokemon. The Grass Pokemon this card is attached to gets +20 HP."
     },
     "095": {
       "name": "Espurr",
@@ -3723,7 +3749,7 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "Heal 20 damage from this Pokemon."
+          "effect": "Heal 20 damage from this Pokémon"
         },
         {
           "name": "Stampede",
@@ -3732,7 +3758,8 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "effect": "This card provides Fighting Energy while attached to a Pokemon. Prevent all effects of attacks used by your opponent's Pokemon done to the Fighting Pokemon this card is attached to. (Existing effects are not removed. Damage is not an effect.)"
     },
     "096": {
       "name": "Probopass",
@@ -3772,9 +3799,10 @@
             "Fighting",
             "Colorless"
           ],
-          "effect": "Discard 3 Energy from this Pokemon."
+          "effect": "Discard 3 Energy from this Pokémon"
         }
-      ]
+      ],
+      "effect": "This card provides Psychic Energy while attached to a Pokemon. When you attach this card from your hand to 1 of your Psychic Pokemon, you may search your deck for 2 Basic Psychic Pokemon and put them onto your Bench. Then, shuffle your deck."
     },
     "097": {
       "name": "Drapion",
@@ -3813,7 +3841,7 @@
             "Darkness",
             "Darkness"
           ],
-          "effect": "This Pokemon does 70 damage to itself. Your opponent's Active Pokemon is now Poisoned and Paralyzed."
+          "effect": "This Pokémon also does 70 damage to itself. Your oppponent's Active Pokémon is now Poisoned and Paralyzed"
         }
       ]
     },
@@ -3845,7 +3873,7 @@
             "Colorless",
             "Colorless"
           ],
-          "effect": "You may reveal any number of Honedge, Doublade, and Aegislash from your hand. This attack does 60 damage for each card you revealed."
+          "effect": "You may reveal any number of Honedge, Doublade and Aegislash from your hand. This attack does 60 damage for each card you revealed this way."
         }
       ]
     },
@@ -3876,7 +3904,7 @@
           "cost": [
             "Colorless"
           ],
-          "effect": "Before doing damage, you may discard a Pokemon Tool attached to your opponent's Active Pokemon."
+          "effect": "Before dealing damage, discard any Pokémon Tool attached to your opponent's Active Pokémon."
         },
         {
           "name": "Retaliatory Incisors",
