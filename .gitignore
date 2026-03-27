@@ -1,0 +1,10 @@
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+
+# Dependencies
+node_modules/

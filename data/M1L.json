@@ -1,1799 +1,1886 @@
 {
-  "001": {
-    "name": "フシギダネ",
-    "hp": 80,
-    "types": [
-      "Grass"
-    ],
-    "stage": "Basic",
-    "illustrator": "HYOGONOSUKE",
-    "retreat": 2,
-    "dexId": [
-      1
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-001",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "002": {
-    "name": "フシギソウ",
-    "hp": 110,
-    "types": [
-      "Grass"
-    ],
-    "stage": "Stage1",
-    "illustrator": "Takumi Wada",
-    "retreat": 3,
-    "dexId": [
-      2
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-002",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "003": {
-    "name": "メガフシギバナex",
-    "hp": 380,
-    "types": [
-      "Grass"
-    ],
-    "stage": "Basic",
-    "illustrator": "5ban Graphics",
-    "retreat": 4,
-    "dexId": [
-      3
-    ],
-    "category": "Pokemon",
-    "rarity": "Double rare",
-    "id": "M1L-003",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "004": {
-    "name": "タマタマ",
-    "hp": 60,
-    "types": [
-      "Grass"
-    ],
-    "stage": "Basic",
-    "illustrator": "aspara",
-    "retreat": 1,
-    "dexId": [
-      102
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-004",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "005": {
-    "name": "ナッシー",
-    "hp": 140,
-    "types": [
-      "Grass"
-    ],
-    "stage": "Stage1",
-    "illustrator": "Kazumasu Yasukuni",
-    "retreat": 2,
-    "dexId": [
-      103
-    ],
-    "category": "Pokemon",
-    "rarity": "Uncommon",
-    "id": "M1L-005",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "006": {
-    "name": "セレビィ",
-    "hp": 80,
-    "types": [
-      "Grass"
-    ],
-    "stage": "Basic",
-    "illustrator": "Naoki Saito",
-    "retreat": 1,
-    "dexId": [
-      251
-    ],
-    "category": "Pokemon",
-    "rarity": "Uncommon",
-    "id": "M1L-006",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "007": {
-    "name": "タネボー",
-    "hp": 60,
-    "types": [
-      "Grass"
-    ],
-    "stage": "Basic",
-    "illustrator": "Miki Tanaka",
-    "retreat": 1,
-    "dexId": [
-      273
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-007",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "008": {
-    "name": "コノハナ",
-    "hp": 100,
-    "types": [
-      "Grass"
-    ],
-    "stage": "Stage1",
-    "illustrator": "takashi shiraishi",
-    "retreat": 2,
-    "dexId": [
-      274
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-008",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "009": {
-    "name": "ダーテング",
-    "hp": 160,
-    "types": [
-      "Grass"
-    ],
-    "stage": "Stage2",
-    "illustrator": "Uninori",
-    "retreat": 2,
-    "dexId": [
-      275
-    ],
-    "category": "Pokemon",
-    "rarity": "Uncommon",
-    "id": "M1L-009",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "010": {
-    "name": "ロコン",
-    "hp": 70,
-    "types": [
-      "Fire"
-    ],
-    "stage": "Basic",
-    "illustrator": "Naoyo Kimura",
-    "retreat": 1,
-    "dexId": [
-      37
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-010",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "011": {
-    "name": "キュウコン",
-    "hp": 120,
-    "types": [
-      "Fire"
-    ],
-    "stage": "Stage1",
-    "illustrator": "satoma",
-    "retreat": 1,
-    "dexId": [
-      38
-    ],
-    "category": "Pokemon",
-    "rarity": "Uncommon",
-    "id": "M1L-011",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "012": {
-    "name": "ドンメル",
-    "hp": 80,
-    "types": [
-      "Fire"
-    ],
-    "stage": "Basic",
-    "illustrator": "Wintr Wandr",
-    "retreat": 2,
-    "dexId": [
-      322
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-012",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "013": {
-    "name": "メガバクーダex",
-    "hp": 340,
-    "types": [
-      "Fire"
-    ],
-    "stage": "Basic",
-    "illustrator": "5ban Graphics",
-    "retreat": 4,
-    "dexId": [
-      323
-    ],
-    "category": "Pokemon",
-    "rarity": "Double rare",
-    "id": "M1L-013",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "014": {
-    "name": "ボルケニオン",
-    "hp": 130,
-    "types": [
-      "Fire"
-    ],
-    "stage": "Basic",
-    "illustrator": "GIDORA",
-    "retreat": 2,
-    "dexId": [
-      721
-    ],
-    "category": "Pokemon",
-    "rarity": "Uncommon",
-    "id": "M1L-014",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "015": {
-    "name": "ヒバニー",
-    "hp": 70,
-    "types": [
-      "Fire"
-    ],
-    "stage": "Basic",
-    "illustrator": "svlt",
-    "retreat": 1,
-    "dexId": [
-      813
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-015",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "016": {
-    "name": "ラビフット",
-    "hp": 100,
-    "types": [
-      "Fire"
-    ],
-    "stage": "Stage1",
-    "illustrator": "Narumi Sato",
-    "retreat": 1,
-    "dexId": [
-      814
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-016",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "017": {
-    "name": "エースバーン",
-    "hp": 160,
-    "types": [
-      "Fire"
-    ],
-    "stage": "Stage2",
-    "illustrator": "REND",
-    "retreat": 0,
-    "dexId": [
-      815
-    ],
-    "category": "Pokemon",
-    "rarity": "Rare",
-    "id": "M1L-017",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "018": {
-    "name": "ヘイガニ",
-    "hp": 80,
-    "types": [
-      "Water"
-    ],
-    "stage": "Basic",
-    "illustrator": "Sanosuke Sakuma",
-    "retreat": 2,
-    "dexId": [
-      341
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-018",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "019": {
-    "name": "コレクレー",
-    "hp": 70,
-    "types": [
-      "Psychic"
-    ],
-    "stage": "Basic",
-    "illustrator": "Takeshi Nakamura",
-    "retreat": 2,
-    "dexId": [
-      999
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-019",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "020": {
-    "name": "サンド",
-    "hp": 70,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "Shinji Kanda",
-    "retreat": 1,
-    "dexId": [
-      27
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-020",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "021": {
-    "name": "サンドパン",
-    "hp": 120,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Stage1",
-    "illustrator": "imoniii",
-    "retreat": 1,
-    "dexId": [
-      28
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-021",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "022": {
-    "name": "イワーク",
-    "hp": 120,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "Uta",
-    "retreat": 4,
-    "dexId": [
-      95
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-022",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "023": {
-    "name": "バルキー",
-    "hp": 30,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "OKUBO",
-    "retreat": 0,
-    "dexId": [
-      236
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-023",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "024": {
-    "name": "マクノシタ",
-    "hp": 80,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "Jerky",
-    "retreat": 2,
-    "dexId": [
-      296
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-024",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "025": {
-    "name": "ハリテヤマ",
-    "hp": 150,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Stage1",
-    "illustrator": "GOSSAN",
-    "retreat": 3,
-    "dexId": [
-      297
-    ],
-    "category": "Pokemon",
-    "rarity": "Rare",
-    "id": "M1L-025",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "026": {
-    "name": "ルナトーン",
-    "hp": 110,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "Whisker",
-    "retreat": 1,
-    "dexId": [
-      337
-    ],
-    "category": "Pokemon",
-    "rarity": "Uncommon",
-    "id": "M1L-026",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "027": {
-    "name": "ソルロック",
-    "hp": 110,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "Whisker",
-    "retreat": 1,
-    "dexId": [
-      338
-    ],
-    "category": "Pokemon",
-    "rarity": "Uncommon",
-    "id": "M1L-027",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "028": {
-    "name": "リオル",
-    "hp": 80,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "hncl",
-    "retreat": 2,
-    "dexId": [
-      447
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-028",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "029": {
-    "name": "メガルカリオex",
-    "hp": 340,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "5ban Graphics",
-    "retreat": 2,
-    "dexId": [
-      448
-    ],
-    "category": "Pokemon",
-    "rarity": "Double rare",
-    "id": "M1L-029",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "030": {
-    "name": "グレッグル",
-    "hp": 70,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "matazo",
-    "retreat": 1,
-    "dexId": [
-      453
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-030",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "031": {
-    "name": "ドクロッグ",
-    "hp": 130,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Stage1",
-    "illustrator": "Hasuno",
-    "retreat": 1,
-    "dexId": [
-      454
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-031",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "032": {
-    "name": "マーシャドー",
-    "hp": 90,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "Tomomi Ozaki",
-    "retreat": 1,
-    "dexId": [
-      802
-    ],
-    "category": "Pokemon",
-    "rarity": "Uncommon",
-    "id": "M1L-032",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "033": {
-    "name": "イシヘンジン",
-    "hp": 130,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "Hitoshi Ariga",
-    "retreat": 2,
-    "dexId": [
-      874
-    ],
-    "category": "Pokemon",
-    "rarity": "Uncommon",
-    "id": "M1L-033",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "034": {
-    "name": "コジオ",
-    "hp": 70,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "sowsow",
-    "retreat": 2,
-    "dexId": [
-      932
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-034",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "035": {
-    "name": "ジオヅム",
-    "hp": 110,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Stage1",
-    "illustrator": "kodama",
-    "retreat": 3,
-    "dexId": [
-      933
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-035",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "036": {
-    "name": "キョジオーン",
-    "hp": 180,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Stage2",
-    "illustrator": "danciao",
-    "retreat": 4,
-    "dexId": [
-      934
-    ],
-    "category": "Pokemon",
-    "rarity": "Rare",
-    "id": "M1L-036",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "037": {
-    "name": "シザリガー",
-    "hp": 130,
-    "types": [
-      "Darkness"
-    ],
-    "stage": "Stage1",
-    "illustrator": "kawayoo",
-    "retreat": 3,
-    "dexId": [
-      342
-    ],
-    "category": "Pokemon",
-    "rarity": "Uncommon",
-    "id": "M1L-037",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "038": {
-    "name": "メガアブソルex",
-    "hp": 280,
-    "types": [
-      "Darkness"
-    ],
-    "stage": "Basic",
-    "illustrator": "aky CG Works",
-    "retreat": 2,
-    "dexId": [
-      359
-    ],
-    "category": "Pokemon",
-    "rarity": "Double rare",
-    "id": "M1L-038",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "039": {
-    "name": "ミカルゲ",
-    "hp": 80,
-    "types": [
-      "Darkness"
-    ],
-    "stage": "Basic",
-    "illustrator": "mingo",
-    "retreat": 1,
-    "dexId": [
-      442
-    ],
-    "category": "Pokemon",
-    "rarity": "Uncommon",
-    "id": "M1L-039",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "040": {
-    "name": "イベルタル",
-    "hp": 110,
-    "types": [
-      "Darkness"
-    ],
-    "stage": "Basic",
-    "illustrator": "akagi",
-    "retreat": 0,
-    "dexId": [
-      717
-    ],
-    "category": "Pokemon",
-    "rarity": "Rare",
-    "id": "M1L-040",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "041": {
-    "name": "クスネ",
-    "hp": 70,
-    "types": [
-      "Darkness"
-    ],
-    "stage": "Basic",
-    "illustrator": "Souichirou Gunjima",
-    "retreat": 1,
-    "dexId": [
-      827
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-041",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "042": {
-    "name": "フォクスライ",
-    "hp": 120,
-    "types": [
-      "Darkness"
-    ],
-    "stage": "Stage1",
-    "illustrator": "ryoma uratsuka",
-    "retreat": 1,
-    "dexId": [
-      828
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-042",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "043": {
-    "name": "シルシュルー",
-    "hp": 60,
-    "types": [
-      "Darkness"
-    ],
-    "stage": "Basic",
-    "illustrator": "osare",
-    "retreat": 1,
-    "dexId": [
-      944
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-043",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "044": {
-    "name": "タギングル",
-    "hp": 100,
-    "types": [
-      "Darkness"
-    ],
-    "stage": "Stage1",
-    "illustrator": "Dsuke",
-    "retreat": 1,
-    "dexId": [
-      945
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-044",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "045": {
-    "name": "ハガネール",
-    "hp": 200,
-    "types": [
-      "Metal"
-    ],
-    "stage": "Stage1",
-    "illustrator": "Anesaki Dynamic",
-    "retreat": 4,
-    "dexId": [
-      208
-    ],
-    "category": "Pokemon",
-    "rarity": "Rare",
-    "id": "M1L-045",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "046": {
-    "name": "メガクチートex",
-    "hp": 270,
-    "types": [
-      "Metal"
-    ],
-    "stage": "Basic",
-    "illustrator": "aky CG Works",
-    "retreat": 2,
-    "dexId": [
-      303
-    ],
-    "category": "Pokemon",
-    "rarity": "Double rare",
-    "id": "M1L-046",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "047": {
-    "name": "ディアルガ",
-    "hp": 140,
-    "types": [
-      "Metal"
-    ],
-    "stage": "Basic",
-    "illustrator": "Teeziro",
-    "retreat": 2,
-    "dexId": [
-      483
-    ],
-    "category": "Pokemon",
-    "rarity": "Rare",
-    "id": "M1L-047",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "048": {
-    "name": "カヌチャン",
-    "hp": 70,
-    "types": [
-      "Metal"
-    ],
-    "stage": "Basic",
-    "illustrator": "You Iribi",
-    "retreat": 1,
-    "dexId": [
-      957
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-048",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "049": {
-    "name": "ナカヌチャン",
-    "hp": 90,
-    "types": [
-      "Metal"
-    ],
-    "stage": "Stage1",
-    "illustrator": "KEIICHIRO ITO",
-    "retreat": 2,
-    "dexId": [
-      958
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-049",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "050": {
-    "name": "デカヌチャン",
-    "hp": 160,
-    "types": [
-      "Metal"
-    ],
-    "stage": "Stage2",
-    "illustrator": "toriyufu",
-    "retreat": 2,
-    "dexId": [
-      959
-    ],
-    "category": "Pokemon",
-    "rarity": "Uncommon",
-    "id": "M1L-050",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "051": {
-    "name": "サーフゴー",
-    "hp": 130,
-    "types": [
-      "Metal"
-    ],
-    "stage": "Stage1",
-    "illustrator": "Yukihiro Tada",
-    "retreat": 2,
-    "dexId": [
-      1000
-    ],
-    "category": "Pokemon",
-    "rarity": "Uncommon",
-    "id": "M1L-051",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "052": {
-    "name": "オニスズメ",
-    "hp": 60,
-    "types": [
-      "Colorless"
-    ],
-    "stage": "Basic",
-    "illustrator": "Scav",
-    "retreat": 1,
-    "dexId": [
-      21
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-052",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "053": {
-    "name": "オニドリル",
-    "hp": 100,
-    "types": [
-      "Colorless"
-    ],
-    "stage": "Stage1",
-    "illustrator": "Saboteri",
-    "retreat": 1,
-    "dexId": [
-      22
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-053",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "054": {
-    "name": "ミルタンク",
-    "hp": 120,
-    "types": [
-      "Colorless"
-    ],
-    "stage": "Basic",
-    "illustrator": "Kouki Saitou",
-    "retreat": 2,
-    "dexId": [
-      241
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-054",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "055": {
-    "name": "ヤングース",
-    "hp": 70,
-    "types": [
-      "Colorless"
-    ],
-    "stage": "Basic",
-    "illustrator": "Mekayu",
-    "retreat": 1,
-    "dexId": [
-      734
-    ],
-    "category": "Pokemon",
-    "rarity": "Common",
-    "id": "M1L-055",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "056": {
-    "name": "デカグース",
-    "hp": 100,
-    "types": [
-      "Colorless"
-    ],
-    "stage": "Stage1",
-    "illustrator": "Shigenori Negishi",
-    "retreat": 1,
-    "dexId": [
-      735
-    ],
-    "category": "Pokemon",
-    "rarity": "Uncommon",
-    "id": "M1L-056",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "057": {
-    "name": "アイアンガード",
-    "illustrator": "Studio Bora Inc.",
-    "category": "Trainer",
-    "rarity": "Uncommon",
-    "id": "M1L-057",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "058": {
-    "name": "プレミアムパワープロ",
-    "illustrator": "Toyste Beach",
-    "category": "Trainer",
-    "rarity": "Uncommon",
-    "id": "M1L-058",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "059": {
-    "name": "ファイトゴング",
-    "illustrator": "Toyste Beach",
-    "category": "Trainer",
-    "rarity": "Uncommon",
-    "id": "M1L-059",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "060": {
-    "name": "むしよけスプレー",
-    "illustrator": "Studio Bora Inc.",
-    "category": "Energy",
-    "rarity": "Uncommon",
-    "id": "M1L-060",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "061": {
-    "name": "マチスのかけひき",
-    "illustrator": "Hideki Ishikawa",
-    "category": "Trainer",
-    "rarity": "Uncommon",
-    "id": "M1L-061",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "062": {
-    "name": "リーリエのきもち",
-    "illustrator": "Atsushi Furusawa",
-    "category": "Trainer",
-    "rarity": "Uncommon",
-    "id": "M1L-062",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "063": {
-    "name": "危険な廃墟ビル",
-    "illustrator": "imoniii",
-    "category": "Trainer",
-    "rarity": "Uncommon",
-    "id": "M1L-063",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "064": {
-    "name": "フシギダネ",
-    "hp": 80,
-    "types": [
-      "Grass"
-    ],
-    "stage": "Basic",
-    "illustrator": "mashu",
-    "retreat": 2,
-    "dexId": [
-      1
-    ],
-    "category": "Pokemon",
-    "rarity": "Illustration rare",
-    "id": "M1L-064",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "065": {
-    "name": "フシギソウ",
-    "hp": 110,
-    "types": [
-      "Grass"
-    ],
-    "stage": "Stage1",
-    "illustrator": "mashu",
-    "retreat": 3,
-    "dexId": [
-      2
-    ],
-    "category": "Pokemon",
-    "rarity": "Illustration rare",
-    "id": "M1L-065",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "066": {
-    "name": "ナッシー",
-    "hp": 140,
-    "types": [
-      "Grass"
-    ],
-    "stage": "Stage1",
-    "illustrator": "Yukihiro Tada",
-    "retreat": 2,
-    "dexId": [
-      103
-    ],
-    "category": "Pokemon",
-    "rarity": "Illustration rare",
-    "id": "M1L-066",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "067": {
-    "name": "ロコン",
-    "hp": 70,
-    "types": [
-      "Fire"
-    ],
-    "stage": "Basic",
-    "illustrator": "saino misaki",
-    "retreat": 1,
-    "dexId": [
-      37
-    ],
-    "category": "Pokemon",
-    "rarity": "Illustration rare",
-    "id": "M1L-067",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "068": {
-    "name": "リオル",
-    "hp": 80,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "GOSSAN",
-    "retreat": 2,
-    "dexId": [
-      447
-    ],
-    "category": "Pokemon",
-    "rarity": "Illustration rare",
-    "id": "M1L-068",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "069": {
-    "name": "マーシャドー",
-    "hp": 90,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "0313",
-    "retreat": 1,
-    "dexId": [
-      802
-    ],
-    "category": "Pokemon",
-    "rarity": "Illustration rare",
-    "id": "M1L-069",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "070": {
-    "name": "キョジオーン",
-    "hp": 180,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Stage2",
-    "illustrator": "Yano Keiji",
-    "retreat": 4,
-    "dexId": [
-      934
-    ],
-    "category": "Pokemon",
-    "rarity": "Illustration rare",
-    "id": "M1L-070",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "071": {
-    "name": "ミカルゲ",
-    "hp": 80,
-    "types": [
-      "Darkness"
-    ],
-    "stage": "Basic",
-    "illustrator": "IKEDA Saki",
-    "retreat": 1,
-    "dexId": [
-      442
-    ],
-    "category": "Pokemon",
-    "rarity": "Illustration rare",
-    "id": "M1L-071",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "072": {
-    "name": "シルシュルー",
-    "hp": 60,
-    "types": [
-      "Darkness"
-    ],
-    "stage": "Basic",
-    "illustrator": "Shimaris Yukichi",
-    "retreat": 1,
-    "dexId": [
-      944
-    ],
-    "category": "Pokemon",
-    "rarity": "Illustration rare",
-    "id": "M1L-072",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "073": {
-    "name": "ハガネール",
-    "hp": 200,
-    "types": [
-      "Metal"
-    ],
-    "stage": "Stage1",
-    "illustrator": "Tonji Matsuno",
-    "retreat": 4,
-    "dexId": [
-      208
-    ],
-    "category": "Pokemon",
-    "rarity": "Illustration rare",
-    "id": "M1L-073",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "074": {
-    "name": "オニスズメ",
-    "hp": 60,
-    "types": [
-      "Colorless"
-    ],
-    "stage": "Basic",
-    "illustrator": "MINAMINAMI Take",
-    "retreat": 1,
-    "dexId": [
-      21
-    ],
-    "category": "Pokemon",
-    "rarity": "Illustration rare",
-    "id": "M1L-074",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "075": {
-    "name": "ヤングース",
-    "hp": 70,
-    "types": [
-      "Colorless"
-    ],
-    "stage": "Basic",
-    "illustrator": "Mina Nakai",
-    "retreat": 1,
-    "dexId": [
-      734
-    ],
-    "category": "Pokemon",
-    "rarity": "Illustration rare",
-    "id": "M1L-075",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "076": {
-    "name": "メガフシギバナex",
-    "hp": 380,
-    "types": [
-      "Grass"
-    ],
-    "stage": "Basic",
-    "illustrator": "5ban Graphics",
-    "retreat": 4,
-    "dexId": [
-      3
-    ],
-    "category": "Pokemon",
-    "rarity": "Special illustration rare",
-    "id": "M1L-076",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "077": {
-    "name": "メガバクーダex",
-    "hp": 340,
-    "types": [
-      "Fire"
-    ],
-    "stage": "Basic",
-    "illustrator": "5ban Graphics",
-    "retreat": 4,
-    "dexId": [
-      323
-    ],
-    "category": "Pokemon",
-    "rarity": "Special illustration rare",
-    "id": "M1L-077",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "078": {
-    "name": "メガルカリオex",
-    "hp": 340,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "takuyoa",
-    "retreat": 2,
-    "dexId": [
-      448
-    ],
-    "category": "Pokemon",
-    "rarity": "Special illustration rare",
-    "id": "M1L-078",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "079": {
-    "name": "メガアブソルex",
-    "hp": 280,
-    "types": [
-      "Darkness"
-    ],
-    "stage": "Basic",
-    "illustrator": "aky CG Works",
-    "retreat": 2,
-    "dexId": [
-      359
-    ],
-    "category": "Pokemon",
-    "rarity": "Special illustration rare",
-    "id": "M1L-079",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "080": {
-    "name": "メガクチートex",
-    "hp": 270,
-    "types": [
-      "Metal"
-    ],
-    "stage": "Basic",
-    "illustrator": "aky CG Works",
-    "retreat": 2,
-    "dexId": [
-      303
-    ],
-    "category": "Pokemon",
-    "rarity": "Special illustration rare",
-    "id": "M1L-080",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "081": {
-    "name": "プレミアムパワープロ",
-    "illustrator": "Toyste Beach",
-    "category": "Trainer",
-    "rarity": "Illustration rare",
-    "id": "M1L-081",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "082": {
-    "name": "ファイトゴング",
-    "illustrator": "Toyste Beach",
-    "category": "Trainer",
-    "rarity": "Illustration rare",
-    "id": "M1L-082",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "083": {
-    "name": "ナイトストレッチャー",
-    "illustrator": "Toyste Beach",
-    "category": "Trainer",
-    "rarity": "Illustration rare",
-    "id": "M1L-083",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "084": {
-    "name": "エアバルーン",
-    "illustrator": "Studio Bora Inc.",
-    "category": "Trainer",
-    "rarity": "Illustration rare",
-    "id": "M1L-084",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "085": {
-    "name": "マチスのかけひき",
-    "illustrator": "Hideki Ishikawa",
-    "category": "Trainer",
-    "rarity": "Illustration rare",
-    "id": "M1L-085",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "086": {
-    "name": "リーリエのきもち",
-    "illustrator": "Atsushi Furusawa",
-    "category": "Trainer",
-    "rarity": "Illustration rare",
-    "id": "M1L-086",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "087": {
-    "name": "メガフシギバナex",
-    "hp": 380,
-    "types": [
-      "Grass"
-    ],
-    "stage": "Basic",
-    "illustrator": "mashu",
-    "retreat": 4,
-    "dexId": [
-      3
-    ],
-    "category": "Pokemon",
-    "rarity": "Special illustration rare",
-    "id": "M1L-087",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "088": {
-    "name": "メガルカリオex",
-    "hp": 340,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "Atsushi Furusawa",
-    "retreat": 2,
-    "dexId": [
-      448
-    ],
-    "category": "Pokemon",
-    "rarity": "Special illustration rare",
-    "id": "M1L-088",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "089": {
-    "name": "メガアブソルex",
-    "hp": 280,
-    "types": [
-      "Darkness"
-    ],
-    "stage": "Basic",
-    "illustrator": "Mitsuhiro Arita",
-    "retreat": 2,
-    "dexId": [
-      359
-    ],
-    "category": "Pokemon",
-    "rarity": "Special illustration rare",
-    "id": "M1L-089",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "090": {
-    "name": "マチスのかけひき",
-    "illustrator": "osare",
-    "category": "Trainer",
-    "rarity": "Special illustration rare",
-    "id": "M1L-090",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "091": {
-    "name": "リーリエのきもち",
-    "illustrator": "satoma",
-    "category": "Trainer",
-    "rarity": "Special illustration rare",
-    "id": "M1L-091",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
-  },
-  "092": {
-    "name": "メガルカリオex",
-    "hp": 340,
-    "types": [
-      "Fighting"
-    ],
-    "stage": "Basic",
-    "illustrator": "5ban Graphics",
-    "retreat": 2,
-    "dexId": [
-      448
-    ],
-    "category": "Pokemon",
-    "rarity": "Mega Hyper Rare",
-    "id": "M1L-092",
-    "set": {
-      "id": "M1L",
-      "name": "Mega Brave"
-    },
-    "image": null
+  "id": "M1L",
+  "name": {
+    "ja": "Mega Brave"
+  },
+  "serie": "M",
+  "releaseDate": {
+    "ja": "2025-12-12"
+  },
+  "cards": {
+    "001": {
+      "name": "フシギダネ",
+      "hp": 80,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "illustrator": "HYOGONOSUKE",
+      "retreat": 2,
+      "dexId": [
+        1
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-001",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "002": {
+      "name": "フシギソウ",
+      "hp": 110,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Takumi Wada",
+      "retreat": 3,
+      "dexId": [
+        2
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-002",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "003": {
+      "name": "メガフシギバナex",
+      "hp": 380,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "illustrator": "5ban Graphics",
+      "retreat": 4,
+      "dexId": [
+        3
+      ],
+      "category": "Pokemon",
+      "rarity": "Double rare",
+      "id": "M1L-003",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "004": {
+      "name": "タマタマ",
+      "hp": 60,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "illustrator": "aspara",
+      "retreat": 1,
+      "dexId": [
+        102
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-004",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "005": {
+      "name": "ナッシー",
+      "hp": 140,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Kazumasu Yasukuni",
+      "retreat": 2,
+      "dexId": [
+        103
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M1L-005",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "006": {
+      "name": "セレビィ",
+      "hp": 80,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "illustrator": "Naoki Saito",
+      "retreat": 1,
+      "dexId": [
+        251
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M1L-006",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "007": {
+      "name": "タネボー",
+      "hp": 60,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "illustrator": "Miki Tanaka",
+      "retreat": 1,
+      "dexId": [
+        273
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-007",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "008": {
+      "name": "コノハナ",
+      "hp": 100,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "illustrator": "takashi shiraishi",
+      "retreat": 2,
+      "dexId": [
+        274
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-008",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "009": {
+      "name": "ダーテング",
+      "hp": 160,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "illustrator": "Uninori",
+      "retreat": 2,
+      "dexId": [
+        275
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M1L-009",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "010": {
+      "name": "ロコン",
+      "hp": 70,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "illustrator": "Naoyo Kimura",
+      "retreat": 1,
+      "dexId": [
+        37
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-010",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "011": {
+      "name": "キュウコン",
+      "hp": 120,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "illustrator": "satoma",
+      "retreat": 1,
+      "dexId": [
+        38
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M1L-011",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "012": {
+      "name": "ドンメル",
+      "hp": 80,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "illustrator": "Wintr Wandr",
+      "retreat": 2,
+      "dexId": [
+        322
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-012",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "013": {
+      "name": "メガバクーダex",
+      "hp": 340,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "illustrator": "5ban Graphics",
+      "retreat": 4,
+      "dexId": [
+        323
+      ],
+      "category": "Pokemon",
+      "rarity": "Double rare",
+      "id": "M1L-013",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "014": {
+      "name": "ボルケニオン",
+      "hp": 130,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "illustrator": "GIDORA",
+      "retreat": 2,
+      "dexId": [
+        721
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M1L-014",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "015": {
+      "name": "ヒバニー",
+      "hp": 70,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "illustrator": "svlt",
+      "retreat": 1,
+      "dexId": [
+        813
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-015",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "016": {
+      "name": "ラビフット",
+      "hp": 100,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Narumi Sato",
+      "retreat": 1,
+      "dexId": [
+        814
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-016",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "017": {
+      "name": "エースバーン",
+      "hp": 160,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage2",
+      "illustrator": "REND",
+      "retreat": 0,
+      "dexId": [
+        815
+      ],
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "M1L-017",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "018": {
+      "name": "ヘイガニ",
+      "hp": 80,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "illustrator": "Sanosuke Sakuma",
+      "retreat": 2,
+      "dexId": [
+        341
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-018",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "019": {
+      "name": "コレクレー",
+      "hp": 70,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "illustrator": "Takeshi Nakamura",
+      "retreat": 2,
+      "dexId": [
+        999
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-019",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "020": {
+      "name": "サンド",
+      "hp": 70,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "Shinji Kanda",
+      "retreat": 1,
+      "dexId": [
+        27
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-020",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "021": {
+      "name": "サンドパン",
+      "hp": 120,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "illustrator": "imoniii",
+      "retreat": 1,
+      "dexId": [
+        28
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-021",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "022": {
+      "name": "イワーク",
+      "hp": 120,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "Uta",
+      "retreat": 4,
+      "dexId": [
+        95
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-022",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "023": {
+      "name": "バルキー",
+      "hp": 30,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "OKUBO",
+      "retreat": 0,
+      "dexId": [
+        236
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-023",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "024": {
+      "name": "マクノシタ",
+      "hp": 80,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "Jerky",
+      "retreat": 2,
+      "dexId": [
+        296
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-024",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "025": {
+      "name": "ハリテヤマ",
+      "hp": 150,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "illustrator": "GOSSAN",
+      "retreat": 3,
+      "dexId": [
+        297
+      ],
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "M1L-025",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "026": {
+      "name": "ルナトーン",
+      "hp": 110,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "Whisker",
+      "retreat": 1,
+      "dexId": [
+        337
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M1L-026",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "027": {
+      "name": "ソルロック",
+      "hp": 110,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "Whisker",
+      "retreat": 1,
+      "dexId": [
+        338
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M1L-027",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "028": {
+      "name": "リオル",
+      "hp": 80,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "hncl",
+      "retreat": 2,
+      "dexId": [
+        447
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-028",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "029": {
+      "name": "メガルカリオex",
+      "hp": 340,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "5ban Graphics",
+      "retreat": 2,
+      "dexId": [
+        448
+      ],
+      "category": "Pokemon",
+      "rarity": "Double rare",
+      "id": "M1L-029",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "030": {
+      "name": "グレッグル",
+      "hp": 70,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "matazo",
+      "retreat": 1,
+      "dexId": [
+        453
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-030",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "031": {
+      "name": "ドクロッグ",
+      "hp": 130,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Hasuno",
+      "retreat": 1,
+      "dexId": [
+        454
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-031",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "032": {
+      "name": "マーシャドー",
+      "hp": 90,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "Tomomi Ozaki",
+      "retreat": 1,
+      "dexId": [
+        802
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M1L-032",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "033": {
+      "name": "イシヘンジン",
+      "hp": 130,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "Hitoshi Ariga",
+      "retreat": 2,
+      "dexId": [
+        874
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M1L-033",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "034": {
+      "name": "コジオ",
+      "hp": 70,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "sowsow",
+      "retreat": 2,
+      "dexId": [
+        932
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-034",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "035": {
+      "name": "ジオヅム",
+      "hp": 110,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "illustrator": "kodama",
+      "retreat": 3,
+      "dexId": [
+        933
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-035",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "036": {
+      "name": "キョジオーン",
+      "hp": 180,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage2",
+      "illustrator": "danciao",
+      "retreat": 4,
+      "dexId": [
+        934
+      ],
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "M1L-036",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "037": {
+      "name": "シザリガー",
+      "hp": 130,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "illustrator": "kawayoo",
+      "retreat": 3,
+      "dexId": [
+        342
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M1L-037",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "038": {
+      "name": "メガアブソルex",
+      "hp": 280,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "aky CG Works",
+      "retreat": 2,
+      "dexId": [
+        359
+      ],
+      "category": "Pokemon",
+      "rarity": "Double rare",
+      "id": "M1L-038",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "039": {
+      "name": "ミカルゲ",
+      "hp": 80,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "mingo",
+      "retreat": 1,
+      "dexId": [
+        442
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M1L-039",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "040": {
+      "name": "イベルタル",
+      "hp": 110,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "akagi",
+      "retreat": 0,
+      "dexId": [
+        717
+      ],
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "M1L-040",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "041": {
+      "name": "クスネ",
+      "hp": 70,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "Souichirou Gunjima",
+      "retreat": 1,
+      "dexId": [
+        827
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-041",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "042": {
+      "name": "フォクスライ",
+      "hp": 120,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "illustrator": "ryoma uratsuka",
+      "retreat": 1,
+      "dexId": [
+        828
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-042",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "043": {
+      "name": "シルシュルー",
+      "hp": 60,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "osare",
+      "retreat": 1,
+      "dexId": [
+        944
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-043",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "044": {
+      "name": "タギングル",
+      "hp": 100,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Dsuke",
+      "retreat": 1,
+      "dexId": [
+        945
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-044",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "045": {
+      "name": "ハガネール",
+      "hp": 200,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Anesaki Dynamic",
+      "retreat": 4,
+      "dexId": [
+        208
+      ],
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "M1L-045",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "046": {
+      "name": "メガクチートex",
+      "hp": 270,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "illustrator": "aky CG Works",
+      "retreat": 2,
+      "dexId": [
+        303
+      ],
+      "category": "Pokemon",
+      "rarity": "Double rare",
+      "id": "M1L-046",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "047": {
+      "name": "ディアルガ",
+      "hp": 140,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "illustrator": "Teeziro",
+      "retreat": 2,
+      "dexId": [
+        483
+      ],
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "M1L-047",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "048": {
+      "name": "カヌチャン",
+      "hp": 70,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "illustrator": "You Iribi",
+      "retreat": 1,
+      "dexId": [
+        957
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-048",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "049": {
+      "name": "ナカヌチャン",
+      "hp": 90,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage1",
+      "illustrator": "KEIICHIRO ITO",
+      "retreat": 2,
+      "dexId": [
+        958
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-049",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "050": {
+      "name": "デカヌチャン",
+      "hp": 160,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage2",
+      "illustrator": "toriyufu",
+      "retreat": 2,
+      "dexId": [
+        959
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M1L-050",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "051": {
+      "name": "サーフゴー",
+      "hp": 130,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Yukihiro Tada",
+      "retreat": 2,
+      "dexId": [
+        1000
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M1L-051",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "052": {
+      "name": "オニスズメ",
+      "hp": 60,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "Scav",
+      "retreat": 1,
+      "dexId": [
+        21
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-052",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "053": {
+      "name": "オニドリル",
+      "hp": 100,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Saboteri",
+      "retreat": 1,
+      "dexId": [
+        22
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-053",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "054": {
+      "name": "ミルタンク",
+      "hp": 120,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "Kouki Saitou",
+      "retreat": 2,
+      "dexId": [
+        241
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-054",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "055": {
+      "name": "ヤングース",
+      "hp": 70,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "Mekayu",
+      "retreat": 1,
+      "dexId": [
+        734
+      ],
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "M1L-055",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "056": {
+      "name": "デカグース",
+      "hp": 100,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Shigenori Negishi",
+      "retreat": 1,
+      "dexId": [
+        735
+      ],
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "M1L-056",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "057": {
+      "name": "アイアンガード",
+      "illustrator": "Studio Bora Inc.",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M1L-057",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "058": {
+      "name": "プレミアムパワープロ",
+      "illustrator": "Toyste Beach",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M1L-058",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "059": {
+      "name": "ファイトゴング",
+      "illustrator": "Toyste Beach",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M1L-059",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "060": {
+      "name": "むしよけスプレー",
+      "illustrator": "Studio Bora Inc.",
+      "category": "Energy",
+      "rarity": "Uncommon",
+      "id": "M1L-060",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "061": {
+      "name": "マチスのかけひき",
+      "illustrator": "Hideki Ishikawa",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M1L-061",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "062": {
+      "name": "リーリエのきもち",
+      "illustrator": "Atsushi Furusawa",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M1L-062",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "063": {
+      "name": "危険な廃墟ビル",
+      "illustrator": "imoniii",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "M1L-063",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "064": {
+      "name": "フシギダネ",
+      "hp": 80,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "illustrator": "mashu",
+      "retreat": 2,
+      "dexId": [
+        1
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M1L-064",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "065": {
+      "name": "フシギソウ",
+      "hp": 110,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "illustrator": "mashu",
+      "retreat": 3,
+      "dexId": [
+        2
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M1L-065",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "066": {
+      "name": "ナッシー",
+      "hp": 140,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Yukihiro Tada",
+      "retreat": 2,
+      "dexId": [
+        103
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M1L-066",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "067": {
+      "name": "ロコン",
+      "hp": 70,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "illustrator": "saino misaki",
+      "retreat": 1,
+      "dexId": [
+        37
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M1L-067",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "068": {
+      "name": "リオル",
+      "hp": 80,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "GOSSAN",
+      "retreat": 2,
+      "dexId": [
+        447
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M1L-068",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "069": {
+      "name": "マーシャドー",
+      "hp": 90,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "0313",
+      "retreat": 1,
+      "dexId": [
+        802
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M1L-069",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "070": {
+      "name": "キョジオーン",
+      "hp": 180,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage2",
+      "illustrator": "Yano Keiji",
+      "retreat": 4,
+      "dexId": [
+        934
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M1L-070",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "071": {
+      "name": "ミカルゲ",
+      "hp": 80,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "IKEDA Saki",
+      "retreat": 1,
+      "dexId": [
+        442
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M1L-071",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "072": {
+      "name": "シルシュルー",
+      "hp": 60,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "Shimaris Yukichi",
+      "retreat": 1,
+      "dexId": [
+        944
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M1L-072",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "073": {
+      "name": "ハガネール",
+      "hp": 200,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage1",
+      "illustrator": "Tonji Matsuno",
+      "retreat": 4,
+      "dexId": [
+        208
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M1L-073",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "074": {
+      "name": "オニスズメ",
+      "hp": 60,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "MINAMINAMI Take",
+      "retreat": 1,
+      "dexId": [
+        21
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M1L-074",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "075": {
+      "name": "ヤングース",
+      "hp": 70,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "illustrator": "Mina Nakai",
+      "retreat": 1,
+      "dexId": [
+        734
+      ],
+      "category": "Pokemon",
+      "rarity": "Illustration rare",
+      "id": "M1L-075",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "076": {
+      "name": "メガフシギバナex",
+      "hp": 380,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "illustrator": "5ban Graphics",
+      "retreat": 4,
+      "dexId": [
+        3
+      ],
+      "category": "Pokemon",
+      "rarity": "Special illustration rare",
+      "id": "M1L-076",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "077": {
+      "name": "メガバクーダex",
+      "hp": 340,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "illustrator": "5ban Graphics",
+      "retreat": 4,
+      "dexId": [
+        323
+      ],
+      "category": "Pokemon",
+      "rarity": "Special illustration rare",
+      "id": "M1L-077",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "078": {
+      "name": "メガルカリオex",
+      "hp": 340,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "takuyoa",
+      "retreat": 2,
+      "dexId": [
+        448
+      ],
+      "category": "Pokemon",
+      "rarity": "Special illustration rare",
+      "id": "M1L-078",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "079": {
+      "name": "メガアブソルex",
+      "hp": 280,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "aky CG Works",
+      "retreat": 2,
+      "dexId": [
+        359
+      ],
+      "category": "Pokemon",
+      "rarity": "Special illustration rare",
+      "id": "M1L-079",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "080": {
+      "name": "メガクチートex",
+      "hp": 270,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "illustrator": "aky CG Works",
+      "retreat": 2,
+      "dexId": [
+        303
+      ],
+      "category": "Pokemon",
+      "rarity": "Special illustration rare",
+      "id": "M1L-080",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "081": {
+      "name": "プレミアムパワープロ",
+      "illustrator": "Toyste Beach",
+      "category": "Trainer",
+      "rarity": "Illustration rare",
+      "id": "M1L-081",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "082": {
+      "name": "ファイトゴング",
+      "illustrator": "Toyste Beach",
+      "category": "Trainer",
+      "rarity": "Illustration rare",
+      "id": "M1L-082",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "083": {
+      "name": "ナイトストレッチャー",
+      "illustrator": "Toyste Beach",
+      "category": "Trainer",
+      "rarity": "Illustration rare",
+      "id": "M1L-083",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "084": {
+      "name": "エアバルーン",
+      "illustrator": "Studio Bora Inc.",
+      "category": "Trainer",
+      "rarity": "Illustration rare",
+      "id": "M1L-084",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "085": {
+      "name": "マチスのかけひき",
+      "illustrator": "Hideki Ishikawa",
+      "category": "Trainer",
+      "rarity": "Illustration rare",
+      "id": "M1L-085",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "086": {
+      "name": "リーリエのきもち",
+      "illustrator": "Atsushi Furusawa",
+      "category": "Trainer",
+      "rarity": "Illustration rare",
+      "id": "M1L-086",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "087": {
+      "name": "メガフシギバナex",
+      "hp": 380,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "illustrator": "mashu",
+      "retreat": 4,
+      "dexId": [
+        3
+      ],
+      "category": "Pokemon",
+      "rarity": "Special illustration rare",
+      "id": "M1L-087",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "088": {
+      "name": "メガルカリオex",
+      "hp": 340,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "Atsushi Furusawa",
+      "retreat": 2,
+      "dexId": [
+        448
+      ],
+      "category": "Pokemon",
+      "rarity": "Special illustration rare",
+      "id": "M1L-088",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "089": {
+      "name": "メガアブソルex",
+      "hp": 280,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "illustrator": "Mitsuhiro Arita",
+      "retreat": 2,
+      "dexId": [
+        359
+      ],
+      "category": "Pokemon",
+      "rarity": "Special illustration rare",
+      "id": "M1L-089",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    },
+    "090": {
+      "name": "マチスのかけひき",
+      "illustrator": "osare",
+      "category": "Trainer",
+      "rarity": "Special illustration rare",
+      "id": "M1L-090",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "091": {
+      "name": "リーリエのきもち",
+      "illustrator": "satoma",
+      "category": "Trainer",
+      "rarity": "Special illustration rare",
+      "id": "M1L-091",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null
+    },
+    "092": {
+      "name": "メガルカリオex",
+      "hp": 340,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "illustrator": "5ban Graphics",
+      "retreat": 2,
+      "dexId": [
+        448
+      ],
+      "category": "Pokemon",
+      "rarity": "Mega Hyper Rare",
+      "id": "M1L-092",
+      "set": {
+        "id": "M1L",
+        "name": "Mega Brave"
+      },
+      "image": null,
+      "attacks": []
+    }
   }
 }

@@ -45,7 +45,7 @@
       "types": [
         "Grass"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "svlt",
       "retreat": 1,
       "dexId": [
@@ -141,7 +141,7 @@
       "types": [
         "Grass"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Kurata So",
       "retreat": 1,
       "dexId": [
@@ -171,7 +171,7 @@
       "types": [
         "Grass"
       ],
-      "stage": "Stage 2",
+      "stage": "Stage2",
       "illustrator": "kodama",
       "retreat": 2,
       "dexId": [
@@ -240,7 +240,7 @@
       "types": [
         "Grass"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Ounishi",
       "retreat": 3,
       "dexId": [
@@ -269,7 +269,7 @@
       "types": [
         "Grass"
       ],
-      "stage": "Stage 2",
+      "stage": "Stage2",
       "illustrator": "mingo",
       "retreat": 1,
       "dexId": [
@@ -337,7 +337,7 @@
       "types": [
         "Grass"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "aspara",
       "retreat": 2,
       "dexId": [
@@ -375,7 +375,7 @@
       "types": [
         "Grass"
       ],
-      "stage": "Stage 2",
+      "stage": "Stage2",
       "illustrator": "aky CG Works",
       "retreat": 2,
       "dexId": [
@@ -408,7 +408,7 @@
       "types": [
         "Fire"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Sumiyoshi Kizuki",
       "retreat": 1,
       "dexId": [
@@ -439,7 +439,7 @@
       "types": [
         "Fire"
       ],
-      "stage": "Stage 2",
+      "stage": "Stage2",
       "illustrator": "Shinji Kanda",
       "retreat": 1,
       "dexId": [
@@ -500,7 +500,7 @@
       "types": [
         "Fire"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "5ban Graphics",
       "retreat": 1,
       "dexId": [
@@ -607,7 +607,7 @@
       "types": [
         "Water"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Yoshioka",
       "retreat": 2,
       "dexId": [
@@ -776,7 +776,7 @@
       "types": [
         "Water"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "HACCAN",
       "retreat": 3,
       "dexId": [
@@ -878,7 +878,7 @@
       "types": [
         "Lightning"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Atsuka Nishida",
       "retreat": 1,
       "dexId": [
@@ -908,7 +908,7 @@
       "types": [
         "Lightning"
       ],
-      "stage": "Stage 2",
+      "stage": "Stage2",
       "illustrator": "Taiga Kasai",
       "retreat": 0,
       "dexId": [
@@ -1111,7 +1111,7 @@
       "types": [
         "Psychic"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Kannnu",
       "retreat": 1,
       "dexId": [
@@ -1183,7 +1183,7 @@
       "types": [
         "Psychic"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Mori Yuu",
       "retreat": 1,
       "dexId": [
@@ -1245,7 +1245,7 @@
       "types": [
         "Fighting"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Nurikabe",
       "retreat": 3,
       "dexId": [
@@ -1324,7 +1324,7 @@
       "types": [
         "Fighting"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Souichirou Gunjima",
       "retreat": 4,
       "dexId": [
@@ -1443,7 +1443,7 @@
       "types": [
         "Fighting"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Kazumasau Yasukuni",
       "retreat": 2,
       "dexId": [
@@ -1506,7 +1506,7 @@
       "types": [
         "Fighting"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Dsuke",
       "retreat": 3,
       "dexId": [
@@ -1639,7 +1639,7 @@
       "types": [
         "Darkness"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Kedamahadaitai Yawarakai",
       "retreat": 1,
       "dexId": [
@@ -1668,7 +1668,7 @@
       "types": [
         "Darkness"
       ],
-      "stage": "Stage 2",
+      "stage": "Stage2",
       "illustrator": "Masako Tomii",
       "retreat": 1,
       "dexId": [
@@ -1729,7 +1729,7 @@
       "types": [
         "Darkness"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Nelnal",
       "retreat": 3,
       "dexId": [
@@ -1909,7 +1909,7 @@
       "types": [
         "Metal"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Kamome Shirahama",
       "retreat": 2,
       "dexId": [
@@ -1940,7 +1940,7 @@
       "types": [
         "Metal"
       ],
-      "stage": "Stage 2",
+      "stage": "Stage2",
       "illustrator": "Mitsuhiro Arita",
       "retreat": 3,
       "dexId": [
@@ -2042,7 +2042,7 @@
       "types": [
         "Colorless"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Minahamu",
       "retreat": 1,
       "dexId": [
@@ -2180,7 +2180,7 @@
       "types": [
         "Colorless"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Mousho",
       "retreat": 4,
       "dexId": [
@@ -2571,7 +2571,7 @@
       "types": [
         "Grass"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "kamonabe",
       "retreat": 3,
       "dexId": [
@@ -2638,7 +2638,7 @@
       "types": [
         "Fire"
       ],
-      "stage": "Stage 2",
+      "stage": "Stage2",
       "illustrator": "OKACHEKE",
       "retreat": 1,
       "dexId": [
@@ -2669,7 +2669,7 @@
       "types": [
         "Water"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Masa",
       "retreat": 3,
       "dexId": [
@@ -2804,7 +2804,7 @@
       "types": [
         "Fighting"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Kinu Nishimura",
       "retreat": 3,
       "dexId": [
@@ -2845,7 +2845,7 @@
       "types": [
         "Darkness"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "kawayoo",
       "retreat": 3,
       "dexId": [
@@ -2885,7 +2885,7 @@
       "types": [
         "Metal"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Anesaki Dynamic",
       "retreat": 2,
       "dexId": [
@@ -2916,7 +2916,7 @@
       "types": [
         "Colorless"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "Mina Nakai",
       "retreat": 1,
       "dexId": [
@@ -2953,7 +2953,7 @@
       "types": [
         "Grass"
       ],
-      "stage": "Stage 2",
+      "stage": "Stage2",
       "illustrator": "5ban Graphics",
       "retreat": 2,
       "dexId": [
@@ -2986,7 +2986,7 @@
       "types": [
         "Fire"
       ],
-      "stage": "Stage 1",
+      "stage": "Stage1",
       "illustrator": "5ban Graphics",
       "retreat": 1,
       "dexId": [
