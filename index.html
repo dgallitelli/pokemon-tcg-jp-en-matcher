@@ -528,6 +528,34 @@
       'ルミナスエネルギー': 'Luminous Energy',
       'レガシーエネルギー': 'Legacy Energy',
       'ミストエネルギー': 'Mist Energy',
+      // M1S / Mega Symphonia trainers
+      'あやしい時計': 'Spooky Watch',
+      'メガシグナル': 'Mega Signal',
+      'アセロラのいたずら': "Acerola's Prank",
+      'ミツルの思いやり': "Wally's Compassion",
+      '活力の森': 'Vitality Forest',
+      'なみのりビーチ': 'Surfing Beach',
+      'ミステリーガーデン': 'Mystery Garden',
+      'なかよしポフィン': 'Buddy Poffin',
+      // M1L / Mega Brave trainers
+      'アイアンガード': 'Iron Defender',
+      'プレミアムパワープロ': 'Premium Power Pro',
+      'ファイトゴング': 'Fight Gong',
+      'むしよけスプレー': 'Repel',
+      'マチスのかけひき': "Lt. Surge's Deal",
+      'リーリエのきもち': "Lillie's Determination",
+      '危険な廃墟ビル': 'Dangerous Abandoned Building',
+      'ナイトストレッチャー': 'Night Stretcher',
+      'エアバルーン': 'Air Balloon',
+      // M2 / Infernox trainers
+      'ジャンボソフト': 'Jumbo Ice Cream',
+      'ヒートバーナー': 'Heat Burner',
+      'セイクリッドチャーム': 'Sacred Charm',
+      'ギーマのかけひき': "Grimsley's Move",
+      'ヒカリ': 'Dawn',
+      'ファイアーブレーサー': 'Firebreather',
+      'バトルコロシアム': 'Battle Colosseum',
+      'めまいのたに': 'Dizzy Valley',
     };
 
     // Pokédex number → English name lookup via TCGdex, with memoization
@@ -788,11 +816,17 @@
         // 3. Fetch full details for candidates and score them
         if (candidates.length === 0 && sideloadEnCards.length === 0) {
           setStatus('', false);
+          // If the JP card already has English effect/attack data, show a self-translation view
+          const hasEnData = jpCard.effect || (jpCard.attacks || []).some(a => a.effect);
+          const enName = TRAINER_NAME_MAP[jpCard.name];
           document.getElementById('results').innerHTML = `
             <div class="cards-container">${renderCard(jpCard, 'ja')}</div>
-            <div class="match-info"><span class="no-match">No English equivalent found.</span>
-            ${jpCard.category !== 'Pokemon' ? '<br>Trainer/Energy card matching by name is limited — these often have different names across languages.' : ''}
-            ${!jpCard.dexId ? '<br>This card has no Pokédex ID, so name lookup was not possible.' : ''}</div>`;
+            <div class="match-info">${hasEnData
+              ? `<span style="color:#ffd700">No official English print found.</span>${enName ? `<br>English name: <strong>${safeHtml(enName)}</strong>` : ''}<br>English card text is shown on the card above (sourced from Serebii).`
+              : `<span class="no-match">No English equivalent found.</span>
+                ${jpCard.category !== 'Pokemon' ? '<br>Trainer/Energy card matching by name is limited — these often have different names across languages.' : ''}
+                ${!jpCard.dexId ? '<br>This card has no Pokédex ID, so name lookup was not possible.' : ''}`
+            }</div>`;
           return;
         }
 
