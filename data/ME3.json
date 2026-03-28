@@ -46,7 +46,11 @@
           "name": "Sniper's Eye",
           "effect": "If your opponent has exactly 4 cards in hand, ignore all Colorless Energy in the cost of attacks used by this Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "101": {
       "name": "Salazzle ex",
@@ -85,7 +89,11 @@
           ],
           "effect": "Your opponent's Active Pokémon is now Poisoned and Burned. Switch this Pokémon with one of your Benched Pokemon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "102": {
       "name": "Mega Starmie ex",
@@ -164,7 +172,11 @@
           "name": "Luminous Wing",
           "effect": "Prevent all effects of your opponent's Abilities done to this Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "104": {
       "name": "Mega Zygarde ex",
@@ -208,7 +220,11 @@
           ],
           "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack deals 150 damage to that Pokemon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "105": {
       "name": "Yveltal ex",
@@ -250,7 +266,11 @@
           ],
           "effect": "During your next turn, this Pokémon can't use Dark Strike."
         }
-      ]
+      ],
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "106": {
       "name": "Mega Skarmory ex",
@@ -282,7 +302,11 @@
           ],
           "effect": "Shuffle all Energy from this Pokémon into your deck. This attack does 220 damage to 1 of your opponent's Pokémon."
         }
-      ]
+      ],
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "107": {
       "name": "Meowth ex",
@@ -321,7 +345,11 @@
           "name": "Last-Ditch Catch",
           "effect": "Once during your turn, when you play this Pokémon from your hand onto your Bench, you may search your deck for a Supporter card and put it into your hand. You can't use this Ability if you've already used another Ability with \"Trump Card\" it its name this turn."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "108": {
       "name": "Energy Recycler",
@@ -550,7 +578,11 @@
           "name": "Luminous Wing",
           "effect": "Prevent all effects of your opponent's Abilities done to this Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "120": {
       "name": "Mega Zygarde ex",
@@ -594,7 +626,11 @@
           ],
           "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack deals 150 damage to that Pokemon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "121": {
       "name": "Meowth ex",
@@ -633,7 +669,11 @@
           "name": "Last-Ditch Catch",
           "effect": "Once during your turn, when you play this Pokémon from your hand onto your Bench, you may search your deck for a Supporter card and put it into your hand. You can't use this Ability if you've already used another Ability with \"Trump Card\" it its name this turn."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "122": {
       "name": "Rosa's Encouragement",
@@ -707,7 +747,11 @@
           ],
           "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack deals 150 damage to that Pokemon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "001": {
       "name": "Spinarak",
@@ -738,7 +782,11 @@
           ],
           "effect": "The Defending Pokémon can't retreat during your opponent's next turn."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "002": {
       "name": "Ariados",
@@ -769,7 +817,11 @@
           ],
           "effect": "Your opponent's Active Pokémon is now Poisoned. The Defending Pokémon can't retreat during your opponent's next turn"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "003": {
       "name": "Shaymin",
@@ -806,7 +858,11 @@
             "Grass"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "004": {
       "name": "Snivy",
@@ -837,7 +893,11 @@
           ],
           "effect": "This Pokémon also does 10 damage to itself"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "005": {
       "name": "Servine",
@@ -867,7 +927,11 @@
             "Grass"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "006": {
       "name": "Serperior",
@@ -908,7 +972,11 @@
           ],
           "effect": "If you have Rosa's Encouragement in your discard pile, this attack does 150 more damage."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "007": {
       "name": "Scatterbug",
@@ -938,7 +1006,11 @@
             "Grass"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "008": {
       "name": "Spewpa",
@@ -968,7 +1040,11 @@
           ],
           "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "009": {
       "name": "Vivillon",
@@ -1005,7 +1081,11 @@
           "name": "Grand Wing",
           "effect": "Once during your turn, you may have your opponent shuffle their hand and put it at the bottom of their deck. Then, your opponent draws 4 cards."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "010": {
       "name": "Rowlet",
@@ -1044,7 +1124,11 @@
             "Colorless"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "011": {
       "name": "Dartrix",
@@ -1083,7 +1167,11 @@
           ],
           "effect": "Discard all Energy from this Pokémon. This attack does 90 damage to 1 of your opponent's Pokemon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "012": {
       "name": "Decidueye ex",
@@ -1123,7 +1211,11 @@
           "name": "Sniper's Eye",
           "effect": "If your opponent has exactly 4 cards in hand, ignore all Colorless Energy in the cost of attacks used by this Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "013": {
       "name": "Fletchinder",
@@ -1154,7 +1246,11 @@
             "Fire"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "014": {
       "name": "Talonflame",
@@ -1191,7 +1287,11 @@
           "name": "Sky Hunt",
           "effect": "Once during your turn, you may flip a coin. If heads, discard a random card from your opponent's hand."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "015": {
       "name": "Salandit",
@@ -1221,7 +1321,11 @@
             "Fire"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "016": {
       "name": "Salazzle ex",
@@ -1260,7 +1364,11 @@
           ],
           "effect": "Your opponent's Active Pokémon is now Poisoned and Burned. Switch this Pokémon with one of your Benched Pokemon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "017": {
       "name": "Turtonator",
@@ -1299,7 +1407,11 @@
           "name": "Shell Spikes",
           "effect": "When this Pokémon takes damage from your opponent's Active Pokémon's attacks, discard an Energy from your opponent's Active Pokémon"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "018": {
       "name": "Seel",
@@ -1517,7 +1629,11 @@
           ],
           "effect": "Your opponent's Active Pokémon is now Paralyzed"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "024": {
       "name": "Aurorus",
@@ -1556,7 +1672,11 @@
           "name": "Tundra Wall",
           "effect": "Your Pokemon with any Water Energy attached to them take 50 less damage from attacks from your opponent's Pokemon. The effect of this Ability does not stack."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "025": {
       "name": "Volcanion",
@@ -1634,7 +1754,11 @@
           ],
           "effect": "Flip 2 coins. This attack does 10 damage for each heads"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "027": {
       "name": "Luxio",
@@ -1670,7 +1794,11 @@
           "name": "Fighting Roar",
           "effect": "If your opponent's Active Pokémon is a Pokémon-ex, this Pokémon can evolve on your first turn, or the first turn it is in play"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "028": {
       "name": "Luxray",
@@ -1716,7 +1844,11 @@
           "name": "Roar of the Tiger",
           "effect": "If your opponent's Active Pokemon is a Pokemon ex, you can evolve this Pokemon on your first turn, or on the first turn this Pokemon is put into play."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "029": {
       "name": "Dedenne",
@@ -1747,7 +1879,11 @@
           ],
           "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "030": {
       "name": "Clefairy",
@@ -1785,7 +1921,11 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "031": {
       "name": "Mega Clefable ex",
@@ -1823,7 +1963,11 @@
           "name": "Luminous Wing",
           "effect": "Prevent all effects of your opponent's Abilities done to this Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "032": {
       "name": "Mawile",
@@ -1861,7 +2005,11 @@
           "name": "Wings of Light",
           "effect": "Prevent all effects of your opponent's Abilities done to this Pokemon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "033": {
       "name": "Espurr",
@@ -1898,7 +2046,15 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "034": {
       "name": "Meowstic",
@@ -1936,7 +2092,15 @@
           ],
           "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "035": {
       "name": "Spritzee",
@@ -1973,7 +2137,11 @@
             "Psychic"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "036": {
       "name": "Aromatisse",
@@ -2011,7 +2179,11 @@
           "name": "Scent Collection",
           "effect": "Once during your turn, you may search your deck for up to 2 Basic Psychic Energy, reveal them, and put them into your hand. Then shuffle your deck."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "037": {
       "name": "Nosepass",
@@ -2048,7 +2220,11 @@
           "name": "Fragrance Collection",
           "effect": "Once during your turn, you may search your deck for up to 2 Basic Psychic Energy, reveal them, and put them into your hand. Then, shuffle your deck."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "038": {
       "name": "Probopass",
@@ -2090,7 +2266,11 @@
           ],
           "effect": "Discard 3 Energy from this Pokémon"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "039": {
       "name": "Hippopotas",
@@ -2129,7 +2309,11 @@
             "Colorless"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "040": {
       "name": "Hippowdon",
@@ -2172,7 +2356,11 @@
             "Colorless"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "041": {
       "name": "Landorus",
@@ -2214,7 +2402,11 @@
           ],
           "effect": "Put 1 Energy attached to this Pokémon back into your hand"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "042": {
       "name": "Binacle",
@@ -2252,7 +2444,11 @@
             "Fighting"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "043": {
       "name": "Barbaracle",
@@ -2290,7 +2486,11 @@
           "name": "Stone Arms",
           "effect": "Once during your turn, you may attach 1 Fighting Energy from your hand to 1 of your Fighting type Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "044": {
       "name": "Tyrunt",
@@ -2328,7 +2528,11 @@
           "name": "Stone Arms",
           "effect": "Once during your turn, you may attach a Basic Fighting Energy from your hand to 1 of your Fighting Pokemon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "045": {
       "name": "Tyrantrum",
@@ -2366,7 +2570,11 @@
           "name": "Tyranically Gutsy",
           "effect": "If this Pokémon has any Special Energy attached to it, it has +150 HP."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "046": {
       "name": "Hawlucha",
@@ -2403,7 +2611,11 @@
           "name": "Tyrannoguts",
           "effect": "If this Pokemon has any Special Energy attached, it gets +150 HP."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      }
     },
     "047": {
       "name": "Mega Zygarde ex",
@@ -2447,7 +2659,11 @@
           ],
           "effect": "For each of your opponent's Pokemon, flip a coin. If heads, this attack deals 150 damage to that Pokemon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "048": {
       "name": "Gastly",
@@ -2478,7 +2694,11 @@
           ],
           "effect": "Flip a coin. If tails, this attack does nothing"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "049": {
       "name": "Haunter",
@@ -2508,7 +2728,11 @@
           ],
           "effect": "Put 3 damage counters on your opponent's Active Pokémon"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "050": {
       "name": "Gengar",
@@ -2545,7 +2769,11 @@
           "name": "Infinite Shadow",
           "effect": "When this Pokémon is knocked out by damage from your opponent's Pokémon's attacks, put this Pokémon in your hand instead of the Discard Pile. (Discard all other cards attached to this Pokémon)"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "051": {
       "name": "Skorupi",
@@ -2583,7 +2811,11 @@
           "name": "Infinite Shadow",
           "effect": "If this Pokemon would be Knocked Out by damage from an opponent's Pokemon's attack, instead of discarding it, return it to your hand. (Discard all other cards attached to this Pokemon that are not Pokemon.)"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "052": {
       "name": "Drapion",
@@ -2624,7 +2856,11 @@
           ],
           "effect": "This Pokémon also does 70 damage to itself. Your oppponent's Active Pokémon is now Poisoned and Paralyzed"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "053": {
       "name": "Yveltal ex",
@@ -2666,7 +2902,11 @@
           ],
           "effect": "During your next turn, this Pokémon can't use Dark Strike."
         }
-      ]
+      ],
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "054": {
       "name": "Chien-Pao",
@@ -2707,7 +2947,11 @@
           ],
           "effect": "If your opponent's Active Pokémon is a Pokémon-ex, this attack does 80 more damage"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "055": {
       "name": "Mega Skarmory ex",
@@ -2739,7 +2983,11 @@
           ],
           "effect": "Shuffle all Energy from this Pokémon into your deck. This attack does 220 damage to 1 of your opponent's Pokémon."
         }
-      ]
+      ],
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "056": {
       "name": "Honedge",
@@ -2769,7 +3017,15 @@
             "Colorless"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
     },
     "057": {
       "name": "Doublade",
@@ -2801,7 +3057,15 @@
           ],
           "effect": "You may reveal any number of Honedge, Doublade and Aegislash from your hand. This attack does 60 damage for each card you revealed this way."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
     },
     "058": {
       "name": "Aegislash",
@@ -2844,7 +3108,15 @@
           ],
           "effect": "This Pokémon can't attack during your next turn."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
     },
     "059": {
       "name": "Klefki",
@@ -2875,7 +3147,15 @@
           ],
           "effect": "Choose 1 move on your opponent's Active Pokémon. During your opponent's next turn, the Defending Pokémon can't use that move."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
     },
     "060": {
       "name": "Rattata",
@@ -2906,7 +3186,11 @@
           ],
           "effect": "This Pokémon also does 10 damage to itself"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "061": {
       "name": "Raticate",
@@ -2945,7 +3229,11 @@
           ],
           "effect": "This attack does 40 damage for each damage counter on all of your Benched Rattata."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "062": {
       "name": "Meowth ex",
@@ -2984,7 +3272,11 @@
           "name": "Last-Ditch Catch",
           "effect": "Once during your turn, when you play this Pokémon from your hand onto your Bench, you may search your deck for a Supporter card and put it into your hand. You can't use this Ability if you've already used another Ability with \"Trump Card\" it its name this turn."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "063": {
       "name": "Snorlax",
@@ -3031,7 +3323,11 @@
           "name": "Last-Ditch Catch",
           "effect": "Once during your turn, when you play this Pokemon from your hand onto your Bench, you may use this Ability. Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "064": {
       "name": "Bunnelby",
@@ -3061,7 +3357,11 @@
             "Colorless"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "065": {
       "name": "Diggersby",
@@ -3101,7 +3401,11 @@
             "Colorless"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "066": {
       "name": "Fletchling",
@@ -3139,7 +3443,11 @@
             "Colorless"
           ]
         }
-      ]
+      ],
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "067": {
       "name": "Furfrou",
@@ -3176,7 +3484,11 @@
             "Colorless"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "068": {
       "name": "Antique Jaw Fossil",
@@ -3529,7 +3841,11 @@
         }
       ],
       "effect": "Search your deck for a Pokemon that doesn't have a Rule Box, reveal it, and put it into your hand. Then, shuffle your deck.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "090": {
       "name": "Rowlet",
@@ -3570,7 +3886,11 @@
         }
       ],
       "effect": "Switch 1 of your opponent's Benched Pokemon with their Active Pokemon.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "091": {
       "name": "Talonflame",
@@ -3609,7 +3929,11 @@
         }
       ],
       "effect": "Heal 30 damage from 1 of your Pokemon.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "092": {
       "name": "Aurorus",
@@ -3650,7 +3974,11 @@
         }
       ],
       "effect": "You can only use this card if you have more Prize cards remaining than your opponent. Attach up to 2 Basic Energy cards from your discard pile to 1 of your Stage 2 Pokemon.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "093": {
       "name": "Dedenne",
@@ -3683,7 +4011,11 @@
         }
       ],
       "effect": "Put up to 4 in any combination of Fighting Pokemon and Basic Fighting Energy from your discard pile into your hand.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "094": {
       "name": "Clefairy",
@@ -3722,7 +4054,11 @@
           ]
         }
       ],
-      "effect": "This card provides Grass Energy while attached to a Pokemon. The Grass Pokemon this card is attached to gets +20 HP."
+      "effect": "This card provides Grass Energy while attached to a Pokemon. The Grass Pokemon this card is attached to gets +20 HP.",
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "095": {
       "name": "Espurr",
@@ -3760,7 +4096,15 @@
           ]
         }
       ],
-      "effect": "This card provides Fighting Energy while attached to a Pokemon. Prevent all effects of attacks used by your opponent's Pokemon done to the Fighting Pokemon this card is attached to. (Existing effects are not removed. Damage is not an effect.)"
+      "effect": "This card provides Fighting Energy while attached to a Pokemon. Prevent all effects of attacks used by your opponent's Pokemon done to the Fighting Pokemon this card is attached to. (Existing effects are not removed. Damage is not an effect.)",
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "096": {
       "name": "Probopass",
@@ -3803,7 +4147,11 @@
           "effect": "Discard 3 Energy from this Pokémon"
         }
       ],
-      "effect": "This card provides Psychic Energy while attached to a Pokemon. When you attach this card from your hand to 1 of your Psychic Pokemon, you may search your deck for 2 Basic Psychic Pokemon and put them onto your Bench. Then, shuffle your deck."
+      "effect": "This card provides Psychic Energy while attached to a Pokemon. When you attach this card from your hand to 1 of your Psychic Pokemon, you may search your deck for 2 Basic Psychic Pokemon and put them onto your Bench. Then, shuffle your deck.",
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "097": {
       "name": "Drapion",
@@ -3844,7 +4192,11 @@
           ],
           "effect": "This Pokémon also does 70 damage to itself. Your oppponent's Active Pokémon is now Poisoned and Paralyzed"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "098": {
       "name": "Doublade",
@@ -3876,7 +4228,15 @@
           ],
           "effect": "You may reveal any number of Honedge, Doublade and Aegislash from your hand. This attack does 60 damage for each card you revealed this way."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
     },
     "099": {
       "name": "Raticate",
@@ -3915,7 +4275,11 @@
           ],
           "effect": "This attack does 40 damage for each damage counter on all of your Benched Rattata."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     }
   },
   "jpSetId": "M3"

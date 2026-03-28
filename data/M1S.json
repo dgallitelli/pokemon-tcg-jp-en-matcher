@@ -22,7 +22,11 @@
       ],
       "attacks": [
         {
-          "name": "どくのこな"
+          "name": "どくのこな",
+          "cost": [
+            "Grass"
+          ],
+          "effect": "Your opponent's Active Pokémon is now Poisoned"
         },
         {
           "damage": 30,
@@ -41,7 +45,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "002": {
       "name": "モジャンボ",
@@ -58,10 +66,22 @@
       "attacks": [
         {
           "damage": 30,
-          "name": "すいとる"
+          "name": "すいとる",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "effect": "Heal 30 damage from this Pokémon"
         },
         {
-          "name": "ムキムキウィップ"
+          "name": "ムキムキウィップ",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "If this Pokémon has 2 more Energy attached than are needed for this move, this attack does 140 more damage"
         }
       ],
       "category": "Pokemon",
@@ -71,7 +91,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "003": {
       "name": "チコリータ",
@@ -101,7 +125,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "004": {
       "name": "ベイリーフ",
@@ -118,7 +146,12 @@
       "attacks": [
         {
           "damage": 50,
-          "name": "つきとばす"
+          "name": "つきとばす",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "effect": "Your opponent switches their Active Pokémon with 1 of their Benched Pokémon"
         }
       ],
       "category": "Pokemon",
@@ -128,7 +161,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "005": {
       "name": "メガニウム",
@@ -161,7 +198,17 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "abilities": [
+        {
+          "name": "Wild Growth",
+          "effect": "Each Basic Energy attached to your Pokémon provides . This effect does not stack."
+        }
+      ]
     },
     "006": {
       "name": "ツボツボ",
@@ -192,7 +239,17 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "abilities": [
+        {
+          "name": "Fermented Juice",
+          "effect": "Once during your turn, if this Pokémon has any Grass Energy attached, your may heal 30 damage from one of your Pokémon."
+        }
+      ]
     },
     "007": {
       "name": "ツチニン",
@@ -222,7 +279,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "008": {
       "name": "テッカニン",
@@ -239,7 +300,12 @@
       "attacks": [
         {
           "damage": 90,
-          "name": "とんぼがえり"
+          "name": "とんぼがえり",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "effect": "Switch this Pokémon with 1 of your Benched Pokémon"
         }
       ],
       "category": "Pokemon",
@@ -249,7 +315,17 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "abilities": [
+        {
+          "name": "Loose Shell",
+          "effect": "Once during your turn, when you play this card from your hand to Evolve one of your Pokemon, you may search your deck for a Shedinja and put it onto your Bench. Then shuffle your deck."
+        }
+      ]
     },
     "009": {
       "name": "ダダリン",
@@ -265,7 +341,12 @@
       ],
       "attacks": [
         {
-          "name": "グラウンドパワー"
+          "name": "グラウンドパワー",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "effect": "f you have a Stadium in play, this attack does 50 more damage."
         }
       ],
       "category": "Pokemon",
@@ -275,7 +356,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "010": {
       "name": "シシコ",
@@ -306,7 +391,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "011": {
       "name": "カエンジシ",
@@ -323,7 +412,13 @@
       "attacks": [
         {
           "damage": 70,
-          "name": "やきこがす"
+          "name": "やきこがす",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Your opponent's Active Pokémon is now Burned"
         }
       ],
       "category": "Pokemon",
@@ -333,7 +428,17 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      },
+      "abilities": [
+        {
+          "name": "Intimidating Fang As long as this",
+          "effect": "Pokémon is in the Active Spot, your opponent's Active Pokémon's attacks do 30 less damage"
+        }
+      ]
     },
     "012": {
       "name": "ヤクデ",
@@ -372,7 +477,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "013": {
       "name": "マルヤクデ",
@@ -389,7 +498,12 @@
       "attacks": [
         {
           "damage": 50,
-          "name": "まきつきクラッシュ"
+          "name": "まきつきクラッシュ",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Flip 2 coins. For each heads, discard an Energy from your opponent's Active Pokémon"
         },
         {
           "damage": 140,
@@ -409,7 +523,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "014": {
       "name": "イーユイ",
@@ -426,7 +544,11 @@
       "attacks": [
         {
           "damage": 40,
-          "name": "やけつくだいち"
+          "name": "やけつくだいち",
+          "cost": [
+            "Fire"
+          ],
+          "effect": "Discard the Stadium in Play. During your opponent's next turn, they can't play a Stadium."
         }
       ],
       "category": "Pokemon",
@@ -436,7 +558,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "015": {
       "name": "マンタイン",
@@ -452,7 +578,11 @@
       ],
       "attacks": [
         {
-          "name": "なかまをよぶ"
+          "name": "なかまをよぶ",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck."
         },
         {
           "damage": 50,
@@ -486,11 +616,21 @@
       ],
       "attacks": [
         {
-          "name": "ぎゃくりゅう"
+          "name": "ぎゃくりゅう",
+          "cost": [
+            "Water"
+          ],
+          "effect": "This attack does 20 damage for each Basic Energy card in your discard pile. Then shuffle those cards back into your deck."
         },
         {
           "damage": 130,
-          "name": "うずまくなみ"
+          "name": "うずまくなみ",
+          "cost": [
+            "Colorless",
+            "Water",
+            "Water"
+          ],
+          "effect": "Discard 2 Energy from this Pokémon."
         }
       ],
       "category": "Pokemon",
@@ -538,7 +678,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "018": {
       "name": "メガユキノオーex",
@@ -551,11 +695,22 @@
       "retreat": 4,
       "attacks": [
         {
-          "name": "アバランチハンマー"
+          "name": "アバランチハンマー",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "effect": "Discard the top 6 cards of your deck. This attack does 100 damage for each Basic Water Energy discarded this way."
         },
         {
           "damage": 200,
-          "name": "フロストバリア"
+          "name": "フロストバリア",
+          "cost": [
+            "Water",
+            "Water",
+            "Water"
+          ],
+          "effect": "During your opponent's next turn, this Pokémon takes 30 less damage from attacks."
         }
       ],
       "category": "Pokemon",
@@ -565,7 +720,12 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "dexId": [],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "019": {
       "name": "ウデッポウ",
@@ -613,7 +773,13 @@
       "attacks": [
         {
           "damage": 210,
-          "name": "アクアランチャー"
+          "name": "アクアランチャー",
+          "cost": [
+            "Water",
+            "Water",
+            "Water"
+          ],
+          "effect": "Discard all Energy from this Pokémon."
         }
       ],
       "category": "Pokemon",
@@ -623,7 +789,13 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Backthrust Reload",
+          "effect": "Once during your turn, when this Pokémon moves from the Active Spot to your Bench, you may attach up to 2 Basic Water Energy cards from your hand to this Pokémon."
+        }
+      ]
     },
     "021": {
       "name": "メッソン",
@@ -640,7 +812,11 @@
       "attacks": [
         {
           "damage": 30,
-          "name": "ふいをつく"
+          "name": "ふいをつく",
+          "cost": [
+            "Water"
+          ],
+          "effect": "Flip a coin. If tails, this attack does nothing"
         }
       ],
       "category": "Pokemon",
@@ -666,7 +842,11 @@
       ],
       "attacks": [
         {
-          "name": "にどづき"
+          "name": "にどづき",
+          "cost": [
+            "Water"
+          ],
+          "effect": "Flip 2 coins. This attack does 30 damage for each heads"
         }
       ],
       "category": "Pokemon",
@@ -692,11 +872,19 @@
       ],
       "attacks": [
         {
-          "name": "しとめる"
+          "name": "しとめる",
+          "cost": [
+            "Water"
+          ],
+          "effect": "The Pokémon in play that has the least HP remaining, except for this Pokémon, is Knocked Out. (If multiple Pokémon are tied, choose one.)"
         },
         {
           "damage": 110,
-          "name": "ウォーターショット"
+          "name": "ウォーターショット",
+          "cost": [
+            "Water"
+          ],
+          "effect": "Discard an Energy from this Pokémon."
         }
       ],
       "category": "Pokemon",
@@ -722,7 +910,11 @@
       ],
       "attacks": [
         {
-          "name": "かくれる"
+          "name": "かくれる",
+          "cost": [
+            "Water"
+          ],
+          "effect": "Flip a coin. If heads, prevent all effects of attacks, including damage, done to this Pokémon during your opponent's next turn"
         }
       ],
       "category": "Pokemon",
@@ -732,7 +924,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "025": {
       "name": "モスノウ",
@@ -748,7 +944,11 @@
       ],
       "attacks": [
         {
-          "name": "こごえるはばたき"
+          "name": "こごえるはばたき",
+          "cost": [
+            "Water"
+          ],
+          "effect": "This attack does 20 damage to each of your opponent's Pokémon. Your opponent's Active Pokémon is now Asleep."
         }
       ],
       "category": "Pokemon",
@@ -758,7 +958,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "026": {
       "name": "コオリッポ",
@@ -775,7 +979,11 @@
       "attacks": [
         {
           "damage": 20,
-          "name": "いてつくずつき"
+          "name": "いてつくずつき",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
         },
         {
           "damage": 90,
@@ -794,7 +1002,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "027": {
       "name": "コイル",
@@ -824,7 +1036,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "028": {
       "name": "レアコイル",
@@ -841,7 +1057,8 @@
       "attacks": [
         {
           "damage": 30,
-          "name": "でんきショック"
+          "name": "でんきショック",
+          "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
         }
       ],
       "category": "Pokemon",
@@ -851,7 +1068,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "029": {
       "name": "ジバコイル",
@@ -867,11 +1088,13 @@
       ],
       "attacks": [
         {
-          "name": "アッパースパーク"
+          "name": "アッパースパーク",
+          "effect": "If this Pokémon evolved from Magneton during this turn, this attack does 120 more damage."
         },
         {
           "damage": 160,
-          "name": "フラッシュボルト"
+          "name": "フラッシュボルト",
+          "effect": "This Pokémon can't use Flash Bolt during your next turn."
         }
       ],
       "category": "Pokemon",
@@ -881,7 +1104,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "030": {
       "name": "ライコウ",
@@ -897,7 +1124,8 @@
       ],
       "attacks": [
         {
-          "name": "エレキフォール"
+          "name": "エレキフォール",
+          "effect": "If you have at least 4 Energy in play, this attack does 90 more damage."
         }
       ],
       "category": "Pokemon",
@@ -907,7 +1135,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "031": {
       "name": "ラクライ",
@@ -924,7 +1156,8 @@
       "attacks": [
         {
           "damage": 30,
-          "name": "でんげき"
+          "name": "でんげき",
+          "effect": "This Pokémon also does 10 damage to itself"
         }
       ],
       "category": "Pokemon",
@@ -934,7 +1167,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "032": {
       "name": "メガライボルトex",
@@ -951,10 +1188,12 @@
       "attacks": [
         {
           "damage": 120,
-          "name": "フラッシュレイ"
+          "name": "フラッシュレイ",
+          "effect": "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from your opponent's Basic Pokémon."
         },
         {
-          "name": "ライオットブラスター"
+          "name": "ライオットブラスター",
+          "effect": "You may discard all Energy from this Pokémon. If you do, this attack does 130 more damage."
         }
       ],
       "category": "Pokemon",
@@ -964,7 +1203,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "033": {
       "name": "パチリス",
@@ -981,7 +1224,8 @@
       "attacks": [
         {
           "damage": 10,
-          "name": "しびれるまえば"
+          "name": "しびれるまえば",
+          "effect": "During your opponent's next turn, whenever your opponent attaches an Energy from their hand to the Defending Pokémon, put 8 damage counters on that Pokémon."
         }
       ],
       "category": "Pokemon",
@@ -991,7 +1235,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "034": {
       "name": "エリキテル",
@@ -1007,7 +1255,11 @@
       ],
       "attacks": [
         {
-          "name": "ダブルひっかき"
+          "name": "ダブルひっかき",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Flip 2 coins. This attack does 10 damage for each heads"
         }
       ],
       "category": "Pokemon",
@@ -1017,7 +1269,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "035": {
       "name": "エレザード",
@@ -1034,7 +1290,11 @@
       "attacks": [
         {
           "damage": 20,
-          "name": "せんこうだん"
+          "name": "せんこうだん",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Your opponent's Active Pokémon is now Paralyzed"
         },
         {
           "damage": 70,
@@ -1052,7 +1312,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "036": {
       "name": "ケーシィ",
@@ -1069,7 +1333,11 @@
       "attacks": [
         {
           "damage": 10,
-          "name": "テレポートアタック"
+          "name": "テレポートアタック",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "Switch this Pokémon with 1 of your Benched Pokémon"
         }
       ],
       "category": "Pokemon",
@@ -1079,7 +1347,15 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "037": {
       "name": "ユンゲラー",
@@ -1109,7 +1385,21 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "abilities": [
+        {
+          "name": "Psydraw",
+          "effect": "Once during your turn, when you play this card from your hand to evolve 1 of your Pokémon, you may draw 2 cards"
+        }
+      ]
     },
     "038": {
       "name": "フーディン",
@@ -1125,7 +1415,11 @@
       ],
       "attacks": [
         {
-          "name": "ハンドパワー"
+          "name": "ハンドパワー",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "Put 2 damage counters on your opponent's Active Pokémon for each card in your hand."
         }
       ],
       "category": "Pokemon",
@@ -1135,7 +1429,21 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "abilities": [
+        {
+          "name": "Psydraw",
+          "effect": "Once during your turn, when you play this card from your hand to evolve 1 of your Pokémon, you may draw 3 cards"
+        }
+      ]
     },
     "039": {
       "name": "ルージュラ",
@@ -1151,7 +1459,12 @@
       ],
       "attacks": [
         {
-          "name": "サイコキネシス"
+          "name": "サイコキネシス",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "effect": "This attack does 30 more damage for each Energy attached to the Defending Pokémon"
         }
       ],
       "category": "Pokemon",
@@ -1161,7 +1474,15 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "040": {
       "name": "ラルトス",
@@ -1177,7 +1498,11 @@
       ],
       "attacks": [
         {
-          "name": "もってくる"
+          "name": "もってくる",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Draw a card"
         },
         {
           "damage": 10,
@@ -1194,7 +1519,15 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "041": {
       "name": "キルリア",
@@ -1210,7 +1543,11 @@
       ],
       "attacks": [
         {
-          "name": "コールサイン"
+          "name": "コールサイン",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "Search your deck for up to 3 Pokémon, reveal them, and put them into your hand. Then shuffle your deck."
         },
         {
           "damage": 30,
@@ -1227,7 +1564,15 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "042": {
       "name": "メガサーナイトex",
@@ -1243,10 +1588,18 @@
       ],
       "attacks": [
         {
-          "name": "あふれるねがい"
+          "name": "あふれるねがい",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "For each of your Benched Pokémon, search your deck for a Basic Energy card and attach it to that Pokémon. Then, shuffle your deck."
         },
         {
-          "name": "メガシンフォニア"
+          "name": "メガシンフォニア",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "This attack does 50 damage for each Energy attached to all of your Pokémon"
         }
       ],
       "category": "Pokemon",
@@ -1256,7 +1609,15 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "043": {
       "name": "ヌケニン",
@@ -1272,7 +1633,11 @@
       ],
       "attacks": [
         {
-          "name": "ダメージビート"
+          "name": "ダメージビート",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "This attack does 20 damage for each damage counter already on your opponent's Active Pokémon."
         }
       ],
       "category": "Pokemon",
@@ -1282,7 +1647,21 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "abilities": [
+        {
+          "name": "Empty Shell",
+          "effect": "If this Pokémon is knocked out by damage from an attack from your opponent's Pokémon ex, your opponent doesn't take any prize cards for that KO."
+        }
+      ]
     },
     "044": {
       "name": "バネブー",
@@ -1298,7 +1677,11 @@
       ],
       "attacks": [
         {
-          "name": "トリプルスピン"
+          "name": "トリプルスピン",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "Flip 3 coins. This attack does 10 damage for each heads"
         }
       ],
       "category": "Pokemon",
@@ -1308,7 +1691,15 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "045": {
       "name": "ブーピッグ",
@@ -1340,7 +1731,21 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "abilities": [
+        {
+          "name": "Energy Steps",
+          "effect": "Once during your turn, when you play this card from your hand to evolve one of your Pokémon, you may look at the top 4 cards of your deck. Attach any number of Basic Energy cards you find there to your Pokémon in any way you like. Shuffle the other cards back into your deck"
+        }
+      ]
     },
     "046": {
       "name": "ゼルネアス",
@@ -1356,11 +1761,21 @@
       ],
       "attacks": [
         {
-          "name": "ジオゲート"
+          "name": "ジオゲート",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "Search your deck for up to 3 Basic Pokémon and put them onto your Bench. Then shuffle your deck."
         },
         {
           "damage": 120,
-          "name": "ブライトホーン"
+          "name": "ブライトホーン",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "effect": "This Pokémon can't use Bright Horns during your next turn."
         }
       ],
       "category": "Pokemon",
@@ -1370,7 +1785,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "047": {
       "name": "ボチ",
@@ -1394,7 +1813,12 @@
         },
         {
           "damage": 40,
-          "name": "とっしん"
+          "name": "とっしん",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "effect": "This Pokémon also does 10 damage to itself"
         }
       ],
       "category": "Pokemon",
@@ -1404,7 +1828,15 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "048": {
       "name": "ハカドッグ",
@@ -1421,7 +1853,11 @@
       "attacks": [
         {
           "damage": 30,
-          "name": "ホラーバイト"
+          "name": "ホラーバイト",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "Flip a coin until you get a tails. For each deck, shuffle a random card from your opponent's hand back into their deck"
         },
         {
           "damage": 130,
@@ -1440,7 +1876,15 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "049": {
       "name": "メガラティアスex",
@@ -1457,11 +1901,21 @@
       "attacks": [
         {
           "damage": 40,
-          "name": "ひるがえす"
+          "name": "ひるがえす",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "You may switch this Pokémon with one of your Benched Pokémon."
         },
         {
           "damage": 300,
-          "name": "ミラージュインパルス"
+          "name": "ミラージュインパルス",
+          "cost": [
+            "Fire",
+            "Psychic",
+            "Colorless"
+          ],
+          "effect": "Discard all Energy from this Pokémon."
         }
       ],
       "category": "Pokemon",
@@ -1503,7 +1957,13 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Luster Assist",
+          "effect": "Once during your turn, when your Mega Latias ex moves from the Bench to the Active Spot, you may move any number of Energy from your Benched Pokémon to that Active Pokémon."
+        }
+      ]
     },
     "051": {
       "name": "メガガルーラex",
@@ -1519,7 +1979,13 @@
       ],
       "attacks": [
         {
-          "name": "マシンガンコンボ"
+          "name": "マシンガンコンボ",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Flip a coin until you get a tails. This attack does 50 more damage for each heads."
         }
       ],
       "category": "Pokemon",
@@ -1529,7 +1995,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "052": {
       "name": "デリバード",
@@ -1545,7 +2015,11 @@
       ],
       "attacks": [
         {
-          "name": "ファストギフト"
+          "name": "ファストギフト",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "You may use this attack even on your first turn going first. Search your deck for any 1 card and put it into your hand. Then shuffle your deck."
         },
         {
           "damage": 30,
@@ -1563,7 +2037,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "053": {
       "name": "ミミロル",
@@ -1579,7 +2057,11 @@
       ],
       "attacks": [
         {
-          "name": "あまえる"
+          "name": "あまえる",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "During your opponent's next turn, damage done by the Defending Pokémon's attacks is reduced by 20"
         },
         {
           "damage": 10,
@@ -1596,7 +2078,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "054": {
       "name": "ミミロップ",
@@ -1613,7 +2099,11 @@
       "attacks": [
         {
           "damage": 50,
-          "name": "とびだしキック"
+          "name": "とびだしキック",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "This attack does 50 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon)"
         },
         {
           "damage": 60,
@@ -1631,7 +2121,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "055": {
       "name": "ヌイコグマ",
@@ -1669,7 +2163,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "056": {
       "name": "キテルグマ",
@@ -1693,7 +2191,13 @@
           "name": "げんこつ"
         },
         {
-          "name": "ひっさつラリアット"
+          "name": "ひっさつラリアット",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Flip 2 coins. This attack does 100 more damage for each heads."
         }
       ],
       "category": "Pokemon",
@@ -1703,7 +2207,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "057": {
       "name": "あやしい時計",
@@ -1715,7 +2223,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Item",
+      "effect": "Choose one of your Evolved Psychic Pokémon, and put any number of its Evolution cards back into your hand to devolve it. (A Pokémon cannot evolve on the turn it devolved)"
     },
     "058": {
       "name": "メガシグナル",
@@ -1727,7 +2237,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Item",
+      "effect": "Search your deck for 1 Mega Evolution Pokémon ex, reveal it, and put it into your hand. Then shuffle your deck."
     },
     "059": {
       "name": "アセロラのいたずら",
@@ -1739,7 +2251,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Supporter",
+      "effect": "You can use this card only if your opponent has 2 or fewer Prize cards remaining. Choose 1 of your Pokémon. During your opponent's next turn, prevent all damage and effects done to that Pokémon by attacks from your opponent's Pokémon ex."
     },
     "060": {
       "name": "ミツルの思いやり",
@@ -1751,7 +2265,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Supporter",
+      "effect": "Heal all damage from 1 of your Mega Evolution Pokémon ex. If you do, put all Energy attached to that Pokémon back into your hand."
     },
     "061": {
       "name": "活力の森",
@@ -1763,7 +2279,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Stadium",
+      "effect": "Each player's Grass Pokémon may evolve into a Grass Pokémon on the turn they were played (except on that player's first turn)"
     },
     "062": {
       "name": "なみのりビーチ",
@@ -1775,7 +2293,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Stadium",
+      "effect": "Once during each player's turn, that player may switch their Active Water Pokémon with one of their Benched Water Pokémon."
     },
     "063": {
       "name": "ミステリーガーデン",
@@ -1787,7 +2307,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Stadium",
+      "effect": "Once during each player's turn, that player may discard 1 Energy card from their hand. If they do, that player draws cards until they have as many cards in hand as they have Psychic Pokémon in play."
     },
     "064": {
       "name": "ツボツボ",
@@ -1819,7 +2341,17 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "abilities": [
+        {
+          "name": "Fermented Juice",
+          "effect": "Once during your turn, if this Pokémon has any Grass Energy attached, your may heal 30 damage from one of your Pokémon."
+        }
+      ]
     },
     "065": {
       "name": "テッカニン",
@@ -1836,7 +2368,12 @@
       "attacks": [
         {
           "damage": 90,
-          "name": "とんぼがえり"
+          "name": "とんぼがえり",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "effect": "Switch this Pokémon with 1 of your Benched Pokémon"
         }
       ],
       "category": "Pokemon",
@@ -1846,7 +2383,17 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "abilities": [
+        {
+          "name": "Loose Shell",
+          "effect": "Once during your turn, when you play this card from your hand to Evolve one of your Pokemon, you may search your deck for a Shedinja and put it onto your Bench. Then shuffle your deck."
+        }
+      ]
     },
     "066": {
       "name": "シシコ",
@@ -1877,7 +2424,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "067": {
       "name": "ユキカブリ",
@@ -1915,7 +2466,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "068": {
       "name": "ブロスター",
@@ -1932,7 +2487,13 @@
       "attacks": [
         {
           "damage": 210,
-          "name": "アクアランチャー"
+          "name": "アクアランチャー",
+          "cost": [
+            "Water",
+            "Water",
+            "Water"
+          ],
+          "effect": "Discard all Energy from this Pokémon."
         }
       ],
       "category": "Pokemon",
@@ -1942,7 +2503,13 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "abilities": [
+        {
+          "name": "Backthrust Reload",
+          "effect": "Once during your turn, when this Pokémon moves from the Active Spot to your Bench, you may attach up to 2 Basic Water Energy cards from your hand to this Pokémon."
+        }
+      ]
     },
     "069": {
       "name": "インテレオン",
@@ -1958,11 +2525,19 @@
       ],
       "attacks": [
         {
-          "name": "しとめる"
+          "name": "しとめる",
+          "cost": [
+            "Water"
+          ],
+          "effect": "The Pokémon in play that has the least HP remaining, except for this Pokémon, is Knocked Out. (If multiple Pokémon are tied, choose one.)"
         },
         {
           "damage": 110,
-          "name": "ウォーターショット"
+          "name": "ウォーターショット",
+          "cost": [
+            "Water"
+          ],
+          "effect": "Discard an Energy from this Pokémon."
         }
       ],
       "category": "Pokemon",
@@ -1988,7 +2563,11 @@
       ],
       "attacks": [
         {
-          "name": "ダブルひっかき"
+          "name": "ダブルひっかき",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Flip 2 coins. This attack does 10 damage for each heads"
         }
       ],
       "category": "Pokemon",
@@ -1998,7 +2577,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "071": {
       "name": "フーディン",
@@ -2014,7 +2597,11 @@
       ],
       "attacks": [
         {
-          "name": "ハンドパワー"
+          "name": "ハンドパワー",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "Put 2 damage counters on your opponent's Active Pokémon for each card in your hand."
         }
       ],
       "category": "Pokemon",
@@ -2024,7 +2611,21 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "abilities": [
+        {
+          "name": "Psydraw",
+          "effect": "Once during your turn, when you play this card from your hand to evolve 1 of your Pokémon, you may draw 3 cards"
+        }
+      ]
     },
     "072": {
       "name": "ヌケニン",
@@ -2040,7 +2641,11 @@
       ],
       "attacks": [
         {
-          "name": "ダメージビート"
+          "name": "ダメージビート",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "This attack does 20 damage for each damage counter already on your opponent's Active Pokémon."
         }
       ],
       "category": "Pokemon",
@@ -2050,7 +2655,21 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "abilities": [
+        {
+          "name": "Empty Shell",
+          "effect": "If this Pokémon is knocked out by damage from an attack from your opponent's Pokémon ex, your opponent doesn't take any prize cards for that KO."
+        }
+      ]
     },
     "073": {
       "name": "ハカドッグ",
@@ -2067,7 +2686,11 @@
       "attacks": [
         {
           "damage": 30,
-          "name": "ホラーバイト"
+          "name": "ホラーバイト",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "Flip a coin until you get a tails. For each deck, shuffle a random card from your opponent's hand back into their deck"
         },
         {
           "damage": 130,
@@ -2086,7 +2709,15 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "074": {
       "name": "デリバード",
@@ -2102,7 +2733,11 @@
       ],
       "attacks": [
         {
-          "name": "ファストギフト"
+          "name": "ファストギフト",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "You may use this attack even on your first turn going first. Search your deck for any 1 card and put it into your hand. Then shuffle your deck."
         },
         {
           "damage": 30,
@@ -2120,7 +2755,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "075": {
       "name": "ヌイコグマ",
@@ -2158,7 +2797,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "076": {
       "name": "メガユキノオーex",
@@ -2171,11 +2814,22 @@
       "retreat": 4,
       "attacks": [
         {
-          "name": "アバランチハンマー"
+          "name": "アバランチハンマー",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "effect": "Discard the top 6 cards of your deck. This attack does 100 damage for each Basic Water Energy discarded this way."
         },
         {
           "damage": 200,
-          "name": "フロストバリア"
+          "name": "フロストバリア",
+          "cost": [
+            "Water",
+            "Water",
+            "Water"
+          ],
+          "effect": "During your opponent's next turn, this Pokémon takes 30 less damage from attacks."
         }
       ],
       "category": "Pokemon",
@@ -2185,7 +2839,12 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "dexId": [],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "077": {
       "name": "メガライボルトex",
@@ -2202,10 +2861,12 @@
       "attacks": [
         {
           "damage": 120,
-          "name": "フラッシュレイ"
+          "name": "フラッシュレイ",
+          "effect": "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from your opponent's Basic Pokémon."
         },
         {
-          "name": "ライオットブラスター"
+          "name": "ライオットブラスター",
+          "effect": "You may discard all Energy from this Pokémon. If you do, this attack does 130 more damage."
         }
       ],
       "category": "Pokemon",
@@ -2215,7 +2876,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "078": {
       "name": "メガサーナイトex",
@@ -2231,10 +2896,18 @@
       ],
       "attacks": [
         {
-          "name": "あふれるねがい"
+          "name": "あふれるねがい",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "For each of your Benched Pokémon, search your deck for a Basic Energy card and attach it to that Pokémon. Then, shuffle your deck."
         },
         {
-          "name": "メガシンフォニア"
+          "name": "メガシンフォニア",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "This attack does 50 damage for each Energy attached to all of your Pokémon"
         }
       ],
       "category": "Pokemon",
@@ -2244,7 +2917,15 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "079": {
       "name": "メガラティアスex",
@@ -2261,11 +2942,21 @@
       "attacks": [
         {
           "damage": 40,
-          "name": "ひるがえす"
+          "name": "ひるがえす",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "You may switch this Pokémon with one of your Benched Pokémon."
         },
         {
           "damage": 300,
-          "name": "ミラージュインパルス"
+          "name": "ミラージュインパルス",
+          "cost": [
+            "Fire",
+            "Psychic",
+            "Colorless"
+          ],
+          "effect": "Discard all Energy from this Pokémon."
         }
       ],
       "category": "Pokemon",
@@ -2291,7 +2982,13 @@
       ],
       "attacks": [
         {
-          "name": "マシンガンコンボ"
+          "name": "マシンガンコンボ",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Flip a coin until you get a tails. This attack does 50 more damage for each heads."
         }
       ],
       "category": "Pokemon",
@@ -2301,7 +2998,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "081": {
       "name": "なかよしポフィン",
@@ -2313,7 +3014,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Item",
+      "effect": "Search your deck for up to 2 Basic Pokémon with 70 HP or lower and put them onto your Bench. Then, shuffle your deck."
     },
     "082": {
       "name": "ふしぎなアメ",
@@ -2325,7 +3028,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Item",
+      "effect": "Choose 1 of your Basic Pokémon in play. If you have a Stage 1 or Stage 2 card that evolves from that Pokémon in your hand, put that card on the Basic Pokémon. (This counts as evolving that Pokémon.)"
     },
     "083": {
       "name": "メガシグナル",
@@ -2337,7 +3042,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Item",
+      "effect": "Search your deck for 1 Mega Evolution Pokémon ex, reveal it, and put it into your hand. Then shuffle your deck."
     },
     "084": {
       "name": "アセロラのいたずら",
@@ -2349,7 +3056,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Supporter",
+      "effect": "You can use this card only if your opponent has 2 or fewer Prize cards remaining. Choose 1 of your Pokémon. During your opponent's next turn, prevent all damage and effects done to that Pokémon by attacks from your opponent's Pokémon ex."
     },
     "085": {
       "name": "ミツルの思いやり",
@@ -2361,7 +3070,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Supporter",
+      "effect": "Heal all damage from 1 of your Mega Evolution Pokémon ex. If you do, put all Energy attached to that Pokémon back into your hand."
     },
     "086": {
       "name": "ミステリーガーデン",
@@ -2373,7 +3084,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Stadium",
+      "effect": "Once during each player's turn, that player may discard 1 Energy card from their hand. If they do, that player draws cards until they have as many cards in hand as they have Psychic Pokémon in play."
     },
     "087": {
       "name": "メガサーナイトex",
@@ -2389,10 +3102,18 @@
       ],
       "attacks": [
         {
-          "name": "あふれるねがい"
+          "name": "あふれるねがい",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "For each of your Benched Pokémon, search your deck for a Basic Energy card and attach it to that Pokémon. Then, shuffle your deck."
         },
         {
-          "name": "メガシンフォニア"
+          "name": "メガシンフォニア",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "This attack does 50 damage for each Energy attached to all of your Pokémon"
         }
       ],
       "category": "Pokemon",
@@ -2402,7 +3123,15 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "088": {
       "name": "メガラティアスex",
@@ -2419,11 +3148,21 @@
       "attacks": [
         {
           "damage": 40,
-          "name": "ひるがえす"
+          "name": "ひるがえす",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "You may switch this Pokémon with one of your Benched Pokémon."
         },
         {
           "damage": 300,
-          "name": "ミラージュインパルス"
+          "name": "ミラージュインパルス",
+          "cost": [
+            "Fire",
+            "Psychic",
+            "Colorless"
+          ],
+          "effect": "Discard all Energy from this Pokémon."
         }
       ],
       "category": "Pokemon",
@@ -2449,7 +3188,13 @@
       ],
       "attacks": [
         {
-          "name": "マシンガンコンボ"
+          "name": "マシンガンコンボ",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Flip a coin until you get a tails. This attack does 50 more damage for each heads."
         }
       ],
       "category": "Pokemon",
@@ -2459,7 +3204,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "090": {
       "name": "アセロラのいたずら",
@@ -2471,7 +3220,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Supporter",
+      "effect": "You can use this card only if your opponent has 2 or fewer Prize cards remaining. Choose 1 of your Pokémon. During your opponent's next turn, prevent all damage and effects done to that Pokémon by attacks from your opponent's Pokémon ex."
     },
     "091": {
       "name": "ミツルの思いやり",
@@ -2483,7 +3234,9 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Supporter",
+      "effect": "Heal all damage from 1 of your Mega Evolution Pokémon ex. If you do, put all Energy attached to that Pokémon back into your hand."
     },
     "092": {
       "name": "メガサーナイトex",
@@ -2499,10 +3252,18 @@
       ],
       "attacks": [
         {
-          "name": "あふれるねがい"
+          "name": "あふれるねがい",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "For each of your Benched Pokémon, search your deck for a Basic Energy card and attach it to that Pokémon. Then, shuffle your deck."
         },
         {
-          "name": "メガシンフォニア"
+          "name": "メガシンフォニア",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "This attack does 50 damage for each Energy attached to all of your Pokémon"
         }
       ],
       "category": "Pokemon",
@@ -2512,7 +3273,15 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     }
   }
 }

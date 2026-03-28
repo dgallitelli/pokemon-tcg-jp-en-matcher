@@ -2948,7 +2948,8 @@
       "image": null,
       "category": "Energy",
       "rarity": "Uncommon",
-      "effect": "As long as this card is attached to a Pokemon, it provides 1 Fire Energy. If an attack used by the Fire Pokemon this card is attached to would discard this card, put it into your hand after applying damage and effects of that attack."
+      "effect": "As long as this card is attached to a Pokemon, it provides 1 Fire Energy. If an attack used by the Fire Pokemon this card is attached to would discard this card, put it into your hand after applying damage and effects of that attack.",
+      "subcategory": "Special Energy"
     },
     "082": {
       "name": "Bubble Water Energy",
@@ -2960,7 +2961,8 @@
       "image": null,
       "category": "Energy",
       "rarity": "Uncommon",
-      "effect": "As long as this card is attached to a Pokemon, it provides 1 Water Energy. The Water Pokemon this card is attached to recovers from all Special Conditions and can't be affected by any Special Conditions."
+      "effect": "As long as this card is attached to a Pokemon, it provides 1 Water Energy. The Water Pokemon this card is attached to recovers from all Special Conditions and can't be affected by any Special Conditions.",
+      "subcategory": "Special Energy"
     },
     "083": {
       "name": "Magnet Metal Energy",
@@ -2972,7 +2974,8 @@
       "image": null,
       "category": "Energy",
       "rarity": "Uncommon",
-      "effect": "As long as this card is attached to a Pokemon, it provides 1 Metal Energy. The Metal Pokemon this card is attached to has no Retreat Cost."
+      "effect": "As long as this card is attached to a Pokemon, it provides 1 Metal Energy. The Metal Pokemon this card is attached to has no Retreat Cost.",
+      "subcategory": "Special Energy"
     }
   }
 }

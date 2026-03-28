@@ -28,7 +28,20 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Bind Down",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 10,
+          "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "002": {
       "name": "フシギソウ",
@@ -50,7 +63,20 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Razor Leaf",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": 60
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "003": {
       "name": "メガフシギバナex",
@@ -72,7 +98,23 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Jungle Dump",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": 240,
+          "effect": "Heal 30 damage from this Pokémon"
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "004": {
       "name": "タマタマ",
@@ -94,7 +136,19 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Clog",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Search your deck for 1 Basic Energy and attach it to this Pokémon. Then, shuffle your deck"
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "005": {
       "name": "ナッシー",
@@ -116,7 +170,30 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Guard Press",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 30,
+          "effect": "During your next turn, this Pokémon receives 30 less damage from attacks (after applying Weakness and Resistance)"
+        },
+        {
+          "name": "Wood Stamp",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60+",
+          "effect": "This attack does 30 more damage for each Energy attached to this Pokémon"
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "006": {
       "name": "セレビィ",
@@ -138,7 +215,26 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Time Walk",
+          "cost": [
+            "Grass"
+          ],
+          "effect": "Search your deck for up to 3 in any combination of Pokémon or Stadium cards, reveal them, and put them in your hand. Then, shuffle your deck"
+        },
+        {
+          "name": "Solar Cutter",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 30
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "007": {
       "name": "タネボー",
@@ -160,7 +256,27 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Nap",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Heal 20 damage from this Pokémon"
+        },
+        {
+          "name": "Seed Bomb",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "008": {
       "name": "コノハナ",
@@ -182,7 +298,27 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Pound",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 30
+        },
+        {
+          "name": "Low Kick",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": 50
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "009": {
       "name": "ダーテング",
@@ -204,7 +340,28 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Gust Return",
+          "cost": [
+            "Grass"
+          ],
+          "effect": "Flip a coin. If heads, pick 1 of your opponent's Pokémon. Your opponent shuffles that Pokémon and all cards attached to it into the deck"
+        },
+        {
+          "name": "Perplex",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": 100,
+          "effect": "Your opponent's Active Pokémon is now Confused"
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "010": {
       "name": "ロコン",
@@ -226,7 +383,27 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Stampede",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 10
+        },
+        {
+          "name": "Combustion",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "011": {
       "name": "キュウコン",
@@ -248,7 +425,27 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Suspicious Shapeshifting",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Discard the top card of your deck. If that card is a Supporter, use its effect as the effect of this attack."
+        },
+        {
+          "name": "Blaze",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": 60
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "012": {
       "name": "ドンメル",
@@ -270,7 +467,28 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Fire"
+          ],
+          "effect": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck."
+        },
+        {
+          "name": "Flare",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 30
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "013": {
       "name": "メガバクーダex",
@@ -292,7 +510,31 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Roasting Heat",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "80+",
+          "effect": "If your opponent's Active Pokémon is Burned, this attack does 160 more damage."
+        },
+        {
+          "name": "Volcano Meteor",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 280,
+          "effect": "Discard 2 Energy from this Pokémon."
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "014": {
       "name": "ボルケニオン",
@@ -314,7 +556,29 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Singe",
+          "cost": [
+            "Fire"
+          ],
+          "effect": "Your opponent's Active Pokémon is now Burned"
+        },
+        {
+          "name": "Backfire",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": 130,
+          "effect": "Put 2 Energy attached to this Pokémon back into your hand"
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "015": {
       "name": "ヒバニー",
@@ -336,7 +600,19 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Wild Kick",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Flip a coin. If tails, this attack does nothing"
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "016": {
       "name": "ラビフット",
@@ -358,7 +634,19 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Jump Kick",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "This attack does 40 damage to 1 of your opponent's Benched Pokémon (Don't apply Weakness and Resistance for Benched Pokémon)"
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "017": {
       "name": "エースバーン",
@@ -380,7 +668,26 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Flare Turbo",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 50,
+          "effect": "Search your deck for up to 3 Basic Energy and attach them to your Benched Pokemon in any way you like. Shuffle your deck."
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      },
+      "abilities": [
+        {
+          "name": "Explosiveness",
+          "effect": "If this Pokémon is in your hand when you are setting up to play, you may put it face down as your Active Pokémon."
+        }
+      ]
     },
     "018": {
       "name": "ヘイガニ",
@@ -402,7 +709,24 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Irongrip",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 10
+        },
+        {
+          "name": "Take Down",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 30,
+          "effect": "This Pokémon also does 10 damage to itself"
+        }
+      ]
     },
     "019": {
       "name": "コレクレー",
@@ -424,7 +748,23 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Slap",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 10
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "020": {
       "name": "サンド",
@@ -446,7 +786,27 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Dig Claws",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 10
+        },
+        {
+          "name": "Mud-Slap",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "021": {
       "name": "サンドパン",
@@ -468,7 +828,30 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Sand Attack",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 50,
+          "effect": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, the attack does nothing"
+        },
+        {
+          "name": "Mud Shot",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 100
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "022": {
       "name": "イワーク",
@@ -490,7 +873,30 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Bind",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 30,
+          "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed"
+        },
+        {
+          "name": "Strength",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 100
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "023": {
       "name": "バルキー",
@@ -512,7 +918,17 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Eager Hits",
+          "damage": "10+",
+          "effect": "Flip a coin until you get tails. This attack does 30 more damage for each heads."
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      }
     },
     "024": {
       "name": "マクノシタ",
@@ -534,7 +950,27 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Corkscrew Punch",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 10
+        },
+        {
+          "name": "Confront",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": 30
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      }
     },
     "025": {
       "name": "ハリテヤマ",
@@ -556,7 +992,28 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Wild Press",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": 210,
+          "effect": "This Pokémon does 70 damage to itself."
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      },
+      "abilities": [
+        {
+          "name": "Sumo Catcher",
+          "effect": "Once during your turn, when you play this card from your hand to evolve one of your Pokémon, you may switch one of your opponent's Benched Pokémon with their Active Pokémon."
+        }
+      ]
     },
     "026": {
       "name": "ルナトーン",
@@ -578,7 +1035,20 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Power Gem",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": 50
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "027": {
       "name": "ソルロック",
@@ -600,7 +1070,20 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Cosmo Beam",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 70,
+          "effect": "If you don't have Lunatone on your Bench, this attack does nothing. Don't apply Weakness and Resistance for this attack's damage."
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "028": {
       "name": "リオル",
@@ -622,7 +1105,20 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Accelerating Stab",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 30,
+          "effect": "During your next turn, this Pokémon can't use Accelerating Stab."
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      }
     },
     "029": {
       "name": "メガルカリオex",
@@ -644,7 +1140,29 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Aura Jab",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 130,
+          "effect": "Attach up to 3 Basic Energy from your discard pile to your Benched Pokémon in any way yuo like."
+        },
+        {
+          "name": "Mega Brave",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": 270,
+          "effect": "During your next turn, this Pokémon can't use Mega Brave"
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      }
     },
     "030": {
       "name": "グレッグル",
@@ -666,7 +1184,19 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Smack",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 20
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      }
     },
     "031": {
       "name": "ドクロッグ",
@@ -688,7 +1218,20 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Reckless Charge",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 70,
+          "effect": "This Pokémon also does 20 damage to itself"
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      }
     },
     "032": {
       "name": "マーシャドー",
@@ -710,7 +1253,21 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Shadow Boxing",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": 60,
+          "effect": "If the Defending Pokémon is Knocked Out by damage from this attack, during your opponent's next turn this Pokémon receives no damage or effects from your opponent's Pokémon's attacks"
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      }
     },
     "033": {
       "name": "イシヘンジン",
@@ -732,7 +1289,30 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Stone Kick",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 20,
+          "effect": "This attack also does 20 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon)"
+        },
+        {
+          "name": "Boundless Power",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": 140,
+          "effect": "During your next turn, this Pokémon can't attack."
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "034": {
       "name": "コジオ",
@@ -754,7 +1334,18 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless"
+          ]
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "035": {
       "name": "ジオヅム",
@@ -776,7 +1367,21 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Rock Hurl",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": 50,
+          "effect": "This attack's damage isn't affected by Resistance"
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "036": {
       "name": "キョジオーン",
@@ -798,7 +1403,27 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Hammer In",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": 130
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "abilities": [
+        {
+          "name": "Power Salt",
+          "effect": "Attacks used by your Pokémon deal 30 more damage to your opponent's Active Pokémon."
+        }
+      ]
     },
     "037": {
       "name": "シザリガー",
@@ -820,7 +1445,29 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Vise Grip",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 30
+        },
+        {
+          "name": "Payback Scissors",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 130,
+          "effect": "If this Pokémon has any damage counters on it, this attack can be used for 1 Energy."
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "038": {
       "name": "メガアブソルex",
@@ -842,7 +1489,30 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Terminal Period",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "effect": "If your opponent's Active Pokémon has exactly 6 damage counters on it, it is now Knocked Out."
+        },
+        {
+          "name": "Claw of Darkness",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 200,
+          "effect": "Look at your opponent's hand and discard 1 card you find there."
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "039": {
       "name": "ミカルゲ",
@@ -864,7 +1534,26 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Top Breaker",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 10,
+          "effect": "Discard the top card of your opponent's deck."
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "abilities": [
+        {
+          "name": "Vengeful Swirl",
+          "effect": "Whenever your Active Darkness Pokémon takes damage from an opponent's Pokémon's attack, put 1 damage counter on the attacking Pokémon."
+        }
+      ]
     },
     "040": {
       "name": "イベルタル",
@@ -886,7 +1575,29 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Clutch",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 20,
+          "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
+        },
+        {
+          "name": "Dark Feather",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 110
+        }
+      ],
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "041": {
       "name": "クスネ",
@@ -908,7 +1619,19 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Darkness Fang",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 20
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "042": {
       "name": "フォクスライ",
@@ -930,7 +1653,28 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Greedy Hunt",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 20,
+          "effect": "You may draw cards until you have 6 cards in your hand"
+        },
+        {
+          "name": "Pitch-Black Fangs",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 60
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "043": {
       "name": "シルシュルー",
@@ -952,7 +1696,21 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Poison Jab",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 20,
+          "effect": "Your opponent's Active Pokémon is now Poisoned."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "044": {
       "name": "タギングル",
@@ -974,7 +1732,21 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Miracle Paint",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 90,
+          "effect": "Flip a coin. If heads, pick a Special Condition. Your opponent's Active Pokémon now has that condition."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "045": {
       "name": "ハガネール",
@@ -996,7 +1768,35 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Welcome Tail",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40+",
+          "effect": "If you have exactly 6 prize cards remaining, this attack does 200 more damage."
+        },
+        {
+          "name": "Rocket Headbutt",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 140
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
     },
     "046": {
       "name": "メガクチートex",
@@ -1018,7 +1818,35 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Gobble Down",
+          "cost": [
+            "Metal",
+            "Metal"
+          ],
+          "damage": "80x",
+          "effect": "This attack does 80 damage for each prize card you've already taken."
+        },
+        {
+          "name": "Big Bite",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 260,
+          "effect": "If your opponent's Active Pokémon already has any damage s on it, this attack does 30 damage instead."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
     },
     "047": {
       "name": "ディアルガ",
@@ -1040,7 +1868,33 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Beam",
+          "cost": [
+            "Metal"
+          ],
+          "damage": 30
+        },
+        {
+          "name": "Chrono Burst",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": "80+",
+          "effect": "You may discard this Pokémon and shuffle all Energy attached to it into your deck. If you do, this attack does 80 more damage"
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
     },
     "048": {
       "name": "カヌチャン",
@@ -1062,7 +1916,23 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Slap",
+          "cost": [
+            "Metal"
+          ],
+          "damage": 20
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
     },
     "049": {
       "name": "ナカヌチャン",
@@ -1084,7 +1954,29 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Wham",
+          "cost": [
+            "Metal"
+          ],
+          "damage": 30
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      },
+      "abilities": [
+        {
+          "name": "Sudden Hammer",
+          "effect": "Once during your turn, when you play this card from your hand to evolve one of your Pokemon, you may flip a coin. If heads, discard an Energy from your opponent's Active Pokémon."
+        }
+      ]
     },
     "050": {
       "name": "デカヌチャン",
@@ -1106,7 +1998,24 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Big Swing",
+          "cost": [
+            "Metal"
+          ],
+          "damage": "240-",
+          "effect": "This attack does 60 less damage for each Energy attached to your opponent's Active Pokémon."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
     },
     "051": {
       "name": "サーフゴー",
@@ -1128,7 +2037,31 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "All-You-Can-Grab",
+          "cost": [
+            "Colorless"
+          ]
+        },
+        {
+          "name": "Speed Attack",
+          "cost": [
+            "Metal",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 100
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
     },
     "052": {
       "name": "オニスズメ",
@@ -1150,7 +2083,20 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Pluck",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 10,
+          "effect": "Before doing damage, discard all Pokémon Tools from your opponent's Active Pokémon."
+        }
+      ],
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "053": {
       "name": "オニドリル",
@@ -1172,7 +2118,20 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Repeating Drill",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "30x",
+          "effect": "Flip 5 coins. This attack does 30 damage for each heads"
+        }
+      ],
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "054": {
       "name": "ミルタンク",
@@ -1194,7 +2153,29 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Filling Milk",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Flip 2 coins. If both are heads, heal all damage from 1 of your Pokémon"
+        },
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 60
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "055": {
       "name": "ヤングース",
@@ -1216,7 +2197,27 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Collect",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Draw a card"
+        },
+        {
+          "name": "Gnaw",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "056": {
       "name": "デカグース",
@@ -1238,7 +2239,26 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Bite",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 50
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "abilities": [
+        {
+          "name": "Look for Clues",
+          "effect": "Once during your turn, you may switch a card from your hand with the top card of your deck."
+        }
+      ]
     },
     "057": {
       "name": "アイアンガード",
@@ -1250,7 +2270,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Item",
+      "effect": "During your opponent's next turn, your Metal type Pokémon take 30 less damage from attacks from your opponent's Pokémon (including Pokémon put in play after you play this card)."
     },
     "058": {
       "name": "プレミアムパワープロ",
@@ -1262,7 +2284,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Item",
+      "effect": "During this turn, attacks used by your Pokémon do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance)"
     },
     "059": {
       "name": "ファイトゴング",
@@ -1274,7 +2298,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Item",
+      "effect": "Search your deck for a Fighting type Basic Pokémon or for a Basic Fighting Energy, reveal it, and put it into your hand. Then shuffle your deck."
     },
     "060": {
       "name": "むしよけスプレー",
@@ -1286,7 +2312,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "effect": "Provides 1 Colorless Energy.",
+      "subcategory": "Special Energy"
     },
     "061": {
       "name": "マチスのかけひき",
@@ -1298,7 +2326,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Supporter",
+      "effect": "Ask you opponent if they agree to have each player take a Prize card. If your opponent agrees, each take a Prize card. If they don't, you draw 4 cards."
     },
     "062": {
       "name": "リーリエのきもち",
@@ -1310,7 +2340,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Supporter",
+      "effect": "Shuffle your hand into your deck. Then, draw 6 cards. If you have 6 prize cards remaining, draw 8 cards instead."
     },
     "063": {
       "name": "危険な廃墟ビル",
@@ -1322,7 +2354,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "effect": "This card stays in play when you play it. Discard this card if another Stadium card comes into play. If another card with the same name is in play, you can't play this card.",
+      "subcategory": "Stadium"
     },
     "064": {
       "name": "フシギダネ",
@@ -1344,7 +2378,20 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Bind Down",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 10,
+          "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "065": {
       "name": "フシギソウ",
@@ -1366,7 +2413,20 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Razor Leaf",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": 60
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "066": {
       "name": "ナッシー",
@@ -1388,7 +2448,30 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Guard Press",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 30,
+          "effect": "During your next turn, this Pokémon receives 30 less damage from attacks (after applying Weakness and Resistance)"
+        },
+        {
+          "name": "Wood Stamp",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "60+",
+          "effect": "This attack does 30 more damage for each Energy attached to this Pokémon"
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "067": {
       "name": "ロコン",
@@ -1410,7 +2493,27 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Stampede",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 10
+        },
+        {
+          "name": "Combustion",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "068": {
       "name": "リオル",
@@ -1432,7 +2535,20 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Accelerating Stab",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 30,
+          "effect": "During your next turn, this Pokémon can't use Accelerating Stab."
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      }
     },
     "069": {
       "name": "マーシャドー",
@@ -1454,7 +2570,21 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Shadow Boxing",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": 60,
+          "effect": "If the Defending Pokémon is Knocked Out by damage from this attack, during your opponent's next turn this Pokémon receives no damage or effects from your opponent's Pokémon's attacks"
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      }
     },
     "070": {
       "name": "キョジオーン",
@@ -1476,7 +2606,27 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Hammer In",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": 130
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "abilities": [
+        {
+          "name": "Power Salt",
+          "effect": "Attacks used by your Pokémon deal 30 more damage to your opponent's Active Pokémon."
+        }
+      ]
     },
     "071": {
       "name": "ミカルゲ",
@@ -1498,7 +2648,26 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Top Breaker",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 10,
+          "effect": "Discard the top card of your opponent's deck."
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "abilities": [
+        {
+          "name": "Vengeful Swirl",
+          "effect": "Whenever your Active Darkness Pokémon takes damage from an opponent's Pokémon's attack, put 1 damage counter on the attacking Pokémon."
+        }
+      ]
     },
     "072": {
       "name": "シルシュルー",
@@ -1520,7 +2689,21 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Poison Jab",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 20,
+          "effect": "Your opponent's Active Pokémon is now Poisoned."
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "073": {
       "name": "ハガネール",
@@ -1542,7 +2725,35 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Welcome Tail",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40+",
+          "effect": "If you have exactly 6 prize cards remaining, this attack does 200 more damage."
+        },
+        {
+          "name": "Rocket Headbutt",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 140
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
     },
     "074": {
       "name": "オニスズメ",
@@ -1564,7 +2775,20 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Pluck",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 10,
+          "effect": "Before doing damage, discard all Pokémon Tools from your opponent's Active Pokémon."
+        }
+      ],
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      }
     },
     "075": {
       "name": "ヤングース",
@@ -1586,7 +2810,27 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Collect",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Draw a card"
+        },
+        {
+          "name": "Gnaw",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "076": {
       "name": "メガフシギバナex",
@@ -1608,7 +2852,23 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Jungle Dump",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": 240,
+          "effect": "Heal 30 damage from this Pokémon"
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "077": {
       "name": "メガバクーダex",
@@ -1630,7 +2890,31 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Roasting Heat",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "80+",
+          "effect": "If your opponent's Active Pokémon is Burned, this attack does 160 more damage."
+        },
+        {
+          "name": "Volcano Meteor",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 280,
+          "effect": "Discard 2 Energy from this Pokémon."
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "078": {
       "name": "メガルカリオex",
@@ -1652,7 +2936,29 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Aura Jab",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 130,
+          "effect": "Attach up to 3 Basic Energy from your discard pile to your Benched Pokémon in any way yuo like."
+        },
+        {
+          "name": "Mega Brave",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": 270,
+          "effect": "During your next turn, this Pokémon can't use Mega Brave"
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      }
     },
     "079": {
       "name": "メガアブソルex",
@@ -1674,7 +2980,30 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Terminal Period",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "effect": "If your opponent's Active Pokémon has exactly 6 damage counters on it, it is now Knocked Out."
+        },
+        {
+          "name": "Claw of Darkness",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 200,
+          "effect": "Look at your opponent's hand and discard 1 card you find there."
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "080": {
       "name": "メガクチートex",
@@ -1696,7 +3025,35 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Gobble Down",
+          "cost": [
+            "Metal",
+            "Metal"
+          ],
+          "damage": "80x",
+          "effect": "This attack does 80 damage for each prize card you've already taken."
+        },
+        {
+          "name": "Big Bite",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 260,
+          "effect": "If your opponent's Active Pokémon already has any damage s on it, this attack does 30 damage instead."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      }
     },
     "081": {
       "name": "プレミアムパワープロ",
@@ -1708,7 +3065,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Item",
+      "effect": "During this turn, attacks used by your Pokémon do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance)"
     },
     "082": {
       "name": "ファイトゴング",
@@ -1720,7 +3079,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Item",
+      "effect": "Search your deck for a Fighting type Basic Pokémon or for a Basic Fighting Energy, reveal it, and put it into your hand. Then shuffle your deck."
     },
     "083": {
       "name": "ナイトストレッチャー",
@@ -1732,7 +3093,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Item",
+      "effect": "Put a Pokémon or a Basic Energy card from your discard pile into your hand"
     },
     "084": {
       "name": "エアバルーン",
@@ -1744,7 +3107,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Item",
+      "effect": "The Retreat Cost of the Pokémon this card is attached to is less."
     },
     "085": {
       "name": "マチスのかけひき",
@@ -1756,7 +3121,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Supporter",
+      "effect": "Ask you opponent if they agree to have each player take a Prize card. If your opponent agrees, each take a Prize card. If they don't, you draw 4 cards."
     },
     "086": {
       "name": "リーリエのきもち",
@@ -1768,7 +3135,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Supporter",
+      "effect": "Shuffle your hand into your deck. Then, draw 6 cards. If you have 6 prize cards remaining, draw 8 cards instead."
     },
     "087": {
       "name": "メガフシギバナex",
@@ -1790,7 +3159,23 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Jungle Dump",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": 240,
+          "effect": "Heal 30 damage from this Pokémon"
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "088": {
       "name": "メガルカリオex",
@@ -1812,7 +3197,29 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Aura Jab",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 130,
+          "effect": "Attach up to 3 Basic Energy from your discard pile to your Benched Pokémon in any way yuo like."
+        },
+        {
+          "name": "Mega Brave",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": 270,
+          "effect": "During your next turn, this Pokémon can't use Mega Brave"
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      }
     },
     "089": {
       "name": "メガアブソルex",
@@ -1834,7 +3241,30 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Terminal Period",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "effect": "If your opponent's Active Pokémon has exactly 6 damage counters on it, it is now Knocked Out."
+        },
+        {
+          "name": "Claw of Darkness",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 200,
+          "effect": "Look at your opponent's hand and discard 1 card you find there."
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "090": {
       "name": "マチスのかけひき",
@@ -1846,7 +3276,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Supporter",
+      "effect": "Ask you opponent if they agree to have each player take a Prize card. If your opponent agrees, each take a Prize card. If they don't, you draw 4 cards."
     },
     "091": {
       "name": "リーリエのきもち",
@@ -1858,7 +3290,9 @@
         "id": "M1L",
         "name": "Mega Brave"
       },
-      "image": null
+      "image": null,
+      "subcategory": "Supporter",
+      "effect": "Shuffle your hand into your deck. Then, draw 6 cards. If you have 6 prize cards remaining, draw 8 cards instead."
     },
     "092": {
       "name": "メガルカリオex",
@@ -1880,7 +3314,29 @@
         "name": "Mega Brave"
       },
       "image": null,
-      "attacks": []
+      "attacks": [
+        {
+          "name": "Aura Jab",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 130,
+          "effect": "Attach up to 3 Basic Energy from your discard pile to your Benched Pokémon in any way yuo like."
+        },
+        {
+          "name": "Mega Brave",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": 270,
+          "effect": "During your next turn, this Pokémon can't use Mega Brave"
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      }
     }
   }
 }
