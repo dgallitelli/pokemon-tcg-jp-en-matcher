@@ -697,7 +697,14 @@
       "weakness": {
         "type": "Water",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Excited Turbo",
+          "effect": "As often as you like during your turn, if you have any {R} Mega Evolution Pokémon ex in play, you may use this Ability. Attach a Basic {R} Energy card from your hand to 1 of your Benched {R} Pokémon.",
+          "type": "Ability"
+        }
+      ]
     },
     "019": {
       "name": "カルボウ",
@@ -1143,7 +1150,14 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Multi Adapter",
+          "effect": "Each of your Pokémon that has \"Rotom\" in its name may have up to 2 Pokémon Tool cards attached. If this Ability goes away, discard Pokémon Tools from those Pokémon until only 1 remains on each.",
+          "type": "Ability"
+        }
+      ]
     },
     "030": {
       "name": "ワンパチ",
@@ -1405,7 +1419,14 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Swirling Prose",
+          "effect": "As long as this Pokémon is in the Active Spot, whenever your opponent's Active Pokémon moves to the Bench during their turn, their new Active Pokémon is now Confused.",
+          "type": "Ability"
+        }
+      ]
     },
     "037": {
       "name": "モンメン",
@@ -1802,7 +1823,11 @@
       "attacks": [
         {
           "damage": 130,
-          "name": "かまいたち"
+          "name": "かまいたち",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ]
         }
       ],
       "category": "Pokemon",
@@ -2284,7 +2309,14 @@
       "resistance": {
         "type": "Grass",
         "value": "-30"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Emperor's Stance",
+          "effect": "Prevent all effects of attacks used by your opponent's Pokémon done to this Pokémon. (Damage is not an effect.)",
+          "type": "Ability"
+        }
+      ]
     },
     "059": {
       "name": "ドーミラー",
@@ -3271,7 +3303,11 @@
       "attacks": [
         {
           "damage": 130,
-          "name": "かまいたち"
+          "name": "かまいたち",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ]
         }
       ],
       "category": "Pokemon",
@@ -3586,7 +3622,14 @@
       "weakness": {
         "type": "Water",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Excited Turbo",
+          "effect": "As often as you like during your turn, if you have any {R} Mega Evolution Pokémon ex in play, you may use this Ability. Attach a Basic {R} Energy card from your hand to 1 of your Benched {R} Pokémon.",
+          "type": "Ability"
+        }
+      ]
     },
     "096": {
       "name": "ロトムex",
@@ -3622,7 +3665,14 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Multi Adapter",
+          "effect": "Each of your Pokémon that has \"Rotom\" in its name may have up to 2 Pokémon Tool cards attached. If this Ability goes away, discard Pokémon Tools from those Pokémon until only 1 remains on each.",
+          "type": "Ability"
+        }
+      ]
     },
     "097": {
       "name": "ムウマージex",
@@ -3662,7 +3712,14 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Swirling Prose",
+          "effect": "As long as this Pokémon is in the Active Spot, whenever your opponent's Active Pokémon moves to the Bench during their turn, their new Active Pokémon is now Confused.",
+          "type": "Ability"
+        }
+      ]
     },
     "098": {
       "name": "メガサメハダーex",
@@ -3747,7 +3804,14 @@
       "resistance": {
         "type": "Grass",
         "value": "-30"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Emperor's Stance",
+          "effect": "Prevent all effects of attacks used by your opponent's Pokémon done to this Pokémon. (Damage is not an effect.)",
+          "type": "Ability"
+        }
+      ]
     },
     "100": {
       "name": "メガミミロップex",
@@ -3988,7 +4052,14 @@
       "weakness": {
         "type": "Water",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Excited Turbo",
+          "effect": "As often as you like during your turn, if you have any {R} Mega Evolution Pokémon ex in play, you may use this Ability. Attach a Basic {R} Energy card from your hand to 1 of your Benched {R} Pokémon.",
+          "type": "Ability"
+        }
+      ]
     },
     "112": {
       "name": "ロトムex",
@@ -4024,7 +4095,14 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Multi Adapter",
+          "effect": "Each of your Pokémon that has \"Rotom\" in its name may have up to 2 Pokémon Tool cards attached. If this Ability goes away, discard Pokémon Tools from those Pokémon until only 1 remains on each.",
+          "type": "Ability"
+        }
+      ]
     },
     "113": {
       "name": "メガサメハダーex",

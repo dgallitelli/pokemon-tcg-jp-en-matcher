@@ -181,7 +181,7 @@
 
   <script>
     const API = 'https://api.tcgdex.net/v2';
-    const DATA_VERSION = 3; // Bump to invalidate sideload localStorage cache
+    const DATA_VERSION = 4; // Bump to invalidate sideload localStorage cache
     const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
 
     // Invalidate old sideload caches when data version changes
@@ -231,8 +231,10 @@
         { id: "M4",  name: "Ninja Spinner",   file: "data/M4.json",  cardCount: 120 },
       ],
       en: [
-        { id: "ME3", name: "Perfect Order",   file: "data/ME3.json" },
-        { id: "ME4", name: "Ninja Spinner",   file: "data/ME4.json" },
+        { id: "ME1", name: "Mega Evolution",      file: "data/ME1.json" },
+        { id: "ME2", name: "Phantasmal Flames",   file: "data/ME2.json" },
+        { id: "ME3", name: "Perfect Order",        file: "data/ME3.json" },
+        { id: "ME4", name: "Ninja Spinner",        file: "data/ME4.json" },
       ]
     };
 
@@ -240,7 +242,7 @@
     const SIDELOAD_JP_CONFIG = Object.fromEntries(SIDELOAD_CONFIG.jp.map(c => [c.id, c]));
 
     // Map JP set IDs to their EN translation sideload set IDs
-    const JP_TO_EN_SIDELOAD = { "M3": "ME3", "M4": "ME4" };
+    const JP_TO_EN_SIDELOAD = { "M1S": "ME1", "M1L": "ME1", "M2": "ME2", "M3": "ME3", "M4": "ME4" };
 
     let SIDELOAD_SETS = {};
     let SIDELOAD_EN_SETS = {};
@@ -790,8 +792,10 @@
             const jpNum = jpCard.id?.split('-')[1] || cardNum;
             let transCard = null;
             // Sort by card number so lower-numbered (base) cards are preferred over alt-arts/URs
-            const enCardsSorted = Object.values(enTransSet.cards)
-              .sort((a, b) => parseInt(a.id.split('-')[1], 10) - parseInt(b.id.split('-')[1], 10));
+            const enCardsEntries = Object.entries(enTransSet.cards);
+            const enCardsSorted = enCardsEntries
+              .sort(([ka], [kb]) => parseInt(ka, 10) - parseInt(kb, 10))
+              .map(([, v]) => v);
             if (jpCard.category === 'Pokemon' && jpCard.dexId?.length > 0) {
               // Match by dexId + illustrator — card numbers may differ between JP and EN sets
               transCard = enCardsSorted.find(c =>
@@ -839,7 +843,7 @@
                   <div class="arrow">→</div>
                   ${renderCard(transCard, 'en', '🔄 Translation')}
                 </div>
-                <div class="match-info">This card has no official English print yet. Showing fan translation from <span style="color:#ffd700">${safeHtml(enTransSet.name || enTransSetId)}</span>.</div>
+                <div class="match-info">Matched via <span style="color:#ffd700">${safeHtml(enTransSet.name || enTransSetId)}</span> (EN translation set).</div>
                 ${renderNavRow()}`;
               return;
             }

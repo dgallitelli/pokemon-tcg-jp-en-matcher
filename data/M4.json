@@ -1253,7 +1253,13 @@
         },
         {
           "damage": 40,
-          "name": "バリアー"
+          "name": "バリアー",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokemon."
         }
       ],
       "category": "Pokemon",
@@ -1294,7 +1300,13 @@
         },
         {
           "damage": 50,
-          "name": "スピードブレイク"
+          "name": "スピードブレイク",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokemon."
         }
       ],
       "category": "Pokemon",
@@ -3015,7 +3027,7 @@
           "effect": "Draw a card"
         },
         {
-          "name": "",
+          "name": "Water Gun",
           "cost": [
             "Water"
           ],
@@ -3048,10 +3060,11 @@
       },
       "attacks": [
         {
-          "name": "",
+          "name": "Calling Jutsu",
           "cost": [
             "Water"
-          ]
+          ],
+          "effect": "Search your deck for up to 3 Pokemon, reveal them, and put them into your hand. Then, shuffle your deck."
         },
         {
           "name": "Aqua Edge",
@@ -3253,13 +3266,14 @@
           "damage": 30
         },
         {
-          "name": "",
+          "name": "Guard Press",
           "cost": [
             "Metal",
             "Metal",
             "Colorless"
           ],
-          "damage": 70
+          "damage": 70,
+          "effect": "During your opponent's next turn, this Pokemon takes 30 less damage from attacks."
         }
       ]
     },

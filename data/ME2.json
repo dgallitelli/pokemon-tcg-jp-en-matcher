@@ -1,0 +1,3344 @@
+{
+  "name": "Phantasmal Flames",
+  "cards": {
+    "001": {
+      "name": "Oddish",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 50,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        43
+      ],
+      "attacks": [
+        {
+          "name": "Seed Bomb",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 20
+        }
+      ],
+      "retreat": 1
+    },
+    "002": {
+      "name": "Gloom",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        44
+      ],
+      "attacks": [
+        {
+          "name": "Disperse Drool",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 20,
+          "effect": "This attack also does 20 damage to each Benched Pokémon (both yours and your opponent's). (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      ],
+      "retreat": 1
+    },
+    "003": {
+      "name": "Vileplume",
+      "rarity": "Rare",
+      "category": "Pokemon",
+      "hp": 150,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        45
+      ],
+      "attacks": [
+        {
+          "name": "Pollen Bomb",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 30,
+          "effect": "Your opponent's Active Pokémon is now Asleep and Poisoned."
+        },
+        {
+          "name": "Lively Flower",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "60+",
+          "effect": "If this Pokémon was healed during this turn, this attack does 120 more damage."
+        }
+      ],
+      "retreat": 2
+    },
+    "004": {
+      "name": "Mega Heracross ex",
+      "illustrator": "5ban Graphics",
+      "rarity": "Double rare",
+      "category": "Pokemon",
+      "hp": 280,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        214
+      ],
+      "attacks": [
+        {
+          "name": "Juggernaut Horn",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "100+",
+          "effect": "If this Pokémon was damaged by an attack during your opponent's last turn, this attack does that much more damage."
+        },
+        {
+          "name": "Mountain Ramming",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": 170,
+          "effect": "Discard the top 2 cards of your opponent's deck."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "retreat": 2
+    },
+    "005": {
+      "name": "Lotad",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        270
+      ],
+      "attacks": [
+        {
+          "name": "Headbutt",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": 30
+        }
+      ],
+      "retreat": 1
+    },
+    "006": {
+      "name": "Lombre",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 90,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        271
+      ],
+      "attacks": [
+        {
+          "name": "Mega Drain",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": 30,
+          "effect": "Heal 30 damage from this Pokémon."
+        }
+      ],
+      "retreat": 1
+    },
+    "007": {
+      "name": "Ludicolo",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 160,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        272
+      ],
+      "attacks": [
+        {
+          "name": "Lunge Out",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": 120
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Excited Heal",
+          "effect": "Once during your turn, if you have any {G} Mega Evolution Pokémon ex in play, you may use this Ability. Heal 60 damage from 1 of your Pokémon.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 2
+    },
+    "008": {
+      "name": "Genesect",
+      "rarity": "Rare",
+      "category": "Pokemon",
+      "hp": 120,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        649
+      ],
+      "attacks": [
+        {
+          "name": "Bug's Cannon",
+          "cost": [
+            "Grass"
+          ],
+          "effect": "This attack does 20 damage to 1 of your opponent's Pokémon for each {G} Energy attached to this Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        },
+        {
+          "name": "Speed Attack",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": 110
+        }
+      ],
+      "retreat": 2
+    },
+    "009": {
+      "name": "Nymble",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 50,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        919
+      ],
+      "attacks": [
+        {
+          "name": "Flail Around",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10×",
+          "effect": "Flip 3 coins. This attack does 10 damage for each heads."
+        }
+      ],
+      "retreat": 1
+    },
+    "010": {
+      "name": "Lokix",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 120,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        920
+      ],
+      "attacks": [
+        {
+          "name": "Low Kick",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 30
+        },
+        {
+          "name": "Jumping Shot",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 150,
+          "effect": "Shuffle this Pokémon and all attached cards into your deck."
+        }
+      ],
+      "retreat": 1
+    },
+    "011": {
+      "name": "Charmander",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 80,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        4
+      ],
+      "attacks": [
+        {
+          "name": "Live Coal",
+          "cost": [
+            "Fire"
+          ],
+          "damage": 20
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Agile",
+          "effect": "If this Pokémon has no Energy attached, it has no Retreat Cost.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 2
+    },
+    "012": {
+      "name": "Charmeleon",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 110,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        5
+      ],
+      "attacks": [
+        {
+          "name": "Steady Firebreathing",
+          "cost": [
+            "Fire"
+          ],
+          "damage": 40
+        }
+      ],
+      "retreat": 2
+    },
+    "013": {
+      "name": "Mega Charizard X ex",
+      "rarity": "Double rare",
+      "category": "Pokemon",
+      "hp": 360,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        6
+      ],
+      "attacks": [
+        {
+          "name": "Inferno X",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "90×",
+          "effect": "Discard any amount of {R} Energy from among your Pokémon, and this attack does 90 damage for each card you discarded in this way."
+        }
+      ],
+      "retreat": 2
+    },
+    "014": {
+      "name": "Moltres",
+      "rarity": "Rare",
+      "category": "Pokemon",
+      "hp": 120,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        146
+      ],
+      "attacks": [
+        {
+          "name": "Fighting Wings",
+          "cost": [
+            "Fire"
+          ],
+          "damage": "20+",
+          "effect": "If your opponent's Active Pokémon is a Pokémon ex, this attack does 90 more damage."
+        }
+      ],
+      "retreat": 1
+    },
+    "015": {
+      "name": "Darumaka",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 80,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        554
+      ],
+      "attacks": [
+        {
+          "name": "Blaze Ball",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "10+",
+          "effect": "This attack does 20 more damage for each {R} Energy attached to this Pokémon."
+        }
+      ],
+      "retreat": 2
+    },
+    "016": {
+      "name": "Darmanitan",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 150,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        555
+      ],
+      "attacks": [
+        {
+          "name": "Blaze Ball",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40+",
+          "effect": "This attack does 40 more damage for each {R} Energy attached to this Pokémon."
+        }
+      ],
+      "retreat": 3
+    },
+    "017": {
+      "name": "Reshiram",
+      "rarity": "Rare",
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        643
+      ],
+      "attacks": [
+        {
+          "name": "Combustion",
+          "cost": [
+            "Fire"
+          ],
+          "damage": 30
+        },
+        {
+          "name": "Burning Flare",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Fire",
+            "Fire"
+          ],
+          "damage": 240,
+          "effect": "This Pokémon also does 60 damage to itself."
+        }
+      ],
+      "retreat": 2
+    },
+    "018": {
+      "name": "Oricorio ex",
+      "rarity": "Double rare",
+      "category": "Pokemon",
+      "hp": 190,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        741
+      ],
+      "attacks": [
+        {
+          "name": "Fire Wing",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": 110
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Excited Turbo",
+          "effect": "As often as you like during your turn, if you have any {R} Mega Evolution Pokémon ex in play, you may use this Ability. Attach a Basic {R} Energy card from your hand to 1 of your Benched {R} Pokémon.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 1
+    },
+    "019": {
+      "name": "Charcadet",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        935
+      ],
+      "attacks": [
+        {
+          "name": "Gather Strength",
+          "cost": [
+            "Fire"
+          ],
+          "effect": "Search your deck for up to 2 Basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck."
+        },
+        {
+          "name": "Chop",
+          "cost": [
+            "Fire"
+          ],
+          "damage": 10
+        }
+      ],
+      "retreat": 2
+    },
+    "020": {
+      "name": "Ceruledge",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 140,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        937
+      ],
+      "attacks": [
+        {
+          "name": "Infernal Slash",
+          "cost": [
+            "Fire"
+          ],
+          "damage": 220,
+          "effect": "Discard 4 Basic {R} Energy cards from your hand. If you can't discard 4 cards in this way, this attack does nothing."
+        }
+      ],
+      "retreat": 2
+    },
+    "021": {
+      "name": "Seel",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 80,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        86
+      ],
+      "attacks": [
+        {
+          "name": "Bubble Drain",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": 20,
+          "effect": "Heal 20 damage from this Pokémon."
+        }
+      ],
+      "retreat": 2
+    },
+    "022": {
+      "name": "Dewgong",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        87
+      ],
+      "attacks": [
+        {
+          "name": "Slam",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "70×",
+          "effect": "Flip 2 coins. This attack does 70 damage for each heads."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Thick Fat",
+          "effect": "This Pokémon takes 30 less damage from attacks from your opponent's {R} or {W} Pokémon (after applying Weakness and Resistance).",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 2
+    },
+    "023": {
+      "name": "Swinub",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        220
+      ],
+      "attacks": [
+        {
+          "name": "Stampede",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 10
+        },
+        {
+          "name": "Icy Snow",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "retreat": 2
+    },
+    "024": {
+      "name": "Piloswine",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 100,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        221
+      ],
+      "attacks": [
+        {
+          "name": "Rising Lunge",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "30+",
+          "effect": "Flip a coin. If heads, this attack does 30 more damage."
+        },
+        {
+          "name": "Frost Smash",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 70
+        }
+      ],
+      "retreat": 3
+    },
+    "025": {
+      "name": "Mamoswine",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 180,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        473
+      ],
+      "attacks": [
+        {
+          "name": "Wreck",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "120+",
+          "effect": "If a Stadium is in play, this attack does 120 more damage. Then, discard that Stadium."
+        },
+        {
+          "name": "Blizzard Edge",
+          "cost": [
+            "Water",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 200,
+          "effect": "Discard 2 Energy from this Pokémon."
+        }
+      ],
+      "retreat": 4
+    },
+    "026": {
+      "name": "Suicune",
+      "rarity": "Rare",
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        245
+      ],
+      "attacks": [
+        {
+          "name": "Crystal Fall",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": "30+",
+          "effect": "If you have at least 4 {W} Energy in play, this attack does 90 more damage."
+        }
+      ],
+      "retreat": 2
+    },
+    "027": {
+      "name": "Piplup",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        393
+      ],
+      "attacks": [
+        {
+          "name": "Call for Support",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck."
+        },
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "retreat": 1
+    },
+    "028": {
+      "name": "Prinplup",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 100,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        394
+      ],
+      "attacks": [
+        {
+          "name": "Peck",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 20
+        },
+        {
+          "name": "Targeted Dive",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "This attack does 70 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      ],
+      "retreat": 2
+    },
+    "029": {
+      "name": "Rotom ex",
+      "rarity": "Double rare",
+      "category": "Pokemon",
+      "hp": 190,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        479
+      ],
+      "attacks": [
+        {
+          "name": "Thunderbolt",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": 130,
+          "effect": "Discard all Energy from this Pokémon."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Multi Adapter",
+          "effect": "Each of your Pokémon that has \"Rotom\" in its name may have up to 2 Pokémon Tool cards attached. If this Ability goes away, discard Pokémon Tools from those Pokémon until only 1 remains on each.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 1
+    },
+    "030": {
+      "name": "Yamper",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        835
+      ],
+      "attacks": [
+        {
+          "name": "Play Rough",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "effect": "Flip a coin. If heads, this attack does 20 more damage."
+        }
+      ],
+      "retreat": 1
+    },
+    "031": {
+      "name": "Boltund",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        836
+      ],
+      "attacks": [
+        {
+          "name": "Electric Run",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "70+",
+          "effect": "Flip a coin. If heads, this attack does 70 more damage."
+        }
+      ],
+      "retreat": 1
+    },
+    "032": {
+      "name": "Pawmi",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 60,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        921
+      ],
+      "attacks": [
+        {
+          "name": "Growl",
+          "cost": [
+            "Lightning"
+          ],
+          "effect": "During your opponent's next turn, attacks used by the Defending Pokémon do 30 less damage (before applying Weakness and Resistance)."
+        },
+        {
+          "name": "Tiny Charge",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": 10
+        }
+      ],
+      "retreat": 1
+    },
+    "033": {
+      "name": "Pawmo",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 90,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        922
+      ],
+      "attacks": [
+        {
+          "name": "Electric Punch",
+          "cost": [
+            "Lightning",
+            "Lightning"
+          ],
+          "damage": 60
+        }
+      ],
+      "retreat": 1
+    },
+    "034": {
+      "name": "Pawmot",
+      "rarity": "Rare",
+      "category": "Pokemon",
+      "hp": 140,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        923
+      ],
+      "attacks": [
+        {
+          "name": "Voltaic Fist",
+          "cost": [
+            "Lightning",
+            "Lightning"
+          ],
+          "damage": 130,
+          "effect": "You may have this Pokémon also do 60 damage to itself and make your opponent's Active Pokémon Paralyzed."
+        }
+      ],
+      "retreat": 1
+    },
+    "035": {
+      "name": "Misdreavus",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        200
+      ],
+      "attacks": [
+        {
+          "name": "Petty Grudge",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": 20
+        }
+      ],
+      "retreat": 1
+    },
+    "036": {
+      "name": "Mismagius ex",
+      "rarity": "Double rare",
+      "category": "Pokemon",
+      "hp": 260,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        429
+      ],
+      "attacks": [
+        {
+          "name": "Hexa-Magic",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": 150,
+          "effect": "You may draw cards until you have 6 cards in your hand."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Swirling Prose",
+          "effect": "As long as this Pokémon is in the Active Spot, whenever your opponent's Active Pokémon moves to the Bench during their turn, their new Active Pokémon is now Confused.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 1
+    },
+    "037": {
+      "name": "Snubbull",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        209
+      ],
+      "attacks": [
+        {
+          "name": "Tackle",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "retreat": 1
+    },
+    "038": {
+      "name": "Granbull",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        210
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": 50
+        },
+        {
+          "name": "Finishing Blow",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "90+",
+          "effect": "If your opponent's Active Pokémon already has any damage counters on it, this attack does 90 more damage."
+        }
+      ],
+      "retreat": 2
+    },
+    "039": {
+      "name": "Cresselia",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 120,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        488
+      ],
+      "attacks": [
+        {
+          "name": "Swelling Light",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "Search your deck for up to 2 Basic {P} Energy cards and attach them to this Pokémon. Then, shuffle your deck."
+        },
+        {
+          "name": "Aurora Beam",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": 90
+        }
+      ],
+      "retreat": 1
+    },
+    "040": {
+      "name": "Meloetta",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 90,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        648
+      ],
+      "attacks": [
+        {
+          "name": "Soothing Melody",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "Heal 120 damage from 1 of your Benched {P} Pokémon."
+        },
+        {
+          "name": "Magical Shot",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": 50
+        }
+      ],
+      "retreat": 1
+    },
+    "041": {
+      "name": "Mega Diancie ex",
+      "rarity": "Double rare",
+      "category": "Pokemon",
+      "hp": 270,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        719
+      ],
+      "attacks": [
+        {
+          "name": "Garland Ray",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": "120×",
+          "effect": "Discard up to 2 Energy cards from this Pokémon, and this attack does 120 damage for each card you discarded in this way."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Diamond Coat",
+          "effect": "This Pokémon takes 30 less damage from attacks (after applying Weakness and Resistance).",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 1
+    },
+    "042": {
+      "name": "Mimikyu",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        778
+      ],
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck."
+        },
+        {
+          "name": "Scratch",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": 20
+        }
+      ],
+      "retreat": 1
+    },
+    "043": {
+      "name": "Milcery",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 50,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        868
+      ],
+      "attacks": [
+        {
+          "name": "Draining Kiss",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": 10,
+          "effect": "Heal 10 damage from this Pokémon."
+        }
+      ],
+      "retreat": 1
+    },
+    "044": {
+      "name": "Alcremie",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 90,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        869
+      ],
+      "attacks": [
+        {
+          "name": "Sweet Circle",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": "20×",
+          "effect": "This attack does 20 damage for each of your Pokémon in play."
+        }
+      ],
+      "retreat": 1
+    },
+    "045": {
+      "name": "Zacian",
+      "rarity": "Rare",
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        888
+      ],
+      "attacks": [
+        {
+          "name": "Limit Break",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "50+",
+          "effect": "If your opponent has 3 or fewer Prize cards remaining, this attack does 90 more damage."
+        }
+      ],
+      "retreat": 2
+    },
+    "046": {
+      "name": "Bramblin",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 50,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        946
+      ],
+      "attacks": [
+        {
+          "name": "Sneaky Placement",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "Place 1 damage counter on 1 of your opponent's Pokémon."
+        }
+      ],
+      "retreat": 1
+    },
+    "047": {
+      "name": "Brambleghast",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 100,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        947
+      ],
+      "attacks": [
+        {
+          "name": "Psychic Sphere",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 80
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Prison Panic",
+          "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may use this Ability. Make your opponent's Active Pokémon Confused.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 2
+    },
+    "048": {
+      "name": "Paldean Tauros",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        128
+      ],
+      "attacks": [
+        {
+          "name": "Raging Charge",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "40×",
+          "effect": "This attack does 40 damage for each of your Pokémon that has \"Tauros\" in its name that has any damage counters on it."
+        },
+        {
+          "name": "Double-Edge",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": 70,
+          "effect": "This Pokémon also does 20 damage to itself."
+        }
+      ],
+      "retreat": 2
+    },
+    "049": {
+      "name": "Gligar",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        207
+      ],
+      "attacks": [
+        {
+          "name": "Poison Jab",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 10,
+          "effect": "Your opponent's Active Pokémon is now Poisoned."
+        }
+      ],
+      "retreat": 1
+    },
+    "050": {
+      "name": "Gliscor",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 120,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        472
+      ],
+      "attacks": [
+        {
+          "name": "Poison Ring",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 50,
+          "effect": "Your opponent's Active Pokémon is now Poisoned. During your opponent's next turn, that Pokémon can't retreat."
+        }
+      ],
+      "retreat": 1
+    },
+    "051": {
+      "name": "Trapinch",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        328
+      ],
+      "attacks": [
+        {
+          "name": "Double Headbutt",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": "10×",
+          "effect": "Flip 2 coins. This attack does 10 damage for each heads."
+        }
+      ],
+      "retreat": 1
+    },
+    "052": {
+      "name": "Vibrava",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 90,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        329
+      ],
+      "attacks": [
+        {
+          "name": "Super Vibration",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": 60
+        }
+      ],
+      "retreat": 1
+    },
+    "053": {
+      "name": "Flygon",
+      "rarity": "Rare",
+      "category": "Pokemon",
+      "hp": 150,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        330
+      ],
+      "attacks": [
+        {
+          "name": "Cutting Wind",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": 130
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Sandy Flapping",
+          "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may use this Ability. You may also use this Ability if this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon. Discard the top 2 cards of your opponent's deck.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 1
+    },
+    "054": {
+      "name": "Gastly",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        92
+      ],
+      "attacks": [
+        {
+          "name": "Petty Grudge",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 10
+        }
+      ],
+      "retreat": 1
+    },
+    "055": {
+      "name": "Haunter",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 100,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        93
+      ],
+      "attacks": [
+        {
+          "name": "Spooky Shot",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 40
+        }
+      ],
+      "retreat": 1
+    },
+    "056": {
+      "name": "Mega Gengar ex",
+      "rarity": "Double rare",
+      "category": "Pokemon",
+      "hp": 350,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        94
+      ],
+      "attacks": [
+        {
+          "name": "Void Gale",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": 230,
+          "effect": "Move an Energy from this Pokémon to 1 of your Benched Pokémon."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Shadowy Concealment",
+          "effect": "If 1 of your {D} Pokémon is Knocked Out by damage from an attack from your opponent's Pokémon ex, that player takes 1 fewer Prize card. The effect of Shadowy Concealment doesn't stack.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 2
+    },
+    "057": {
+      "name": "Murkrow",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 60,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        198
+      ],
+      "attacks": [
+        {
+          "name": "Ambush",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "10+",
+          "effect": "Flip a coin. If heads, this attack does 20 more damage."
+        }
+      ],
+      "retreat": 1
+    },
+    "058": {
+      "name": "Honchkrow",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        430
+      ],
+      "attacks": [
+        {
+          "name": "Wind of Darkness",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 30
+        },
+        {
+          "name": "Sniping Feathers",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "effect": "Discard 2 Energy from this Pokémon, and this attack does 120 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      ],
+      "retreat": 1
+    },
+    "059": {
+      "name": "Sableye",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 80,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        302
+      ],
+      "attacks": [
+        {
+          "name": "Cocky Claw",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "20+",
+          "effect": "If you have any Stage 2 {D} Pokémon on your Bench, this attack does 70 more damage."
+        }
+      ],
+      "retreat": 1
+    },
+    "060": {
+      "name": "Carvanha",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        318
+      ],
+      "attacks": [
+        {
+          "name": "Reckless Charge",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 30,
+          "effect": "This Pokémon also does 10 damage to itself."
+        }
+      ],
+      "retreat": 1
+    },
+    "061": {
+      "name": "Mega Sharpedo ex",
+      "rarity": "Double rare",
+      "category": "Pokemon",
+      "hp": 330,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        319
+      ],
+      "attacks": [
+        {
+          "name": "Greedy Fang",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 70,
+          "effect": "Draw 2 cards."
+        },
+        {
+          "name": "Hungry Jaws",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "120+",
+          "effect": "If this Pokémon has any damage counters on it, this attack does 150 more damage."
+        }
+      ],
+      "retreat": 0
+    },
+    "062": {
+      "name": "Seviper",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 120,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        336
+      ],
+      "attacks": [
+        {
+          "name": "Pitch-Black Fangs",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": 120
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Excited Power",
+          "effect": "If you have any {D} Mega Evolution Pokémon ex in play, attacks used by this Pokémon do 120 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 1
+    },
+    "063": {
+      "name": "Absol",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 110,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        359
+      ],
+      "attacks": [
+        {
+          "name": "Allure",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Draw 2 cards."
+        },
+        {
+          "name": "Dark Cutter",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 60
+        }
+      ],
+      "retreat": 1
+    },
+    "064": {
+      "name": "Sandile",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        551
+      ],
+      "attacks": [
+        {
+          "name": "Ram",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 10
+        },
+        {
+          "name": "Rear Kick",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "retreat": 2
+    },
+    "065": {
+      "name": "Krokorok",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 100,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        552
+      ],
+      "attacks": [
+        {
+          "name": "Bite",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 30
+        },
+        {
+          "name": "Confront",
+          "cost": [
+            "Darkness",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 60
+        }
+      ],
+      "retreat": 2
+    },
+    "066": {
+      "name": "Krookodile",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 170,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        553
+      ],
+      "attacks": [
+        {
+          "name": "Vengeful Fang",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "60+",
+          "effect": "If any of your Pokémon were Knocked Out by damage from an attack during your opponent's last turn, this attack does 160 more damage."
+        },
+        {
+          "name": "Hammer In",
+          "cost": [
+            "Darkness",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 160
+        }
+      ],
+      "retreat": 3
+    },
+    "067": {
+      "name": "Toxel",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        848
+      ],
+      "attacks": [
+        {
+          "name": "Call for Family",
+          "cost": [
+            "Darkness"
+          ],
+          "effect": "Search your deck for up to 2 Basic Pokémon and put them onto your Bench. Then, shuffle your deck."
+        },
+        {
+          "name": "Playful Kick",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "retreat": 1
+    },
+    "068": {
+      "name": "Toxtricity",
+      "rarity": "Rare",
+      "category": "Pokemon",
+      "hp": 140,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        849
+      ],
+      "attacks": [
+        {
+          "name": "Gentle Slap",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 100
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Sinister Surge",
+          "effect": "Once during your turn, you may use this Ability. Search your deck for a Basic {D} Energy card and attach it to 1 of your Benched {D} Pokémon. Then, shuffle your deck. If you attached Energy to a Pokémon in this way, place 2 damage counters on that Pokémon.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 2
+    },
+    "069": {
+      "name": "Eternatus",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 150,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        890
+      ],
+      "attacks": [
+        {
+          "name": "Shatter",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": 50,
+          "effect": "Discard a Stadium in play."
+        },
+        {
+          "name": "Power Rush",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": 130,
+          "effect": "Flip a coin. If tails, during your next turn, this Pokémon can't use attacks."
+        }
+      ],
+      "retreat": 2
+    },
+    "070": {
+      "name": "Empoleon ex",
+      "rarity": "Double rare",
+      "category": "Pokemon",
+      "hp": 320,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        395
+      ],
+      "attacks": [
+        {
+          "name": "Iron Feathers",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 210,
+          "effect": "During your opponent's next turn, this Pokémon takes 60 less damage from attacks (after applying Weakness and Resistance)."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Emperor's Stance",
+          "effect": "Prevent all effects of attacks used by your opponent's Pokémon done to this Pokémon. (Damage is not an effect.)",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 2
+    },
+    "071": {
+      "name": "Bronzor",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 80,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        436
+      ],
+      "attacks": [
+        {
+          "name": "Iron Defense",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage done to this Pokémon by attacks."
+        },
+        {
+          "name": "Rollout",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 30
+        }
+      ],
+      "retreat": 2
+    },
+    "072": {
+      "name": "Bronzong",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 140,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        437
+      ],
+      "attacks": [
+        {
+          "name": "Triple Draw",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Draw 3 cards."
+        },
+        {
+          "name": "Tool Drop",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40×",
+          "effect": "This attack does 40 damage for each Pokémon Tool attached to all Pokémon."
+        }
+      ],
+      "retreat": 3
+    },
+    "073": {
+      "name": "Togedemaru",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 80,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        777
+      ],
+      "attacks": [
+        {
+          "name": "Find a Friend",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck."
+        },
+        {
+          "name": "Gnaw",
+          "cost": [
+            "Metal"
+          ],
+          "damage": 30
+        }
+      ],
+      "retreat": 1
+    },
+    "074": {
+      "name": "Duraludon",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        884
+      ],
+      "attacks": [
+        {
+          "name": "Hyper Beam",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Metal"
+          ],
+          "damage": 70,
+          "effect": "Discard an Energy from your opponent's Active Pokémon."
+        }
+      ],
+      "retreat": 2
+    },
+    "075": {
+      "name": "Archaludon",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 180,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        1018
+      ],
+      "attacks": [
+        {
+          "name": "Coated Attack",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Metal"
+          ],
+          "damage": 120,
+          "effect": "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from Basic Pokémon."
+        }
+      ],
+      "retreat": 2
+    },
+    "076": {
+      "name": "Jigglypuff",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        39
+      ],
+      "attacks": [
+        {
+          "name": "Ball Roll",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "20×",
+          "effect": "Flip a coin until you get tails. This attack does 20 damage for each heads."
+        }
+      ],
+      "retreat": 1
+    },
+    "077": {
+      "name": "Wigglytuff",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 120,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        40
+      ],
+      "attacks": [
+        {
+          "name": "Round",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40×",
+          "effect": "This attack does 40 damage for each of your Pokémon in play that has the Round attack."
+        },
+        {
+          "name": "Seismic Toss",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 100
+        }
+      ],
+      "retreat": 2
+    },
+    "078": {
+      "name": "Aipom",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        190
+      ],
+      "attacks": [
+        {
+          "name": "Astonish",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 20,
+          "effect": "Choose a random card from your opponent's hand, and your opponent reveals that card and shuffles it into their deck."
+        }
+      ],
+      "retreat": 1
+    },
+    "079": {
+      "name": "Ambipom",
+      "rarity": "Rare",
+      "category": "Pokemon",
+      "hp": 110,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        424
+      ],
+      "attacks": [
+        {
+          "name": "Slap",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 50
+        },
+        {
+          "name": "Dual Tail",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Discard 2 Energy from this Pokémon, and this attack does 60 damage to each of 2 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      ],
+      "retreat": 1
+    },
+    "080": {
+      "name": "Smeargle",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 80,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        235
+      ],
+      "attacks": [
+        {
+          "name": "Energizing Sketch",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Flip 3 coins. Attach an amount of Basic Energy up to the number of heads from your discard pile to your Benched Pokémon in any way you like."
+        },
+        {
+          "name": "Hook",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 40
+        }
+      ],
+      "retreat": 1
+    },
+    "081": {
+      "name": "Zigzagoon",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        263
+      ],
+      "attacks": [
+        {
+          "name": "Surprise Attack",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 30,
+          "effect": "Flip a coin. If tails, this attack does nothing."
+        }
+      ],
+      "retreat": 1
+    },
+    "082": {
+      "name": "Linoone",
+      "rarity": "Uncommon",
+      "category": "Pokemon",
+      "hp": 100,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        264
+      ],
+      "attacks": [
+        {
+          "name": "Slash",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 70
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Excited Dash",
+          "effect": "Once during your turn, if this Pokémon is on your Bench, and if you have any Mega Evolution Pokémon ex in play, you may use this Ability. Switch this Pokémon with your Active Pokémon.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 1
+    },
+    "083": {
+      "name": "Buneary",
+      "rarity": "Common",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        427
+      ],
+      "attacks": [
+        {
+          "name": "Run Around",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
+        },
+        {
+          "name": "Kick",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "retreat": 1
+    },
+    "084": {
+      "name": "Mega Lopunny ex",
+      "rarity": "Double rare",
+      "category": "Pokemon",
+      "hp": 330,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        428
+      ],
+      "attacks": [
+        {
+          "name": "Gale Thrust",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "60+",
+          "effect": "If this Pokémon moved from your Bench to the Active Spot this turn, this attack does 170 more damage."
+        },
+        {
+          "name": "Spiky Hopper",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 160,
+          "effect": "This attack's damage isn't affected by any effects on your opponent's Active Pokémon."
+        }
+      ],
+      "retreat": 1
+    },
+    "085": {
+      "name": "Battle Cage",
+      "rarity": "Uncommon",
+      "category": "Trainer",
+      "effect": "Prevent all damage counters from being placed on Benched Pokémon (both yours and your opponent's) by effects of attacks and Abilities from the opponent's Pokémon. (Damage from attacks is still taken.)",
+      "subcategory": "Stadium"
+    },
+    "086": {
+      "name": "Blowtorch",
+      "rarity": "Uncommon",
+      "category": "Trainer",
+      "effect": "You can use this card only if you discard a Basic {R} Energy card from your hand.\n\nDiscard a Pokémon Tool or Special Energy card from 1 of your opponent's Pokémon, or discard a Stadium in play.",
+      "subcategory": "Item"
+    },
+    "087": {
+      "name": "Dawn",
+      "rarity": "Uncommon",
+      "category": "Trainer",
+      "effect": "Search your deck for a Basic Pokémon, a Stage 1 Pokémon, and a Stage 2 Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",
+      "subcategory": "Supporter"
+    },
+    "088": {
+      "name": "Dizzying Valley",
+      "rarity": "Uncommon",
+      "category": "Trainer",
+      "effect": "Confused Pokémon (both yours and your opponent's) don't recover from that Special Condition when they evolve or devolve.",
+      "subcategory": "Stadium"
+    },
+    "089": {
+      "name": "Firebreather",
+      "rarity": "Uncommon",
+      "category": "Trainer",
+      "effect": "Search your deck for up to 7 Basic {R} Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+      "subcategory": "Supporter"
+    },
+    "090": {
+      "name": "Grimsley's Move",
+      "rarity": "Uncommon",
+      "category": "Trainer",
+      "effect": "Look at the top 7 cards of your deck and put a {D} Pokémon you find there onto your Bench. Shuffle the other cards and put them on the bottom of your deck. You can't use this card during your first turn.",
+      "subcategory": "Supporter"
+    },
+    "091": {
+      "name": "Jumbo Ice Cream",
+      "rarity": "Uncommon",
+      "category": "Trainer",
+      "effect": "Heal 80 damage from your Active Pokémon that has 3 or more Energy attached.",
+      "subcategory": "Item"
+    },
+    "092": {
+      "name": "Punk Helmet",
+      "rarity": "Uncommon",
+      "category": "Trainer",
+      "effect": "If the {D} Pokémon this card is attached to is in the Active Spot and is damaged by an attack from your opponent's Pokémon (even if this Pokémon is Knocked Out), place 4 damage counters on the Attacking Pokémon.",
+      "subcategory": "Tool"
+    },
+    "093": {
+      "name": "Sacred Charm",
+      "rarity": "Uncommon",
+      "category": "Trainer",
+      "effect": "The Pokémon this card is attached to takes 30 less damage from attacks from your opponent's Pokémon that have an Ability (after applying Weakness and Resistance).",
+      "subcategory": "Tool"
+    },
+    "094": {
+      "name": "Wondrous Patch",
+      "rarity": "Uncommon",
+      "category": "Trainer",
+      "effect": "Attach a Basic {P} Energy card from your discard pile to 1 of your Benched {P} Pokémon.",
+      "subcategory": "Item"
+    },
+    "095": {
+      "name": "Ludicolo",
+      "rarity": "Illustration rare",
+      "category": "Pokemon",
+      "hp": 160,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        272
+      ],
+      "attacks": [
+        {
+          "name": "Lunge Out",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": 120
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Excited Heal",
+          "effect": "Once during your turn, if you have any {G} Mega Evolution Pokémon ex in play, you may use this Ability. Heal 60 damage from 1 of your Pokémon.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 2
+    },
+    "096": {
+      "name": "Nymble",
+      "rarity": "Illustration rare",
+      "category": "Pokemon",
+      "hp": 50,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        919
+      ],
+      "attacks": [
+        {
+          "name": "Flail Around",
+          "cost": [
+            "Grass"
+          ],
+          "damage": "10×",
+          "effect": "Flip 3 coins. This attack does 10 damage for each heads."
+        }
+      ],
+      "retreat": 1
+    },
+    "097": {
+      "name": "Dewgong",
+      "rarity": "Illustration rare",
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        87
+      ],
+      "attacks": [
+        {
+          "name": "Slam",
+          "cost": [
+            "Water",
+            "Colorless"
+          ],
+          "damage": "70×",
+          "effect": "Flip 2 coins. This attack does 70 damage for each heads."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Thick Fat",
+          "effect": "This Pokémon takes 30 less damage from attacks from your opponent's {R} or {W} Pokémon (after applying Weakness and Resistance).",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 2
+    },
+    "098": {
+      "name": "Piplup",
+      "rarity": "Illustration rare",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        393
+      ],
+      "attacks": [
+        {
+          "name": "Call for Support",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck."
+        },
+        {
+          "name": "Tackle",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "retreat": 1
+    },
+    "099": {
+      "name": "Yamper",
+      "rarity": "Illustration rare",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        835
+      ],
+      "attacks": [
+        {
+          "name": "Play Rough",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": "20+",
+          "effect": "Flip a coin. If heads, this attack does 20 more damage."
+        }
+      ],
+      "retreat": 1
+    },
+    "100": {
+      "name": "Zacian",
+      "rarity": "Illustration rare",
+      "category": "Pokemon",
+      "hp": 130,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        888
+      ],
+      "attacks": [
+        {
+          "name": "Limit Break",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": "50+",
+          "effect": "If your opponent has 3 or fewer Prize cards remaining, this attack does 90 more damage."
+        }
+      ],
+      "retreat": 2
+    },
+    "101": {
+      "name": "Flygon",
+      "rarity": "Illustration rare",
+      "category": "Pokemon",
+      "hp": 150,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        330
+      ],
+      "attacks": [
+        {
+          "name": "Cutting Wind",
+          "cost": [
+            "Fighting",
+            "Fighting"
+          ],
+          "damage": 130
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Sandy Flapping",
+          "effect": "Once during your turn, when you play this Pokémon from your hand to evolve 1 of your Pokémon, you may use this Ability. You may also use this Ability if this Pokémon is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon. Discard the top 2 cards of your opponent's deck.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 1
+    },
+    "102": {
+      "name": "Paldean Wooper",
+      "rarity": "Illustration rare",
+      "category": "Pokemon",
+      "hp": 60,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        194
+      ],
+      "attacks": [
+        {
+          "name": "Trip Over",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": "10+",
+          "effect": "Flip a coin. If heads, this attack does 20 more damage."
+        }
+      ],
+      "retreat": 1
+    },
+    "103": {
+      "name": "Toxtricity",
+      "rarity": "Illustration rare",
+      "category": "Pokemon",
+      "hp": 140,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        849
+      ],
+      "attacks": [
+        {
+          "name": "Gentle Slap",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 100
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Sinister Surge",
+          "effect": "Once during your turn, you may use this Ability. Search your deck for a Basic {D} Energy card and attach it to 1 of your Benched {D} Pokémon. Then, shuffle your deck. If you attached Energy to a Pokémon in this way, place 2 damage counters on that Pokémon.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 2
+    },
+    "104": {
+      "name": "Togedemaru",
+      "rarity": "Illustration rare",
+      "category": "Pokemon",
+      "hp": 80,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        777
+      ],
+      "attacks": [
+        {
+          "name": "Find a Friend",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "Search your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck."
+        },
+        {
+          "name": "Gnaw",
+          "cost": [
+            "Metal"
+          ],
+          "damage": 30
+        }
+      ],
+      "retreat": 1
+    },
+    "105": {
+      "name": "Wigglytuff",
+      "rarity": "Illustration rare",
+      "category": "Pokemon",
+      "hp": 120,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        40
+      ],
+      "attacks": [
+        {
+          "name": "Round",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "40×",
+          "effect": "This attack does 40 damage for each of your Pokémon in play that has the Round attack."
+        },
+        {
+          "name": "Seismic Toss",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 100
+        }
+      ],
+      "retreat": 2
+    },
+    "106": {
+      "name": "Meowth",
+      "rarity": "Illustration rare",
+      "category": "Pokemon",
+      "hp": 70,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        52
+      ],
+      "attacks": [
+        {
+          "name": "Fury Swipes",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": "20×",
+          "effect": "Flip 3 coins. This attack does 20 damage for each heads."
+        }
+      ],
+      "retreat": 1
+    },
+    "107": {
+      "name": "Ambipom",
+      "rarity": "Illustration rare",
+      "category": "Pokemon",
+      "hp": 110,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        424
+      ],
+      "attacks": [
+        {
+          "name": "Slap",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 50
+        },
+        {
+          "name": "Dual Tail",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "Discard 2 Energy from this Pokémon, and this attack does 60 damage to each of 2 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+        }
+      ],
+      "retreat": 1
+    },
+    "108": {
+      "name": "Mega Heracross ex",
+      "rarity": "Ultra Rare",
+      "category": "Pokemon",
+      "hp": 280,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        214
+      ],
+      "attacks": [
+        {
+          "name": "Juggernaut Horn",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": "100+",
+          "effect": "If this Pokémon was damaged by an attack during your opponent's last turn, this attack does that much more damage."
+        },
+        {
+          "name": "Mountain Ramming",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Grass"
+          ],
+          "damage": 170,
+          "effect": "Discard the top 2 cards of your opponent's deck."
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "retreat": 2
+    },
+    "109": {
+      "name": "Mega Charizard X ex",
+      "rarity": "Ultra Rare",
+      "category": "Pokemon",
+      "hp": 360,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        6
+      ],
+      "attacks": [
+        {
+          "name": "Inferno X",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "90×",
+          "effect": "Discard any amount of {R} Energy from among your Pokémon, and this attack does 90 damage for each card you discarded in this way."
+        }
+      ],
+      "retreat": 2
+    },
+    "110": {
+      "name": "Oricorio ex",
+      "rarity": "Ultra Rare",
+      "category": "Pokemon",
+      "hp": 190,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        741
+      ],
+      "attacks": [
+        {
+          "name": "Fire Wing",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": 110
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Excited Turbo",
+          "effect": "As often as you like during your turn, if you have any {R} Mega Evolution Pokémon ex in play, you may use this Ability. Attach a Basic {R} Energy card from your hand to 1 of your Benched {R} Pokémon.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 1
+    },
+    "111": {
+      "name": "Rotom ex",
+      "rarity": "Ultra Rare",
+      "category": "Pokemon",
+      "hp": 190,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        479
+      ],
+      "attacks": [
+        {
+          "name": "Thunderbolt",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": 130,
+          "effect": "Discard all Energy from this Pokémon."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Multi Adapter",
+          "effect": "Each of your Pokémon that has \"Rotom\" in its name may have up to 2 Pokémon Tool cards attached. If this Ability goes away, discard Pokémon Tools from those Pokémon until only 1 remains on each.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 1
+    },
+    "112": {
+      "name": "Mismagius ex",
+      "rarity": "Ultra Rare",
+      "category": "Pokemon",
+      "hp": 260,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        429
+      ],
+      "attacks": [
+        {
+          "name": "Hexa-Magic",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": 150,
+          "effect": "You may draw cards until you have 6 cards in your hand."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Swirling Prose",
+          "effect": "As long as this Pokémon is in the Active Spot, whenever your opponent's Active Pokémon moves to the Bench during their turn, their new Active Pokémon is now Confused.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 1
+    },
+    "113": {
+      "name": "Mega Sharpedo ex",
+      "rarity": "Ultra Rare",
+      "category": "Pokemon",
+      "hp": 330,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        319
+      ],
+      "attacks": [
+        {
+          "name": "Greedy Fang",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 70,
+          "effect": "Draw 2 cards."
+        },
+        {
+          "name": "Hungry Jaws",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "120+",
+          "effect": "If this Pokémon has any damage counters on it, this attack does 150 more damage."
+        }
+      ],
+      "retreat": 0
+    },
+    "114": {
+      "name": "Empoleon ex",
+      "rarity": "Ultra Rare",
+      "category": "Pokemon",
+      "hp": 320,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        395
+      ],
+      "attacks": [
+        {
+          "name": "Iron Feathers",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 210,
+          "effect": "During your opponent's next turn, this Pokémon takes 60 less damage from attacks (after applying Weakness and Resistance)."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Emperor's Stance",
+          "effect": "Prevent all effects of attacks used by your opponent's Pokémon done to this Pokémon. (Damage is not an effect.)",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 2
+    },
+    "115": {
+      "name": "Mega Lopunny ex",
+      "rarity": "Ultra Rare",
+      "category": "Pokemon",
+      "hp": 330,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        428
+      ],
+      "attacks": [
+        {
+          "name": "Gale Thrust",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "60+",
+          "effect": "If this Pokémon moved from your Bench to the Active Spot this turn, this attack does 170 more damage."
+        },
+        {
+          "name": "Spiky Hopper",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 160,
+          "effect": "This attack's damage isn't affected by any effects on your opponent's Active Pokémon."
+        }
+      ],
+      "retreat": 1
+    },
+    "116": {
+      "name": "Battle Cage",
+      "rarity": "Ultra Rare",
+      "category": "Trainer",
+      "effect": "Prevent all damage counters from being placed on Benched Pokémon (both yours and your opponent's) by effects of attacks and Abilities from the opponent's Pokémon. (Damage from attacks is still taken.)",
+      "subcategory": "Stadium"
+    },
+    "117": {
+      "name": "Blowtorch",
+      "rarity": "Ultra Rare",
+      "category": "Trainer",
+      "effect": "You can use this card only if you discard a Basic {R} Energy card from your hand.\n\nDiscard a Pokémon Tool or Special Energy card from 1 of your opponent's Pokémon, or discard a Stadium in play.",
+      "subcategory": "Item"
+    },
+    "118": {
+      "name": "Dawn",
+      "rarity": "Ultra Rare",
+      "category": "Trainer",
+      "effect": "Search your deck for a Basic Pokémon, a Stage 1 Pokémon, and a Stage 2 Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",
+      "subcategory": "Supporter"
+    },
+    "119": {
+      "name": "Firebreather",
+      "rarity": "Ultra Rare",
+      "category": "Trainer",
+      "effect": "Search your deck for up to 7 Basic {R} Energy cards, reveal them, and put them into your hand. Then, shuffle your deck.",
+      "subcategory": "Supporter"
+    },
+    "120": {
+      "name": "Grimsley's Move",
+      "rarity": "Ultra Rare",
+      "category": "Trainer",
+      "effect": "Look at the top 7 cards of your deck and put a {D} Pokémon you find there onto your Bench. Shuffle the other cards and put them on the bottom of your deck. You can't use this card during your first turn.",
+      "subcategory": "Supporter"
+    },
+    "121": {
+      "name": "Punk Helmet",
+      "rarity": "Ultra Rare",
+      "category": "Trainer",
+      "effect": "If the {D} Pokémon this card is attached to is in the Active Spot and is damaged by an attack from your opponent's Pokémon (even if this Pokémon is Knocked Out), place 4 damage counters on the Attacking Pokémon.",
+      "subcategory": "Tool"
+    },
+    "122": {
+      "name": "Sacred Charm",
+      "rarity": "Ultra Rare",
+      "category": "Trainer",
+      "effect": "The Pokémon this card is attached to takes 30 less damage from attacks from your opponent's Pokémon that have an Ability (after applying Weakness and Resistance).",
+      "subcategory": "Tool"
+    },
+    "123": {
+      "name": "Switch",
+      "rarity": "Ultra Rare",
+      "category": "Trainer",
+      "effect": "Switch your Active Pokémon with 1 of your Benched Pokémon.",
+      "subcategory": "Item"
+    },
+    "124": {
+      "name": "Ignition Energy",
+      "rarity": "Ultra Rare",
+      "category": "Energy",
+      "effect": "If this card is attached to 1 of your Pokémon, discard it at the end of your turn.\n\nAs long as this card is attached to a Pokémon, it provides {C} Energy.\n\nIf this card is attached to an Evolution Pokémon, it provides {C}{C}{C} Energy instead.",
+      "energyType": "Normal"
+    },
+    "125": {
+      "name": "Mega Charizard X ex",
+      "rarity": "Special illustration rare",
+      "category": "Pokemon",
+      "hp": 360,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        6
+      ],
+      "attacks": [
+        {
+          "name": "Inferno X",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "90×",
+          "effect": "Discard any amount of {R} Energy from among your Pokémon, and this attack does 90 damage for each card you discarded in this way."
+        }
+      ],
+      "retreat": 2
+    },
+    "126": {
+      "name": "Rotom ex",
+      "rarity": "Special illustration rare",
+      "category": "Pokemon",
+      "hp": 190,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Basic",
+      "dexId": [
+        479
+      ],
+      "attacks": [
+        {
+          "name": "Thunderbolt",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": 130,
+          "effect": "Discard all Energy from this Pokémon."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Multi Adapter",
+          "effect": "Each of your Pokémon that has \"Rotom\" in its name may have up to 2 Pokémon Tool cards attached. If this Ability goes away, discard Pokémon Tools from those Pokémon until only 1 remains on each.",
+          "type": "Ability"
+        }
+      ],
+      "retreat": 1
+    },
+    "127": {
+      "name": "Mega Sharpedo ex",
+      "rarity": "Special illustration rare",
+      "category": "Pokemon",
+      "hp": 330,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        319
+      ],
+      "attacks": [
+        {
+          "name": "Greedy Fang",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 70,
+          "effect": "Draw 2 cards."
+        },
+        {
+          "name": "Hungry Jaws",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": "120+",
+          "effect": "If this Pokémon has any damage counters on it, this attack does 150 more damage."
+        }
+      ],
+      "retreat": 0
+    },
+    "128": {
+      "name": "Mega Lopunny ex",
+      "rarity": "Special illustration rare",
+      "category": "Pokemon",
+      "hp": 330,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "dexId": [
+        428
+      ],
+      "attacks": [
+        {
+          "name": "Gale Thrust",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": "60+",
+          "effect": "If this Pokémon moved from your Bench to the Active Spot this turn, this attack does 170 more damage."
+        },
+        {
+          "name": "Spiky Hopper",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 160,
+          "effect": "This attack's damage isn't affected by any effects on your opponent's Active Pokémon."
+        }
+      ],
+      "retreat": 1
+    },
+    "129": {
+      "name": "Dawn",
+      "rarity": "Special illustration rare",
+      "category": "Trainer",
+      "effect": "Search your deck for a Basic Pokémon, a Stage 1 Pokémon, and a Stage 2 Pokémon, reveal them, and put them into your hand. Then, shuffle your deck.",
+      "subcategory": "Supporter"
+    },
+    "130": {
+      "name": "Mega Charizard X ex",
+      "rarity": "Mega Hyper Rare",
+      "category": "Pokemon",
+      "hp": 360,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage2",
+      "dexId": [
+        6
+      ],
+      "attacks": [
+        {
+          "name": "Inferno X",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": "90×",
+          "effect": "Discard any amount of {R} Energy from among your Pokémon, and this attack does 90 damage for each card you discarded in this way."
+        }
+      ],
+      "retreat": 2
+    }
+  }
+}

@@ -114,7 +114,14 @@
       "weakness": {
         "type": "Fire",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Solar Transfer",
+          "effect": "As often as you like during your turn, you may use this Ability. Move a Basic {G} Energy from 1 of your Pokémon to another of your Pokémon.",
+          "type": "Ability"
+        }
+      ]
     },
     "004": {
       "name": "タマタマ",
@@ -926,7 +933,10 @@
         {
           "name": "Eager Hits",
           "damage": "10+",
-          "effect": "Flip a coin until you get tails. This attack does 30 more damage for each heads."
+          "effect": "Flip a coin until you get tails. This attack does 30 more damage for each heads.",
+          "cost": [
+            "Fighting"
+          ]
         }
       ],
       "weakness": {
@@ -1052,7 +1062,14 @@
       "weakness": {
         "type": "Grass",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Lunar Cycle",
+          "effect": "Once during your turn, if you have Solrock in play, you may discard a Basic {F} Energy card from your hand in order to use this Ability. Draw 3 cards. You can't use more than 1 Lunar Cycle Ability each turn.",
+          "type": "Ability"
+        }
+      ]
     },
     "027": {
       "name": "ソルロック",
@@ -2050,7 +2067,8 @@
           "name": "All-You-Can-Grab",
           "cost": [
             "Colorless"
-          ]
+          ],
+          "effect": "Flip a coin until you get tails. Search your deck for a number of cards up to the number of heads and put them into your hand. Then, shuffle your deck."
         },
         {
           "name": "Speed Attack",
@@ -2888,7 +2906,14 @@
       "weakness": {
         "type": "Fire",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Solar Transfer",
+          "effect": "As often as you like during your turn, you may use this Ability. Move a Basic {G} Energy from 1 of your Pokémon to another of your Pokémon.",
+          "type": "Ability"
+        }
+      ]
     },
     "077": {
       "name": "メガバクーダex",
@@ -3195,7 +3220,14 @@
       "weakness": {
         "type": "Fire",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Solar Transfer",
+          "effect": "As often as you like during your turn, you may use this Ability. Move a Basic {G} Energy from 1 of your Pokémon to another of your Pokémon.",
+          "type": "Ability"
+        }
+      ]
     },
     "088": {
       "name": "メガルカリオex",

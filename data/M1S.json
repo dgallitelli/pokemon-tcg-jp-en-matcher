@@ -1086,7 +1086,10 @@
         {
           "damage": 30,
           "name": "でんきショック",
-          "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
+          "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed.",
+          "cost": [
+            "Lightning"
+          ]
         }
       ],
       "category": "Pokemon",
@@ -1117,12 +1120,19 @@
       "attacks": [
         {
           "name": "アッパースパーク",
-          "effect": "If this Pokémon evolved from Magneton during this turn, this attack does 120 more damage."
+          "effect": "If this Pokémon evolved from Magneton during this turn, this attack does 120 more damage.",
+          "cost": [
+            "Lightning"
+          ]
         },
         {
           "damage": 160,
           "name": "フラッシュボルト",
-          "effect": "This Pokémon can't use Flash Bolt during your next turn."
+          "effect": "This Pokémon can't use Flash Bolt during your next turn.",
+          "cost": [
+            "Lightning",
+            "Lightning"
+          ]
         }
       ],
       "category": "Pokemon",
@@ -1153,7 +1163,11 @@
       "attacks": [
         {
           "name": "エレキフォール",
-          "effect": "If you have at least 4 Energy in play, this attack does 90 more damage."
+          "effect": "If you have at least 4 Energy in play, this attack does 90 more damage.",
+          "cost": [
+            "Lightning",
+            "Lightning"
+          ]
         }
       ],
       "category": "Pokemon",
@@ -1185,7 +1199,10 @@
         {
           "damage": 30,
           "name": "でんげき",
-          "effect": "This Pokémon also does 10 damage to itself"
+          "effect": "This Pokémon also does 10 damage to itself",
+          "cost": [
+            "Lightning"
+          ]
         }
       ],
       "category": "Pokemon",
@@ -1217,11 +1234,20 @@
         {
           "damage": 120,
           "name": "フラッシュレイ",
-          "effect": "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from your opponent's Basic Pokémon."
+          "effect": "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from your opponent's Basic Pokémon.",
+          "cost": [
+            "Lightning",
+            "Lightning"
+          ]
         },
         {
           "name": "ライオットブラスター",
-          "effect": "You may discard all Energy from this Pokémon. If you do, this attack does 130 more damage."
+          "effect": "You may discard all Energy from this Pokémon. If you do, this attack does 130 more damage.",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Lightning"
+          ]
         }
       ],
       "category": "Pokemon",
@@ -1253,7 +1279,10 @@
         {
           "damage": 10,
           "name": "しびれるまえば",
-          "effect": "During your opponent's next turn, whenever your opponent attaches an Energy from their hand to the Defending Pokémon, put 8 damage counters on that Pokémon."
+          "effect": "During your opponent's next turn, whenever your opponent attaches an Energy from their hand to the Defending Pokémon, put 8 damage counters on that Pokémon.",
+          "cost": [
+            "Lightning"
+          ]
         }
       ],
       "category": "Pokemon",
@@ -2027,7 +2056,14 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Run Errand",
+          "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may use this Ability. Draw 2 cards. You can't use more than 1 Run Errand Ability each turn.",
+          "type": "Ability"
+        }
+      ]
     },
     "052": {
       "name": "デリバード",
@@ -2906,11 +2942,20 @@
         {
           "damage": 120,
           "name": "フラッシュレイ",
-          "effect": "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from your opponent's Basic Pokémon."
+          "effect": "During your opponent's next turn, prevent all damage done to this Pokémon by attacks from your opponent's Basic Pokémon.",
+          "cost": [
+            "Lightning",
+            "Lightning"
+          ]
         },
         {
           "name": "ライオットブラスター",
-          "effect": "You may discard all Energy from this Pokémon. If you do, this attack does 130 more damage."
+          "effect": "You may discard all Energy from this Pokémon. If you do, this attack does 130 more damage.",
+          "cost": [
+            "Lightning",
+            "Lightning",
+            "Lightning"
+          ]
         }
       ],
       "category": "Pokemon",
@@ -3046,7 +3091,14 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Run Errand",
+          "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may use this Ability. Draw 2 cards. You can't use more than 1 Run Errand Ability each turn.",
+          "type": "Ability"
+        }
+      ]
     },
     "081": {
       "name": "なかよしポフィン",
@@ -3252,7 +3304,14 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Run Errand",
+          "effect": "Once during your turn, if this Pokémon is in the Active Spot, you may use this Ability. Draw 2 cards. You can't use more than 1 Run Errand Ability each turn.",
+          "type": "Ability"
+        }
+      ]
     },
     "090": {
       "name": "アセロラのいたずら",

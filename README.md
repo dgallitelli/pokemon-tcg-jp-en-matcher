@@ -42,9 +42,9 @@ Sets not yet in TCGdex are sideloaded from local JSON files in `data/`:
 
 | JP Set | EN Translation | Source |
 |--------|---------------|--------|
-| M1S (Mega Symphonia) | — | Serebii |
-| M1L (Mega Brave) | — | Serebii |
-| M2 (Inferno X) | — | Serebii |
+| M1S (Mega Symphonia) | ME1 (Mega Evolution) | TCGdex + Serebii |
+| M1L (Mega Brave) | ME1 (Mega Evolution) | TCGdex + Serebii |
+| M2 (Inferno X) | ME2 (Phantasmal Flames) | TCGdex + Serebii |
 | M3 (Nihil Zero) | ME3 (Perfect Order) | TCGdex + Serebii |
 | M4 (Ninja Spinner) | ME4 (Ninja Spinner) | TCGdex + Serebii |
 
@@ -63,6 +63,7 @@ Card data includes: name, HP, types, stage, attacks (name/cost/damage/effect), a
 
 Scripts in `scripts/` maintain the sideload data:
 
+- `fetch_tcgdex_en.py` — fetches EN card data from tcgdex API, creates ME1/ME2 sideloads, backfills attack costs/effects/abilities to JP sets
 - `scrape_serebii.py` — scrapes Serebii card pages for weakness, resistance, abilities, attacks, trainer effects, subcategories
 - `normalize_data.py` — backfills JP sets from EN translations (M4←ME4, M3←ME3) and ensures structural consistency
 - `fix_remaining_gaps.py` — manual patches for cards the scraper missed

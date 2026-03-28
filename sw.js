@@ -1,9 +1,11 @@
-const CACHE_NAME = 'ptcg-matcher-v3';
+const CACHE_NAME = 'ptcg-matcher-v4';
 const APP_SHELL = [
   './',
   './index.html',
   './favicon.svg',
   './manifest.json',
+  './data/ME1.json',
+  './data/ME2.json',
   './data/ME3.json',
   './data/ME4.json',
   './data/M1S.json',

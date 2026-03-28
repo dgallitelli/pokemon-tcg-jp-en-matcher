@@ -1119,11 +1119,15 @@
       "attacks": [
         {
           "name": "Tail Generator",
-          "effect": "For each Energy attached to your opponent's Pokémon, you may attach a Basic Lightning Energy from your discard pile to your Lightning Pokémon in any way you like."
+          "effect": "For each Energy attached to your opponent's Pokémon, you may attach a Basic Lightning Energy from your discard pile to your Lightning Pokémon in any way you like.",
+          "cost": [
+            "Lightning"
+          ]
         },
         {
           "name": "Thunder Shock",
           "cost": [
+            "Lightning",
             "Colorless"
           ],
           "damage": 30,
@@ -3160,11 +3164,15 @@
       "attacks": [
         {
           "name": "Tail Generator",
-          "effect": "For each Energy attached to your opponent's Pokémon, you may attach a Basic Lightning Energy from your discard pile to your Lightning Pokémon in any way you like."
+          "effect": "For each Energy attached to your opponent's Pokémon, you may attach a Basic Lightning Energy from your discard pile to your Lightning Pokémon in any way you like.",
+          "cost": [
+            "Lightning"
+          ]
         },
         {
           "name": "Thunder Shock",
           "cost": [
+            "Lightning",
             "Colorless"
           ],
           "damage": 30,
