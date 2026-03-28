@@ -7,62 +7,252 @@
   <link rel="preconnect" href="https://api.tcgdex.net">
   <link rel="preconnect" href="https://assets.tcgdex.net" crossorigin>
   <title>JP → EN Pokémon Card Matcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    /* ── Reset & CSS variables ─────────────────────────────── */
+    :root {
+      --gold: #ffd700;
+      --gold-dim: #ffd70040;
+      --gold-glow: #ffd70088;
+      --bg: #1a1a2e;
+      --surface: #16213e;
+      --surface-deep: #0f3460;
+      --text: #e0e0e0;
+      --text-muted: #a0a8c0;
+      --text-faint: #666;
+      --green: #2ecc71;
+      --red: #e74c3c;
+      --blue: #3498db;
+      --orange: #e67e22;
+      --purple: #9b59b6;
+      --font-display: 'Exo 2', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; min-height: 100vh; padding: 2rem; }
-    h1 { text-align: center; margin-bottom: 0.5rem; font-size: 1.5rem; color: #ffd700; }
-    .site-title { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; color: #ffd700; transition: opacity 0.2s, transform 0.2s; }
-    .site-title:hover { opacity: 0.85; transform: scale(1.02); }
-    .site-title:hover .title-logo { filter: drop-shadow(0 0 8px #ffd70088); }
-    .title-logo { width: 2rem; height: 2rem; flex-shrink: 0; }
-    .subtitle { text-align: center; color: #888; margin-bottom: 2rem; font-size: 0.85rem; }
+
+    /* ── Body & background ──────────────────────────────────── */
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      background-image:
+        radial-gradient(ellipse at 15% 8%, #0f3460cc 0%, transparent 45%),
+        radial-gradient(ellipse at 85% 92%, #16213ecc 0%, transparent 45%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    /* ── Header ─────────────────────────────────────────────── */
+    header {
+      text-align: center;
+      padding: 2rem 0 1.5rem;
+      border-bottom: 1px solid #ffffff10;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 0.6rem;
+      font-size: 2.2rem;
+      letter-spacing: -0.02em;
+      color: var(--gold);
+      text-shadow: 0 0 32px #ffd70040, 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .site-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+      color: var(--gold);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .site-title:hover { opacity: 0.88; transform: scale(1.02); }
+    .site-title:hover .title-logo { filter: drop-shadow(0 0 10px var(--gold-glow)); }
+    .title-logo { width: 2.8rem; height: 2.8rem; flex-shrink: 0; }
+    .subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 0;
+      font-size: 0.95rem;
+      font-weight: 400;
+    }
+
+    /* ── Input section ──────────────────────────────────────── */
     .input-section { max-width: 600px; margin: 0 auto 2rem; display: flex; gap: 0.5rem; align-items: end; flex-wrap: wrap; }
     .field { display: flex; flex-direction: column; gap: 0.3rem; }
-    .field label { font-size: 0.75rem; color: #aaa; text-transform: uppercase; letter-spacing: 0.05em; }
-    .field select, .field input { padding: 0.6rem 0.8rem; border: 1px solid #333; border-radius: 6px; background: #16213e; color: #e0e0e0; font-size: 0.95rem; }
+    .field label {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .field select, .field input {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #2a3a5e;
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--text);
+      font-size: 0.95rem;
+      font-family: var(--font-body);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .field select:focus, .field input:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px var(--gold-dim);
+    }
     .field select { min-width: 220px; }
-    .field input { width: 120px; }
-    button { padding: 0.6rem 1.5rem; border: none; border-radius: 6px; background: #ffd700; color: #1a1a2e; font-weight: 600; cursor: pointer; font-size: 0.95rem; align-self: end; }
-    button:hover { background: #ffed4a; }
-    button:disabled { opacity: 0.5; cursor: not-allowed; }
-    .status { text-align: center; color: #888; padding: 1rem; font-style: italic; }
+    .field input { width: 120px; font-family: var(--font-mono); }
+    button {
+      padding: 0.6rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      background: var(--gold);
+      color: #1a1a2e;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      align-self: end;
+      transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+    }
+    button:hover {
+      background: #ffed4a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px var(--gold-glow);
+    }
+    button:active { transform: translateY(0); }
+    button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+
+    /* ── Status ─────────────────────────────────────────────── */
+    .status { text-align: center; color: var(--text-muted); padding: 1rem; font-style: italic; }
     .error { color: #ff6b6b; }
+
+    /* ── Cards layout ───────────────────────────────────────── */
     .cards-container { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
-    .card-panel { background: #16213e; border-radius: 12px; padding: 1.5rem; max-width: 350px; flex: 1; min-width: 280px; }
-    .card-panel h2 { font-size: 1rem; margin-bottom: 0.3rem; }
-    .card-panel .lang-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; margin-bottom: 0.8rem; }
-    .lang-badge.ja { background: #e74c3c; color: white; }
-    .lang-badge.en { background: #3498db; color: white; }
-    .lang-badge.trans { background: #9b59b6; color: white; }
-    .card-panel img { width: 100%; border-radius: 8px; margin-bottom: 1rem; }
-    .card-meta { font-size: 0.8rem; color: #aaa; line-height: 1.6; }
-    .card-meta span { color: #e0e0e0; }
-    .match-info { text-align: center; background: #16213e; border-radius: 8px; padding: 1rem; max-width: 740px; margin: 1rem auto 0; font-size: 0.85rem; color: #aaa; }
-    .match-info .score { color: #2ecc71; font-weight: 600; font-size: 1.1rem; }
-    .match-info .no-match { color: #e67e22; }
+    .card-panel {
+      background: var(--surface);
+      border: 1px solid #ffffff0d;
+      border-radius: 12px;
+      padding: 1.5rem;
+      max-width: 350px;
+      flex: 1;
+      min-width: 280px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    }
+    .card-panel h2 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .card-panel .lang-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 700; font-family: var(--font-display); letter-spacing: 0.04em; margin-bottom: 0.8rem; }
+    .lang-badge.ja { background: var(--red); color: white; }
+    .lang-badge.en { background: var(--blue); color: white; }
+    .lang-badge.trans { background: var(--purple); color: white; }
+    .card-panel img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s;
+    }
+    .card-panel img:hover {
+      transform: scale(1.02) rotate(-0.5deg);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.6);
+    }
+    .card-meta { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+    .card-meta span { color: var(--text); }
+
+    /* ── Match info ─────────────────────────────────────────── */
+    .match-info {
+      text-align: center;
+      background: var(--surface);
+      border: 1px solid #ffffff0d;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      max-width: 740px;
+      margin: 1rem auto 0;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .match-info .score {
+      display: inline-block;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      background: #2ecc7122;
+      border: 1px solid #2ecc7144;
+      color: var(--green);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .match-info .score.score-low {
+      background: #e67e2222;
+      border-color: #e67e2244;
+      color: var(--orange);
+    }
+    .match-info .no-match { color: var(--orange); }
+
+    /* ── Candidates ─────────────────────────────────────────── */
     .candidates { max-width: 740px; margin: 1rem auto 0; }
-    .candidates summary { cursor: pointer; color: #888; font-size: 0.8rem; }
+    .candidates summary { cursor: pointer; color: var(--text-faint); font-size: 0.8rem; }
     .candidates ul { list-style: none; padding: 0.5rem 0; }
-    .candidates li { padding: 0.3rem 0; font-size: 0.8rem; color: #aaa; cursor: pointer; }
-    .candidates li:hover { color: #ffd700; }
-    .arrow { font-size: 2rem; color: #ffd700; align-self: center; }
-    .loading { display: inline-block; width: 16px; height: 16px; border: 2px solid #ffd700; border-top-color: transparent; border-radius: 50%; animation: spin 0.6s linear infinite; }
+    .candidates li { padding: 0.3rem 0; font-size: 0.8rem; color: var(--text-muted); cursor: pointer; }
+    .candidates li:hover { color: var(--gold); }
+
+    /* ── Animated arrow ─────────────────────────────────────── */
+    .arrow {
+      font-size: 2rem;
+      color: var(--gold);
+      align-self: center;
+      animation: pulse-arrow 1.8s ease-in-out infinite;
+    }
+    @keyframes pulse-arrow {
+      0%, 100% { opacity: 1; transform: translateX(0); }
+      50% { opacity: 0.55; transform: translateX(4px); }
+    }
+
+    /* ── Loading spinner ────────────────────────────────────── */
+    .loading {
+      display: inline-block;
+      width: 18px; height: 18px;
+      border: 2.5px solid var(--gold-dim);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+    }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* How-to section */
-    .howto { max-width: 740px; margin: 0 auto 2.5rem; background: #16213e; border-radius: 12px; padding: 1.5rem 2rem; }
-    .howto h2 { font-size: 1rem; color: #ffd700; margin-bottom: 1rem; }
+    /* ── How-to section ─────────────────────────────────────── */
+    .howto {
+      max-width: 740px;
+      margin: 0 auto 2.5rem;
+      background: var(--surface);
+      border: 1px solid #ffffff0d;
+      border-left: 3px solid var(--gold);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .howto h2 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--gold); margin-bottom: 1rem; }
     .howto summary { cursor: pointer; list-style: none; }
     .howto summary::-webkit-details-marker { display: none; }
-    .howto summary h2::before { content: '▸ '; font-size: 1.2rem; }
-    .howto details[open] summary h2::before { content: '▾ '; }
+    .howto summary h2::before { content: ''; display: inline-block; width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 8px solid var(--gold); margin-right: 0.5rem; vertical-align: middle; transition: transform 0.2s; }
+    .howto details[open] summary h2::before { transform: rotate(90deg); }
     .howto summary h2::after { content: none; }
     .howto details[open] .howto-content { margin-top: 1rem; }
     .howto-content { display: flex; gap: 2rem; align-items: start; flex-wrap: wrap; }
     .howto-card { position: relative; flex-shrink: 0; width: 220px; }
     .howto-card img { width: 100%; border-radius: 8px; }
-    .howto-card .annotation { position: absolute; border: 2px solid #ffd700; border-radius: 4px; pointer-events: none; }
-    .howto-card .annotation::after { position: absolute; font-size: 0.65rem; font-weight: 700; color: #1a1a2e; background: #ffd700; padding: 0.1rem 0.35rem; border-radius: 3px; white-space: nowrap; }
+    .howto-card .annotation { position: absolute; border: 2px solid var(--gold); border-radius: 4px; pointer-events: none; }
+    .howto-card .annotation::after { position: absolute; font-family: var(--font-mono); font-size: 0.65rem; font-weight: 600; color: #1a1a2e; background: var(--gold); padding: 0.1rem 0.35rem; border-radius: 3px; white-space: nowrap; }
     .howto-card .ann-number { bottom: 4.0%; left: 18.3%; width: 10.8%; height: 4.6%; }
     .howto-card .ann-number::after { content: '② Card #'; top: -1.4rem; left: 0; }
     .howto-card .ann-setcode { bottom: 4.0%; left: 9.2%; width: 8.7%; height: 4.6%; }
@@ -70,62 +260,99 @@
     .howto-steps { flex: 1; min-width: 240px; }
     .howto-steps ol { padding-left: 1.2rem; line-height: 1.9; font-size: 0.85rem; color: #ccc; }
     .howto-steps ol li { margin-bottom: 0.3rem; }
-    .howto-steps code { background: #0f3460; padding: 0.15rem 0.4rem; border-radius: 4px; color: #ffd700; font-size: 0.85rem; }
-    .howto-steps .example { margin-top: 1rem; padding: 0.8rem 1rem; background: #0f3460; border-radius: 8px; font-size: 0.8rem; color: #aaa; }
-    .howto-steps .example strong { color: #ffd700; font-weight: 600; }
-    .try-btn { display: inline-block; margin-top: 0.8rem; padding: 0.4rem 1rem; background: #ffd700; color: #1a1a2e; border: none; border-radius: 5px; font-size: 0.8rem; font-weight: 600; cursor: pointer; text-decoration: none; }
-    .try-btn:hover { background: #ffed4a; }
+    .howto-steps code { background: var(--surface-deep); padding: 0.15rem 0.4rem; border-radius: 4px; color: var(--gold); font-family: var(--font-mono); font-size: 0.82rem; }
+    .howto-steps .example { margin-top: 1rem; padding: 0.8rem 1rem; background: var(--surface-deep); border-radius: 8px; font-size: 0.8rem; color: var(--text-muted); }
+    .howto-steps .example strong { color: var(--gold); font-weight: 600; }
+    .try-btn { display: inline-block; margin-top: 0.8rem; padding: 0.4rem 1rem; background: var(--gold); color: #1a1a2e; border: none; border-radius: 5px; font-family: var(--font-display); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; text-decoration: none; transition: background 0.15s, transform 0.1s; }
+    .try-btn:hover { background: #ffed4a; transform: translateY(-1px); }
 
-    /* Set Browser Mode */
-    .browse-btn { margin-left: 0.5rem; padding: 0.6rem 1rem; border: 1px solid #ffd700; border-radius: 6px; background: transparent; color: #ffd700; font-weight: 600; cursor: pointer; font-size: 0.85rem; align-self: end; }
-    .browse-btn:hover { background: #ffd70022; }
+    /* ── Browse mode ────────────────────────────────────────── */
+    .browse-btn { margin-left: 0.5rem; padding: 0.6rem 1rem; border: 1px solid var(--gold); border-radius: 6px; background: transparent; color: var(--gold); font-family: var(--font-display); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; align-self: end; transition: background 0.15s, transform 0.1s; }
+    .browse-btn:hover { background: var(--gold-dim); transform: translateY(-1px); }
     #browsePage { max-width: 960px; margin: 0 auto; }
     .browse-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
-    .browse-header h2 { font-size: 1.1rem; color: #ffd700; }
-    .browse-back { background: none; border: 1px solid #555; border-radius: 6px; padding: 0.4rem 0.8rem; color: #ccc; cursor: pointer; font-size: 0.85rem; }
-    .browse-back:hover { border-color: #ffd700; color: #ffd700; }
+    .browse-header h2 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--gold); }
+    .browse-back { background: none; border: 1px solid #555; border-radius: 6px; padding: 0.4rem 0.8rem; color: #ccc; cursor: pointer; font-size: 0.85rem; transition: border-color 0.15s, color 0.15s; }
+    .browse-back:hover { border-color: var(--gold); color: var(--gold); }
     .browse-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem; }
-    .browse-card { background: #16213e; border-radius: 8px; padding: 0.6rem; cursor: pointer; text-align: center; transition: transform 0.15s; }
-    .browse-card:hover { transform: scale(1.03); }
-    .browse-card img { width: 100%; border-radius: 6px; aspect-ratio: 5/7; object-fit: cover; background: #0f3460; }
-    .browse-card .bc-name { font-size: 0.75rem; margin-top: 0.4rem; color: #e0e0e0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .browse-card .bc-num { font-size: 0.65rem; color: #888; }
+    .browse-card {
+      background: var(--surface);
+      border: 1px solid transparent;
+      border-radius: 8px;
+      padding: 0.6rem;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s, border-color 0.2s;
+    }
+    .browse-card:hover {
+      transform: scale(1.05) translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      border-color: var(--gold-dim);
+    }
+    .browse-card img { width: 100%; border-radius: 6px; aspect-ratio: 5/7; object-fit: cover; background: var(--surface-deep); }
+    .browse-card .bc-name { font-size: 0.75rem; margin-top: 0.4rem; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .browse-card .bc-num { font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-faint); }
 
-    /* Energy badges */
+    /* ── Energy badges ──────────────────────────────────────── */
     .energy-badge { display: inline-block; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.6rem; font-weight: 700; color: #fff; text-shadow: 0 1px 1px rgba(0,0,0,0.4); vertical-align: middle; margin: 0 1px; line-height: 1.3; }
 
-    /* Attack & ability layout */
+    /* ── Attacks & abilities ────────────────────────────────── */
     .atk-section { margin-top: 0.6rem; }
     .atk-row { display: flex; align-items: center; gap: 0.4rem; margin: 0.3rem 0; flex-wrap: wrap; }
     .atk-cost { display: flex; gap: 1px; flex-shrink: 0; }
-    .atk-name { font-weight: 600; color: #e0e0e0; }
-    .atk-dmg { margin-left: auto; font-weight: 700; color: #ffd700; font-size: 0.9rem; }
+    .atk-name { font-weight: 600; color: var(--text); }
+    .atk-dmg { margin-left: auto; font-family: var(--font-display); font-weight: 700; color: var(--gold); font-size: 0.9rem; }
     .atk-effect { font-size: 0.75rem; color: #999; font-style: italic; margin: 0.1rem 0 0.4rem 0; line-height: 1.4; }
     .ability-row { display: flex; align-items: center; gap: 0.4rem; margin: 0.3rem 0; }
-    .ability-label { background: #e74c3c; color: #fff; font-size: 0.6rem; font-weight: 700; padding: 0.1rem 0.4rem; border-radius: 3px; }
-    .ability-name { font-weight: 600; color: #e67e22; }
+    .ability-label { background: var(--red); color: #fff; font-size: 0.6rem; font-weight: 700; padding: 0.1rem 0.4rem; border-radius: 3px; }
+    .ability-name { font-weight: 600; color: var(--orange); }
 
-    /* Prev/Next navigation */
+    /* ── Prev/Next nav ──────────────────────────────────────── */
     .nav-row { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
-    .nav-btn { background: #16213e; border: 1px solid #333; border-radius: 6px; padding: 0.5rem 1.2rem; color: #ffd700; cursor: pointer; font-size: 0.85rem; font-weight: 600; }
-    .nav-btn:hover { background: #1a2a4e; border-color: #ffd700; }
+    .nav-btn {
+      background: var(--surface);
+      border: 1px solid #2a3a5e;
+      border-radius: 6px;
+      padding: 0.5rem 1.2rem;
+      color: var(--gold);
+      cursor: pointer;
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      transition: background 0.15s, border-color 0.15s, transform 0.1s;
+    }
+    .nav-btn:hover { background: #1a2a4e; border-color: var(--gold); transform: translateY(-1px); }
 
-    /* Browse filter bar */
+    /* ── Browse filter bar ──────────────────────────────────── */
     .browse-filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
-    .browse-filter-btn { padding: 0.35rem 0.8rem; border: 1px solid #444; border-radius: 5px; background: transparent; color: #ccc; cursor: pointer; font-size: 0.8rem; }
-    .browse-filter-btn:hover { border-color: #ffd700; color: #ffd700; }
-    .browse-filter-btn.active { background: #ffd700; color: #1a1a2e; border-color: #ffd700; font-weight: 600; }
+    .browse-filter-btn {
+      padding: 0.35rem 0.8rem;
+      border: 1px solid #2a3a5e;
+      border-radius: 5px;
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.8rem;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .browse-filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .browse-filter-btn.active { background: var(--gold); color: #1a1a2e; border-color: var(--gold); font-weight: 700; }
 
-    /* Mobile responsive */
+    /* ── Mobile ─────────────────────────────────────────────── */
     @media (max-width: 680px) {
       body { padding: 1rem 0.5rem; }
-      h1 { font-size: 1.2rem; }
+      h1 { font-size: 1.5rem; }
       .input-section { gap: 0.4rem; }
       .field select { min-width: 160px; }
       .field input { width: 80px; }
       .cards-container { flex-direction: column; align-items: center; gap: 0.5rem; }
       .card-panel { max-width: 100%; min-width: unset; }
-      .arrow { transform: rotate(90deg); font-size: 1.5rem; margin: -0.3rem 0; }
+      .arrow { transform: rotate(90deg); font-size: 1.5rem; margin: -0.3rem 0; animation: pulse-arrow-vert 1.8s ease-in-out infinite; }
+      @keyframes pulse-arrow-vert {
+        0%, 100% { opacity: 1; transform: rotate(90deg) translateX(0); }
+        50% { opacity: 0.55; transform: rotate(90deg) translateX(4px); }
+      }
       .howto-content { flex-direction: column; }
       .howto-card { width: 180px; align-self: center; }
       .browse-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.6rem; }
@@ -134,8 +361,10 @@
   </style>
 </head>
 <body>
-  <h1><a href="https://dgallitelli.github.io/pokemon-tcg-jp-en-matcher/" class="site-title"><img src="favicon.svg" alt="Logo" class="title-logo">🇯🇵 → 🇺🇸 Pokémon Card Matcher</a></h1>
-  <p class="subtitle">Enter a Japanese card's set ID and number to find its English equivalent via TCGdex</p>
+  <header>
+    <h1><a href="https://dgallitelli.github.io/pokemon-tcg-jp-en-matcher/" class="site-title"><img src="favicon.svg" alt="Logo" class="title-logo">🇯🇵 → 🇺🇸 Pokémon Card Matcher</a></h1>
+    <p class="subtitle">Enter a Japanese card's set ID and number to find its English equivalent via TCGdex</p>
+  </header>
 
   <div class="howto">
     <details>
@@ -917,7 +1146,7 @@
             ${renderCard(best.card, 'en')}
           </div>
           <div class="match-info">
-            Match confidence: <span class="score">${scoreLabel(best.score)}</span><br>
+            Match confidence: <span class="score${best.score < 70 ? ' score-low' : ''}">${scoreLabel(best.score)}</span><br>
             Matched on: ${best.reasons.join(', ') || 'none'}
           </div>
           ${scored.length > 1 ? `
@@ -978,7 +1207,10 @@
         const matchInfo = document.querySelector('.match-info');
         if (matchInfo) {
           const scoreEl = matchInfo.querySelector('.score');
-          if (scoreEl) scoreEl.textContent = scoreLabel(score);
+          if (scoreEl) {
+            scoreEl.textContent = scoreLabel(score);
+            scoreEl.className = 'score' + (score < 70 ? ' score-low' : '');
+          }
         }
       }
     }
