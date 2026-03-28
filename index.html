@@ -87,6 +87,47 @@
     .browse-card img { width: 100%; border-radius: 6px; aspect-ratio: 5/7; object-fit: cover; background: #0f3460; }
     .browse-card .bc-name { font-size: 0.75rem; margin-top: 0.4rem; color: #e0e0e0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .browse-card .bc-num { font-size: 0.65rem; color: #888; }
+
+    /* Energy badges */
+    .energy-badge { display: inline-block; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.6rem; font-weight: 700; color: #fff; text-shadow: 0 1px 1px rgba(0,0,0,0.4); vertical-align: middle; margin: 0 1px; line-height: 1.3; }
+
+    /* Attack & ability layout */
+    .atk-section { margin-top: 0.6rem; }
+    .atk-row { display: flex; align-items: center; gap: 0.4rem; margin: 0.3rem 0; flex-wrap: wrap; }
+    .atk-cost { display: flex; gap: 1px; flex-shrink: 0; }
+    .atk-name { font-weight: 600; color: #e0e0e0; }
+    .atk-dmg { margin-left: auto; font-weight: 700; color: #ffd700; font-size: 0.9rem; }
+    .atk-effect { font-size: 0.75rem; color: #999; font-style: italic; margin: 0.1rem 0 0.4rem 0; line-height: 1.4; }
+    .ability-row { display: flex; align-items: center; gap: 0.4rem; margin: 0.3rem 0; }
+    .ability-label { background: #e74c3c; color: #fff; font-size: 0.6rem; font-weight: 700; padding: 0.1rem 0.4rem; border-radius: 3px; }
+    .ability-name { font-weight: 600; color: #e67e22; }
+
+    /* Prev/Next navigation */
+    .nav-row { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
+    .nav-btn { background: #16213e; border: 1px solid #333; border-radius: 6px; padding: 0.5rem 1.2rem; color: #ffd700; cursor: pointer; font-size: 0.85rem; font-weight: 600; }
+    .nav-btn:hover { background: #1a2a4e; border-color: #ffd700; }
+
+    /* Browse filter bar */
+    .browse-filters { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .browse-filter-btn { padding: 0.35rem 0.8rem; border: 1px solid #444; border-radius: 5px; background: transparent; color: #ccc; cursor: pointer; font-size: 0.8rem; }
+    .browse-filter-btn:hover { border-color: #ffd700; color: #ffd700; }
+    .browse-filter-btn.active { background: #ffd700; color: #1a1a2e; border-color: #ffd700; font-weight: 600; }
+
+    /* Mobile responsive */
+    @media (max-width: 680px) {
+      body { padding: 1rem 0.5rem; }
+      h1 { font-size: 1.2rem; }
+      .input-section { gap: 0.4rem; }
+      .field select { min-width: 160px; }
+      .field input { width: 80px; }
+      .cards-container { flex-direction: column; align-items: center; gap: 0.5rem; }
+      .card-panel { max-width: 100%; min-width: unset; }
+      .arrow { transform: rotate(90deg); font-size: 1.5rem; margin: -0.3rem 0; }
+      .howto-content { flex-direction: column; }
+      .howto-card { width: 180px; align-self: center; }
+      .browse-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.6rem; }
+      .match-info { font-size: 0.8rem; }
+    }
   </style>
 </head>
 <body>
@@ -338,28 +379,40 @@
       return null;
     }
 
+    const ENERGY_COLORS = {
+      Grass:'#78C850',Fire:'#F08030',Water:'#6890F0',Lightning:'#F8D030',
+      Psychic:'#F85888',Fighting:'#C03028',Darkness:'#705848',Metal:'#B8B8D0',
+      Dragon:'#7038F8',Fairy:'#EE99AC',Colorless:'#A8A878'
+    };
+    function energyBadge(type) {
+      const c = ENERGY_COLORS[type] || '#888';
+      return `<span class="energy-badge" style="background:${c}">${safeHtml(type.slice(0,3))}</span>`;
+    }
+
     function renderCard(card, lang, badge) {
       const imgUrl = card.image ? card.image + '/high.webp' : sideloadImageUrl(card);
       const attacks = (card.attacks || []).map(a => {
-        let line = `${safeHtml(a.name)}`;
-        if (a.damage != null) line += ` ${safeHtml(String(a.damage))}`;
-        if (a.effect) line += `<br><em style="color:#999;font-size:0.75rem">${safeHtml(a.effect)}</em>`;
+        const cost = (a.cost || []).map(t => energyBadge(t)).join('');
+        let line = `<div class="atk-row">${cost ? `<span class="atk-cost">${cost}</span>` : ''}<span class="atk-name">${safeHtml(a.name)}</span>${a.damage != null ? `<span class="atk-dmg">${safeHtml(String(a.damage))}</span>` : ''}</div>`;
+        if (a.effect) line += `<div class="atk-effect">${safeHtml(a.effect)}</div>`;
         return line;
-      }).join('<br>');
+      }).join('');
       const abilities = (card.abilities || []).map(a => {
-        let line = `<span style="color:#e67e22">⚡ ${safeHtml(a.name)}</span>`;
-        if (a.effect) line += `<br><em style="color:#999;font-size:0.75rem">${safeHtml(a.effect)}</em>`;
+        let line = `<div class="ability-row"><span class="ability-label">Ability</span> <span class="ability-name">${safeHtml(a.name)}</span></div>`;
+        if (a.effect) line += `<div class="atk-effect">${safeHtml(a.effect)}</div>`;
         return line;
-      }).join('<br>');
+      }).join('');
       const cardName = safeHtml(card.name);
       const setName = safeHtml(card.set?.name || '?');
       const cardId = safeHtml(card.id);
       const illustrator = card.illustrator ? safeHtml(card.illustrator) : null;
-      const types = card.types ? safeHtml(card.types.join(', ')) : null;
+      const types = card.types ? card.types.map(t => energyBadge(t)).join(' ') : null;
       const hp = card.hp ? safeHtml(String(card.hp)) : null;
       const stage = card.stage ? safeHtml(card.stage) : null;
-      const weakness = card.weakness ? `${safeHtml(card.weakness.type)} ${safeHtml(card.weakness.value || '')}` : null;
-      const resistance = card.resistance ? `${safeHtml(card.resistance.type)} ${safeHtml(card.resistance.value || '')}` : null;
+      const weakness = card.weakness ? `${energyBadge(card.weakness.type)} ${safeHtml(card.weakness.value || '')}` : null;
+      const resistance = card.resistance ? `${energyBadge(card.resistance.type)} ${safeHtml(card.resistance.value || '')}` : null;
+      const retreat = card.retreat != null && card.retreat > 0 ? Array(card.retreat).fill(energyBadge('Colorless')).join('') : null;
+      const subcategory = card.subcategory ? safeHtml(card.subcategory) : null;
       const badgeLabel = badge || (lang === 'ja' ? '日本語 Japanese' : '🇺🇸 English');
       const badgeClass = badge ? 'trans' : lang;
       return `
@@ -369,14 +422,16 @@
           ${imgUrl ? `<img src="${imgUrl}" alt="${cardName}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="img-placeholder" style="display:none;width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:8px;margin-bottom:1rem;align-items:center;justify-content:center;color:#555;font-size:2rem">🃏</div>` : '<div style="width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:8px;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;color:#555;font-size:2rem">🃏</div>'}
           <div class="card-meta">
             Set: <span>${setName}</span> (${cardId})<br>
+            ${card.category ? `Category: <span>${safeHtml(card.category)}${subcategory ? ` — ${subcategory}` : ''}</span><br>` : ''}
             ${hp ? `HP: <span>${hp}</span><br>` : ''}
             ${stage ? `Stage: <span>${stage}</span><br>` : ''}
             ${illustrator ? `Illustrator: <span>${illustrator}</span><br>` : ''}
-            ${types ? `Type: <span>${types}</span><br>` : ''}
-            ${weakness ? `Weakness: <span>${weakness}</span><br>` : ''}
-            ${resistance ? `Resistance: <span>${resistance}</span><br>` : ''}
-            ${abilities ? `<br>${abilities}<br>` : ''}
-            ${attacks ? `<br>Attacks:<br>${attacks}<br>` : ''}
+            ${types ? `Type: ${types}<br>` : ''}
+            ${weakness ? `Weakness: ${weakness}<br>` : ''}
+            ${resistance ? `Resistance: ${resistance}<br>` : ''}
+            ${retreat ? `Retreat: ${retreat}<br>` : ''}
+            ${abilities ? `<div class="atk-section">${abilities}</div>` : ''}
+            ${attacks ? `<div class="atk-section">${attacks}</div>` : ''}
             ${card.category === 'Trainer' && card.effect ? `<br>Effect: <span>${safeHtml(card.effect)}</span><br>` : ''}
             ${card.category === 'Energy' && card.effect ? `<br>Effect: <span>${safeHtml(card.effect)}</span><br>` : ''}
             ${card.description ? `<br><em style="color:#777">${safeHtml(card.description)}</em>` : ''}
@@ -591,11 +646,13 @@
       let cards = [];
       let setName = setId;
 
+      let hasCategories = false;
       if (SIDELOAD_SETS[setUpper]) {
         const sideload = SIDELOAD_SETS[setUpper];
         setName = sideload.name || setUpper;
+        hasCategories = true;
         cards = Object.entries(sideload.cards).map(([num, c]) => ({
-          num, name: c.name, id: c.id,
+          num, name: c.name, id: c.id, category: c.category || '',
           image: c.image ? c.image + '/high.webp' : sideloadImageUrl(c)
         }));
       } else {
@@ -604,9 +661,10 @@
           if (!data || !data.cards) { setStatus(`Set "${safeHtml(setId)}" not found.`, true); return; }
           setName = data.name || setId;
           cards = data.cards.map(c => ({
-            num: c.id.split('-').pop(), name: c.name, id: c.id,
+            num: c.id.split('-').pop(), name: c.name, id: c.id, category: c.category || '',
             image: c.image ? c.image + '/high.webp' : null
           }));
+          if (cards.some(c => c.category)) hasCategories = true;
         } catch { setStatus(`Failed to load set "${safeHtml(setId)}".`, true); return; }
       }
 
@@ -615,20 +673,41 @@
       setStatus('', false);
       const browsePage = document.getElementById('browsePage');
       browsePage.style.display = 'block';
+
+      function renderBrowseCard(c) {
+        return `<div class="browse-card" data-cat="${safeHtml(c.category)}" onclick="document.getElementById('setInput').value='${safeHtml(setId)}';document.getElementById('cardNum').value='${safeHtml(c.num)}';closeBrowse();doSearch();">
+          ${c.image ? `<img src="${c.image}" alt="${safeHtml(c.name)}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:6px;align-items:center;justify-content:center;color:#555;font-size:1.5rem">🃏</div>` : `<div style="width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#555;font-size:1.5rem">🃏</div>`}
+          <div class="bc-name">${safeHtml(c.name)}</div>
+          <div class="bc-num">#${safeHtml(c.num)}</div>
+        </div>`;
+      }
+
       browsePage.innerHTML = `
         <div class="browse-header">
           <button class="browse-back" onclick="closeBrowse()">&larr; Back</button>
           <h2>${safeHtml(setName)} (${safeHtml(setId)}) — ${cards.length} cards</h2>
         </div>
+        ${hasCategories ? `<div class="browse-filters">
+          <button class="browse-filter-btn active" data-filter="All">All</button>
+          <button class="browse-filter-btn" data-filter="Pokemon">Pokemon</button>
+          <button class="browse-filter-btn" data-filter="Trainer">Trainer</button>
+          <button class="browse-filter-btn" data-filter="Energy">Energy</button>
+        </div>` : ''}
         <div class="browse-grid">
-          ${cards.map(c => `
-            <div class="browse-card" onclick="document.getElementById('setInput').value='${safeHtml(setId)}';document.getElementById('cardNum').value='${safeHtml(c.num)}';closeBrowse();doSearch();">
-              ${c.image ? `<img src="${c.image}" alt="${safeHtml(c.name)}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:6px;align-items:center;justify-content:center;color:#555;font-size:1.5rem">🃏</div>` : `<div style="width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#555;font-size:1.5rem">🃏</div>`}
-              <div class="bc-name">${safeHtml(c.name)}</div>
-              <div class="bc-num">#${safeHtml(c.num)}</div>
-            </div>
-          `).join('')}
+          ${cards.map(c => renderBrowseCard(c)).join('')}
         </div>`;
+
+      // Wire up filter buttons
+      browsePage.querySelectorAll('.browse-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          browsePage.querySelectorAll('.browse-filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.dataset.filter;
+          browsePage.querySelectorAll('.browse-card').forEach(card => {
+            card.style.display = (filter === 'All' || card.dataset.cat === filter) ? '' : 'none';
+          });
+        });
+      });
     }
 
     function closeBrowse() {
@@ -760,7 +839,8 @@
                   <div class="arrow">→</div>
                   ${renderCard(transCard, 'en', '🔄 Translation')}
                 </div>
-                <div class="match-info">This card has no official English print yet. Showing fan translation from <span style="color:#ffd700">${safeHtml(enTransSet.name || enTransSetId)}</span>.</div>`;
+                <div class="match-info">This card has no official English print yet. Showing fan translation from <span style="color:#ffd700">${safeHtml(enTransSet.name || enTransSetId)}</span>.</div>
+                ${renderNavRow()}`;
               return;
             }
           }
@@ -821,13 +901,15 @@
                 <div class="arrow">→</div>
                 ${renderCard(syntheticEn, 'en', '🔄 Translation')}
               </div>
-              <div class="match-info">This card has no official English print yet. Showing translated card text from <span style="color:#ffd700">Serebii</span>.</div>`;
+              <div class="match-info">This card has no official English print yet. Showing translated card text from <span style="color:#ffd700">Serebii</span>.</div>
+              ${renderNavRow()}`;
           } else {
             document.getElementById('results').innerHTML = `
               <div class="cards-container">${renderCard(jpCard, 'ja')}</div>
               <div class="match-info"><span class="no-match">No English equivalent found.</span>
                 ${jpCard.category !== 'Pokemon' ? '<br>Trainer/Energy card matching by name is limited — these often have different names across languages.' : ''}
-                ${!jpCard.dexId ? '<br>This card has no Pokédex ID, so name lookup was not possible.' : ''}</div>`;
+                ${!jpCard.dexId ? '<br>This card has no Pokédex ID, so name lookup was not possible.' : ''}</div>
+              ${renderNavRow()}`;
           }
           return;
         }
@@ -870,7 +952,8 @@
           setStatus('', false);
           document.getElementById('results').innerHTML = `
             <div class="cards-container">${renderCard(jpCard, 'ja')}</div>
-            <div class="match-info"><span class="no-match">Could not fetch English card details for comparison.</span></div>`;
+            <div class="match-info"><span class="no-match">Could not fetch English card details for comparison.</span></div>
+            ${renderNavRow()}`;
           return;
         }
 
@@ -891,7 +974,8 @@
             <ul>${scored.slice(1).map(s =>
               `<li class="candidate-item" data-card-id="${safeHtml(s.card.id)}" data-score="${s.score}" tabindex="0">${safeHtml(s.card.name)} — ${safeHtml(s.card.set?.name || s.card.id)} (score: ${s.score})</li>`
             ).join('')}</ul>
-          </details>` : ''}`;
+          </details>` : ''}
+          ${renderNavRow()}`;
 
         // Attach event listeners to candidate items (avoids inline onclick with user-controlled IDs)
         document.querySelectorAll('.candidate-item').forEach(li => {
@@ -903,6 +987,19 @@
       } finally {
         searchBtn.disabled = false;
       }
+    }
+
+    function renderNavRow() {
+      const setId = document.getElementById('setInput').value.trim();
+      const rawNum = document.getElementById('cardNum').value.trim();
+      const num = parseInt(rawNum, 10);
+      if (!setId || isNaN(num)) return '';
+      const prev = num > 1 ? String(num - 1).padStart(rawNum.length > 2 ? 3 : rawNum.length, '0') : null;
+      const next = String(num + 1).padStart(rawNum.length > 2 ? 3 : rawNum.length, '0');
+      return `<div class="nav-row">
+        ${prev ? `<button class="nav-btn" onclick="document.getElementById('cardNum').value='${prev}';doSearch();">← #${prev}</button>` : '<span></span>'}
+        <button class="nav-btn" onclick="document.getElementById('cardNum').value='${next}';doSearch();">#${next} →</button>
+      </div>`;
     }
 
     // Allow clicking alternate candidates
