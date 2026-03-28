@@ -105,6 +105,10 @@ def parse_card(card_id):
     card_num = int(num_m.group(1))
     # total = int(num_m.group(2))  # 083 or 120 for alt arts
 
+    # --- Illustrator ---
+    illust_m = re.search(r'<a[^>]+illust=([^&"]+)[^>]*>([^<]+)</a>', html)
+    illustrator = illust_m.group(2).strip() if illust_m else None
+
     # --- Rarity ---
     rarity_m = re.search(r'src="/assets/images/card/rarity/(ic_rare_[^.]+)\.gif"', section)
     rarity = "Unknown"
@@ -246,6 +250,8 @@ def parse_card(card_id):
         "set": {"id": SET_ID, "name": SET_NAME},
         "image": None,
     }
+    if illustrator:
+        card["illustrator"] = illustrator
 
     if category == "Pokemon":
         if hp is not None:
