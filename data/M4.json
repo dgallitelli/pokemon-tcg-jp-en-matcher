@@ -10,25 +10,6 @@
   "cards": {
     "001": {
       "name": "ビードル",
-      "hp": 60,
-      "types": [
-        "Grass"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        13
-      ],
-      "attacks": [
-        {
-          "damage": 10,
-          "name": "どくばり",
-          "cost": [
-            "Grass"
-          ],
-          "effect": "Flip a coin. If tails, this attack does nothing."
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-001",
@@ -37,30 +18,32 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fire",
-        "value": "x2"
-      }
-    },
-    "002": {
-      "name": "コクーン",
-      "hp": 80,
+      "hp": 50,
       "types": [
         "Grass"
       ],
-      "stage": "Stage1",
-      "retreat": 2,
-      "dexId": [
-        14
-      ],
+      "stage": "Basic",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "かたくなる",
+          "name": "ふいをつく",
           "cost": [
             "Grass"
-          ]
+          ],
+          "damage": 30,
+          "effect": "コインを1回投げウラなら、このワザは失敗。"
         }
       ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "dexId": [
+        13
+      ]
+    },
+    "002": {
+      "name": "コクーン",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-002",
@@ -69,41 +52,37 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 80,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
+      "abilities": [
+        {
+          "name": "かたいからだ",
+          "effect": "このポケモンが受けるワザのダメージは「-20」される。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "ぶらさがる",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 20
+        }
+      ],
       "weakness": {
         "type": "Fire",
         "value": "x2"
       },
-      "abilities": [
-        {
-          "name": "Exoskeleton",
-          "effect": "This Pokemon takes 20 less damage from attacks (after applying Weakness and Resistance)."
-        }
+      "dexId": [
+        14
       ]
     },
     "003": {
       "name": "スピアーex",
-      "hp": 270,
-      "types": [
-        "Grass"
-      ],
-      "stage": "Stage2",
-      "retreat": 1,
-      "dexId": [
-        15
-      ],
-      "attacks": [
-        {
-          "name": "どくばり",
-          "cost": [
-            "Grass"
-          ],
-          "effect": "This attack does 110 damage for each of your Beedrill (including Pokémon ex) in play."
-        },
-        {
-          "damage": 200,
-          "name": "ハイパービーム"
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Double Rare",
       "id": "M4-003",
@@ -112,33 +91,33 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fire",
-        "value": "x2"
-      }
-    },
-    "004": {
-      "name": "マスキッパ",
-      "hp": 80,
+      "hp": 310,
       "types": [
         "Grass"
       ],
-      "stage": "Basic",
-      "retreat": 2,
-      "dexId": [
-        455
-      ],
+      "stage": "Stage2",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "まきつく",
+          "name": "ビーランブル",
           "cost": [
-            "Colorless",
-            "Colorless",
-            "Colorless"
+            "Grass"
           ],
-          "effect": "If your opponent's Active Pokemon has no Retreat Cost, this attack does 80 more damage."
+          "damage": 110,
+          "damageModifier": "×",
+          "effect": "自分の場の「スピアー（『ポケモンex』をふくむ）」の数×110ダメージ。"
         }
       ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "dexId": [
+        15
+      ]
+    },
+    "004": {
+      "name": "マスキッパ",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-004",
@@ -147,31 +126,35 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fire",
-        "value": "x2"
-      }
-    },
-    "005": {
-      "name": "ハリマロン",
-      "hp": 70,
+      "hp": 110,
       "types": [
         "Grass"
       ],
       "stage": "Basic",
       "retreat": 2,
-      "dexId": [
-        650
-      ],
       "attacks": [
         {
-          "damage": 10,
-          "name": "タックル",
+          "name": "まるかじり",
           "cost": [
-            "Grass"
-          ]
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 80,
+          "damageModifier": "＋",
+          "effect": "相手のバトルポケモンのにげるためのエネルギーがないなら、80ダメージ追加。"
         }
       ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "dexId": [
+        455
+      ]
+    },
+    "005": {
+      "name": "ハリマロン",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-005",
@@ -180,32 +163,39 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fire",
-        "value": "x2"
-      }
-    },
-    "006": {
-      "name": "ハリボーグ",
-      "hp": 100,
+      "hp": 70,
       "types": [
         "Grass"
       ],
-      "stage": "Stage1",
-      "retreat": 3,
-      "dexId": [
-        651
-      ],
+      "stage": "Basic",
+      "retreat": 2,
       "attacks": [
         {
-          "damage": 50,
-          "name": "タックル",
+          "name": "たたく",
           "cost": [
             "Grass"
           ],
-          "effect": "Search your deck for a basic Grass Energy and put it on this Pokémon. Then, shuffle your deck"
+          "damage": 10
+        },
+        {
+          "name": "トゲでさす",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": 30
         }
       ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "dexId": [
+        650
+      ]
+    },
+    "006": {
+      "name": "ハリボーグ",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-006",
@@ -214,38 +204,41 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fire",
-        "value": "x2"
-      }
-    },
-    "007": {
-      "name": "ブリガロン",
-      "hp": 160,
+      "hp": 100,
       "types": [
         "Grass"
       ],
-      "stage": "Stage2",
+      "stage": "Stage1",
       "retreat": 3,
-      "dexId": [
-        652
-      ],
       "attacks": [
         {
-          "damage": 80,
-          "name": "まきびし",
+          "name": "リーフチャージ",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 20,
+          "effect": "自分の山札から「基本エネルギー」を1枚選び、このポケモンにつける。そして山札を切る。"
+        },
+        {
+          "name": "つるのムチ",
           "cost": [
             "Grass",
             "Grass",
             "Colorless"
           ],
-          "effect": "During your opponent's next turn, the Defending Pokémon can’t Retreat"
-        },
-        {
-          "damage": 140,
-          "name": "ウッドハンマー"
+          "damage": 80
         }
       ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "dexId": [
+        651
+      ]
+    },
+    "007": {
+      "name": "ブリガロン",
       "category": "Pokemon",
       "rarity": "Rare",
       "id": "M4-007",
@@ -254,38 +247,40 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 180,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "retreat": 4,
+      "abilities": [
+        {
+          "name": "ニードルアーマー",
+          "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、このポケモンについているエネルギーの数×3個ぶんのダメカンを、ワザを使ったポケモンにのせる。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "かこいこむ",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless"
+          ],
+          "damage": 160,
+          "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。"
+        }
+      ],
       "weakness": {
         "type": "Fire",
         "value": "x2"
       },
-      "abilities": [
-        {
-          "name": "Needle Armor",
-          "effect": "If this Pokemon is in the Active Spot and is damaged by an attack from your opponent's Pokemon (even if this Pokemon is Knocked Out), place 3 damage counters on the Attacking Pokemon for each Grass Energy attached to this Pokemon."
-        }
+      "dexId": [
+        652
       ]
     },
     "008": {
       "name": "ロコン",
-      "hp": 70,
-      "types": [
-        "Fire"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        37
-      ],
-      "attacks": [
-        {
-          "damage": 20,
-          "name": "ひのこ",
-          "cost": [
-            "Fire"
-          ],
-          "effect": "Your opponent's Active Pokemon is now Burned."
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-008",
@@ -294,39 +289,31 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Water",
-        "value": "x2"
-      }
-    },
-    "009": {
-      "name": "キュウコン",
-      "hp": 120,
+      "hp": 70,
       "types": [
         "Fire"
       ],
-      "stage": "Stage1",
+      "stage": "Basic",
       "retreat": 1,
-      "dexId": [
-        38
-      ],
       "attacks": [
         {
-          "name": "まどわせる",
+          "name": "こがす",
           "cost": [
             "Fire"
           ],
-          "effect": "Move all damage counters from 1 of your opponent's Benched Pokemon to their Active Pokemon."
-        },
-        {
-          "damage": 70,
-          "name": "かえんほうしゃ",
-          "cost": [
-            "Fire",
-            "Fire"
-          ]
+          "effect": "相手のバトルポケモンをやけどにする。"
         }
       ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      },
+      "dexId": [
+        37
+      ]
+    },
+    "009": {
+      "name": "キュウコン",
       "category": "Pokemon",
       "rarity": "Uncommon",
       "id": "M4-009",
@@ -335,75 +322,82 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Water",
-        "value": "x2"
-      }
-    },
-    "010": {
-      "name": "ホウオウ",
-      "hp": 140,
+      "hp": 120,
       "types": [
         "Fire"
       ],
-      "stage": "Basic",
-      "retreat": 2,
-      "dexId": [
-        250
-      ],
+      "stage": "Stage1",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "せいなるほのお",
+          "name": "きゅうびうつし",
           "cost": [
             "Fire"
           ],
-          "effect": "Put up to 3 Basic Pokemon from your discard pile onto your Bench."
+          "effect": "自分のベンチポケモンを1匹選び、選んだポケモンにのっているダメカンをすべて、相手のバトルポケモンにのせ替える。"
         },
         {
-          "damage": 100,
-          "name": "ファイヤーブレス",
+          "name": "おにび",
           "cost": [
-            "Fire",
             "Fire",
             "Fire"
           ],
-          "effect": "Discard an Energy attached to this Pokemon."
+          "damage": 70
         }
       ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      },
+      "dexId": [
+        38
+      ]
+    },
+    "010": {
+      "name": "ホウオウ",
       "category": "Pokemon",
-      "rarity": "Rare",
+      "rarity": "Uncommon",
       "id": "M4-010",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Water",
-        "value": "x2"
-      }
-    },
-    "011": {
-      "name": "フォッコ",
-      "hp": 70,
+      "hp": 130,
       "types": [
         "Fire"
       ],
       "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        653
-      ],
+      "retreat": 2,
       "attacks": [
         {
-          "damage": 20,
-          "name": "ひのこ",
+          "name": "さいきのほのお",
           "cost": [
-            "Colorless"
+            "Fire"
           ],
-          "effect": "Search your deck for up to 2 Basic Pokémon and put them on your Bench. Then, shuffle your deck"
+          "effect": "自分のトラッシュからたねポケモンを3枚まで選び、ベンチに出す。"
+        },
+        {
+          "name": "ぐれんのつばさ",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Fire"
+          ],
+          "damage": 130,
+          "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。"
         }
       ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      },
+      "dexId": [
+        250
+      ]
+    },
+    "011": {
+      "name": "フォッコ",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-011",
@@ -412,74 +406,73 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 70,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "なかまをよぶ",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+        },
+        {
+          "name": "ひをはく",
+          "cost": [
+            "Fire"
+          ],
+          "damage": 10
+        }
+      ],
       "weakness": {
         "type": "Water",
         "value": "x2"
-      }
+      },
+      "dexId": [
+        653
+      ]
     },
     "012": {
-      "name": "ジュナイパーex",
-      "hp": 320,
-      "types": [
-        "Grass"
-      ],
-      "stage": "Stage2",
-      "retreat": 2,
-      "dexId": [
-        724
-      ],
-      "attacks": [
-        {
-          "name": "かげぬい",
-          "cost": [
-            "Fire",
-            "Fire"
-          ],
-          "effect": "Discard an Energy from this Pokémon"
-        },
-        {
-          "damage": 200,
-          "name": "シャドーアロー"
-        }
-      ],
+      "name": "テールナー",
       "category": "Pokemon",
-      "rarity": "Double Rare",
+      "rarity": "Common",
       "id": "M4-012",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Water",
-        "value": "x2"
-      }
-    },
-    "013": {
-      "name": "マフォクシー",
-      "hp": 150,
+      "hp": 100,
       "types": [
         "Fire"
       ],
-      "stage": "Stage2",
-      "retreat": 2,
-      "dexId": [
-        655
-      ],
+      "stage": "Stage1",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "まじないだん",
+          "name": "かえんほうしゃ",
           "cost": [
             "Fire",
             "Fire"
           ],
-          "effect": "This attack does 30 damage for each Energy attached to this Pokémon"
-        },
-        {
-          "damage": 90,
-          "name": "かえんのまじない"
+          "damage": 80,
+          "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。"
         }
       ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      },
+      "dexId": [
+        654
+      ]
+    },
+    "013": {
+      "name": "マフォクシー",
       "category": "Pokemon",
       "rarity": "Rare",
       "id": "M4-013",
@@ -488,37 +481,40 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 160,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage2",
+      "retreat": 2,
+      "abilities": [
+        {
+          "name": "フレアマジック",
+          "effect": "自分の番に、自分の手札から「基本エネルギー」を1枚トラッシュするなら、1回使える。自分の手札が7枚になるように、山札を引く。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "エナジーストーム",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": 30,
+          "damageModifier": "×",
+          "effect": "おたがいのポケモン全員についているエネルギーの数×30ダメージ。"
+        }
+      ],
       "weakness": {
         "type": "Water",
         "value": "x2"
       },
-      "abilities": [
-        {
-          "name": "Flare Magic",
-          "effect": "Once during your turn, you may discard a Basic Fire Energy card from your hand in order to use this Ability. Draw cards until you have 7 cards in your hand."
-        }
+      "dexId": [
+        655
       ]
     },
     "014": {
       "name": "シシコ",
-      "hp": 70,
-      "types": [
-        "Fire"
-      ],
-      "stage": "Basic",
-      "retreat": 2,
-      "dexId": [
-        667
-      ],
-      "attacks": [
-        {
-          "damage": 30,
-          "name": "ほのお",
-          "cost": [
-            "Colorless"
-          ]
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-014",
@@ -527,42 +523,31 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Water",
-        "value": "x2"
-      }
-    },
-    "015": {
-      "name": "メガカエンジシex",
-      "hp": 310,
+      "hp": 70,
       "types": [
         "Fire"
       ],
-      "stage": "Stage1",
-      "retreat": 2,
-      "dexId": [
-        668
-      ],
+      "stage": "Basic",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "たてがみファイヤー",
+          "name": "たいあたり",
           "cost": [
-            "Fire",
             "Colorless"
           ],
-          "effect": "During your opponent's next turn, the Defending Pokemon's attacks do 50 less damage."
-        },
-        {
-          "damage": 250,
-          "name": "ロイヤルブレイズ",
-          "cost": [
-            "Fire",
-            "Fire",
-            "Colorless"
-          ],
-          "effect": "This attack does 10 less damage for each damage counter on this Pokemon."
+          "damage": 10
         }
       ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      },
+      "dexId": [
+        667
+      ]
+    },
+    "015": {
+      "name": "メガカエンジシex",
       "category": "Pokemon",
       "rarity": "Double Rare",
       "id": "M4-015",
@@ -571,31 +556,44 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 340,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "ほえたてる",
+          "cost": [
+            "Fire",
+            "Colorless"
+          ],
+          "damage": 80,
+          "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-50」される。"
+        },
+        {
+          "name": "ビッグバンファイヤー",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": 290,
+          "damageModifier": "－",
+          "effect": "このポケモンにのっているダメカンの数×10ダメージぶん、このワザのダメージは小さくなる。"
+        }
+      ],
       "weakness": {
         "type": "Water",
         "value": "x2"
-      }
+      },
+      "dexId": [
+        668
+      ]
     },
     "016": {
       "name": "テッポウオ",
-      "hp": 70,
-      "types": [
-        "Water"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        223
-      ],
-      "attacks": [
-        {
-          "damage": 20,
-          "name": "みずでっぽう",
-          "cost": [
-            "Water"
-          ]
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-016",
@@ -604,161 +602,158 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Lightning",
-        "value": "x2"
-      }
-    },
-    "017": {
-      "name": "オクタン",
-      "hp": 120,
+      "hp": 70,
       "types": [
         "Water"
       ],
-      "stage": "Stage1",
-      "retreat": 2,
-      "dexId": [
-        224
-      ],
+      "stage": "Basic",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "スポットキャノン",
+          "name": "するどいひれ",
           "cost": [
             "Water"
           ],
-          "effect": "During your opponent's next turn, when the Defending Pokemon tries to attack, your opponent flips 2 coins. If either is tails, that attack does nothing."
-        },
-        {
-          "damage": 70,
-          "name": "ロケットだん",
-          "cost": [
-            "Water",
-            "Colorless"
-          ],
-          "effect": "This Pokemon is now Confused."
+          "damage": 20
         }
       ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "dexId": [
+        223
+      ]
+    },
+    "017": {
+      "name": "オクタン",
       "category": "Pokemon",
-      "rarity": "Uncommon",
+      "rarity": "Common",
       "id": "M4-017",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Lightning",
-        "value": "x2"
-      }
-    },
-    "018": {
-      "name": "デリバード",
-      "hp": 80,
+      "hp": 110,
       "types": [
         "Water"
       ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        225
-      ],
+      "stage": "Stage1",
+      "retreat": 2,
       "attacks": [
         {
-          "name": "プレゼント",
+          "name": "すみふんしゃ",
           "cost": [
-            "Colorless"
+            "Water"
           ],
-          "effect": "Both players may attach up to 3 Energy from their hand to their Pokemon in any way they like. (Your opponent attaches first.)"
+          "damage": 30,
+          "effect": "次の相手の番、このワザを受けたポケモンがワザを使うとき、相手はコインを2回投げる。1回でもウラなら、そのワザは失敗。"
         },
         {
-          "damage": 30,
-          "name": "ひっぱたく",
+          "name": "あばれまわる",
           "cost": [
-            "Colorless",
+            "Water",
             "Colorless"
-          ]
+          ],
+          "damage": 120,
+          "effect": "このポケモンをこんらんにする。"
         }
       ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "dexId": [
+        224
+      ]
+    },
+    "018": {
+      "name": "デリバード",
       "category": "Pokemon",
-      "rarity": "Common",
+      "rarity": "Uncommon",
       "id": "M4-018",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Metal",
-        "value": "x2"
-      },
-      "resistance": {
-        "type": "Fighting",
-        "value": "-30"
-      }
-    },
-    "019": {
-      "name": "ケルディオ",
-      "hp": 120,
+      "hp": 90,
       "types": [
         "Water"
       ],
       "stage": "Basic",
       "retreat": 1,
-      "dexId": [
-        647
-      ],
       "attacks": [
         {
-          "name": "かくごのつるぎ",
+          "name": "ハッピープレゼント",
           "cost": [
-            "Water"
+            "Colorless"
           ],
-          "effect": "This attack also does 20 damage to 1 of your opponent's Benched Pokemon. (Don't apply Weakness and Resistance for Benched Pokemon.)"
+          "effect": "おたがいのプレイヤーは、のぞむなら、それぞれ自分の手札から基本エネルギーを3枚まで選び、自分のポケモンに好きなようにつける。（相手から行う。）"
         },
         {
-          "damage": 90,
-          "name": "みずびたし",
+          "name": "はばたく",
           "cost": [
-            "Water",
-            "Water"
+            "Colorless",
+            "Colorless"
           ],
-          "effect": "Move an Energy from this Pokemon to 1 of your Benched Pokemon."
+          "damage": 40
         }
       ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      },
+      "dexId": [
+        225
+      ]
+    },
+    "019": {
+      "name": "ケルディオ",
       "category": "Pokemon",
-      "rarity": "Rare",
+      "rarity": "Uncommon",
       "id": "M4-019",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Lightning",
-        "value": "x2"
-      }
-    },
-    "020": {
-      "name": "ケロマツ",
-      "hp": 60,
+      "hp": 110,
       "types": [
         "Water"
       ],
       "stage": "Basic",
       "retreat": 1,
-      "dexId": [
-        656
-      ],
       "attacks": [
         {
-          "damage": 20,
-          "name": "あわ",
+          "name": "つきぬける",
           "cost": [
-            "Colorless"
+            "Water"
           ],
-          "effect": "Draw a card"
+          "damage": 20,
+          "effect": "相手のベンチポケモン1匹にも、20ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        },
+        {
+          "name": "エネリフレクト",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": 70,
+          "effect": "このポケモンについているエネルギーを1個選び、ベンチポケモンにつけ替える。"
         }
       ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "dexId": [
+        647
+      ]
+    },
+    "020": {
+      "name": "ケロマツ",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-020",
@@ -767,30 +762,38 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Lightning",
-        "value": "x2"
-      }
-    },
-    "021": {
-      "name": "ゲコガシラ",
-      "hp": 90,
+      "hp": 70,
       "types": [
         "Water"
       ],
-      "stage": "Stage1",
+      "stage": "Basic",
       "retreat": 1,
-      "dexId": [
-        657
-      ],
       "attacks": [
         {
-          "name": "みずしゅりけん",
+          "name": "もってくる",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "自分の山札を1枚引く。"
+        },
+        {
+          "name": "みずでっぽう",
           "cost": [
             "Water"
-          ]
+          ],
+          "damage": 10
         }
       ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "dexId": [
+        656
+      ]
+    },
+    "021": {
+      "name": "ゲコガシラ",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-021",
@@ -799,36 +802,39 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Lightning",
-        "value": "x2"
-      }
-    },
-    "022": {
-      "name": "メガゲッコウガex",
-      "hp": 320,
+      "hp": 100,
       "types": [
         "Water"
       ],
-      "stage": "Stage2",
-      "retreat": 0,
-      "dexId": [
-        658
-      ],
+      "stage": "Stage1",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "シャドーストライク",
+          "name": "よびよせのじゅつ",
+          "cost": [
+            "Water"
+          ],
+          "effect": "自分の山札からポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+        },
+        {
+          "name": "アクアエッジ",
           "cost": [
             "Water",
             "Water"
           ],
-          "effect": "You may put a Water Energy attached to this Pokémon into your hand and have this attack do 80 more damage"
-        },
-        {
-          "damage": 250,
-          "name": "ニンジャブレード"
+          "damage": 50
         }
       ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "dexId": [
+        657
+      ]
+    },
+    "022": {
+      "name": "メガゲッコウガex",
       "category": "Pokemon",
       "rarity": "Double Rare",
       "id": "M4-022",
@@ -837,37 +843,40 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 350,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage2",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "ひっさつしゅりけん",
+          "effect": "このポケモンがバトル場にいて、自分の番に、自分の手札から「基本エネルギー」を1枚トラッシュするなら、1回使える。相手のポケモン1匹に、ダメカンを6個のせる。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "ニンジャスピナー",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": 120,
+          "damageModifier": "＋",
+          "effect": "のぞむなら、このポケモンについているエネルギーを1個手札にもどし、80ダメージ追加。"
+        }
+      ],
       "weakness": {
         "type": "Lightning",
         "value": "x2"
       },
-      "abilities": [
-        {
-          "name": "Mortal Shuriken",
-          "effect": "Once during your turn, if this Pokemon is in the Active Spot, you may discard a Basic Water Energy card from your hand in order to use this Ability. Place 6 damage counters on 1 of your opponent's Pokemon."
-        }
+      "dexId": [
+        658
       ]
     },
     "023": {
       "name": "カチコール",
-      "hp": 70,
-      "types": [
-        "Water"
-      ],
-      "stage": "Basic",
-      "retreat": 3,
-      "dexId": [
-        712
-      ],
-      "attacks": [
-        {
-          "damage": 20,
-          "name": "ふれる",
-          "cost": [
-            "Water"
-          ]
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-023",
@@ -876,41 +885,40 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Metal",
-        "value": "x2"
-      }
-    },
-    "024": {
-      "name": "クレベース",
-      "hp": 150,
+      "hp": 80,
       "types": [
         "Water"
       ],
-      "stage": "Stage1",
-      "retreat": 4,
-      "dexId": [
-        713
-      ],
+      "stage": "Basic",
+      "retreat": 2,
       "attacks": [
         {
-          "name": "アイスパス",
+          "name": "ひんやり",
           "cost": [
             "Water"
           ],
-          "effect": "Discard the top 6 cards of your deck. This attack does 60 damage for each Basic Water Energy discarded in this way."
+          "damage": 10
         },
         {
-          "damage": 100,
-          "name": "アイスクラッシュ",
+          "name": "こおりのいぶき",
           "cost": [
-            "Water",
             "Water",
             "Colorless",
             "Colorless"
-          ]
+          ],
+          "damage": 50
         }
       ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      },
+      "dexId": [
+        712
+      ]
+    },
+    "024": {
+      "name": "クレベース",
       "category": "Pokemon",
       "rarity": "Uncommon",
       "id": "M4-024",
@@ -919,30 +927,43 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Metal",
-        "value": "x2"
-      }
-    },
-    "025": {
-      "name": "コソクムシ",
-      "hp": 50,
+      "hp": 160,
       "types": [
         "Water"
       ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        767
-      ],
+      "stage": "Stage1",
+      "retreat": 4,
       "attacks": [
         {
-          "name": "かくれる",
+          "name": "ひょうざんくずし",
           "cost": [
             "Water"
-          ]
+          ],
+          "damage": 60,
+          "damageModifier": "×",
+          "effect": "自分の山札を上から6枚トラッシュし、その中にある「基本エネルギー」の枚数×60ダメージ。"
+        },
+        {
+          "name": "フロストスタンプ",
+          "cost": [
+            "Water",
+            "Water",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 160
         }
       ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      },
+      "dexId": [
+        713
+      ]
+    },
+    "025": {
+      "name": "コソクムシ",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-025",
@@ -951,41 +972,39 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Lightning",
-        "value": "x2"
-      }
-    },
-    "026": {
-      "name": "グソクムシャ",
-      "hp": 130,
+      "hp": 70,
       "types": [
         "Water"
       ],
-      "stage": "Stage1",
-      "retreat": 3,
-      "dexId": [
-        768
-      ],
+      "stage": "Basic",
+      "retreat": 2,
       "attacks": [
         {
-          "name": "ぎんがのよろい",
+          "name": "かじる",
           "cost": [
             "Water"
           ],
-          "effect": "If this attack's damage Knocks Out your opponent's Active Pokemon, during your opponent's next turn, this Pokemon can't be affected by damage or effects of attacks."
+          "damage": 10
         },
         {
-          "damage": 90,
-          "name": "そうこうざん",
+          "name": "どつく",
           "cost": [
-            "Colorless",
             "Colorless",
             "Colorless"
           ],
-          "effect": "During your next turn, this Pokemon can't attack."
+          "damage": 20
         }
       ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "dexId": [
+        767
+      ]
+    },
+    "026": {
+      "name": "グソクムシャ",
       "category": "Pokemon",
       "rarity": "Uncommon",
       "id": "M4-026",
@@ -994,33 +1013,42 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 140,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "きゅうしょぎり",
+          "cost": [
+            "Water"
+          ],
+          "damage": 30,
+          "effect": "このワザのダメージで、相手のポケモンがきぜつしたなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。"
+        },
+        {
+          "name": "そこぢから",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 150,
+          "effect": "次の自分の番、このポケモンはワザが使えない。"
+        }
+      ],
       "weakness": {
         "type": "Lightning",
         "value": "x2"
-      }
+      },
+      "dexId": [
+        768
+      ]
     },
     "027": {
       "name": "メリープ",
-      "hp": 60,
-      "types": [
-        "Lightning"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        179
-      ],
-      "attacks": [
-        {
-          "damage": 10,
-          "name": "でんきショック",
-          "cost": [
-            "Lightning",
-            "Colorless"
-          ],
-          "effect": "Flip a coin. If heads, your opponent's Active Pokemon is now Paralyzed."
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-027",
@@ -1029,33 +1057,33 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fighting",
-        "value": "x2"
-      }
-    },
-    "028": {
-      "name": "モココ",
-      "hp": 80,
+      "hp": 70,
       "types": [
         "Lightning"
       ],
-      "stage": "Stage1",
+      "stage": "Basic",
       "retreat": 2,
-      "dexId": [
-        180
-      ],
       "attacks": [
         {
-          "damage": 30,
           "name": "でんじは",
           "cost": [
             "Lightning",
             "Colorless"
           ],
-          "effect": "During your opponent's next turn, your opponent can't play any Item cards from their hand."
+          "damage": 20,
+          "effect": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
         }
       ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        179
+      ]
+    },
+    "028": {
+      "name": "モココ",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-028",
@@ -1064,34 +1092,33 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fighting",
-        "value": "x2"
-      }
-    },
-    "029": {
-      "name": "デンリュウ",
-      "hp": 160,
+      "hp": 90,
       "types": [
         "Lightning"
       ],
-      "stage": "Stage2",
+      "stage": "Stage1",
       "retreat": 2,
-      "dexId": [
-        181
-      ],
       "attacks": [
         {
-          "name": "ドラゴンテール",
+          "name": "でんじしょうがい",
           "cost": [
+            "Lightning",
             "Colorless"
-          ]
-        },
-        {
-          "damage": 130,
-          "name": "サンダー"
+          ],
+          "damage": 40,
+          "effect": "次の相手の番、相手は手札からグッズを出して使えない。"
         }
       ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        180
+      ]
+    },
+    "029": {
+      "name": "デンリュウ",
       "category": "Pokemon",
       "rarity": "Rare",
       "id": "M4-029",
@@ -1100,45 +1127,39 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 160,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Stage2",
+      "retreat": 2,
+      "abilities": [
+        {
+          "name": "シンクロパルス",
+          "effect": "自分の手札と相手の手札が同じ枚数なら、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+80」される。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "フラッシュボルト",
+          "cost": [
+            "Lightning",
+            "Colorless"
+          ],
+          "damage": 140,
+          "effect": "次の自分の番、このポケモンは「フラッシュボルト」が使えない。"
+        }
+      ],
       "weakness": {
         "type": "Fighting",
         "value": "x2"
       },
-      "abilities": [
-        {
-          "name": "Synchronized Pulse",
-          "effect": "If you and your opponent have the same number of cards in your hands, this Pokemon's attacks do 80 more damage to your opponent's Active Pokemon (before applying Weakness and Resistance)."
-        }
+      "dexId": [
+        181
       ]
     },
     "030": {
       "name": "エモンガ",
-      "hp": 70,
-      "types": [
-        "Lightning"
-      ],
-      "stage": "Basic",
-      "retreat": 0,
-      "dexId": [
-        587
-      ],
-      "attacks": [
-        {
-          "name": "ちょくでん",
-          "cost": [
-            "Colorless"
-          ],
-          "effect": "Search your deck for up to 2 Basic Energy cards, reveal them, and put them into your hand. Then, shuffle your deck."
-        },
-        {
-          "damage": 30,
-          "name": "でんきだま",
-          "cost": [
-            "Lightning"
-          ],
-          "effect": "Return this Pokemon and all cards attached to your hand."
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-030",
@@ -1147,32 +1168,39 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fighting",
-        "value": "x2"
-      }
-    },
-    "031": {
-      "name": "デオキシス",
-      "hp": 110,
+      "hp": 70,
       "types": [
-        "Psychic"
+        "Lightning"
       ],
       "stage": "Basic",
       "retreat": 1,
-      "dexId": [
-        386
-      ],
       "attacks": [
         {
-          "damage": 40,
-          "name": "サイコブースト",
+          "name": "ちいさなおつかい",
           "cost": [
             "Colorless"
           ],
-          "effect": "Attach up to 2 Basic Psychic Energy from your deck to this Pokémon. Then shuffle your deck."
+          "effect": "自分の山札から基本エネルギーを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+        },
+        {
+          "name": "スカイリターン",
+          "cost": [
+            "Lightning"
+          ],
+          "damage": 30,
+          "effect": "このポケモンと、ついているすべてのカードを、手札にもどす。"
         }
       ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        587
+      ]
+    },
+    "031": {
+      "name": "デオキシス",
       "category": "Pokemon",
       "rarity": "Uncommon",
       "id": "M4-031",
@@ -1181,6 +1209,32 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 110,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "ゲノムチャージ",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "自分の山札から「基本エネルギー」を2枚まで選び、このポケモンにつける。そして山札を切る。"
+        },
+        {
+          "name": "サイコキネシス",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": 80,
+          "damageModifier": "＋",
+          "effect": "相手のバトルポケモンについているエネルギーの数×20ダメージ追加。"
+        }
+      ],
       "weakness": {
         "type": "Darkness",
         "value": "x2"
@@ -1188,31 +1242,13 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        386
+      ]
     },
     "032": {
       "name": "デオキシス",
-      "hp": 110,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        386
-      ],
-      "attacks": [
-        {
-          "damage": 70,
-          "name": "サイコブースト",
-          "cost": [
-            "Psychic",
-            "Psychic",
-            "Psychic"
-          ],
-          "effect": "If this Pokemon has at least 2 extra Energy attached to it, this attack also does 120 damage to 1 of your opponent's Benched Pokemon."
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Uncommon",
       "id": "M4-032",
@@ -1221,6 +1257,24 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 120,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "サイコスピア",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": 120,
+          "effect": "このワザを使うためのエネルギーより、2個多くエネルギーがついているなら、相手のベンチポケモン1匹にも、120ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      ],
       "weakness": {
         "type": "Darkness",
         "value": "x2"
@@ -1228,40 +1282,13 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        386
+      ]
     },
     "033": {
       "name": "デオキシス",
-      "hp": 130,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Basic",
-      "retreat": 2,
-      "dexId": [
-        386
-      ],
-      "attacks": [
-        {
-          "name": "まもる",
-          "cost": [
-            "Psychic",
-            "Psychic",
-            "Colorless"
-          ],
-          "effect": "During your opponent's next turn, prevent all damage done to this Pokémon from attacks from your opponent's Pokemon that have any Abilities."
-        },
-        {
-          "damage": 40,
-          "name": "バリアー",
-          "cost": [
-            "Psychic",
-            "Psychic",
-            "Colorless"
-          ],
-          "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokemon."
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Uncommon",
       "id": "M4-033",
@@ -1270,6 +1297,24 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 130,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "サイコプロテクト",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": 80,
+          "effect": "次の相手の番、このポケモンは特性を持つポケモンからワザのダメージを受けない。"
+        }
+      ],
       "weakness": {
         "type": "Darkness",
         "value": "x2"
@@ -1277,38 +1322,13 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        386
+      ]
     },
     "034": {
       "name": "デオキシス",
-      "hp": 90,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Basic",
-      "retreat": 0,
-      "dexId": [
-        386
-      ],
-      "attacks": [
-        {
-          "name": "スピードターン",
-          "cost": [
-            "Psychic"
-          ],
-          "effect": "You may draw cards until you have 5 cards in your hand."
-        },
-        {
-          "damage": 50,
-          "name": "スピードブレイク",
-          "cost": [
-            "Psychic",
-            "Psychic",
-            "Colorless"
-          ],
-          "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pokemon."
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Uncommon",
       "id": "M4-034",
@@ -1317,6 +1337,22 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 100,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "サイコスピード",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": 30,
+          "effect": "のぞむなら、自分の手札が5枚になるように、山札を引く。"
+        }
+      ],
       "weakness": {
         "type": "Darkness",
         "value": "x2"
@@ -1324,38 +1360,13 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        386
+      ]
     },
     "035": {
       "name": "メガフラエッテex",
-      "hp": 300,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        670
-      ],
-      "attacks": [
-        {
-          "name": "えいえんのはな",
-          "cost": [
-            "Psychic"
-          ],
-          "effect": "Heal 30 damage from each Pokemon (both yours and your opponent's)."
-        },
-        {
-          "damage": 200,
-          "name": "フローラルスピン",
-          "cost": [
-            "Psychic",
-            "Psychic",
-            "Psychic"
-          ],
-          "effect": "Search your deck for up to 4 Basic Psychic Energy cards and attach them to your Benched Pokemon in any way you like. Then, shuffle your deck."
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Double Rare",
       "id": "M4-035",
@@ -1364,31 +1375,41 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Metal",
-        "value": "x2"
-      }
-    },
-    "036": {
-      "name": "ニャスパー",
-      "hp": 60,
+      "hp": 250,
       "types": [
         "Psychic"
       ],
       "stage": "Basic",
       "retreat": 1,
-      "dexId": [
-        677
-      ],
       "attacks": [
         {
-          "name": "しんぴのひかり",
+          "name": "やさしいひかり",
           "cost": [
             "Psychic"
           ],
-          "effect": "If you played Emma from your hand this turn, this attack does 60 more damage."
+          "effect": "おたがいのポケモン全員のHPを、それぞれ「30」回復する。"
+        },
+        {
+          "name": "エタニティブルーム",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": 200,
+          "effect": "自分の山札から「基本エネルギー」を4枚まで選び、ベンチポケモンに好きなようにつける。そして山札を切る。"
         }
       ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      },
+      "dexId": [
+        670
+      ]
+    },
+    "036": {
+      "name": "ニャスパー",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-036",
@@ -1397,6 +1418,23 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 60,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "バディアタック",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": 10,
+          "damageModifier": "＋",
+          "effect": "この番に、手札から「マチエール」を出して使っていたなら、60ダメージ追加。"
+        }
+      ],
       "weakness": {
         "type": "Darkness",
         "value": "x2"
@@ -1404,29 +1442,13 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        677
+      ]
     },
     "037": {
       "name": "ニャオニクス",
-      "hp": 100,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Stage1",
-      "retreat": 1,
-      "dexId": [
-        678
-      ],
-      "attacks": [
-        {
-          "name": "サイコキネシス",
-          "cost": [
-            "Psychic",
-            "Colorless"
-          ],
-          "effect": "You may move an Energy attached to your opponent's Active Pokemon to 1 of their Benched Pokemon."
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Uncommon",
       "id": "M4-037",
@@ -1435,6 +1457,23 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 100,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "トリックステップ",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": 80,
+          "effect": "のぞむなら、相手のバトルポケモンについているエネルギーを1個選び、相手のベンチポケモンにつけ替える。"
+        }
+      ],
       "weakness": {
         "type": "Darkness",
         "value": "x2"
@@ -1442,27 +1481,13 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        678
+      ]
     },
     "038": {
       "name": "ボクレー",
-      "hp": 60,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        708
-      ],
-      "attacks": [
-        {
-          "name": "かくれる",
-          "cost": [
-            "Psychic"
-          ]
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-038",
@@ -1471,6 +1496,27 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 70,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "abilities": [
+        {
+          "name": "うらみしんか",
+          "effect": "自分の番に1回使える。このポケモンから進化するカードを、自分の手札から1枚選び、このポケモンにのせて進化させる。その後、進化させたポケモンに、ダメカンを2個のせる。（最初の自分の番には使えない。）"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "つぶやく",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": 10
+        }
+      ],
       "weakness": {
         "type": "Darkness",
         "value": "x2"
@@ -1479,50 +1525,46 @@
         "type": "Fighting",
         "value": "-30"
       },
-      "abilities": [
-        {
-          "name": "Envious Evolution",
-          "effect": "Once during your turn, you may choose a card from your hand that evolves from this Pokemon and put it onto this Pokemon to evolve it. If you do, place 2 damage counters on this Pokemon. (You can't use this Ability during your first turn.)"
-        }
+      "dexId": [
+        708
       ]
     },
     "039": {
       "name": "オーロット",
-      "hp": 120,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Stage1",
-      "retreat": 2,
-      "dexId": [
-        709
-      ],
-      "attacks": [
-        {
-          "name": "たたりめ",
-          "cost": [
-            "Psychic"
-          ],
-          "effect": "During your opponent's next turn, Energy can't be attached from your opponent's hand to the Defending Pokemon."
-        },
-        {
-          "damage": 80,
-          "name": "シャドーボール",
-          "cost": [
-            "Psychic",
-            "Psychic"
-          ],
-          "effect": "This attack does 10 more damage for each damage counter on all your opponent's Pokemon."
-        }
-      ],
       "category": "Pokemon",
-      "rarity": "Uncommon",
+      "rarity": "Rare",
       "id": "M4-039",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 130,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "のろいのねっこ",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": 30,
+          "effect": "次の相手の番、このワザを受けたポケモンは、手札から出すエネルギーをつけられない。"
+        },
+        {
+          "name": "オーバーペイン",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": 60,
+          "damageModifier": "＋",
+          "effect": "相手のポケモン全員にのっているダメカンの数×10ダメージ追加。"
+        }
+      ],
       "weakness": {
         "type": "Darkness",
         "value": "x2"
@@ -1530,27 +1572,13 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        709
+      ]
     },
     "040": {
       "name": "バケッチャ",
-      "hp": 70,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        710
-      ],
-      "attacks": [
-        {
-          "name": "かなしばり",
-          "cost": [
-            "Psychic"
-          ]
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-040",
@@ -1559,6 +1587,21 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 60,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "ふむ",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": 20
+        }
+      ],
       "weakness": {
         "type": "Darkness",
         "value": "x2"
@@ -1566,37 +1609,13 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        710
+      ]
     },
     "041": {
       "name": "パンプジンex",
-      "hp": 280,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Stage1",
-      "retreat": 2,
-      "dexId": [
-        711
-      ],
-      "attacks": [
-        {
-          "name": "ハロウィン",
-          "cost": [
-            "Psychic"
-          ],
-          "effect": "This attack does 50 more damage for each of your Benched Pokemon that have any damage counters on them."
-        },
-        {
-          "damage": 180,
-          "name": "シャドークロー",
-          "cost": [
-            "Psychic",
-            "Psychic"
-          ],
-          "effect": "Discard a random card from your opponent's hand."
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Double Rare",
       "id": "M4-041",
@@ -1605,6 +1624,32 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 270,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "ホラーロンド",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": 30,
+          "damageModifier": "＋",
+          "effect": "ダメカンがのっている自分のベンチポケモンの数×50ダメージ追加。"
+        },
+        {
+          "name": "ゴーストタッチ",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": 140,
+          "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。"
+        }
+      ],
       "weakness": {
         "type": "Darkness",
         "value": "x2"
@@ -1612,34 +1657,13 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        711
+      ]
     },
     "042": {
       "name": "ゼルネアス",
-      "hp": 120,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        716
-      ],
-      "attacks": [
-        {
-          "name": "ジオゲート",
-          "cost": [
-            "Psychic",
-            "Psychic",
-            "Psychic"
-          ],
-          "effect": "This attack does 30 damage for each Psychic Energy attached to all of your Pokémon Pokémon"
-        },
-        {
-          "damage": 120,
-          "name": "ブライトホーン"
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Rare",
       "id": "M4-042",
@@ -1648,65 +1672,76 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Metal",
-        "value": "x2"
-      }
-    },
-    "043": {
-      "name": "ウソッキー",
-      "hp": 100,
+      "hp": 130,
       "types": [
-        "Fighting"
+        "Psychic"
       ],
       "stage": "Basic",
       "retreat": 2,
-      "dexId": [
-        185
-      ],
       "attacks": [
         {
-          "damage": 30,
-          "name": "ロックスロー",
+          "name": "ジオストーム",
           "cost": [
-            "Colorless"
+            "Psychic",
+            "Psychic",
+            "Psychic"
           ],
-          "effect": "Search you deck for up to 2 \"Tomes of Transformation\", reveal them, and put them into your hand. Then shuffle your deck."
+          "damage": 30,
+          "damageModifier": "×",
+          "effect": "自分のポケモン全員についているエネルギーの数×30ダメージ。"
         }
       ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      },
+      "dexId": [
+        716
+      ]
+    },
+    "043": {
+      "name": "ウソッキー",
       "category": "Pokemon",
-      "rarity": "Common",
+      "rarity": "Uncommon",
       "id": "M4-043",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Grass",
-        "value": "x2"
-      }
-    },
-    "044": {
-      "name": "ゴマゾウ",
-      "hp": 70,
+      "hp": 110,
       "types": [
         "Fighting"
       ],
       "stage": "Basic",
-      "retreat": 2,
-      "dexId": [
-        231
-      ],
+      "retreat": 1,
       "attacks": [
         {
-          "damage": 10,
-          "name": "たいあたり",
+          "name": "しれんのたび",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "自分の山札から「変化の書」を2枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+        },
+        {
+          "name": "いわとばし",
           "cost": [
             "Fighting"
-          ]
+          ],
+          "damage": 30,
+          "effect": "このワザのダメージは抵抗力を計算しない。"
         }
       ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "dexId": [
+        185
+      ]
+    },
+    "044": {
+      "name": "ゴマゾウ",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-044",
@@ -1715,75 +1750,85 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Grass",
-        "value": "x2"
-      }
-    },
-    "045": {
-      "name": "ドンファン",
-      "hp": 140,
+      "hp": 80,
       "types": [
         "Fighting"
       ],
-      "stage": "Stage1",
-      "retreat": 3,
-      "dexId": [
-        232
-      ],
+      "stage": "Basic",
+      "retreat": 2,
       "attacks": [
         {
-          "name": "なだれ",
+          "name": "どろかけ",
           "cost": [
             "Fighting"
           ],
-          "effect": "During your next turn, this Pokemon's attacks do 80 more damage to your opponent's Active Pokemon."
+          "damage": 10
         },
         {
-          "damage": 90,
-          "name": "とっしん",
+          "name": "ころがる",
           "cost": [
-            "Fighting",
             "Colorless",
             "Colorless",
             "Colorless"
           ],
-          "effect": "Discard 2 Energy attached to this Pokemon."
+          "damage": 40
         }
       ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "dexId": [
+        231
+      ]
+    },
+    "045": {
+      "name": "ドンファン",
       "category": "Pokemon",
-      "rarity": "Uncommon",
+      "rarity": "Common",
       "id": "M4-045",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Grass",
-        "value": "x2"
-      }
-    },
-    "046": {
-      "name": "ヤジロン",
-      "hp": 60,
+      "hp": 150,
       "types": [
         "Fighting"
       ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        343
-      ],
+      "stage": "Stage1",
+      "retreat": 3,
       "attacks": [
         {
-          "name": "くるくる",
+          "name": "たたみかける",
           "cost": [
             "Fighting"
           ],
-          "effect": "Flip a coin until you get tails. This attack does 30 damage times the number of heads."
+          "damage": 20,
+          "effect": "次の自分の番、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+120」される。"
+        },
+        {
+          "name": "スマッシュヘッド",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 180,
+          "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。"
         }
       ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "dexId": [
+        232
+      ]
+    },
+    "046": {
+      "name": "ヤジロン",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-046",
@@ -1792,34 +1837,33 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Grass",
-        "value": "x2"
-      }
-    },
-    "047": {
-      "name": "ネンドール",
-      "hp": 120,
+      "hp": 70,
       "types": [
         "Fighting"
       ],
-      "stage": "Stage1",
-      "retreat": 3,
-      "dexId": [
-        344
-      ],
+      "stage": "Basic",
+      "retreat": 2,
       "attacks": [
         {
-          "name": "サイコキネシス",
+          "name": "れんぞくスピン",
           "cost": [
             "Fighting"
-          ]
-        },
-        {
-          "damage": 80,
-          "name": "ねんりき"
+          ],
+          "damage": 30,
+          "damageModifier": "×",
+          "effect": "ウラが出るまでコインを投げ、オモテの数×30ダメージ。"
         }
       ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "dexId": [
+        343
+      ]
+    },
+    "047": {
+      "name": "ネンドール",
       "category": "Pokemon",
       "rarity": "Uncommon",
       "id": "M4-047",
@@ -1828,32 +1872,32 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 120,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "たいかこうせん",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 50,
+          "effect": "相手の進化しているバトルポケモンから、「進化カード」を1枚はがして退化させる。はがしたカードは、相手の手札にもどす。"
+        }
+      ],
       "weakness": {
         "type": "Grass",
         "value": "x2"
-      }
+      },
+      "dexId": [
+        344
+      ]
     },
     "048": {
       "name": "ズバット",
-      "hp": 60,
-      "types": [
-        "Darkness"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        41
-      ],
-      "attacks": [
-        {
-          "damage": 10,
-          "name": "かみつく",
-          "cost": [
-            "Darkness"
-          ],
-          "effect": "Your opponent's Active Pokemon is now Confused."
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-048",
@@ -1862,6 +1906,21 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 40,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 0,
+      "attacks": [
+        {
+          "name": "ちょうおんぱ",
+          "cost": [
+            "Darkness"
+          ],
+          "effect": "相手のバトルポケモンをこんらんにする。"
+        }
+      ],
       "weakness": {
         "type": "Lightning",
         "value": "x2"
@@ -1869,40 +1928,37 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        41
+      ]
     },
     "049": {
       "name": "ゴルバット",
-      "hp": 100,
-      "types": [
-        "Darkness"
-      ],
-      "stage": "Stage1",
-      "retreat": 1,
-      "dexId": [
-        42
-      ],
-      "attacks": [
-        {
-          "name": "こうそくいどう",
-          "cost": [
-            "Darkness"
-          ],
-          "effect": "During your next turn, this Pokémon will receive no damage from attacks from your opponent's Basic Pokémon"
-        },
-        {
-          "damage": 60,
-          "name": "どくのきば"
-        }
-      ],
       "category": "Pokemon",
-      "rarity": "Uncommon",
+      "rarity": "Common",
       "id": "M4-049",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 80,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "おんみつひこう",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 30,
+          "effect": "次の相手の番、このポケモンはたねポケモンからワザのダメージを受けない。"
+        }
+      ],
       "weakness": {
         "type": "Lightning",
         "value": "x2"
@@ -1910,40 +1966,43 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        42
+      ]
     },
     "050": {
       "name": "クロバット",
-      "hp": 140,
-      "types": [
-        "Darkness"
-      ],
-      "stage": "Stage2",
-      "retreat": 0,
-      "dexId": [
-        169
-      ],
-      "attacks": [
-        {
-          "name": "あやしいかぜ",
-          "cost": [
-            "Darkness"
-          ],
-          "effect": "Your opponent's Active Pokémon is now Poisoned and Confused"
-        },
-        {
-          "damage": 100,
-          "name": "スピードスター"
-        }
-      ],
       "category": "Pokemon",
-      "rarity": "Rare",
+      "rarity": "Uncommon",
       "id": "M4-050",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 130,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage2",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "よるこうさく",
+          "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札から好きなカードを1枚選ぶ。残りの山札を切り、選んだカードを山札の上にもどす。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "どくおんぱ",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 80,
+          "effect": "相手のバトルポケモンをどくとこんらんにする。"
+        }
+      ],
       "weakness": {
         "type": "Lightning",
         "value": "x2"
@@ -1952,36 +2011,12 @@
         "type": "Fighting",
         "value": "-30"
       },
-      "abilities": [
-        {
-          "name": "Nighttime Maneuvers",
-          "effect": "Once during your turn, if this Pokemon is in the Active Spot, you may use this Ability. Search your deck for a card. Shuffle your deck, then put that card on top of it."
-        }
+      "dexId": [
+        169
       ]
     },
     "051": {
       "name": "ハリーセン",
-      "hp": 90,
-      "types": [
-        "Darkness"
-      ],
-      "stage": "Basic",
-      "retreat": 2,
-      "dexId": [
-        211
-      ],
-      "attacks": [
-        {
-          "name": "どくのとげ",
-          "cost": [
-            "Darkness"
-          ]
-        },
-        {
-          "damage": 50,
-          "name": "みずてっぽう"
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-051",
@@ -1990,37 +2025,39 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fighting",
-        "value": "x2"
-      },
-      "abilities": [
-        {
-          "name": "Poison Point",
-          "effect": "If this Pokemon is in the Active Spot and takes damage from an attack from your opponent's Pokemon, the Attacking Pokemon is now Poisoned."
-        }
-      ]
-    },
-    "052": {
-      "name": "スカンプー",
-      "hp": 70,
+      "hp": 90,
       "types": [
         "Darkness"
       ],
       "stage": "Basic",
-      "retreat": 2,
-      "dexId": [
-        434
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "どくのトゲ",
+          "effect": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンをどくにする。"
+        }
       ],
       "attacks": [
         {
-          "damage": 20,
-          "name": "ひっかく",
+          "name": "ベノムショック",
           "cost": [
             "Darkness"
-          ]
+          ],
+          "damage": 30,
+          "damageModifier": "＋",
+          "effect": "相手のバトルポケモンがどくなら、50ダメージ追加。"
         }
       ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        211
+      ]
+    },
+    "052": {
+      "name": "スカンプー",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-052",
@@ -2029,40 +2066,31 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fighting",
-        "value": "x2"
-      }
-    },
-    "053": {
-      "name": "スカタンク",
-      "hp": 120,
+      "hp": 70,
       "types": [
         "Darkness"
       ],
-      "stage": "Stage1",
+      "stage": "Basic",
       "retreat": 2,
-      "dexId": [
-        435
-      ],
       "attacks": [
         {
-          "name": "どくづき",
+          "name": "ひっかく",
           "cost": [
             "Darkness"
-          ]
-        },
-        {
-          "damage": 80,
-          "name": "シャドークロー",
-          "cost": [
-            "Darkness",
-            "Darkness",
-            "Colorless"
           ],
-          "effect": "Switch this Pokemon with 1 of your Benched Pokemon."
+          "damage": 20
         }
       ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        434
+      ]
+    },
+    "053": {
+      "name": "スカタンク",
       "category": "Pokemon",
       "rarity": "Uncommon",
       "id": "M4-053",
@@ -2071,31 +2099,41 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fighting",
-        "value": "x2"
-      }
-    },
-    "054": {
-      "name": "ヤブクロン",
-      "hp": 70,
+      "hp": 110,
       "types": [
         "Darkness"
       ],
-      "stage": "Basic",
+      "stage": "Stage1",
       "retreat": 2,
-      "dexId": [
-        568
-      ],
       "attacks": [
         {
-          "name": "なかをあさる",
+          "name": "うしろげり",
           "cost": [
             "Darkness"
           ],
-          "effect": "Flip a coin. If heads, discard an Energy attached to your opponent's Active Pokemon."
+          "damage": 40
+        },
+        {
+          "name": "スマッシュターン",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 100,
+          "effect": "このポケモンをベンチポケモンと入れ替える。"
         }
       ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        435
+      ]
+    },
+    "054": {
+      "name": "ヤブクロン",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-054",
@@ -2104,36 +2142,32 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fighting",
-        "value": "x2"
-      }
-    },
-    "055": {
-      "name": "ダストダス",
-      "hp": 120,
+      "hp": 70,
       "types": [
         "Darkness"
       ],
-      "stage": "Stage1",
-      "retreat": 3,
-      "dexId": [
-        569
-      ],
+      "stage": "Basic",
+      "retreat": 2,
       "attacks": [
         {
-          "name": "どくのガス",
+          "name": "アシッドボム",
           "cost": [
-            "Darkness",
-            "Darkness",
-            "Colorless"
-          ]
-        },
-        {
-          "damage": 80,
-          "name": "ガルバアタック"
+            "Darkness"
+          ],
+          "damage": 10,
+          "effect": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
         }
       ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        568
+      ]
+    },
+    "055": {
+      "name": "ダストダス",
       "category": "Pokemon",
       "rarity": "Uncommon",
       "id": "M4-055",
@@ -2142,36 +2176,39 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 140,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
+      "abilities": [
+        {
+          "name": "ゴミダウナー",
+          "effect": "このポケモンがいるかぎり、「ポケモンのどうぐ」がついている相手のバトルポケモンが使うワザのダメージは「-20」される。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "ヘドロばくだん",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 100
+        }
+      ],
       "weakness": {
         "type": "Fighting",
         "value": "x2"
       },
-      "abilities": [
-        {
-          "name": "Garbage Downer",
-          "effect": "If your opponent's Active Pokemon has any Pokemon Tools attached to it, its attacks do 20 less damage."
-        }
+      "dexId": [
+        569
       ]
     },
     "056": {
       "name": "クズモー",
-      "hp": 70,
-      "types": [
-        "Darkness"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        690
-      ],
-      "attacks": [
-        {
-          "name": "ひろがるどく",
-          "cost": [
-            "Colorless"
-          ]
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-056",
@@ -2180,31 +2217,31 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 70,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "ひっかける",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 10
+        }
+      ],
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "dexId": [
+        690
+      ]
     },
     "057": {
       "name": "ダンバル",
-      "hp": 60,
-      "types": [
-        "Metal"
-      ],
-      "stage": "Basic",
-      "retreat": 3,
-      "dexId": [
-        374
-      ],
-      "attacks": [
-        {
-          "damage": 10,
-          "name": "アイアンヘッド",
-          "cost": [
-            "Metal"
-          ]
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-057",
@@ -2213,6 +2250,29 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 70,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "ずつき",
+          "cost": [
+            "Metal"
+          ],
+          "damage": 10
+        },
+        {
+          "name": "ビーム",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
       "weakness": {
         "type": "Fire",
         "value": "x2"
@@ -2220,28 +2280,13 @@
       "resistance": {
         "type": "Grass",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        374
+      ]
     },
     "058": {
       "name": "メタング",
-      "hp": 90,
-      "types": [
-        "Metal"
-      ],
-      "stage": "Stage1",
-      "retreat": 3,
-      "dexId": [
-        375
-      ],
-      "attacks": [
-        {
-          "damage": 30,
-          "name": "メタルクロー",
-          "cost": [
-            "Metal"
-          ]
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-058",
@@ -2250,6 +2295,31 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 100,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "メタルクロー",
+          "cost": [
+            "Metal"
+          ],
+          "damage": 30
+        },
+        {
+          "name": "ガードプレス",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 70,
+          "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。"
+        }
+      ],
       "weakness": {
         "type": "Fire",
         "value": "x2"
@@ -2257,47 +2327,49 @@
       "resistance": {
         "type": "Grass",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        375
+      ]
     },
     "059": {
       "name": "メタグロス",
-      "hp": 160,
-      "types": [
-        "Metal"
-      ],
-      "stage": "Stage2",
-      "retreat": 4,
-      "dexId": [
-        376
-      ],
-      "attacks": [
-        {
-          "name": "じしんとつ",
-          "cost": [
-            "Metal"
-          ],
-          "effect": "Your opponent switches their Active Pokemon with 1 of their Benched Pokemon."
-        },
-        {
-          "damage": 130,
-          "name": "アイアンフィスト",
-          "cost": [
-            "Metal",
-            "Metal",
-            "Metal",
-            "Colorless"
-          ],
-          "effect": "You may discard 3 Metal Energy from this Pokemon and have this attack do 150 more damage."
-        }
-      ],
       "category": "Pokemon",
-      "rarity": "Rare",
+      "rarity": "Uncommon",
       "id": "M4-059",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 180,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage2",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "はねかえす",
+          "cost": [
+            "Metal"
+          ],
+          "damage": 60,
+          "effect": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］"
+        },
+        {
+          "name": "メタリックハンマー",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 150,
+          "damageModifier": "＋",
+          "effect": "のぞむなら、このポケモンについているエネルギーを3個トラッシュし、150ダメージ追加。"
+        }
+      ],
       "weakness": {
         "type": "Fire",
         "value": "x2"
@@ -2305,28 +2377,13 @@
       "resistance": {
         "type": "Grass",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        376
+      ]
     },
     "060": {
       "name": "テッシード",
-      "hp": 50,
-      "types": [
-        "Metal"
-      ],
-      "stage": "Basic",
-      "retreat": 4,
-      "dexId": [
-        597
-      ],
-      "attacks": [
-        {
-          "name": "ギャリアー",
-          "cost": [
-            "Metal",
-            "Metal"
-          ]
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-060",
@@ -2335,6 +2392,22 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 70,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "ころがりタックル",
+          "cost": [
+            "Metal",
+            "Metal"
+          ],
+          "damage": 40
+        }
+      ],
       "weakness": {
         "type": "Fire",
         "value": "x2"
@@ -2342,32 +2415,13 @@
       "resistance": {
         "type": "Grass",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        597
+      ]
     },
     "061": {
       "name": "ナットレイ",
-      "hp": 130,
-      "types": [
-        "Metal"
-      ],
-      "stage": "Stage1",
-      "retreat": 4,
-      "dexId": [
-        598
-      ],
-      "attacks": [
-        {
-          "name": "てっぺき",
-          "cost": [
-            "Metal",
-            "Metal"
-          ]
-        },
-        {
-          "damage": 80,
-          "name": "パワーウィップ"
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Uncommon",
       "id": "M4-061",
@@ -2376,6 +2430,30 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 130,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
+      "abilities": [
+        {
+          "name": "どっきりおとし",
+          "effect": "相手の番に、このカードが相手のワザ・特性・グッズ・サポートの効果で山札からトラッシュされたとき、相手の山札を上から8枚トラッシュする。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "スペシャルウィップ",
+          "cost": [
+            "Metal",
+            "Metal"
+          ],
+          "damage": 70,
+          "damageModifier": "＋",
+          "effect": "このポケモンに特殊エネルギーがついているなら、70ダメージ追加。"
+        }
+      ],
       "weakness": {
         "type": "Fire",
         "value": "x2"
@@ -2384,39 +2462,12 @@
         "type": "Grass",
         "value": "-30"
       },
-      "abilities": [
-        {
-          "name": "Prank Drop",
-          "effect": "During your opponent's turn, if this card is discarded from your deck by an effect of your opponent's Attacks, Abilities, Items, or Supporter cards, your opponent discards the top 8 cards of their deck."
-        }
+      "dexId": [
+        598
       ]
     },
     "062": {
       "name": "コバルオンex",
-      "hp": 260,
-      "types": [
-        "Metal"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        638
-      ],
-      "attacks": [
-        {
-          "name": "せいなるつるぎ",
-          "cost": [
-            "Metal",
-            "Metal",
-            "Colorless"
-          ],
-          "effect": "During your next turn, this Pokémon can't attack"
-        },
-        {
-          "damage": 180,
-          "name": "アイアンブレイカー"
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Double Rare",
       "id": "M4-062",
@@ -2425,6 +2476,30 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 210,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "abilities": [
+        {
+          "name": "メタルロード",
+          "effect": "自分の番に、このポケモンがベンチからバトル場に出たとき、1回使える。自分の場のポケモンについているエネルギーを好きなだけ選び、このポケモンにつけ替える。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "パワータックル",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 200,
+          "effect": "次の自分の番、このポケモンはワザが使えない。"
+        }
+      ],
       "weakness": {
         "type": "Fire",
         "value": "x2"
@@ -2433,43 +2508,12 @@
         "type": "Grass",
         "value": "-30"
       },
-      "abilities": [
-        {
-          "name": "Metal Road",
-          "effect": "Once during your turn, when this Pokemon moves from your Bench to the Active Spot, you may move any amount of Metal Energy from your Pokemon in play to this Pokemon."
-        }
+      "dexId": [
+        638
       ]
     },
     "063": {
       "name": "メガドラミドロex",
-      "hp": 300,
-      "types": [
-        "Dragon"
-      ],
-      "stage": "Stage1",
-      "retreat": 2,
-      "dexId": [
-        691
-      ],
-      "attacks": [
-        {
-          "name": "どくどく",
-          "cost": [
-            "Colorless",
-            "Colorless"
-          ],
-          "effect": "Discard all Pokemon Tools and Special Energy from all of your opponent's Pokemon."
-        },
-        {
-          "damage": 250,
-          "name": "ドラゴンテール",
-          "cost": [
-            "Water",
-            "Darkness"
-          ],
-          "effect": "Your opponent's Active Pokemon is now Poisoned. During Pokemon Checkup, place 16 damage counters on that Pokemon instead of 1."
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Double Rare",
       "id": "M4-063",
@@ -2477,30 +2521,37 @@
         "id": "M4",
         "name": "Ninja Spinner"
       },
-      "image": null
-    },
-    "064": {
-      "name": "ヌメラ",
-      "hp": 60,
+      "image": null,
+      "hp": 330,
       "types": [
         "Dragon"
       ],
-      "stage": "Basic",
+      "stage": "Stage1",
       "retreat": 2,
-      "dexId": [
-        704
-      ],
       "attacks": [
         {
-          "damage": 20,
-          "name": "たいあたり",
+          "name": "ふしょくえき",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "相手のポケモン全員についている「ポケモンのどうぐ」と「特殊エネルギー」を、すべてトラッシュする。"
+        },
+        {
+          "name": "デッドリーポイズン",
           "cost": [
             "Water",
-            "Psychic"
+            "Darkness"
           ],
-          "effect": "Heal 30 damage from this Pokemon."
+          "effect": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は16個になる。"
         }
       ],
+      "dexId": [
+        691
+      ]
+    },
+    "064": {
+      "name": "ヌメラ",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-064",
@@ -2508,28 +2559,30 @@
         "id": "M4",
         "name": "Ninja Spinner"
       },
-      "image": null
-    },
-    "065": {
-      "name": "ヌメイル",
-      "hp": 90,
+      "image": null,
+      "hp": 60,
       "types": [
         "Dragon"
       ],
-      "stage": "Stage1",
+      "stage": "Basic",
       "retreat": 2,
-      "dexId": [
-        705
-      ],
       "attacks": [
         {
-          "name": "ぬるぬるする",
+          "name": "すいとる",
           "cost": [
             "Water",
             "Psychic"
-          ]
+          ],
+          "damage": 30,
+          "effect": "このポケモンのHPを「30」回復する。"
         }
       ],
+      "dexId": [
+        704
+      ]
+    },
+    "065": {
+      "name": "ヌメイル",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-065",
@@ -2537,73 +2590,66 @@
         "id": "M4",
         "name": "Ninja Spinner"
       },
-      "image": null
-    },
-    "066": {
-      "name": "ヌメルゴン",
-      "hp": 160,
+      "image": null,
+      "hp": 90,
       "types": [
         "Dragon"
       ],
-      "stage": "Stage2",
-      "retreat": 2,
-      "dexId": [
-        706
-      ],
+      "stage": "Stage1",
+      "retreat": 3,
       "attacks": [
         {
-          "name": "おまもり",
+          "name": "ひっぱたく",
           "cost": [
             "Water",
             "Psychic"
           ],
-          "effect": "Discard the top card of your deck"
-        },
-        {
-          "damage": 130,
-          "name": "ドラゴンパルス"
+          "damage": 70
         }
       ],
+      "dexId": [
+        705
+      ]
+    },
+    "066": {
+      "name": "ヌメルゴン",
       "category": "Pokemon",
-      "rarity": "Rare",
+      "rarity": "Uncommon",
       "id": "M4-066",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 160,
+      "types": [
+        "Dragon"
+      ],
+      "stage": "Stage2",
+      "retreat": 3,
       "abilities": [
         {
-          "name": "Slimy Slip",
-          "effect": "When your opponent's Active Pokemon retreats, your opponent flips a coin. If tails, that Pokemon does not retreat and your opponent does not discard any Energy for retreating. This Ability's effect can't stack."
+          "name": "ぬめぬめスリップ",
+          "effect": "このポケモンがいるかぎり、相手のバトルポケモンがにげるとき、相手はコインを1回投げる。ウラなら、にげるためのエネルギーはトラッシュせず、入れ替えをしない。この特性の効果は重ならない。"
         }
+      ],
+      "attacks": [
+        {
+          "name": "りゅうのはどう",
+          "cost": [
+            "Water",
+            "Psychic"
+          ],
+          "damage": 160,
+          "effect": "自分の山札を上から1枚トラッシュする。"
+        }
+      ],
+      "dexId": [
+        706
       ]
     },
     "067": {
       "name": "ケンタロス",
-      "hp": 120,
-      "types": [
-        "Colorless"
-      ],
-      "stage": "Basic",
-      "retreat": 2,
-      "dexId": [
-        128
-      ],
-      "attacks": [
-        {
-          "name": "やけくそタックル",
-          "cost": [
-            "Colorless",
-            "Colorless"
-          ],
-          "effect": "Choose 1 of your opponent's Pokémon, and flip a coin for each of your Pokémon that has Tauros in its name. This attack does 50 damage to the Pokémon you chose for each heads."
-        },
-        {
-          "damage": 80,
-          "name": "ずつき"
-        }
-      ],
       "category": "Pokemon",
       "rarity": "Uncommon",
       "id": "M4-067",
@@ -2612,31 +2658,32 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fighting",
-        "value": "x2"
-      }
-    },
-    "068": {
-      "name": "ミネズミ",
-      "hp": 60,
+      "hp": 130,
       "types": [
         "Colorless"
       ],
       "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        504
-      ],
+      "retreat": 2,
       "attacks": [
         {
-          "damage": 10,
-          "name": "まなざし",
+          "name": "むれでねらう",
           "cost": [
+            "Colorless",
             "Colorless"
-          ]
+          ],
+          "effect": "相手のポケモンを1匹選び、自分の場の、名前に「ケンタロス」とつくポケモンの数ぶんコインを投げる。選んだポケモンに、オモテの数×50ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
         }
       ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        128
+      ]
+    },
+    "068": {
+      "name": "ミネズミ",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-068",
@@ -2645,78 +2692,77 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 70,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "かんしのめ",
+          "effect": "このポケモンがいるかぎり、おたがいのポケモン全員にのっているダメカンは、別のポケモンにのせ替えられない。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "かみつく",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 10
+        }
+      ],
       "weakness": {
         "type": "Fighting",
         "value": "x2"
       },
-      "abilities": [
-        {
-          "name": "Watchful Eyes",
-          "effect": "If this Pokemon is in play, you and your opponent can't move damage counters to another Pokemon."
-        }
+      "dexId": [
+        504
       ]
     },
     "069": {
       "name": "ミルホッグ",
-      "hp": 110,
-      "types": [
-        "Colorless"
-      ],
-      "stage": "Stage1",
-      "retreat": 2,
-      "dexId": [
-        505
-      ],
-      "attacks": [
-        {
-          "name": "みはりのめ",
-          "cost": [
-            "Colorless"
-          ],
-          "effect": "Flip 3 coins. If any are heads, look at your opponent's hand and choose as many cards as the number of heads. Your opponent shuffles those cards into their deck."
-        },
-        {
-          "damage": 70,
-          "name": "みつめる",
-          "cost": [
-            "Colorless"
-          ]
-        }
-      ],
       "category": "Pokemon",
-      "rarity": "Uncommon",
+      "rarity": "Common",
       "id": "M4-069",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fighting",
-        "value": "x2"
-      }
-    },
-    "070": {
-      "name": "チラーミィ",
-      "hp": 60,
+      "hp": 100,
       "types": [
         "Colorless"
       ],
-      "stage": "Basic",
+      "stage": "Stage1",
       "retreat": 1,
-      "dexId": [
-        572
-      ],
       "attacks": [
         {
-          "damage": 10,
-          "name": "ひっかく",
+          "name": "ぬきうちチェック",
           "cost": [
             "Colorless"
           ],
-          "effect": "This Pokemon also does 10 damage to itself."
+          "effect": "コインを3回投げる。オモテが出たなら、相手の手札を見て、その中からカードをオモテの数ぶん選び、相手の山札にもどして切る。"
+        },
+        {
+          "name": "けたぐり",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 50
         }
       ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        505
+      ]
+    },
+    "070": {
+      "name": "チラーミィ",
       "category": "Pokemon",
       "rarity": "Common",
       "id": "M4-070",
@@ -2725,35 +2771,32 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fighting",
-        "value": "x2"
-      }
-    },
-    "071": {
-      "name": "チラチーノex",
-      "hp": 260,
+      "hp": 70,
       "types": [
         "Colorless"
       ],
-      "stage": "Stage1",
+      "stage": "Basic",
       "retreat": 1,
-      "dexId": [
-        573
-      ],
       "attacks": [
         {
-          "name": "スイートチャーム",
+          "name": "とっしん",
           "cost": [
             "Colorless"
           ],
-          "effect": "This attack does 40 damage for each Energy attached to this Pokémon."
-        },
-        {
-          "damage": 200,
-          "name": "スパンキング"
+          "damage": 30,
+          "effect": "このポケモンにも10ダメージ。"
         }
       ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        572
+      ]
+    },
+    "071": {
+      "name": "チラチーノex",
       "category": "Pokemon",
       "rarity": "Double Rare",
       "id": "M4-071",
@@ -2762,15 +2805,35 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "hp": 240,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "なめらかコート",
+          "effect": "このポケモンがワザのダメージを受けるとき、自分はコインを1回投げる。オモテなら、このポケモンはそのダメージを受けない。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "エナジービンタ",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 40,
+          "damageModifier": "×",
+          "effect": "このポケモンについているエネルギーの数×40ダメージ。"
+        }
+      ],
       "weakness": {
         "type": "Fighting",
         "value": "x2"
       },
-      "abilities": [
-        {
-          "name": "Smooth Coat",
-          "effect": "If any damage is done to this Pokemon by attacks, flip a coin. If heads, prevent that damage."
-        }
+      "dexId": [
+        573
       ]
     },
     "072": {
@@ -2783,11 +2846,11 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "effect": "You can only play this card if your opponent has 3 or less Prize cards remaining. Your opponent shuffles their hand and puts it to the bottom of their deck. Then, your opponent draws 3 cards.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "effect": "このカードは、相手のサイドの残り枚数が3枚以下のときにしか使えない。 相手は相手自身の手札をすべてウラにして切り、山札の下にもどす。その後、相手は山札を3枚引く。 グッズは、自分の番に何枚でも使える。"
     },
     "073": {
-      "name": "おおきなあみ",
+      "name": "大漁ネット",
       "category": "Trainer",
       "rarity": "Uncommon",
       "id": "M4-073",
@@ -2796,11 +2859,11 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "effect": "Shuffle up to 3 Water Pokemon and up to 3 Basic Water Energy cards from your discard pile into your deck.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "effect": "自分のトラッシュからポケモンと「基本エネルギー」をそれぞれ3枚まで選び、相手に見せて、山札にもどして切る。 グッズは、自分の番に何枚でも使える。"
     },
     "074": {
-      "name": "へんしんじゅつのしょ",
+      "name": "変化の書",
       "category": "Trainer",
       "rarity": "Uncommon",
       "id": "M4-074",
@@ -2809,11 +2872,11 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "effect": "You must play 2 Book of Transformation cards at once. (This effect works one time for 2 cards.) Choose a Basic Pokemon in your discard pile and switch it with 1 of your Basic Pokemon in play. Any attached cards, damage counters, Special Conditions, turns in play, and any other effects remain on the new Pokemon.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "effect": "「変化の書」は、2枚同時にしか使えない。（効果は、2枚で1回はたらく。） 自分のトラッシュからたねポケモンを1枚選び、自分の場のたねポケモン1匹と入れ替える（ついているカード・ダメカン・特殊状態・効果などは、すべて引きつぐ）。入れ替えたポケモンはトラッシュする。 グッズは、自分の番に何枚でも使える。"
     },
     "075": {
-      "name": "AZのくつろぎ",
+      "name": "AZの安らぎ",
       "category": "Trainer",
       "rarity": "Uncommon",
       "id": "M4-075",
@@ -2822,11 +2885,11 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "effect": "Switch your Active Pokemon with 1 of your Benched Pokemon. If you moved a Pokemon ex to your Bench in this way, heal 80 damage from that Pokemon.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "effect": "自分のバトルポケモンをベンチポケモンと入れ替える。「ポケモンex」をベンチに入れ替えた場合、そのポケモンのHPを「80」回復する。 サポートは、自分の番に1枚しか使えない。"
     },
     "076": {
-      "name": "フィリップ",
+      "name": "ジプソ",
       "category": "Trainer",
       "rarity": "Uncommon",
       "id": "M4-076",
@@ -2835,11 +2898,11 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "effect": "Attach up to 2 Basic Metal Energy from your discard pile to 1 of your Metal Pokemon.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "effect": "自分のトラッシュから「基本エネルギー」を2枚まで選び、自分のポケモン1匹につける。 サポートは、自分の番に1枚しか使えない。"
     },
     "077": {
-      "name": "ホミカのパフォーマンス",
+      "name": "ホミカの演奏",
       "category": "Trainer",
       "rarity": "Uncommon",
       "id": "M4-077",
@@ -2848,11 +2911,11 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "effect": "During your opponent's next turn, their Poisoned Pokemon can't retreat. (This includes newly Poisoned Pokemon.)",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "effect": "次の相手の番、相手のどくのポケモンは、にげられない。（新しくどくにしたポケモンもふくむ。） サポートは、自分の番に1枚しか使えない。"
     },
     "078": {
-      "name": "エマ",
+      "name": "マチエール",
       "category": "Trainer",
       "rarity": "Uncommon",
       "id": "M4-078",
@@ -2861,11 +2924,11 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "effect": "Your opponent reveals their hand. Draw cards equal to the number of Pokemon in their hand.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "effect": "相手の手札を見て、その中にあるポケモンの枚数ぶん、自分の山札を引く。 サポートは、自分の番に1枚しか使えない。"
     },
     "079": {
-      "name": "AZのフラエッテ",
+      "name": "アンジュフラエッテ",
       "category": "Trainer",
       "rarity": "Uncommon",
       "id": "M4-079",
@@ -2874,8 +2937,8 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "effect": "This card can only be played by discarding a Prism Tower in play. You can play this card even if Prism Tower was played this turn. Each Mega Floette ex in play (both yours and your opponent's) gets +150 HP.",
-      "subcategory": "Stadium"
+      "subcategory": "Stadium",
+      "effect": "このカードは、場に出ている「プリズムタワー」をトラッシュしなければ場に出せず、「プリズムタワー」を出した番でも場に出せる。 おたがいの場の「メガフラエッテex」全員は、それぞれ最大HPが「+150」される。 スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。"
     },
     "080": {
       "name": "プリズムタワー",
@@ -2887,59 +2950,50 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "effect": "Once during each player's turn, they may discard 2 cards from their hand in order to draw a card.",
-      "subcategory": "Stadium"
+      "subcategory": "Stadium",
+      "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分の手札を2枚トラッシュするなら、自分の山札を1枚引いてよい。 スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。"
     },
     "081": {
-      "name": "ニトロエネルギー",
+      "name": "ニトロ炎エネルギー",
       "category": "Energy",
-      "rarity": "Uncommon",
+      "rarity": "Rare",
       "id": "M4-081",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
-      "effect": "As long as this card is attached to a Pokemon, it provides 1 Fire Energy. If an attack used by the Fire Pokemon this card is attached to would discard this card, put it into your hand after applying damage and effects of that attack.",
-      "subcategory": "Special Energy"
+      "subcategory": "Special Energy",
+      "effect": "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。 このカードをつけているポケモンが使うワザの効果で、このカードがトラッシュされたなら、ワザのダメージや効果のあとに、手札にもどす。"
     },
     "082": {
-      "name": "バブルエネルギー",
+      "name": "バブル水エネルギー",
       "category": "Energy",
-      "rarity": "Uncommon",
+      "rarity": "Rare",
       "id": "M4-082",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
-      "effect": "As long as this card is attached to a Pokemon, it provides 1 Water Energy. The Water Pokemon this card is attached to recovers from all Special Conditions and can't be affected by any Special Conditions.",
-      "subcategory": "Special Energy"
+      "subcategory": "Special Energy",
+      "effect": "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。 このカードをつけているポケモンは、特殊状態にならず、受けている特殊状態は、すべて回復する。"
     },
     "083": {
-      "name": "マグネットメタルエネルギー",
+      "name": "マグネット鋼エネルギー",
       "category": "Energy",
-      "rarity": "Uncommon",
+      "rarity": "Rare",
       "id": "M4-083",
       "set": {
         "id": "M4",
         "name": "Ninja Spinner"
       },
       "image": null,
-      "effect": "As long as this card is attached to a Pokemon, it provides 1 Metal Energy. The Metal Pokemon this card is attached to has no Retreat Cost.",
-      "subcategory": "Special Energy"
+      "subcategory": "Special Energy",
+      "effect": "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。 このカードをつけているポケモンは、にげるためのエネルギーが、すべてなくなる。"
     },
     "084": {
       "name": "ハリマロン",
-      "hp": 70,
-      "types": [
-        "Grass"
-      ],
-      "stage": "Basic",
-      "retreat": 2,
-      "dexId": [
-        650
-      ],
       "category": "Pokemon",
       "rarity": "Illustration Rare",
       "id": "M4-084",
@@ -2948,31 +3002,39 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fire",
-        "value": "x2"
-      },
+      "dexId": [
+        650
+      ],
+      "hp": 70,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
       "attacks": [
         {
-          "name": "",
+          "name": "たたく",
           "cost": [
             "Grass"
           ],
           "damage": 10
+        },
+        {
+          "name": "トゲでさす",
+          "cost": [
+            "Grass",
+            "Grass"
+          ],
+          "damage": 30
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "085": {
       "name": "フォッコ",
-      "hp": 70,
-      "types": [
-        "Fire"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        653
-      ],
       "category": "Pokemon",
       "rarity": "Illustration Rare",
       "id": "M4-085",
@@ -2981,31 +3043,38 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Water",
-        "value": "x2"
-      },
-      "attacks": [
-        {
-          "name": "",
-          "cost": [
-            "Colorless"
-          ],
-          "effect": "Search your deck for up to 2 Basic Pokémon and put them on your Bench. Then, shuffle your deck"
-        }
-      ]
-    },
-    "086": {
-      "name": "ケロマツ",
-      "hp": 60,
+      "dexId": [
+        653
+      ],
+      "hp": 70,
       "types": [
-        "Water"
+        "Fire"
       ],
       "stage": "Basic",
       "retreat": 1,
-      "dexId": [
-        656
+      "attacks": [
+        {
+          "name": "なかまをよぶ",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+        },
+        {
+          "name": "ひをはく",
+          "cost": [
+            "Fire"
+          ],
+          "damage": 10
+        }
       ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
+    },
+    "086": {
+      "name": "ケロマツ",
       "category": "Pokemon",
       "rarity": "Illustration Rare",
       "id": "M4-086",
@@ -3014,38 +3083,38 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Lightning",
-        "value": "x2"
-      },
+      "dexId": [
+        656
+      ],
+      "hp": 70,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "Collect",
+          "name": "もってくる",
           "cost": [
             "Colorless"
           ],
-          "effect": "Draw a card"
+          "effect": "自分の山札を1枚引く。"
         },
         {
-          "name": "Water Gun",
+          "name": "みずでっぽう",
           "cost": [
             "Water"
           ],
           "damage": 10
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "087": {
       "name": "ゲコガシラ",
-      "hp": 90,
-      "types": [
-        "Water"
-      ],
-      "stage": "Stage1",
-      "retreat": 1,
-      "dexId": [
-        657
-      ],
       "category": "Pokemon",
       "rarity": "Illustration Rare",
       "id": "M4-087",
@@ -3054,39 +3123,39 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Lightning",
-        "value": "x2"
-      },
+      "dexId": [
+        657
+      ],
+      "hp": 100,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "Calling Jutsu",
+          "name": "よびよせのじゅつ",
           "cost": [
             "Water"
           ],
-          "effect": "Search your deck for up to 3 Pokemon, reveal them, and put them into your hand. Then, shuffle your deck."
+          "effect": "自分の山札からポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
         },
         {
-          "name": "Aqua Edge",
+          "name": "アクアエッジ",
           "cost": [
             "Water",
             "Water"
           ],
           "damage": 50
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "088": {
       "name": "デンリュウ",
-      "hp": 160,
-      "types": [
-        "Lightning"
-      ],
-      "stage": "Stage2",
-      "retreat": 2,
-      "dexId": [
-        181
-      ],
       "category": "Pokemon",
       "rarity": "Illustration Rare",
       "id": "M4-088",
@@ -3095,38 +3164,39 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fighting",
-        "value": "x2"
-      },
-      "abilities": [
-        {
-          "name": "Synchronized Pulse",
-          "effect": "If you and your opponent have the same number of cards in your hands, this Pokemon's attacks do 80 more damage to your opponent's Active Pokemon (before applying Weakness and Resistance)."
-        }
+      "dexId": [
+        181
       ],
+      "hp": 160,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Stage2",
+      "retreat": 2,
       "attacks": [
         {
-          "name": "",
+          "name": "フラッシュボルト",
           "cost": [
+            "Lightning",
             "Colorless"
           ],
           "damage": 140,
-          "effect": "During your next turn, this Pokemon can't use Flash Bolt."
+          "effect": "次の自分の番、このポケモンは「フラッシュボルト」が使えない。"
         }
-      ]
+      ],
+      "abilities": [
+        {
+          "name": "シンクロパルス",
+          "effect": "自分の手札と相手の手札が同じ枚数なら、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+80」される。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "089": {
       "name": "ゼルネアス",
-      "hp": 120,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        716
-      ],
       "category": "Pokemon",
       "rarity": "Illustration Rare",
       "id": "M4-089",
@@ -3135,34 +3205,35 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Metal",
-        "value": "x2"
-      },
+      "dexId": [
+        716
+      ],
+      "hp": 130,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
       "attacks": [
         {
-          "name": "Geostorm",
+          "name": "ジオストーム",
           "cost": [
             "Psychic",
             "Psychic",
             "Psychic"
           ],
-          "damage": "30x",
-          "effect": "This attack does 30 damage for each Psychic Energy attached to all of your Pokémon Pokémon"
+          "damage": 30,
+          "damageModifier": "×",
+          "effect": "自分のポケモン全員についているエネルギーの数×30ダメージ。"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "090": {
       "name": "ネンドール",
-      "hp": 120,
-      "types": [
-        "Fighting"
-      ],
-      "stage": "Stage1",
-      "retreat": 3,
-      "dexId": [
-        344
-      ],
       "category": "Pokemon",
       "rarity": "Illustration Rare",
       "id": "M4-090",
@@ -3171,32 +3242,32 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Grass",
-        "value": "x2"
-      },
+      "dexId": [
+        344
+      ],
+      "hp": 120,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
       "attacks": [
         {
-          "name": "",
+          "name": "たいかこうせん",
           "cost": [
             "Fighting"
           ],
-          "damage": 30,
-          "effect": "If your opponent's Active Pokemon is an Evolved Pokemon, devolve it by putting the highest Stage Evolution card on it into your opponent's hand."
+          "damage": 50,
+          "effect": "相手の進化しているバトルポケモンから、「進化カード」を1枚はがして退化させる。はがしたカードは、相手の手札にもどす。"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      }
     },
     "091": {
       "name": "クロバット",
-      "hp": 140,
-      "types": [
-        "Darkness"
-      ],
-      "stage": "Stage2",
-      "retreat": 0,
-      "dexId": [
-        169
-      ],
       "category": "Pokemon",
       "rarity": "Illustration Rare",
       "id": "M4-091",
@@ -3205,6 +3276,31 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "dexId": [
+        169
+      ],
+      "hp": 130,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage2",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "どくおんぱ",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 80,
+          "effect": "相手のバトルポケモンをどくとこんらんにする。"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "よるこうさく",
+          "effect": "このポケモンがバトル場にいるなら、自分の番に1回使える。自分の山札から好きなカードを1枚選ぶ。残りの山札を切り、選んだカードを山札の上にもどす。"
+        }
+      ],
       "weakness": {
         "type": "Lightning",
         "value": "x2"
@@ -3212,35 +3308,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      },
-      "abilities": [
-        {
-          "name": "Nighttime Maneuvers",
-          "effect": "Once during your turn, if this Pokemon is in the Active Spot, you may use this Ability. Search your deck for a card. Shuffle your deck, then put that card on top of it."
-        }
-      ],
-      "attacks": [
-        {
-          "name": "Poison Wave",
-          "cost": [
-            "Darkness"
-          ],
-          "damage": 80,
-          "effect": "Your opponent's Active Pokémon is now Poisoned and Confused"
-        }
-      ]
+      }
     },
     "092": {
       "name": "メタング",
-      "hp": 90,
-      "types": [
-        "Metal"
-      ],
-      "stage": "Stage1",
-      "retreat": 3,
-      "dexId": [
-        375
-      ],
       "category": "Pokemon",
       "rarity": "Illustration Rare",
       "id": "M4-092",
@@ -3249,6 +3320,34 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "dexId": [
+        375
+      ],
+      "hp": 100,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "メタルクロー",
+          "cost": [
+            "Metal"
+          ],
+          "damage": 30
+        },
+        {
+          "name": "ガードプレス",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 70,
+          "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。"
+        }
+      ],
       "weakness": {
         "type": "Fire",
         "value": "x2"
@@ -3256,38 +3355,10 @@
       "resistance": {
         "type": "Grass",
         "value": "-30"
-      },
-      "attacks": [
-        {
-          "name": "Metal Claw",
-          "cost": [
-            "Metal"
-          ],
-          "damage": 30
-        },
-        {
-          "name": "Guard Press",
-          "cost": [
-            "Metal",
-            "Metal",
-            "Colorless"
-          ],
-          "damage": 70,
-          "effect": "During your opponent's next turn, this Pokemon takes 30 less damage from attacks."
-        }
-      ]
+      }
     },
     "093": {
       "name": "ヌメイル",
-      "hp": 90,
-      "types": [
-        "Dragon"
-      ],
-      "stage": "Stage1",
-      "retreat": 2,
-      "dexId": [
-        705
-      ],
       "category": "Pokemon",
       "rarity": "Illustration Rare",
       "id": "M4-093",
@@ -3296,27 +3367,28 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "dexId": [
+        705
+      ],
+      "hp": 90,
+      "types": [
+        "Dragon"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
       "attacks": [
         {
-          "name": "",
+          "name": "ひっぱたく",
           "cost": [
             "Water",
             "Psychic"
-          ]
+          ],
+          "damage": 70
         }
       ]
     },
     "094": {
       "name": "テールナー",
-      "hp": 100,
-      "types": [
-        "Fire"
-      ],
-      "stage": "Stage1",
-      "retreat": 1,
-      "dexId": [
-        654
-      ],
       "category": "Pokemon",
       "rarity": "Illustration Rare",
       "id": "M4-094",
@@ -3325,32 +3397,33 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "dexId": [
+        654
+      ],
+      "hp": 100,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "かえんほうしゃ",
+          "cost": [
+            "Fire",
+            "Fire"
+          ],
+          "damage": 80,
+          "effect": "このポケモンについているエネルギーを1個選び、トラッシュする。"
+        }
+      ],
       "weakness": {
         "type": "Water",
         "value": "x2"
-      },
-      "attacks": [
-        {
-          "name": "Herd Hurl",
-          "cost": [
-            "Colorless",
-            "Colorless"
-          ],
-          "effect": "Choose 1 of your opponent's Pokémon, and flip a coin for each of your Pokémon that has Tauros in its name. This attack does 50 damage to the Pokémon you chose for each heads."
-        }
-      ]
+      }
     },
     "095": {
       "name": "ミルホッグ",
-      "hp": 110,
-      "types": [
-        "Colorless"
-      ],
-      "stage": "Stage1",
-      "retreat": 2,
-      "dexId": [
-        505
-      ],
       "category": "Pokemon",
       "rarity": "Illustration Rare",
       "id": "M4-095",
@@ -3359,37 +3432,38 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fighting",
-        "value": "x2"
-      },
+      "dexId": [
+        505
+      ],
+      "hp": 100,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "Bite",
+          "name": "ぬきうちチェック",
           "cost": [
             "Colorless"
           ],
-          "damage": 10
+          "effect": "コインを3回投げる。オモテが出たなら、相手の手札を見て、その中からカードをオモテの数ぶん選び、相手の山札にもどして切る。"
+        },
+        {
+          "name": "けたぐり",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 50
         }
       ],
-      "abilities": [
-        {
-          "name": "Watchful Eyes",
-          "effect": "Damage counters on a Pokémon (yours or your opponent's) cannot be moved to another Pokémon."
-        }
-      ]
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "096": {
       "name": "スピアーex",
-      "hp": 270,
-      "types": [
-        "Grass"
-      ],
-      "stage": "Stage2",
-      "retreat": 1,
-      "dexId": [
-        15
-      ],
       "category": "Pokemon",
       "rarity": "Special Illustration Rare",
       "id": "M4-096",
@@ -3398,32 +3472,33 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fire",
-        "value": "x2"
-      },
+      "dexId": [
+        15
+      ],
+      "hp": 310,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "Bee Rumble",
+          "name": "ビーランブル",
           "cost": [
             "Grass"
           ],
-          "damage": "110x",
-          "effect": "This attack does 110 damage for each of your Beedrill (including Pokémon ex) in play."
+          "damage": 110,
+          "damageModifier": "×",
+          "effect": "自分の場の「スピアー（『ポケモンex』をふくむ）」の数×110ダメージ。"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      }
     },
     "097": {
       "name": "カエンジシex",
-      "hp": 290,
-      "types": [
-        "Fire"
-      ],
-      "stage": "Stage1",
-      "retreat": 2,
-      "dexId": [
-        668
-      ],
       "category": "Pokemon",
       "rarity": "Special Illustration Rare",
       "id": "M4-097",
@@ -3432,42 +3507,44 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Water",
-        "value": "x2"
-      },
+      "dexId": [
+        668
+      ],
+      "hp": 340,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
       "attacks": [
         {
-          "name": "Ferocious Bellow",
+          "name": "ほえたてる",
           "cost": [
             "Fire",
             "Colorless"
           ],
-          "effect": "During your opponent's next turn, attacks used by the defending Pokémon deal 50 less damage."
+          "damage": 80,
+          "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-50」される。"
         },
         {
-          "name": "Fiery Big Bang",
+          "name": "ビッグバンファイヤー",
           "cost": [
             "Fire",
             "Fire",
             "Colorless"
           ],
           "damage": 290,
-          "effect": "This attack does 10 less damage for each damage counter on this Pokémon."
+          "damageModifier": "－",
+          "effect": "このポケモンにのっているダメカンの数×10ダメージぶん、このワザのダメージは小さくなる。"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "098": {
       "name": "メガゲッコウガex",
-      "hp": 320,
-      "types": [
-        "Water"
-      ],
-      "stage": "Stage2",
-      "retreat": 0,
-      "dexId": [
-        658
-      ],
       "category": "Pokemon",
       "rarity": "Special Illustration Rare",
       "id": "M4-098",
@@ -3476,39 +3553,40 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Lightning",
-        "value": "x2"
-      },
-      "abilities": [
-        {
-          "name": "Mortal Shuriken",
-          "effect": "Once during your turn, if this Pokemon is in the Active Spot, you may discard a Basic Water Energy card from your hand in order to use this Ability. Place 6 damage counters on 1 of your opponent's Pokemon."
-        }
+      "dexId": [
+        658
       ],
+      "hp": 350,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage2",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "Ninja Spinner",
+          "name": "ニンジャスピナー",
           "cost": [
             "Water",
             "Water"
           ],
-          "damage": "120+",
-          "effect": "You may put a Water Energy attached to this Pokémon into your hand and have this attack do 80 more damage"
+          "damage": 120,
+          "damageModifier": "＋",
+          "effect": "のぞむなら、このポケモンについているエネルギーを1個手札にもどし、80ダメージ追加。"
         }
-      ]
+      ],
+      "abilities": [
+        {
+          "name": "ひっさつしゅりけん",
+          "effect": "このポケモンがバトル場にいて、自分の番に、自分の手札から「基本エネルギー」を1枚トラッシュするなら、1回使える。相手のポケモン1匹に、ダメカンを6個のせる。"
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "099": {
       "name": "メガフラエッテex",
-      "hp": 300,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        670
-      ],
       "category": "Pokemon",
       "rarity": "Special Illustration Rare",
       "id": "M4-099",
@@ -3517,41 +3595,41 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Metal",
-        "value": "x2"
-      },
+      "dexId": [
+        670
+      ],
+      "hp": 250,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "Gentle Light",
+          "name": "やさしいひかり",
           "cost": [
             "Psychic"
           ],
-          "effect": "Heal 30 damage from each Pokémon (both yours and your opponent's)"
+          "effect": "おたがいのポケモン全員のHPを、それぞれ「30」回復する。"
         },
         {
-          "name": "Eternity Bloom",
+          "name": "エタニティブルーム",
           "cost": [
             "Psychic",
             "Psychic",
             "Psychic"
           ],
           "damage": 200,
-          "effect": "Search your deck for up to 4 Basic Psychic Energy cards and attach them to your Benched Pokémon in any way you like. Then, shuffle your deck"
+          "effect": "自分の山札から「基本エネルギー」を4枚まで選び、ベンチポケモンに好きなようにつける。そして山札を切る。"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "100": {
       "name": "パンプジンex",
-      "hp": 280,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Stage1",
-      "retreat": 2,
-      "dexId": [
-        711
-      ],
       "category": "Pokemon",
       "rarity": "Special Illustration Rare",
       "id": "M4-100",
@@ -3560,6 +3638,35 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "dexId": [
+        711
+      ],
+      "hp": 270,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "ホラーロンド",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": 30,
+          "damageModifier": "＋",
+          "effect": "ダメカンがのっている自分のベンチポケモンの数×50ダメージ追加。"
+        },
+        {
+          "name": "ゴーストタッチ",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": 140,
+          "effect": "相手の手札からオモテを見ないで1枚選び、トラッシュする。"
+        }
+      ],
       "weakness": {
         "type": "Darkness",
         "value": "x2"
@@ -3567,38 +3674,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      },
-      "attacks": [
-        {
-          "name": "Horror Rondo",
-          "cost": [
-            "Psychic"
-          ],
-          "damage": "30+",
-          "effect": "This attack does 50 more damage for each of your Benched Pokémon that has any damage counters on"
-        },
-        {
-          "name": "Ghost Touch",
-          "cost": [
-            "Psychic",
-            "Psychic"
-          ],
-          "damage": 140,
-          "effect": "Discard a card from your opponent's hand without looking"
-        }
-      ]
+      }
     },
     "101": {
       "name": "コバルオンex",
-      "hp": 260,
-      "types": [
-        "Metal"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        638
-      ],
       "category": "Pokemon",
       "rarity": "Special Illustration Rare",
       "id": "M4-101",
@@ -3607,6 +3686,33 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "dexId": [
+        638
+      ],
+      "hp": 210,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "パワータックル",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 200,
+          "effect": "次の自分の番、このポケモンはワザが使えない。"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "メタルロード",
+          "effect": "自分の番に、このポケモンがベンチからバトル場に出たとき、1回使える。自分の場のポケモンについているエネルギーを好きなだけ選び、このポケモンにつけ替える。"
+        }
+      ],
       "weakness": {
         "type": "Fire",
         "value": "x2"
@@ -3614,37 +3720,10 @@
       "resistance": {
         "type": "Grass",
         "value": "-30"
-      },
-      "abilities": [
-        {
-          "name": "Metal Road",
-          "effect": "Once during your turn, when this Pokemon moves from your Bench to the Active Spot, you may move any amount of Metal Energy from your Pokemon in play to this Pokemon."
-        }
-      ],
-      "attacks": [
-        {
-          "name": "Power Tackle",
-          "cost": [
-            "Metal",
-            "Metal",
-            "Colorless"
-          ],
-          "damage": 200,
-          "effect": "During your next turn, this Pokémon can't attack"
-        }
-      ]
+      }
     },
     "102": {
       "name": "メガドラミドロex",
-      "hp": 300,
-      "types": [
-        "Dragon"
-      ],
-      "stage": "Stage1",
-      "retreat": 2,
-      "dexId": [
-        691
-      ],
       "category": "Pokemon",
       "rarity": "Special Illustration Rare",
       "id": "M4-102",
@@ -3653,36 +3732,36 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "dexId": [
+        691
+      ],
+      "hp": 330,
+      "types": [
+        "Dragon"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
       "attacks": [
         {
-          "name": "Corrosive Liquid",
+          "name": "ふしょくえき",
           "cost": [
             "Colorless",
             "Colorless"
           ],
-          "effect": "Discard all Pokémon Tools and Special Energy from all your opponent's Pokémon"
+          "effect": "相手のポケモン全員についている「ポケモンのどうぐ」と「特殊エネルギー」を、すべてトラッシュする。"
         },
         {
-          "name": "Pernicious Poison",
+          "name": "デッドリーポイズン",
           "cost": [
             "Water",
             "Darkness"
           ],
-          "effect": "Your opponent's Active Pokémon is now Poisoned. During Pokémon Checkup, place 16 damage counters on that Pokémon instead of 1"
+          "effect": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は16個になる。"
         }
       ]
     },
     "103": {
       "name": "チラーミィex",
-      "hp": 200,
-      "types": [
-        "Colorless"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        572
-      ],
       "category": "Pokemon",
       "rarity": "Special Illustration Rare",
       "id": "M4-103",
@@ -3691,20 +3770,36 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fighting",
-        "value": "x2"
-      },
+      "dexId": [
+        572
+      ],
+      "hp": 240,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "Energy Slap",
+          "name": "エナジービンタ",
           "cost": [
             "Colorless"
           ],
-          "damage": "40x",
-          "effect": "This attack does 40 damage for each Energy attached to this Pokémon."
+          "damage": 40,
+          "damageModifier": "×",
+          "effect": "このポケモンについているエネルギーの数×40ダメージ。"
         }
-      ]
+      ],
+      "abilities": [
+        {
+          "name": "なめらかコート",
+          "effect": "このポケモンがワザのダメージを受けるとき、自分はコインを1回投げる。オモテなら、このポケモンはそのダメージを受けない。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "104": {
       "name": "エネルギー回収",
@@ -3743,7 +3838,7 @@
       },
       "image": null,
       "subcategory": "Item",
-      "effect": "You may use this card only if your opponent has 3 Prize cards or fewer remaining. Your opponent shuffles their hand and puts it on the bottom of their deck. If your opponent put any cards on the bottom of their deck this way, they draw 3 cards."
+      "effect": "このカードは、相手のサイドの残り枚数が3枚以下のときにしか使えない。 相手は相手自身の手札をすべてウラにして切り、山札の下にもどす。その後、相手は山札を3枚引く。 グッズは、自分の番に何枚でも使える。"
     },
     "107": {
       "name": "ツールスクラッパー",
@@ -3769,7 +3864,7 @@
       },
       "image": null,
       "subcategory": "Supporter",
-      "effect": "Switch your Active Pokémon with 1 of your Benched Pokémon. If you moved a Pokémon to your Bench in this way, heal 80 damage from that Pokémon"
+      "effect": "自分のバトルポケモンをベンチポケモンと入れ替える。「ポケモンex」をベンチに入れ替えた場合、そのポケモンのHPを「80」回復する。 サポートは、自分の番に1枚しか使えない。"
     },
     "109": {
       "name": "フィリップ",
@@ -3782,7 +3877,7 @@
       },
       "image": null,
       "subcategory": "Supporter",
-      "effect": "Attach up to 2 Metal Energy from your discard pile to 1 of your Metal Pokémon"
+      "effect": "自分のトラッシュから「基本エネルギー」を2枚まで選び、自分のポケモン1匹につける。 サポートは、自分の番に1枚しか使えない。"
     },
     "110": {
       "name": "ホミカのパフォーマンス",
@@ -3795,7 +3890,7 @@
       },
       "image": null,
       "subcategory": "Supporter",
-      "effect": "During your opponent's next turn, their Poisoned Pokémon can't retreat (this includes newly Poisoned Pokémon)."
+      "effect": "次の相手の番、相手のどくのポケモンは、にげられない。（新しくどくにしたポケモンもふくむ。） サポートは、自分の番に1枚しか使えない。"
     },
     "111": {
       "name": "エマ",
@@ -3808,7 +3903,7 @@
       },
       "image": null,
       "subcategory": "Supporter",
-      "effect": "Look at your opponent's hand. Draw a card for each Pokémon you find there."
+      "effect": "相手の手札を見て、その中にあるポケモンの枚数ぶん、自分の山札を引く。 サポートは、自分の番に1枚しか使えない。"
     },
     "112": {
       "name": "なみのりビーチ",
@@ -3834,19 +3929,10 @@
       },
       "image": null,
       "subcategory": "Stadium",
-      "effect": "Once per turn, each player may discard 2 cards from their hand. If they do, they can draw 1 card"
+      "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分の手札を2枚トラッシュするなら、自分の山札を1枚引いてよい。 スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。"
     },
     "114": {
       "name": "メガゲッコウガex",
-      "hp": 320,
-      "types": [
-        "Water"
-      ],
-      "stage": "Stage2",
-      "retreat": 0,
-      "dexId": [
-        658
-      ],
       "category": "Pokemon",
       "rarity": "Hyper Rare",
       "id": "M4-114",
@@ -3855,39 +3941,40 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Lightning",
-        "value": "x2"
-      },
-      "abilities": [
-        {
-          "name": "Mortal Shuriken",
-          "effect": "Once during your turn, if this Pokemon is in the Active Spot, you may discard a Basic Water Energy card from your hand in order to use this Ability. Place 6 damage counters on 1 of your opponent's Pokemon."
-        }
+      "dexId": [
+        658
       ],
+      "hp": 350,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage2",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "Ninja Spinner",
+          "name": "ニンジャスピナー",
           "cost": [
             "Water",
             "Water"
           ],
-          "damage": "120+",
-          "effect": "You may put a Water Energy attached to this Pokémon into your hand and have this attack do 80 more damage"
+          "damage": 120,
+          "damageModifier": "＋",
+          "effect": "のぞむなら、このポケモンについているエネルギーを1個手札にもどし、80ダメージ追加。"
         }
-      ]
+      ],
+      "abilities": [
+        {
+          "name": "ひっさつしゅりけん",
+          "effect": "このポケモンがバトル場にいて、自分の番に、自分の手札から「基本エネルギー」を1枚トラッシュするなら、1回使える。相手のポケモン1匹に、ダメカンを6個のせる。"
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "115": {
       "name": "メガフラエッテex",
-      "hp": 300,
-      "types": [
-        "Psychic"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        670
-      ],
       "category": "Pokemon",
       "rarity": "Hyper Rare",
       "id": "M4-115",
@@ -3896,41 +3983,41 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Metal",
-        "value": "x2"
-      },
+      "dexId": [
+        670
+      ],
+      "hp": 250,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "Gentle Light",
+          "name": "やさしいひかり",
           "cost": [
             "Psychic"
           ],
-          "effect": "Heal 30 damage from each Pokémon (both yours and your opponent's)"
+          "effect": "おたがいのポケモン全員のHPを、それぞれ「30」回復する。"
         },
         {
-          "name": "Eternity Bloom",
+          "name": "エタニティブルーム",
           "cost": [
             "Psychic",
             "Psychic",
             "Psychic"
           ],
           "damage": 200,
-          "effect": "Search your deck for up to 4 Basic Psychic Energy cards and attach them to your Benched Pokémon in any way you like. Then, shuffle your deck"
+          "effect": "自分の山札から「基本エネルギー」を4枚まで選び、ベンチポケモンに好きなようにつける。そして山札を切る。"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      }
     },
     "116": {
       "name": "メガドラミドロex",
-      "hp": 300,
-      "types": [
-        "Dragon"
-      ],
-      "stage": "Stage1",
-      "retreat": 2,
-      "dexId": [
-        691
-      ],
       "category": "Pokemon",
       "rarity": "Hyper Rare",
       "id": "M4-116",
@@ -3939,36 +4026,36 @@
         "name": "Ninja Spinner"
       },
       "image": null,
+      "dexId": [
+        691
+      ],
+      "hp": 330,
+      "types": [
+        "Dragon"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
       "attacks": [
         {
-          "name": "Corrosive Liquid",
+          "name": "ふしょくえき",
           "cost": [
             "Colorless",
             "Colorless"
           ],
-          "effect": "Discard all Pokémon Tools and Special Energy from all your opponent's Pokémon"
+          "effect": "相手のポケモン全員についている「ポケモンのどうぐ」と「特殊エネルギー」を、すべてトラッシュする。"
         },
         {
-          "name": "Pernicious Poison",
+          "name": "デッドリーポイズン",
           "cost": [
             "Water",
             "Darkness"
           ],
-          "effect": "Your opponent's Active Pokémon is now Poisoned. During Pokémon Checkup, place 16 damage counters on that Pokémon instead of 1"
+          "effect": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は16個になる。"
         }
       ]
     },
     "117": {
       "name": "チラーミィex",
-      "hp": 200,
-      "types": [
-        "Colorless"
-      ],
-      "stage": "Basic",
-      "retreat": 1,
-      "dexId": [
-        572
-      ],
       "category": "Pokemon",
       "rarity": "Hyper Rare",
       "id": "M4-117",
@@ -3977,20 +4064,36 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Fighting",
-        "value": "x2"
-      },
+      "dexId": [
+        572
+      ],
+      "hp": 240,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "Energy Slap",
+          "name": "エナジービンタ",
           "cost": [
             "Colorless"
           ],
-          "damage": "40x",
-          "effect": "This attack does 40 damage for each Energy attached to this Pokémon."
+          "damage": 40,
+          "damageModifier": "×",
+          "effect": "このポケモンについているエネルギーの数×40ダメージ。"
         }
-      ]
+      ],
+      "abilities": [
+        {
+          "name": "なめらかコート",
+          "effect": "このポケモンがワザのダメージを受けるとき、自分はコインを1回投げる。オモテなら、このポケモンはそのダメージを受けない。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      }
     },
     "118": {
       "name": "AZのくつろぎ",
@@ -4003,7 +4106,7 @@
       },
       "image": null,
       "subcategory": "Supporter",
-      "effect": "Switch your Active Pokémon with 1 of your Benched Pokémon. If you moved a Pokémon to your Bench in this way, heal 80 damage from that Pokémon"
+      "effect": "自分のバトルポケモンをベンチポケモンと入れ替える。「ポケモンex」をベンチに入れ替えた場合、そのポケモンのHPを「80」回復する。 サポートは、自分の番に1枚しか使えない。"
     },
     "119": {
       "name": "ホミカのパフォーマンス",
@@ -4016,19 +4119,10 @@
       },
       "image": null,
       "subcategory": "Supporter",
-      "effect": "During your opponent's next turn, their Poisoned Pokémon can't retreat (this includes newly Poisoned Pokémon)."
+      "effect": "次の相手の番、相手のどくのポケモンは、にげられない。（新しくどくにしたポケモンもふくむ。） サポートは、自分の番に1枚しか使えない。"
     },
     "120": {
       "name": "メガゲッコウガex",
-      "hp": 320,
-      "types": [
-        "Water"
-      ],
-      "stage": "Stage2",
-      "retreat": 0,
-      "dexId": [
-        658
-      ],
       "category": "Pokemon",
       "rarity": "Mega Hyper Rare",
       "id": "M4-120",
@@ -4037,27 +4131,37 @@
         "name": "Ninja Spinner"
       },
       "image": null,
-      "weakness": {
-        "type": "Lightning",
-        "value": "x2"
-      },
-      "abilities": [
-        {
-          "name": "Mortal Shuriken",
-          "effect": "Once during your turn, if this Pokemon is in the Active Spot, you may discard a Basic Water Energy card from your hand in order to use this Ability. Place 6 damage counters on 1 of your opponent's Pokemon."
-        }
+      "dexId": [
+        658
       ],
+      "hp": 350,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage2",
+      "retreat": 1,
       "attacks": [
         {
-          "name": "Ninja Spinner",
+          "name": "ニンジャスピナー",
           "cost": [
             "Water",
             "Water"
           ],
-          "damage": "120+",
-          "effect": "You may put a Water Energy attached to this Pokémon into your hand and have this attack do 80 more damage"
+          "damage": 120,
+          "damageModifier": "＋",
+          "effect": "のぞむなら、このポケモンについているエネルギーを1個手札にもどし、80ダメージ追加。"
         }
-      ]
+      ],
+      "abilities": [
+        {
+          "name": "ひっさつしゅりけん",
+          "effect": "このポケモンがバトル場にいて、自分の番に、自分の手札から「基本エネルギー」を1枚トラッシュするなら、1回使える。相手のポケモン1匹に、ダメカンを6個のせる。"
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     }
   }
 }
