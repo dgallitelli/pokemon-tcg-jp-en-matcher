@@ -795,19 +795,13 @@
           }
         }
 
-        // Also collect matching EN cards from SIDELOAD_EN_SETS by dexId or illustrator
+        // Also collect matching EN cards from SIDELOAD_EN_SETS by dexId
+        // (only Pokemon — trainer/energy illustrator matching across unrelated sets is too loose)
         const sideloadEnCards = [];
         for (const sEnSetData of Object.values(SIDELOAD_EN_SETS)) {
           for (const enCard of Object.values(sEnSetData.cards)) {
-            // Match by dexId for Pokemon
             if (jpCard.dexId && jpCard.dexId.length > 0 &&
                 enCard.dexId && enCard.dexId.some(id => jpCard.dexId.includes(id))) {
-              sideloadEnCards.push(enCard);
-            }
-            // Match Trainer/Energy by illustrator within sideloads
-            else if (jpCard.category !== 'Pokemon' && enCard.category !== 'Pokemon' &&
-                     jpCard.illustrator && enCard.illustrator &&
-                     jpCard.illustrator.toLowerCase() === enCard.illustrator.toLowerCase()) {
               sideloadEnCards.push(enCard);
             }
           }
@@ -816,17 +810,25 @@
         // 3. Fetch full details for candidates and score them
         if (candidates.length === 0 && sideloadEnCards.length === 0) {
           setStatus('', false);
-          // If the JP card already has English effect/attack data, show a self-translation view
+          // If the JP card already has English effect/attack data, show a synthetic translation card
           const hasEnData = jpCard.effect || (jpCard.attacks || []).some(a => a.effect);
           const enName = TRAINER_NAME_MAP[jpCard.name];
-          document.getElementById('results').innerHTML = `
-            <div class="cards-container">${renderCard(jpCard, 'ja')}</div>
-            <div class="match-info">${hasEnData
-              ? `<span style="color:#ffd700">No official English print found.</span>${enName ? `<br>English name: <strong>${safeHtml(enName)}</strong>` : ''}<br>English card text is shown on the card above (sourced from Serebii).`
-              : `<span class="no-match">No English equivalent found.</span>
+          if (hasEnData) {
+            const syntheticEn = { ...jpCard, name: enName || jpCard.name };
+            document.getElementById('results').innerHTML = `
+              <div class="cards-container">
+                ${renderCard(jpCard, 'ja')}
+                <div class="arrow">→</div>
+                ${renderCard(syntheticEn, 'en', '🔄 Translation')}
+              </div>
+              <div class="match-info">This card has no official English print yet. Showing translated card text from <span style="color:#ffd700">Serebii</span>.</div>`;
+          } else {
+            document.getElementById('results').innerHTML = `
+              <div class="cards-container">${renderCard(jpCard, 'ja')}</div>
+              <div class="match-info"><span class="no-match">No English equivalent found.</span>
                 ${jpCard.category !== 'Pokemon' ? '<br>Trainer/Energy card matching by name is limited — these often have different names across languages.' : ''}
-                ${!jpCard.dexId ? '<br>This card has no Pokédex ID, so name lookup was not possible.' : ''}`
-            }</div>`;
+                ${!jpCard.dexId ? '<br>This card has no Pokédex ID, so name lookup was not possible.' : ''}</div>`;
+          }
           return;
         }
 
