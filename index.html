@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://api.tcgdex.net">
   <link rel="preconnect" href="https://assets.tcgdex.net" crossorigin>
   <title>JP → EN Pokémon Card Matcher</title>
@@ -185,43 +184,18 @@
 
   <script>
     const API = 'https://api.tcgdex.net/v2';
-    const DATA_VERSION = 4; // Bump to invalidate sideload localStorage cache
-    const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
-
-    // Invalidate old sideload caches when data version changes
-    try {
-      const storedVer = localStorage.getItem('data_version');
-      if (storedVer !== String(DATA_VERSION)) {
-        for (const key of Object.keys(localStorage)) {
-          if (key.startsWith('sideload_cache_')) localStorage.removeItem(key);
-        }
-        localStorage.setItem('data_version', String(DATA_VERSION));
-      }
-    } catch {}
 
     // In-memory caches — survive re-searches within a session
     const apiCache = new Map();
     const dexNameCache = new Map();
     let lastScoredCards = new Map(); // id → full card object, populated after each search
 
-    // Fetch with in-memory + localStorage caching (24 h TTL)
     async function cachedApiFetch(url) {
       if (apiCache.has(url)) return apiCache.get(url);
-      try {
-        const stored = localStorage.getItem('apicache_' + url);
-        if (stored) {
-          const { data, ts } = JSON.parse(stored);
-          if (Date.now() - ts < CACHE_TTL) {
-            apiCache.set(url, data);
-            return data;
-          }
-        }
-      } catch {}
       const res = await fetch(url);
       if (!res.ok) return null;
       const data = await res.json();
       apiCache.set(url, data);
-      try { localStorage.setItem('apicache_' + url, JSON.stringify({ data, ts: Date.now() })); } catch {}
       return data;
     }
 
@@ -257,20 +231,10 @@
       await Promise.all(
         SIDELOAD_CONFIG.en.map(async cfg => {
           try {
-            const cacheKey = `sideload_cache_${cfg.id}`;
-            const cached = localStorage.getItem(cacheKey);
-            if (cached) {
-              const { data, timestamp } = JSON.parse(cached);
-              if (Date.now() - timestamp < CACHE_TTL) {
-                SIDELOAD_EN_SETS[cfg.id] = { name: cfg.name, cards: data.cards };
-                return;
-              }
-            }
             const res = await fetch(cfg.file);
             if (res.ok) {
               const data = await res.json();
               SIDELOAD_EN_SETS[cfg.id] = { name: cfg.name, cards: data.cards };
-              try { localStorage.setItem(cacheKey, JSON.stringify({ data, timestamp: Date.now() })); } catch {}
             }
           } catch {}
         })
@@ -283,20 +247,10 @@
       const cfg = SIDELOAD_JP_CONFIG[setId];
       if (!cfg) return;
       try {
-        const cacheKey = `sideload_cache_${cfg.id}`;
-        const cached = localStorage.getItem(cacheKey);
-        if (cached) {
-          const { data, timestamp } = JSON.parse(cached);
-          if (Date.now() - timestamp < CACHE_TTL) {
-            SIDELOAD_SETS[cfg.id] = { name: cfg.name, cards: data.cards || data };
-            return;
-          }
-        }
         const res = await fetch(cfg.file);
         if (res.ok) {
           const data = await res.json();
           SIDELOAD_SETS[cfg.id] = { name: cfg.name, cards: data.cards || data };
-          try { localStorage.setItem(cacheKey, JSON.stringify({ data, timestamp: Date.now() })); } catch {}
         }
       } catch {}
     }
@@ -315,18 +269,8 @@
     async function loadSets() {
       const dl = document.getElementById('setList');
       try {
-        const cacheKey = 'tcgdex_sets_cache';
-        let sets;
-        const cached = localStorage.getItem(cacheKey);
-        if (cached) {
-          const { data, timestamp } = JSON.parse(cached);
-          if (Date.now() - timestamp < CACHE_TTL) sets = data;
-        }
-        if (!sets) {
-          const res = await fetch(`${API}/ja/sets`);
-          sets = await res.json();
-          try { localStorage.setItem(cacheKey, JSON.stringify({ data: sets, timestamp: Date.now() })); } catch {}
-        }
+        const res = await fetch(`${API}/ja/sets`);
+        const sets = await res.json();
         sets.sort((a, b) => (b.releaseDate || '').localeCompare(a.releaseDate || ''));
         for (const s of sets) {
           const opt = document.createElement('option');
@@ -1063,7 +1007,7 @@
       if (e.key === 'Enter') doSearch();
     });
 
-    // Register service worker for PWA/offline support
+    // Unregister any previously installed service worker
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js').catch(() => {});
     }
