@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://api.tcgdex.net">
   <link rel="preconnect" href="https://assets.tcgdex.net" crossorigin>
   <title>JP → EN Pokémon Card Matcher</title>
@@ -71,6 +72,21 @@
     .howto-steps .example strong { color: #ffd700; font-weight: 600; }
     .try-btn { display: inline-block; margin-top: 0.8rem; padding: 0.4rem 1rem; background: #ffd700; color: #1a1a2e; border: none; border-radius: 5px; font-size: 0.8rem; font-weight: 600; cursor: pointer; text-decoration: none; }
     .try-btn:hover { background: #ffed4a; }
+
+    /* Set Browser Mode */
+    .browse-btn { margin-left: 0.5rem; padding: 0.6rem 1rem; border: 1px solid #ffd700; border-radius: 6px; background: transparent; color: #ffd700; font-weight: 600; cursor: pointer; font-size: 0.85rem; align-self: end; }
+    .browse-btn:hover { background: #ffd70022; }
+    #browsePage { max-width: 960px; margin: 0 auto; }
+    .browse-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+    .browse-header h2 { font-size: 1.1rem; color: #ffd700; }
+    .browse-back { background: none; border: 1px solid #555; border-radius: 6px; padding: 0.4rem 0.8rem; color: #ccc; cursor: pointer; font-size: 0.85rem; }
+    .browse-back:hover { border-color: #ffd700; color: #ffd700; }
+    .browse-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem; }
+    .browse-card { background: #16213e; border-radius: 8px; padding: 0.6rem; cursor: pointer; text-align: center; transition: transform 0.15s; }
+    .browse-card:hover { transform: scale(1.03); }
+    .browse-card img { width: 100%; border-radius: 6px; aspect-ratio: 5/7; object-fit: cover; background: #0f3460; }
+    .browse-card .bc-name { font-size: 0.75rem; margin-top: 0.4rem; color: #e0e0e0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .browse-card .bc-num { font-size: 0.65rem; color: #888; }
   </style>
 </head>
 <body>
@@ -115,10 +131,12 @@
       <input id="cardNum" type="text" placeholder="021">
     </div>
     <button id="searchBtn" onclick="doSearch()">Match</button>
+    <button class="browse-btn" onclick="browseSet()">Browse Set</button>
   </div>
 
   <div id="status" class="status"></div>
   <div id="results"></div>
+  <div id="browsePage" style="display:none"></div>
 
   <script>
     const API = 'https://api.tcgdex.net/v2';
@@ -328,19 +346,23 @@
       const types = card.types ? safeHtml(card.types.join(', ')) : null;
       const hp = card.hp ? safeHtml(String(card.hp)) : null;
       const stage = card.stage ? safeHtml(card.stage) : null;
+      const weakness = card.weakness ? `${safeHtml(card.weakness.type)} ${safeHtml(card.weakness.value || '')}` : null;
+      const resistance = card.resistance ? `${safeHtml(card.resistance.type)} ${safeHtml(card.resistance.value || '')}` : null;
       const badgeLabel = badge || (lang === 'ja' ? '日本語 Japanese' : '🇺🇸 English');
       const badgeClass = badge ? 'trans' : lang;
       return `
         <div class="card-panel">
           <span class="lang-badge ${badgeClass}">${badgeLabel}</span>
           <h2>${cardName}</h2>
-          ${imgUrl ? `<img src="${imgUrl}" alt="${cardName}" loading="lazy" onerror="this.style.display='none'">` : '<p style="color:#666;padding:2rem 0;text-align:center">No image available</p>'}
+          ${imgUrl ? `<img src="${imgUrl}" alt="${cardName}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="img-placeholder" style="display:none;width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:8px;margin-bottom:1rem;align-items:center;justify-content:center;color:#555;font-size:2rem">🃏</div>` : '<div style="width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:8px;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;color:#555;font-size:2rem">🃏</div>'}
           <div class="card-meta">
             Set: <span>${setName}</span> (${cardId})<br>
             ${hp ? `HP: <span>${hp}</span><br>` : ''}
             ${stage ? `Stage: <span>${stage}</span><br>` : ''}
             ${illustrator ? `Illustrator: <span>${illustrator}</span><br>` : ''}
             ${types ? `Type: <span>${types}</span><br>` : ''}
+            ${weakness ? `Weakness: <span>${weakness}</span><br>` : ''}
+            ${resistance ? `Resistance: <span>${resistance}</span><br>` : ''}
             ${abilities ? `<br>${abilities}<br>` : ''}
             ${attacks ? `<br>Attacks:<br>${attacks}<br>` : ''}
             ${card.category === 'Trainer' && card.effect ? `<br>Effect: <span>${safeHtml(card.effect)}</span><br>` : ''}
@@ -355,55 +377,146 @@
       let score = 0;
       let reasons = [];
 
+      // Category mismatch is a hard penalty — Pokemon should never match Trainer
+      if (jpCard.category && enCard.category && jpCard.category !== enCard.category) {
+        return { score: 0, reasons: ['category mismatch'] };
+      }
+      if (jpCard.category && enCard.category && jpCard.category === enCard.category) {
+        score += 5;
+        reasons.push('category');
+      }
+
       // Illustrator match is very strong signal (same print)
       if (jpCard.illustrator && enCard.illustrator &&
           jpCard.illustrator.toLowerCase() === enCard.illustrator.toLowerCase()) {
-        score += 30;
+        score += 25;
         reasons.push('illustrator');
       }
 
       // HP match
       if (jpCard.hp && enCard.hp && jpCard.hp === enCard.hp) {
-        score += 20;
+        score += 15;
         reasons.push('HP');
+      }
+
+      // Type match
+      if (jpCard.types && enCard.types && jpCard.types.length > 0 && enCard.types.length > 0) {
+        const jpTypes = jpCard.types.map(t => t.toLowerCase()).sort().join(',');
+        const enTypes = enCard.types.map(t => t.toLowerCase()).sort().join(',');
+        if (jpTypes === enTypes) {
+          score += 8;
+          reasons.push('type');
+        }
+      }
+
+      // Ability count + name match
+      const jpAbils = jpCard.abilities || [];
+      const enAbils = enCard.abilities || [];
+      if (jpAbils.length > 0 && jpAbils.length === enAbils.length) {
+        score += 7;
+        reasons.push('ability count');
+      } else if (jpAbils.length !== enAbils.length) {
+        score -= 5; // Mismatch penalty
       }
 
       // Attack count match
       const jpAtks = jpCard.attacks || [];
       const enAtks = enCard.attacks || [];
       if (jpAtks.length === enAtks.length && jpAtks.length > 0) {
-        score += 15;
+        score += 10;
         reasons.push('attack count');
         // Attack damage match
         const jpDmg = jpAtks.map(a => a.damage).sort().join(',');
         const enDmg = enAtks.map(a => a.damage).sort().join(',');
         if (jpDmg === enDmg) {
-          score += 15;
+          score += 12;
           reasons.push('attack damage');
         }
         // Attack cost match
         const jpCost = jpAtks.map(a => (a.cost || []).length).sort().join(',');
         const enCost = enAtks.map(a => (a.cost || []).length).sort().join(',');
         if (jpCost === enCost) {
-          score += 10;
+          score += 8;
           reasons.push('attack costs');
         }
       }
 
+      // Weakness match
+      if (jpCard.weakness && enCard.weakness &&
+          jpCard.weakness.type && enCard.weakness.type &&
+          jpCard.weakness.type.toLowerCase() === enCard.weakness.type.toLowerCase()) {
+        score += 3;
+        reasons.push('weakness');
+      }
+
+      // Resistance match
+      if (jpCard.resistance && enCard.resistance &&
+          jpCard.resistance.type && enCard.resistance.type &&
+          jpCard.resistance.type.toLowerCase() === enCard.resistance.type.toLowerCase()) {
+        score += 2;
+        reasons.push('resistance');
+      }
+
       // Retreat cost match
       if (jpCard.retreat !== undefined && enCard.retreat !== undefined && jpCard.retreat === enCard.retreat) {
-        score += 5;
+        score += 3;
         reasons.push('retreat');
       }
 
       // Stage match
       if (jpCard.stage && enCard.stage && jpCard.stage === enCard.stage) {
-        score += 5;
+        score += 3;
         reasons.push('stage');
       }
 
-      return { score, reasons };
+      // Rarity tiebreaker (small bonus, not decisive)
+      if (jpCard.rarity && enCard.rarity && jpCard.rarity === enCard.rarity) {
+        score += 1;
+        reasons.push('rarity');
+      }
+
+      return { score: Math.max(0, score), reasons };
     }
+
+    // Common JP → EN trainer/energy name mappings for cross-language search
+    const TRAINER_NAME_MAP = {
+      'ボスの指令': "Boss's Orders",
+      'ナンジャモ': 'Iono',
+      'ネモ': 'Nemona',
+      'ペパー': 'Arven',
+      'オモダカ': 'Geeta',
+      'セイボリー': 'Avery',
+      'チリ': 'Chili',
+      'コルサ': 'Brassius',
+      'カエデ': 'Katy',
+      'リップ': 'Rika',
+      'グルーシャ': 'Grusha',
+      'カイ': 'Irida',
+      'シロナの覇気': "Cynthia's Ambition",
+      'シロナ': 'Cynthia',
+      '博士の研究': "Professor's Research",
+      'リーリエ': 'Lillie',
+      'マリィ': 'Marnie',
+      'セレナ': 'Serena',
+      'ポケモンいれかえ': 'Switch',
+      'ハイパーボール': 'Ultra Ball',
+      'レベルボール': 'Level Ball',
+      'ネストボール': 'Nest Ball',
+      'クイックボール': 'Quick Ball',
+      'ふしぎなアメ': 'Rare Candy',
+      'きずぐすり': 'Potion',
+      'すごいきずぐすり': 'Super Potion',
+      'エネルギー回収': 'Energy Retrieval',
+      'エネルギーつけかえ': 'Energy Switch',
+      'ダブルターボエネルギー': 'Double Turbo Energy',
+      'ジェットエネルギー': 'Jet Energy',
+      'ギフトエネルギー': 'Gift Energy',
+      'セラピーエネルギー': 'Therapeutic Energy',
+      'リバーサルエネルギー': 'Reversal Energy',
+      'ルミナスエネルギー': 'Luminous Energy',
+      'レガシーエネルギー': 'Legacy Energy',
+      'ミストエネルギー': 'Mist Energy',
+    };
 
     // Pokédex number → English name lookup via TCGdex, with memoization
     async function getEnglishName(dexId) {
@@ -424,12 +537,79 @@
       } catch { dexNameCache.set(dexId, null); return null; }
     }
 
+    async function browseSet() {
+      const setId = document.getElementById('setInput').value.trim();
+      if (!setId) { setStatus('Please enter a set ID to browse.', true); return; }
+
+      const setUpper = setId.toUpperCase();
+      setStatus('<span class="loading"></span> Loading set...', false);
+      document.getElementById('results').innerHTML = '';
+
+      await sideloadReadyPromise;
+      if (SIDELOAD_JP_CONFIG[setUpper]) await ensureJpSideloadLoaded(setUpper);
+
+      let cards = [];
+      let setName = setId;
+
+      if (SIDELOAD_SETS[setUpper]) {
+        const sideload = SIDELOAD_SETS[setUpper];
+        setName = sideload.name || setUpper;
+        cards = Object.entries(sideload.cards).map(([num, c]) => ({
+          num, name: c.name, id: c.id,
+          image: c.image ? c.image + '/high.webp' : sideloadImageUrl(c)
+        }));
+      } else {
+        try {
+          const data = await cachedApiFetch(`${API}/ja/sets/${setId}`);
+          if (!data || !data.cards) { setStatus(`Set "${safeHtml(setId)}" not found.`, true); return; }
+          setName = data.name || setId;
+          cards = data.cards.map(c => ({
+            num: c.id.split('-').pop(), name: c.name, id: c.id,
+            image: c.image ? c.image + '/high.webp' : null
+          }));
+        } catch { setStatus(`Failed to load set "${safeHtml(setId)}".`, true); return; }
+      }
+
+      cards.sort((a, b) => a.num.localeCompare(b.num, undefined, { numeric: true }));
+
+      setStatus('', false);
+      const browsePage = document.getElementById('browsePage');
+      browsePage.style.display = 'block';
+      browsePage.innerHTML = `
+        <div class="browse-header">
+          <button class="browse-back" onclick="closeBrowse()">&larr; Back</button>
+          <h2>${safeHtml(setName)} (${safeHtml(setId)}) — ${cards.length} cards</h2>
+        </div>
+        <div class="browse-grid">
+          ${cards.map(c => `
+            <div class="browse-card" onclick="document.getElementById('setInput').value='${safeHtml(setId)}';document.getElementById('cardNum').value='${safeHtml(c.num)}';closeBrowse();doSearch();">
+              ${c.image ? `<img src="${c.image}" alt="${safeHtml(c.name)}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex'"><div style="display:none;width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:6px;align-items:center;justify-content:center;color:#555;font-size:1.5rem">🃏</div>` : `<div style="width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#555;font-size:1.5rem">🃏</div>`}
+              <div class="bc-name">${safeHtml(c.name)}</div>
+              <div class="bc-num">#${safeHtml(c.num)}</div>
+            </div>
+          `).join('')}
+        </div>`;
+    }
+
+    function closeBrowse() {
+      document.getElementById('browsePage').style.display = 'none';
+      document.getElementById('browsePage').innerHTML = '';
+    }
+
     async function doSearch() {
       const searchBtn = document.getElementById('searchBtn');
       if (searchBtn.disabled) return; // Guard against concurrent calls from Enter key
       const setId = document.getElementById('setInput').value.trim();
       const rawNum = document.getElementById('cardNum').value.trim();
       if (!setId || !rawNum) { setStatus('Please enter a set ID and card number.', true); return; }
+
+      // Update URL for deep linking (without triggering navigation)
+      const url = new URL(window.location);
+      url.searchParams.set('set', setId);
+      url.searchParams.set('num', rawNum);
+      history.replaceState(null, '', url);
+
+      closeBrowse(); // Close set browser if open
 
       searchBtn.disabled = true;
       try {
@@ -527,12 +707,15 @@
 
         // 2b. Find English candidates via API
         let enName = null;
-        // Try dexId lookup first
+        // Try dexId lookup first (Pokemon cards)
         if (jpCard.dexId && jpCard.dexId.length > 0) {
           enName = await getEnglishName(jpCard.dexId[0]);
         }
+        // Trainer/Energy: try name map lookup
+        if (!enName && jpCard.category !== 'Pokemon' && jpCard.name) {
+          enName = TRAINER_NAME_MAP[jpCard.name];
+        }
 
-        // For Trainer/Energy cards, try using the illustrator or just show JP card
         let candidates = [];
         if (enName) {
           try {
@@ -551,14 +734,20 @@
           }
         }
 
-        // Also collect matching EN cards from SIDELOAD_EN_SETS by dexId
+        // Also collect matching EN cards from SIDELOAD_EN_SETS by dexId or illustrator
         const sideloadEnCards = [];
-        if (jpCard.dexId && jpCard.dexId.length > 0) {
-          for (const sEnSetData of Object.values(SIDELOAD_EN_SETS)) {
-            for (const enCard of Object.values(sEnSetData.cards)) {
-              if (enCard.dexId && enCard.dexId.some(id => jpCard.dexId.includes(id))) {
-                sideloadEnCards.push(enCard);
-              }
+        for (const sEnSetData of Object.values(SIDELOAD_EN_SETS)) {
+          for (const enCard of Object.values(sEnSetData.cards)) {
+            // Match by dexId for Pokemon
+            if (jpCard.dexId && jpCard.dexId.length > 0 &&
+                enCard.dexId && enCard.dexId.some(id => jpCard.dexId.includes(id))) {
+              sideloadEnCards.push(enCard);
+            }
+            // Match Trainer/Energy by illustrator within sideloads
+            else if (jpCard.category !== 'Pokemon' && enCard.category !== 'Pokemon' &&
+                     jpCard.illustrator && enCard.illustrator &&
+                     jpCard.illustrator.toLowerCase() === enCard.illustrator.toLowerCase()) {
+              sideloadEnCards.push(enCard);
             }
           }
         }
@@ -576,8 +765,24 @@
 
         setStatus(`<span class="loading"></span> Scoring ${candidates.length} candidates...`, false);
 
-        // Fetch full card data for top candidates (limit to 10); results are cached
-        const toFetch = candidates.slice(0, 10);
+        // Pre-filter candidates: prefer same era by release year if JP card has set release info
+        let filteredCandidates = candidates;
+        if (candidates.length > 20 && jpCard.set?.releaseDate) {
+          const jpYear = parseInt(jpCard.set.releaseDate.substring(0, 4), 10);
+          if (jpYear) {
+            // Prefer cards from ±2 years of the JP set release
+            const nearEra = candidates.filter(c => {
+              const ry = c.releaseDate || c.set?.releaseDate;
+              if (!ry) return true; // keep if unknown
+              const ey = parseInt(String(ry).substring(0, 4), 10);
+              return Math.abs(ey - jpYear) <= 2;
+            });
+            if (nearEra.length >= 5) filteredCandidates = nearEra;
+          }
+        }
+
+        // Fetch full card data for top candidates (limit to 30); results are cached
+        const toFetch = filteredCandidates.slice(0, 30);
         const fetchedCards = await Promise.all(
           toFetch.map(c => cachedApiFetch(`${API}/en/cards/${c.id}`))
         );
@@ -664,6 +869,18 @@
     const sideloadReadyPromise = loadSideloadData();
     loadSets();
 
+    // Deep linking: auto-search if URL has ?set=...&num=...
+    {
+      const params = new URLSearchParams(window.location.search);
+      const urlSet = params.get('set');
+      const urlNum = params.get('num');
+      if (urlSet && urlNum) {
+        document.getElementById('setInput').value = urlSet;
+        document.getElementById('cardNum').value = urlNum;
+        doSearch();
+      }
+    }
+
     // Allow Enter key to trigger search
     document.getElementById('cardNum').addEventListener('keydown', e => {
       if (e.key === 'Enter') doSearch();
@@ -671,6 +888,11 @@
     document.getElementById('setInput').addEventListener('keydown', e => {
       if (e.key === 'Enter') doSearch();
     });
+
+    // Register service worker for PWA/offline support
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').catch(() => {});
+    }
   </script>
 </body>
 </html>

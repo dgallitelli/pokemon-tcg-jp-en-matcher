@@ -1,0 +1,17 @@
+{
+  "name": "Pokemon TCG JP-EN Matcher",
+  "short_name": "JP-EN Matcher",
+  "description": "Match Japanese Pokemon TCG cards to their English equivalents",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#ffd700",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
