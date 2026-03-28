@@ -704,6 +704,10 @@
       "weakness": {
         "type": "Metal",
         "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
       }
     },
     "019": {

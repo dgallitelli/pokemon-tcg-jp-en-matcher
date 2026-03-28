@@ -726,7 +726,11 @@
           "damage": 30,
           "effect": "This Pokémon also does 10 damage to itself"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "019": {
       "name": "コレクレー",
@@ -1597,6 +1601,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
       }
     },
     "041": {
@@ -2096,6 +2104,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
       }
     },
     "053": {
@@ -2131,6 +2143,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
       }
     },
     "054": {
@@ -2788,6 +2804,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
       }
     },
     "075": {

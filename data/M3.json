@@ -704,7 +704,11 @@
           ],
           "damage": 30
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "019": {
       "name": "ジュゴン",
@@ -741,7 +745,11 @@
           ],
           "damage": 60
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "020": {
       "name": "ヒトデマン",
@@ -771,7 +779,11 @@
           ],
           "damage": 20
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "021": {
       "name": "メガスターミーex",
@@ -812,7 +824,11 @@
           "damage": 210,
           "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "022": {
       "name": "アマルス",
@@ -932,7 +948,11 @@
           "damage": "90+",
           "effect": "Flip a coin for each Energy attached to this Pokémon. This attack does 80 damage for each heads"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "025": {
       "name": "コリンク",
@@ -1225,6 +1245,10 @@
       "weakness": {
         "type": "Metal",
         "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
       }
     },
     "032": {
@@ -2136,6 +2160,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
       }
     },
     "053": {
@@ -2217,6 +2245,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
       }
     },
     "055": {
@@ -2677,6 +2709,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
       }
     },
     "066": {
@@ -3549,7 +3585,11 @@
           "damage": 210,
           "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "096": {
       "name": "メガピクシーex",
@@ -3679,6 +3719,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
       }
     },
     "099": {
@@ -3715,6 +3759,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
       }
     },
     "100": {
@@ -3939,7 +3987,11 @@
           "damage": 210,
           "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "112": {
       "name": "メガピクシーex",

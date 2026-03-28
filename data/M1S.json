@@ -600,7 +600,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "016": {
       "name": "カイオーガ",
@@ -640,7 +644,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "017": {
       "name": "ユキカブリ",
@@ -756,7 +764,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "020": {
       "name": "ブロスター",
@@ -795,7 +807,11 @@
           "name": "Backthrust Reload",
           "effect": "Once during your turn, when this Pokémon moves from the Active Spot to your Bench, you may attach up to 2 Basic Water Energy cards from your hand to this Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "021": {
       "name": "メッソン",
@@ -826,7 +842,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "022": {
       "name": "ジメレオン",
@@ -856,7 +876,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "023": {
       "name": "インテレオン",
@@ -894,7 +918,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "024": {
       "name": "ユキハミ",
@@ -2041,6 +2069,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
       }
     },
     "053": {
@@ -2509,7 +2541,11 @@
           "name": "Backthrust Reload",
           "effect": "Once during your turn, when this Pokémon moves from the Active Spot to your Bench, you may attach up to 2 Basic Water Energy cards from your hand to this Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "069": {
       "name": "インテレオン",
@@ -2547,7 +2583,11 @@
         "id": "M1S",
         "name": "Mega Symphonia"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "070": {
       "name": "エリキテル",
@@ -2759,6 +2799,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
       }
     },
     "075": {

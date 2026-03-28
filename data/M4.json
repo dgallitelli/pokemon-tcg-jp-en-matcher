@@ -690,6 +690,10 @@
       "weakness": {
         "type": "Metal",
         "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
       }
     },
     "019": {
@@ -3094,7 +3098,8 @@
           "cost": [
             "Colorless"
           ],
-          "damage": 140
+          "damage": 140,
+          "effect": "During your next turn, this Pokemon can't use Flash Bolt."
         }
       ]
     },
@@ -3163,7 +3168,8 @@
           "cost": [
             "Fighting"
           ],
-          "damage": 30
+          "damage": 30,
+          "effect": "If your opponent's Active Pokemon is an Evolved Pokemon, devolve it by putting the highest Stage Evolution card on it into your opponent's hand."
         }
       ]
     },

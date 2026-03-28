@@ -805,7 +805,11 @@
         "id": "M2",
         "name": "Inferno X"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "022": {
       "name": "ジュゴン",
@@ -843,7 +847,11 @@
           "name": "Thick Fat",
           "effect": "This Pokémon takes 30 less damage from the attacks of your opponent's Fire or Water Pokémon (after applying  and Resistance)"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "023": {
       "name": "ウリムー",
@@ -1010,7 +1018,11 @@
         "id": "M2",
         "name": "Inferno X"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "027": {
       "name": "ポッチャマ",
@@ -1048,7 +1060,11 @@
         "id": "M2",
         "name": "Inferno X"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "028": {
       "name": "ポッタイシ",
@@ -1087,7 +1103,11 @@
         "id": "M2",
         "name": "Inferno X"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "029": {
       "name": "ロトムex",
@@ -3116,7 +3136,11 @@
           "name": "Thick Fat",
           "effect": "This Pokémon takes 30 less damage from the attacks of your opponent's Fire or Water Pokémon (after applying  and Resistance)"
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "085": {
       "name": "ポッチャマ",
@@ -3154,7 +3178,11 @@
         "id": "M2",
         "name": "Inferno X"
       },
-      "image": null
+      "image": null,
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "086": {
       "name": "ワンパチ",

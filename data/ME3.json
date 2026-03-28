@@ -134,7 +134,11 @@
           ],
           "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "103": {
       "name": "Mega Clefable ex",
@@ -270,6 +274,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
       }
     },
     "106": {
@@ -306,6 +314,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
       }
     },
     "107": {
@@ -540,7 +552,11 @@
           ],
           "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "119": {
       "name": "Mega Clefable ex",
@@ -1449,7 +1465,11 @@
             "Water"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "019": {
       "name": "Dewgong",
@@ -1486,7 +1506,11 @@
           "name": "Wash Out",
           "effect": "As often as you like during your turn, you may move a Water Energy from 1 of your Benched Pokémon to your Active Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "020": {
       "name": "Staryu",
@@ -1516,7 +1540,11 @@
             "Water"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "021": {
       "name": "Mega Starmie ex",
@@ -1557,7 +1585,11 @@
           ],
           "effect": "This attack's damage isn't affected by Weakness, Resistance, or any effects on your opponent's Active Pokémon."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "022": {
       "name": "Lapras ex",
@@ -1597,7 +1629,11 @@
             "Water"
           ]
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      }
     },
     "023": {
       "name": "Amaura",
@@ -1723,7 +1759,11 @@
           "name": "Tundra Wall",
           "effect": "While this Pokemon is in play, all of your Pokemon that have a Water Energy attached take 50 less damage from attacks from your opponent's Pokemon. This Ability does not stack."
         }
-      ]
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      }
     },
     "026": {
       "name": "Shinx",
@@ -2009,6 +2049,10 @@
       "weakness": {
         "type": "Metal",
         "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
       }
     },
     "033": {
@@ -2906,6 +2950,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
       }
     },
     "054": {
@@ -2987,6 +3035,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
       }
     },
     "056": {
@@ -3447,6 +3499,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
+      },
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
       }
     },
     "067": {
