@@ -3775,7 +3775,7 @@
       },
       "image": null,
       "effect": "While attached to a Grass Pokemon, this card provides 1 Grass Energy. The Grass Pokémon this card is attached to has +20 HP",
-      "subcategory": "Item"
+      "subcategory": "Special Energy"
     },
     "087": {
       "name": "Rocky Fighting Energy",
@@ -3792,7 +3792,7 @@
       },
       "image": null,
       "effect": "While attached to a Fighting Pokemon, this card provides 1 Fighting Energy. Prevent all effects of attacks used by your opponent's Pokémon done to the Fighting Pokémon this card is attached to. (Existing effects are not removed. Damage is not an effect.)",
-      "subcategory": "Item"
+      "subcategory": "Special Energy"
     },
     "088": {
       "name": "Telepathic Psychic Energy",
@@ -3809,7 +3809,7 @@
       },
       "image": null,
       "effect": "While attached to a Psychic Pokémon, this card provides 1 Psychic Energy. When you attach this card from your hand to one of your Psychic Pokémon, you may search your deck for up to 2 Basic Psychic Pokémon and put them onto your Bench. Then shuffle your deck.",
-      "subcategory": "Supporter"
+      "subcategory": "Special Energy"
     },
     "089": {
       "name": "Spewpa",

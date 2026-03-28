@@ -140,7 +140,7 @@
 
   <script>
     const API = 'https://api.tcgdex.net/v2';
-    const DATA_VERSION = 2; // Bump to invalidate sideload localStorage cache
+    const DATA_VERSION = 3; // Bump to invalidate sideload localStorage cache
     const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
 
     // Invalidate old sideload caches when data version changes
@@ -694,15 +694,36 @@
               ) || enCardsSorted.find(c =>
                 c.dexId?.some(id => jpCard.dexId.includes(id))
               );
+            } else if (jpCard.category === 'Energy') {
+              // Energy: match by category + energy type keyword in name
+              // JP energy names contain type kanji: 草=Grass, 炎=Fire, 水=Water, 雷=Lightning,
+              // 超=Psychic, 闘=Fighting, 悪=Darkness, 鋼=Metal
+              const typeMap = {'草':'Grass','炎':'Fire','水':'Water','雷':'Lightning',
+                '超':'Psychic','闘':'Fighting','悪':'Darkness','鋼':'Metal'};
+              let matchType = null;
+              for (const [kanji, eng] of Object.entries(typeMap)) {
+                if (jpCard.name?.includes(kanji)) { matchType = eng; break; }
+              }
+              if (matchType) {
+                transCard = enCardsSorted.find(c =>
+                  c.category === 'Energy' && c.name?.toLowerCase().includes(matchType.toLowerCase())
+                );
+              }
+              if (!transCard) {
+                transCard = enCardsSorted.find(c => c.category === 'Energy');
+              }
             } else if (jpCard.illustrator) {
-              // Trainer/Energy: match by illustrator within the EN translation set
+              // Trainer: match by illustrator within the EN translation set
               transCard = enCardsSorted.find(c =>
                 c.category !== 'Pokemon' &&
                 c.illustrator?.toLowerCase() === jpCard.illustrator.toLowerCase()
               );
             }
-            // Fallback: direct card number (for sets where JP/EN numbers align exactly)
-            if (!transCard) transCard = enTransSet.cards[jpNum] || enTransSet.cards[rawNum];
+            // Fallback: direct card number, but only if categories match
+            if (!transCard) {
+              const fallback = enTransSet.cards[jpNum] || enTransSet.cards[rawNum];
+              if (fallback && fallback.category === jpCard.category) transCard = fallback;
+            }
             if (transCard) {
               setStatus('', false);
               document.getElementById('results').innerHTML = `

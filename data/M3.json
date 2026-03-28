@@ -2884,8 +2884,8 @@
         "name": "Nihil Zero"
       },
       "image": null,
-      "effect": "Heal 20 damage and 1 Special Condition from your Active Pokemon.",
-      "subcategory": "Item"
+      "effect": "While attached to a Grass Pokemon, this card provides 1 Grass Energy. The Grass Pokémon this card is attached to has +20 HP",
+      "subcategory": "Special Energy"
     },
     "079": {
       "name": "テレパス超エネルギー",
@@ -2897,8 +2897,8 @@
         "name": "Nihil Zero"
       },
       "image": null,
-      "effect": "Discard any number of cards from your hand. Then, draw cards until you have 5 cards in your hand.",
-      "subcategory": "Supporter"
+      "effect": "While attached to a Psychic Pokémon, this card provides 1 Psychic Energy. When you attach this card from your hand to one of your Psychic Pokémon, you may search your deck for up to 2 Basic Psychic Pokémon and put them onto your Bench. Then shuffle your deck.",
+      "subcategory": "Special Energy"
     },
     "080": {
       "name": "ロック闘エネルギー",
@@ -2910,8 +2910,8 @@
         "name": "Nihil Zero"
       },
       "image": null,
-      "effect": "Flip a coin. If heads, search your deck for a Pokemon, reveal it, and put it into your hand. Then, shuffle your deck.",
-      "subcategory": "Item"
+      "effect": "While attached to a Fighting Pokemon, this card provides 1 Fighting Energy. Prevent all effects of attacks used by your opponent's Pokémon done to the Fighting Pokémon this card is attached to. (Existing effects are not removed. Damage is not an effect.)",
+      "subcategory": "Special Energy"
     },
     "081": {
       "name": "コフーライ",

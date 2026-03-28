@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ptcg-matcher-v2';
+const CACHE_NAME = 'ptcg-matcher-v3';
 const APP_SHELL = [
   './',
   './index.html',
