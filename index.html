@@ -140,7 +140,19 @@
 
   <script>
     const API = 'https://api.tcgdex.net/v2';
+    const DATA_VERSION = 2; // Bump to invalidate sideload localStorage cache
     const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
+
+    // Invalidate old sideload caches when data version changes
+    try {
+      const storedVer = localStorage.getItem('data_version');
+      if (storedVer !== String(DATA_VERSION)) {
+        for (const key of Object.keys(localStorage)) {
+          if (key.startsWith('sideload_cache_')) localStorage.removeItem(key);
+        }
+        localStorage.setItem('data_version', String(DATA_VERSION));
+      }
+    } catch {}
 
     // In-memory caches — survive re-searches within a session
     const apiCache = new Map();
