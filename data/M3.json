@@ -901,7 +901,12 @@
       "weakness": {
         "type": "Metal",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "ツンドラウォール"
+        }
+      ]
     },
     "024": {
       "name": "ボルケニオン",
@@ -984,7 +989,10 @@
         {
           "name": "Double Scratch",
           "damage": "10x",
-          "effect": "Flip 2 coins. This attack does 10 damage for each heads"
+          "effect": "Flip 2 coins. This attack does 10 damage for each heads",
+          "cost": [
+            "Lightning"
+          ]
         }
       ],
       "weakness": {
@@ -1203,7 +1211,12 @@
       "weakness": {
         "type": "Metal",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "ひかりのつばさ"
+        }
+      ]
     },
     "031": {
       "name": "クチート",
@@ -2532,7 +2545,12 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "おくのてキャッチ"
+        }
+      ]
     },
     "062": {
       "name": "カビゴン",
@@ -3110,7 +3128,12 @@
       "weakness": {
         "type": "Metal",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "ツンドラウォール"
+        }
+      ]
     },
     "085": {
       "name": "デデンネ",
@@ -3501,7 +3524,12 @@
       "weakness": {
         "type": "Fire",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "スナイパーアイ"
+        }
+      ]
     },
     "094": {
       "name": "エンニュートex",
@@ -3625,7 +3653,12 @@
       "weakness": {
         "type": "Metal",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "ひかりのつばさ"
+        }
+      ]
     },
     "097": {
       "name": "メガジガルデex",
@@ -4027,7 +4060,12 @@
       "weakness": {
         "type": "Metal",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "ひかりのつばさ"
+        }
+      ]
     },
     "113": {
       "name": "メガジガルデex",
@@ -4112,7 +4150,12 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "おくのてキャッチ"
+        }
+      ]
     },
     "115": {
       "name": "メイのはげまし",

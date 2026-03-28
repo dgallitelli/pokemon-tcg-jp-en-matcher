@@ -228,7 +228,13 @@
       "weakness": {
         "type": "Grass",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Tyrannoguts",
+          "effect": "If this Pokemon has any Special Energy attached, it gets +150 HP."
+        }
+      ]
     },
     "105": {
       "name": "Yveltal ex",
@@ -646,7 +652,13 @@
       "weakness": {
         "type": "Grass",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Tyrannoguts",
+          "effect": "If this Pokemon has any Special Energy attached, it gets +150 HP."
+        }
+      ]
     },
     "121": {
       "name": "Meowth ex",
@@ -767,7 +779,13 @@
       "weakness": {
         "type": "Grass",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Tyrannoguts",
+          "effect": "If this Pokemon has any Special Energy attached, it gets +150 HP."
+        }
+      ]
     },
     "001": {
       "name": "Spinarak",
@@ -1798,7 +1816,13 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Tundra Wall",
+          "effect": "While this Pokemon is in play, all of your Pokemon that have a Water Energy attached take 50 less damage from attacks from your opponent's Pokemon. This Ability does not stack."
+        }
+      ]
     },
     "027": {
       "name": "Luxio",
@@ -1923,7 +1947,13 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Roar of the Tiger",
+          "effect": "If your opponent's Active Pokemon is a Pokemon ex, you can evolve this Pokemon on your first turn, or on the first turn this Pokemon is put into play."
+        }
+      ]
     },
     "030": {
       "name": "Clefairy",
@@ -2098,7 +2128,13 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Wings of Light",
+          "effect": "Prevent all effects of your opponent's Abilities done to this Pokemon."
+        }
+      ]
     },
     "034": {
       "name": "Meowstic",
@@ -2314,7 +2350,13 @@
       "weakness": {
         "type": "Grass",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Fragrance Collection",
+          "effect": "Once during your turn, you may search your deck for up to 2 Basic Psychic Energy, reveal them, and put them into your hand. Then, shuffle your deck."
+        }
+      ]
     },
     "039": {
       "name": "Hippopotas",
@@ -2707,7 +2749,13 @@
       "weakness": {
         "type": "Grass",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Tyrannoguts",
+          "effect": "If this Pokemon has any Special Energy attached, it gets +150 HP."
+        }
+      ]
     },
     "048": {
       "name": "Gastly",
@@ -2904,7 +2952,13 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Infinite Shadow",
+          "effect": "If this Pokemon would be Knocked Out by damage from an opponent's Pokemon's attack, instead of discarding it, return it to your hand. (Discard all other cards attached to this Pokemon that are not Pokemon.)"
+        }
+      ]
     },
     "053": {
       "name": "Yveltal ex",
@@ -3117,7 +3171,13 @@
       "resistance": {
         "type": "Grass",
         "value": "-30"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Sky Hunt",
+          "effect": "Once during your turn, you may flip a coin. If heads, discard a random card from your opponent's hand."
+        }
+      ]
     },
     "058": {
       "name": "Aegislash",
@@ -3285,7 +3345,13 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Tundra Wall",
+          "effect": "Your Pokemon with any Water Energy attached to them take 50 less damage from attacks from your opponent's Pokemon. The effect of this Ability does not stack."
+        }
+      ]
     },
     "062": {
       "name": "Meowth ex",
@@ -3413,7 +3479,13 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Last-Ditch Catch",
+          "effect": "Once during your turn, when you play this Pokemon from your hand onto your Bench, you may use this Ability. Search your deck for a Supporter card, reveal it, and put it into your hand. Then, shuffle your deck."
+        }
+      ]
     },
     "065": {
       "name": "Diggersby",
@@ -4071,7 +4143,13 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Roar of the Tiger",
+          "effect": "If your opponent's Active Pokemon is a Pokemon ex, you can evolve this Pokemon on your first turn, or on the first turn this Pokemon is put into play."
+        }
+      ]
     },
     "094": {
       "name": "Clefairy",
@@ -4160,7 +4238,13 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Wings of Light",
+          "effect": "Prevent all effects of your opponent's Abilities done to this Pokemon."
+        }
+      ]
     },
     "096": {
       "name": "Probopass",
@@ -4207,7 +4291,13 @@
       "weakness": {
         "type": "Grass",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Fragrance Collection",
+          "effect": "Once during your turn, you may search your deck for up to 2 Basic Psychic Energy, reveal them, and put them into your hand. Then, shuffle your deck."
+        }
+      ]
     },
     "097": {
       "name": "Drapion",
@@ -4252,7 +4342,13 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Infinite Shadow",
+          "effect": "If this Pokemon would be Knocked Out by damage from an opponent's Pokemon's attack, instead of discarding it, return it to your hand. (Discard all other cards attached to this Pokemon that are not Pokemon.)"
+        }
+      ]
     },
     "098": {
       "name": "Doublade",
@@ -4292,7 +4388,13 @@
       "resistance": {
         "type": "Grass",
         "value": "-30"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Sky Hunt",
+          "effect": "Once during your turn, you may flip a coin. If heads, discard a random card from your opponent's hand."
+        }
+      ]
     },
     "099": {
       "name": "Raticate",
@@ -4335,7 +4437,13 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "abilities": [
+        {
+          "name": "Tundra Wall",
+          "effect": "Your Pokemon with any Water Energy attached to them take 50 less damage from attacks from your opponent's Pokemon. The effect of this Ability does not stack."
+        }
+      ]
     }
   },
   "jpSetId": "M3"
