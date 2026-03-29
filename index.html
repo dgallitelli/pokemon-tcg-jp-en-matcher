@@ -339,6 +339,53 @@
     .browse-filter-btn:hover { border-color: var(--gold); color: var(--gold); }
     .browse-filter-btn.active { background: var(--gold); color: #1a1a2e; border-color: var(--gold); font-weight: 700; }
 
+    /* ── Card image modal ───────────────────────────────────── */
+    .card-panel img { cursor: zoom-in; }
+    #img-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+      animation: modal-fade-in 0.18s ease;
+    }
+    #img-modal.open { display: flex; }
+    @keyframes modal-fade-in {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    #img-modal img {
+      max-width: min(92vw, 480px);
+      max-height: 92vh;
+      border-radius: 12px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.8), 0 0 0 1px #ffffff10;
+      animation: modal-card-in 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    @keyframes modal-card-in {
+      from { transform: scale(0.82); opacity: 0; }
+      to   { transform: scale(1);    opacity: 1; }
+    }
+    #img-modal-close {
+      position: absolute;
+      top: 1.2rem; right: 1.4rem;
+      background: none;
+      border: 1px solid #ffffff30;
+      color: #fff;
+      font-size: 1.4rem;
+      line-height: 1;
+      width: 2.2rem; height: 2.2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s, border-color 0.15s;
+      padding: 0;
+      transform: none;
+    }
+    #img-modal-close:hover { background: #ffffff18; border-color: #ffffff60; transform: none; box-shadow: none; }
+
     /* ── Mobile ─────────────────────────────────────────────── */
     @media (max-width: 680px) {
       body { padding: 1rem 0.5rem; }
@@ -361,6 +408,11 @@
   </style>
 </head>
 <body>
+  <div id="img-modal" role="dialog" aria-modal="true" aria-label="Card image">
+    <button id="img-modal-close" aria-label="Close">✕</button>
+    <img id="img-modal-img" src="" alt="Card full view">
+  </div>
+
   <header>
     <h1><a href="https://dgallitelli.github.io/pokemon-tcg-jp-en-matcher/" class="site-title"><img src="favicon.svg" alt="Logo" class="title-logo">🇯🇵 → 🇺🇸 Pokémon Card Matcher</a></h1>
     <p class="subtitle">Enter a Japanese card's set ID and number to find its English equivalent via TCGdex</p>
@@ -569,7 +621,7 @@
     }
 
     function renderCard(card, lang, badge) {
-      const imgUrl = card.image ? card.image + '/high.webp' : sideloadImageUrl(card);
+      const imgUrl = card.image ? card.image + '/high.webp' : sideloadImageUrl(card) || card._fallbackImage || null;
       const attacks = (card.attacks || []).map(a => {
         const cost = (a.cost || []).map(t => energyBadge(t)).join('');
         let line = `<div class="atk-row">${cost ? `<span class="atk-cost">${cost}</span>` : ''}<span class="atk-name">${safeHtml(a.name)}</span>${a.damage != null ? `<span class="atk-dmg">${safeHtml(String(a.damage))}</span>` : ''}</div>`;
@@ -1013,6 +1065,11 @@
               if (fallback && fallback.category === jpCard.category) transCard = fallback;
             }
             if (transCard) {
+              // If the EN translation card has no image source, fall back to the JP card's image
+              if (!transCard.image && !sideloadImageUrl(transCard)) {
+                const jpImgUrl = jpCard.image ? jpCard.image + '/high.webp' : sideloadImageUrl(jpCard);
+                if (jpImgUrl) transCard = { ...transCard, _fallbackImage: jpImgUrl };
+              }
               setStatus('', false);
               document.getElementById('results').innerHTML = `
                 <div class="cards-container">
@@ -1237,6 +1294,17 @@
     });
     document.getElementById('setInput').addEventListener('keydown', e => {
       if (e.key === 'Enter') doSearch();
+    });
+
+    // Card image modal
+    const imgModal = document.getElementById('img-modal');
+    const imgModalImg = document.getElementById('img-modal-img');
+    document.getElementById('img-modal-close').addEventListener('click', () => imgModal.classList.remove('open'));
+    imgModal.addEventListener('click', e => { if (e.target === imgModal) imgModal.classList.remove('open'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') imgModal.classList.remove('open'); });
+    document.addEventListener('click', e => {
+      const img = e.target.closest('.card-panel img');
+      if (img) { imgModalImg.src = img.src; imgModal.classList.add('open'); }
     });
 
     // Unregister any previously installed service worker
