@@ -148,8 +148,10 @@
       min-width: 280px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.4);
     }
-    .card-panel h2 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
-    .card-panel .lang-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 700; font-family: var(--font-display); letter-spacing: 0.04em; margin-bottom: 0.8rem; }
+    .card-panel h2 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+    .panel-header { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.8rem; }
+    .card-panel .lang-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 700; font-family: var(--font-display); letter-spacing: 0.04em; }
+    .confidence-pip { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 3px; font-family: var(--font-display); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: #e67e2218; border: 1px solid #e67e2240; color: var(--orange); }
     .lang-badge.ja { background: var(--red); color: white; }
     .lang-badge.en { background: var(--blue); color: white; }
     .lang-badge.trans { background: var(--purple); color: white; }
@@ -164,48 +166,50 @@
       transform: scale(1.02) rotate(-0.5deg);
       box-shadow: 0 14px 40px rgba(0,0,0,0.6);
     }
+    .card-panel.no-image h2 { font-size: 1.6rem; margin-bottom: 0.8rem; }
+    .card-panel.no-image .card-meta { font-size: 0.88rem; line-height: 1.8; }
     .card-meta { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
-    .card-meta span { color: var(--text); }
+    .card-meta span { color: var(--text); font-weight: 500; }
+    .lbl { color: var(--text-faint); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; margin-right: 0.2rem; }
 
-    /* ── Match info ─────────────────────────────────────────── */
-    .match-info {
-      text-align: center;
-      background: var(--surface);
-      border: 1px solid #ffffff0d;
-      border-radius: 8px;
-      padding: 1rem 1.5rem;
-      max-width: 740px;
-      margin: 1rem auto 0;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-    }
-    .match-info .score {
-      display: inline-block;
-      padding: 0.2rem 0.8rem;
-      border-radius: 20px;
-      background: #2ecc7122;
-      border: 1px solid #2ecc7144;
-      color: var(--green);
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    .match-info .score.score-low {
-      background: #e67e2222;
-      border-color: #e67e2244;
-      color: var(--orange);
-    }
+    /* ── Match info (minimal — just error/no-match) ─────────── */
+    .match-info { text-align: center; font-size: 0.85rem; color: var(--text-muted); padding: 0.5rem 0; }
     .match-info .no-match { color: var(--orange); }
 
-    /* ── Candidates ─────────────────────────────────────────── */
-    .candidates { max-width: 740px; margin: 1rem auto 0; }
-    .candidates summary { cursor: pointer; color: var(--text-faint); font-size: 0.8rem; }
-    .candidates ul { list-style: none; padding: 0.5rem 0; }
-    .candidates li { padding: 0.3rem 0; font-size: 0.8rem; color: var(--text-muted); cursor: pointer; }
-    .candidates li:hover { color: var(--gold); }
+    /* ── Share button ───────────────────────────────────────── */
+    .share-btn {
+      background: none;
+      border: 1px solid #2a3a5e;
+      border-radius: 5px;
+      padding: 0.3rem 0.8rem;
+      color: var(--text-faint);
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s;
+      display: block;
+      margin: 0.8rem auto 0;
+    }
+    .share-btn:hover { border-color: var(--gold); color: var(--gold); transform: none; box-shadow: none; }
+    .share-btn.copied { border-color: var(--green); color: var(--green); transform: none; box-shadow: none; }
+
+    /* ── Wrong card ─────────────────────────────────────────── */
+    .wrong-card-btn {
+      background: none; border: none;
+      color: var(--text-faint); font-size: 0.75rem;
+      cursor: pointer; padding: 0.4rem 0;
+      text-decoration: underline;
+      display: block; text-align: center; margin: 0.2rem auto 0;
+    }
+    .wrong-card-btn:hover { color: var(--text-muted); transform: none; box-shadow: none; }
+    .wrong-card-list {
+      max-width: 500px; margin: 0.4rem auto 0;
+      background: var(--surface); border: 1px solid #ffffff0d;
+      border-radius: 8px; overflow: hidden;
+    }
+    .wrong-card-list ul { list-style: none; padding: 0.3rem 0; }
+    .wrong-card-list li { padding: 0.4rem 1rem; font-size: 0.8rem; color: var(--text-muted); cursor: pointer; }
+    .wrong-card-list li:hover { background: #ffffff05; color: var(--gold); }
 
     /* ── Animated arrow ─────────────────────────────────────── */
     .arrow {
@@ -230,17 +234,29 @@
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
+    /* ── Browse link ────────────────────────────────────────── */
+    .browse-link {
+      display: block; text-align: center;
+      color: var(--text-faint); font-size: 0.75rem;
+      margin-top: -1.2rem; margin-bottom: 1.5rem;
+      cursor: pointer; background: none; border: none;
+      text-decoration: underline; font-family: var(--font-body);
+    }
+    .browse-link:hover { color: var(--text-muted); transform: none; box-shadow: none; }
+
     /* ── How-to section ─────────────────────────────────────── */
     .howto {
       max-width: 740px;
-      margin: 0 auto 2.5rem;
+      margin: 0 auto 2rem;
       background: var(--surface);
       border: 1px solid #ffffff0d;
       border-left: 3px solid var(--gold);
       border-radius: 12px;
-      padding: 1.5rem 2rem;
+      padding: 1rem 1.5rem;
       box-shadow: 0 4px 16px rgba(0,0,0,0.3);
     }
+    .howto details:not([open]) { /* tight when collapsed */ }
+    .howto details:not([open]) + * { margin-top: 0; }
     .howto h2 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--gold); margin-bottom: 1rem; }
     .howto summary { cursor: pointer; list-style: none; }
     .howto summary::-webkit-details-marker { display: none; }
@@ -267,8 +283,6 @@
     .try-btn:hover { background: #ffed4a; transform: translateY(-1px); }
 
     /* ── Browse mode ────────────────────────────────────────── */
-    .browse-btn { margin-left: 0.5rem; padding: 0.6rem 1rem; border: 1px solid var(--gold); border-radius: 6px; background: transparent; color: var(--gold); font-family: var(--font-display); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; align-self: end; transition: background 0.15s, transform 0.1s; }
-    .browse-btn:hover { background: var(--gold-dim); transform: translateY(-1px); }
     #browsePage { max-width: 960px; margin: 0 auto; }
     .browse-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
     .browse-header h2 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--gold); }
@@ -297,12 +311,14 @@
     .energy-badge { display: inline-block; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.6rem; font-weight: 700; color: #fff; text-shadow: 0 1px 1px rgba(0,0,0,0.4); vertical-align: middle; margin: 0 1px; line-height: 1.3; }
 
     /* ── Attacks & abilities ────────────────────────────────── */
-    .atk-section { margin-top: 0.6rem; }
-    .atk-row { display: flex; align-items: center; gap: 0.4rem; margin: 0.3rem 0; flex-wrap: wrap; }
+    .atk-section { margin-top: 0.8rem; border-top: 1px solid #ffffff08; padding-top: 0.5rem; }
+    .atk-block { padding: 0.35rem 0; border-bottom: 1px solid #ffffff06; }
+    .atk-block:last-child { border-bottom: none; }
+    .atk-row { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
     .atk-cost { display: flex; gap: 1px; flex-shrink: 0; }
-    .atk-name { font-weight: 600; color: var(--text); }
-    .atk-dmg { margin-left: auto; font-family: var(--font-display); font-weight: 700; color: var(--gold); font-size: 0.9rem; }
-    .atk-effect { font-size: 0.75rem; color: #999; font-style: italic; margin: 0.1rem 0 0.4rem 0; line-height: 1.4; }
+    .atk-name { font-weight: 700; font-size: 0.9rem; color: var(--text); }
+    .atk-dmg { margin-left: auto; font-family: var(--font-display); font-weight: 700; color: var(--gold); font-size: 0.95rem; }
+    .atk-effect { font-size: 0.76rem; color: #999; font-style: italic; margin: 0.2rem 0 0 0.2rem; line-height: 1.5; padding-left: 0.5rem; border-left: 2px solid #ffffff10; }
     .ability-row { display: flex; align-items: center; gap: 0.4rem; margin: 0.3rem 0; }
     .ability-label { background: var(--red); color: #fff; font-size: 0.6rem; font-weight: 700; padding: 0.1rem 0.4rem; border-radius: 3px; }
     .ability-name { font-weight: 600; color: var(--orange); }
@@ -350,41 +366,69 @@
       backdrop-filter: blur(6px);
       align-items: center;
       justify-content: center;
+      padding: 1rem;
       animation: modal-fade-in 0.18s ease;
     }
     #img-modal.open { display: flex; }
-    @keyframes modal-fade-in {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-    #img-modal img {
-      max-width: min(92vw, 480px);
+    @keyframes modal-fade-in { from { opacity: 0; } to { opacity: 1; } }
+    .modal-inner {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      max-width: 820px;
       max-height: 92vh;
-      border-radius: 12px;
-      box-shadow: 0 24px 80px rgba(0,0,0,0.8), 0 0 0 1px #ffffff10;
       animation: modal-card-in 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
     @keyframes modal-card-in {
-      from { transform: scale(0.82); opacity: 0; }
+      from { transform: scale(0.88); opacity: 0; }
       to   { transform: scale(1);    opacity: 1; }
     }
+    #img-modal-img {
+      max-width: min(42vw, 340px);
+      max-height: 88vh;
+      border-radius: 12px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.8), 0 0 0 1px #ffffff10;
+      flex-shrink: 0;
+    }
+    .modal-text {
+      flex: 1;
+      min-width: 220px;
+      max-height: 88vh;
+      overflow-y: auto;
+      color: var(--text);
+      padding-right: 0.5rem;
+    }
+    .modal-text h2 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    .modal-text .lang-badge { margin-bottom: 0.8rem; }
+    .modal-text .card-meta { font-size: 0.85rem; line-height: 1.7; }
+    .modal-text .atk-section { margin-top: 0.8rem; border-top: 1px solid #ffffff15; padding-top: 0.5rem; }
     #img-modal-close {
       position: absolute;
-      top: 1.2rem; right: 1.4rem;
+      top: 1rem; right: 1rem;
       background: none;
       border: 1px solid #ffffff30;
       color: #fff;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       line-height: 1;
-      width: 2.2rem; height: 2.2rem;
+      width: 2rem; height: 2rem;
       border-radius: 50%;
       cursor: pointer;
       display: flex; align-items: center; justify-content: center;
       transition: background 0.15s, border-color 0.15s;
-      padding: 0;
-      transform: none;
+      padding: 0; transform: none;
     }
     #img-modal-close:hover { background: #ffffff18; border-color: #ffffff60; transform: none; box-shadow: none; }
+    @media (max-width: 680px) {
+      .modal-inner { flex-direction: column; align-items: center; overflow-y: auto; }
+      #img-modal-img { max-width: min(80vw, 300px); max-height: 50vh; }
+      .modal-text { min-width: unset; width: 100%; max-height: unset; }
+    }
 
     /* ── Mobile ─────────────────────────────────────────────── */
     @media (max-width: 680px) {
@@ -410,7 +454,10 @@
 <body>
   <div id="img-modal" role="dialog" aria-modal="true" aria-label="Card image">
     <button id="img-modal-close" aria-label="Close">✕</button>
-    <img id="img-modal-img" src="" alt="Card full view">
+    <div class="modal-inner">
+      <img id="img-modal-img" src="" alt="Card full view">
+      <div id="img-modal-text" class="modal-text"></div>
+    </div>
   </div>
 
   <header>
@@ -453,11 +500,11 @@
     </div>
     <div class="field">
       <label>Card #</label>
-      <input id="cardNum" type="text" placeholder="021">
+      <input id="cardNum" type="text" placeholder="021" inputmode="numeric" pattern="[0-9]*">
     </div>
     <button id="searchBtn" onclick="doSearch()">Match</button>
-    <button class="browse-btn" onclick="browseSet()">Browse Set</button>
   </div>
+  <button class="browse-link" onclick="browseSet()">Browse set →</button>
 
   <div id="status" class="status"></div>
   <div id="results"></div>
@@ -620,18 +667,20 @@
       return `<span class="energy-badge" style="background:${c}">${safeHtml(type.slice(0,3))}</span>`;
     }
 
-    function renderCard(card, lang, badge) {
+    function renderCard(card, lang, badge, score) {
       const imgUrl = card.image ? card.image + '/high.webp' : sideloadImageUrl(card) || card._fallbackImage || null;
       const attacks = (card.attacks || []).map(a => {
         const cost = (a.cost || []).map(t => energyBadge(t)).join('');
-        let line = `<div class="atk-row">${cost ? `<span class="atk-cost">${cost}</span>` : ''}<span class="atk-name">${safeHtml(a.name)}</span>${a.damage != null ? `<span class="atk-dmg">${safeHtml(String(a.damage))}</span>` : ''}</div>`;
-        if (a.effect) line += `<div class="atk-effect">${safeHtml(a.effect)}</div>`;
-        return line;
+        let block = `<div class="atk-block"><div class="atk-row">${cost ? `<span class="atk-cost">${cost}</span>` : ''}<span class="atk-name">${safeHtml(a.name)}</span>${a.damage != null ? `<span class="atk-dmg">${safeHtml(String(a.damage))}</span>` : ''}</div>`;
+        if (a.effect) block += `<div class="atk-effect">${safeHtml(a.effect)}</div>`;
+        block += `</div>`;
+        return block;
       }).join('');
       const abilities = (card.abilities || []).map(a => {
-        let line = `<div class="ability-row"><span class="ability-label">Ability</span> <span class="ability-name">${safeHtml(a.name)}</span></div>`;
-        if (a.effect) line += `<div class="atk-effect">${safeHtml(a.effect)}</div>`;
-        return line;
+        let block = `<div class="atk-block"><div class="ability-row"><span class="ability-label">Ability</span> <span class="ability-name">${safeHtml(a.name)}</span></div>`;
+        if (a.effect) block += `<div class="atk-effect">${safeHtml(a.effect)}</div>`;
+        block += `</div>`;
+        return block;
       }).join('');
       const cardName = safeHtml(card.name);
       const setName = safeHtml(card.set?.name || '?');
@@ -646,26 +695,30 @@
       const subcategory = card.subcategory ? safeHtml(card.subcategory) : null;
       const badgeLabel = badge || (lang === 'ja' ? '日本語 Japanese' : '🇺🇸 English');
       const badgeClass = badge ? 'trans' : lang;
+      const confidencePip = (score !== undefined && score < 70)
+        ? `<span class="confidence-pip">${score < 40 ? 'Low' : 'Med'} match</span>` : '';
       return `
-        <div class="card-panel">
-          <span class="lang-badge ${badgeClass}">${badgeLabel}</span>
+        <div class="card-panel${imgUrl ? '' : ' no-image'}">
+          <div class="panel-header">
+            <span class="lang-badge ${badgeClass}">${badgeLabel}</span>
+            ${confidencePip}
+          </div>
           <h2>${cardName}</h2>
-          ${imgUrl ? `<img src="${imgUrl}" alt="${cardName}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="img-placeholder" style="display:none;width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:8px;margin-bottom:1rem;align-items:center;justify-content:center;color:#555;font-size:2rem">🃏</div>` : '<div style="width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:8px;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;color:#555;font-size:2rem">🃏</div>'}
+          ${imgUrl ? `<img src="${imgUrl}" alt="${cardName}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="img-placeholder" style="display:none;width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:8px;margin-bottom:1rem;align-items:center;justify-content:center;color:#555;font-size:2rem">🃏</div>` : ''}
           <div class="card-meta">
-            Set: <span>${setName}</span> (${cardId})<br>
-            ${card.category ? `Category: <span>${safeHtml(card.category)}${subcategory ? ` — ${subcategory}` : ''}</span><br>` : ''}
-            ${hp ? `HP: <span>${hp}</span><br>` : ''}
-            ${stage ? `Stage: <span>${stage}</span><br>` : ''}
-            ${illustrator ? `Illustrator: <span>${illustrator}</span><br>` : ''}
-            ${types ? `Type: ${types}<br>` : ''}
-            ${weakness ? `Weakness: ${weakness}<br>` : ''}
-            ${resistance ? `Resistance: ${resistance}<br>` : ''}
-            ${retreat ? `Retreat: ${retreat}<br>` : ''}
+            <span class="lbl">Set</span><span>${setName}</span> <span style="color:var(--text-faint)">(${cardId})</span><br>
+            ${card.category ? `<span class="lbl">Category</span><span>${safeHtml(card.category)}${subcategory ? ` — ${subcategory}` : ''}</span><br>` : ''}
+            ${hp ? `<span class="lbl">HP</span><span>${hp}</span><br>` : ''}
+            ${stage ? `<span class="lbl">Stage</span><span>${stage}</span><br>` : ''}
+            ${illustrator ? `<span class="lbl">Art</span><span>${illustrator}</span><br>` : ''}
+            ${types ? `<span class="lbl">Type</span>${types}<br>` : ''}
+            ${weakness ? `<span class="lbl">Weak</span>${weakness}<br>` : ''}
+            ${resistance ? `<span class="lbl">Resist</span>${resistance}<br>` : ''}
+            ${retreat ? `<span class="lbl">Retreat</span>${retreat}<br>` : ''}
             ${abilities ? `<div class="atk-section">${abilities}</div>` : ''}
             ${attacks ? `<div class="atk-section">${attacks}</div>` : ''}
-            ${card.category === 'Trainer' && card.effect ? `<br>Effect: <span>${safeHtml(card.effect)}</span><br>` : ''}
-            ${card.category === 'Energy' && card.effect ? `<br>Effect: <span>${safeHtml(card.effect)}</span><br>` : ''}
-            ${card.description ? `<br><em style="color:#777">${safeHtml(card.description)}</em>` : ''}
+            ${(card.category === 'Trainer' || card.category === 'Energy') && card.effect ? `<div style="margin-top:0.6rem;font-size:0.8rem;color:var(--text-muted);font-style:italic;line-height:1.5">${safeHtml(card.effect)}</div>` : ''}
+            ${card.description ? `<div style="margin-top:0.5rem;font-size:0.75rem;color:#666;font-style:italic">${safeHtml(card.description)}</div>` : ''}
           </div>
         </div>`;
     }
@@ -962,6 +1015,7 @@
       closeBrowse(); // Close set browser if open
 
       searchBtn.disabled = true;
+      try { localStorage.setItem('lastSet', setId); } catch {}
       try {
         const setUpper = setId.toUpperCase();
         const cardNum = padNum(rawNum);
@@ -1077,7 +1131,7 @@
                   <div class="arrow">→</div>
                   ${renderCard(transCard, 'en', '🔄 Translation')}
                 </div>
-                <div class="match-info">Matched via <span style="color:#ffd700">${safeHtml(enTransSet.name || enTransSetId)}</span> (EN translation set).</div>
+                <button class="share-btn" id="shareBtn">🔗 Copy link</button>
                 ${renderNavRow()}`;
               return;
             }
@@ -1200,19 +1254,16 @@
           <div class="cards-container">
             ${renderCard(jpCard, 'ja')}
             <div class="arrow">→</div>
-            ${renderCard(best.card, 'en')}
-          </div>
-          <div class="match-info">
-            Match confidence: <span class="score${best.score < 70 ? ' score-low' : ''}">${scoreLabel(best.score)}</span><br>
-            Matched on: ${best.reasons.join(', ') || 'none'}
+            ${renderCard(best.card, 'en', null, best.score)}
           </div>
           ${scored.length > 1 ? `
-          <details class="candidates">
-            <summary>Other candidates (${scored.length - 1})</summary>
+          <button class="wrong-card-btn" id="wrongCardBtn">Wrong card? Try another →</button>
+          <div class="wrong-card-list" id="wrongCardList" style="display:none">
             <ul>${scored.slice(1).map(s =>
-              `<li class="candidate-item" data-card-id="${safeHtml(s.card.id)}" data-score="${s.score}" tabindex="0">${safeHtml(s.card.name)} — ${safeHtml(s.card.set?.name || s.card.id)} (score: ${s.score})</li>`
+              `<li class="candidate-item" data-card-id="${safeHtml(s.card.id)}" data-score="${s.score}" tabindex="0">${safeHtml(s.card.name)} — ${safeHtml(s.card.set?.name || s.card.id)}</li>`
             ).join('')}</ul>
-          </details>` : ''}
+          </div>` : ''}
+          <button class="share-btn" id="shareBtn">🔗 Copy link</button>
           ${renderNavRow()}`;
 
         // Attach event listeners to candidate items (avoids inline onclick with user-controlled IDs)
@@ -1257,18 +1308,7 @@
       // Replace the English panel
       const panels = document.querySelectorAll('.card-panel');
       if (panels.length >= 2) {
-        panels[1].outerHTML = renderCard(card, 'en');
-      }
-      // Update match confidence display for the selected alternate
-      if (score !== undefined) {
-        const matchInfo = document.querySelector('.match-info');
-        if (matchInfo) {
-          const scoreEl = matchInfo.querySelector('.score');
-          if (scoreEl) {
-            scoreEl.textContent = scoreLabel(score);
-            scoreEl.className = 'score' + (score < 70 ? ' score-low' : '');
-          }
-        }
+        panels[1].outerHTML = renderCard(card, 'en', null, score);
       }
     }
 
@@ -1296,15 +1336,53 @@
       if (e.key === 'Enter') doSearch();
     });
 
+    // Restore last-used set
+    const savedSet = localStorage.getItem('lastSet');
+    if (savedSet && !document.getElementById('setInput').value) {
+      document.getElementById('setInput').value = savedSet;
+    }
+
     // Card image modal
     const imgModal = document.getElementById('img-modal');
     const imgModalImg = document.getElementById('img-modal-img');
+    const imgModalText = document.getElementById('img-modal-text');
     document.getElementById('img-modal-close').addEventListener('click', () => imgModal.classList.remove('open'));
     imgModal.addEventListener('click', e => { if (e.target === imgModal) imgModal.classList.remove('open'); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') imgModal.classList.remove('open'); });
     document.addEventListener('click', e => {
+      // Card image → open modal with image + text
       const img = e.target.closest('.card-panel img');
-      if (img) { imgModalImg.src = img.src; imgModal.classList.add('open'); }
+      if (img) {
+        imgModalImg.src = img.src;
+        imgModalText.innerHTML = '';
+        const panel = img.closest('.card-panel');
+        if (panel) {
+          const header = panel.querySelector('.panel-header');
+          const name = panel.querySelector('h2');
+          const meta = panel.querySelector('.card-meta');
+          if (header) imgModalText.appendChild(header.cloneNode(true));
+          if (name) { const h = document.createElement('h2'); h.textContent = name.textContent; imgModalText.appendChild(h); }
+          if (meta) imgModalText.appendChild(meta.cloneNode(true));
+        }
+        imgModal.classList.add('open');
+        return;
+      }
+      // Wrong card toggle
+      if (e.target.closest('#wrongCardBtn')) {
+        const list = document.getElementById('wrongCardList');
+        if (list) list.style.display = list.style.display === 'none' ? '' : 'none';
+        return;
+      }
+      // Share button
+      if (e.target.closest('#shareBtn')) {
+        const setId = document.getElementById('setInput').value.trim();
+        const num = document.getElementById('cardNum').value.trim();
+        const url = `${location.origin}${location.pathname}?set=${encodeURIComponent(setId)}&num=${encodeURIComponent(num)}`;
+        navigator.clipboard.writeText(url).then(() => {
+          const btn = document.getElementById('shareBtn');
+          if (btn) { btn.textContent = '✓ Copied!'; btn.classList.add('copied'); setTimeout(() => { btn.textContent = '🔗 Copy link'; btn.classList.remove('copied'); }, 2000); }
+        }).catch(() => {});
+      }
     });
 
     // Unregister any previously installed service worker
