@@ -1,15 +1,15 @@
 # JP → EN Pokemon TCG Card Matcher
 
-A client-side tool to find the English equivalent of a Japanese Pokemon TCG card. Works offline as a PWA.
+A quick-reference tool for playing Pokémon TCG with Japanese cards. When you're mid-game and need to know what a Japanese card does, enter its set ID and card number to instantly see the English card image (where available) and a full English translation of the card text — attacks, abilities, effects, HP, weakness, and retreat cost.
 
 **Live:** [dgallitelli.github.io/pokemon-tcg-jp-en-matcher](https://dgallitelli.github.io/pokemon-tcg-jp-en-matcher/)
 
 ## How It Works
 
-1. Enter a Japanese set ID (e.g. `SV5a`, `M3`) and card number
+1. Enter a Japanese set ID (e.g. `SV5a`, `M3`) and card number — both are printed at the bottom-left of every Japanese card
 2. The tool fetches the Japanese card from the [TCGdex API](https://tcgdex.dev/) or local sideload data
 3. Finds the English equivalent using multiple matching strategies (see below)
-4. Displays both cards side by side with a confidence score
+4. Shows the English card image alongside a full English translation of all card text
 
 ## Matching Strategies
 
@@ -56,8 +56,7 @@ Card data includes: name, HP, types, stage, attacks (name/cost/damage/effect), a
 - **Set browser** — visual grid of all cards in a set with category filters (Pokemon/Trainer/Energy)
 - **Energy cost rendering** — attack costs shown as colored type badges
 - **Deep linking** — shareable URLs like `?set=M3&num=051`
-- **PWA / offline support** — service worker caches app shell and sideload data
-- **Mobile responsive** — adapts layout for narrow screens
+- **Mobile responsive** — adapts layout for narrow screens so it works on a phone at the table
 
 ## Data Pipeline
 
