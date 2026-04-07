@@ -145,7 +145,10 @@
         "type": "Fighting",
         "value": "-30"
       },
-      "evolveFrom": "ヤンヤンマ"
+      "evolveFrom": "ヤンヤンマ",
+      "dexId": [
+        469
+      ]
     },
     "004": {
       "name": "ケムッソ",
@@ -211,7 +214,8 @@
           "cost": [
             "Grass"
           ],
-          "damage": 30
+          "damage": 30,
+          "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
         }
       ],
       "weakness": {
@@ -707,7 +711,10 @@
       "weakness": {
         "type": "Fire",
         "value": "x2"
-      }
+      },
+      "dexId": [
+        1017
+      ]
     },
     "018": {
       "name": "ヒビキのマグマッグ",
@@ -867,7 +874,10 @@
       "weakness": {
         "type": "Water",
         "value": "x2"
-      }
+      },
+      "dexId": [
+        250
+      ]
     },
     "022": {
       "name": "ドンメル",
@@ -1227,7 +1237,10 @@
       "weakness": {
         "type": "Water",
         "value": "x2"
-      }
+      },
+      "dexId": [
+        643
+      ]
     },
     "030": {
       "name": "カルボウ",
@@ -1306,7 +1319,10 @@
         "type": "Water",
         "value": "x2"
       },
-      "evolveFrom": "カルボウ"
+      "evolveFrom": "カルボウ",
+      "dexId": [
+        937
+      ]
     },
     "032": {
       "name": "コダック",
@@ -1522,7 +1538,10 @@
         "type": "Metal",
         "value": "x2"
       },
-      "evolveFrom": "ユキワラシ"
+      "evolveFrom": "ユキワラシ",
+      "dexId": [
+        478
+      ]
     },
     "037": {
       "name": "Nのバニプッチ",
@@ -1683,7 +1702,8 @@
           "cost": [
             "Water"
           ],
-          "damage": 20
+          "damage": 20,
+          "effect": "Search your deck for a Basic Pokémon and put it onto your Bench. Then, shuffle your deck."
         }
       ],
       "weakness": {
@@ -1867,7 +1887,10 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "dexId": [
+        25
+      ]
     },
     "045": {
       "name": "コイル",
@@ -2067,7 +2090,10 @@
         "type": "Fighting",
         "value": "x2"
       },
-      "evolveFrom": "シビビール"
+      "evolveFrom": "シビビール",
+      "dexId": [
+        604
+      ]
     },
     "050": {
       "name": "マッギョ",
@@ -2146,7 +2172,10 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "dexId": [
+        644
+      ]
     },
     "052": {
       "name": "エリキテル",
@@ -2395,7 +2424,10 @@
         "type": "Fighting",
         "value": "x2"
       },
-      "evolveFrom": "ナンジャモのズピカ"
+      "evolveFrom": "ナンジャモのズピカ",
+      "dexId": [
+        939
+      ]
     },
     "058": {
       "name": "ナンジャモのカイデン",
@@ -2524,7 +2556,10 @@
       "weakness": {
         "type": "Metal",
         "value": "x2"
-      }
+      },
+      "dexId": [
+        35
+      ]
     },
     "061": {
       "name": "ロケット団のタマタマ",
@@ -2661,7 +2696,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        150
+      ]
     },
     "064": {
       "name": "トゲピー",
@@ -2998,7 +3036,10 @@
         "type": "Fighting",
         "value": "-30"
       },
-      "evolveFrom": "キルリア"
+      "evolveFrom": "キルリア",
+      "dexId": [
+        282
+      ]
     },
     "072": {
       "name": "ヨマワル",
@@ -3185,7 +3226,10 @@
       "resistance": {
         "type": "Fighting",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        380
+      ]
     },
     "076": {
       "name": "ロトム",
@@ -3391,7 +3435,8 @@
           "cost": [
             "Psychic"
           ],
-          "damage": 30
+          "damage": 30,
+          "effect": "Choose 2 of your opponent's Pokémon and put 2 damage counters on each of them."
         },
         {
           "name": "ファントムビット",
@@ -3528,7 +3573,8 @@
             "Fighting",
             "Colorless"
           ],
-          "damage": 50
+          "damage": 50,
+          "effect": "Flip 3 coins. This attack does 60 damage for each heads."
         }
       ],
       "weakness": {
@@ -3816,7 +3862,10 @@
         "type": "Grass",
         "value": "x2"
       },
-      "evolveFrom": "シロナのガバイト"
+      "evolveFrom": "シロナのガバイト",
+      "dexId": [
+        445
+      ]
     },
     "091": {
       "name": "リオル",
@@ -3894,7 +3943,10 @@
         "type": "Psychic",
         "value": "x2"
       },
-      "evolveFrom": "リオル"
+      "evolveFrom": "リオル",
+      "dexId": [
+        448
+      ]
     },
     "093": {
       "name": "ヤンチャム",
@@ -3971,7 +4023,10 @@
       "weakness": {
         "type": "Psychic",
         "value": "x2"
-      }
+      },
+      "dexId": [
+        701
+      ]
     },
     "095": {
       "name": "タンドン",
@@ -4124,7 +4179,8 @@
           "cost": [
             "Fighting"
           ],
-          "damage": 20
+          "damage": 20,
+          "effect": "Search your deck for up to 2 Basic {D} Energy cards and attach them to this Pokémon. Then, shuffle your deck. If you attached Energy to a Pokémon in this way, this Pokémon is now Poisoned."
         },
         {
           "name": "おれいまいり",
@@ -4275,7 +4331,10 @@
         "type": "Fighting",
         "value": "-30"
       },
-      "evolveFrom": "ロケット団のゴルバット"
+      "evolveFrom": "ロケット団のゴルバット",
+      "dexId": [
+        169
+      ]
     },
     "102": {
       "name": "ロケット団のヤミカラス",
@@ -4360,7 +4419,8 @@
             "Colorless",
             "Colorless"
           ],
-          "damage": 100
+          "damage": 100,
+          "effect": "Discard 2 Energy from this Pokémon, and this attack does 120 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
         }
       ],
       "weakness": {
@@ -4443,7 +4503,8 @@
           "cost": [
             "Darkness"
           ],
-          "damage": 10
+          "damage": 10,
+          "effect": "Flip 4 coins. This attack does 10 damage for each heads."
         }
       ],
       "weakness": {
@@ -4478,7 +4539,8 @@
           "cost": [
             "Darkness"
           ],
-          "damage": 20
+          "damage": 20,
+          "effect": "Flip 3 coins. This attack does 30 damage times the number of heads."
         },
         {
           "name": "ツメできりさく",
@@ -4486,7 +4548,8 @@
             "Darkness",
             "Colorless"
           ],
-          "damage": 50
+          "damage": 50,
+          "effect": "This attack does 30 damage to 1 of your opponent's Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
         }
       ],
       "weakness": {
@@ -4661,7 +4724,10 @@
         "type": "Grass",
         "value": "x2"
       },
-      "evolveFrom": "ズルッグ"
+      "evolveFrom": "ズルッグ",
+      "dexId": [
+        675
+      ]
     },
     "111": {
       "name": "Nのゾロア",
@@ -4735,7 +4801,10 @@
         "type": "Grass",
         "value": "x2"
       },
-      "evolveFrom": "Nのゾロア"
+      "evolveFrom": "Nのゾロア",
+      "dexId": [
+        571
+      ]
     },
     "113": {
       "name": "ゴロンダ",
@@ -4821,7 +4890,10 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "dexId": [
+        936
+      ]
     },
     "115": {
       "name": "モモワロウ",
@@ -5036,7 +5108,10 @@
       "resistance": {
         "type": "Grass",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        649
+      ]
     },
     "120": {
       "name": "マギアナ",
@@ -5177,7 +5252,10 @@
         "type": "Grass",
         "value": "-30"
       },
-      "evolveFrom": "ジュラルドン"
+      "evolveFrom": "ジュラルドン",
+      "dexId": [
+        1018
+      ]
     },
     "123": {
       "name": "ホップのザシアンex",
@@ -5224,7 +5302,10 @@
       "resistance": {
         "type": "Grass",
         "value": "-30"
-      }
+      },
+      "dexId": [
+        888
+      ]
     },
     "124": {
       "name": "ミニリュウ",
@@ -5250,7 +5331,8 @@
             "Water",
             "Lightning"
           ],
-          "damage": 30
+          "damage": 30,
+          "effect": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
         }
       ],
       "dexId": [
@@ -5332,7 +5414,10 @@
           "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。"
         }
       ],
-      "evolveFrom": "ハクリュー"
+      "evolveFrom": "ハクリュー",
+      "dexId": [
+        149
+      ]
     },
     "127": {
       "name": "レックウザ",
@@ -5369,7 +5454,8 @@
             "Lightning",
             "Colorless"
           ],
-          "damage": 130
+          "damage": 130,
+          "effect": "This attack's damage isn't affected by any effects on the Defending Pokémon."
         }
       ],
       "dexId": [
@@ -5662,7 +5748,10 @@
           "effect": "ダメカン6個を、相手のベンチポケモンに好きなようにのせる。"
         }
       ],
-      "evolveFrom": "ドロンチ"
+      "evolveFrom": "ドロンチ",
+      "dexId": [
+        887
+      ]
     },
     "135": {
       "name": "シャリタツ",
@@ -6131,7 +6220,10 @@
       "weakness": {
         "type": "Fighting",
         "value": "x2"
-      }
+      },
+      "dexId": [
+        1024
+      ]
     },
     "146": {
       "name": "Nのポイントアップ",
