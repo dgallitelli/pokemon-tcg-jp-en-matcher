@@ -1201,7 +1201,10 @@
           setStatus('', false);
           // If the JP card already has English effect/attack data, show a synthetic translation card.
           // enName is already resolved above (via dexId lookup or TRAINER_NAME_MAP).
-          const hasEnData = jpCard.effect || (jpCard.attacks || []).some(a => a.effect);
+          // Guard: reject text that contains Japanese characters — it wasn't backfilled in English.
+          const isEnglish = t => t && !/[\u3040-\u9FFF]/.test(t);
+          const hasEnData = isEnglish(jpCard.effect) ||
+            (jpCard.attacks || []).some(a => isEnglish(a.effect));
           if (hasEnData) {
             // Strip JP attack names — only cost, damage and effect are available in English.
             const syntheticEn = {
