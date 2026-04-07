@@ -27,18 +27,39 @@ Single `index.html` — no build step, no dependencies, deploys as a GitHub Page
 - M4 → ME4 (Ninja Spinner)
 - M2a (MEGA Dream ex) — JP only, no EN sideload yet; falls through to TCGdex API matching
 
+**Serebii image slugs** (used in `sideloadImageUrl()`):
+- M1S → megasymphonia, M1L → megabrave, M2 → infernox
+- M3 → nihilzero, M4 / ME4 → ninjaspinner, ME3 → perfectorder
+- M2a → megadreamex
+- ME1 / ME2 — no Serebii pages; these sets show text-only in the EN panel
+
 ## Key invariants
 
-- **Never show a JP card image in the EN panel.** If no EN image exists, show the card placeholder (🃏).
-- **Never show JP attack names in the EN panel.** If attack names weren't translated (synthetic EN cards), render them as `—` so only cost + damage + effect are shown.
-- EN sideload cards (ME1–ME4) have `image: null` by design — `sideloadImageUrl()` provides Serebii image URLs for ME3/ME4; ME1/ME2 have no Serebii pages and show no image.
+- **Never show a JP card image in the EN panel.** If no EN image exists, show no image (text-only layout).
+- **Never show JP text in the EN panel.** Effect text is validated with `isEnglish()` — any text containing Japanese unicode (U+3040–9FFF) is rejected. If attack names weren't translated (synthetic EN cards), render them as `—`.
+- **Trainer name matching within translation sideloads** uses `TRAINER_NAME_MAP` first (most precise), then illustrator as a fallback only when unambiguous (exactly one candidate). The map keys must match the ME set card names exactly — these sometimes differ from TCGdex standard names (e.g. "Strange Timepiece" not "Spooky Watch", "Fighting Gong" not "Fight Gong").
 - All EN sideloads are pre-fetched at startup (needed for cross-set dexId scanning in step 2b of `doSearch`). JP sideloads are lazy-loaded on first access.
+- Sideload set ID lookups are case-insensitive: `SIDELOAD_JP_CONFIG` keys and `JP_TO_EN_SIDELOAD` lookups use `.toUpperCase()`. The store key in `SIDELOAD_SETS` matches `setUpper` (not `cfg.id`), so mixed-case IDs like `M2a` work correctly.
+- EN sideload cards have `id` and `set` fields injected on load (older files like ME1/ME2 predate these fields).
+
+## Known limitations
+
+- **M2a**: no EN sideload — relies entirely on TCGdex API live matching. All 193 Pokemon cards now have `dexId` (patched via `scripts/patch_m2a_dexids.py`). Cards with no TCGdex match show "No English equivalent found."
+- **ME1 / ME2**: no card images available (Serebii doesn't index these sets). EN panel shows text only.
+- Sets not in TCGdex and without a sideload (e.g. `sPD`, XY-era promo decks) cannot be searched.
 
 ## Data pipeline scripts
 
 Run manually when new sets release:
 1. `scrape_m*.py` — scrape JP card data from pokemon-card.com
-2. `fetch_tcgdex_en.py` — fetch EN data from TCGdex and backfill JP attack text
+2. `fetch_tcgdex_en.py` — fetch EN data from TCGdex and backfill JP attack text (covers M1S, M1L, M2; extend for new sets)
 3. `scrape_serebii.py` — enrich with weakness/resistance/abilities from Serebii
-4. `normalize_data.py` — structural consistency + cross-set backfill
+4. `normalize_data.py` — structural consistency + cross-set backfill (covers M1S–M4; extend for new sets)
 5. `build_me*.py` / `generate_tcgdex_*.py` — assemble EN sideload files
+6. `patch_m2a_dexids.py` — one-time patch; re-run if M2a ex cards are added
+
+**When adding a new JP sideload set:**
+1. Add entry to `SIDELOAD_CONFIG.jp` in `index.html` (id must be consistent casing; lookup is uppercased automatically)
+2. Add Serebii slug to `sideloadImageUrl()` if images are available
+3. Add JP→EN mapping to `JP_TO_EN_SIDELOAD` if an EN translation sideload exists
+4. Add EN sideload TRAINER_NAME_MAP entries using the exact ME-set card names (not TCGdex standard names)
