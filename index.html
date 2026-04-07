@@ -437,13 +437,11 @@
       .input-section { gap: 0.4rem; }
       .field select { min-width: 160px; }
       .field input { width: 80px; }
-      .cards-container { flex-direction: column; align-items: center; gap: 0.5rem; }
-      .card-panel { max-width: 100%; min-width: unset; }
-      .arrow { transform: rotate(90deg); font-size: 1.5rem; margin: -0.3rem 0; animation: pulse-arrow-vert 1.8s ease-in-out infinite; }
-      @keyframes pulse-arrow-vert {
-        0%, 100% { opacity: 1; transform: rotate(90deg) translateX(0); }
-        50% { opacity: 0.55; transform: rotate(90deg) translateX(4px); }
-      }
+      /* Keep side-by-side on mobile — shrink panels instead of stacking */
+      .cards-container { gap: 0.5rem; }
+      .card-panel { padding: 0.75rem; min-width: 140px; max-width: 100%; }
+      .card-panel h2 { font-size: 1rem; }
+      .arrow { font-size: 1.2rem; }
       .howto-content { flex-direction: column; }
       .howto-card { width: 180px; align-self: center; }
       .browse-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.6rem; }
@@ -535,19 +533,22 @@
         { id: "M2",  name: "Inferno X",       file: "data/M2.json",  cardCount: 116 },
         { id: "M3",  name: "Nihil Zero",      file: "data/M3.json",  cardCount: 117 },
         { id: "M4",  name: "Ninja Spinner",   file: "data/M4.json",  cardCount: 120 },
+        { id: "M2a", name: "MEGA Dream ex",   file: "data/M2a.json", cardCount: 193 },
       ],
       en: [
         { id: "ME1", name: "Mega Evolution",      file: "data/ME1.json" },
         { id: "ME2", name: "Phantasmal Flames",   file: "data/ME2.json" },
-        { id: "ME3", name: "Perfect Order",        file: "data/ME3.json" },
-        { id: "ME4", name: "Ninja Spinner",        file: "data/ME4.json" },
+        { id: "ME3", name: "Perfect Order",       file: "data/ME3.json" },
+        { id: "ME4", name: "Ninja Spinner",       file: "data/ME4.json" },
       ]
     };
 
     // O(1) lookup for JP sideload config by set ID
-    const SIDELOAD_JP_CONFIG = Object.fromEntries(SIDELOAD_CONFIG.jp.map(c => [c.id, c]));
+    // Keys are uppercased to match setUpper lookups (handles mixed-case IDs like "M2a" → "M2A")
+    const SIDELOAD_JP_CONFIG = Object.fromEntries(SIDELOAD_CONFIG.jp.map(c => [c.id.toUpperCase(), c]));
 
     // Map JP set IDs to their EN translation sideload set IDs
+    // Keys must be uppercase to match jpSetId.toUpperCase() lookups
     const JP_TO_EN_SIDELOAD = { "M1S": "ME1", "M1L": "ME1", "M2": "ME2", "M3": "ME3", "M4": "ME4" };
 
     let SIDELOAD_SETS = {};
@@ -562,7 +563,15 @@
             const res = await fetch(cfg.file);
             if (res.ok) {
               const data = await res.json();
-              SIDELOAD_EN_SETS[cfg.id] = { name: cfg.name, cards: data.cards };
+              // Inject id/set defaults for older sideloads (ME1/ME2) that predate those fields
+              const cards = Object.fromEntries(
+                Object.entries(data.cards).map(([num, card]) => [num, {
+                  id: `${cfg.id}-${num}`,
+                  set: { id: cfg.id, name: cfg.name },
+                  ...card,
+                }])
+              );
+              SIDELOAD_EN_SETS[cfg.id] = { name: cfg.name, cards };
             }
           } catch {}
         })
@@ -578,7 +587,7 @@
         const res = await fetch(cfg.file);
         if (res.ok) {
           const data = await res.json();
-          SIDELOAD_SETS[cfg.id] = { name: cfg.name, cards: data.cards || data };
+          SIDELOAD_SETS[setId] = { name: cfg.name, cards: data.cards || data };
         }
       } catch {}
     }
@@ -668,7 +677,7 @@
     }
 
     function renderCard(card, lang, badge, score) {
-      const imgUrl = card.image ? card.image + '/high.webp' : sideloadImageUrl(card) || card._fallbackImage || null;
+      const imgUrl = card.image ? card.image + '/high.webp' : sideloadImageUrl(card) || null;
       const attacks = (card.attacks || []).map(a => {
         const cost = (a.cost || []).map(t => energyBadge(t)).join('');
         let block = `<div class="atk-block"><div class="atk-row">${cost ? `<span class="atk-cost">${cost}</span>` : ''}<span class="atk-name">${safeHtml(a.name)}</span>${a.damage != null ? `<span class="atk-dmg">${safeHtml(String(a.damage))}</span>` : ''}</div>`;
@@ -867,34 +876,34 @@
       'ルミナスエネルギー': 'Luminous Energy',
       'レガシーエネルギー': 'Legacy Energy',
       'ミストエネルギー': 'Mist Energy',
-      // M1S / Mega Symphonia trainers
-      'あやしい時計': 'Spooky Watch',
+      // M1S / Mega Symphonia trainers (ME1 English names)
+      'あやしい時計': 'Strange Timepiece',
       'メガシグナル': 'Mega Signal',
-      'アセロラのいたずら': "Acerola's Prank",
+      'アセロラのいたずら': "Acerola's Mischief",
       'ミツルの思いやり': "Wally's Compassion",
-      '活力の森': 'Vitality Forest',
+      '活力の森': 'Forest of Vitality',
       'なみのりビーチ': 'Surfing Beach',
       'ミステリーガーデン': 'Mystery Garden',
-      'なかよしポフィン': 'Buddy Poffin',
-      // M1L / Mega Brave trainers
+      'なかよしポフィン': 'Buddy-Buddy Poffin',
+      // M1L / Mega Brave trainers (ME1 English names)
       'アイアンガード': 'Iron Defender',
       'プレミアムパワープロ': 'Premium Power Pro',
-      'ファイトゴング': 'Fight Gong',
+      'ファイトゴング': 'Fighting Gong',
       'むしよけスプレー': 'Repel',
-      'マチスのかけひき': "Lt. Surge's Deal",
+      'マチスのかけひき': "Lt. Surge's Bargain",
       'リーリエのきもち': "Lillie's Determination",
-      '危険な廃墟ビル': 'Dangerous Abandoned Building',
+      '危険な廃墟ビル': 'Risky Ruins',
       'ナイトストレッチャー': 'Night Stretcher',
       'エアバルーン': 'Air Balloon',
-      // M2 / Infernox trainers
+      // M2 / Infernox trainers (ME2 English names)
       'ジャンボソフト': 'Jumbo Ice Cream',
-      'ヒートバーナー': 'Heat Burner',
+      'ヒートバーナー': 'Blowtorch',
       'セイクリッドチャーム': 'Sacred Charm',
       'ギーマのかけひき': "Grimsley's Move",
       'ヒカリ': 'Dawn',
       'ファイアーブレーサー': 'Firebreather',
-      'バトルコロシアム': 'Battle Colosseum',
-      'めまいのたに': 'Dizzy Valley',
+      'バトルコロシアム': 'Battle Cage',
+      'めまいのたに': 'Dizzying Valley',
     };
 
     // Pokédex number → English name lookup via TCGdex, with memoization
@@ -1068,7 +1077,7 @@
 
         // 2a. If this JP card comes from a sideloaded set with a translation file, show it directly
         {
-          const jpSetId = jpCard.set?.id || setUpper;
+          const jpSetId = (jpCard.set?.id || setUpper).toUpperCase();
           const enTransSetId = JP_TO_EN_SIDELOAD[jpSetId];
           const enTransSet = enTransSetId ? SIDELOAD_EN_SETS[enTransSetId] : null;
           if (enTransSet) {
@@ -1106,12 +1115,24 @@
               if (!transCard) {
                 transCard = enCardsSorted.find(c => c.category === 'Energy');
               }
-            } else if (jpCard.illustrator) {
-              // Trainer: match by illustrator within the EN translation set
-              transCard = enCardsSorted.find(c =>
-                c.category !== 'Pokemon' &&
-                c.illustrator?.toLowerCase() === jpCard.illustrator.toLowerCase()
-              );
+            } else {
+              // Trainer: name-map match first (most precise), then illustrator as fallback
+              const mappedName = TRAINER_NAME_MAP[jpCard.name];
+              if (mappedName) {
+                transCard = enCardsSorted.find(c =>
+                  c.category !== 'Pokemon' &&
+                  c.name?.toLowerCase() === mappedName.toLowerCase()
+                );
+              }
+              if (!transCard && jpCard.illustrator) {
+                // Illustrator fallback: require name-map confirmation if multiple trainers share artist
+                const illustratorMatches = enCardsSorted.filter(c =>
+                  c.category !== 'Pokemon' &&
+                  c.illustrator?.toLowerCase() === jpCard.illustrator.toLowerCase()
+                );
+                // Only use illustrator match when it's unambiguous (exactly one candidate)
+                if (illustratorMatches.length === 1) transCard = illustratorMatches[0];
+              }
             }
             // Fallback: direct card number, but only if categories match
             if (!transCard) {
@@ -1119,11 +1140,6 @@
               if (fallback && fallback.category === jpCard.category) transCard = fallback;
             }
             if (transCard) {
-              // If the EN translation card has no image source, fall back to the JP card's image
-              if (!transCard.image && !sideloadImageUrl(transCard)) {
-                const jpImgUrl = jpCard.image ? jpCard.image + '/high.webp' : sideloadImageUrl(jpCard);
-                if (jpImgUrl) transCard = { ...transCard, _fallbackImage: jpImgUrl };
-              }
               setStatus('', false);
               document.getElementById('results').innerHTML = `
                 <div class="cards-container">
@@ -1182,18 +1198,23 @@
         // 3. Fetch full details for candidates and score them
         if (candidates.length === 0 && sideloadEnCards.length === 0) {
           setStatus('', false);
-          // If the JP card already has English effect/attack data, show a synthetic translation card
+          // If the JP card already has English effect/attack data, show a synthetic translation card.
+          // enName is already resolved above (via dexId lookup or TRAINER_NAME_MAP).
           const hasEnData = jpCard.effect || (jpCard.attacks || []).some(a => a.effect);
-          const enName = TRAINER_NAME_MAP[jpCard.name];
           if (hasEnData) {
-            const syntheticEn = { ...jpCard, name: enName || jpCard.name };
+            // Strip JP attack names — only cost, damage and effect are available in English.
+            const syntheticEn = {
+              ...jpCard,
+              name: enName || jpCard.name,
+              attacks: (jpCard.attacks || []).map(a => ({ ...a, name: '—' })),
+            };
             document.getElementById('results').innerHTML = `
               <div class="cards-container">
                 ${renderCard(jpCard, 'ja')}
                 <div class="arrow">→</div>
                 ${renderCard(syntheticEn, 'en', '🔄 Translation')}
               </div>
-              <div class="match-info">This card has no official English print yet. Showing translated card text from <span style="color:#ffd700">Serebii</span>.</div>
+              <div class="match-info">This card has no official English print yet. Showing translated card text from <span style="color:#ffd700">Serebii</span>. Attack names are not translated.</div>
               ${renderNavRow()}`;
           } else {
             document.getElementById('results').innerHTML = `
