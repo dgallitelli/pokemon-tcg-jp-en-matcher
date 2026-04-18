@@ -515,10 +515,21 @@ def parse_card_page(html: str, jp_set_id: str, card_num: int, cfg: dict) -> dict
             else:
                 card["effect"] = effect
 
-    # Final JP text check on attack names/effects
+    # Final JP text check: strip JP text from attack and ability fields
     for atk in card.get("attacks", []):
-        if _has_jp(atk.get("name", "")) or _has_jp(atk.get("effect", "")):
-            print(f"    WARN: JP text in attack data for {en_set_id}/{card_num:03d}: {atk}")
+        if _has_jp(atk.get("name", "")):
+            print(f"    WARN: JP text in attack name for {en_set_id}/{card_num:03d} — replacing with '—'")
+            atk["name"] = "—"
+        if _has_jp(atk.get("effect", "")):
+            print(f"    WARN: JP text in attack effect for {en_set_id}/{card_num:03d} — removing")
+            del atk["effect"]
+    for abl in card.get("abilities", []):
+        if _has_jp(abl.get("name", "")):
+            print(f"    WARN: JP text in ability name for {en_set_id}/{card_num:03d} — replacing with '—'")
+            abl["name"] = "—"
+        if _has_jp(abl.get("effect", "")):
+            print(f"    WARN: JP text in ability effect for {en_set_id}/{card_num:03d} — removing")
+            del abl["effect"]
 
     return card
 
