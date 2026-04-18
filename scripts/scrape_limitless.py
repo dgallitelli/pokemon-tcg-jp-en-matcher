@@ -499,24 +499,120 @@ def parse_card_page(html: str, jp_set_id: str, card_num: int, cfg: dict) -> dict
 
 
 ###############################################################################
-# Test helper
+# Full set scraper — fetch all cards, build ME*.json
 ###############################################################################
 
-def test_single_card():
-    """Test fetching and parsing a single card (M4/1 = Weedle)."""
-    jp_set = "M4"
-    card_num = 1
-    cfg = SET_CONFIG[jp_set]
-    print(f"Testing: {jp_set}/{card_num}")
-    html = fetch_card_page(jp_set, card_num)
-    if not html:
-        print("  FAILED to fetch page")
-        return
-    card = parse_card_page(html, jp_set, card_num, cfg)
-    if card:
-        print(json.dumps(card, indent=2, ensure_ascii=False))
-    else:
-        print("  FAILED to parse card")
+def scrape_set(jp_set_id: str, cfg: dict) -> dict:
+    """
+    Scrape all cards for a JP set from Limitless TCG.
+    Returns the complete ME*.json data structure.
+    """
+    en_set_id = cfg["en_set_id"]
+    en_set_name = cfg["en_set_name"]
+    card_count = cfg["card_count"]
+
+    print(f"  Scraping {card_count} cards from Limitless ({jp_set_id} -> {en_set_id})...")
+    cards = {}
+    failures = []
+
+    for num in range(1, card_count + 1):
+        num_str = f"{num:03d}"
+        html = fetch_card_page(jp_set_id, num)
+        if html:
+            card = parse_card_page(html, jp_set_id, num, cfg)
+            if card:
+                cards[num_str] = card
+                print(f"    [{num:3d}/{card_count}] {card['name']} ({card.get('category', '?')}) ✓")
+            else:
+                failures.append(num)
+                print(f"    [{num:3d}/{card_count}] Parse FAILED")
+        else:
+            failures.append(num)
+            print(f"    [{num:3d}/{card_count}] Fetch FAILED")
+
+        if num < card_count:
+            time.sleep(1)
+
+    if failures:
+        print(f"  WARNING: {len(failures)} cards failed: {failures}")
+
+    return {
+        "id": en_set_id,
+        "name": en_set_name,
+        "serie": cfg["serie"],
+        "releaseDate": {"en": cfg["release_date"]},
+        "jpSetId": jp_set_id,
+        "cards": cards,
+    }
+
+
+def preserve_dex_ids(new_data: dict, file_path: Path) -> dict:
+    """
+    If the EN sideload file already exists, preserve any dexId values
+    from existing cards into the new scraped data.
+    """
+    if not file_path.exists():
+        return new_data
+
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            existing = json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return new_data
+
+    existing_cards = existing.get("cards", {})
+    for num_str, card in new_data.get("cards", {}).items():
+        if num_str in existing_cards:
+            old_card = existing_cards[num_str]
+            if old_card.get("dexId") and not card.get("dexId"):
+                card["dexId"] = old_card["dexId"]
+            elif old_card.get("dexId") and card.get("dexId") == []:
+                card["dexId"] = old_card["dexId"]
+
+    return new_data
+
+
+def write_sideload(data: dict, cfg: dict):
+    """Write the scraped data to data/ME*.json, preserving existing dexIds."""
+    en_set_id = cfg["en_set_id"]
+    file_path = DATA_DIR / f"{en_set_id}.json"
+
+    data = preserve_dex_ids(data, file_path)
+
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+    card_count = len(data.get("cards", {}))
+    print(f"  Done. Wrote {card_count} cards to {file_path}")
+
+
+def scrape_missing_m_sets(coverage: dict, only_sets=None):
+    """
+    Scrape M* sets that have missing or incomplete EN coverage.
+    M1S and M1L both map to ME1 — only scrape once.
+    """
+    scraped_en_sets = set()
+
+    for jp_set_id, result in coverage.items():
+        cfg = SET_CONFIG[jp_set_id]
+        en_set_id = cfg["en_set_id"]
+
+        if only_sets and jp_set_id not in only_sets:
+            continue
+
+        if en_set_id in scraped_en_sets:
+            print(f"  {jp_set_id} -> {en_set_id}: Already scraped (from prior JP set)")
+            continue
+
+        if result["status"] in ("missing", "incomplete"):
+            data = scrape_set(jp_set_id, cfg)
+            write_sideload(data, cfg)
+            scraped_en_sets.add(en_set_id)
+        elif only_sets and jp_set_id in only_sets:
+            print(f"  {jp_set_id} -> {en_set_id}: Coverage OK but --sets forces rescrape")
+            data = scrape_set(jp_set_id, cfg)
+            write_sideload(data, cfg)
+            scraped_en_sets.add(en_set_id)
 
 
 ###############################################################################
@@ -591,6 +687,114 @@ def check_all_m_sets() -> dict:
         results[jp_set_id] = result
     print()
     return results
+
+
+def check_sv_coverage():
+    """
+    Check SV* set coverage via TCGdex API.
+    For each SV set, pick a random card and check if an EN match exists.
+    """
+    print("=== SV* Coverage Check ===")
+
+    try:
+        resp = requests.get(f"{TCGDEX_API}/ja/sets", timeout=15)
+        resp.raise_for_status()
+        all_sets = resp.json()
+    except requests.RequestException as e:
+        print(f"  ERROR fetching JP sets from TCGdex: {e}")
+        return
+
+    sv_sets = [
+        s for s in all_sets
+        if s.get("id", "").upper().startswith("SV")
+        and s.get("id", "").upper() not in SV_SKIP_IDS
+    ]
+
+    if not sv_sets:
+        print("  No SV* sets found in TCGdex.")
+        return
+
+    print(f"  Found {len(sv_sets)} SV* sets to check.\n")
+
+    for s in sorted(sv_sets, key=lambda x: x.get("id", "")):
+        set_id = s.get("id", "")
+        set_name = s.get("name", "?")
+
+        try:
+            resp = requests.get(f"{TCGDEX_API}/ja/sets/{set_id}", timeout=15)
+            resp.raise_for_status()
+            set_data = resp.json()
+            cards = set_data.get("cards", [])
+
+            if not cards:
+                print(f"  {set_id:8s} ({set_name:30s}): ❓ No cards in set")
+                time.sleep(0.5)
+                continue
+
+            # Pick a random card
+            sample = random.choice(cards)
+            card_id = sample.get("id", "")
+
+            resp = requests.get(f"{TCGDEX_API}/ja/cards/{card_id}", timeout=15)
+            resp.raise_for_status()
+            card_data = resp.json()
+            dex_ids = card_data.get("dexId", [])
+            card_name = card_data.get("name", "?")
+
+            if dex_ids:
+                resp = requests.get(
+                    f"{TCGDEX_API}/en/cards",
+                    params={"dexId": dex_ids[0]},
+                    timeout=15,
+                )
+                resp.raise_for_status()
+                en_cards = resp.json()
+                if en_cards:
+                    en_name = en_cards[0].get("name", "?")
+                    print(f"  {set_id:8s} ({set_name:30s}): ✅ EN match found ({en_name})")
+                else:
+                    print(f"  {set_id:8s} ({set_name:30s}): ❌ No EN match (dexId={dex_ids[0]}, JP={card_name})")
+            else:
+                # No dexId — try name-based lookup
+                resp = requests.get(
+                    f"{TCGDEX_API}/en/cards",
+                    params={"name": card_name},
+                    timeout=15,
+                )
+                resp.raise_for_status()
+                en_cards = resp.json()
+                if en_cards:
+                    print(f"  {set_id:8s} ({set_name:30s}): ✅ EN match found (name: {card_name})")
+                else:
+                    print(f"  {set_id:8s} ({set_name:30s}): ❓ No dexId, name match inconclusive ({card_name})")
+
+        except requests.RequestException as e:
+            print(f"  {set_id:8s} ({set_name:30s}): ERROR {e}")
+
+        time.sleep(0.5)
+
+    print()
+
+
+###############################################################################
+# Test helper
+###############################################################################
+
+def test_single_card():
+    """Test fetching and parsing a single card (M4/1 = Weedle)."""
+    jp_set = "M4"
+    card_num = 1
+    cfg = SET_CONFIG[jp_set]
+    print(f"Testing: {jp_set}/{card_num}")
+    html = fetch_card_page(jp_set, card_num)
+    if not html:
+        print("  FAILED to fetch page")
+        return
+    card = parse_card_page(html, jp_set, card_num, cfg)
+    if card:
+        print(json.dumps(card, indent=2, ensure_ascii=False))
+    else:
+        print("  FAILED to parse card")
 
 
 if __name__ == "__main__":
