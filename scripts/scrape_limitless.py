@@ -12,7 +12,6 @@ from __future__ import annotations
 import argparse
 import copy
 import json
-import os
 import random
 import re
 import sys
@@ -591,6 +590,11 @@ def scrape_missing_m_sets(coverage: dict, only_sets=None):
     Scrape M* sets that have missing or incomplete EN coverage.
     M1S and M1L both map to ME1 — only scrape once.
     """
+    if only_sets:
+        unknown = [s for s in only_sets if s not in SET_CONFIG]
+        if unknown:
+            print(f"  WARNING: Unknown set ID(s): {', '.join(unknown)} — valid: {', '.join(SET_CONFIG.keys())}")
+
     scraped_en_sets = set()
 
     for jp_set_id, result in coverage.items():
