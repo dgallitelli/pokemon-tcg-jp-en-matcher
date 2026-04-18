@@ -7,10 +7,14 @@ For M* sets with missing/incomplete EN translations, scrapes full card data
 from Limitless TCG and writes data/ME*.json files.
 """
 
+from __future__ import annotations
+
 import argparse
+import copy
 import json
 import os
 import random
+import re
 import sys
 import time
 from pathlib import Path
@@ -96,6 +100,429 @@ SET_CONFIG = {
 SV_SKIP_IDS = {"SVLS", "SVK", "SVLN", "SVP"}
 
 
+###############################################################################
+# HTML Parser — fetch and parse individual card pages from Limitless TCG
+###############################################################################
+
+# Reverse map: full type name → single letter (for weakness/resistance parsing)
+TYPE_NAME_MAP = {v: k for k, v in ENERGY_MAP.items()}
+# Also map type names directly for weakness/resistance
+TYPE_NAMES = set(ENERGY_MAP.values())
+
+
+def fetch_card_page(jp_set_id: str, card_num: int) -> str | None:
+    """
+    Fetch a single card page from Limitless TCG with English translation.
+
+    Returns the HTML string, or None on failure.
+    """
+    url = f"{LIMITLESS_BASE}/{jp_set_id}/{card_num}?translate=en"
+    try:
+        resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
+        if resp.status_code == 200:
+            return resp.text
+        print(f"  WARN: HTTP {resp.status_code} for {url}")
+        return None
+    except requests.RequestException as e:
+        print(f"  WARN: Request failed for {url}: {e}")
+        return None
+
+
+def parse_energy_cost(cost_text: str) -> list[str]:
+    """
+    Convert a Limitless energy letter string (e.g. 'GCC') into a list of
+    full type names (e.g. ['Grass', 'Colorless', 'Colorless']).
+    """
+    result = []
+    for ch in cost_text.strip():
+        mapped = ENERGY_MAP.get(ch.upper())
+        if mapped:
+            result.append(mapped)
+    return result
+
+
+def parse_attacks(soup) -> list[dict]:
+    """
+    Parse all attack divs from the card page.
+
+    Each attack is inside a <div class="card-text-attack"> with:
+      - <p class="card-text-attack-info">: energy symbols (span.ptcg-symbol) + name + damage
+      - <p class="card-text-attack-effect">: optional effect text
+    """
+    attacks = []
+    for atk_div in soup.select("div.card-text-attack"):
+        info_el = atk_div.select_one("p.card-text-attack-info")
+        if not info_el:
+            continue
+
+        # Extract energy cost from span.ptcg-symbol elements
+        cost = []
+        for sym_span in info_el.select("span.ptcg-symbol"):
+            cost.extend(parse_energy_cost(sym_span.get_text()))
+
+        # Remove the energy spans to get the remaining text (name + damage)
+        for sym_span in info_el.select("span.ptcg-symbol"):
+            sym_span.decompose()
+
+        remaining = info_el.get_text(strip=True)
+
+        # The remaining text is like "Surprise Attack 30" or "One-Strike Reversal 70+"
+        # Split into name and damage. Damage is the last token if it looks numeric.
+        parts = remaining.rsplit(None, 1)
+        name = remaining
+        damage = None
+        if len(parts) == 2:
+            # Check if last part is a damage value (digits, possibly with +/- suffix)
+            dmg_str = parts[1].rstrip("+").rstrip("-")
+            if dmg_str.isdigit():
+                name = parts[0]
+                damage = parts[1]
+
+        # Parse effect text
+        effect_el = atk_div.select_one("p.card-text-attack-effect")
+        effect = None
+        if effect_el:
+            effect_text = effect_el.get_text(strip=True)
+            if effect_text:
+                effect = effect_text
+
+        attack = {"name": name, "cost": cost}
+        if damage is not None:
+            # Store as string to preserve "70+" format; convert pure numbers to int
+            clean = damage.rstrip("+").rstrip("-")
+            if clean.isdigit() and damage == clean:
+                attack["damage"] = int(damage)
+            else:
+                attack["damage"] = damage
+        if effect:
+            attack["effect"] = effect
+
+        attacks.append(attack)
+
+    return attacks
+
+
+def parse_abilities(soup) -> list[dict]:
+    """
+    Parse all ability divs from the card page.
+
+    Each ability is inside a <div class="card-text-ability"> with:
+      - <p class="card-text-ability-info">: "Ability: Name"
+      - <p class="card-text-ability-effect">: effect text
+    """
+    abilities = []
+    for abl_div in soup.select("div.card-text-ability"):
+        info_el = abl_div.select_one("p.card-text-ability-info")
+        effect_el = abl_div.select_one("p.card-text-ability-effect")
+
+        if not info_el:
+            continue
+
+        # Text is like "Ability:  Night Raid"
+        info_text = info_el.get_text(strip=True)
+        name = info_text
+        if ":" in info_text:
+            name = info_text.split(":", 1)[1].strip()
+
+        ability = {"type": "Ability", "name": name}
+        if effect_el:
+            effect_text = effect_el.get_text(strip=True)
+            if effect_text:
+                ability["effect"] = effect_text
+
+        abilities.append(ability)
+
+    return abilities
+
+
+def _parse_wrr_text(soup) -> str:
+    """
+    Extract the raw text from the weakness/resistance/retreat section.
+
+    Located in <p class="card-text-wrr">.
+    """
+    wrr_el = soup.select_one("p.card-text-wrr")
+    if wrr_el:
+        return wrr_el.get_text()
+    return ""
+
+
+def parse_weakness(wrr_text: str) -> dict | None:
+    """
+    Parse weakness from the WRR text block.
+
+    Format: "Weakness: Fire" (value is always x2 in modern TCG).
+    """
+    for line in wrr_text.split("\n"):
+        line = line.strip()
+        if line.lower().startswith("weakness:"):
+            wtype = line.split(":", 1)[1].strip()
+            if wtype.lower() == "none" or not wtype:
+                return None
+            return {"type": wtype, "value": "x2"}
+    return None
+
+
+def parse_resistance(wrr_text: str) -> dict | None:
+    """
+    Parse resistance from the WRR text block.
+
+    Format: "Resistance: Fighting" (value is always -30 in modern TCG).
+    """
+    for line in wrr_text.split("\n"):
+        line = line.strip()
+        if line.lower().startswith("resistance:"):
+            rtype = line.split(":", 1)[1].strip()
+            if rtype.lower() == "none" or not rtype:
+                return None
+            return {"type": rtype, "value": "-30"}
+    return None
+
+
+def parse_retreat(wrr_text: str) -> int:
+    """
+    Parse retreat cost from the WRR text block.
+
+    Format: "Retreat: 2"
+    """
+    for line in wrr_text.split("\n"):
+        line = line.strip()
+        if line.lower().startswith("retreat:"):
+            val = line.split(":", 1)[1].strip()
+            try:
+                return int(val)
+            except ValueError:
+                return 0
+    return 0
+
+
+def _clean_effect_html(section) -> str:
+    """
+    Convert a card-text section element to clean effect text.
+
+    Handles <br> → newline, energy symbol spans (ptcg-font with [copy-only]
+    brackets), and collapses whitespace.
+    """
+    section = copy.copy(section)
+
+    # Remove copy-only bracket spans: <span class="copy-only">[</span>
+    for span in section.select("span.copy-only"):
+        span.decompose()
+
+    # Replace energy symbol spans with readable text:
+    # <span style="font-family: ptcg-font" data-tooltip="Fire">R</span> → [R]
+    for span in section.select("span[data-tooltip]"):
+        letter = span.get_text(strip=True)
+        full_name = ENERGY_MAP.get(letter.upper(), letter)
+        span.replace_with(f" {full_name} ")
+
+    # Replace reminder-text spans to preserve parentheses
+    for span in section.select("span.reminder-text"):
+        text = span.get_text(strip=True)
+        span.replace_with(f" {text}")
+
+    # Replace <br> with newline markers
+    for br in section.find_all("br"):
+        br.replace_with("\n")
+
+    raw = section.get_text()
+    # Collapse whitespace within each line, then rejoin non-empty lines
+    lines = []
+    for line in raw.split("\n"):
+        stripped = " ".join(line.split())
+        if stripped:
+            lines.append(stripped)
+
+    return "\n".join(lines)
+
+
+def parse_effect_text(soup) -> str | None:
+    """
+    Parse the effect text for Trainer/Energy cards.
+
+    For non-Pokemon cards, the effect text is a direct text node inside the
+    second <div class="card-text-section"> (the one after the title/type section).
+    It has no wrapper div — just raw text with <br> tags.
+    """
+    sections = soup.select("div.card-text-section")
+    if len(sections) < 2:
+        return None
+
+    # The second section contains the effect text for Trainer/Energy.
+    # For Pokemon cards this section holds attacks/abilities, so callers
+    # should only use this for non-Pokemon cards.
+    section = sections[1]
+
+    # If it contains attack or ability divs, it's not a simple effect section
+    if section.select("div.card-text-attack") or section.select("div.card-text-ability"):
+        return None
+
+    text = _clean_effect_html(section)
+    return text if text else None
+
+
+def parse_card_page(html: str, jp_set_id: str, card_num: int, cfg: dict) -> dict | None:
+    """
+    Parse a Limitless TCG card page into a card dict matching the ME* schema.
+
+    Returns None if the page cannot be parsed.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+
+    # --- Card name ---
+    name_el = soup.select_one("span.card-text-name a")
+    if not name_el:
+        print(f"  WARN: No card name found for {jp_set_id}/{card_num}")
+        return None
+    name = name_el.get_text(strip=True)
+
+    # --- Card image ---
+    img_el = soup.select_one("div.card-image img.card")
+    image = img_el["src"] if img_el and img_el.get("src") else None
+
+    # --- Category and subcategory from card-text-type ---
+    type_el = soup.select_one("p.card-text-type")
+    type_text = type_el.get_text(strip=True) if type_el else ""
+    # Examples: "Pokémon - Basic", "Pokémon - Stage 2 - Evolves from Golbat",
+    #           "Trainer - Item", "Trainer - Supporter", "Energy - Special Energy"
+    type_parts = [p.strip() for p in type_text.split("-")]
+
+    # Determine category
+    raw_category = type_parts[0] if type_parts else ""
+    if "mon" in raw_category.lower():
+        category = "Pokemon"
+    elif "trainer" in raw_category.lower():
+        category = "Trainer"
+    elif "energy" in raw_category.lower():
+        category = "Energy"
+    else:
+        category = raw_category
+
+    # --- EN set ID and card ID ---
+    en_set_id = cfg["en_set_id"]
+    en_set_name = cfg["en_set_name"]
+    card_id = f"{en_set_id}-{card_num:03d}"
+
+    # --- Build base card dict ---
+    card = {
+        "name": name,
+        "id": card_id,
+        "set": {"id": en_set_id, "name": en_set_name},
+        "image": image,
+        "category": category,
+    }
+
+    # --- Rarity ---
+    # Found in: div.card-prints-current span (second span, text like "#1 · Common")
+    prints_detail = soup.select_one("div.card-prints-current .prints-current-details")
+    rarity = None
+    if prints_detail:
+        spans = prints_detail.select("span")
+        if len(spans) >= 2:
+            detail_text = spans[1].get_text(strip=True)
+            # Format: "#1 · Common" or just "#1"
+            if "·" in detail_text:
+                rarity = detail_text.split("·", 1)[1].strip()
+    if rarity:
+        card["rarity"] = rarity
+
+    # --- Illustrator ---
+    artist_el = soup.select_one("div.card-text-artist a")
+    if artist_el:
+        card["illustrator"] = artist_el.get_text(strip=True)
+
+    if category == "Pokemon":
+        # --- HP ---
+        title_el = soup.select_one("p.card-text-title")
+        if title_el:
+            title_text = title_el.get_text()
+            # Extract HP: look for pattern like "- 50 HP"
+            hp_match = re.search(r"(\d+)\s*HP", title_text)
+            if hp_match:
+                card["hp"] = int(hp_match.group(1))
+
+            # Extract type from title: "- Grass - 50 HP"
+            # The type name is between the card name and the HP
+            type_match = re.search(r"-\s*(\w[\w\s]*?)\s*-\s*\d+\s*HP", title_text)
+            if type_match:
+                pokemon_type = type_match.group(1).strip()
+                if pokemon_type in TYPE_NAMES:
+                    card["types"] = [pokemon_type]
+
+        # --- Stage ---
+        if len(type_parts) >= 2:
+            stage_text = type_parts[1].strip()
+            # Handle "Stage 2", "Stage 1", "Basic", "MEGA" etc.
+            # Also might contain "Evolves from ..." as part of the text
+            stage_clean = stage_text.split("Evolves")[0].strip()
+            if stage_clean:
+                card["stage"] = stage_clean
+
+        # --- Weakness/Resistance/Retreat ---
+        wrr_text = _parse_wrr_text(soup)
+        weakness = parse_weakness(wrr_text)
+        resistance = parse_resistance(wrr_text)
+        retreat = parse_retreat(wrr_text)
+
+        if weakness:
+            card["weakness"] = weakness
+        if resistance:
+            card["resistance"] = resistance
+        card["retreat"] = retreat
+
+        # --- dexId (empty for now; populated by downstream scripts) ---
+        card["dexId"] = []
+
+        # --- Abilities ---
+        abilities = parse_abilities(soup)
+        if abilities:
+            card["abilities"] = abilities
+
+        # --- Attacks ---
+        attacks = parse_attacks(soup)
+        if attacks:
+            card["attacks"] = attacks
+
+    else:
+        # Trainer or Energy card
+        # --- Subcategory ---
+        if len(type_parts) >= 2:
+            subcategory = type_parts[1].strip()
+            card["subcategory"] = subcategory
+
+        # --- Effect text ---
+        effect = parse_effect_text(soup)
+        if effect:
+            card["effect"] = effect
+
+    return card
+
+
+###############################################################################
+# Test helper
+###############################################################################
+
+def test_single_card():
+    """Test fetching and parsing a single card (M4/1 = Weedle)."""
+    jp_set = "M4"
+    card_num = 1
+    cfg = SET_CONFIG[jp_set]
+    print(f"Testing: {jp_set}/{card_num}")
+    html = fetch_card_page(jp_set, card_num)
+    if not html:
+        print("  FAILED to fetch page")
+        return
+    card = parse_card_page(html, jp_set, card_num, cfg)
+    if card:
+        print(json.dumps(card, indent=2, ensure_ascii=False))
+    else:
+        print("  FAILED to parse card")
+
+
+###############################################################################
+# Coverage checker
+###############################################################################
+
 def check_m_coverage(jp_set_id: str, cfg: dict) -> dict:
     """
     Check if the existing ME*.json has real EN content for a given JP set.
@@ -167,4 +594,13 @@ def check_all_m_sets() -> dict:
 
 
 if __name__ == "__main__":
-    check_all_m_sets()
+    parser = argparse.ArgumentParser(description="Limitless TCG Coverage Checker & Scraper")
+    parser.add_argument("--test-card", action="store_true", help="Test parsing a single card (M4/1)")
+    parser.add_argument("--check-only", action="store_true", help="Only check coverage, don't scrape")
+    parser.add_argument("--sets", type=str, help="Comma-separated JP set IDs to scrape (e.g. M4,M2a)")
+    args = parser.parse_args()
+
+    if args.test_card:
+        test_single_card()
+    else:
+        check_all_m_sets()
