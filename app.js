@@ -29,6 +29,7 @@ const SIDELOAD_CONFIG = {
     { id: "ME2", name: "Phantasmal Flames",   file: "data/ME2.json" },
     { id: "ME3", name: "Perfect Order",       file: "data/ME3.json" },
     { id: "ME4", name: "Ninja Spinner",       file: "data/ME4.json" },
+    { id: "ME2a", name: "MEGA Dream ex",     file: "data/ME2a.json" },
   ]
 };
 
@@ -38,7 +39,7 @@ const SIDELOAD_JP_CONFIG = Object.fromEntries(SIDELOAD_CONFIG.jp.map(c => [c.id.
 
 // Map JP set IDs to their EN translation sideload set IDs
 // Keys must be uppercase to match jpSetId.toUpperCase() lookups
-const JP_TO_EN_SIDELOAD = { "M1S": "ME1", "M1L": "ME1", "M2": "ME2", "M3": "ME3", "M4": "ME4" };
+const JP_TO_EN_SIDELOAD = { "M1S": "ME1", "M1L": "ME1", "M2": "ME2", "M2A": "ME2a", "M3": "ME3", "M4": "ME4" };
 
 let SIDELOAD_SETS = {};
 let SIDELOAD_EN_SETS = {};
@@ -167,7 +168,7 @@ function energyBadge(type) {
 }
 
 function renderCard(card, lang, badge, score) {
-  const imgUrl = card.image ? card.image + '/high.webp' : sideloadImageUrl(card) || null;
+  const imgUrl = card.image ? (card.image.startsWith('http') ? card.image : card.image + '/high.webp') : sideloadImageUrl(card) || null;
   const attacks = (card.attacks || []).map(a => {
     const cost = (a.cost || []).map(t => energyBadge(t)).join('');
     let block = `<div class="atk-block"><div class="atk-row">${cost ? `<span class="atk-cost">${cost}</span>` : ''}<span class="atk-name">${safeHtml(a.name)}</span>${a.damage != null ? `<span class="atk-dmg">${safeHtml(String(a.damage))}</span>` : ''}</div>`;

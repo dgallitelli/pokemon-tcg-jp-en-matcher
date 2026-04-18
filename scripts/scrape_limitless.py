@@ -798,13 +798,42 @@ def test_single_card():
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Limitless TCG Coverage Checker & Scraper")
-    parser.add_argument("--test-card", action="store_true", help="Test parsing a single card (M4/1)")
-    parser.add_argument("--check-only", action="store_true", help="Only check coverage, don't scrape")
-    parser.add_argument("--sets", type=str, help="Comma-separated JP set IDs to scrape (e.g. M4,M2a)")
+    parser = argparse.ArgumentParser(
+        description="Limitless TCG Coverage Checker & Scraper",
+        epilog=(
+            "Examples:\n"
+            "  python scrape_limitless.py                  # Check all + scrape missing M* + check SV*\n"
+            "  python scrape_limitless.py --check-only     # Coverage report only\n"
+            "  python scrape_limitless.py --sets M4,M2a    # Scrape specific sets\n"
+            "  python scrape_limitless.py --test-card      # Test single card parse\n"
+        ),
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    parser.add_argument("--test-card", action="store_true",
+                        help="Test parsing a single card (M4/1) and print result")
+    parser.add_argument("--check-only", action="store_true",
+                        help="Only check coverage (M* + SV*), don't scrape anything")
+    parser.add_argument("--sets", type=str, default=None,
+                        help="Comma-separated JP set IDs to scrape (e.g. M4,M2a). "
+                             "Forces scrape even if coverage is OK.")
+    parser.add_argument("--skip-sv", action="store_true",
+                        help="Skip SV* coverage check (faster)")
     args = parser.parse_args()
 
     if args.test_card:
         test_single_card()
-    else:
-        check_all_m_sets()
+        sys.exit(0)
+
+    # 1. Check all M* sets
+    coverage = check_all_m_sets()
+
+    # 2. Scrape missing M* sets (unless --check-only)
+    if not args.check_only:
+        only_sets = [s.strip() for s in args.sets.split(",")] if args.sets else None
+        scrape_missing_m_sets(coverage, only_sets)
+
+    # 3. Check SV* coverage
+    if not args.skip_sv:
+        check_sv_coverage()
+
+    print("Done.")
