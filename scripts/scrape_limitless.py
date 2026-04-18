@@ -402,6 +402,9 @@ def parse_card_page(html: str, jp_set_id: str, card_num: int, cfg: dict) -> dict
     en_set_name = cfg["en_set_name"]
     card_id = f"{en_set_id}-{card_num:03d}"
 
+    if not name:
+        print(f"    WARN: Empty card name for {en_set_id}/{card_num:03d} — check Limitless page manually")
+
     # --- Build base card dict ---
     card = {
         "name": name,
@@ -708,11 +711,14 @@ def check_sv_coverage():
         print(f"  ERROR fetching JP sets from TCGdex: {e}")
         return
 
-    sv_sets = [
-        s for s in all_sets
-        if s.get("id", "").upper().startswith("SV")
-        and s.get("id", "").upper() not in SV_SKIP_IDS
-    ]
+    # Deduplicate by uppercased set ID (TCGdex returns duplicate lowercase entries e.g. sv1a x8)
+    sv_sets_dedup = {}
+    for s in all_sets:
+        sid_upper = s.get("id", "").upper()
+        if sid_upper.startswith("SV") and sid_upper not in SV_SKIP_IDS:
+            if sid_upper not in sv_sets_dedup:
+                sv_sets_dedup[sid_upper] = s
+    sv_sets = list(sv_sets_dedup.values())
 
     if not sv_sets:
         print("  No SV* sets found in TCGdex.")
@@ -720,7 +726,7 @@ def check_sv_coverage():
 
     print(f"  Found {len(sv_sets)} SV* sets to check.\n")
 
-    for s in sorted(sv_sets, key=lambda x: x.get("id", "")):
+    for s in sorted(sv_sets, key=lambda x: x.get("id", "").upper()):
         set_id = s.get("id", "")
         set_name = s.get("name", "?")
 
@@ -735,8 +741,9 @@ def check_sv_coverage():
                 time.sleep(0.5)
                 continue
 
-            # Pick a random card
-            sample = random.choice(cards)
+            # Prefer Pokemon cards (more likely to have dexId for reliable EN matching)
+            pokemon_cards = [c for c in cards if c.get("category") == "Pokemon"] or cards
+            sample = random.choice(pokemon_cards)
             card_id = sample.get("id", "")
 
             resp = requests.get(f"{TCGDEX_API}/ja/cards/{card_id}", timeout=15)
