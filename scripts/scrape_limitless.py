@@ -89,7 +89,7 @@ SET_CONFIG = {
     "M4": {
         "en_set_id": "ME4",
         "en_set_name": "Ninja Spinner",
-        "card_count": 120,
+        "card_count": 83,  # Limitless only indexes 83/120 cards (cards 84-120 return 404)
         "serie": "Mega Evolution",
         "release_date": "2026-05-22",
     },
@@ -574,12 +574,21 @@ def preserve_dex_ids(new_data: dict, file_path: Path) -> dict:
     return new_data
 
 
-def write_sideload(data: dict, cfg: dict):
-    """Write the scraped data to data/ME*.json, preserving existing dexIds."""
+def write_sideload(data: dict, cfg: dict, strip_images: bool = True):
+    """Write the scraped data to data/ME*.json, preserving existing dexIds.
+
+    strip_images: if True (default), set all image fields to null.
+    Limitless only hosts JP card scans for these sets, so images must not
+    appear in the EN panel (invariant: never show JP image in EN panel).
+    """
     en_set_id = cfg["en_set_id"]
     file_path = DATA_DIR / f"{en_set_id}.json"
 
     data = preserve_dex_ids(data, file_path)
+
+    if strip_images:
+        for card in data.get("cards", {}).values():
+            card["image"] = None
 
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
@@ -588,7 +597,7 @@ def write_sideload(data: dict, cfg: dict):
     print(f"  Done. Wrote {card_count} cards to {file_path}")
 
 
-def scrape_missing_m_sets(coverage: dict, only_sets=None):
+def scrape_missing_m_sets(coverage: dict, only_sets=None, strip_images: bool = True):
     """
     Scrape M* sets that have missing or incomplete EN coverage.
     M1S and M1L both map to ME1 — only scrape once.
@@ -613,12 +622,12 @@ def scrape_missing_m_sets(coverage: dict, only_sets=None):
 
         if result["status"] in ("missing", "incomplete"):
             data = scrape_set(jp_set_id, cfg)
-            write_sideload(data, cfg)
+            write_sideload(data, cfg, strip_images=strip_images)
             scraped_en_sets.add(en_set_id)
         elif only_sets and jp_set_id in only_sets:
             print(f"  {jp_set_id} -> {en_set_id}: Coverage OK but --sets forces rescrape")
             data = scrape_set(jp_set_id, cfg)
-            write_sideload(data, cfg)
+            write_sideload(data, cfg, strip_images=strip_images)
             scraped_en_sets.add(en_set_id)
 
 
@@ -829,6 +838,9 @@ if __name__ == "__main__":
                              "Forces scrape even if coverage is OK.")
     parser.add_argument("--skip-sv", action="store_true",
                         help="Skip SV* coverage check (faster)")
+    parser.add_argument("--keep-images", action="store_true",
+                        help="Keep image URLs in scraped data (default: strip to null, "
+                             "since Limitless only has JP scans which must not show in EN panel)")
     args = parser.parse_args()
 
     if args.test_card:
@@ -841,7 +853,8 @@ if __name__ == "__main__":
     # 2. Scrape missing M* sets (unless --check-only)
     if not args.check_only:
         only_sets = [s.strip() for s in args.sets.split(",")] if args.sets else None
-        scrape_missing_m_sets(coverage, only_sets)
+        strip_images = not args.keep_images
+        scrape_missing_m_sets(coverage, only_sets, strip_images=strip_images)
 
     # 3. Check SV* coverage
     if not args.skip_sv:
