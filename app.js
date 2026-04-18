@@ -437,7 +437,7 @@ async function browseSet() {
     hasCategories = true;
     cards = Object.entries(sideload.cards).map(([num, c]) => ({
       num, name: c.name, id: c.id, category: c.category || '',
-      image: c.image ? c.image + '/high.webp' : sideloadImageUrl(c)
+      image: c.image ? (c.image.startsWith('http') ? c.image : c.image + '/high.webp') : sideloadImageUrl(c)
     }));
   } else {
     try {
@@ -446,7 +446,7 @@ async function browseSet() {
       setName = data.name || setId;
       cards = data.cards.map(c => ({
         num: c.id.split('-').pop(), name: c.name, id: c.id, category: c.category || '',
-        image: c.image ? c.image + '/high.webp' : null
+        image: c.image ? (c.image.startsWith('http') ? c.image : c.image + '/high.webp') : null
       }));
       if (cards.some(c => c.category)) hasCategories = true;
     } catch { setStatus(`Failed to load set "${safeHtml(setId)}".`, true); return; }
@@ -630,6 +630,9 @@ async function doSearch() {
           const fallback = enTransSet.cards[jpNum] || enTransSet.cards[rawNum];
           if (fallback && fallback.category === jpCard.category) transCard = fallback;
         }
+        // Guard: reject sideload match if the card name contains JP text (untranslated)
+        const hasJpText = t => t && /[\u3040-\u9FFF]/.test(t);
+        if (transCard && hasJpText(transCard.name)) transCard = null;
         if (transCard) {
           setStatus('', false);
           document.getElementById('results').innerHTML = `

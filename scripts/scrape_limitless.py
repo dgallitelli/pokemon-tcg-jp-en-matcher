@@ -51,12 +51,19 @@ ENERGY_MAP = {
 
 # JP set ID → EN sideload configuration
 SET_CONFIG = {
+    # M1S and M1L both map to ME1 (unified 1-188 numbering: M1S=1-92, M1L=93-188).
+    # ME1 was built by the older pipeline (fetch_tcgdex_en.py + normalize_data.py) and
+    # cannot be re-scraped from Limitless without a merge step: M1S has its own 1-92
+    # numbering on Limitless, and M1L has its own 1-92 numbering -- these must be merged
+    # with a +92 offset applied to M1L before writing ME1.json.
+    # DO NOT scrape M1S or M1L individually: it would overwrite ME1 with only 92 cards.
     "M1S": {
         "en_set_id": "ME1",
         "en_set_name": "Mega Evolution",
         "card_count": 92,
         "serie": "Mega Evolution",
         "release_date": "2026-01-23",
+        "scrape_disabled": True,  # See note above — ME1 requires merge of M1S+M1L
     },
     "M1L": {
         "en_set_id": "ME1",
@@ -64,6 +71,7 @@ SET_CONFIG = {
         "card_count": 92,
         "serie": "Mega Evolution",
         "release_date": "2026-01-23",
+        "scrape_disabled": True,  # See note above — ME1 requires merge of M1S+M1L
     },
     "M2": {
         "en_set_id": "ME2",
@@ -405,6 +413,13 @@ def parse_card_page(html: str, jp_set_id: str, card_num: int, cfg: dict) -> dict
     if not name:
         print(f"    WARN: Empty card name for {en_set_id}/{card_num:03d} — check Limitless page manually")
 
+    # Guard: warn if any extracted text contains Japanese characters (untranslated content)
+    _jp_re = re.compile(r'[\u3040-\u9fff]')
+    def _has_jp(text: str) -> bool:
+        return bool(text and _jp_re.search(text))
+    if _has_jp(name):
+        print(f"    WARN: JP text in card name for {en_set_id}/{card_num:03d}: {name!r}")
+
     # --- Build base card dict ---
     card = {
         "name": name,
@@ -495,7 +510,15 @@ def parse_card_page(html: str, jp_set_id: str, card_num: int, cfg: dict) -> dict
         # --- Effect text ---
         effect = parse_effect_text(soup)
         if effect:
-            card["effect"] = effect
+            if _has_jp(effect):
+                print(f"    WARN: JP text in effect for {en_set_id}/{card_num:03d} — skipping effect field")
+            else:
+                card["effect"] = effect
+
+    # Final JP text check on attack names/effects
+    for atk in card.get("attacks", []):
+        if _has_jp(atk.get("name", "")) or _has_jp(atk.get("effect", "")):
+            print(f"    WARN: JP text in attack data for {en_set_id}/{card_num:03d}: {atk}")
 
     return card
 
@@ -618,6 +641,11 @@ def scrape_missing_m_sets(coverage: dict, only_sets=None, strip_images: bool = T
 
         if en_set_id in scraped_en_sets:
             print(f"  {jp_set_id} -> {en_set_id}: Already scraped (from prior JP set)")
+            continue
+
+        if cfg.get("scrape_disabled"):
+            if only_sets and jp_set_id in only_sets:
+                print(f"  {jp_set_id} -> {en_set_id}: ⛔ Scraping disabled — {cfg.get('scrape_disabled_reason', 'see SET_CONFIG comment')}")
             continue
 
         if result["status"] in ("missing", "incomplete"):
