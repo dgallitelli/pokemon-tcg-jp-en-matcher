@@ -168,7 +168,7 @@ function energyBadge(type) {
 }
 
 function renderCard(card, lang, badge, score) {
-  const imgUrl = card.image ? (card.image.startsWith('http') ? card.image : card.image + '/high.webp') : sideloadImageUrl(card) || null;
+  const imgUrl = card.image ? (/\.(png|jpg|webp)$/i.test(card.image) ? card.image : card.image + '/high.webp') : sideloadImageUrl(card) || null;
   const attacks = (card.attacks || []).map(a => {
     const cost = (a.cost || []).map(t => energyBadge(t)).join('');
     let block = `<div class="atk-block"><div class="atk-row">${cost ? `<span class="atk-cost">${cost}</span>` : ''}<span class="atk-name">${safeHtml(a.name)}</span>${a.damage != null ? `<span class="atk-dmg">${safeHtml(String(a.damage))}</span>` : ''}</div>`;
@@ -437,7 +437,7 @@ async function browseSet() {
     hasCategories = true;
     cards = Object.entries(sideload.cards).map(([num, c]) => ({
       num, name: c.name, id: c.id, category: c.category || '',
-      image: c.image ? (c.image.startsWith('http') ? c.image : c.image + '/high.webp') : sideloadImageUrl(c)
+      image: c.image ? (/\.(png|jpg|webp)$/i.test(c.image) ? c.image : c.image + '/high.webp') : sideloadImageUrl(c)
     }));
   } else {
     try {
@@ -446,7 +446,7 @@ async function browseSet() {
       setName = data.name || setId;
       cards = data.cards.map(c => ({
         num: c.id.split('-').pop(), name: c.name, id: c.id, category: c.category || '',
-        image: c.image ? (c.image.startsWith('http') ? c.image : c.image + '/high.webp') : null
+        image: c.image ? (/\.(png|jpg|webp)$/i.test(c.image) ? c.image : c.image + '/high.webp') : null
       }));
       if (cards.some(c => c.category)) hasCategories = true;
     } catch { setStatus(`Failed to load set "${safeHtml(setId)}".`, true); return; }
