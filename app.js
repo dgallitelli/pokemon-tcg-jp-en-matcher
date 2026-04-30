@@ -329,6 +329,29 @@ function matchScore(jpCard, enCard) {
   return { score: Math.max(0, score), reasons };
 }
 
+// JP Pokemon name → EN name for cards missing dexId in TCGdex (ex cards, paradox, etc.)
+const POKEMON_NAME_MAP = {
+  'リーフィア': 'Leafeon', 'カミツオロチ': 'Hydrapple', 'テツノイサハ': 'Iron Leaves',
+  'ヤバソチャ': 'Sinistcha', 'オーガポン': 'Ogerpon', 'ブースター': 'Flareon',
+  'ウガツホムラ': 'Gouging Fire', 'シャワーズ': 'Vaporeon', 'ガブリアス': 'Garchomp',
+  'グレイシア': 'Glaceon', 'イルカマン': 'Palafin', 'ウネルミナモ': 'Walking Wake',
+  'サンダース': 'Jolteon', 'テツノカイナ': 'Iron Hands', 'テツノイバラ': 'Iron Thorns',
+  'エーフィ': 'Espeon', 'ニンフィア': 'Sylveon', 'テツノブジン': 'Iron Valiant',
+  'テツノカシラ': 'Iron Crown', 'スナノケガワ': 'Sandy Shocks', 'ブラッキー': 'Umbreon',
+  'トドロクツキ': 'Roaring Moon', 'イイネイヌ': 'Okidogi', 'マシマシラ': 'Munkidori',
+  'キチキギス': 'Fezandipiti', 'モモワロウ': 'Pecharunt', 'サーフゴー': 'Gholdengo',
+  'ドラパルト': 'Dragapult', 'タケルライコ': 'Raging Bolt', 'イーブイ': 'Eevee',
+  'テラパゴス': 'Terapagos', 'ソウブレイズ': 'Ceruledge', 'ピカチュウ': 'Pikachu',
+  'ガチグマ': 'Ursaluna',
+};
+
+// EN form name overrides for JP Pokemon with form suffixes (JP suffix → EN prefix)
+const POKEMON_FORM_MAP = {
+  'みどりのめん': 'Teal Mask', 'かまどのめん': 'Hearthflame Mask',
+  'いどのめん': 'Wellspring Mask', 'いしずえのめん': 'Cornerstone Mask',
+  'アカツキ': 'Bloodmoon',
+};
+
 // Common JP → EN trainer/energy name mappings for cross-language search
 const TRAINER_NAME_MAP = {
   'ボスの指令': "Boss's Orders",
@@ -395,7 +418,77 @@ const TRAINER_NAME_MAP = {
   'ファイアーブレーサー': 'Firebreather',
   'バトルコロシアム': 'Battle Cage',
   'めまいのたに': 'Dizzying Valley',
+  // SV8a / Terastal Fest ex trainers (Prismatic Evolutions EN names)
+  '鬼の仮面': "Ogre's Mask",
+  '改造ハンマー': 'Enhanced Hammer',
+  'カウンターキャッチャー': 'Counter Catcher',
+  'ガラスのラッパ': 'Glass Trumpet',
+  'スーパーエネルギー回収': 'Superior Energy Retrieval',
+  'つりざおMAX': 'Max Rod',
+  '大地の器': 'Earthen Vessel',
+  'テクノレーダー': 'Techno Radar',
+  'テラスタルオーブ': 'Tera Orb',
+  'トレジャーガジェット': 'Treasure Tracker',
+  'プライムキャッチャー': 'Prime Catcher',
+  'ポケモン回収サイクロン': 'Scoop Up Cyclone',
+  'むしとりセット': 'Bug Catching Set',
+  '夜のタンカ': 'Night Stretcher',
+  'きらめく結晶': 'Sparkling Crystal',
+  '緊急ボード': 'Rescue Board',
+  'くさりもち': 'Binding Mochi',
+  'ゴージャスマント': 'Luxurious Cape',
+  'ハバンのみ': 'Haban Berry',
+  'ブーストエナジー 古代': 'Ancient Booster Energy Capsule',
+  'ブーストエナジー 未来': 'Future Booster Energy Capsule',
+  'マキシマムベルト': 'Maximum Belt',
+  'ワザマシン エヴォリューション': 'Technical Machine: Evolution',
+  'ワザマシン デヴォリューション': 'Technical Machine: Devolution',
+  'アオキの手際': "Larry's Skill",
+  'アカマツ': 'Crispin',
+  'アクロマの執念': "Colress's Tenacity",
+  '暗号マニアの解読': "Ciphermaniac's Codebreaking",
+  'アンズの秘技': "Janine's Secret Art",
+  'オーリム博士の気迫': "Professor Sada's Vitality",
+  'スイレンのお世話': "Lana's Aid",
+  'スグリ': 'Kieran',
+  'ゼイユ': 'Carmine',
+  'タロ': 'Lacey',
+  '探検家の先導': "Explorer's Guidance",
+  'ネリネ': 'Amarys',
+  'パルデアの仲間たち': 'Friends in Paldea',
+  'フトゥー博士のシナリオ': "Professor Turo's Scenario",
+  'ブライア': 'Briar',
+  'ベルのまごころ': "Bianca's Devotion",
+  'マツバの確信': "Morty's Conviction",
+  'メロコ': 'Mela',
+  'お祭り会場': 'Festival Grounds',
+  'ジャミングタワー': 'Jamming Tower',
+  'ゼロの大空洞': 'Area Zero Underdepths',
+  '月明かりの丘': 'Moonlit Hill',
+  'ニュートラルセンター': 'Neutralization Zone',
+  'オルティガ': 'Ortega',
+  'シュウメイ': 'Atticus',
+  'タイム': 'Tyme',
+  'ピーニャ': 'Giacomo',
+  'ビワ': 'Eri',
+  'レホール': 'Raifort',
+  'カキツバタ': 'Drayton',
 };
+
+function pokemonNameFromMap(jpName) {
+  if (!jpName) return null;
+  const isEx = jpName.endsWith('ex');
+  const bare = isEx ? jpName.slice(0, -2).trimEnd() : jpName;
+  const parts = bare.split(/\s+/);
+  const baseName = POKEMON_NAME_MAP[parts[0]];
+  if (!baseName) return null;
+  let formPrefix = '';
+  if (parts.length > 1) {
+    const formKey = parts.slice(1).join(' ');
+    formPrefix = POKEMON_FORM_MAP[formKey] ? POKEMON_FORM_MAP[formKey] + ' ' : '';
+  }
+  return formPrefix + baseName + (isEx ? ' ex' : '');
+}
 
 // Pokédex number → English name lookup via TCGdex, with memoization
 async function getEnglishName(dexId) {
@@ -653,6 +746,10 @@ async function doSearch() {
     // Try dexId lookup first (Pokemon cards)
     if (jpCard.dexId && jpCard.dexId.length > 0) {
       enName = await getEnglishName(jpCard.dexId[0]);
+    }
+    // Pokemon without dexId: try JP→EN name map (handles ex cards, paradox Pokemon, forms)
+    if (!enName && jpCard.category === 'Pokemon' && jpCard.name) {
+      enName = pokemonNameFromMap(jpCard.name);
     }
     // Trainer/Energy: try name map lookup
     if (!enName && jpCard.category !== 'Pokemon' && jpCard.name) {
