@@ -52,11 +52,12 @@ Card data includes: name, HP, types, stage, attacks (name/cost/damage/effect), a
 
 ## Features
 
-- **Prev/Next navigation** — step through cards in a set without re-entering numbers
-- **Set browser** — visual grid of all cards in a set with category filters (Pokemon/Trainer/Energy)
-- **Energy cost rendering** — attack costs shown as colored type badges
-- **Deep linking** — shareable URLs like `?set=M3&num=051`
-- **Mobile responsive** — adapts layout for narrow screens so it works on a phone at the table
+- **Mobile-first** — on phones, the EN card panel stacks on top with a large image; a compact JP confirmation block sits below. Input controls become a sticky bottom bar during results.
+- **Recents & autocomplete chips** — last 5 set IDs as tappable chips under the Set ID field; type to see matching suggestions.
+- **Set browser** — visual grid of all cards in a set with category filters (Pokemon/Trainer/Energy).
+- **Energy cost rendering** — attack costs shown as colored type badges.
+- **Deep linking** — shareable URLs like `?set=M3&num=051`.
+- **JP image fallback** — when an English card image isn't available, the EN panel falls back to the Japanese version, clearly marked.
 
 ## Data Pipeline
 

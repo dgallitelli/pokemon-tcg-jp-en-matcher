@@ -5,6 +5,26 @@ const apiCache = new Map();
 const dexNameCache = new Map();
 let lastScoredCards = new Map(); // id → full card object, populated after each search
 
+// Recent set IDs — ring buffer of max 5, most-recent first. Persisted in localStorage.
+const RECENTS_KEY = 'recentSets';
+const RECENTS_MAX = 5;
+
+function getRecentSets() {
+  try {
+    const raw = localStorage.getItem(RECENTS_KEY);
+    if (!raw) return [];
+    const arr = JSON.parse(raw);
+    return Array.isArray(arr) ? arr.filter(s => typeof s === 'string') : [];
+  } catch { return []; }
+}
+
+function pushRecentSet(setId) {
+  if (!setId) return;
+  const existing = getRecentSets();
+  const next = [setId, ...existing.filter(s => s.toLowerCase() !== setId.toLowerCase())].slice(0, RECENTS_MAX);
+  try { localStorage.setItem(RECENTS_KEY, JSON.stringify(next)); } catch {}
+}
+
 async function cachedApiFetch(url) {
   if (apiCache.has(url)) return apiCache.get(url);
   const res = await fetch(url);
@@ -222,30 +242,115 @@ function renderCard(card, lang, badge, score, fallbackImgUrl) {
   const badgeClass = badge ? 'trans' : lang;
   const confidencePip = (score !== undefined && score < 70)
     ? `<span class="confidence-pip">${score < 40 ? 'Low' : 'Med'} match</span>` : '';
+  // Share icon appears on EN panels (including Translation-badged synthetic/sideload matches)
+  const shareBtn = (lang === 'en' || badge) ? `<button class="share-icon" id="shareBtn" title="Copy link" aria-label="Copy link">🔗</button>` : '';
   return `
     <div class="card-panel${imgUrl ? '' : ' no-image'}">
       <div class="panel-header">
         <span class="lang-badge ${badgeClass}">${badgeLabel}</span>
         ${confidencePip}
+        ${shareBtn}
       </div>
       <h2>${cardName}</h2>
       ${imgUrl ? `<img src="${imgUrl}" alt="${cardName}" loading="lazy"${fallbackAttr} onerror="${onErrorJs}"><div class="img-placeholder" style="display:none;width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:8px;margin-bottom:1rem;align-items:center;justify-content:center;color:#555;font-size:2rem">🃏</div>${fallbackAttr ? '<div class="jp-fallback-hint" style="display:none">Showing Japanese card — no English image available.</div>' : ''}` : ''}
       <div class="card-meta">
-        <span class="lbl">Set</span><span>${setName}</span> <span style="color:var(--text-faint)">(${cardId})</span><br>
-        ${card.category ? `<span class="lbl">Category</span><span>${safeHtml(card.category)}${subcategory ? ` — ${subcategory}` : ''}</span><br>` : ''}
-        ${hp ? `<span class="lbl">HP</span><span>${hp}</span><br>` : ''}
-        ${stage ? `<span class="lbl">Stage</span><span>${stage}</span><br>` : ''}
-        ${illustrator ? `<span class="lbl">Art</span><span>${illustrator}</span><br>` : ''}
-        ${types ? `<span class="lbl">Type</span>${types}<br>` : ''}
-        ${weakness ? `<span class="lbl">Weak</span>${weakness}<br>` : ''}
-        ${resistance ? `<span class="lbl">Resist</span>${resistance}<br>` : ''}
-        ${retreat ? `<span class="lbl">Retreat</span>${retreat}<br>` : ''}
-        ${abilities ? `<div class="atk-section">${abilities}</div>` : ''}
-        ${attacks ? `<div class="atk-section">${attacks}</div>` : ''}
-        ${(card.category === 'Trainer' || card.category === 'Energy') && card.effect ? `<div style="margin-top:0.6rem;font-size:0.8rem;color:var(--text-muted);font-style:italic;line-height:1.5">${safeHtml(card.effect)}</div>` : ''}
-        ${card.description ? `<div style="margin-top:0.5rem;font-size:0.75rem;color:#666;font-style:italic">${safeHtml(card.description)}</div>` : ''}
+        <div class="meta-head">
+          <span class="lbl">Set</span><span>${setName}</span> <span style="color:var(--text-faint)">(${cardId})</span>
+        </div>
+        ${abilities || attacks ? `<div class="atk-section">${abilities}${attacks}</div>` : ''}
+        ${(card.category === 'Trainer' || card.category === 'Energy') && card.effect ? `<div class="trainer-effect">${safeHtml(card.effect)}</div>` : ''}
+        <details class="card-details">
+          <summary>Show details</summary>
+          <div class="details-inner">
+            ${card.category ? `<span class="lbl">Category</span><span>${safeHtml(card.category)}${subcategory ? ` — ${subcategory}` : ''}</span><br>` : ''}
+            ${hp ? `<span class="lbl">HP</span><span>${hp}</span><br>` : ''}
+            ${stage ? `<span class="lbl">Stage</span><span>${stage}</span><br>` : ''}
+            ${illustrator ? `<span class="lbl">Art</span><span>${illustrator}</span><br>` : ''}
+            ${types ? `<span class="lbl">Type</span>${types}<br>` : ''}
+            ${weakness ? `<span class="lbl">Weak</span>${weakness}<br>` : ''}
+            ${resistance ? `<span class="lbl">Resist</span>${resistance}<br>` : ''}
+            ${retreat ? `<span class="lbl">Retreat</span>${retreat}<br>` : ''}
+            ${card.description ? `<div class="card-desc">${safeHtml(card.description)}</div>` : ''}
+          </div>
+        </details>
       </div>
     </div>`;
+}
+
+// Post-render hook: auto-open details on desktop, activate sticky bar on mobile.
+function openDetailsOnDesktop() {
+  if (window.matchMedia('(min-width: 681px)').matches) {
+    document.querySelectorAll('#results .card-details').forEach(d => d.open = true);
+  }
+  refreshStickyBar();
+}
+
+// Compact JP renderer — used on mobile as a scroll-below confirmation block.
+// Image by default, attacks/abilities hidden behind "Show JP text" toggle.
+function renderCardCompactJp(card) {
+  const imgUrl = cardImageUrl(card);
+  const cardName = safeHtml(card.name);
+  const cardId = safeHtml(card.id || '');
+  const attacks = (card.attacks || []).map(a => {
+    const cost = (a.cost || []).map(t => energyBadge(t)).join('');
+    return `<div class="atk-row">${cost ? `<span class="atk-cost">${cost}</span>` : ''}<span class="atk-name">${safeHtml(a.name)}</span>${a.damage != null ? `<span class="atk-dmg">${safeHtml(String(a.damage))}</span>` : ''}</div>${a.effect ? `<div class="atk-effect">${safeHtml(a.effect)}</div>` : ''}`;
+  }).join('');
+  const abilities = (card.abilities || []).map(a =>
+    `<div class="ability-row"><span class="ability-label">Ability</span> <span class="ability-name">${safeHtml(a.name)}</span></div>${a.effect ? `<div class="atk-effect">${safeHtml(a.effect)}</div>` : ''}`
+  ).join('');
+  return `
+    <div class="card-panel card-panel--compact">
+      <div class="panel-header">
+        <span class="lang-badge ja">日本語 Japanese</span>
+        <span class="compact-id">${cardId}</span>
+      </div>
+      <h2 class="compact-name">${cardName}</h2>
+      ${imgUrl ? `<img src="${imgUrl}" alt="${cardName}" loading="lazy" class="compact-img" onerror="this.onerror=null;this.style.display='none'">` : ''}
+      ${abilities || attacks ? `<details class="jp-text-toggle">
+        <summary>Show JP text</summary>
+        <div class="jp-text-inner">${abilities}${attacks}</div>
+      </details>` : ''}
+    </div>`;
+}
+
+// Sets where Serebii only has a JP page (we reuse the JP slug for the EN card
+// so the image resolves to the same URL and the EN panel shows JP artwork).
+// For these, we render a single merged panel with a note.
+const JP_ONLY_SEREBII_SLUGS = new Set(['megadreamex']);
+
+// Compose results HTML for the various render modes.
+//   mode='pair'     — EN + JP (side-by-side on desktop, stacked EN-first on mobile)
+//   mode='en-only'  — just JP shown (no EN match — we render JP so user sees something)
+function assembleResults(jpCard, enCard, mode, badge, score) {
+  const isMobile = window.matchMedia('(max-width: 680px)').matches;
+  if (mode === 'en-only') {
+    return `<div class="cards-container">${renderCard(jpCard, 'ja')}</div>`;
+  }
+  const jpImg = cardImageUrl(jpCard);
+  const enImg = cardImageUrl(enCard);
+  // Auto-merge only when the shared image slug is known to be JP-only.
+  // (M4 and ME4 both resolve to Serebii's English `ninjaspinner` set — that's not a JP fallback.)
+  if (jpImg && enImg && jpImg === enImg) {
+    const slugMatch = enImg.match(/\/card\/([^/]+)\//);
+    const slug = slugMatch ? slugMatch[1] : null;
+    if (slug && JP_ONLY_SEREBII_SLUGS.has(slug)) {
+      return `<div class="cards-container cards-container--merged">${renderCard(enCard, 'en', badge || '🔄 Translation', score, null)}<p class="merged-note">Showing Japanese card art — no English print available yet.</p></div>`;
+    }
+    // Same image URL but it's an English set (e.g. M4/ME4 share ninjaspinner).
+    // Render just the EN panel with no "translation" note, since the image is already the English one.
+    return `<div class="cards-container cards-container--merged">${renderCard(enCard, 'en', badge || '🔄 Translation', score, null)}</div>`;
+  }
+  if (isMobile) {
+    return `<div class="cards-container cards-container--stack">
+      ${renderCard(enCard, 'en', badge, score, jpImg)}
+      ${renderCardCompactJp(jpCard)}
+    </div>`;
+  }
+  return `<div class="cards-container">
+    ${renderCard(jpCard, 'ja')}
+    <div class="arrow">→</div>
+    ${renderCard(enCard, 'en', badge, score, jpImg)}
+  </div>`;
 }
 
 // Score how well an English card matches the Japanese card
@@ -634,6 +739,8 @@ async function doSearch() {
 
   searchBtn.disabled = true;
   try { localStorage.setItem('lastSet', setId); } catch {}
+  pushRecentSet(setId);
+  renderChipRow();
   try {
     const setUpper = setId.toUpperCase();
     const cardNum = padNum(rawNum);
@@ -753,15 +860,8 @@ async function doSearch() {
         if (transCard && hasJpText(transCard.name)) transCard = null;
         if (transCard) {
           setStatus('', false);
-          const jpImg = cardImageUrl(jpCard);
-          document.getElementById('results').innerHTML = `
-            <div class="cards-container">
-              ${renderCard(jpCard, 'ja')}
-              <div class="arrow">→</div>
-              ${renderCard(transCard, 'en', '🔄 Translation', undefined, jpImg)}
-            </div>
-            <button class="share-btn" id="shareBtn">🔗 Copy link</button>
-            ${renderNavRow()}`;
+          document.getElementById('results').innerHTML = assembleResults(jpCard, transCard, 'pair', '🔄 Translation');
+          openDetailsOnDesktop();
           return;
         }
       }
@@ -828,22 +928,17 @@ async function doSearch() {
           name: enName || jpCard.name,
           attacks: (jpCard.attacks || []).map(a => ({ ...a, name: '—' })),
         };
-        const jpImg = cardImageUrl(jpCard);
-        document.getElementById('results').innerHTML = `
-          <div class="cards-container">
-            ${renderCard(jpCard, 'ja')}
-            <div class="arrow">→</div>
-            ${renderCard(syntheticEn, 'en', '🔄 Translation', undefined, jpImg)}
-          </div>
-          <div class="match-info">This card has no official English print yet. Showing translated card text from <span style="color:#ffd700">Serebii</span>. Attack names are not translated.</div>
-          ${renderNavRow()}`;
+        document.getElementById('results').innerHTML =
+          assembleResults(jpCard, syntheticEn, 'pair', '🔄 Translation') +
+          `<div class="match-info">This card has no official English print yet. Showing translated card text from <span style="color:#ffd700">Serebii</span>. Attack names are not translated.</div>`;
+        openDetailsOnDesktop();
       } else {
-        document.getElementById('results').innerHTML = `
-          <div class="cards-container">${renderCard(jpCard, 'ja')}</div>
-          <div class="match-info"><span class="no-match">No English equivalent found.</span>
+        document.getElementById('results').innerHTML =
+          assembleResults(jpCard, null, 'en-only') +
+          `<div class="match-info"><span class="no-match">No English equivalent found.</span>
             ${jpCard.category !== 'Pokemon' ? '<br>Trainer/Energy card matching by name is limited — these often have different names across languages.' : ''}
-            ${!jpCard.dexId ? '<br>This card has no Pokédex ID, so name lookup was not possible.' : ''}</div>
-          ${renderNavRow()}`;
+            ${!jpCard.dexId ? '<br>This card has no Pokédex ID, so name lookup was not possible.' : ''}</div>`;
+        openDetailsOnDesktop();
       }
       return;
     }
@@ -884,30 +979,24 @@ async function doSearch() {
     const best = scored[0];
     if (!best) {
       setStatus('', false);
-      document.getElementById('results').innerHTML = `
-        <div class="cards-container">${renderCard(jpCard, 'ja')}</div>
-        <div class="match-info"><span class="no-match">Could not fetch English card details for comparison.</span></div>
-        ${renderNavRow()}`;
+      document.getElementById('results').innerHTML =
+        assembleResults(jpCard, null, 'en-only') +
+        `<div class="match-info"><span class="no-match">Could not fetch English card details for comparison.</span></div>`;
+      openDetailsOnDesktop();
       return;
     }
 
     setStatus('', false);
-    const jpImg = cardImageUrl(jpCard);
-    document.getElementById('results').innerHTML = `
-      <div class="cards-container">
-        ${renderCard(jpCard, 'ja')}
-        <div class="arrow">→</div>
-        ${renderCard(best.card, 'en', null, best.score, jpImg)}
-      </div>
-      ${scored.length > 1 ? `
+    document.getElementById('results').innerHTML =
+      assembleResults(jpCard, best.card, 'pair', null, best.score) +
+      (scored.length > 1 ? `
       <button class="wrong-card-btn" id="wrongCardBtn">Wrong card? Try another →</button>
       <div class="wrong-card-list" id="wrongCardList" style="display:none">
         <ul>${scored.slice(1).map(s =>
           `<li class="candidate-item" data-card-id="${safeHtml(s.card.id)}" data-score="${s.score}" tabindex="0">${safeHtml(s.card.name)} — ${safeHtml(s.card.set?.name || s.card.id)}</li>`
         ).join('')}</ul>
-      </div>` : ''}
-      <button class="share-btn" id="shareBtn">🔗 Copy link</button>
-      ${renderNavRow()}`;
+      </div>` : '');
+    openDetailsOnDesktop();
 
     // Attach event listeners to candidate items (avoids inline onclick with user-controlled IDs)
     document.querySelectorAll('.candidate-item').forEach(li => {
@@ -919,19 +1008,6 @@ async function doSearch() {
   } finally {
     searchBtn.disabled = false;
   }
-}
-
-function renderNavRow() {
-  const setId = document.getElementById('setInput').value.trim();
-  const rawNum = document.getElementById('cardNum').value.trim();
-  const num = parseInt(rawNum, 10);
-  if (!setId || isNaN(num)) return '';
-  const prev = num > 1 ? String(num - 1).padStart(rawNum.length > 2 ? 3 : rawNum.length, '0') : null;
-  const next = String(num + 1).padStart(rawNum.length > 2 ? 3 : rawNum.length, '0');
-  return `<div class="nav-row">
-    ${prev ? `<button class="nav-btn" onclick="document.getElementById('cardNum').value='${prev}';doSearch();">← #${prev}</button>` : '<span></span>'}
-    <button class="nav-btn" onclick="document.getElementById('cardNum').value='${next}';doSearch();">#${next} →</button>
-  </div>`;
 }
 
 // Allow clicking alternate candidates
@@ -948,17 +1024,106 @@ async function showAlternate(cardId, score) {
     card = await cachedApiFetch(`${API}/en/cards/${cardId}`);
     if (!card) return;
   }
-  // Replace the English panel — grab JP image from the left panel for fallback
-  const panels = document.querySelectorAll('.card-panel');
-  if (panels.length >= 2) {
-    const jpImg = panels[0].querySelector('img')?.src || null;
-    panels[1].outerHTML = renderCard(card, 'en', null, score, jpImg);
+  // EN panel is panels[0] on mobile (EN-first stack) and panels[1] on desktop (JP left, EN right)
+  const isMobile = window.matchMedia('(max-width: 680px)').matches;
+  const panels = document.querySelectorAll('#results .card-panel');
+  if (panels.length < 2) return;
+  const enPanel = isMobile ? panels[0] : panels[1];
+  const jpPanel = isMobile ? panels[1] : panels[0];
+  const jpImg = jpPanel.querySelector('img')?.src || null;
+  enPanel.outerHTML = renderCard(card, 'en', null, score, jpImg);
+  openDetailsOnDesktop();
+}
+
+// ── Sticky input bar on mobile ───────────────────────────
+let stickyObserver = null;
+function refreshStickyBar() {
+  const section = document.getElementById('inputSection');
+  const results = document.getElementById('results');
+  if (!section || !results) return;
+  const isMobile = window.matchMedia('(max-width: 680px)').matches;
+  const hasResults = results.children.length > 0;
+  if (isMobile && hasResults) {
+    section.classList.add('input-section--sticky');
+  } else {
+    section.classList.remove('input-section--sticky', 'input-section--hidden');
   }
+  if (stickyObserver) { stickyObserver.disconnect(); stickyObserver = null; }
+  if (isMobile && hasResults) {
+    // Hide sticky bar when the EN card image is mostly visible — the user is reading the card
+    const enImg = document.querySelector('#results .card-panel img');
+    if (enImg) {
+      stickyObserver = new IntersectionObserver(entries => {
+        for (const entry of entries) {
+          if (entry.intersectionRatio > 0.7) {
+            section.classList.add('input-section--hidden');
+          } else {
+            section.classList.remove('input-section--hidden');
+          }
+        }
+      }, { threshold: [0.3, 0.7] });
+      stickyObserver.observe(enImg);
+    }
+  }
+}
+window.addEventListener('resize', refreshStickyBar);
+
+// ── Chip row: recents + autocomplete ─────────────────────
+function renderChipRow() {
+  const row = document.getElementById('chipRow');
+  const input = document.getElementById('setInput');
+  if (!row || !input) return;
+  const typed = input.value.trim();
+  let items = [];
+  let mode = 'recent';
+  if (typed && document.activeElement === input) {
+    const lower = typed.toLowerCase();
+    const allIds = [
+      ...SIDELOAD_CONFIG.jp.map(c => c.id),
+      ...Array.from(document.querySelectorAll('#setList option')).map(o => o.value),
+    ];
+    const seen = new Set();
+    for (const id of allIds) {
+      if (!id || seen.has(id.toLowerCase())) continue;
+      if (id.toLowerCase() === lower) continue;
+      if (id.toLowerCase().includes(lower)) {
+        items.push(id);
+        seen.add(id.toLowerCase());
+        if (items.length >= 3) break;
+      }
+    }
+    mode = 'suggest';
+  } else {
+    items = getRecentSets();
+  }
+  row.innerHTML = items.map(id =>
+    `<button type="button" class="chip ${mode === 'suggest' ? 'chip--suggest' : ''}"
+             data-set="${safeHtml(id)}" tabindex="0">${safeHtml(id)}</button>`
+  ).join('');
+}
+
+function wireChipRow() {
+  const row = document.getElementById('chipRow');
+  const input = document.getElementById('setInput');
+  const cardNum = document.getElementById('cardNum');
+  if (!row || !input || !cardNum) return;
+  row.addEventListener('click', e => {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+    input.value = chip.dataset.set;
+    renderChipRow();
+    cardNum.focus();
+  });
+  input.addEventListener('focus', renderChipRow);
+  input.addEventListener('input', renderChipRow);
+  input.addEventListener('blur', () => setTimeout(renderChipRow, 120));
 }
 
 // Init: EN sideloads load in background; dropdown populates immediately from config
 const sideloadReadyPromise = loadSideloadData();
-loadSets();
+loadSets().then(renderChipRow);
+wireChipRow();
+renderChipRow();
 
 // Deep linking: auto-search if URL has ?set=...&num=...
 {
@@ -977,7 +1142,10 @@ document.getElementById('cardNum').addEventListener('keydown', e => {
   if (e.key === 'Enter') doSearch();
 });
 document.getElementById('setInput').addEventListener('keydown', e => {
-  if (e.key === 'Enter') doSearch();
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    document.getElementById('cardNum').focus();
+  }
 });
 
 // Restore last-used set
@@ -1024,7 +1192,11 @@ document.addEventListener('click', e => {
     const url = `${location.origin}${location.pathname}?set=${encodeURIComponent(setId)}&num=${encodeURIComponent(num)}`;
     navigator.clipboard.writeText(url).then(() => {
       const btn = document.getElementById('shareBtn');
-      if (btn) { btn.textContent = '✓ Copied!'; btn.classList.add('copied'); setTimeout(() => { btn.textContent = '🔗 Copy link'; btn.classList.remove('copied'); }, 2000); }
+      if (btn) {
+        btn.textContent = '✓';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = '🔗'; btn.classList.remove('copied'); }, 1500);
+      }
     }).catch(() => {});
   }
 });

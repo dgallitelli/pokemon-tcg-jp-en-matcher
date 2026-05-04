@@ -2,23 +2,36 @@
 
 ## Platform goal
 
-Side-by-side quick reference tool for playing Pokémon TCG with Japanese cards.
-The user looks up a JP card mid-game to see its English equivalent instantly.
+Mobile-first quick reference tool for playing Pokémon TCG with Japanese cards.
+The user looks up a JP card mid-game and needs the English equivalent instantly —
+held up to opponents as proof of what the card does.
 
 **Display priority:**
-1. If an official English card image is available → show it (the EN card panel is what you show opponents)
-2. If no English image is available → show the English text (attacks, abilities, effects)
+1. **EN first, JP confirms.** The EN panel is the primary answer; the JP panel exists to confirm the user typed the correct card.
+2. If an official English card image is available → show it large (the EN card panel is what you show opponents).
+3. If no English image is available → show English translated text. Attack names may be `—` for synthetic cards.
 
-The layout must always be **side-by-side** (JP left, EN right), adapting panel size to the screen — never stacking vertically.
+**Layout:**
+- **Desktop (≥ 681px):** side-by-side (JP left, arrow, EN right). Meta (HP/stage/illustrator/etc) is in a native `<details>` toggle, auto-opened on desktop.
+- **Mobile (< 681px):** vertical stack, EN on top (full width), compact JP confirmation block below (image-only by default, "Show JP text" reveals attacks). No arrow. Details collapsed by default.
+- **JP-fallback merged panel:** when the EN image URL equals the JP image URL (e.g. ME2a reuses the `megadreamex` slug), render a single merged panel instead of two with a "Showing Japanese card art" note.
 
 ## Architecture
 
-Single `index.html` — no build step, no dependencies, deploys as a GitHub Pages static site.
+Single `index.html` + `style.css` + `app.js` — no build step, no dependencies, deploys as a GitHub Pages static site.
 
 **Data sources:**
 - `data/M*.json` — JP sideload sets scraped from pokemon-card.com
 - `data/ME*.json` — EN translation sideloads built from TCGdex API + Serebii scraping
 - TCGdex API (`https://api.tcgdex.net/v2`) — live lookup for standard sets
+
+**Mobile-first UX:**
+- Input section becomes a fixed sticky bottom bar when results are showing (mobile only). Controlled by `.input-section--sticky` class set by `refreshStickyBar()` in `app.js`.
+- The sticky bar auto-hides (`.input-section--hidden`) while the EN image is >70% visible, via `IntersectionObserver`.
+- Recents chips (`#chipRow`) show the last 5 set IDs searched (localStorage `recentSets`); autocomplete chips replace them while the Set ID input is focused + non-empty.
+- Meta rows hide behind native `<details>` "Show details" toggles. `openDetailsOnDesktop()` auto-opens them on desktop after each render (it also calls `refreshStickyBar()`).
+- Share link is a 🔗 icon in the EN panel header. Previously a standalone button below the cards.
+- Prev/next navigation was removed. Mid-game use is almost always a fresh lookup; the sticky bar keeps the input reachable.
 
 **JP→EN sideload mapping:**
 - M1S / M1L → ME1 (Mega Evolution)
@@ -37,7 +50,9 @@ Single `index.html` — no build step, no dependencies, deploys as a GitHub Page
 
 ## Key invariants
 
+- **EN first on mobile.** The stacking order on mobile must always be EN panel → compact JP block. Never reverse. The compact JP renderer (`renderCardCompactJp`) is used only on mobile; desktop uses the regular `renderCard` for both panels.
 - **JP image as EN fallback only if EN image is truly unavailable.** The EN panel always *tries* its own Serebii image first; the JP image is only swapped in by `onerror` when that fails. When the JP image is showing in the EN panel, it must be visually marked (`.jp-fallback` dashed outline + hint text) so the user knows they're looking at the JP version.
+- **Merged panel on same-image case.** When `cardImageUrl(jpCard) === cardImageUrl(enCard)` (which happens for ME2a since it shares the `megadreamex` slug with M2a), `assembleResults` returns a single panel with a "Showing Japanese card art — no English print available yet" note. No separate JP panel.
 - **Never show JP text in the EN panel.** Effect text is validated with `isEnglish()` — any text containing Japanese unicode (U+3040–9FFF) is rejected. If attack names weren't translated (synthetic EN cards), render them as `—`.
 - **Trainer name matching within translation sideloads** uses `TRAINER_NAME_MAP` first (most precise), then illustrator as a fallback only when unambiguous (exactly one candidate). The map keys must match the ME set card names exactly — these sometimes differ from TCGdex standard names (e.g. "Strange Timepiece" not "Spooky Watch", "Fighting Gong" not "Fight Gong").
 - All EN sideloads are pre-fetched at startup (needed for cross-set dexId scanning in step 2b of `doSearch`). JP sideloads are lazy-loaded on first access.
@@ -60,7 +75,7 @@ Run manually when new sets release:
 6. `patch_m2a_dexids.py` — one-time patch; re-run if M2a ex cards are added
 
 **When adding a new JP sideload set:**
-1. Add entry to `SIDELOAD_CONFIG.jp` in `index.html` (id must be consistent casing; lookup is uppercased automatically)
+1. Add entry to `SIDELOAD_CONFIG.jp` in `app.js` (id must be consistent casing; lookup is uppercased automatically)
 2. Add Serebii slug to `SEREBII_SLUGS` in `app.js` (for both the JP set and its EN counterpart if they have separate Serebii pages)
 3. Add JP→EN mapping to `JP_TO_EN_SIDELOAD` if an EN translation sideload exists
 4. Add EN sideload TRAINER_NAME_MAP entries using the exact ME-set card names (not TCGdex standard names)

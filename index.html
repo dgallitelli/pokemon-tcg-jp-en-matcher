@@ -53,19 +53,26 @@
     </details>
   </div>
 
-  <div class="input-section">
-    <div class="field">
+  <div class="input-section" id="inputSection">
+    <div class="field field--set">
       <label>Japanese Set ID</label>
-      <input id="setInput" type="text" placeholder="e.g. sv8, PMCG1" list="setList" autocomplete="off">
+      <input id="setInput" type="text" placeholder="e.g. sv8, M1L" list="setList"
+             autocomplete="off" autocapitalize="characters" spellcheck="false">
       <datalist id="setList"></datalist>
+      <div class="chip-row" id="chipRow" role="listbox" aria-label="Recent or matching set IDs"></div>
     </div>
-    <div class="field">
+    <div class="field field--num">
       <label>Card #</label>
       <input id="cardNum" type="text" placeholder="021" inputmode="numeric" pattern="[0-9]*">
     </div>
-    <button id="searchBtn" onclick="doSearch()">Match</button>
+    <div class="input-actions">
+      <button id="searchBtn" onclick="doSearch()">Match</button>
+      <button id="browseBtn" class="btn-secondary" onclick="browseSet()" aria-label="Browse set">
+        <span class="browse-label">Browse</span>
+        <span class="browse-icon" aria-hidden="true">📂</span>
+      </button>
+    </div>
   </div>
-  <button class="browse-link" onclick="browseSet()">Browse set →</button>
 
   <div id="status" class="status"></div>
   <div id="results"></div>
