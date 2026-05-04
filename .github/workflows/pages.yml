@@ -7,7 +7,17 @@ permissions:
   pages: write
   id-token: write
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node tests/test_matcher.js
+      - run: node tests/test_tcgdex.js
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     environment:
       name: github-pages
