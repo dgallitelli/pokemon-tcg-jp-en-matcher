@@ -49,7 +49,6 @@ const SIDELOAD_CONFIG = {
     { id: "ME2", name: "Phantasmal Flames",   file: "data/ME2.json" },
     { id: "ME3", name: "Perfect Order",       file: "data/ME3.json" },
     { id: "ME4", name: "Ninja Spinner",       file: "data/ME4.json" },
-    { id: "ME2a", name: "MEGA Dream ex",     file: "data/ME2a.json" },
   ]
 };
 
@@ -59,7 +58,9 @@ const SIDELOAD_JP_CONFIG = Object.fromEntries(SIDELOAD_CONFIG.jp.map(c => [c.id.
 
 // Map JP set IDs to their EN translation sideload set IDs
 // Keys must be uppercase to match jpSetId.toUpperCase() lookups
-const JP_TO_EN_SIDELOAD = { "M1S": "ME1", "M1L": "ME1", "M2": "ME2", "M2A": "ME2a", "M3": "ME3", "M4": "ME4" };
+// Note: M2a (MEGA Dream ex) has no EN sideload — it's a different product from
+// Destined Rivals (sv10), so M2a falls through to the TCGdex API path.
+const JP_TO_EN_SIDELOAD = { "M1S": "ME1", "M1L": "ME1", "M2": "ME2", "M3": "ME3", "M4": "ME4" };
 
 let SIDELOAD_SETS = {};
 let SIDELOAD_EN_SETS = {};
@@ -174,7 +175,6 @@ const SEREBII_SLUGS = {
   'M2a':  'megadreamex',
   'ME1':  'megaevolution',
   'ME2':  'phantasmalflames',
-  'ME2a': 'destinedrivals', // English equivalent of M2a (Serebii only kicks in if TCGdex image fails)
   'ME3':  'perfectorder',
   'ME4':  'ninjaspinner',
 };
@@ -201,7 +201,6 @@ function sourceAttribution(card) {
   if (!card?.id) return null;
   const prefix = (card.id.split('-')[0] || '').toUpperCase();
   // Sideload-based EN translations
-  if (prefix === 'ME2A') return { label: 'TCGdex · Destined Rivals', tooltip: 'Official English data from TCGdex (Destined Rivals, sv10).' };
   if (prefix === 'ME1') return { label: 'Serebii + TCGdex', tooltip: 'Translation assembled from Serebii (Mega Evolution) with TCGdex fallback.' };
   if (prefix === 'ME2') return { label: 'Serebii + TCGdex', tooltip: 'Translation assembled from Serebii (Phantasmal Flames) with TCGdex fallback.' };
   if (prefix === 'ME3') return { label: 'Serebii + TCGdex', tooltip: 'Translation assembled from Serebii (Perfect Order) with TCGdex fallback.' };
@@ -218,8 +217,6 @@ function sourceAttribution(card) {
 // Limitless uses official TCG set codes (TWM, SVI, PAF…) rather than TCGdex's (sv06, sv01, sv04.5…).
 // This maps the TCGdex IDs we care about to Limitless codes.
 const LIMITLESS_SET_MAP = {
-  // Sideload EN sets
-  'ME2a': 'DRI',  // Destined Rivals
   // Live TCGdex Scarlet & Violet era
   'sv01':   'SVI',  // Scarlet & Violet (base)
   'sv02':   'PAL',  // Paldea Evolved
@@ -903,10 +900,18 @@ async function doSearch() {
             if (illustratorMatches.length === 1) transCard = illustratorMatches[0];
           }
         }
-        // Fallback: direct card number, but only if categories match
+        // Fallback: direct card number, but only if categories match AND (for Pokemon
+        // with a dexId) the fallback shares at least one dexId. This prevents picking
+        // the wrong Pokemon just because the numbers happen to align.
         if (!transCard) {
           const fallback = enTransSet.cards[jpNum] || enTransSet.cards[rawNum];
-          if (fallback && fallback.category === jpCard.category) transCard = fallback;
+          if (fallback && fallback.category === jpCard.category) {
+            const jpHasDex = jpCard.dexId?.length > 0;
+            const enHasDex = fallback.dexId?.length > 0;
+            const dexOk = !jpHasDex || !enHasDex ||
+              fallback.dexId.some(id => jpCard.dexId.includes(id));
+            if (dexOk) transCard = fallback;
+          }
         }
         // Guard: reject sideload match if the card name contains JP text (untranslated)
         const hasJpText = t => t && /[\u3040-\u9FFF]/.test(t);
