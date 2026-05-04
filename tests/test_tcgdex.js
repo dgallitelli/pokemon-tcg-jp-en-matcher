@@ -61,6 +61,23 @@ async function resolveEnglishName(ctx, setId, cardNum) {
     enName = ctx.pokemonNameFromMap(jp.name);
   }
 
+  // For Trainer / Energy cards, app.js does TRAINER_NAME_MAP[name] lookup.
+  // That const isn't exposed via vm context, so grep the source as a proxy.
+  // Key and value can use any of ' " ` delimiters, and the value may itself
+  // contain the other delimiter (e.g. "Team Rocket's Giovanni").
+  if (!enName && jp.category !== 'Pokemon' && jp.name) {
+    const fs = require('node:fs');
+    const path = require('node:path');
+    const src = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'utf8');
+    const esc = jp.name.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
+    // Match: <quote> <JP name> <same quote> : <quote2> <value-not-containing-quote2> <quote2>
+    const re = new RegExp(
+      `(['"\`])${esc}\\1\\s*:\\s*(['"\`])((?:(?!\\2).)*)\\2`
+    );
+    const m = src.match(re);
+    if (m) enName = m[3];
+  }
+
   return { jp, enName };
 }
 
@@ -75,6 +92,17 @@ const CASES = [
   ['M2a',  '123', 'Hop\'s Zacian ex', 'm2a card — should resolve via dexId 888', true],
   ['SV5a', '051', 'Snorlax', 'regular dexId lookup'],
   ['SV8a', '014', 'Alolan Vulpix', 'Alolan form edge case', true],
+  // sv10 Destined Rivals — Pokemon ex without dexId
+  ['SV10', '012', 'Arboliva ex', 'sv10 — オリーヴァ ex (no dexId)'],
+  ['SV10', '015', "Team Rocket's Moltres ex", 'sv10 — trainer-owned Pokemon prefix'],
+  ['SV10', '032', 'Cetitan ex', 'sv10 — ハルクジラ ex (no dexId)'],
+  ['SV10', '039', "Team Rocket's Mewtwo ex", 'sv10 — Team Rocket prefix'],
+  ['SV10', '055', 'Regirock ex', 'sv10 — レジロック ex (no dexId)'],
+  // sv10 Trainer cards
+  ['SV10', '093', "Team Rocket's Giovanni", 'sv10 — Supporter trainer map'],
+  ['SV10', '091', "Team Rocket's Ariana", 'sv10 — Athena → Ariana'],
+  ['SV10', '088', "Team Rocket's Great Ball", 'sv10 — Item trainer'],
+  ['SV10', '098', "Team Rocket's Energy", 'sv10 — Energy card'],
 ];
 
 async function run() {

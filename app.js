@@ -538,6 +538,12 @@ const POKEMON_NAME_MAP = {
   'イダイナキバ': 'Great Tusk', 'テツノワダチ': 'Iron Treads',
   'チオンジェン': 'Wo-Chien', 'パオジアン': 'Chien-Pao', 'ディンルー': 'Ting-Lu',
   'イーユイ': 'Chi-Yu',
+  // sv10 Destined Rivals additions
+  'オリーヴァ': 'Arboliva', 'ハルクジラ': 'Cetitan', 'レジロック': 'Regirock',
+  'ファイヤー': 'Moltres', 'ミュウツー': 'Mewtwo', 'ニドキング': 'Nidoking',
+  'クロバット': 'Crobat', 'ペルシアン': 'Persian',
+  // Other common Pokemon that surface with trainer ownership prefixes
+  'ザシアン': 'Zacian', 'カイロス': 'Pinsir', 'ホウオウ': 'Ho-Oh',
 };
 
 // EN form name overrides for JP Pokemon with form suffixes/prefixes (JP → EN prefix)
@@ -546,6 +552,24 @@ const POKEMON_FORM_MAP = {
   'いどのめん': 'Wellspring Mask', 'いしずえのめん': 'Cornerstone Mask',
   'アカツキ': 'Bloodmoon',
   'パルデア': 'Paldean',
+};
+
+// Trainer-owned Pokémon prefixes — JP uses "<Trainer>の<Pokémon>"; EN uses
+// "<Trainer>'s <Pokémon>". Applied by pokemonNameFromMap when the JP name
+// starts with a key here. Example: "ロケット団のミュウツーex" → "Team Rocket's Mewtwo ex".
+const TRAINER_OWNED_POKEMON_PREFIX = {
+  'ロケット団': "Team Rocket's",
+  'ホップ': "Hop's",
+  'ヒビキ': "Ethan's",
+  'ネモ': "Nemona's",
+  'ペパー': "Arven's",
+  'ナンジャモ': "Iono's",
+  'スグリ': "Kieran's",
+  'ゼイユ': "Carmine's",
+  'シロナ': "Cynthia's",
+  'マリィ': "Marnie's",
+  'リーリエ': "Lillie's",
+  'マチス': "Lt. Surge's",
 };
 
 // Common JP → EN trainer/energy name mappings for cross-language search
@@ -669,12 +693,37 @@ const TRAINER_NAME_MAP = {
   'ビワ': 'Eri',
   'レホール': 'Raifort',
   'カキツバタ': 'Drayton',
+  // sv10 Destined Rivals — Team Rocket trainers and energy
+  'ロケット団のおじゃまロボ': "Team Rocket's Bother-Bot",
+  'ロケット団のスーパーボール': "Team Rocket's Great Ball",
+  'ロケット団のびっくりボム': "Team Rocket's Venture Bomb",
+  'ロケット団のレシーバー': "Team Rocket's Transceiver",
+  'ロケット団のアテナ': "Team Rocket's Ariana",
+  'ロケット団のアポロ': "Team Rocket's Archer",
+  'ロケット団のサカキ': "Team Rocket's Giovanni",
+  'ロケット団のラムダ': "Team Rocket's Petrel",
+  'ロケット団のランス': "Team Rocket's Proton",
+  'ロケット団の監視塔': "Team Rocket's Watchtower",
+  'ロケット団のファクトリー': "Team Rocket's Factory",
+  'ロケット団エネルギー': "Team Rocket's Energy",
 };
 
 function pokemonNameFromMap(jpName) {
   if (!jpName) return null;
   const isEx = jpName.endsWith('ex');
   const bare = isEx ? jpName.slice(0, -2).trimEnd() : jpName;
+
+  // Trainer-owned Pokémon: "<Trainer>の<Pokemon>" (no space) → "<Trainer>'s <EN>".
+  // Example: "ロケット団のミュウツーex" → "Team Rocket's Mewtwo ex".
+  for (const [jpPrefix, enPossessive] of Object.entries(TRAINER_OWNED_POKEMON_PREFIX)) {
+    const key = jpPrefix + 'の';
+    if (bare.startsWith(key)) {
+      const inner = bare.slice(key.length);
+      const innerEn = POKEMON_NAME_MAP[inner];
+      if (innerEn) return `${enPossessive} ${innerEn}${isEx ? ' ex' : ''}`;
+    }
+  }
+
   const parts = bare.split(/\s+/);
   // Try forms where the base Pokemon is parts[0] with a trailing form suffix
   // (e.g. "オーガポン みどりのめん" → Teal Mask Ogerpon)

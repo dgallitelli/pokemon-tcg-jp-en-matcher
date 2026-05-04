@@ -55,6 +55,19 @@ const expectations = [
   // Plain names without ex/form
   ['ピカチュウ', 'Pikachu'],
   ['ドラパルト', 'Dragapult'],
+  // sv10 Destined Rivals ex cards (Pokemon without dexId in TCGdex JA)
+  ['オリーヴァex', 'Arboliva ex'],
+  ['ハルクジラex', 'Cetitan ex'],
+  ['レジロックex', 'Regirock ex'],
+  // sv10 Team Rocket's Pokemon (JP-prefix pattern "ロケット団の<Pokemon>ex")
+  ['ロケット団のファイヤーex', "Team Rocket's Moltres ex"],
+  ['ロケット団のミュウツーex', "Team Rocket's Mewtwo ex"],
+  ['ロケット団のニドキングex', "Team Rocket's Nidoking ex"],
+  ['ロケット団のクロバットex', "Team Rocket's Crobat ex"],
+  ['ロケット団のペルシアンex', "Team Rocket's Persian ex"],
+  // Other trainer-owned Pokemon patterns
+  ['ホップのザシアンex', "Hop's Zacian ex"],
+  ['ヒビキのカイロスex', "Ethan's Pinsir ex"],
   // Unknown names must return null (don't fabricate)
   ['知らないポケモン', null],
 ];
@@ -65,25 +78,39 @@ for (const [jp, en] of expectations) {
   });
 }
 
-console.log('\nTRAINER_NAME_MAP via trainerNameFromMap (if exposed)');
-// TRAINER_NAME_MAP is a module-scoped const (not a function) so it's not
-// visible in the vm context. We assert it's wired up correctly by running
-// a script that exercises it. Skip if app.js doesn't expose a hook.
-if (typeof ctx.TRAINER_NAME_MAP !== 'undefined') {
-  const trainerCases = [
-    ['ボスの指令', "Boss's Orders"],
-    ['ナンジャモ', 'Iono'],
-    ['博士の研究', "Professor's Research"],
-    ['ハイパーボール', 'Ultra Ball'],
-    ['ダブルターボエネルギー', 'Double Turbo Energy'],
-  ];
-  for (const [jp, en] of trainerCases) {
-    test(`${jp} → ${en}`, () => {
-      assert.equal(ctx.TRAINER_NAME_MAP[jp], en);
-    });
-  }
-} else {
-  console.log('  skip (TRAINER_NAME_MAP not exposed as a global — rely on integration tests)');
+console.log('\nTRAINER_NAME_MAP coverage — spot-check presence via app.js source');
+// TRAINER_NAME_MAP is a module-scoped const (not visible in vm context).
+// Grep the source instead so missing entries fail loudly without a full integration run.
+const fs = require('node:fs');
+const appSrc = fs.readFileSync(require('node:path').join(__dirname, '..', 'app.js'), 'utf8');
+const trainerCases = [
+  ['ボスの指令', "Boss's Orders"],
+  ['ナンジャモ', 'Iono'],
+  ['博士の研究', "Professor's Research"],
+  ['ハイパーボール', 'Ultra Ball'],
+  ['ダブルターボエネルギー', 'Double Turbo Energy'],
+  // sv10 Destined Rivals — Team Rocket trainers
+  ['ロケット団のアテナ', "Team Rocket's Ariana"],
+  ['ロケット団のアポロ', "Team Rocket's Archer"],
+  ['ロケット団のサカキ', "Team Rocket's Giovanni"],
+  ['ロケット団のラムダ', "Team Rocket's Petrel"],
+  ['ロケット団のランス', "Team Rocket's Proton"],
+  ['ロケット団のおじゃまロボ', "Team Rocket's Bother-Bot"],
+  ['ロケット団のスーパーボール', "Team Rocket's Great Ball"],
+  ['ロケット団のびっくりボム', "Team Rocket's Venture Bomb"],
+  ['ロケット団のレシーバー', "Team Rocket's Transceiver"],
+  ['ロケット団の監視塔', "Team Rocket's Watchtower"],
+  ['ロケット団のファクトリー', "Team Rocket's Factory"],
+  ['ロケット団エネルギー', "Team Rocket's Energy"],
+];
+for (const [jp, en] of trainerCases) {
+  test(`${jp} → ${en}`, () => {
+    // Look for a line like:  'ぼすのしれい': "Boss's Orders",
+    const pattern = new RegExp(
+      `['"\`]${jp.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')}['"\`]\\s*:\\s*['"\`]${en.replace(/'/g, "'").replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')}`
+    );
+    assert.match(appSrc, pattern);
+  });
 }
 
 console.log('\nSEREBII_SLUGS — image URL resolution');
