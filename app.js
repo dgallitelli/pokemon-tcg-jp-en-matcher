@@ -142,19 +142,37 @@ function scoreLabel(score) {
   return `Low (${score}/100)`;
 }
 
+// Serebii slug map: card-id prefix → /card/<slug>/<n>.jpg
+// ME2a has no dedicated EN Serebii page; it reuses the JP megadreamex slug
+// (card numbering is identical between M2a and ME2a) — effectively a JP-image fallback.
+const SEREBII_SLUGS = {
+  'M1S':  'megasymphonia',
+  'M1L':  'megabrave',
+  'M2':   'infernox',
+  'M3':   'nihilzero',
+  'M4':   'ninjaspinner',
+  'M2a':  'megadreamex',
+  'ME1':  'megaevolution',
+  'ME2':  'phantasmalflames',
+  'ME2a': 'megadreamex',
+  'ME3':  'perfectorder',
+  'ME4':  'ninjaspinner',
+};
+
 function sideloadImageUrl(card) {
   const m = card.id && card.id.match(/^([A-Za-z0-9]+)-(\d+)$/);
   if (!m) return null;
-  const n = parseInt(m[2], 10);
-  if (card.id.startsWith('ME3-')) return `https://www.serebii.net/card/perfectorder/${n}.jpg`;
-  if (card.id.startsWith('M1S-')) return `https://www.serebii.net/card/megasymphonia/${n}.jpg`;
-  if (card.id.startsWith('M1L-')) return `https://www.serebii.net/card/megabrave/${n}.jpg`;
-  if (card.id.startsWith('M2-'))  return `https://www.serebii.net/card/infernox/${n}.jpg`;
-  if (card.id.startsWith('M3-')) return `https://www.serebii.net/card/nihilzero/${n}.jpg`;
-  if (card.id.startsWith('M4-')) return `https://www.serebii.net/card/ninjaspinner/${n}.jpg`;
-  if (card.id.startsWith('ME4-')) return `https://www.serebii.net/card/ninjaspinner/${n}.jpg`;
-  if (card.id.startsWith('M2a-')) return `https://www.serebii.net/card/megadreamex/${n}.jpg`;
-  return null;
+  const slug = SEREBII_SLUGS[m[1]];
+  if (!slug) return null;
+  return `https://www.serebii.net/card/${slug}/${parseInt(m[2], 10)}.jpg`;
+}
+
+// Resolve a card's primary image URL using the same rules as renderCard —
+// used to pass the JP image as a fallback when the EN panel's image is missing.
+function cardImageUrl(card) {
+  if (!card) return null;
+  if (card.image) return /\.(png|jpg|webp)$/i.test(card.image) ? card.image : card.image + '/high.webp';
+  return sideloadImageUrl(card) || null;
 }
 
 const ENERGY_COLORS = {
@@ -167,8 +185,15 @@ function energyBadge(type) {
   return `<span class="energy-badge" style="background:${c}">${safeHtml(type.slice(0,3))}</span>`;
 }
 
-function renderCard(card, lang, badge, score) {
-  const imgUrl = card.image ? (/\.(png|jpg|webp)$/i.test(card.image) ? card.image : card.image + '/high.webp') : sideloadImageUrl(card) || null;
+function renderCard(card, lang, badge, score, fallbackImgUrl) {
+  const imgUrl = cardImageUrl(card);
+  // If the primary image 404s (e.g. Serebii doesn't have this EN card yet), swap to the
+  // fallback — usually the JP version of the same card — before showing the 🃏 placeholder.
+  const fallbackAttr = fallbackImgUrl && fallbackImgUrl !== imgUrl
+    ? ` data-fallback="${safeHtml(fallbackImgUrl)}"` : '';
+  const onErrorJs = fallbackImgUrl && fallbackImgUrl !== imgUrl
+    ? `if(this.dataset.fallback){this.src=this.dataset.fallback;this.dataset.fallback='';this.classList.add('jp-fallback');var h=this.parentNode.querySelector('.jp-fallback-hint');if(h)h.style.display='block';return;}this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex'`
+    : `this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex'`;
   const attacks = (card.attacks || []).map(a => {
     const cost = (a.cost || []).map(t => energyBadge(t)).join('');
     let block = `<div class="atk-block"><div class="atk-row">${cost ? `<span class="atk-cost">${cost}</span>` : ''}<span class="atk-name">${safeHtml(a.name)}</span>${a.damage != null ? `<span class="atk-dmg">${safeHtml(String(a.damage))}</span>` : ''}</div>`;
@@ -204,7 +229,7 @@ function renderCard(card, lang, badge, score) {
         ${confidencePip}
       </div>
       <h2>${cardName}</h2>
-      ${imgUrl ? `<img src="${imgUrl}" alt="${cardName}" loading="lazy" onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="img-placeholder" style="display:none;width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:8px;margin-bottom:1rem;align-items:center;justify-content:center;color:#555;font-size:2rem">🃏</div>` : ''}
+      ${imgUrl ? `<img src="${imgUrl}" alt="${cardName}" loading="lazy"${fallbackAttr} onerror="${onErrorJs}"><div class="img-placeholder" style="display:none;width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:8px;margin-bottom:1rem;align-items:center;justify-content:center;color:#555;font-size:2rem">🃏</div>${fallbackAttr ? '<div class="jp-fallback-hint" style="display:none">Showing Japanese card — no English image available.</div>' : ''}` : ''}
       <div class="card-meta">
         <span class="lbl">Set</span><span>${setName}</span> <span style="color:var(--text-faint)">(${cardId})</span><br>
         ${card.category ? `<span class="lbl">Category</span><span>${safeHtml(card.category)}${subcategory ? ` — ${subcategory}` : ''}</span><br>` : ''}
@@ -728,11 +753,12 @@ async function doSearch() {
         if (transCard && hasJpText(transCard.name)) transCard = null;
         if (transCard) {
           setStatus('', false);
+          const jpImg = cardImageUrl(jpCard);
           document.getElementById('results').innerHTML = `
             <div class="cards-container">
               ${renderCard(jpCard, 'ja')}
               <div class="arrow">→</div>
-              ${renderCard(transCard, 'en', '🔄 Translation')}
+              ${renderCard(transCard, 'en', '🔄 Translation', undefined, jpImg)}
             </div>
             <button class="share-btn" id="shareBtn">🔗 Copy link</button>
             ${renderNavRow()}`;
@@ -802,11 +828,12 @@ async function doSearch() {
           name: enName || jpCard.name,
           attacks: (jpCard.attacks || []).map(a => ({ ...a, name: '—' })),
         };
+        const jpImg = cardImageUrl(jpCard);
         document.getElementById('results').innerHTML = `
           <div class="cards-container">
             ${renderCard(jpCard, 'ja')}
             <div class="arrow">→</div>
-            ${renderCard(syntheticEn, 'en', '🔄 Translation')}
+            ${renderCard(syntheticEn, 'en', '🔄 Translation', undefined, jpImg)}
           </div>
           <div class="match-info">This card has no official English print yet. Showing translated card text from <span style="color:#ffd700">Serebii</span>. Attack names are not translated.</div>
           ${renderNavRow()}`;
@@ -865,11 +892,12 @@ async function doSearch() {
     }
 
     setStatus('', false);
+    const jpImg = cardImageUrl(jpCard);
     document.getElementById('results').innerHTML = `
       <div class="cards-container">
         ${renderCard(jpCard, 'ja')}
         <div class="arrow">→</div>
-        ${renderCard(best.card, 'en', null, best.score)}
+        ${renderCard(best.card, 'en', null, best.score, jpImg)}
       </div>
       ${scored.length > 1 ? `
       <button class="wrong-card-btn" id="wrongCardBtn">Wrong card? Try another →</button>
@@ -920,10 +948,11 @@ async function showAlternate(cardId, score) {
     card = await cachedApiFetch(`${API}/en/cards/${cardId}`);
     if (!card) return;
   }
-  // Replace the English panel
+  // Replace the English panel — grab JP image from the left panel for fallback
   const panels = document.querySelectorAll('.card-panel');
   if (panels.length >= 2) {
-    panels[1].outerHTML = renderCard(card, 'en', null, score);
+    const jpImg = panels[0].querySelector('img')?.src || null;
+    panels[1].outerHTML = renderCard(card, 'en', null, score, jpImg);
   }
 }
 

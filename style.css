@@ -153,6 +153,18 @@ button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow
   transform: scale(1.02) rotate(-0.5deg);
   box-shadow: 0 14px 40px rgba(0,0,0,0.6);
 }
+.card-panel img.jp-fallback {
+  outline: 2px dashed var(--purple, #a855f7);
+  outline-offset: 3px;
+}
+.jp-fallback-hint {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: -0.5rem 0 0.8rem 0;
+  text-align: center;
+  opacity: 0.85;
+}
 .card-panel.no-image h2 { font-size: 1.6rem; margin-bottom: 0.8rem; }
 .card-panel.no-image .card-meta { font-size: 0.88rem; line-height: 1.8; }
 .card-meta { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
