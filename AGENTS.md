@@ -23,7 +23,10 @@ layout invariants, and data pipeline details.
 2. **Never commit directly to `main`.** Every change goes through a PR.
 3. **Tests gate the merge.** The CI workflow at `.github/workflows/test.yml`
    must be green before merging. `pages.yml` is also gated on tests via
-   `needs: test` — a failing matcher cannot reach production.
+   `needs: test` — a failing matcher cannot reach production. **Wait for CI
+   to complete before merging** — no merging "optimistically" while checks
+   are still pending, even if local runs pass. See the *Waiting for CI*
+   section below.
 4. **Every behavioral fix adds a test.** When you fix a bug, add a case to
    `tests/test_matcher.js` or `tests/test_tcgdex.js` so the same regression
    can't silently come back.
@@ -67,16 +70,31 @@ git push -u origin fix/sv4a-missing-dex-ids
 # 6. Open the PR. GitHub Actions runs tests automatically on PR open/update.
 gh pr create --fill --base main
 
-# 7. Wait for CI to go green. Inspect with:
-gh pr checks       # shows all check statuses
-gh run view --log  # tail the logs if something fails
+# 7. WAIT for CI to finish. Do not merge while checks are pending.
+#    Either poll:
+gh pr checks --watch            # blocks until all checks finish
+#    Or script it (handy from an agent):
+while :; do
+  status=$(gh pr checks --json state --jq '[.[].state] | unique | join(",")')
+  case "$status" in
+    *PENDING*|*IN_PROGRESS*|*QUEUED*) sleep 10 ;;
+    *FAILURE*|*CANCELLED*|*TIMED_OUT*) echo "CI failed: $status"; exit 1 ;;
+    *) echo "CI status: $status"; break ;;
+  esac
+done
 
-# 8. Merge once green. Prefer squash-merge for a clean main history.
+# 8. Only after the required `test` check reports SUCCESS, merge.
+#    Non-gating checks (e.g. optional bots, code-review advisories) do
+#    not need to pass — just the required workflows. Prefer squash-merge
+#    for a clean main history.
 gh pr merge --squash --delete-branch
 
-# 9. Pages deploys automatically from main. Tests re-run in the deploy
-#    workflow as a final gate, so a broken merge is blocked before going
-#    live.
+# 9. Pages deploys automatically from main. The deploy workflow re-runs
+#    tests as a final gate via `needs: test`, so a broken merge is blocked
+#    before going live. After merging, verify the deploy:
+gh run list --workflow=pages.yml --limit 1
+#    Wait for the deploy run to complete with status=success before
+#    considering the change shipped.
 ```
 
 ### Commits
@@ -89,13 +107,36 @@ gh pr merge --squash --delete-branch
   ```
 - Never use `--amend` on already-pushed commits. Never force-push `main`.
 
+### Waiting for CI
+
+The whole point of the test gate is that it runs in the real CI
+environment, not just locally. Local tests pass != CI will pass (Node
+version mismatch, path differences, network flakes on the integration
+suite, etc.). Always wait.
+
+**Agent rule of thumb:** after `git push` or `gh pr create`, the next
+command is `gh pr checks --watch` (or the polling loop above). Do not
+invoke `gh pr merge` until the required checks are `SUCCESS`. Do not rely
+on "it'll be fine, the diff is tiny."
+
+If CI fails: inspect with `gh run view --log-failed`, push a fix to the
+same branch (CI re-runs automatically on each push to the PR), wait
+again, then merge.
+
+**Verifying deployment after merge:** `gh run list --workflow=pages.yml
+--limit 1` should show `success` within a minute or two of the merge.
+If it's still in progress, wait for it before claiming the change is
+live.
+
 ### What NOT to do
 
 - Don't push straight to `main`.
-- Don't merge with red CI.
+- Don't merge with red or *pending* CI. Pending is not green.
 - Don't bypass hooks (`--no-verify`).
 - Don't skip the subagent-driven review step for non-trivial changes. Cheap
   edits are fine inline; anything that might touch correctness isn't.
+- Don't claim a change is "deployed" until the `pages.yml` run shows
+  `success` on `main`.
 
 ## Subagent-driven development
 
