@@ -8,3 +8,12 @@ Thumbs.db
 
 # Dependencies
 node_modules/
+
+# Agent / dev-assistant artifacts (not part of the shipped site)
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+.claude/
+.codegraph/
+docs/superpowers/
+scripts/__pycache__/
