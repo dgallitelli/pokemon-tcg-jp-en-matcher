@@ -1089,7 +1089,10 @@ async function showAlternate(cardId, score) {
 }
 
 // ── Sticky input bar on mobile ───────────────────────────
-let stickyObserver = null;
+// Activates .input-section--sticky whenever we're on a mobile viewport AND there
+// are results rendered. Stays visible at all times while active; the previous
+// auto-hide-while-card-visible behavior was too aggressive and hid the bar even
+// when the user wanted to type another card number.
 function refreshStickyBar() {
   const section = document.getElementById('inputSection');
   const results = document.getElementById('results');
@@ -1099,25 +1102,10 @@ function refreshStickyBar() {
   if (isMobile && hasResults) {
     section.classList.add('input-section--sticky');
   } else {
-    section.classList.remove('input-section--sticky', 'input-section--hidden');
+    section.classList.remove('input-section--sticky');
   }
-  if (stickyObserver) { stickyObserver.disconnect(); stickyObserver = null; }
-  if (isMobile && hasResults) {
-    // Hide sticky bar when the EN card image is mostly visible — the user is reading the card
-    const enImg = document.querySelector('#results .card-panel img');
-    if (enImg) {
-      stickyObserver = new IntersectionObserver(entries => {
-        for (const entry of entries) {
-          if (entry.intersectionRatio > 0.7) {
-            section.classList.add('input-section--hidden');
-          } else {
-            section.classList.remove('input-section--hidden');
-          }
-        }
-      }, { threshold: [0.3, 0.7] });
-      stickyObserver.observe(enImg);
-    }
-  }
+  // Legacy hidden class from an earlier auto-hide observer; clear unconditionally
+  section.classList.remove('input-section--hidden');
 }
 window.addEventListener('resize', refreshStickyBar);
 

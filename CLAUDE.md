@@ -26,8 +26,7 @@ Single `index.html` + `style.css` + `app.js` — no build step, no dependencies,
 - TCGdex API (`https://api.tcgdex.net/v2`) — live lookup for standard sets
 
 **Mobile-first UX:**
-- Input section becomes a fixed sticky bottom bar when results are showing (mobile only). Controlled by `.input-section--sticky` class set by `refreshStickyBar()` in `app.js`.
-- The sticky bar auto-hides (`.input-section--hidden`) while the EN image is >70% visible, via `IntersectionObserver`.
+- Input section becomes a fixed sticky bottom bar when results are showing (mobile only). Controlled by `.input-section--sticky` class set by `refreshStickyBar()` in `app.js`. The bar stays visible at all times — an earlier auto-hide-while-card-visible behavior was removed because it hid the bar before the user finished scrolling.
 - Recents chips (`#chipRow`) show the last 5 set IDs searched (localStorage `recentSets`); autocomplete chips replace them while the Set ID input is focused + non-empty.
 - Meta rows hide behind native `<details>` "Show details" toggles. `openDetailsOnDesktop()` auto-opens them on desktop after each render (it also calls `refreshStickyBar()`).
 - Share link is a 🔗 icon in the EN panel header. Previously a standalone button below the cards.

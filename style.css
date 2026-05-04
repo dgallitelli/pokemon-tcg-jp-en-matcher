@@ -647,14 +647,9 @@ button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow
     margin: 0;
     box-shadow: 0 -4px 16px rgba(0,0,0,0.5);
     border-top: 1px solid #ffffff12;
-    transform: translateY(0);
-    transition: transform 0.25s ease;
     flex-wrap: nowrap;
     gap: 0.3rem;
     align-items: end;
-  }
-  .input-section--sticky.input-section--hidden {
-    transform: translateY(100%);
   }
   .input-section--sticky .field label { display: none; }
   .input-section--sticky .chip-row { display: none; }
