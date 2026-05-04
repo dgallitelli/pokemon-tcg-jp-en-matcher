@@ -9,9 +9,9 @@ Thumbs.db
 # Dependencies
 node_modules/
 
-# Agent / dev-assistant artifacts (not part of the shipped site)
+# Agent / dev-assistant artifacts (not part of the shipped site).
+# AGENTS.md is tracked — it's the canonical agent-agnostic project guide.
 CLAUDE.md
-AGENTS.md
 GEMINI.md
 .claude/
 .codegraph/
