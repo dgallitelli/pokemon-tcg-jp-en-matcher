@@ -523,13 +523,29 @@ const POKEMON_NAME_MAP = {
   'ドラパルト': 'Dragapult', 'タケルライコ': 'Raging Bolt', 'イーブイ': 'Eevee',
   'テラパゴス': 'Terapagos', 'ソウブレイズ': 'Ceruledge', 'ピカチュウ': 'Pikachu',
   'ガチグマ': 'Ursaluna',
+  // Paldea starters & their finals
+  'ニャオハ': 'Sprigatito', 'ニャローテ': 'Floragato', 'マスカーニャ': 'Meowscarada',
+  'ホゲータ': 'Fuecoco', 'アチゲータ': 'Crocalor', 'ラウドボーン': 'Skeledirge',
+  'クワッス': 'Quaxly', 'ウェルカモ': 'Quaxwell', 'ウェーニバル': 'Quaquaval',
+  // Paldea ex regulars
+  'フォレトス': 'Forretress', 'リククラゲ': 'Toedscruel', 'クエスパトラ': 'Espathra',
+  'フーディン': 'Alakazam', 'ミュウ': 'Mew', 'サーナイト': 'Gardevoir',
+  'キラフロル': 'Glimmora', 'リザードン': 'Charizard', 'オンバーン': 'Noivern',
+  'ピジョット': 'Pidgeot', 'プクリン': 'Wigglytuff', 'イキリンコ': 'Squawkabilly',
+  'ドオー': 'Clodsire',
+  // Legendaries / Paradox / Treasures of Ruin
+  'ミライドン': 'Miraidon', 'コライドン': 'Koraidon',
+  'イダイナキバ': 'Great Tusk', 'テツノワダチ': 'Iron Treads',
+  'チオンジェン': 'Wo-Chien', 'パオジアン': 'Chien-Pao', 'ディンルー': 'Ting-Lu',
+  'イーユイ': 'Chi-Yu',
 };
 
-// EN form name overrides for JP Pokemon with form suffixes (JP suffix → EN prefix)
+// EN form name overrides for JP Pokemon with form suffixes/prefixes (JP → EN prefix)
 const POKEMON_FORM_MAP = {
   'みどりのめん': 'Teal Mask', 'かまどのめん': 'Hearthflame Mask',
   'いどのめん': 'Wellspring Mask', 'いしずえのめん': 'Cornerstone Mask',
   'アカツキ': 'Bloodmoon',
+  'パルデア': 'Paldean',
 };
 
 // Common JP → EN trainer/energy name mappings for cross-language search
@@ -660,13 +676,18 @@ function pokemonNameFromMap(jpName) {
   const isEx = jpName.endsWith('ex');
   const bare = isEx ? jpName.slice(0, -2).trimEnd() : jpName;
   const parts = bare.split(/\s+/);
-  const baseName = POKEMON_NAME_MAP[parts[0]];
-  if (!baseName) return null;
-  let formPrefix = '';
-  if (parts.length > 1) {
-    const formKey = parts.slice(1).join(' ');
-    formPrefix = POKEMON_FORM_MAP[formKey] ? POKEMON_FORM_MAP[formKey] + ' ' : '';
+  // Try forms where the base Pokemon is parts[0] with a trailing form suffix
+  // (e.g. "オーガポン みどりのめん" → Teal Mask Ogerpon)
+  let baseName = POKEMON_NAME_MAP[parts[0]];
+  let formKey = parts.length > 1 ? parts.slice(1).join(' ') : '';
+  // Otherwise, try the leading-form-prefix form (e.g. "パルデア ドオー" → Paldean Clodsire)
+  if (!baseName && parts.length > 1) {
+    const tail = parts.slice(1).join(' ');
+    baseName = POKEMON_NAME_MAP[tail];
+    formKey = parts[0];
   }
+  if (!baseName) return null;
+  const formPrefix = (formKey && POKEMON_FORM_MAP[formKey]) ? POKEMON_FORM_MAP[formKey] + ' ' : '';
   return formPrefix + baseName + (isEx ? ' ex' : '');
 }
 
