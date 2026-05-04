@@ -38,13 +38,14 @@ Single `index.html` + `style.css` + `app.js` — no build step, no dependencies,
 - M2 → ME2 (Phantasmal Flames)
 - M3 → ME3 (Perfect Order)
 - M4 → ME4 (Ninja Spinner)
-- M2a (MEGA Dream ex) — JP only, no EN sideload yet; falls through to TCGdex API matching
+- M2a → ME2a (Destined Rivals / sv10) — authoritative TCGdex data, not a Serebii translation. Built by `scripts/build_me2a_from_tcgdex.py`.
 
 **Serebii image slugs** (used in `sideloadImageUrl()` via `SEREBII_SLUGS`):
 - M1S → megasymphonia, M1L → megabrave, M2 → infernox
 - M3 → nihilzero, M4 / ME4 → ninjaspinner
 - ME1 → megaevolution, ME2 → phantasmalflames, ME3 → perfectorder
-- M2a / ME2a → megadreamex (Serebii has no dedicated EN page; ME2a reuses the JP slug — numbering is identical)
+- M2a → megadreamex, ME2a → destinedrivals
+- Note: ME2a cards pull images from TCGdex (`assets.tcgdex.net/en/sv/sv10/...`) set directly on the card `image` field. Serebii only kicks in as an `onerror` fallback.
 
 **JP image fallback:** `renderCard(card, lang, badge, score, fallbackImgUrl)` accepts an optional 5th arg. When the EN `<img>` fails to load (e.g. Serebii 404, or a new card not yet on their site), the `onerror` handler swaps `src` to `fallbackImgUrl`, adds a `.jp-fallback` dashed outline, and reveals a "Showing Japanese card" hint. Call sites pass `cardImageUrl(jpCard)` as the fallback.
 
@@ -61,8 +62,17 @@ Single `index.html` + `style.css` + `app.js` — no build step, no dependencies,
 
 ## Known limitations
 
-- **M2a**: no EN sideload — relies entirely on TCGdex API live matching. All 193 Pokemon cards now have `dexId` (patched via `scripts/patch_m2a_dexids.py`). Cards with no TCGdex match show "No English equivalent found."
 - Sets not in TCGdex and without a sideload (e.g. `sPD`, XY-era promo decks) cannot be searched.
+
+## Source attribution
+
+Every EN panel shows a "SOURCE:" line, inferred from the card ID prefix in `sourceAttribution()`:
+- `ME2a` → "TCGdex · Destined Rivals" (authoritative)
+- `ME1/ME2/ME3/ME4` → "Serebii + TCGdex" (machine-translated, best-effort)
+- Synthetic cards (attack name `—`) → "Serebii (machine-translated)"
+- Live TCGdex match (e.g. `sv06-136`) → "TCGdex"
+
+EN panels also include a "View on Limitless ↗" link when `limitlessLinkFor()` can map the set ID to a Limitless set code (see `LIMITLESS_SET_MAP`). Unmapped sets get no link rather than a broken 404.
 
 ## Data pipeline scripts
 

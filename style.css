@@ -29,7 +29,9 @@ body {
     radial-gradient(ellipse at 85% 92%, #16213ecc 0%, transparent 45%);
   color: var(--text);
   min-height: 100vh;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 /* ── Header ─────────────────────────────────────────────── */
@@ -185,13 +187,20 @@ button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow
 .error { color: #ff6b6b; }
 
 /* ── Cards layout ───────────────────────────────────────── */
-.cards-container { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
+.cards-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem auto 0;
+  max-width: 1100px;
+}
 .card-panel {
   background: var(--surface);
   border: 1px solid #ffffff0d;
   border-radius: 12px;
   padding: 1.5rem;
-  max-width: 350px;
+  max-width: 440px;
   flex: 1;
   min-width: 280px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.4);
@@ -283,18 +292,32 @@ button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow
 .card-desc { margin-top: 0.5rem; font-size: 0.75rem; color: #666; font-style: italic; }
 .trainer-effect { margin-top: 0.6rem; font-size: 0.8rem; color: var(--text-muted); font-style: italic; line-height: 1.5; padding: 0.4rem 0.6rem; background: var(--surface-deep); border-radius: 6px; border-left: 2px solid var(--gold-dim); }
 
-/* Merged panel variant — used when EN image = JP image */
+/* Merged panel variant — used when a single Serebii slug serves both JP and EN */
 .cards-container--merged { justify-content: center; }
 .cards-container--merged .card-panel { max-width: 420px; }
-.merged-note {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  font-style: italic;
-  text-align: center;
-  margin: 0.4rem auto 0;
-  max-width: 420px;
-  opacity: 0.85;
+
+/* Source attribution line — shown inside EN panels */
+.source-line {
+  font-size: 0.68rem;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: var(--font-display);
+  margin: -0.4rem 0 0.8rem;
+  cursor: help;
 }
+.limitless-link {
+  display: inline-block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  border: 1px solid #2a3a5e;
+  border-radius: 4px;
+  padding: 0.2rem 0.55rem;
+  margin: 0 0 0.8rem;
+  transition: border-color 0.15s, color 0.15s;
+}
+.limitless-link:hover { border-color: var(--gold); color: var(--gold); }
 
 /* ── Match info (minimal — just error/no-match) ─────────── */
 .match-info { text-align: center; font-size: 0.85rem; color: var(--text-muted); padding: 0.5rem 0; }

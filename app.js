@@ -174,7 +174,7 @@ const SEREBII_SLUGS = {
   'M2a':  'megadreamex',
   'ME1':  'megaevolution',
   'ME2':  'phantasmalflames',
-  'ME2a': 'megadreamex',
+  'ME2a': 'destinedrivals', // English equivalent of M2a (Serebii only kicks in if TCGdex image fails)
   'ME3':  'perfectorder',
   'ME4':  'ninjaspinner',
 };
@@ -193,6 +193,61 @@ function cardImageUrl(card) {
   if (!card) return null;
   if (card.image) return /\.(png|jpg|webp)$/i.test(card.image) ? card.image : card.image + '/high.webp';
   return sideloadImageUrl(card) || null;
+}
+
+// Source attribution — which data source this English card came from.
+// Returns { label, tooltip } for display in the EN panel, or null for non-EN panels.
+function sourceAttribution(card) {
+  if (!card?.id) return null;
+  const prefix = (card.id.split('-')[0] || '').toUpperCase();
+  // Sideload-based EN translations
+  if (prefix === 'ME2A') return { label: 'TCGdex · Destined Rivals', tooltip: 'Official English data from TCGdex (Destined Rivals, sv10).' };
+  if (prefix === 'ME1') return { label: 'Serebii + TCGdex', tooltip: 'Translation assembled from Serebii (Mega Evolution) with TCGdex fallback.' };
+  if (prefix === 'ME2') return { label: 'Serebii + TCGdex', tooltip: 'Translation assembled from Serebii (Phantasmal Flames) with TCGdex fallback.' };
+  if (prefix === 'ME3') return { label: 'Serebii + TCGdex', tooltip: 'Translation assembled from Serebii (Perfect Order) with TCGdex fallback.' };
+  if (prefix === 'ME4') return { label: 'Serebii + PokeBeach', tooltip: 'Translation assembled from Serebii (Ninja Spinner) with PokeBeach fallback.' };
+  // Synthetic — a JP card recast as EN using backfilled Serebii text
+  if ((card.attacks || []).some(a => a.name === '—')) {
+    return { label: 'Serebii (machine-translated)', tooltip: 'No official English print yet — attack names are unavailable.' };
+  }
+  // Otherwise live TCGdex match
+  return { label: 'TCGdex', tooltip: `Live match from TCGdex set ${card.set?.id || ''}.` };
+}
+
+// Deep link to Limitless TCG — lets the user cross-check against a canonical source.
+// Limitless uses official TCG set codes (TWM, SVI, PAF…) rather than TCGdex's (sv06, sv01, sv04.5…).
+// This maps the TCGdex IDs we care about to Limitless codes.
+const LIMITLESS_SET_MAP = {
+  // Sideload EN sets
+  'ME2a': 'DRI',  // Destined Rivals
+  // Live TCGdex Scarlet & Violet era
+  'sv01':   'SVI',  // Scarlet & Violet (base)
+  'sv02':   'PAL',  // Paldea Evolved
+  'sv03':   'OBF',  // Obsidian Flames
+  'sv03.5': 'MEW',  // 151
+  'sv04':   'PAR',  // Paradox Rift
+  'sv04.5': 'PAF',  // Paldean Fates
+  'sv05':   'TEF',  // Temporal Forces
+  'sv06':   'TWM',  // Twilight Masquerade
+  'sv06.5': 'SFA',  // Shrouded Fable
+  'sv07':   'SCR',  // Stellar Crown
+  'sv08':   'SSP',  // Surging Sparks
+  'sv08.5': 'PRE',  // Prismatic Evolutions
+  'sv09':   'JTG',  // Journey Together
+  'sv10':   'DRI',  // Destined Rivals
+  'svp':    'PR-SV', // SVP Black Star Promos
+};
+function limitlessLinkFor(card) {
+  if (!card?.id) return null;
+  const m = card.id.match(/^([A-Za-z0-9.]+)-(\d+)$/);
+  if (!m) return null;
+  const [, rawSet, num] = m;
+  const mapped = LIMITLESS_SET_MAP[rawSet];
+  // Skip our machine-translated ME1/2/3/4 sideloads — Limitless wouldn't have those codes
+  if (!mapped && /^ME\d/i.test(rawSet)) return null;
+  // Only emit a link when we actually have a mapping. Otherwise we'd produce broken 404 URLs.
+  if (!mapped) return null;
+  return `https://limitlesstcg.com/cards/${mapped}/${parseInt(num, 10)}`;
 }
 
 const ENERGY_COLORS = {
@@ -244,6 +299,13 @@ function renderCard(card, lang, badge, score, fallbackImgUrl) {
     ? `<span class="confidence-pip">${score < 40 ? 'Low' : 'Med'} match</span>` : '';
   // Share icon appears on EN panels (including Translation-badged synthetic/sideload matches)
   const shareBtn = (lang === 'en' || badge) ? `<button class="share-icon" id="shareBtn" title="Copy link" aria-label="Copy link">🔗</button>` : '';
+  // Source attribution on EN / Translation panels only — tells the user where the data came from
+  const source = (lang === 'en' || badge) ? sourceAttribution(card) : null;
+  const sourceLine = source ? `<div class="source-line" title="${safeHtml(source.tooltip)}">Source: ${safeHtml(source.label)}</div>` : '';
+  // Limitless deep link escape hatch — when we can form a valid cards URL
+  const limitlessUrl = limitlessLinkFor(card);
+  const limitlessLink = (lang === 'en' || badge) && limitlessUrl
+    ? `<a class="limitless-link" href="${limitlessUrl}" target="_blank" rel="noopener">View on Limitless ↗</a>` : '';
   return `
     <div class="card-panel${imgUrl ? '' : ' no-image'}">
       <div class="panel-header">
@@ -253,6 +315,8 @@ function renderCard(card, lang, badge, score, fallbackImgUrl) {
       </div>
       <h2>${cardName}</h2>
       ${imgUrl ? `<img src="${imgUrl}" alt="${cardName}" loading="lazy"${fallbackAttr} onerror="${onErrorJs}"><div class="img-placeholder" style="display:none;width:100%;aspect-ratio:5/7;background:#0f3460;border-radius:8px;margin-bottom:1rem;align-items:center;justify-content:center;color:#555;font-size:2rem">🃏</div>${fallbackAttr ? '<div class="jp-fallback-hint" style="display:none">Showing Japanese card — no English image available.</div>' : ''}` : ''}
+      ${sourceLine}
+      ${limitlessLink}
       <div class="card-meta">
         <div class="meta-head">
           <span class="lbl">Set</span><span>${setName}</span> <span style="color:var(--text-faint)">(${cardId})</span>
@@ -313,11 +377,6 @@ function renderCardCompactJp(card) {
     </div>`;
 }
 
-// Sets where Serebii only has a JP page (we reuse the JP slug for the EN card
-// so the image resolves to the same URL and the EN panel shows JP artwork).
-// For these, we render a single merged panel with a note.
-const JP_ONLY_SEREBII_SLUGS = new Set(['megadreamex']);
-
 // Compose results HTML for the various render modes.
 //   mode='pair'     — EN + JP (side-by-side on desktop, stacked EN-first on mobile)
 //   mode='en-only'  — just JP shown (no EN match — we render JP so user sees something)
@@ -328,16 +387,10 @@ function assembleResults(jpCard, enCard, mode, badge, score) {
   }
   const jpImg = cardImageUrl(jpCard);
   const enImg = cardImageUrl(enCard);
-  // Auto-merge only when the shared image slug is known to be JP-only.
-  // (M4 and ME4 both resolve to Serebii's English `ninjaspinner` set — that's not a JP fallback.)
+  // Same image URL on both sides = single Serebii slug serving both JP and EN
+  // (e.g. M4/ME4 both use ninjaspinner). Render a single merged panel since the
+  // image only needs to be shown once.
   if (jpImg && enImg && jpImg === enImg) {
-    const slugMatch = enImg.match(/\/card\/([^/]+)\//);
-    const slug = slugMatch ? slugMatch[1] : null;
-    if (slug && JP_ONLY_SEREBII_SLUGS.has(slug)) {
-      return `<div class="cards-container cards-container--merged">${renderCard(enCard, 'en', badge || '🔄 Translation', score, null)}<p class="merged-note">Showing Japanese card art — no English print available yet.</p></div>`;
-    }
-    // Same image URL but it's an English set (e.g. M4/ME4 share ninjaspinner).
-    // Render just the EN panel with no "translation" note, since the image is already the English one.
     return `<div class="cards-container cards-container--merged">${renderCard(enCard, 'en', badge || '🔄 Translation', score, null)}</div>`;
   }
   if (isMobile) {
