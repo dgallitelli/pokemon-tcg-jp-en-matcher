@@ -84,9 +84,10 @@ while :; do
 done
 
 # 8. Only after the required `test` check reports SUCCESS, merge.
-#    Non-gating checks (e.g. optional bots, code-review advisories) do
-#    not need to pass — just the required workflows. Prefer squash-merge
-#    for a clean main history.
+#    Non-gating checks (e.g. CodeRabbit review comments) do not need to
+#    pass — just the required workflows. Address CodeRabbit findings before
+#    merging if they flag correctness issues; style/nit findings are optional.
+#    Prefer squash-merge for a clean main history.
 gh pr merge --squash --delete-branch
 
 # 9. Pages deploys automatically from main. The deploy workflow re-runs
@@ -205,6 +206,10 @@ const CASES = [
 - **`.github/workflows/pages.yml`** — runs on push to `main`. Gated on a
   test job (`needs: test`), then deploys to GitHub Pages. So a failing test
   blocks both PR merge and production deploy.
+- **CodeRabbit** — installed as a GitHub App. Auto-reviews every new/reopened
+  PR using `.coderabbit.yaml` config. Use `/coderabbitai review` in a PR
+  comment to trigger a re-review. CodeRabbit comments are non-gating; address
+  correctness findings before merging, nits are optional.
 - **No preview deploys.** Trust the tests + local visual review. If you
   find yourself shipping broken UX, revisit this decision.
 

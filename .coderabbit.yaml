@@ -1,0 +1,66 @@
+language: "en-US"
+tone_instructions: "Be direct and technical. Focus on correctness over style. This is a single-owner project; skip social niceties."
+early_access: false
+
+reviews:
+  profile: "assertive"
+  poem: false
+  sequence_diagrams: false
+  suggested_labels: false
+  auto_assign_reviewers: false
+  suggested_reviewers: false
+  high_level_summary: true
+  request_changes_workflow: false
+  auto_review:
+    enabled: true
+    drafts: false
+    auto_incremental_review: false  # only review on PR open/reopen, not every push
+  path_instructions:
+    - path: "app.js"
+      instructions: |
+        This is the entire application logic. Key invariants to enforce:
+        - EN panel is always primary. On mobile the EN card must render above the JP card — never reverse.
+        - The EN panel must never display Japanese unicode text (U+3040–9FFF). isEnglish() guards this.
+        - When cardImageUrl(jpCard) === cardImageUrl(enCard), assembleResults must render a single merged panel, not two panels.
+        - JP image may only appear in the EN panel via the onerror fallback, and only when marked with .jp-fallback + hint text.
+        - Sideload set ID lookups must be case-insensitive (toUpperCase). SIDELOAD_SETS keys must match setUpper.
+        - All EN sideloads are pre-fetched at startup. JP sideloads are lazy-loaded on first access.
+        - refreshStickyBar() is the single source of truth for sticky bar state — do not duplicate or bypass it.
+        - Attack names that weren't translated must render as — (em-dash), never blank or as Japanese text.
+    - path: "tests/**"
+      instructions: |
+        Test coverage must not regress. Every bug fix must include a corresponding test case.
+        Unit tests (test_matcher.js) must be network-free. Integration tests (test_tcgdex.js) hit the live TCGdex API and must handle offline gracefully.
+        Do not mock the TCGdex API in integration tests — real responses are the point.
+    - path: "data/ME*.json"
+      instructions: |
+        These are English translation sideload files. Each card must have id, set, name, and attacks fields.
+        Attack names containing Japanese unicode are invalid — they must be translated or set to —.
+        Trainer cards use TRAINER_NAME_MAP for matching; the name field must match the exact ME-set card name (not the TCGdex standard name).
+    - path: "data/M*.json"
+      instructions: |
+        These are Japanese sideload files scraped from pokemon-card.com. Structural changes here affect JP→EN matching.
+        dexId is required for Pokemon cards to enable cross-set matching in step 2b of doSearch.
+    - path: "scripts/**"
+      instructions: |
+        Data pipeline scripts — run manually when new sets release. They hit external sites (pokemon-card.com, TCGdex, Serebii) so they must not be added to CI.
+        Output is deterministic JSON; check that generated structures match what app.js expects.
+    - path: ".github/workflows/**"
+      instructions: |
+        Both workflows gate on the test job. pages.yml must keep `needs: test`. Do not add network-hitting steps to test.yml (unit tests must be offline).
+
+finishing_touches:
+  docstrings:
+    enabled: false
+  unit_tests:
+    enabled: false
+
+knowledge_base:
+  opt_out: false
+  learnings:
+    scope: local
+  pull_requests:
+    scope: local
+
+chat:
+  auto_reply: true
