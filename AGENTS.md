@@ -207,9 +207,11 @@ const CASES = [
   test job (`needs: test`), then deploys to GitHub Pages. So a failing test
   blocks both PR merge and production deploy.
 - **CodeRabbit** — installed as a GitHub App. Auto-reviews every new/reopened
-  PR using `.coderabbit.yaml` config. Use `/coderabbitai review` in a PR
-  comment to trigger a re-review. CodeRabbit comments are non-gating; address
-  correctness findings before merging, nits are optional.
+  PR using `.coderabbit.yaml` config. Use `@coderabbitai full review` in a PR
+  comment to trigger a complete re-review from scratch. (`@coderabbitai review`
+  only triggers an incremental review when auto-reviews are paused.) CodeRabbit
+  comments are non-gating; address correctness findings before merging, nits
+  are optional.
 - **No preview deploys.** Trust the tests + local visual review. If you
   find yourself shipping broken UX, revisit this decision.
 

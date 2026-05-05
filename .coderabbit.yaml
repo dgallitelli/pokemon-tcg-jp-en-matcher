@@ -48,12 +48,11 @@ reviews:
     - path: ".github/workflows/**"
       instructions: |
         Both workflows gate on the test job. pages.yml must keep `needs: test`. Do not add network-hitting steps to test.yml (unit tests must be offline).
-
-finishing_touches:
-  docstrings:
-    enabled: false
-  unit_tests:
-    enabled: false
+  finishing_touches:
+    docstrings:
+      enabled: false
+    unit_tests:
+      enabled: false
 
 knowledge_base:
   opt_out: false
