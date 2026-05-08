@@ -693,6 +693,19 @@ const TRAINER_NAME_MAP = {
   'ビワ': 'Eri',
   'レホール': 'Raifort',
   'カキツバタ': 'Drayton',
+  // sv5a Crimson Haze — JP-only set; trainers are reprints of sv06 (Twilight Masquerade)
+  // except ポケモンキャッチャー which reprints sv01 Pokémon Catcher.
+  'アンフェアスタンプ': 'Unfair Stamp',
+  'ハイパーアロマ': 'Hyper Aroma',
+  'ポケモンキャッチャー': 'Pokémon Catcher',
+  'ラブラブボール': 'Love Ball',
+  'サバイブギプス': 'Survival Brace',
+  'ラッキーメット': 'Lucky Helmet',
+  '管理人': 'Caretaker',
+  'ゴヨウ': 'Lucian',
+  'サザレ': 'Perrin',
+  '公民館': 'Community Center',
+  'ブーメランエネルギー': 'Boomerang Energy',
   // sv10 Destined Rivals — Team Rocket trainers and energy
   'ロケット団のおじゃまロボ': "Team Rocket's Bother-Bot",
   'ロケット団のスーパーボール': "Team Rocket's Great Ball",

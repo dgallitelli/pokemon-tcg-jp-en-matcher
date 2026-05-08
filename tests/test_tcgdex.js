@@ -103,6 +103,19 @@ const CASES = [
   ['SV10', '091', "Team Rocket's Ariana", 'sv10 — Athena → Ariana'],
   ['SV10', '088', "Team Rocket's Great Ball", 'sv10 — Item trainer'],
   ['SV10', '098', "Team Rocket's Energy", 'sv10 — Energy card'],
+  // sv5a Crimson Haze trainers — JP-only set, all reprints of sv06 (Twilight Masquerade)
+  // except Pokémon Catcher (sv01). Names come from TRAINER_NAME_MAP.
+  ['SV5a', '053', 'Unfair Stamp',     'sv5a — アンフェアスタンプ'],
+  ['SV5a', '055', 'Hyper Aroma',      'sv5a — ハイパーアロマ'],
+  ['SV5a', '057', 'Pokémon Catcher',  'sv5a — ポケモンキャッチャー'],
+  ['SV5a', '058', 'Love Ball',        'sv5a — ラブラブボール'],
+  ['SV5a', '059', 'Survival Brace',   'sv5a — サバイブギプス'],
+  ['SV5a', '060', 'Lucky Helmet',     'sv5a — ラッキーメット'],
+  ['SV5a', '061', 'Caretaker',        'sv5a — 管理人'],
+  ['SV5a', '062', 'Lucian',           'sv5a — ゴヨウ (Lucian)'],
+  ['SV5a', '063', 'Perrin',           'sv5a — サザレ (Perrin)'],
+  ['SV5a', '065', 'Community Center', 'sv5a — 公民館'],
+  ['SV5a', '066', 'Boomerang Energy', 'sv5a — ブーメランエネルギー'],
 ];
 
 async function run() {
