@@ -580,7 +580,7 @@ button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow
 
 /* ── Mobile ─────────────────────────────────────────────── */
 @media (max-width: 680px) {
-  body { padding: 1rem 0.5rem 6rem; } /* bottom padding reserves space for sticky bar */
+  body { padding: 1rem 0.5rem 7rem; } /* bottom padding reserves space for floating sticky bar */
   h1 { font-size: 1.5rem; }
   .subtitle { font-size: 0.85rem; }
   .input-section { gap: 0.4rem; }
@@ -637,16 +637,21 @@ button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow
   .btn-secondary { padding: 0.6rem 0.8rem; }
   .input-actions { align-self: stretch; }
 
-  /* Sticky input bar on mobile during results */
+  /* Floating sticky input bar on mobile during results */
   .input-section--sticky {
     position: fixed;
-    bottom: 0; left: 0; right: 0;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 540px;
     z-index: 900;
     background: var(--surface);
     padding: 0.5rem 0.6rem 0.6rem;
     margin: 0;
-    box-shadow: 0 -4px 16px rgba(0,0,0,0.5);
-    border-top: 1px solid #ffffff12;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.4);
+    border: 1px solid #ffffff1a;
     flex-wrap: nowrap;
     gap: 0.3rem;
     align-items: end;
