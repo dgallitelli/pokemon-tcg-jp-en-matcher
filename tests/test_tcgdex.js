@@ -103,6 +103,16 @@ const CASES = [
   ['SV10', '091', "Team Rocket's Ariana", 'sv10 — Athena → Ariana'],
   ['SV10', '088', "Team Rocket's Great Ball", 'sv10 — Item trainer'],
   ['SV10', '098', "Team Rocket's Energy", 'sv10 — Energy card'],
+  // sv7 Stellar Crown — Pokemon ex without dexId (TCGdex doesn't backfill dexId on ex cards).
+  // JP numbering differs from EN: e.g. JP SV7-033 = デンチュラex, EN SV7-033 = Marill.
+  ['SV7', '018', 'Cinderace ex',  'sv7 — エースバーン ex'],
+  ['SV7', '019', 'Lapras ex',     'sv7 — ラプラス ex'],
+  ['SV7', '033', 'Galvantula ex', 'sv7 — デンチュラ ex (the user-reported failing card)'],
+  ['SV7', '046', 'Dachsbun ex',   'sv7 — バウッツェル ex'],
+  ['SV7', '054', 'Medicham ex',   'sv7 — チャーレム ex'],
+  ['SV7', '074', 'Orthworm ex',   'sv7 — ミミズズ ex'],
+  ['SV7', '012', 'Hydrapple ex',  'sv7 — カミツオロチ ex (already mapped, regression check)'],
+  ['SV7', '088', 'Terapagos ex',  'sv7 — テラパゴス ex (already mapped, regression check)'],
   // sv5a Crimson Haze trainers — JP-only set, all reprints of sv06 (Twilight Masquerade)
   // except Pokémon Catcher (sv01). Names come from TRAINER_NAME_MAP.
   ['SV5a', '053', 'Unfair Stamp',     'sv5a — アンフェアスタンプ'],
