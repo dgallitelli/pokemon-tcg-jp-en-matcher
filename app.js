@@ -544,6 +544,9 @@ const POKEMON_NAME_MAP = {
   'クロバット': 'Crobat', 'ペルシアン': 'Persian',
   // Other common Pokemon that surface with trainer ownership prefixes
   'ザシアン': 'Zacian', 'カイロス': 'Pinsir', 'ホウオウ': 'Ho-Oh',
+  // sv7 Stellar Crown ex cards (TCGdex doesn't backfill dexId on ex variants)
+  'エースバーン': 'Cinderace', 'ラプラス': 'Lapras', 'デンチュラ': 'Galvantula',
+  'バウッツェル': 'Dachsbun', 'チャーレム': 'Medicham', 'ミミズズ': 'Orthworm',
 };
 
 // EN form name overrides for JP Pokemon with form suffixes/prefixes (JP → EN prefix)
