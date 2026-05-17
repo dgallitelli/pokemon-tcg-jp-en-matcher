@@ -135,6 +135,51 @@ class TestBuildSidecar(unittest.TestCase):
                          ["https://example.com/d1.png", "https://example.com/d2.png", "https://example.com/d3.png"])
 
 
+class TestResolveScrapedAt(unittest.TestCase):
+    def test_uses_today_when_no_prior_file(self):
+        import tempfile, json
+        with tempfile.TemporaryDirectory() as d:
+            path = pathlib.Path(d) / "missing.json"
+            result = scrape_me4_images._resolve_scraped_at(
+                path, new_byname={}, new_ordered=[], today_iso="2026-05-17"
+            )
+            self.assertEqual(result, "2026-05-17")
+
+    def test_preserves_prior_when_content_unchanged(self):
+        import tempfile, json
+        with tempfile.TemporaryDirectory() as d:
+            path = pathlib.Path(d) / "sidecar.json"
+            path.write_text(json.dumps({
+                "scrapedAt": "2026-04-01",
+                "byName": {"Weedle": "x"},
+                "ordered": [{"name": "Weedle", "image": "x"}],
+            }))
+            result = scrape_me4_images._resolve_scraped_at(
+                path,
+                new_byname={"Weedle": "x"},
+                new_ordered=[{"name": "Weedle", "image": "x"}],
+                today_iso="2026-05-17",
+            )
+            self.assertEqual(result, "2026-04-01")
+
+    def test_uses_today_when_content_changed(self):
+        import tempfile, json
+        with tempfile.TemporaryDirectory() as d:
+            path = pathlib.Path(d) / "sidecar.json"
+            path.write_text(json.dumps({
+                "scrapedAt": "2026-04-01",
+                "byName": {"Weedle": "old.png"},
+                "ordered": [{"name": "Weedle", "image": "old.png"}],
+            }))
+            result = scrape_me4_images._resolve_scraped_at(
+                path,
+                new_byname={"Weedle": "new.png"},
+                new_ordered=[{"name": "Weedle", "image": "new.png"}],
+                today_iso="2026-05-17",
+            )
+            self.assertEqual(result, "2026-05-17")
+
+
 class TestSanityCheck(unittest.TestCase):
     def test_passes_when_first_name_matches_expected(self):
         ordered = [{"name": "Weedle", "image": "x"}, {"name": "Kakuna", "image": "y"}]
