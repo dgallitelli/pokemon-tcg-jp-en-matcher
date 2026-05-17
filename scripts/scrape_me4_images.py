@@ -42,9 +42,17 @@ def parse_listing_page(html: str) -> list:
 
 
 def extract_detail_name(html: str):
-    """Pull the card name from a detail-page <title>."""
+    """Pull the card name from a detail-page <title>.
+
+    Normalizes the typographic apostrophe (U+2019) to a straight ASCII
+    apostrophe (U+0027) so names match PokeBeach's text:
+        asia:       "Roxie’s Performance"
+        PokeBeach:  "Roxie's Performance"
+    """
     m = TITLE_RE.search(html)
-    return m.group(1).strip() if m else None
+    if not m:
+        return None
+    return m.group(1).strip().replace("’", "'")
 
 
 def _detail_id_from_image_url(url: str) -> int:

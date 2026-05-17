@@ -36,6 +36,11 @@ class TestExtractDetailName(unittest.TestCase):
         html = "<title>Roxie's Performance | Trainers Website</title>"
         self.assertEqual(scrape_me4_images.extract_detail_name(html), "Roxie's Performance")
 
+    def test_normalizes_typographic_apostrophe_to_ascii(self):
+        # asia.pokemon-card.com uses U+2019 (’); PokeBeach uses U+0027 (')
+        html = "<title>Roxie’s Performance | Trainers Website</title>"
+        self.assertEqual(scrape_me4_images.extract_detail_name(html), "Roxie's Performance")
+
     def test_handles_card_with_curly_braces(self):
         html = "<title>Bubbly {W} Energy | Trainers Website</title>"
         self.assertEqual(scrape_me4_images.extract_detail_name(html), "Bubbly {W} Energy")
