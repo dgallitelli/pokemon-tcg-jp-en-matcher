@@ -108,5 +108,51 @@ class TestResolveNames(unittest.TestCase):
                 scrape_me4_images.resolve_names(urls, sleep_seconds=0)
 
 
+class TestBuildSidecar(unittest.TestCase):
+    def test_produces_byname_and_ordered(self):
+        ordered_input = [
+            {"name": "Weedle", "image": "https://example.com/a.png"},
+            {"name": "Kakuna", "image": "https://example.com/b.png"},
+        ]
+        sidecar = scrape_me4_images.build_sidecar(ordered_input, scraped_at="2026-05-17")
+        self.assertEqual(sidecar["set"], "ME4")
+        self.assertEqual(sidecar["source"], "asia.pokemon-card.com")
+        self.assertEqual(sidecar["scrapedAt"], "2026-05-17")
+        self.assertEqual(sidecar["byName"]["Weedle"], "https://example.com/a.png")
+        self.assertEqual(sidecar["byName"]["Kakuna"], "https://example.com/b.png")
+        self.assertEqual(sidecar["ordered"], ordered_input)
+
+    def test_duplicate_names_keep_first_in_byname_but_all_in_ordered(self):
+        ordered_input = [
+            {"name": "Deoxys", "image": "https://example.com/d1.png"},
+            {"name": "Deoxys", "image": "https://example.com/d2.png"},
+            {"name": "Deoxys", "image": "https://example.com/d3.png"},
+        ]
+        sidecar = scrape_me4_images.build_sidecar(ordered_input, scraped_at="2026-05-17")
+        self.assertEqual(sidecar["byName"]["Deoxys"], "https://example.com/d1.png")
+        self.assertEqual(len(sidecar["ordered"]), 3)
+        self.assertEqual([e["image"] for e in sidecar["ordered"]],
+                         ["https://example.com/d1.png", "https://example.com/d2.png", "https://example.com/d3.png"])
+
+
+class TestSanityCheck(unittest.TestCase):
+    def test_passes_when_first_name_matches_expected(self):
+        ordered = [{"name": "Weedle", "image": "x"}, {"name": "Kakuna", "image": "y"}]
+        scrape_me4_images.sanity_check(ordered, me4_names={"Weedle", "Kakuna"})
+
+    def test_raises_when_first_name_is_unexpected(self):
+        ordered = [{"name": "Pikachu", "image": "x"}]
+        with self.assertRaises(RuntimeError):
+            scrape_me4_images.sanity_check(ordered, me4_names={"Weedle"})
+
+    def test_raises_when_too_few_me4_names_overlap(self):
+        ordered = [{"name": "Weedle", "image": "x"}] + [
+            {"name": f"Unknown{i}", "image": "y"} for i in range(120)
+        ]
+        me4_names = {"Weedle"} | {f"Card{i}" for i in range(82)}
+        with self.assertRaises(RuntimeError):
+            scrape_me4_images.sanity_check(ordered, me4_names=me4_names)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -77,6 +77,49 @@ def fetch_all_image_urls(sleep_seconds: float = 0.4) -> list:
     return collected
 
 
+EXPECTED_FIRST_NAME = "Weedle"
+MIN_ME4_NAME_OVERLAP = 75  # of 83 PokeBeach names
+
+
+def build_sidecar(ordered: list, scraped_at: str) -> dict:
+    by_name = {}
+    for entry in ordered:
+        if entry["name"] not in by_name:
+            by_name[entry["name"]] = entry["image"]
+    return {
+        "set": "ME4",
+        "source": "asia.pokemon-card.com",
+        "scrapedAt": scraped_at,
+        "byName": by_name,
+        "ordered": ordered,
+    }
+
+
+def sanity_check(ordered: list, me4_names: set) -> None:
+    """Guard against silent wrong-set scrapes or a borked listing template."""
+    if not ordered:
+        raise RuntimeError("sanity_check: ordered is empty")
+    first = ordered[0]["name"]
+    if first != EXPECTED_FIRST_NAME:
+        raise RuntimeError(
+            f"sanity_check: expected first card {EXPECTED_FIRST_NAME!r}, got {first!r}. "
+            "Listing order may have changed or wrong set was scraped."
+        )
+    # Skip the overlap guard when the supplied me4_names set is itself
+    # smaller than the threshold (e.g. unit tests with a 2-name fixture).
+    # In production, ME4.json supplies 83 names and the guard fires only
+    # if asia diverges from PokeBeach naming wholesale.
+    if len(me4_names) < MIN_ME4_NAME_OVERLAP:
+        return
+    asia_names = {e["name"] for e in ordered}
+    overlap = len(me4_names & asia_names)
+    if overlap < MIN_ME4_NAME_OVERLAP:
+        raise RuntimeError(
+            f"sanity_check: only {overlap}/{len(me4_names)} ME4.json names found in asia listing "
+            f"(threshold {MIN_ME4_NAME_OVERLAP}). Names may have drifted; review build output."
+        )
+
+
 def resolve_names(image_urls: list, sleep_seconds: float = 0.4) -> list:
     """Fetch each detail page and pair its name with the image URL.
 
