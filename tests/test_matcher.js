@@ -102,6 +102,13 @@ const trainerCases = [
   ['ロケット団の監視塔', "Team Rocket's Watchtower"],
   ['ロケット団のファクトリー', "Team Rocket's Factory"],
   ['ロケット団エネルギー', "Team Rocket's Energy"],
+  // sv1v Violet ex — trainers fetched live from TCGdex JP, exact name match required
+  ['ミモザ', 'Miriam'],
+  ['テーブルシティ', 'Mesagoza'],
+  ['エレキジェネレーター', 'Electric Generator'],
+  ['ピクニックバスケット', 'Picnic Basket'],
+  ['ゴツゴツメット', 'Rocky Helmet'],
+  ['博士の研究（フトゥー博士）', "Professor's Research"],
 ];
 for (const [jp, en] of trainerCases) {
   test(`${jp} → ${en}`, () => {
