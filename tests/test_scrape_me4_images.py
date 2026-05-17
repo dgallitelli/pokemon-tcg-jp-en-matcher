@@ -1,5 +1,6 @@
 """Tests for scripts/scrape_me4_images.py."""
 import pathlib
+import re
 import sys
 import unittest
 from unittest.mock import patch, MagicMock
@@ -49,6 +50,62 @@ class TestExtractDetailName(unittest.TestCase):
             ),
             25192,
         )
+
+
+class TestFetchAllImageUrls(unittest.TestCase):
+    def test_paginates_until_empty_page(self):
+        responses = [
+            '<li class="card"><img data-original="https://asia.pokemon-card.com/sg/card-img/default00025192.png"></li>',
+            '<li class="card"><img data-original="https://asia.pokemon-card.com/sg/card-img/default00025193.png"></li>',
+            "<html><body>no cards</body></html>",
+        ]
+        calls = []
+
+        def fake_fetch(url, timeout=15):
+            calls.append(url)
+            return responses.pop(0)
+
+        with patch("scrape_me4_images._fetch", side_effect=fake_fetch):
+            urls = scrape_me4_images.fetch_all_image_urls(sleep_seconds=0)
+
+        self.assertEqual(urls, [
+            "https://asia.pokemon-card.com/sg/card-img/default00025192.png",
+            "https://asia.pokemon-card.com/sg/card-img/default00025193.png",
+        ])
+        self.assertEqual(len(calls), 3)
+        self.assertIn("pageNo=1", calls[0])
+        self.assertIn("pageNo=2", calls[1])
+        self.assertIn("pageNo=3", calls[2])
+
+
+class TestResolveNames(unittest.TestCase):
+    def test_resolves_name_for_each_image_url(self):
+        urls = [
+            "https://asia.pokemon-card.com/sg/card-img/default00025192.png",
+            "https://asia.pokemon-card.com/sg/card-img/default00025193.png",
+        ]
+        responses_by_id = {
+            25192: "<title>Weedle | Trainers Website</title>",
+            25193: "<title>Kakuna | Trainers Website</title>",
+        }
+
+        def fake_fetch(url, timeout=15):
+            m = re.search(r"/detail/(\d+)/", url)
+            return responses_by_id[int(m.group(1))]
+
+        with patch("scrape_me4_images._fetch", side_effect=fake_fetch):
+            ordered = scrape_me4_images.resolve_names(urls, sleep_seconds=0)
+
+        self.assertEqual(ordered, [
+            {"name": "Weedle", "image": urls[0]},
+            {"name": "Kakuna", "image": urls[1]},
+        ])
+
+    def test_raises_when_a_detail_page_has_no_title(self):
+        urls = ["https://asia.pokemon-card.com/sg/card-img/default00025192.png"]
+        with patch("scrape_me4_images._fetch", return_value="<html></html>"):
+            with self.assertRaises(RuntimeError):
+                scrape_me4_images.resolve_names(urls, sleep_seconds=0)
 
 
 if __name__ == "__main__":
