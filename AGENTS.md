@@ -14,6 +14,68 @@ translation sideloads in `data/ME*.json`, live TCGdex API for standard sets.
 See `CLAUDE.md` (project-scoped, not tracked) for the display priority,
 layout invariants, and data pipeline details.
 
+## Rendering pipeline
+
+Both online (TCGdex API) and sideload (`data/M*.json`, `data/ME*.json`)
+cards flow through the **same** render path. Only the image-URL resolution
+differs by source.
+
+### Image URL resolution — `cardImageUrl()` (app.js:192)
+
+Order of precedence:
+
+1. **`card.image` field** → if present, use it. TCGdex returns a base path,
+   so we append `/high.webp` unless `card.image` already has an extension.
+   ME2a sideload cards have a full `assets.tcgdex.net/...` URL baked into
+   `card.image` at build time (`scripts/build_me2a_from_tcgdex.py`).
+2. **`sideloadImageUrl()` Serebii slug** → for cards without `card.image`,
+   derive `https://www.serebii.net/card/<slug>/<num>.jpg` from the set
+   prefix via `SEREBII_SLUGS` (app.js:182).
+
+Net effect: live lookups use the **TCGdex CDN**, ME1/ME2/ME3/ME4 sideloads
+use **Serebii**, ME2a uses **TCGdex** (pre-baked).
+
+### Text rendering — single funnel via `renderCard()` (app.js:260)
+
+`renderCard(card, lang, badge, score, fallbackImgUrl)` walks `card.attacks`
+and `card.abilities` arrays identically regardless of source. Sideload
+cards arrive with that shape because the data pipeline (Serebii scrape →
+TCGdex backfill → `normalize_data.py`) populates them. Synthetic EN cards
+keep attack `name = '—'` so the dash renders verbatim. `isEnglish()`
+rejects any text containing JP unicode (U+3040–9FFF) before it reaches the
+EN panel.
+
+### Image-load fallback — JP image rescues a missing EN image
+
+The 5th arg to `renderCard` is the fallback URL. The `<img>` always tries
+its own resolved URL first; on `onerror` (e.g. Serebii 404 for a card not
+yet up), an inline handler swaps `src` to `fallbackImgUrl`, adds the
+`.jp-fallback` dashed-outline class, and reveals the "Showing Japanese
+card" hint. If both fail, the 🃏 placeholder shows. `assembleResults`
+(app.js:380) passes `cardImageUrl(jpCard)` as the fallback for the EN
+panel.
+
+### Layout decision — `assembleResults()` (app.js:380)
+
+Three branches, in order:
+
+| Condition | Output |
+|-----------|--------|
+| `cardImageUrl(jpCard) === cardImageUrl(enCard)` | Single **merged panel** (e.g. ME2a/M2a both resolve to `megadreamex` Serebii slug) |
+| Mobile (`max-width: 680px`) | **Vertical stack:** full `renderCard` for EN on top, `renderCardCompactJp` (image-only, "Show JP text" toggle) below |
+| Desktop | **Side-by-side:** `renderCard(jpCard)` → arrow → `renderCard(enCard)` |
+
+### When you change rendering, preserve these guarantees
+
+- EN-first ordering on mobile. EN panel always above the compact JP block.
+- JP image only appears in the EN slot via `onerror` fallback, and only
+  when visually marked with `.jp-fallback` + the hint.
+- Adding a new sideload set: register its Serebii slug in `SEREBII_SLUGS`
+  *or* bake an absolute URL into `card.image` at build time. Don't add a
+  third resolution path.
+- Don't bypass `renderCard` — anything that adds image+text rendering
+  somewhere else duplicates the fallback logic and the `isEnglish()` guard.
+
 ## The iron rules
 
 1. **Opus-level reasoning for code changes.** Any change touching matching
