@@ -204,7 +204,7 @@ function sourceAttribution(card) {
   if (prefix === 'ME1') return { label: 'Serebii + TCGdex', tooltip: 'Translation assembled from Serebii (Mega Evolution) with TCGdex fallback.' };
   if (prefix === 'ME2') return { label: 'Serebii + TCGdex', tooltip: 'Translation assembled from Serebii (Phantasmal Flames) with TCGdex fallback.' };
   if (prefix === 'ME3') return { label: 'Serebii + TCGdex', tooltip: 'Translation assembled from Serebii (Perfect Order) with TCGdex fallback.' };
-  if (prefix === 'ME4') return { label: 'Serebii + PokeBeach', tooltip: 'Translation assembled from Serebii (Ninja Spinner) with PokeBeach fallback.' };
+  if (prefix === 'ME4') return { label: 'PokeBeach + pokemon-card.com', tooltip: 'English text from PokeBeach (Jake C.); official English images from pokemon-card.com.' };
   // Synthetic — a JP card recast as EN using backfilled Serebii text
   if ((card.attacks || []).some(a => a.name === '—')) {
     return { label: 'Serebii (machine-translated)', tooltip: 'No official English print yet — attack names are unavailable.' };
