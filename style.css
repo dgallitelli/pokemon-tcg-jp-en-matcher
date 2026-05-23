@@ -580,7 +580,7 @@ button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow
 
 /* ── Mobile ─────────────────────────────────────────────── */
 @media (max-width: 680px) {
-  body { padding: 1rem 0.5rem 7rem; } /* bottom padding reserves space for floating sticky bar */
+  body { padding: 1rem 0.5rem 1.5rem; }
   h1 { font-size: 1.5rem; }
   .subtitle { font-size: 0.85rem; }
   .input-section { gap: 0.4rem; }
@@ -636,33 +636,4 @@ button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow
   .btn-secondary .browse-icon { display: inline; }
   .btn-secondary { padding: 0.6rem 0.8rem; }
   .input-actions { align-self: stretch; }
-
-  /* Floating sticky input bar on mobile during results */
-  .input-section--sticky {
-    position: fixed;
-    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 540px;
-    z-index: 900;
-    background: var(--surface);
-    padding: 0.5rem 0.6rem 0.6rem;
-    margin: 0;
-    border-radius: 14px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.4);
-    border: 1px solid #ffffff1a;
-    flex-wrap: nowrap;
-    gap: 0.3rem;
-    align-items: end;
-  }
-  .input-section--sticky .field label { display: none; }
-  .input-section--sticky .chip-row { display: none; }
-  .input-section--sticky #setInput { width: 100%; padding: 0.45rem 0.6rem; font-size: 0.85rem; }
-  .input-section--sticky #cardNum { width: 70px; padding: 0.45rem 0.5rem; font-size: 0.85rem; }
-  .input-section--sticky .field { flex: 1; }
-  .input-section--sticky .field--num { flex: 0 0 auto; }
-  .input-section--sticky button { padding: 0.5rem 0.9rem; font-size: 0.8rem; }
-  .input-section--sticky .btn-secondary { padding: 0.5rem 0.6rem; }
-  .input-section--sticky .input-actions { align-self: end; }
 }

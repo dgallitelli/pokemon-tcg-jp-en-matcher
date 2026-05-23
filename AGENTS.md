@@ -233,8 +233,8 @@ concrete file paths and line numbers in your implementation prompts.
 - **Integration tests** (`tests/test_tcgdex.js`) — hits live TCGdex API.
   Run with `node tests/test_tcgdex.js`. Gracefully skips if offline.
 - **Visual** — `python3 -m http.server 8765` + chrome-devtools MCP. For UI
-  changes, test iPhone 13 viewport (390×844) in particular — the sticky
-  bottom bar, EN-first stack, and details-toggle behavior are mobile-only.
+  changes, test iPhone 13 viewport (390×844) in particular — the EN-first
+  stack and details-toggle behavior are mobile-only.
 
 ### Adding a test for a bug you fixed
 

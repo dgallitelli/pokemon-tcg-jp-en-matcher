@@ -350,12 +350,11 @@ function renderCard(card, lang, badge, score, fallbackImgUrl) {
     </div>`;
 }
 
-// Post-render hook: auto-open details on desktop, activate sticky bar on mobile.
+// Post-render hook: auto-open details on desktop.
 function openDetailsOnDesktop() {
   if (window.matchMedia('(min-width: 681px)').matches) {
     document.querySelectorAll('#results .card-details').forEach(d => d.open = true);
   }
-  refreshStickyBar();
 }
 
 // Compact JP renderer — used on mobile as a scroll-below confirmation block.
@@ -1206,27 +1205,6 @@ async function showAlternate(cardId, score) {
   enPanel.outerHTML = renderCard(card, 'en', null, score, jpImg);
   openDetailsOnDesktop();
 }
-
-// ── Sticky input bar on mobile ───────────────────────────
-// Activates .input-section--sticky whenever we're on a mobile viewport AND there
-// are results rendered. Stays visible at all times while active; the previous
-// auto-hide-while-card-visible behavior was too aggressive and hid the bar even
-// when the user wanted to type another card number.
-function refreshStickyBar() {
-  const section = document.getElementById('inputSection');
-  const results = document.getElementById('results');
-  if (!section || !results) return;
-  const isMobile = window.matchMedia('(max-width: 680px)').matches;
-  const hasResults = results.children.length > 0;
-  if (isMobile && hasResults) {
-    section.classList.add('input-section--sticky');
-  } else {
-    section.classList.remove('input-section--sticky');
-  }
-  // Legacy hidden class from an earlier auto-hide observer; clear unconditionally
-  section.classList.remove('input-section--hidden');
-}
-window.addEventListener('resize', refreshStickyBar);
 
 // ── Chip row: recents + autocomplete ─────────────────────
 function renderChipRow() {
