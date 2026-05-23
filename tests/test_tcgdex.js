@@ -126,6 +126,14 @@ const CASES = [
   ['SV5a', '063', 'Perrin',           'sv5a — サザレ (Perrin)'],
   ['SV5a', '065', 'Community Center', 'sv5a — 公民館'],
   ['SV5a', '066', 'Boomerang Energy', 'sv5a — ブーメランエネルギー'],
+  // SV6a Night Wanderer — JP sideload backfilled with dexId from sv06.5 (Shrouded Fable).
+  // The sideload supplies the JP card; resolveEnglishName then walks the dexId path
+  // against TCGdex EN. Tests both #1–64 (positional sv06.5 reprint) and #65+ (named).
+  ['SV6a', '001', 'Joltik',     'sv6a — main set #1 maps to sv06.5-001 via dexId'],
+  ['SV6a', '022', 'Sylveon',    'sv6a — main set, dexId resolution'],
+  ['SV6a', '065', 'Tapu Bulu',  'sv6a — secret rare, dexId via name-based EN match'],
+  ['SV6a', '077', 'Kingdra',    'sv6a — secret rare ex, ex-tier dexId match'],
+  ['SV6a', '061', 'Cassiopeia', 'sv6a — exclusive trainer (TRAINER_NAME_MAP)'],
 ];
 
 async function run() {

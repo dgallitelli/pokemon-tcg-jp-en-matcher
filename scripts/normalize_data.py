@@ -161,8 +161,10 @@ def main():
     print(f"   Structural fixes: {fixed}")
     save("M3", m3)
 
-    # 3. Structural consistency for M1S, M1L, M2
-    for sid in ["M1S", "M1L", "M2"]:
+    # 3. Structural consistency for M1S, M1L, M2, SV6a
+    # SV6a is a JP sideload that pulls EN data live from TCGdex sv06.5 (no ME6a),
+    # so it only needs structural normalization here, not a backfill step.
+    for sid in ["M1S", "M1L", "M2", "SV6a"]:
         print(f"\n3. Ensuring structural consistency for {sid}...")
         d = load(sid)
         fixed = ensure_structural_consistency(d, sid)
@@ -178,7 +180,7 @@ def main():
 
     # Final audit
     print("\n=== Post-normalization audit ===")
-    for f in ["M1S", "M1L", "M2", "M3", "M4", "ME3", "ME4"]:
+    for f in ["M1S", "M1L", "M2", "M3", "M4", "ME3", "ME4", "SV6a"]:
         d = load(f)
         cards = d["cards"]
         poke = [c for c in cards.values() if c.get("category") == "Pokemon"]

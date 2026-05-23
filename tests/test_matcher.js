@@ -109,6 +109,13 @@ const trainerCases = [
   ['ピクニックバスケット', 'Picnic Basket'],
   ['ゴツゴツメット', 'Rocky Helmet'],
   ['博士の研究（フトゥー博士）', "Professor's Research"],
+  // SV6a Night Wanderer — secret-rare / set-exclusive trainers
+  ['カシオペア', 'Cassiopeia'],
+  ['クセロシキのたくらみ', "Xerosic's Machinations"],
+  ['デンジャラス光線', 'Dangerous Laser'],
+  ['ポケバイタルA', 'Poké Vital A'],
+  ['力の砂時計', 'Powerglass'],
+  ['夜のアカデミー', 'Academy at Night'],
 ];
 for (const [jp, en] of trainerCases) {
   test(`${jp} → ${en}`, () => {
@@ -129,6 +136,9 @@ test('ME1-006 resolves to megaevolution/6', () => {
 });
 test('M2-001 resolves to infernox', () => {
   assert.equal(ctx.sideloadImageUrl({ id: 'M2-001' }), 'https://www.serebii.net/card/infernox/1.jpg');
+});
+test('SV6a-001 resolves to nightwanderer/1', () => {
+  assert.equal(ctx.sideloadImageUrl({ id: 'SV6a-001' }), 'https://www.serebii.net/card/nightwanderer/1.jpg');
 });
 test('Unknown prefix returns null', () => {
   assert.equal(ctx.sideloadImageUrl({ id: 'XYZ-001' }), null);
