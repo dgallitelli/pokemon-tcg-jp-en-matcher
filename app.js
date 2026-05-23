@@ -43,6 +43,7 @@ const SIDELOAD_CONFIG = {
     { id: "M3",  name: "Nihil Zero",      file: "data/M3.json",  cardCount: 117 },
     { id: "M4",  name: "Ninja Spinner",   file: "data/M4.json",  cardCount: 120 },
     { id: "M2a", name: "MEGA Dream ex",   file: "data/M2a.json", cardCount: 193 },
+    { id: "SV6a", name: "Night Wanderer", file: "data/SV6a.json", cardCount: 94  },
   ],
   en: [
     { id: "ME1", name: "Mega Evolution",      file: "data/ME1.json" },
@@ -177,6 +178,7 @@ const SEREBII_SLUGS = {
   'ME2':  'phantasmalflames',
   'ME3':  'perfectorder',
   'ME4':  'ninjaspinner',
+  'SV6a': 'nightwanderer',
 };
 
 function sideloadImageUrl(card) {
@@ -725,6 +727,16 @@ const TRAINER_NAME_MAP = {
   'サザレ': 'Perrin',
   '公民館': 'Community Center',
   'ブーメランエネルギー': 'Boomerang Energy',
+  // SV6a Night Wanderer — sv06.5 (Shrouded Fable) reprint trainers / Pokemon Tools.
+  // Most SV6a trainers are sv6 (Twilight Masquerade) reprints already mapped above
+  // (アクロマの執念, アンズの秘技, etc.); these six are SV6a-exclusive or first
+  // appeared here.
+  'カシオペア': 'Cassiopeia',
+  'クセロシキのたくらみ': "Xerosic's Machinations",
+  'デンジャラス光線': 'Dangerous Laser',
+  'ポケバイタルA': 'Poké Vital A',
+  '力の砂時計': 'Powerglass',
+  '夜のアカデミー': 'Academy at Night',
   // sv10 Destined Rivals — Team Rocket trainers and energy
   'ロケット団のおじゃまロボ': "Team Rocket's Bother-Bot",
   'ロケット団のスーパーボール': "Team Rocket's Great Ball",

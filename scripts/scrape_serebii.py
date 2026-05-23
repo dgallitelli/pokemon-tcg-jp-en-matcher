@@ -13,13 +13,14 @@ from urllib.request import urlopen, Request
 DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
 
 SET_SLUGS = {
-    "M1S": "megasymphonia",
-    "M1L": "megabrave",
-    "M2":  "infernox",
-    "M3":  "nihilzero",
-    "M4":  "ninjaspinner",
-    "ME3": "perfectorder",
-    "ME4": "ninjaspinner",
+    "M1S":  "megasymphonia",
+    "M1L":  "megabrave",
+    "M2":   "infernox",
+    "M3":   "nihilzero",
+    "M4":   "ninjaspinner",
+    "ME3":  "perfectorder",
+    "ME4":  "ninjaspinner",
+    "SV6a": "nightwanderer",
 }
 
 ENERGY_TYPES = ["Grass", "Fire", "Water", "Lightning", "Psychic",

@@ -1,0 +1,3556 @@
+{
+  "id": "SV6a",
+  "name": {
+    "ja": "ナイトワンダラー",
+    "en": "Night Wanderer"
+  },
+  "serie": "SV",
+  "releaseDate": {
+    "ja": "2024-06-07"
+  },
+  "cards": {
+    "001": {
+      "name": "バチュル",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-001",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Naoyo Kimura",
+      "hp": 40,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "はねてかわす",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 10,
+          "effect": "コインを1回投げオモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。"
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "dexId": [
+        595
+      ]
+    },
+    "002": {
+      "name": "デンチュラ",
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "SV6a-002",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "mashu",
+      "hp": 100,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "ふくがん",
+          "effect": "このポケモンが使うワザの、相手のバトル場の特性を持つポケモンへのダメージは「+50」される。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "ビリビリウェブ",
+          "cost": [
+            "Grass",
+            "Colorless"
+          ],
+          "damage": 50,
+          "damageModifier": "＋",
+          "effect": "このポケモンにエネルギーがついているなら、80ダメージ追加。"
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "dexId": [
+        596
+      ]
+    },
+    "003": {
+      "name": "モクロー",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-003",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Yoshimi Miyoshi",
+      "hp": 70,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "くわえる",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "自分の山札を1枚引く。"
+        },
+        {
+          "name": "このは",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 10
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "dexId": [
+        722
+      ]
+    },
+    "004": {
+      "name": "フクスロー",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-004",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Tetsu Kayama",
+      "hp": 90,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "だんけつのつばさ",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 20,
+          "damageModifier": "×",
+          "effect": "自分のトラッシュにある、ワザ「だんけつのつばさ」を持つポケモンの枚数×20ダメージ。"
+        },
+        {
+          "name": "カッターウインド",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 30
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "dexId": [
+        723
+      ]
+    },
+    "005": {
+      "name": "ジュナイパー",
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "SV6a-005",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "DOM",
+      "hp": 150,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Stage2",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "フェザーストック",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "自分の手札が7枚になるように、山札を引く。"
+        },
+        {
+          "name": "ストロングショット",
+          "cost": [
+            "Grass"
+          ],
+          "damage": 170,
+          "effect": "自分の手札から「基本エネルギー」を1枚トラッシュする。トラッシュできないなら、このワザは失敗。"
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "dexId": [
+        724
+      ]
+    },
+    "006": {
+      "name": "カプ・ブルル",
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "SV6a-006",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "GOSSAN",
+      "hp": 140,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "ウッドハンマー",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 220,
+          "effect": "このポケモンにも30ダメージ。"
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "dexId": [
+        787
+      ]
+    },
+    "007": {
+      "name": "デルビル",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-007",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "REND",
+      "hp": 70,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "かじる",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 20
+        },
+        {
+          "name": "うしろげり",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 50
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      },
+      "dexId": [
+        228
+      ]
+    },
+    "008": {
+      "name": "ヘルガー",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-008",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "burari",
+      "hp": 120,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "かみつく",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 50
+        },
+        {
+          "name": "バークアウト",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 100,
+          "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-100」される。"
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      },
+      "dexId": [
+        229
+      ]
+    },
+    "009": {
+      "name": "テツノドクガ",
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "SV6a-009",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Shinji Kanda",
+      "hp": 120,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "きゅういん",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 30,
+          "effect": "相手のバトルポケモンに与えたダメージぶん、このポケモンのHPを回復する。"
+        },
+        {
+          "name": "ワイルドリジェクター",
+          "cost": [
+            "Fire",
+            "Fire",
+            "Colorless"
+          ],
+          "damage": 120,
+          "effect": "次の相手の番、このポケモンは「古代」のポケモンからワザのダメージを受けない。"
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      },
+      "dexId": [
+        994
+      ]
+    },
+    "010": {
+      "name": "タッツー",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-010",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Shimaris Yukichi",
+      "hp": 60,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "じっとする",
+          "cost": [
+            "Water"
+          ],
+          "effect": "このポケモンのHPを「30」回復する。"
+        },
+        {
+          "name": "ひれカッター",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "dexId": [
+        116
+      ]
+    },
+    "011": {
+      "name": "シードラ",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-011",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Yuya Oka",
+      "hp": 90,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "えんぐん",
+          "cost": [
+            "Water"
+          ],
+          "effect": "自分の山札からポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+        },
+        {
+          "name": "するどいひれ",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 40
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "dexId": [
+        117
+      ]
+    },
+    "012": {
+      "name": "キングドラex",
+      "category": "Pokemon",
+      "rarity": "Double Rare",
+      "id": "SV6a-012",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "toriyufu",
+      "hp": 310,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage2",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "おうのごうれい",
+          "cost": [
+            "Water"
+          ],
+          "effect": "自分のトラッシュからポケモンを3枚まで選び、ベンチに出す。"
+        },
+        {
+          "name": "ハイドロポンプ",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 50,
+          "damageModifier": "＋",
+          "effect": "このポケモンについているエネルギーの数×50ダメージ追加。"
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "dexId": [
+        230
+      ]
+    },
+    "013": {
+      "name": "ニューラ",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-013",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Krgc",
+      "hp": 70,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "いあいぎり",
+          "cost": [
+            "Water"
+          ],
+          "damage": 10
+        },
+        {
+          "name": "つめよる",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": 30,
+          "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。"
+        }
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      },
+      "dexId": [
+        215
+      ]
+    },
+    "014": {
+      "name": "マニューラ",
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "SV6a-014",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "aspara",
+      "hp": 100,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "きりさく",
+          "cost": [
+            "Water"
+          ],
+          "damage": 40
+        },
+        {
+          "name": "ヘイルクロー",
+          "cost": [
+            "Water",
+            "Water"
+          ],
+          "damage": 70,
+          "effect": "このポケモンについているエネルギーをすべてトラッシュし、相手のバトルポケモンをマヒにする。"
+        }
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      },
+      "dexId": [
+        461
+      ]
+    },
+    "015": {
+      "name": "ブロロロームex",
+      "category": "Pokemon",
+      "rarity": "Double Rare",
+      "id": "SV6a-015",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "PLANETA Mochizuki",
+      "hp": 280,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "アクセルフラッシュ",
+          "cost": [
+            "Metal"
+          ],
+          "damage": 20,
+          "damageModifier": "＋",
+          "effect": "この番、このポケモンがベンチからバトル場に出ていたなら、120ダメージ追加。"
+        },
+        {
+          "name": "スピードブレイク",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Metal"
+          ],
+          "damage": 250,
+          "effect": "このポケモンと、ついているすべてのカードを、トラッシュする。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        966
+      ]
+    },
+    "016": {
+      "name": "スリープ",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-016",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "OKUBO",
+      "hp": 70,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "ぶきみなしせん",
+          "cost": [
+            "Psychic"
+          ],
+          "damage": 10,
+          "effect": "相手の手札を見る。"
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "dexId": [
+        96
+      ]
+    },
+    "017": {
+      "name": "スリーパー",
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "SV6a-017",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Masako Tomii",
+      "hp": 110,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "はくちゅうむ",
+          "cost": [
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": 80,
+          "effect": "次の相手の番、このワザを受けたポケモンに、相手が手札からエネルギーをつけたなら、相手の番は終わる。"
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "dexId": [
+        97
+      ]
+    },
+    "018": {
+      "name": "ヨマワル",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-018",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "IKEDA Saki",
+      "hp": 60,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "むかえにいく",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "自分のトラッシュから「ヨマワル」を3枚まで選び、ベンチに出す。"
+        },
+        {
+          "name": "つぶやく",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": 30
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "dexId": [
+        355
+      ]
+    },
+    "019": {
+      "name": "サマヨール",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-019",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Aya Kusube",
+      "hp": 90,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "abilities": [
+        {
+          "name": "カースドボム",
+          "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。相手のポケモン1匹に、ダメカンを5個のせる。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "おにび",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": 50
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "dexId": [
+        356
+      ]
+    },
+    "020": {
+      "name": "ヨノワール",
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "SV6a-020",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "danciao",
+      "hp": 160,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage2",
+      "retreat": 3,
+      "abilities": [
+        {
+          "name": "カースドボム",
+          "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。相手のポケモン1匹に、ダメカンを13個のせる。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "かげしばり",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": 150,
+          "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。"
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "dexId": [
+        477
+      ]
+    },
+    "021": {
+      "name": "クレセリア",
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "SV6a-021",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "matazo",
+      "hp": 120,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "いやしのまい",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "自分のポケモン全員のHPを、それぞれ「20」回復する。"
+        },
+        {
+          "name": "クレセントパージ",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": 80,
+          "damageModifier": "＋",
+          "effect": "のぞむなら、ウラになっている自分のサイドを1枚選び、オモテにする。その場合、80ダメージ追加。（対戦が終わるまで、そのサイドはオモテのまま。）"
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "dexId": [
+        488
+      ]
+    },
+    "022": {
+      "name": "ニンフィア",
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "SV6a-022",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Kuroimori",
+      "hp": 120,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "ミスティックリターン",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "コインを1回投げオモテなら、相手のベンチポケモンを1匹選び、そのポケモンと、ついているすべてのカードを、相手の山札にもどして切る。"
+        },
+        {
+          "name": "チャームボイス",
+          "cost": [
+            "Psychic",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 90,
+          "effect": "相手のバトルポケモンをこんらんにする。"
+        }
+      ],
+      "weakness": {
+        "type": "Metal",
+        "value": "x2"
+      },
+      "dexId": [
+        700
+      ]
+    },
+    "023": {
+      "name": "グレッグル",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-023",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Aliya Chen",
+      "hp": 70,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "なぐる",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 10
+        },
+        {
+          "name": "かえるとび",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": 20,
+          "damageModifier": "＋",
+          "effect": "コインを1回投げオモテなら、20ダメージ追加。"
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      },
+      "dexId": [
+        453
+      ]
+    },
+    "024": {
+      "name": "ドクロッグ",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-024",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Anesaki Dynamic",
+      "hp": 130,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "どつく",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 50
+        },
+        {
+          "name": "クリーンヒット",
+          "cost": [
+            "Fighting",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 90,
+          "damageModifier": "＋",
+          "effect": "相手のバトルポケモンが進化ポケモンなら、90ダメージ追加。"
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      },
+      "dexId": [
+        454
+      ]
+    },
+    "025": {
+      "name": "ガチグマ アカツキ",
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "SV6a-025",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Souichirou Gunjima",
+      "hp": 150,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "retreat": 4,
+      "abilities": [
+        {
+          "name": "けいけんそく",
+          "effect": "自分の番に、このカードを手札からベンチに出したとき、1回使える。自分の手札から「基本エネルギー」を2枚まで選び、このポケモンにつける。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "マッドバイト",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": 100,
+          "damageModifier": "＋",
+          "effect": "相手のバトルポケモンにのっているダメカンの数×30ダメージ追加。"
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "dexId": [
+        901
+      ]
+    },
+    "026": {
+      "name": "チヲハウハネ",
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "SV6a-026",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Shinji Kanda",
+      "hp": 140,
+      "types": [
+        "Fighting"
+      ],
+      "stage": "Basic",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "てつつぶし",
+          "cost": [
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": 20,
+          "damageModifier": "＋",
+          "effect": "相手の場に「未来」のポケモンがいるなら、120ダメージ追加。"
+        },
+        {
+          "name": "スマッシュウイング",
+          "cost": [
+            "Fighting",
+            "Fighting",
+            "Colorless"
+          ],
+          "damage": 130,
+          "effect": "このポケモンについているエネルギーを2個選び、トラッシュする。"
+        }
+      ],
+      "weakness": {
+        "type": "Psychic",
+        "value": "x2"
+      },
+      "dexId": [
+        988
+      ]
+    },
+    "027": {
+      "name": "ズバット",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-027",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "osare",
+      "hp": 50,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "みちびく",
+          "cost": [
+            "Darkness"
+          ],
+          "effect": "自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+        },
+        {
+          "name": "やみのキバ",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 10
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "dexId": [
+        41
+      ]
+    },
+    "028": {
+      "name": "ゴルバット",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-028",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Teeziro",
+      "hp": 80,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "スピードひこう",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 30
+        },
+        {
+          "name": "しっこくのやいば",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 80,
+          "effect": "次の自分の番、このポケモンはワザが使えない。"
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "dexId": [
+        42
+      ]
+    },
+    "029": {
+      "name": "クロバット",
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "SV6a-029",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Nisota Niso",
+      "hp": 130,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage2",
+      "retreat": 0,
+      "abilities": [
+        {
+          "name": "かげのつかい",
+          "effect": "この番、手札から「アンズの秘技」を出して使っていたなら、自分の番に1回使える。自分の手札が8枚になるように、山札を引く。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "どくどくのキバ",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 120,
+          "effect": "相手のバトルポケモンをどくにする。このどくでのせるダメカンの数は2個になる。"
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "dexId": [
+        169
+      ]
+    },
+    "030": {
+      "name": "アブソル",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-030",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "rika",
+      "hp": 110,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "バッドフォール",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 20,
+          "damageModifier": "＋",
+          "effect": "自分の場にエネルギーが3個以上あるなら、50ダメージ追加。"
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "dexId": [
+        359
+      ]
+    },
+    "031": {
+      "name": "ゾロア",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-031",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Yuu Nishida",
+      "hp": 70,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "ふむ",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 10
+        },
+        {
+          "name": "ダブルひっかき",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 20,
+          "damageModifier": "×",
+          "effect": "コインを2回投げ、オモテの数×20ダメージ。"
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "dexId": [
+        570
+      ]
+    },
+    "032": {
+      "name": "ゾロアーク",
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "SV6a-032",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "nagimiso",
+      "hp": 120,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "げんえいジャック",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 60,
+          "damageModifier": "×",
+          "effect": "相手の場の「ポケモンex・V」の数×60ダメージ。"
+        },
+        {
+          "name": "ツメできりさく",
+          "cost": [
+            "Darkness",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 110
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "dexId": [
+        571
+      ]
+    },
+    "033": {
+      "name": "マーイーカ",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-033",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Mori Yuu",
+      "hp": 60,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "いたずらしょくしゅ",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "相手の山札を上から1枚見て、もとにもどす。のぞむなら、その山札を切る。"
+        },
+        {
+          "name": "つつく",
+          "cost": [
+            "Darkness"
+          ],
+          "damage": 10
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "dexId": [
+        686
+      ]
+    },
+    "034": {
+      "name": "カラマネロ",
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "SV6a-034",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "akagi",
+      "hp": 120,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "けったくテンタクル",
+          "cost": [
+            "Darkness"
+          ],
+          "effect": "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンに120ダメージ。この番、手札から「クセロシキのたくらみ」を出して使っていないなら、このワザは失敗。"
+        },
+        {
+          "name": "かいてんアタック",
+          "cost": [
+            "Darkness",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 90
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "dexId": [
+        687
+      ]
+    },
+    "035": {
+      "name": "イベルタル",
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "SV6a-035",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "SIE NANAHARA",
+      "hp": 120,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "むしばむかぜ",
+          "cost": [
+            "Darkness"
+          ],
+          "effect": "ダメカンがのっている相手のポケモン全員に、それぞれダメカンを2個のせる。"
+        },
+        {
+          "name": "はかいビーム",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 100,
+          "effect": "コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "dexId": [
+        717
+      ]
+    },
+    "036": {
+      "name": "イイネイヌex",
+      "category": "Pokemon",
+      "rarity": "Double Rare",
+      "id": "SV6a-036",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "takuyoa",
+      "hp": 250,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "ポイズンマッスル",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "自分の山札から「基本エネルギー」を2枚まで選び、このポケモンにつける。そして山札を切る。つけた場合、このポケモンをどくにする。"
+        },
+        {
+          "name": "クレイジーチェーン",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 130,
+          "damageModifier": "＋",
+          "effect": "このポケモンがどくなら、130ダメージ追加。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        1014
+      ]
+    },
+    "037": {
+      "name": "マシマシラex",
+      "category": "Pokemon",
+      "rarity": "Double Rare",
+      "id": "SV6a-037",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "takuyoa",
+      "hp": 210,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "ひょうしぬけ",
+          "effect": "このポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、自分の場に「モモワロウex」がいるなら、とられるサイドは1枚少なくなる。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "ダーティヘッド",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 190,
+          "effect": "次の自分の番、このポケモンは「ダーティヘッド」が使えない。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        1015
+      ]
+    },
+    "038": {
+      "name": "キチキギスex",
+      "category": "Pokemon",
+      "rarity": "Double Rare",
+      "id": "SV6a-038",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "takuyoa",
+      "hp": 210,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "さかてにとる",
+          "effect": "前の相手の番に、自分のポケモンがきぜつしていたなら、自分の番に1回使える。自分の山札を3枚引く。この番、すでに別の「さかてにとる」を使っていたなら、この特性は使えない。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "クルーエルアロー",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "相手のポケモン1匹に、100ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        1016
+      ]
+    },
+    "039": {
+      "name": "モモワロウex",
+      "category": "Pokemon",
+      "rarity": "Double Rare",
+      "id": "SV6a-039",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "aky CG Works",
+      "hp": 190,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "しはいのくさり",
+          "effect": "自分の番に1回使える。自分のベンチのポケモン（「モモワロウex」をのぞく）を1匹選び、バトルポケモンと入れ替える。その後、新しいバトルポケモンをどくにする。この番、すでに別の「しはいのくさり」を使っていたなら、この特性は使えない。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "イライラバースト",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": 60,
+          "damageModifier": "×",
+          "effect": "相手がすでにとったサイドの枚数×60ダメージ。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        1025
+      ]
+    },
+    "040": {
+      "name": "ゲノセクト",
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "SV6a-040",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Kazumasa Yasukuni",
+      "hp": 110,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "エースキャンセラー",
+          "effect": "このポケモンに「ポケモンのどうぐ」がついているなら、相手は手札から「ACE SPEC」のカードを出して使えない。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "マグネブラスト",
+          "cost": [
+            "Metal",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 100
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      },
+      "dexId": [
+        649
+      ]
+    },
+    "041": {
+      "name": "ゾウドウ",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-041",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Shinya Mizuno",
+      "hp": 100,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "たいあたり",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 30
+        },
+        {
+          "name": "がちんこ",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 70
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      },
+      "dexId": [
+        878
+      ]
+    },
+    "042": {
+      "name": "ダイオウドウ",
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "SV6a-042",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "kawayoo",
+      "hp": 200,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Stage1",
+      "retreat": 4,
+      "abilities": [
+        {
+          "name": "どでかいからだ",
+          "effect": "このポケモンがバトル場にいるかぎり、相手は手札からスタジアムを出せない。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "ノーズラリアット",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 130,
+          "damageModifier": "＋",
+          "effect": "のぞむなら、100ダメージ追加。その場合、次の自分の番、このポケモンはワザが使えない。"
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      },
+      "dexId": [
+        879
+      ]
+    },
+    "043": {
+      "name": "ブロロン",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-043",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "HAGIYA Kaoru",
+      "hp": 70,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "こうちょく",
+          "cost": [
+            "Metal"
+          ],
+          "effect": "次の相手の番、このポケモンが受けるワザのダメージは「-30」される。"
+        },
+        {
+          "name": "とびだしヘッド",
+          "cost": [
+            "Metal",
+            "Metal"
+          ],
+          "damage": 20
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      },
+      "dexId": [
+        965
+      ]
+    },
+    "044": {
+      "name": "キバゴ",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-044",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Orca",
+      "hp": 70,
+      "types": [
+        "Dragon"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "ひっかく",
+          "cost": [
+            "Fighting"
+          ],
+          "damage": 10
+        },
+        {
+          "name": "するどいキバ",
+          "cost": [
+            "Fighting",
+            "Metal"
+          ],
+          "damage": 30
+        }
+      ],
+      "dexId": [
+        610
+      ]
+    },
+    "045": {
+      "name": "オノンド",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-045",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Uninori",
+      "hp": 100,
+      "types": [
+        "Dragon"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "abilities": [
+        {
+          "name": "きんちょうかん",
+          "effect": "このポケモンは、相手が手札からグッズまたはサポートを出して使ったとき、その効果を受けない。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "りゅうのはどう",
+          "cost": [
+            "Fighting",
+            "Metal"
+          ],
+          "damage": 80,
+          "effect": "自分の山札を上から1枚トラッシュする。"
+        }
+      ],
+      "dexId": [
+        611
+      ]
+    },
+    "046": {
+      "name": "オノノクス",
+      "category": "Pokemon",
+      "rarity": "Rare",
+      "id": "SV6a-046",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Tsuyoshi Nagano",
+      "hp": 170,
+      "types": [
+        "Dragon"
+      ],
+      "stage": "Stage2",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "アックスダウン",
+          "cost": [
+            "Fighting"
+          ],
+          "effect": "相手のバトルポケモンに特殊エネルギーがついているなら、そのポケモンをきぜつさせる。"
+        },
+        {
+          "name": "りゅうのはどう",
+          "cost": [
+            "Fighting",
+            "Metal"
+          ],
+          "damage": 230,
+          "effect": "自分の山札を上から3枚トラッシュする。"
+        }
+      ],
+      "dexId": [
+        612
+      ]
+    },
+    "047": {
+      "name": "キュレム",
+      "category": "Pokemon",
+      "rarity": "Uncommon",
+      "id": "SV6a-047",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Shiburingaru",
+      "hp": 130,
+      "types": [
+        "Dragon"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "abilities": [
+        {
+          "name": "アンチプラズマ",
+          "effect": "相手のトラッシュに、名前に「アクロマ」とつくカードがあるなら、このポケモンが「トライフロスト」を使うためのエネルギーは、エネルギー1個になる。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "トライフロスト",
+          "cost": [
+            "Water",
+            "Water",
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "effect": "このポケモンについているエネルギーをすべてトラッシュし、相手のポケモン3匹に、それぞれ110ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+        }
+      ],
+      "dexId": [
+        646
+      ]
+    },
+    "048": {
+      "name": "ニャース",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-048",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "sui",
+      "hp": 70,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "みだれひっかき",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 20,
+          "damageModifier": "×",
+          "effect": "コインを3回投げ、オモテの数×20ダメージ。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        52
+      ]
+    },
+    "049": {
+      "name": "ペルシアン",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-049",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "NC Empire",
+      "hp": 110,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "みだれひっかき",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 50,
+          "damageModifier": "×",
+          "effect": "コインを3回投げ、オモテの数×50ダメージ。"
+        },
+        {
+          "name": "スラッシュクロー",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 100
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        53
+      ]
+    },
+    "050": {
+      "name": "イーブイ",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-050",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Susumu Maeya",
+      "hp": 70,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "カラフルキャッチ",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "自分の山札から、それぞれちがうタイプの基本エネルギーを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。"
+        },
+        {
+          "name": "ずつき",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        133
+      ]
+    },
+    "051": {
+      "name": "トリミアン",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-051",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Shinya Komatsu",
+      "hp": 100,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "エネアシスト",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 30,
+          "effect": "自分のトラッシュから基本エネルギーを1枚選び、ベンチポケモンにつける。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        676
+      ]
+    },
+    "052": {
+      "name": "ヌイコグマ",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-052",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "ryoma uratsuka",
+      "hp": 80,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Basic",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "とっしん",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 30,
+          "effect": "このポケモンにも10ダメージ。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        759
+      ]
+    },
+    "053": {
+      "name": "キテルグマ",
+      "category": "Pokemon",
+      "rarity": "Common",
+      "id": "SV6a-053",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Takeshi Nakamura",
+      "hp": 130,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "パワーチャージ",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 30,
+          "effect": "自分の山札から基本エネルギーを1枚選び、このポケモンにつける。そして山札を切る。"
+        },
+        {
+          "name": "ぶちかます",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 130
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        760
+      ]
+    },
+    "054": {
+      "name": "デンジャラス光線",
+      "category": "Trainer",
+      "rarity": "Unknown",
+      "id": "SV6a-054",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "inose yukie",
+      "subcategory": "Item",
+      "effect": "相手のバトルポケモンをやけどとこんらんにする。 グッズは、自分の番に何枚でも使える。 ACE SPECのカードは、デッキに1枚しか入れられない。"
+    },
+    "055": {
+      "name": "ポケバイタルA",
+      "category": "Trainer",
+      "rarity": "Unknown",
+      "id": "SV6a-055",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Toyste Beach",
+      "subcategory": "Item",
+      "effect": "自分のポケモン1匹のHPを「150」回復する。 このカードは、トラッシュにあるかぎり、手札に加えられず、山札にもどせない。 グッズは、自分の番に何枚でも使える。 ACE SPECのカードは、デッキに1枚しか入れられない。"
+    },
+    "056": {
+      "name": "夜のタンカ",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "SV6a-056",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Toyste Beach",
+      "subcategory": "Item",
+      "effect": "自分のトラッシュからポケモンまたは基本エネルギーを1枚選び、相手に見せて、手札に加える。 グッズは、自分の番に何枚でも使える。"
+    },
+    "057": {
+      "name": "くさりもち",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "SV6a-057",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "5ban Graphics",
+      "subcategory": "Pokemon Tool",
+      "effect": "このカードをつけているどくのポケモンが使うワザの、相手のバトルポケモンへのダメージは「+40」される。 ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    },
+    "058": {
+      "name": "力の砂時計",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "SV6a-058",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Studio Bora Inc.",
+      "subcategory": "Pokemon Tool",
+      "effect": "自分の番の終わりに、このカードをつけているポケモンがバトル場にいるなら、自分のトラッシュから基本エネルギーを1枚選び、そのポケモンにつけてよい。 ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    },
+    "059": {
+      "name": "アクロマの執念",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "SV6a-059",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "hncl",
+      "subcategory": "Supporter",
+      "effect": "自分の山札からスタジアムとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。 サポートは、自分の番に1枚しか使えない。"
+    },
+    "060": {
+      "name": "アンズの秘技",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "SV6a-060",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Taira Akitsu",
+      "subcategory": "Supporter",
+      "effect": "自分のポケモンを2匹まで選び、自分の山札から「基本エネルギー」を1枚ずつつける。そして山札を切る。バトルポケモンにつけた場合、そのポケモンをどくにする。 サポートは、自分の番に1枚しか使えない。"
+    },
+    "061": {
+      "name": "カシオペア",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "SV6a-061",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Atsushi Furusawa",
+      "subcategory": "Supporter",
+      "effect": "このカードは、自分の手札がこのカード1枚だけのときにしか使えない。 自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。 サポートは、自分の番に1枚しか使えない。"
+    },
+    "062": {
+      "name": "クセロシキのたくらみ",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "SV6a-062",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "GOSSAN",
+      "subcategory": "Supporter",
+      "effect": "相手は相手自身の手札を、3枚になるようにトラッシュする。 サポートは、自分の番に1枚しか使えない。"
+    },
+    "063": {
+      "name": "ニュートラルセンター",
+      "category": "Trainer",
+      "rarity": "Unknown",
+      "id": "SV6a-063",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "imoniii",
+      "subcategory": "Stadium",
+      "effect": "おたがいのポケモン（「ルールを持つポケモン」をのぞく）全員は、相手の「ポケモンex・V」からワザのダメージを受けない。 このカードは、トラッシュにあるかぎり、手札に加えられず、山札にもどせない。 スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。 ACE SPECのカードは、デッキに1枚しか入れられない。"
+    },
+    "064": {
+      "name": "夜のアカデミー",
+      "category": "Trainer",
+      "rarity": "Uncommon",
+      "id": "SV6a-064",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "AYUMI ODASHIMA",
+      "subcategory": "Stadium",
+      "effect": "おたがいのプレイヤーは、自分の番ごとに1回、自分の手札を1枚選び、山札の上にもどしてよい。 スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。"
+    },
+    "065": {
+      "name": "カプ・ブルル",
+      "category": "Pokemon",
+      "rarity": "Illustration Rare",
+      "id": "SV6a-065",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "IKEDA Saki",
+      "hp": 140,
+      "types": [
+        "Grass"
+      ],
+      "stage": "Basic",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "ウッドハンマー",
+          "cost": [
+            "Grass",
+            "Grass",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 220,
+          "effect": "このポケモンにも30ダメージ。"
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "dexId": [
+        787
+      ]
+    },
+    "066": {
+      "name": "ヘルガー",
+      "category": "Pokemon",
+      "rarity": "Illustration Rare",
+      "id": "SV6a-066",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Taiga Kasai",
+      "hp": 120,
+      "types": [
+        "Fire"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "attacks": [
+        {
+          "name": "かみつく",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 50
+        },
+        {
+          "name": "バークアウト",
+          "cost": [
+            "Fire",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 100,
+          "effect": "次の相手の番、このワザを受けたポケモンが使うワザのダメージは「-100」される。"
+        }
+      ],
+      "weakness": {
+        "type": "Water",
+        "value": "x2"
+      },
+      "dexId": [
+        229
+      ]
+    },
+    "067": {
+      "name": "タッツー",
+      "category": "Pokemon",
+      "rarity": "Illustration Rare",
+      "id": "SV6a-067",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Shinya Komatsu",
+      "hp": 60,
+      "types": [
+        "Water"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "じっとする",
+          "cost": [
+            "Water"
+          ],
+          "effect": "このポケモンのHPを「30」回復する。"
+        },
+        {
+          "name": "ひれカッター",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 20
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "dexId": [
+        116
+      ]
+    },
+    "068": {
+      "name": "ヨマワル",
+      "category": "Pokemon",
+      "rarity": "Illustration Rare",
+      "id": "SV6a-068",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "James Turner",
+      "hp": 60,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "むかえにいく",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "自分のトラッシュから「ヨマワル」を3枚まで選び、ベンチに出す。"
+        },
+        {
+          "name": "つぶやく",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": 30
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "dexId": [
+        355
+      ]
+    },
+    "069": {
+      "name": "サマヨール",
+      "category": "Pokemon",
+      "rarity": "Illustration Rare",
+      "id": "SV6a-069",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "James Turner",
+      "hp": 90,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "abilities": [
+        {
+          "name": "カースドボム",
+          "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。相手のポケモン1匹に、ダメカンを5個のせる。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "おにび",
+          "cost": [
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": 50
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "dexId": [
+        356
+      ]
+    },
+    "070": {
+      "name": "ヨノワール",
+      "category": "Pokemon",
+      "rarity": "Illustration Rare",
+      "id": "SV6a-070",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "James Turner",
+      "hp": 160,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Stage2",
+      "retreat": 3,
+      "abilities": [
+        {
+          "name": "カースドボム",
+          "effect": "自分の番に1回使えて、使ったなら、このポケモンをきぜつさせる。相手のポケモン1匹に、ダメカンを13個のせる。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "かげしばり",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Colorless"
+          ],
+          "damage": 150,
+          "effect": "次の相手の番、このワザを受けたポケモンは、にげられない。"
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "dexId": [
+        477
+      ]
+    },
+    "071": {
+      "name": "クレセリア",
+      "category": "Pokemon",
+      "rarity": "Illustration Rare",
+      "id": "SV6a-071",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "satoma",
+      "hp": 120,
+      "types": [
+        "Psychic"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "いやしのまい",
+          "cost": [
+            "Psychic"
+          ],
+          "effect": "自分のポケモン全員のHPを、それぞれ「20」回復する。"
+        },
+        {
+          "name": "クレセントパージ",
+          "cost": [
+            "Psychic",
+            "Psychic",
+            "Psychic"
+          ],
+          "damage": 80,
+          "damageModifier": "＋",
+          "effect": "のぞむなら、ウラになっている自分のサイドを1枚選び、オモテにする。その場合、80ダメージ追加。（対戦が終わるまで、そのサイドはオモテのまま。）"
+        }
+      ],
+      "weakness": {
+        "type": "Darkness",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Fighting",
+        "value": "-30"
+      },
+      "dexId": [
+        488
+      ]
+    },
+    "072": {
+      "name": "ゾロア",
+      "category": "Pokemon",
+      "rarity": "Illustration Rare",
+      "id": "SV6a-072",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "REND",
+      "hp": 70,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "ふむ",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 10
+        },
+        {
+          "name": "ダブルひっかき",
+          "cost": [
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 20,
+          "damageModifier": "×",
+          "effect": "コインを2回投げ、オモテの数×20ダメージ。"
+        }
+      ],
+      "weakness": {
+        "type": "Grass",
+        "value": "x2"
+      },
+      "dexId": [
+        570
+      ]
+    },
+    "073": {
+      "name": "ゾウドウ",
+      "category": "Pokemon",
+      "rarity": "Illustration Rare",
+      "id": "SV6a-073",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Mina Nakai",
+      "hp": 100,
+      "types": [
+        "Metal"
+      ],
+      "stage": "Basic",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "たいあたり",
+          "cost": [
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 30
+        },
+        {
+          "name": "がちんこ",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Colorless"
+          ],
+          "damage": 70
+        }
+      ],
+      "weakness": {
+        "type": "Fire",
+        "value": "x2"
+      },
+      "resistance": {
+        "type": "Grass",
+        "value": "-30"
+      },
+      "dexId": [
+        878
+      ]
+    },
+    "074": {
+      "name": "オノンド",
+      "category": "Pokemon",
+      "rarity": "Illustration Rare",
+      "id": "SV6a-074",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "MINAMINAMI Take",
+      "hp": 100,
+      "types": [
+        "Dragon"
+      ],
+      "stage": "Stage1",
+      "retreat": 2,
+      "abilities": [
+        {
+          "name": "きんちょうかん",
+          "effect": "このポケモンは、相手が手札からグッズまたはサポートを出して使ったとき、その効果を受けない。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "りゅうのはどう",
+          "cost": [
+            "Fighting",
+            "Metal"
+          ],
+          "damage": 80,
+          "effect": "自分の山札を上から1枚トラッシュする。"
+        }
+      ],
+      "dexId": [
+        610
+      ]
+    },
+    "075": {
+      "name": "ペルシアン",
+      "category": "Pokemon",
+      "rarity": "Illustration Rare",
+      "id": "SV6a-075",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Whisker",
+      "hp": 110,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "みだれひっかき",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 50,
+          "damageModifier": "×",
+          "effect": "コインを3回投げ、オモテの数×50ダメージ。"
+        },
+        {
+          "name": "スラッシュクロー",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 100
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        53
+      ]
+    },
+    "076": {
+      "name": "キテルグマ",
+      "category": "Pokemon",
+      "rarity": "Illustration Rare",
+      "id": "SV6a-076",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Takeshi Nakamura",
+      "hp": 130,
+      "types": [
+        "Colorless"
+      ],
+      "stage": "Stage1",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "パワーチャージ",
+          "cost": [
+            "Colorless"
+          ],
+          "damage": 30,
+          "effect": "自分の山札から基本エネルギーを1枚選び、このポケモンにつける。そして山札を切る。"
+        },
+        {
+          "name": "ぶちかます",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 130
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        760
+      ]
+    },
+    "077": {
+      "name": "キングドラex",
+      "category": "Pokemon",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-077",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "PLANETA Igarashi",
+      "hp": 310,
+      "types": [
+        "Water"
+      ],
+      "stage": "Stage2",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "おうのごうれい",
+          "cost": [
+            "Water"
+          ],
+          "effect": "自分のトラッシュからポケモンを3枚まで選び、ベンチに出す。"
+        },
+        {
+          "name": "ハイドロポンプ",
+          "cost": [
+            "Colorless",
+            "Colorless"
+          ],
+          "damage": 50,
+          "damageModifier": "＋",
+          "effect": "このポケモンについているエネルギーの数×50ダメージ追加。"
+        }
+      ],
+      "weakness": {
+        "type": "Lightning",
+        "value": "x2"
+      },
+      "dexId": [
+        230
+      ]
+    },
+    "078": {
+      "name": "ブロロロームex",
+      "category": "Pokemon",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-078",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "PLANETA Mochizuki",
+      "hp": 280,
+      "types": [
+        "Lightning"
+      ],
+      "stage": "Stage1",
+      "retreat": 1,
+      "attacks": [
+        {
+          "name": "アクセルフラッシュ",
+          "cost": [
+            "Metal"
+          ],
+          "damage": 20,
+          "damageModifier": "＋",
+          "effect": "この番、このポケモンがベンチからバトル場に出ていたなら、120ダメージ追加。"
+        },
+        {
+          "name": "スピードブレイク",
+          "cost": [
+            "Metal",
+            "Metal",
+            "Metal"
+          ],
+          "damage": 250,
+          "effect": "このポケモンと、ついているすべてのカードを、トラッシュする。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        966
+      ]
+    },
+    "079": {
+      "name": "イイネイヌex",
+      "category": "Pokemon",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-079",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "5ban Graphics",
+      "hp": 250,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "ポイズンマッスル",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "自分の山札から「基本エネルギー」を2枚まで選び、このポケモンにつける。そして山札を切る。つけた場合、このポケモンをどくにする。"
+        },
+        {
+          "name": "クレイジーチェーン",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 130,
+          "damageModifier": "＋",
+          "effect": "このポケモンがどくなら、130ダメージ追加。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        1014
+      ]
+    },
+    "080": {
+      "name": "マシマシラex",
+      "category": "Pokemon",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-080",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "5ban Graphics",
+      "hp": 210,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "ひょうしぬけ",
+          "effect": "このポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、自分の場に「モモワロウex」がいるなら、とられるサイドは1枚少なくなる。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "ダーティヘッド",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 190,
+          "effect": "次の自分の番、このポケモンは「ダーティヘッド」が使えない。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        1015
+      ]
+    },
+    "081": {
+      "name": "キチキギスex",
+      "category": "Pokemon",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-081",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "5ban Graphics",
+      "hp": 210,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "さかてにとる",
+          "effect": "前の相手の番に、自分のポケモンがきぜつしていたなら、自分の番に1回使える。自分の山札を3枚引く。この番、すでに別の「さかてにとる」を使っていたなら、この特性は使えない。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "クルーエルアロー",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "相手のポケモン1匹に、100ダメージ。ベンチは弱点・抵抗力を計算しない。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        1016
+      ]
+    },
+    "082": {
+      "name": "モモワロウex",
+      "category": "Pokemon",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-082",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "aky CG Works",
+      "hp": 190,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "しはいのくさり",
+          "effect": "自分の番に1回使える。自分のベンチのポケモン（「モモワロウex」をのぞく）を1匹選び、バトルポケモンと入れ替える。その後、新しいバトルポケモンをどくにする。この番、すでに別の「しはいのくさり」を使っていたなら、この特性は使えない。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "イライラバースト",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": 60,
+          "damageModifier": "×",
+          "effect": "相手がすでにとったサイドの枚数×60ダメージ。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        1025
+      ]
+    },
+    "083": {
+      "name": "アクロマの執念",
+      "category": "Trainer",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-083",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "hncl",
+      "subcategory": "Supporter",
+      "effect": "自分の山札からスタジアムとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。 サポートは、自分の番に1枚しか使えない。"
+    },
+    "084": {
+      "name": "アンズの秘技",
+      "category": "Trainer",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-084",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Taira Akitsu",
+      "subcategory": "Supporter",
+      "effect": "自分のポケモンを2匹まで選び、自分の山札から「基本エネルギー」を1枚ずつつける。そして山札を切る。バトルポケモンにつけた場合、そのポケモンをどくにする。 サポートは、自分の番に1枚しか使えない。"
+    },
+    "085": {
+      "name": "カシオペア",
+      "category": "Trainer",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-085",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Atsushi Furusawa",
+      "subcategory": "Supporter",
+      "effect": "このカードは、自分の手札がこのカード1枚だけのときにしか使えない。 自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。 サポートは、自分の番に1枚しか使えない。"
+    },
+    "086": {
+      "name": "クセロシキのたくらみ",
+      "category": "Trainer",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-086",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "GOSSAN",
+      "subcategory": "Supporter",
+      "effect": "相手は相手自身の手札を、3枚になるようにトラッシュする。 サポートは、自分の番に1枚しか使えない。"
+    },
+    "087": {
+      "name": "イイネイヌex",
+      "category": "Pokemon",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-087",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "kantaro",
+      "hp": 250,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 3,
+      "attacks": [
+        {
+          "name": "ポイズンマッスル",
+          "cost": [
+            "Colorless"
+          ],
+          "effect": "自分の山札から「基本エネルギー」を2枚まで選び、このポケモンにつける。そして山札を切る。つけた場合、このポケモンをどくにする。"
+        },
+        {
+          "name": "クレイジーチェーン",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 130,
+          "damageModifier": "＋",
+          "effect": "このポケモンがどくなら、130ダメージ追加。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        1014
+      ]
+    },
+    "088": {
+      "name": "マシマシラex",
+      "category": "Pokemon",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-088",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "kantaro",
+      "hp": 210,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "ひょうしぬけ",
+          "effect": "このポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、自分の場に「モモワロウex」がいるなら、とられるサイドは1枚少なくなる。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "ダーティヘッド",
+          "cost": [
+            "Darkness",
+            "Darkness",
+            "Colorless"
+          ],
+          "damage": 190,
+          "effect": "次の自分の番、このポケモンは「ダーティヘッド」が使えない。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        1015
+      ]
+    },
+    "089": {
+      "name": "キチキギスex",
+      "category": "Pokemon",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-089",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "kantaro",
+      "hp": 210,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "さかてにとる",
+          "effect": "前の相手の番に、自分のポケモンがきぜつしていたなら、自分の番に1回使える。自分の山札を3枚引く。この番、すでに別の「さかてにとる」を使っていたなら、この特性は使えない。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "クルーエルアロー",
+          "cost": [
+            "Colorless",
+            "Colorless",
+            "Colorless"
+          ],
+          "effect": "相手のポケモン1匹に、100ダメージ。ベンチは弱点・抵抗力を計算しない。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        1016
+      ]
+    },
+    "090": {
+      "name": "モモワロウex",
+      "category": "Pokemon",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-090",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "kantaro",
+      "hp": 190,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "しはいのくさり",
+          "effect": "自分の番に1回使える。自分のベンチのポケモン（「モモワロウex」をのぞく）を1匹選び、バトルポケモンと入れ替える。その後、新しいバトルポケモンをどくにする。この番、すでに別の「しはいのくさり」を使っていたなら、この特性は使えない。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "イライラバースト",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": 60,
+          "damageModifier": "×",
+          "effect": "相手がすでにとったサイドの枚数×60ダメージ。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        1025
+      ]
+    },
+    "091": {
+      "name": "カシオペア",
+      "category": "Trainer",
+      "rarity": "Special Illustration Rare",
+      "id": "SV6a-091",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "burari",
+      "subcategory": "Supporter",
+      "effect": "このカードは、自分の手札がこのカード1枚だけのときにしか使えない。 自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。 サポートは、自分の番に1枚しか使えない。"
+    },
+    "092": {
+      "name": "モモワロウex",
+      "category": "Pokemon",
+      "rarity": "Hyper Rare",
+      "id": "SV6a-092",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "aky CG Works",
+      "hp": 190,
+      "types": [
+        "Darkness"
+      ],
+      "stage": "Basic",
+      "retreat": 1,
+      "abilities": [
+        {
+          "name": "しはいのくさり",
+          "effect": "自分の番に1回使える。自分のベンチのポケモン（「モモワロウex」をのぞく）を1匹選び、バトルポケモンと入れ替える。その後、新しいバトルポケモンをどくにする。この番、すでに別の「しはいのくさり」を使っていたなら、この特性は使えない。"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "イライラバースト",
+          "cost": [
+            "Darkness",
+            "Darkness"
+          ],
+          "damage": 60,
+          "damageModifier": "×",
+          "effect": "相手がすでにとったサイドの枚数×60ダメージ。"
+        }
+      ],
+      "weakness": {
+        "type": "Fighting",
+        "value": "x2"
+      },
+      "dexId": [
+        1025
+      ]
+    },
+    "093": {
+      "name": "大地の器",
+      "category": "Trainer",
+      "rarity": "Hyper Rare",
+      "id": "SV6a-093",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "AYUMI ODASHIMA",
+      "subcategory": "Item",
+      "effect": "このカードは、自分の手札を1枚トラッシュしなければ使えない。 自分の山札から基本エネルギーを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。 グッズは、自分の番に何枚でも使える。"
+    },
+    "094": {
+      "name": "力の砂時計",
+      "category": "Trainer",
+      "rarity": "Hyper Rare",
+      "id": "SV6a-094",
+      "set": {
+        "id": "SV6a",
+        "name": "Night Wanderer"
+      },
+      "image": null,
+      "illustrator": "Studio Bora Inc.",
+      "subcategory": "Pokemon Tool",
+      "effect": "自分の番の終わりに、このカードをつけているポケモンがバトル場にいるなら、自分のトラッシュから基本エネルギーを1枚選び、そのポケモンにつけてよい。 ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    }
+  }
+}
