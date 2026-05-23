@@ -26,6 +26,31 @@
     <p class="subtitle">Enter a Japanese card's set ID and number to find its English equivalent via TCGdex</p>
   </header>
 
+  <div class="input-section" id="inputSection">
+    <div class="field field--set">
+      <label>Japanese Set ID</label>
+      <input id="setInput" type="text" placeholder="e.g. sv8, M1L" list="setList"
+             autocomplete="off" autocapitalize="characters" spellcheck="false">
+      <datalist id="setList"></datalist>
+    </div>
+    <div class="field field--num">
+      <label>Card #</label>
+      <input id="cardNum" type="text" placeholder="021" inputmode="numeric" pattern="[0-9]*">
+    </div>
+    <div class="input-actions">
+      <button id="searchBtn" onclick="doSearch()">Match</button>
+      <button id="browseBtn" class="btn-secondary" onclick="browseSet()" aria-label="Browse set">
+        <span class="browse-label">Browse</span>
+        <span class="browse-icon" aria-hidden="true">📂</span>
+      </button>
+    </div>
+    <div class="chip-row" id="chipRow" role="listbox" aria-label="Recent or matching set IDs"></div>
+  </div>
+
+  <div id="status" class="status"></div>
+  <div id="results"></div>
+  <div id="browsePage" style="display:none"></div>
+
   <div class="howto">
     <details>
     <summary><h2 style="display:inline">📖 How to find the Set ID and Card Number</h2></summary>
@@ -52,31 +77,6 @@
     </div>
     </details>
   </div>
-
-  <div class="input-section" id="inputSection">
-    <div class="field field--set">
-      <label>Japanese Set ID</label>
-      <input id="setInput" type="text" placeholder="e.g. sv8, M1L" list="setList"
-             autocomplete="off" autocapitalize="characters" spellcheck="false">
-      <datalist id="setList"></datalist>
-    </div>
-    <div class="field field--num">
-      <label>Card #</label>
-      <input id="cardNum" type="text" placeholder="021" inputmode="numeric" pattern="[0-9]*">
-    </div>
-    <div class="input-actions">
-      <button id="searchBtn" onclick="doSearch()">Match</button>
-      <button id="browseBtn" class="btn-secondary" onclick="browseSet()" aria-label="Browse set">
-        <span class="browse-label">Browse</span>
-        <span class="browse-icon" aria-hidden="true">📂</span>
-      </button>
-    </div>
-    <div class="chip-row" id="chipRow" role="listbox" aria-label="Recent or matching set IDs"></div>
-  </div>
-
-  <div id="status" class="status"></div>
-  <div id="results"></div>
-  <div id="browsePage" style="display:none"></div>
 
   <script src="app.js"></script>
 </body>
