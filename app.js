@@ -269,6 +269,22 @@ function energyBadge(type) {
   return `<span class="energy-badge" style="background:${c}">${safeHtml(type.slice(0,3))}</span>`;
 }
 
+// TCGdex stores energy references in effect text as {X} tokens (e.g. "Discard 1 {G} Energy").
+// Without a transform they ship to the user as literal "{G}". Map to the existing energyBadge
+// so the visual language matches attack-cost pills.
+const ENERGY_TOKEN_TO_TYPE = {
+  G: 'Grass', R: 'Fire', W: 'Water', L: 'Lightning', P: 'Psychic',
+  F: 'Fighting', D: 'Darkness', M: 'Metal', Y: 'Fairy', N: 'Dragon', C: 'Colorless',
+};
+function renderEffect(text) {
+  if (text == null) return '';
+  // Escape first, then inject badge markup — never the other way around, or our spans get escaped.
+  return safeHtml(text).replace(/\{([A-Z])\}/g, (m, code) => {
+    const type = ENERGY_TOKEN_TO_TYPE[code];
+    return type ? energyBadge(type) : m;
+  });
+}
+
 function renderCard(card, lang, badge, score, fallbackImgUrl) {
   const imgUrl = cardImageUrl(card);
   // If the primary image 404s (e.g. Serebii doesn't have this EN card yet), swap to the
@@ -281,13 +297,13 @@ function renderCard(card, lang, badge, score, fallbackImgUrl) {
   const attacks = (card.attacks || []).map(a => {
     const cost = (a.cost || []).map(t => energyBadge(t)).join('');
     let block = `<div class="atk-block"><div class="atk-row">${cost ? `<span class="atk-cost">${cost}</span>` : ''}<span class="atk-name">${safeHtml(a.name)}</span>${a.damage != null ? `<span class="atk-dmg">${safeHtml(String(a.damage))}</span>` : ''}</div>`;
-    if (a.effect) block += `<div class="atk-effect">${safeHtml(a.effect)}</div>`;
+    if (a.effect) block += `<div class="atk-effect">${renderEffect(a.effect)}</div>`;
     block += `</div>`;
     return block;
   }).join('');
   const abilities = (card.abilities || []).map(a => {
     let block = `<div class="atk-block"><div class="ability-row"><span class="ability-label">Ability</span> <span class="ability-name">${safeHtml(a.name)}</span></div>`;
-    if (a.effect) block += `<div class="atk-effect">${safeHtml(a.effect)}</div>`;
+    if (a.effect) block += `<div class="atk-effect">${renderEffect(a.effect)}</div>`;
     block += `</div>`;
     return block;
   }).join('');
@@ -331,7 +347,7 @@ function renderCard(card, lang, badge, score, fallbackImgUrl) {
           <span class="lbl">Set</span><span>${setName}</span> <span style="color:var(--text-faint)">(${cardId})</span>
         </div>
         ${abilities || attacks ? `<div class="atk-section">${abilities}${attacks}</div>` : ''}
-        ${(card.category === 'Trainer' || card.category === 'Energy') && card.effect ? `<div class="trainer-effect">${safeHtml(card.effect)}</div>` : ''}
+        ${(card.category === 'Trainer' || card.category === 'Energy') && card.effect ? `<div class="trainer-effect">${renderEffect(card.effect)}</div>` : ''}
         <details class="card-details">
           <summary>Show details</summary>
           <div class="details-inner">
@@ -365,10 +381,10 @@ function renderCardCompactJp(card) {
   const cardId = safeHtml(card.id || '');
   const attacks = (card.attacks || []).map(a => {
     const cost = (a.cost || []).map(t => energyBadge(t)).join('');
-    return `<div class="atk-row">${cost ? `<span class="atk-cost">${cost}</span>` : ''}<span class="atk-name">${safeHtml(a.name)}</span>${a.damage != null ? `<span class="atk-dmg">${safeHtml(String(a.damage))}</span>` : ''}</div>${a.effect ? `<div class="atk-effect">${safeHtml(a.effect)}</div>` : ''}`;
+    return `<div class="atk-row">${cost ? `<span class="atk-cost">${cost}</span>` : ''}<span class="atk-name">${safeHtml(a.name)}</span>${a.damage != null ? `<span class="atk-dmg">${safeHtml(String(a.damage))}</span>` : ''}</div>${a.effect ? `<div class="atk-effect">${renderEffect(a.effect)}</div>` : ''}`;
   }).join('');
   const abilities = (card.abilities || []).map(a =>
-    `<div class="ability-row"><span class="ability-label">Ability</span> <span class="ability-name">${safeHtml(a.name)}</span></div>${a.effect ? `<div class="atk-effect">${safeHtml(a.effect)}</div>` : ''}`
+    `<div class="ability-row"><span class="ability-label">Ability</span> <span class="ability-name">${safeHtml(a.name)}</span></div>${a.effect ? `<div class="atk-effect">${renderEffect(a.effect)}</div>` : ''}`
   ).join('');
   return `
     <div class="card-panel card-panel--compact">

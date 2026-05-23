@@ -46,6 +46,14 @@ keep attack `name = '—'` so the dash renders verbatim. `isEnglish()`
 rejects any text containing JP unicode (U+3040–9FFF) before it reaches the
 EN panel.
 
+Effect text (attack/ability/trainer/energy) goes through `renderEffect()`,
+which `safeHtml`-escapes the input and then replaces TCGdex-style energy
+tokens (`{G}` / `{R}` / `{W}` / `{L}` / `{P}` / `{F}` / `{D}` / `{M}` / `{Y}` /
+`{N}` / `{C}`) with `energyBadge()` spans so the visual language matches
+attack-cost pills. Always call `renderEffect(text)` — never raw
+`safeHtml(text)` — for any field that may contain inline energy tokens, or
+literal `{X}` strings will leak to the user.
+
 ### Image-load fallback — JP image rescues a missing EN image
 
 The 5th arg to `renderCard` is the fallback URL. The `<img>` always tries

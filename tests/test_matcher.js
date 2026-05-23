@@ -216,5 +216,48 @@ test('ME4-083 → CRI/84 (last mainline)', () => {
   assert.equal(ctx.limitlessLinkFor({ id: 'ME4-083' }), 'https://limitlesstcg.com/cards/CRI/84');
 });
 
+console.log('\nrenderEffect — energy tokens like {G}/{R} render as badges, not literals');
+test('single {G} token is replaced with a Grass energy badge', () => {
+  const out = ctx.renderEffect('Search your deck for a Basic {G} Energy card.');
+  assert.ok(!out.includes('{G}'), `output still contains literal {G}: ${out}`);
+  assert.ok(/energy-badge/.test(out), `output missing energy-badge span: ${out}`);
+  assert.ok(/Grass|#78C850/i.test(out), `output not coloured/labelled as Grass: ${out}`);
+});
+test('multiple distinct tokens are each replaced', () => {
+  const out = ctx.renderEffect('Discard 1 {R} and 2 {W} Energy from this Pokémon.');
+  assert.ok(!/\{[A-Z]\}/.test(out), `output still contains a token: ${out}`);
+  // two badge spans expected
+  const badges = out.match(/energy-badge/g) || [];
+  assert.equal(badges.length, 2, `expected 2 badges, got ${badges.length}: ${out}`);
+});
+test('effect with no tokens is HTML-escaped but otherwise unchanged', () => {
+  const out = ctx.renderEffect('Heal 30 damage from this Pokémon.');
+  assert.equal(out, 'Heal 30 damage from this Pokémon.');
+});
+test('HTML in surrounding text is escaped (no XSS)', () => {
+  const out = ctx.renderEffect('Attach a {G} <img src=x onerror=alert(1)>');
+  assert.ok(!out.includes('<img'), `raw <img tag leaked through: ${out}`);
+  assert.ok(out.includes('&lt;img'), `expected escaped <img, got: ${out}`);
+  assert.ok(/energy-badge/.test(out), `token still rendered: ${out}`);
+});
+test('null/undefined effect returns empty string', () => {
+  assert.equal(ctx.renderEffect(null), '');
+  assert.equal(ctx.renderEffect(undefined), '');
+});
+test('unknown token like {X} is left untouched (escaped)', () => {
+  // Defensive: TCGdex could introduce a new code we don't know yet.
+  // Better to leave it as literal escaped text than silently drop it.
+  const out = ctx.renderEffect('Future-token {X} placeholder.');
+  assert.ok(out.includes('{X}'), `unknown token should be preserved: ${out}`);
+});
+test('all 11 documented energy types resolve to a badge', () => {
+  // G/R/W/L/P/F/D/M/Y/N/C — Grass/Fire/Water/Lightning/Psychic/Fighting/Darkness/Metal/Fairy/Dragon/Colorless
+  const all = '{G}{R}{W}{L}{P}{F}{D}{M}{Y}{N}{C}';
+  const out = ctx.renderEffect(all);
+  assert.ok(!/\{[A-Z]\}/.test(out), `at least one token went unrendered: ${out}`);
+  const badges = out.match(/energy-badge/g) || [];
+  assert.equal(badges.length, 11, `expected 11 badges, got ${badges.length}: ${out}`);
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed === 0 ? 0 : 1);
