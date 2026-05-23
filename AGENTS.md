@@ -277,3 +277,40 @@ Scripts under `scripts/` regenerate the sideload JSON files. Run manually
 when a new JP set releases (see `CLAUDE.md` for the full sequence). Do not
 add generated sideloads to CI — their scrapers hit external sites and
 aren't deterministic.
+
+## Tracking upstream TCGdex updates
+
+TCGdex is the authoritative source for both live lookups (`api.tcgdex.net/v2`)
+and our ME2a/ME4 sideload builds. When their dataset changes, our matcher
+behavior can change too — especially when they add `dexId` fields, new JP
+sets, or `evolveFrom` data we previously had to fill in ourselves.
+
+**Watch (in priority order):**
+
+1. **GitHub releases (semver-tagged, most authoritative)**
+   - Page: <https://github.com/tcgdex/cards-database/releases>
+   - Atom feed: <https://github.com/tcgdex/cards-database/releases.atom>
+   - Subscribe a feed reader to the Atom URL. Each tag's body lists merged
+     PRs grouped under "What's Changed". Recent examples worth knowing
+     about: **v2.44.0** (added the `dexId` field to cards generically —
+     directly affects our ex-name matcher), **v2.40.0** (added SV11W JP),
+     **v2.45.0** (backfilled missing `dexId`s for `me03` = our M3/ME3).
+2. **Master commits feed** (catches additions before a release tag)
+   - <https://github.com/tcgdex/cards-database/commits/master.atom>
+3. **Discord** (TCGdex's primary community channel, often hears about new
+   sets first): <https://tcgdex.dev/discord>
+4. **Status page** (per-language / per-set completeness, useful for
+   answering "is M5 in TCGdex yet?" — cf. `docs/m5-launch-notes.md`):
+   <https://tcgdex.dev/status>
+
+**When a release lands, ask:**
+
+- Does it add a JP set we sideload (or could now stop sideloading)?
+  → Update `SIDELOAD_JP_CONFIG` / `JP_TO_EN_SIDELOAD` / `LIMITLESS_SET_MAP`
+  in `app.js`.
+- Does it backfill `dexId`s for cards we currently match by name only?
+  → Re-run `fetch_tcgdex_en.py` and `normalize_data.py`; add a regression
+  test for any newly-matchable card.
+- Does it touch a set we already pin (e.g. ME2a / sv10)?
+  → Re-run `generate_tcgdex_m2a.py` so our pre-baked image URLs and
+  attack text stay in sync.
