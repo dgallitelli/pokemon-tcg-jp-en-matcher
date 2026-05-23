@@ -48,7 +48,7 @@ const SIDELOAD_CONFIG = {
     { id: "ME1", name: "Mega Evolution",      file: "data/ME1.json" },
     { id: "ME2", name: "Phantasmal Flames",   file: "data/ME2.json" },
     { id: "ME3", name: "Perfect Order",       file: "data/ME3.json" },
-    { id: "ME4", name: "Ninja Spinner",       file: "data/ME4.json" },
+    { id: "ME4", name: "Chaos Rising",        file: "data/ME4.json" },
   ]
 };
 
@@ -233,18 +233,28 @@ const LIMITLESS_SET_MAP = {
   'sv09':   'JTG',  // Journey Together
   'sv10':   'DRI',  // Destined Rivals
   'svp':    'PR-SV', // SVP Black Star Promos
+  // Mega Evolution era — sideload sets that have an official EN release on Limitless.
+  'ME4':    'CRI',  // Chaos Rising (PokeBeach pre-release named it "Ninja Spinner")
 };
+// ME4 collector numbers diverge from official EN at position 48 because PokeBeach's
+// pre-release listing was missing "Mega Gallade ex" (official #48). For our cards
+// numbered 48+, add 1 to land on the correct CRI number.
+function limitlessNumberFor(rawSet, num) {
+  if (rawSet === 'ME4' && num >= 48) return num + 1;
+  return num;
+}
 function limitlessLinkFor(card) {
   if (!card?.id) return null;
   const m = card.id.match(/^([A-Za-z0-9.]+)-(\d+)$/);
   if (!m) return null;
   const [, rawSet, num] = m;
   const mapped = LIMITLESS_SET_MAP[rawSet];
-  // Skip our machine-translated ME1/2/3/4 sideloads — Limitless wouldn't have those codes
+  // Skip our machine-translated ME1/2/3 sideloads — Limitless doesn't carry those codes yet.
   if (!mapped && /^ME\d/i.test(rawSet)) return null;
   // Only emit a link when we actually have a mapping. Otherwise we'd produce broken 404 URLs.
   if (!mapped) return null;
-  return `https://limitlesstcg.com/cards/${mapped}/${parseInt(num, 10)}`;
+  const number = limitlessNumberFor(rawSet, parseInt(num, 10));
+  return `https://limitlesstcg.com/cards/${mapped}/${number}`;
 }
 
 const ENERGY_COLORS = {

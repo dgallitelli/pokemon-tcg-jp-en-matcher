@@ -41,7 +41,7 @@ if M4_PATH.exists():
 
 SET_META = {
     "id": "ME4",
-    "name": {"en": "Ninja Spinner"},
+    "name": {"en": "Chaos Rising"},
     "serie": "Mega Evolution",
     "releaseDate": {"en": "2026-05-22"},
     "jpSetId": "M4",
@@ -54,7 +54,7 @@ def card(num, name, **kw):
     img = matches[occ] if occ < len(matches) else None
     _NAME_OCCURRENCE[name] = occ + 1
     key = f"{num:03d}"
-    c = {"name": name, "id": f"ME4-{key}", "set": {"id": "ME4", "name": "Ninja Spinner"}, "image": img}
+    c = {"name": name, "id": f"ME4-{key}", "set": {"id": "ME4", "name": "Chaos Rising"}, "image": img}
     illus = _M4_ILLUSTRATORS.get(key)
     if illus:
         c["illustrator"] = illus

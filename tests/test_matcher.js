@@ -186,5 +186,25 @@ test('Unmapped set returns null (no broken 404 links)', () => {
   assert.equal(ctx.limitlessLinkFor({ id: 'unknownset-001' }), null);
 });
 
+// ME4 → CRI (Chaos Rising). PokeBeach pre-release numbering diverges from the
+// official EN print at position 48 (Mega Gallade ex inserted), so cards 048+
+// shift by +1 on Limitless.
+test('ME4-001 → CRI/1 (no shift below 48)', () => {
+  assert.equal(ctx.limitlessLinkFor({ id: 'ME4-001' }), 'https://limitlesstcg.com/cards/CRI/1');
+});
+test('ME4-047 → CRI/47 (last unshifted card)', () => {
+  assert.equal(ctx.limitlessLinkFor({ id: 'ME4-047' }), 'https://limitlesstcg.com/cards/CRI/47');
+});
+test('ME4-048 → CRI/49 (shift starts at 48)', () => {
+  assert.equal(ctx.limitlessLinkFor({ id: 'ME4-048' }), 'https://limitlesstcg.com/cards/CRI/49');
+});
+test('ME4-050 (Crobat) → CRI/51', () => {
+  // PokeBeach numbered Crobat 050; official EN puts Crobat at 051.
+  assert.equal(ctx.limitlessLinkFor({ id: 'ME4-050' }), 'https://limitlesstcg.com/cards/CRI/51');
+});
+test('ME4-083 → CRI/84 (last mainline)', () => {
+  assert.equal(ctx.limitlessLinkFor({ id: 'ME4-083' }), 'https://limitlesstcg.com/cards/CRI/84');
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed === 0 ? 0 : 1);
