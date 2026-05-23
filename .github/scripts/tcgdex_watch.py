@@ -24,6 +24,11 @@ TITLE_PREFIX = "TCGdex update:"
 # Patterns scanned against each release body to flag likely-relevant changes.
 # Keep in sync with SEREBII_SLUGS / JP_TO_EN_SIDELOAD in app.js and the
 # triage checklist in AGENTS.md.
+#
+# Heuristics intentionally excluded (verified against issues #16-#19, all no-op):
+#   - `evolveFrom` — not rendered by the app, so backfills are irrelevant.
+#   - generic "trainer/supporter/stadium" — those words appear in nearly every
+#     release (every set has trainer cards), drowning the signal.
 RELEVANCE = [
     ("JP/EN sideload set (M* / ME*)",
      r"\b(?:m1s|m1l|m2|m2a|m3|m4|m5|me1|me01|me2|me02|me2a|me3|me03|me4|me04|me5|me05|mep)\b"),
@@ -34,10 +39,6 @@ RELEVANCE = [
      r"Destined Rivals|Black Bolt|White Flare"),
     ("dexId field (affects ex-name matching)",
      r"\bdexId\b|Pok[eé]dex ID"),
-    ("evolveFrom field",
-     r"\bevolveFrom\b"),
-    ("Trainer / Supporter / Stadium text",
-     r"\btrainer\b|\bsupporter\b|\bstadium\b"),
 ]
 
 TRIAGE_CHECKLIST = """\
