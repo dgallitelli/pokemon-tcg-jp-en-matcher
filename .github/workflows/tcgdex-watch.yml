@@ -1,0 +1,28 @@
+name: Watch TCGdex releases
+on:
+  schedule:
+    - cron: '0 9 * * *'  # daily at 09:00 UTC
+  workflow_dispatch:      # manual trigger
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ensure tracking label exists
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create tcgdex-update \
+            --description "Upstream TCGdex cards-database release to triage" \
+            --color "0e8a16" 2>/dev/null || true
+
+      - name: Open issues for new TCGdex releases
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/tcgdex_watch.py
