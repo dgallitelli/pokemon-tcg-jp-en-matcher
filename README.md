@@ -46,7 +46,7 @@ Sets not yet in TCGdex are sideloaded from local JSON files in `data/`:
 | M1L (Mega Brave) | ME1 (Mega Evolution) | TCGdex + Serebii |
 | M2 (Inferno X) | ME2 (Phantasmal Flames) | TCGdex + Serebii |
 | M3 (Nihil Zero) | ME3 (Perfect Order) | TCGdex + Serebii |
-| M4 (Ninja Spinner) | ME4 (Ninja Spinner) | TCGdex + Serebii |
+| M4 (Ninja Spinner) | ME4 (Chaos Rising) | PokeBeach + pokemon-card.com |
 
 Card data includes: name, HP, types, stage, attacks (name/cost/damage/effect), abilities, weakness, resistance, retreat cost, illustrator, rarity, trainer effects, and subcategories.
 
