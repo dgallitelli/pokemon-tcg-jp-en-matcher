@@ -28,13 +28,17 @@ Order of precedence:
    so we append `/high.webp` unless `card.image` already has an extension.
    ME2a sideload cards have a full `assets.tcgdex.net/...` URL baked into
    `card.image` at build time (`scripts/generate_tcgdex_m2a.py`).
+   ME1/ME2 cards have `assets.tcgdex.net/en/me/me0{1,2}/...` baked in by
+   `scripts/migrate_me1_me2_images.py`.
 2. **`sideloadImageUrl()` Serebii slug** (app.js:182) → for cards
    without `card.image`, derive
    `https://www.serebii.net/card/<slug>/<num>.jpg` from the set
    prefix via the `SEREBII_SLUGS` constant (app.js:169).
 
-Net effect: live lookups use the **TCGdex CDN**, ME1/ME2/ME3/ME4 sideloads
-use **Serebii**, ME2a uses **TCGdex** (pre-baked).
+Net effect: live lookups use the **TCGdex CDN**, ME1/ME2/ME2a/ME4 sideloads
+use **TCGdex** (pre-baked image URLs), ME3 still uses **Serebii** (its text
+was manually cleaned and re-pulling would regress that). Other JP/M sideloads
+fall through to Serebii via `SEREBII_SLUGS`.
 
 ### Text rendering — single funnel via `renderCard()` (app.js:260)
 
