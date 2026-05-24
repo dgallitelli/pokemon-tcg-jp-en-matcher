@@ -203,9 +203,9 @@ function sourceAttribution(card) {
   if (!card?.id) return null;
   const prefix = (card.id.split('-')[0] || '').toUpperCase();
   // Sideload-based EN translations
-  if (prefix === 'ME1') return { label: 'Serebii + TCGdex', tooltip: 'Translation assembled from Serebii (Mega Evolution) with TCGdex fallback.' };
-  if (prefix === 'ME2') return { label: 'Serebii + TCGdex', tooltip: 'Translation assembled from Serebii (Phantasmal Flames) with TCGdex fallback.' };
-  if (prefix === 'ME3') return { label: 'Serebii + TCGdex', tooltip: 'Translation assembled from Serebii (Perfect Order) with TCGdex fallback.' };
+  if (prefix === 'ME1') return { label: 'Serebii + TCGdex', tooltip: 'Image from TCGdex; translated text assembled from Serebii (Mega Evolution).' };
+  if (prefix === 'ME2') return { label: 'Serebii + TCGdex', tooltip: 'Image from TCGdex; translated text assembled from Serebii (Phantasmal Flames).' };
+  if (prefix === 'ME3') return { label: 'Serebii + TCGdex', tooltip: 'Translation assembled from Serebii (Perfect Order) with TCGdex fallback. Image from Serebii.' };
   if (prefix === 'ME4') return { label: 'PokeBeach + pokemon-card.com', tooltip: 'English text from PokeBeach (Jake C.); official English images from pokemon-card.com.' };
   // Synthetic — a JP card recast as EN using backfilled Serebii text
   if ((card.attacks || []).some(a => a.name === '—')) {

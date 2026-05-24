@@ -24,7 +24,8 @@
           "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/001"
     },
     "002": {
       "name": "Ivysaur",
@@ -50,7 +51,8 @@
           "damage": 60
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/002"
     },
     "003": {
       "name": "Mega Venusaur ex",
@@ -86,7 +88,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 4
+      "retreat": 4,
+      "image": "https://assets.tcgdex.net/en/me/me01/003"
     },
     "004": {
       "name": "Exeggcute",
@@ -110,7 +113,8 @@
           "effect": "Search your deck for a Basic {G} Energy card and attach it to this Pokémon. Then, shuffle your deck."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/004"
     },
     "005": {
       "name": "Exeggutor",
@@ -146,7 +150,8 @@
           "effect": "This attack does 30 more damage for each {G} Energy attached to this Pokémon."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/005"
     },
     "006": {
       "name": "Tangela",
@@ -179,7 +184,8 @@
           "damage": 30
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/006"
     },
     "007": {
       "name": "Tangrowth",
@@ -217,7 +223,8 @@
           "effect": "If this Pokémon has at least 2 extra Energy attached (in addition to this attack's cost), this attack does 140 more damage."
         }
       ],
-      "retreat": 4
+      "retreat": 4,
+      "image": "https://assets.tcgdex.net/en/me/me01/007"
     },
     "008": {
       "name": "Chikorita",
@@ -241,7 +248,8 @@
           "damage": 20
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/008"
     },
     "009": {
       "name": "Bayleef",
@@ -268,7 +276,8 @@
           "effect": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)"
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/009"
     },
     "010": {
       "name": "Meganium",
@@ -303,7 +312,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/010"
     },
     "011": {
       "name": "Shuckle",
@@ -335,7 +345,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/011"
     },
     "012": {
       "name": "Celebi",
@@ -366,7 +377,8 @@
           "damage": 30
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/012"
     },
     "013": {
       "name": "Seedot",
@@ -398,7 +410,8 @@
           "damage": 20
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/013"
     },
     "014": {
       "name": "Nuzleaf",
@@ -431,7 +444,8 @@
           "damage": 50
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/014"
     },
     "015": {
       "name": "Shiftry",
@@ -465,7 +479,8 @@
           "effect": "Your opponent's Active Pokémon is now Confused."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/015"
     },
     "016": {
       "name": "Nincada",
@@ -489,7 +504,8 @@
           "damage": 20
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/016"
     },
     "017": {
       "name": "Ninjask",
@@ -523,7 +539,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 0
+      "retreat": 0,
+      "image": "https://assets.tcgdex.net/en/me/me01/017"
     },
     "018": {
       "name": "Dhelmise",
@@ -549,7 +566,8 @@
           "effect": "If you have a Stadium in play, this attack does 50 more damage."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/018"
     },
     "019": {
       "name": "Vulpix",
@@ -581,7 +599,8 @@
           "damage": 20
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/019"
     },
     "020": {
       "name": "Ninetales",
@@ -614,7 +633,8 @@
           "damage": 60
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/020"
     },
     "021": {
       "name": "Numel",
@@ -647,7 +667,8 @@
           "damage": 30
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/021"
     },
     "022": {
       "name": "Mega Camerupt ex",
@@ -684,7 +705,8 @@
           "effect": "Discard 2 Energy from this Pokémon."
         }
       ],
-      "retreat": 4
+      "retreat": 4,
+      "image": "https://assets.tcgdex.net/en/me/me01/022"
     },
     "023": {
       "name": "Litleo",
@@ -709,7 +731,8 @@
           "damage": 30
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/023"
     },
     "024": {
       "name": "Pyroar",
@@ -744,7 +767,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/024"
     },
     "025": {
       "name": "Volcanion",
@@ -778,7 +802,8 @@
           "effect": "Put 2 {R} Energy attached to this Pokémon into your hand."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/025"
     },
     "026": {
       "name": "Scorbunny",
@@ -803,7 +828,8 @@
           "effect": "Flip a coin. If tails, this attack does nothing."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/026"
     },
     "027": {
       "name": "Raboot",
@@ -828,7 +854,8 @@
           "effect": "This attack does 40 damage to 1 of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/027"
     },
     "028": {
       "name": "Cinderace",
@@ -861,7 +888,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 0
+      "retreat": 0,
+      "image": "https://assets.tcgdex.net/en/me/me01/028"
     },
     "029": {
       "name": "Sizzlipede",
@@ -894,7 +922,8 @@
           "damage": 50
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/029"
     },
     "030": {
       "name": "Centiskorch",
@@ -931,7 +960,8 @@
           "damage": 140
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/030"
     },
     "031": {
       "name": "Chi-Yu",
@@ -956,7 +986,8 @@
           "effect": "If your opponent has a Stadium in play, discard it. If you do, your opponent can't play any Stadium cards from their hand during their next turn."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/031"
     },
     "032": {
       "name": "Mantine",
@@ -988,7 +1019,8 @@
           "damage": 50
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/032"
     },
     "033": {
       "name": "Corphish",
@@ -1021,7 +1053,8 @@
           "effect": "This Pokémon also does 10 damage to itself."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/033"
     },
     "034": {
       "name": "Kyogre",
@@ -1056,7 +1089,8 @@
           "effect": "Discard 2 Energy from this Pokémon."
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/034"
     },
     "035": {
       "name": "Snover",
@@ -1088,7 +1122,8 @@
           "damage": 30
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/035"
     },
     "036": {
       "name": "Mega Abomasnow ex",
@@ -1125,7 +1160,8 @@
           "effect": "During your opponent's next turn, this Pokémon takes 30 less damage from attacks (after applying Weakness and Resistance)."
         }
       ],
-      "retreat": 4
+      "retreat": 4,
+      "image": "https://assets.tcgdex.net/en/me/me01/036"
     },
     "037": {
       "name": "Clauncher",
@@ -1150,7 +1186,8 @@
           "damage": 50
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/037"
     },
     "038": {
       "name": "Clawitzer",
@@ -1185,7 +1222,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/038"
     },
     "039": {
       "name": "Sobble",
@@ -1210,7 +1248,8 @@
           "effect": "Flip a coin. If tails, this attack does nothing."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/039"
     },
     "040": {
       "name": "Drizzile",
@@ -1236,7 +1275,8 @@
           "effect": "Flip 2 coins. This attack does 30 damage for each heads."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/040"
     },
     "041": {
       "name": "Inteleon",
@@ -1269,7 +1309,8 @@
           "effect": "Discard an Energy from this Pokémon."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/041"
     },
     "042": {
       "name": "Snom",
@@ -1293,7 +1334,8 @@
           "effect": "Flip a coin. If heads, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/042"
     },
     "043": {
       "name": "Frosmoth",
@@ -1318,7 +1360,8 @@
           "effect": "This attack does 20 damage to each of your opponent's Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) Your opponent's Active Pokémon is now Asleep."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/043"
     },
     "044": {
       "name": "Eiscue",
@@ -1352,7 +1395,8 @@
           "damage": 90
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/044"
     },
     "045": {
       "name": "Magnemite",
@@ -1376,7 +1420,8 @@
           "damage": 10
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/045"
     },
     "046": {
       "name": "Magneton",
@@ -1402,7 +1447,8 @@
           "effect": "Flip a coin. If heads, your opponent's Active Pokémon is now Paralyzed."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/046"
     },
     "047": {
       "name": "Magnezone",
@@ -1437,7 +1483,8 @@
           "effect": "During your next turn, this Pokémon can't use Flashing Bolt."
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/047"
     },
     "048": {
       "name": "Raikou",
@@ -1463,7 +1510,8 @@
           "effect": "If you have at least 4 {L} Energy in play, this attack does 90 more damage."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/048"
     },
     "049": {
       "name": "Electrike",
@@ -1488,7 +1536,8 @@
           "effect": "This Pokémon also does 10 damage to itself."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/049"
     },
     "050": {
       "name": "Mega Manectric ex",
@@ -1525,7 +1574,8 @@
           "effect": "You may discard all Energy from this Pokémon and have this attack do 130 more damage."
         }
       ],
-      "retreat": 0
+      "retreat": 0,
+      "image": "https://assets.tcgdex.net/en/me/me01/050"
     },
     "051": {
       "name": "Pachirisu",
@@ -1550,7 +1600,8 @@
           "effect": "During your opponent's next turn, whenever they attach an Energy card from their hand to the Defending Pokémon, place 8 damage counters on that Pokémon."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/051"
     },
     "052": {
       "name": "Helioptile",
@@ -1575,7 +1626,8 @@
           "effect": "Flip 2 coins. This attack does 10 damage for each heads."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/052"
     },
     "053": {
       "name": "Heliolisk",
@@ -1609,7 +1661,8 @@
           "damage": 70
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/053"
     },
     "054": {
       "name": "Abra",
@@ -1634,7 +1687,8 @@
           "effect": "Switch this Pokémon with 1 of your Benched Pokémon."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/054"
     },
     "055": {
       "name": "Kadabra",
@@ -1666,7 +1720,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/055"
     },
     "056": {
       "name": "Alakazam",
@@ -1698,7 +1753,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/056"
     },
     "057": {
       "name": "Jynx",
@@ -1724,7 +1780,8 @@
           "effect": "This attack does 30 more damage for each Energy attached to your opponent's Active Pokémon."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/057"
     },
     "058": {
       "name": "Ralts",
@@ -1755,7 +1812,8 @@
           "damage": 10
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/058"
     },
     "059": {
       "name": "Kirlia",
@@ -1787,7 +1845,8 @@
           "damage": 30
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/059"
     },
     "060": {
       "name": "Mega Gardevoir ex",
@@ -1820,7 +1879,8 @@
           "effect": "This attack does 50 damage for each {P} Energy attached to all of your Pokémon."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/060"
     },
     "061": {
       "name": "Shedinja",
@@ -1853,7 +1913,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 0
+      "retreat": 0,
+      "image": "https://assets.tcgdex.net/en/me/me01/061"
     },
     "062": {
       "name": "Spoink",
@@ -1878,7 +1939,8 @@
           "effect": "Flip 3 coins. This attack does 10 damage for each heads."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/062"
     },
     "063": {
       "name": "Grumpig",
@@ -1912,7 +1974,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/063"
     },
     "064": {
       "name": "Xerneas",
@@ -1946,7 +2009,8 @@
           "effect": "During your next turn, this Pokémon can't use Bright Horns."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/064"
     },
     "065": {
       "name": "Greavard",
@@ -1979,7 +2043,8 @@
           "effect": "This Pokémon also does 10 damage to itself."
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/065"
     },
     "066": {
       "name": "Houndstone",
@@ -2014,7 +2079,8 @@
           "damage": 130
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/066"
     },
     "067": {
       "name": "Gimmighoul",
@@ -2038,7 +2104,8 @@
           "damage": 10
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/067"
     },
     "068": {
       "name": "Sandshrew",
@@ -2070,7 +2137,8 @@
           "damage": 20
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/068"
     },
     "069": {
       "name": "Sandslash",
@@ -2106,7 +2174,8 @@
           "damage": 100
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/069"
     },
     "070": {
       "name": "Onix",
@@ -2142,7 +2211,8 @@
           "damage": 100
         }
       ],
-      "retreat": 4
+      "retreat": 4,
+      "image": "https://assets.tcgdex.net/en/me/me01/070"
     },
     "071": {
       "name": "Tyrogue",
@@ -2164,7 +2234,8 @@
           "effect": "Flip a coin until you get tails. This attack does 30 more damage for each heads."
         }
       ],
-      "retreat": 0
+      "retreat": 0,
+      "image": "https://assets.tcgdex.net/en/me/me01/071"
     },
     "072": {
       "name": "Makuhita",
@@ -2196,7 +2267,8 @@
           "damage": 30
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/072"
     },
     "073": {
       "name": "Hariyama",
@@ -2231,7 +2303,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/073"
     },
     "074": {
       "name": "Lunatone",
@@ -2263,7 +2336,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/074"
     },
     "075": {
       "name": "Solrock",
@@ -2288,7 +2362,8 @@
           "effect": "If you don't have Lunatone on your Bench, this attack does nothing. This attack's damage isn't affected by Weakness or Resistance."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/075"
     },
     "076": {
       "name": "Riolu",
@@ -2313,7 +2388,8 @@
           "effect": "During your next turn, this Pokémon can't use Accelerating Stab."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/076"
     },
     "077": {
       "name": "Mega Lucario ex",
@@ -2348,7 +2424,8 @@
           "effect": "During your next turn, this Pokémon can't use Mega Brave."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/077"
     },
     "078": {
       "name": "Croagunk",
@@ -2372,7 +2449,8 @@
           "damage": 20
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/078"
     },
     "079": {
       "name": "Toxicroak",
@@ -2398,7 +2476,8 @@
           "effect": "This Pokémon also does 20 damage to itself."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/079"
     },
     "080": {
       "name": "Marshadow",
@@ -2424,7 +2503,8 @@
           "effect": "If your opponent's Pokémon is Knocked Out by damage from this attack, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/080"
     },
     "081": {
       "name": "Stonjourner",
@@ -2459,7 +2539,8 @@
           "effect": "During your next turn, this Pokémon can't use attacks."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/081"
     },
     "082": {
       "name": "Nacli",
@@ -2483,7 +2564,8 @@
           "damage": 10
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/082"
     },
     "083": {
       "name": "Naclstack",
@@ -2510,7 +2592,8 @@
           "effect": "This attack's damage isn't affected by Resistance."
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/083"
     },
     "084": {
       "name": "Garganacl",
@@ -2544,7 +2627,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 4
+      "retreat": 4,
+      "image": "https://assets.tcgdex.net/en/me/me01/084"
     },
     "085": {
       "name": "Crawdaunt",
@@ -2579,7 +2663,8 @@
           "effect": "If this Pokémon has any damage counters on it, this attack can be used for {D}."
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/085"
     },
     "086": {
       "name": "Mega Absol ex",
@@ -2614,7 +2699,8 @@
           "effect": "Your opponent reveals their hand, and you discard a card you find there."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/086"
     },
     "087": {
       "name": "Spiritomb",
@@ -2646,7 +2732,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/087"
     },
     "088": {
       "name": "Yveltal",
@@ -2680,7 +2767,8 @@
           "damage": 110
         }
       ],
-      "retreat": 0
+      "retreat": 0,
+      "image": "https://assets.tcgdex.net/en/me/me01/088"
     },
     "089": {
       "name": "Nickit",
@@ -2704,7 +2792,8 @@
           "damage": 20
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/089"
     },
     "090": {
       "name": "Thievul",
@@ -2738,7 +2827,8 @@
           "damage": 60
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/090"
     },
     "091": {
       "name": "Shroodle",
@@ -2764,7 +2854,8 @@
           "effect": "Your opponent's Active Pokémon is now Poisoned."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/091"
     },
     "092": {
       "name": "Grafaiai",
@@ -2791,7 +2882,8 @@
           "effect": "Flip a coin. If heads, choose a Special Condition. Your opponent's Active Pokémon is now affected by that Special Condition."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/092"
     },
     "093": {
       "name": "Steelix",
@@ -2828,7 +2920,8 @@
           "damage": 140
         }
       ],
-      "retreat": 4
+      "retreat": 4,
+      "image": "https://assets.tcgdex.net/en/me/me01/093"
     },
     "094": {
       "name": "Mega Mawile ex",
@@ -2864,7 +2957,8 @@
           "effect": "If your opponent's Active Pokémon already has any damage counters on it, this attack's base damage is 30."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/094"
     },
     "095": {
       "name": "Dialga",
@@ -2898,7 +2992,8 @@
           "effect": "You may shuffle all Energy attached to this Pokémon into your deck and have this attack do 80 more damage."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/095"
     },
     "096": {
       "name": "Tinkatink",
@@ -2922,7 +3017,8 @@
           "damage": 20
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/096"
     },
     "097": {
       "name": "Tinkatuff",
@@ -2954,7 +3050,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/097"
     },
     "098": {
       "name": "Tinkaton",
@@ -2980,7 +3077,8 @@
           "effect": "This attack does 60 less damage for each Energy attached to your opponent's Active Pokémon."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/098"
     },
     "099": {
       "name": "Gholdengo",
@@ -3014,7 +3112,8 @@
           "damage": 100
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/099"
     },
     "100": {
       "name": "Mega Latias ex",
@@ -3049,7 +3148,8 @@
           "effect": "Discard all Energy from this Pokémon."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/100"
     },
     "101": {
       "name": "Latios",
@@ -3082,7 +3182,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/101"
     },
     "102": {
       "name": "Spearow",
@@ -3107,7 +3208,8 @@
           "effect": "Before doing damage, discard all Pokémon Tools from your opponent's Active Pokémon."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/102"
     },
     "103": {
       "name": "Fearow",
@@ -3133,7 +3235,8 @@
           "effect": "Flip 5 coins. This attack does 30 damage for each heads."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/103"
     },
     "104": {
       "name": "Mega Kangaskhan ex",
@@ -3167,7 +3270,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/104"
     },
     "105": {
       "name": "Delibird",
@@ -3199,7 +3303,8 @@
           "damage": 30
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/105"
     },
     "106": {
       "name": "Miltank",
@@ -3233,7 +3338,8 @@
           "damage": 60
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/106"
     },
     "107": {
       "name": "Buneary",
@@ -3264,7 +3370,8 @@
           "damage": 10
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/107"
     },
     "108": {
       "name": "Lopunny",
@@ -3297,7 +3404,8 @@
           "damage": 60
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/108"
     },
     "109": {
       "name": "Yungoos",
@@ -3329,7 +3437,8 @@
           "damage": 20
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/109"
     },
     "110": {
       "name": "Gumshoos",
@@ -3362,7 +3471,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/110"
     },
     "111": {
       "name": "Stufful",
@@ -3394,7 +3504,8 @@
           "damage": 20
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/111"
     },
     "112": {
       "name": "Bewear",
@@ -3430,7 +3541,8 @@
           "effect": "Flip 2 coins. If both of them are heads, this attack does 100 more damage."
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/112"
     },
     "113": {
       "name": "Acerola's Mischief",
@@ -3438,7 +3550,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "You can use this card only if your opponent has 2 or fewer Prize cards remaining.\n\nChoose 1 of your Pokémon in play. During your opponent's next turn, prevent all damage from and effects of attacks done to that Pokémon by your opponent's Pokémon ex.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "image": "https://assets.tcgdex.net/en/me/me01/113"
     },
     "114": {
       "name": "Boss's Orders",
@@ -3446,7 +3559,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "Switch in 1 of your opponent's Benched Pokémon to the Active Spot.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "image": "https://assets.tcgdex.net/en/me/me01/114"
     },
     "115": {
       "name": "Energy Switch",
@@ -3454,7 +3568,8 @@
       "rarity": "Common",
       "category": "Trainer",
       "effect": "Move a Basic Energy from 1 of your Pokémon to another of your Pokémon.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/115"
     },
     "116": {
       "name": "Fighting Gong",
@@ -3462,7 +3577,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "Search your deck for a Basic {F} Energy card or a Basic {F} Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/116"
     },
     "117": {
       "name": "Forest of Vitality",
@@ -3470,7 +3586,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "Each player's {G} Pokémon can evolve into {G} Pokémon during the turn they play those Pokémon, except during their first turn.",
-      "subcategory": "Stadium"
+      "subcategory": "Stadium",
+      "image": "https://assets.tcgdex.net/en/me/me01/117"
     },
     "118": {
       "name": "Iron Defender",
@@ -3478,7 +3595,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "During your opponent's next turn, all of your {M} Pokémon take 30 less damage from attacks from your opponent's Pokémon (after applying Weakness and Resistance). (This includes new Pokémon that come into play.)",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/118"
     },
     "119": {
       "name": "Lillie's Determination",
@@ -3486,7 +3604,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "Shuffle your hand into your deck. Then, draw 6 cards. If you have exactly 6 Prize cards remaining, draw 8 cards instead.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "image": "https://assets.tcgdex.net/en/me/me01/119"
     },
     "120": {
       "name": "Lt. Surge's Bargain",
@@ -3494,7 +3613,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "Ask your opponent if each player may take a Prize card. If yes, each player takes a Prize card. If no, you draw 4 cards.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "image": "https://assets.tcgdex.net/en/me/me01/120"
     },
     "121": {
       "name": "Mega Signal",
@@ -3502,7 +3622,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "Search your deck for a Mega Evolution Pokémon ex, reveal it, and put it into your hand. Then, shuffle your deck.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/121"
     },
     "122": {
       "name": "Mystery Garden",
@@ -3510,7 +3631,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "Once during each player's turn, that player may discard an Energy card from their hand in order to draw cards until they have as many cards in their hand as they have {P} Pokémon in play.",
-      "subcategory": "Stadium"
+      "subcategory": "Stadium",
+      "image": "https://assets.tcgdex.net/en/me/me01/122"
     },
     "123": {
       "name": "Pokémon Center Lady",
@@ -3518,7 +3640,8 @@
       "rarity": "Common",
       "category": "Trainer",
       "effect": "Heal 60 damage from 1 of your Pokémon, and it recovers from all Special Conditions.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "image": "https://assets.tcgdex.net/en/me/me01/123"
     },
     "124": {
       "name": "Premium Power Pro",
@@ -3526,7 +3649,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "During this turn, attacks used by your {F} Pokémon do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/124"
     },
     "125": {
       "name": "Rare Candy",
@@ -3534,7 +3658,8 @@
       "rarity": "Common",
       "category": "Trainer",
       "effect": "Choose 1 of your Basic Pokémon in play. If you have a Stage 2 card in your hand that evolves from that Pokémon, put that card onto the Basic Pokémon to evolve it, skipping the Stage 1. You can't use this card during your first turn or on a Basic Pokémon that was put into play this turn.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/125"
     },
     "126": {
       "name": "Repel",
@@ -3542,7 +3667,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/126"
     },
     "127": {
       "name": "Risky Ruins",
@@ -3550,7 +3676,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "Whenever any player puts a Basic non-{D} Pokémon onto their Bench during their turn, place 2 damage counters on that Pokémon.",
-      "subcategory": "Stadium"
+      "subcategory": "Stadium",
+      "image": "https://assets.tcgdex.net/en/me/me01/127"
     },
     "128": {
       "name": "Strange Timepiece",
@@ -3558,7 +3685,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "Devolve 1 of your evolved {P} Pokémon by putting any number of Evolution cards on it into your hand. (That Pokémon can't evolve this turn.)",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/128"
     },
     "129": {
       "name": "Surfing Beach",
@@ -3566,7 +3694,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "Once during each player's turn, that player may switch their Active {W} Pokémon with 1 of their Benched {W} Pokémon.",
-      "subcategory": "Stadium"
+      "subcategory": "Stadium",
+      "image": "https://assets.tcgdex.net/en/me/me01/129"
     },
     "130": {
       "name": "Switch",
@@ -3574,7 +3703,8 @@
       "rarity": "Common",
       "category": "Trainer",
       "effect": "Switch your Active Pokémon with 1 of your Benched Pokémon.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/130"
     },
     "131": {
       "name": "Ultra Ball",
@@ -3582,7 +3712,8 @@
       "rarity": "Common",
       "category": "Trainer",
       "effect": "You can use this card only if you discard 2 other cards from your hand.\n\nSearch your deck for a Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/131"
     },
     "132": {
       "name": "Wally's Compassion",
@@ -3590,7 +3721,8 @@
       "rarity": "Uncommon",
       "category": "Trainer",
       "effect": "Heal all damage from 1 of your Mega Evolution Pokémon ex. If you healed any damage in this way, put all Energy attached to that Pokémon into your hand.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "image": "https://assets.tcgdex.net/en/me/me01/132"
     },
     "133": {
       "name": "Bulbasaur",
@@ -3615,7 +3747,8 @@
           "effect": "During your opponent's next turn, the Defending Pokémon can't retreat."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/133"
     },
     "134": {
       "name": "Ivysaur",
@@ -3641,7 +3774,8 @@
           "damage": 60
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/134"
     },
     "135": {
       "name": "Exeggutor",
@@ -3677,7 +3811,8 @@
           "effect": "This attack does 30 more damage for each {G} Energy attached to this Pokémon."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/135"
     },
     "136": {
       "name": "Shuckle",
@@ -3709,7 +3844,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/136"
     },
     "137": {
       "name": "Ninjask",
@@ -3743,7 +3879,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 0
+      "retreat": 0,
+      "image": "https://assets.tcgdex.net/en/me/me01/137"
     },
     "138": {
       "name": "Vulpix",
@@ -3775,7 +3912,8 @@
           "damage": 20
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/138"
     },
     "139": {
       "name": "Litleo",
@@ -3800,7 +3938,8 @@
           "damage": 30
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/139"
     },
     "140": {
       "name": "Snover",
@@ -3832,7 +3971,8 @@
           "damage": 30
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/140"
     },
     "141": {
       "name": "Clawitzer",
@@ -3867,7 +4007,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/141"
     },
     "142": {
       "name": "Inteleon",
@@ -3900,7 +4041,8 @@
           "effect": "Discard an Energy from this Pokémon."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/142"
     },
     "143": {
       "name": "Helioptile",
@@ -3925,7 +4067,8 @@
           "effect": "Flip 2 coins. This attack does 10 damage for each heads."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/143"
     },
     "144": {
       "name": "Shedinja",
@@ -3958,7 +4101,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 0
+      "retreat": 0,
+      "image": "https://assets.tcgdex.net/en/me/me01/144"
     },
     "145": {
       "name": "Houndstone",
@@ -3993,7 +4137,8 @@
           "damage": 130
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/145"
     },
     "146": {
       "name": "Marshadow",
@@ -4019,7 +4164,8 @@
           "effect": "If your opponent's Pokémon is Knocked Out by damage from this attack, during your opponent's next turn, prevent all damage from and effects of attacks done to this Pokémon."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/146"
     },
     "147": {
       "name": "Garganacl",
@@ -4053,7 +4199,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 4
+      "retreat": 4,
+      "image": "https://assets.tcgdex.net/en/me/me01/147"
     },
     "148": {
       "name": "Spiritomb",
@@ -4085,7 +4232,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/148"
     },
     "149": {
       "name": "Shroodle",
@@ -4111,7 +4259,8 @@
           "effect": "Your opponent's Active Pokémon is now Poisoned."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/149"
     },
     "150": {
       "name": "Steelix",
@@ -4148,7 +4297,8 @@
           "damage": 140
         }
       ],
-      "retreat": 4
+      "retreat": 4,
+      "image": "https://assets.tcgdex.net/en/me/me01/150"
     },
     "151": {
       "name": "Spearow",
@@ -4173,7 +4323,8 @@
           "effect": "Before doing damage, discard all Pokémon Tools from your opponent's Active Pokémon."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/151"
     },
     "152": {
       "name": "Delibird",
@@ -4205,7 +4356,8 @@
           "damage": 30
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/152"
     },
     "153": {
       "name": "Gumshoos",
@@ -4238,7 +4390,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/153"
     },
     "154": {
       "name": "Stufful",
@@ -4270,7 +4423,8 @@
           "damage": 20
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/154"
     },
     "155": {
       "name": "Mega Venusaur ex",
@@ -4306,7 +4460,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 4
+      "retreat": 4,
+      "image": "https://assets.tcgdex.net/en/me/me01/155"
     },
     "156": {
       "name": "Mega Camerupt ex",
@@ -4343,7 +4498,8 @@
           "effect": "Discard 2 Energy from this Pokémon."
         }
       ],
-      "retreat": 4
+      "retreat": 4,
+      "image": "https://assets.tcgdex.net/en/me/me01/156"
     },
     "157": {
       "name": "Mega Abomasnow ex",
@@ -4380,7 +4536,8 @@
           "effect": "During your opponent's next turn, this Pokémon takes 30 less damage from attacks (after applying Weakness and Resistance)."
         }
       ],
-      "retreat": 4
+      "retreat": 4,
+      "image": "https://assets.tcgdex.net/en/me/me01/157"
     },
     "158": {
       "name": "Mega Manectric ex",
@@ -4417,7 +4574,8 @@
           "effect": "You may discard all Energy from this Pokémon and have this attack do 130 more damage."
         }
       ],
-      "retreat": 0
+      "retreat": 0,
+      "image": "https://assets.tcgdex.net/en/me/me01/158"
     },
     "159": {
       "name": "Mega Gardevoir ex",
@@ -4450,7 +4608,8 @@
           "effect": "This attack does 50 damage for each {P} Energy attached to all of your Pokémon."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/159"
     },
     "160": {
       "name": "Mega Lucario ex",
@@ -4485,7 +4644,8 @@
           "effect": "During your next turn, this Pokémon can't use Mega Brave."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/160"
     },
     "161": {
       "name": "Mega Absol ex",
@@ -4520,7 +4680,8 @@
           "effect": "Your opponent reveals their hand, and you discard a card you find there."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/161"
     },
     "162": {
       "name": "Mega Mawile ex",
@@ -4556,7 +4717,8 @@
           "effect": "If your opponent's Active Pokémon already has any damage counters on it, this attack's base damage is 30."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/162"
     },
     "163": {
       "name": "Mega Latias ex",
@@ -4591,7 +4753,8 @@
           "effect": "Discard all Energy from this Pokémon."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/163"
     },
     "164": {
       "name": "Mega Kangaskhan ex",
@@ -4625,7 +4788,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/164"
     },
     "165": {
       "name": "Acerola's Mischief",
@@ -4633,7 +4797,8 @@
       "rarity": "Ultra Rare",
       "category": "Trainer",
       "effect": "You can use this card only if your opponent has 2 or fewer Prize cards remaining.\n\nChoose 1 of your Pokémon in play. During your opponent's next turn, prevent all damage from and effects of attacks done to that Pokémon by your opponent's Pokémon ex.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "image": "https://assets.tcgdex.net/en/me/me01/165"
     },
     "166": {
       "name": "Air Balloon",
@@ -4641,7 +4806,8 @@
       "rarity": "Ultra Rare",
       "category": "Trainer",
       "effect": "The Retreat Cost of the Pokémon this card is attached to is {C}{C} less.",
-      "subcategory": "Tool"
+      "subcategory": "Tool",
+      "image": "https://assets.tcgdex.net/en/me/me01/166"
     },
     "167": {
       "name": "Buddy-Buddy Poffin",
@@ -4649,7 +4815,8 @@
       "rarity": "Ultra Rare",
       "category": "Trainer",
       "effect": "Search your deck for up to 2 Basic Pokémon with 70 HP or less and put them onto your Bench. Then, shuffle your deck.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/167"
     },
     "168": {
       "name": "Fighting Gong",
@@ -4657,7 +4824,8 @@
       "rarity": "Ultra Rare",
       "category": "Trainer",
       "effect": "Search your deck for a Basic {F} Energy card or a Basic {F} Pokémon, reveal it, and put it into your hand. Then, shuffle your deck.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/168"
     },
     "169": {
       "name": "Lillie's Determination",
@@ -4665,7 +4833,8 @@
       "rarity": "Ultra Rare",
       "category": "Trainer",
       "effect": "Shuffle your hand into your deck. Then, draw 6 cards. If you have exactly 6 Prize cards remaining, draw 8 cards instead.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "image": "https://assets.tcgdex.net/en/me/me01/169"
     },
     "170": {
       "name": "Lt. Surge's Bargain",
@@ -4673,7 +4842,8 @@
       "rarity": "Ultra Rare",
       "category": "Trainer",
       "effect": "Ask your opponent if each player may take a Prize card. If yes, each player takes a Prize card. If no, you draw 4 cards.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "image": "https://assets.tcgdex.net/en/me/me01/170"
     },
     "171": {
       "name": "Mega Signal",
@@ -4681,7 +4851,8 @@
       "rarity": "Ultra Rare",
       "category": "Trainer",
       "effect": "Search your deck for a Mega Evolution Pokémon ex, reveal it, and put it into your hand. Then, shuffle your deck.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/171"
     },
     "172": {
       "name": "Mystery Garden",
@@ -4689,7 +4860,8 @@
       "rarity": "Ultra Rare",
       "category": "Trainer",
       "effect": "Once during each player's turn, that player may discard an Energy card from their hand in order to draw cards until they have as many cards in their hand as they have {P} Pokémon in play.",
-      "subcategory": "Stadium"
+      "subcategory": "Stadium",
+      "image": "https://assets.tcgdex.net/en/me/me01/172"
     },
     "173": {
       "name": "Night Stretcher",
@@ -4697,7 +4869,8 @@
       "rarity": "Ultra Rare",
       "category": "Trainer",
       "effect": "Put a Pokémon or a Basic Energy card from your discard pile into your hand.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/173"
     },
     "174": {
       "name": "Premium Power Pro",
@@ -4705,7 +4878,8 @@
       "rarity": "Ultra Rare",
       "category": "Trainer",
       "effect": "During this turn, attacks used by your {F} Pokémon do 30 more damage to your opponent's Active Pokémon (before applying Weakness and Resistance).",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/174"
     },
     "175": {
       "name": "Rare Candy",
@@ -4713,7 +4887,8 @@
       "rarity": "Ultra Rare",
       "category": "Trainer",
       "effect": "Choose 1 of your Basic Pokémon in play. If you have a Stage 2 card in your hand that evolves from that Pokémon, put that card onto the Basic Pokémon to evolve it, skipping the Stage 1. You can't use this card during your first turn or on a Basic Pokémon that was put into play this turn.",
-      "subcategory": "Item"
+      "subcategory": "Item",
+      "image": "https://assets.tcgdex.net/en/me/me01/175"
     },
     "176": {
       "name": "Wally's Compassion",
@@ -4721,7 +4896,8 @@
       "rarity": "Ultra Rare",
       "category": "Trainer",
       "effect": "Heal all damage from 1 of your Mega Evolution Pokémon ex. If you healed any damage in this way, put all Energy attached to that Pokémon into your hand.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "image": "https://assets.tcgdex.net/en/me/me01/176"
     },
     "177": {
       "name": "Mega Venusaur ex",
@@ -4757,7 +4933,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 4
+      "retreat": 4,
+      "image": "https://assets.tcgdex.net/en/me/me01/177"
     },
     "178": {
       "name": "Mega Gardevoir ex",
@@ -4790,7 +4967,8 @@
           "effect": "This attack does 50 damage for each {P} Energy attached to all of your Pokémon."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/178"
     },
     "179": {
       "name": "Mega Lucario ex",
@@ -4825,7 +5003,8 @@
           "effect": "During your next turn, this Pokémon can't use Mega Brave."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/179"
     },
     "180": {
       "name": "Mega Absol ex",
@@ -4860,7 +5039,8 @@
           "effect": "Your opponent reveals their hand, and you discard a card you find there."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/180"
     },
     "181": {
       "name": "Mega Latias ex",
@@ -4895,7 +5075,8 @@
           "effect": "Discard all Energy from this Pokémon."
         }
       ],
-      "retreat": 1
+      "retreat": 1,
+      "image": "https://assets.tcgdex.net/en/me/me01/181"
     },
     "182": {
       "name": "Mega Kangaskhan ex",
@@ -4929,7 +5110,8 @@
           "type": "Ability"
         }
       ],
-      "retreat": 3
+      "retreat": 3,
+      "image": "https://assets.tcgdex.net/en/me/me01/182"
     },
     "183": {
       "name": "Acerola's Mischief",
@@ -4937,7 +5119,8 @@
       "rarity": "Special illustration rare",
       "category": "Trainer",
       "effect": "You can use this card only if your opponent has 2 or fewer Prize cards remaining.\n\nChoose 1 of your Pokémon in play. During your opponent's next turn, prevent all damage from and effects of attacks done to that Pokémon by your opponent's Pokémon ex.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "image": "https://assets.tcgdex.net/en/me/me01/183"
     },
     "184": {
       "name": "Lillie's Determination",
@@ -4945,7 +5128,8 @@
       "rarity": "Special illustration rare",
       "category": "Trainer",
       "effect": "Shuffle your hand into your deck. Then, draw 6 cards. If you have exactly 6 Prize cards remaining, draw 8 cards instead.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "image": "https://assets.tcgdex.net/en/me/me01/184"
     },
     "185": {
       "name": "Lt. Surge's Bargain",
@@ -4953,7 +5137,8 @@
       "rarity": "Special illustration rare",
       "category": "Trainer",
       "effect": "Ask your opponent if each player may take a Prize card. If yes, each player takes a Prize card. If no, you draw 4 cards.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "image": "https://assets.tcgdex.net/en/me/me01/185"
     },
     "186": {
       "name": "Wally's Compassion",
@@ -4961,7 +5146,8 @@
       "rarity": "Special illustration rare",
       "category": "Trainer",
       "effect": "Heal all damage from 1 of your Mega Evolution Pokémon ex. If you healed any damage in this way, put all Energy attached to that Pokémon into your hand.",
-      "subcategory": "Supporter"
+      "subcategory": "Supporter",
+      "image": "https://assets.tcgdex.net/en/me/me01/186"
     },
     "187": {
       "name": "Mega Gardevoir ex",
@@ -4994,7 +5180,8 @@
           "effect": "This attack does 50 damage for each {P} Energy attached to all of your Pokémon."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/187"
     },
     "188": {
       "name": "Mega Lucario ex",
@@ -5029,7 +5216,8 @@
           "effect": "During your next turn, this Pokémon can't use Mega Brave."
         }
       ],
-      "retreat": 2
+      "retreat": 2,
+      "image": "https://assets.tcgdex.net/en/me/me01/188"
     }
   }
 }

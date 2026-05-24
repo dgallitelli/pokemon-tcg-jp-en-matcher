@@ -259,5 +259,43 @@ test('all 11 documented energy types resolve to a badge', () => {
   assert.equal(badges.length, 11, `expected 11 badges, got ${badges.length}: ${out}`);
 });
 
+console.log('\nME1/ME2 image migration — every card has a TCGdex image URL');
+const fsImg = require('node:fs');
+const pathImg = require('node:path');
+const me1Data = JSON.parse(fsImg.readFileSync(pathImg.join(__dirname, '..', 'data', 'ME1.json'), 'utf8'));
+const me2Data = JSON.parse(fsImg.readFileSync(pathImg.join(__dirname, '..', 'data', 'ME2.json'), 'utf8'));
+const me3Data = JSON.parse(fsImg.readFileSync(pathImg.join(__dirname, '..', 'data', 'ME3.json'), 'utf8'));
+
+test('every ME1 card has a TCGdex image URL', () => {
+  const missing = Object.entries(me1Data.cards).filter(([, c]) => !c.image || !c.image.startsWith('https://assets.tcgdex.net/'));
+  assert.equal(missing.length, 0, `${missing.length} ME1 cards missing tcgdex image; first: ${missing[0]?.[0]} → ${missing[0]?.[1]?.image}`);
+});
+test('every ME2 card has a TCGdex image URL', () => {
+  const missing = Object.entries(me2Data.cards).filter(([, c]) => !c.image || !c.image.startsWith('https://assets.tcgdex.net/'));
+  assert.equal(missing.length, 0, `${missing.length} ME2 cards missing tcgdex image; first: ${missing[0]?.[0]} → ${missing[0]?.[1]?.image}`);
+});
+test('ME3 is NOT touched (no tcgdex images injected)', () => {
+  // ME3's text was manually cleaned ({C} → "Colorless") in scripts/enrich_m3_me3.py.
+  // Re-pulling from tcgdex would regress that, so this PR explicitly leaves ME3 alone.
+  const withImage = Object.entries(me3Data.cards).filter(([, c]) => c.image);
+  assert.equal(withImage.length, 0, `ME3 should have no images; ${withImage.length} found (regression — we'd be re-introducing {C} tokens).`);
+});
+test('ME1-001 attack effect text is preserved exactly', () => {
+  const expected = "During your opponent's next turn, the Defending Pokémon can't retreat.";
+  assert.equal(me1Data.cards['001'].attacks[0].effect, expected,
+    'ME1 text must not be overwritten by the migration — only image fields change.');
+});
+test('ME1-004 (Exeggcute) keeps its {G} energy token in attack effect', () => {
+  // Tokens are now rendered correctly by renderEffect (Part A); the data must keep the raw token.
+  assert.match(me1Data.cards['004'].attacks[0].effect, /\{G\}/,
+    'ME1-004 attack effect should still contain a literal {G} token (rendering is renderEffect\'s job, not the data\'s).');
+});
+test('cardImageUrl resolves an ME1 sideload card to its TCGdex high.webp', () => {
+  // sanity: the runtime resolution path picks up the new card.image and appends /high.webp
+  const card = { id: 'ME1-001', image: me1Data.cards['001'].image };
+  const url = ctx.cardImageUrl(card);
+  assert.match(url, /^https:\/\/assets\.tcgdex\.net\/en\/me\/me01\/001\/high\.webp$/);
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed === 0 ? 0 : 1);
